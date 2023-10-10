@@ -1,0 +1,30 @@
+
+state={
+	id=446
+	name="STATE_446"
+
+	history={
+		owner = EGY
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 4
+			arms_factory = 2
+			air_base = 5
+
+		}
+		victory_points = {
+			7011 25 
+		}
+		add_core_of = EGY
+		add_claim_by = TUR
+
+	}
+
+	provinces={
+		7011 7091 10005 10073 11964 13744 
+	}
+	manpower=6586596
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=35.000
+}

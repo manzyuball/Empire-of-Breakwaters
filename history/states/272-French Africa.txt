@@ -1,0 +1,36 @@
+
+state={
+	id=272
+	name="STATE_272"
+	resources={
+		steel=31.000
+	}
+
+	history={
+		owner = GNA
+		add_core_of = GNA
+		victory_points = {
+			4948 30 
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 4
+			industrial_complex = 10
+			arms_factory = 3
+			4948 = {
+				naval_base = 4
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		2100 4948 7972 8015 12710 12834 13682 
+	}
+	manpower=1638000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=1.000
+}

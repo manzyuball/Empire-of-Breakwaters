@@ -1,0 +1,27 @@
+
+state={
+	id=608
+	name="STATE_608"
+
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = PRC
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 7
+			air_base = 3
+
+		}
+
+	}
+
+	provinces={
+		1134 1137 4137 4140 4208 6828 7000 7109 9969 10022 10480 11944 11996 12026 13299 13300 13301 13305 13306 13312 
+	}
+	manpower=4648400
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=1.000
+}

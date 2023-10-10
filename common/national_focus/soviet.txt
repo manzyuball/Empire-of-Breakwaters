@@ -1,0 +1,1676 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
+### search_filters = {FOCUS_FILTER_PROPAGANDA}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+# Reminder that focus filters prio has to be handled in the generic focus file :)
+#© 2022 Empire of Breakwaters制作チーム, 饅頭ボール. All rights reserved.
+#このファイルは著作権法で保護されており、このファイルの一部もしくは全体のEoB以外へのあらゆる利用は許可されていません。
+focus_tree = {
+	id = soviet_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 1955 y = 1100 }
+
+   	focus = {
+		id = SOV_NATIONAL_FORCUS
+		icon = "GFX_focus_SOV_the_path_of_marxism_leninism"
+		#prerequisite = { focus = }
+		#mutually_exclusive = { focus =  }
+		x = 12
+		y = 0
+		#relative_position_id = 
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+		add_political_power = 135
+	    custom_effect_tooltip = SOV_PARAMETER
+		}
+	} 
+	focus = {
+		id = SOV_FACTRY_1
+		icon = "GFX_focus_eng_crush_the_dream"
+		prerequisite = { focus = SOV_NATIONAL_FORCUS }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = SOV_NATIONAL_FORCUS
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+		add_stability = 0.1
+		custom_effect_tooltip = SOV_FRAM_AND_FACTORY
+		add_ideas = SOV_FACTORY_FACTOR1
+		}
+	} 
+	focus = {
+		id = SOV_FACTRY_2
+		icon = "GFX_focus_SOV_breadbasket_of_the_union"
+		prerequisite = { focus = SOV_FACTRY_1 }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = SOV_FACTRY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = { 
+				is_ai = yes 
+					check_variable = {
+						SOV.FARM_POINT < 86
+						}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = SOV_FARM_POINT_85
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+			custom_effect_tooltip = SOV_PARAMETER
+			}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR1
+				}   
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR1
+					add_idea = SOV_FACTORY_FACTOR2
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR2
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR2
+					add_idea = SOV_FACTORY_FACTOR3
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR3
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR3
+					add_idea = SOV_FACTORY_FACTOR4
+					}
+			}
+		}
+	} 
+	focus = {
+		id = SOV_FACTRY_3
+		icon = "GFX_focus_SOV_third_rome"
+		prerequisite = { focus = SOV_FACTRY_1 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SOV_FACTRY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = { 
+				is_ai = yes  
+				check_variable = {
+					SOV.FARM_POINT < 66
+					}
+			}
+
+		}
+		custom_trigger_tooltip = {
+			tooltip = SOV_FARM_POINT_65
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+			custom_effect_tooltip = SOV_PARAMETER
+			}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR1
+				}   
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR1
+					add_idea = SOV_FACTORY_FACTOR2
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR2
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR2
+					add_idea = SOV_FACTORY_FACTOR3
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR3
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR3
+					add_idea = SOV_FACTORY_FACTOR4
+					}
+			}
+		}
+	} 
+	focus = {
+		id = SOV_FACTRY_4
+		icon = "GFX_focus_SOV_reinforce_southern_naval_bases"
+		prerequisite = { focus = SOV_FACTRY_1 }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id = SOV_FACTRY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = { 
+				is_ai = yes  
+				check_variable = {
+					SOV.FARM_POINT < 86
+					}		
+			}
+
+		}
+		custom_trigger_tooltip = {
+			tooltip = SOV_FARM_POINT_85
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+		custom_effect_tooltip = SOV_PARAMETER
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR1
+				}   
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR1
+					add_idea = SOV_FACTORY_FACTOR2
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR2
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR2
+					add_idea = SOV_FACTORY_FACTOR3
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR3
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR3
+					add_idea = SOV_FACTORY_FACTOR4
+					}
+			}
+		}
+	}
+	focus = {
+		id = SOV_FACTRY_5
+		icon = "GFX_goal_generic_construction"
+		prerequisite = { focus = SOV_FACTRY_4 }
+		prerequisite = { focus = SOV_FACTRY_3 }
+		prerequisite = { focus = SOV_FACTRY_2 }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 2
+		relative_position_id = SOV_FACTRY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = { 
+				is_ai = yes  
+				check_variable = {
+					SOV.FARM_POINT < 51
+					}			
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = SOV_FARM_POINT_50
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+			custom_effect_tooltip = SOV_PARAMETER
+			}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR4
+				}   
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR4
+					add_idea = SOV_FACTORY_FACTOR5
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR5
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR5
+					add_idea = SOV_FACTORY_FACTOR6
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR6
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR6
+					add_idea = SOV_FACTORY_FACTOR7
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR7
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR7
+					add_idea = SOV_FACTORY_FACTOR8
+					}
+			}
+		}
+	}
+	focus = {
+		id = SOV_FACTRY_6
+		icon = "GFX_goal_generic_soviet_construction"
+		prerequisite = { focus = SOV_FACTRY_5 }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 3
+		relative_position_id = SOV_FACTRY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = { 
+				is_ai = yes  
+				check_variable = {
+					SOV.FARM_POINT < 21
+					}			
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = SOV_FARM_POINT_20
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+			custom_effect_tooltip = SOV_PARAMETER
+			}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR4
+				}   
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR4
+					add_idea = SOV_FACTORY_FACTOR5
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR5
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR5
+					add_idea = SOV_FACTORY_FACTOR6
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR6
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR6
+					add_idea = SOV_FACTORY_FACTOR7
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR7
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR7
+					add_idea = SOV_FACTORY_FACTOR8
+					}
+			}
+		}
+	}
+	focus = {
+		id = SOV_FACTRY_7
+		icon ="GFX_goal_generic_construction"
+		prerequisite = { focus = SOV_FACTRY_2 }
+		prerequisite = { focus = SOV_FACTRY_3 }
+		prerequisite = { focus = SOV_FACTRY_4 }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 2
+		relative_position_id = SOV_FACTRY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = { 
+				is_ai = yes  
+				check_variable = {
+					SOV.FARM_POINT < 51
+					}			
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = SOV_FARM_POINT_50
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+			custom_effect_tooltip = SOV_PARAMETER
+			}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR4
+				}   
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR4
+					add_idea = SOV_FACTORY_FACTOR5
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR5
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR5
+					add_idea = SOV_FACTORY_FACTOR6
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR6
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR6
+					add_idea = SOV_FACTORY_FACTOR7
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR7
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR7
+					add_idea = SOV_FACTORY_FACTOR8
+					}
+			}
+		}
+	}
+	focus = {
+		id = SOV_FACTRY_8
+		icon = "GFX_goal_generic_soviet_construction"
+		prerequisite = { focus = SOV_FACTRY_7 }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 3
+		relative_position_id = SOV_FACTRY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = { 
+				is_ai = yes  
+				check_variable = {
+					SOV.FARM_POINT < 21
+					}			
+		}
+		}
+		custom_trigger_tooltip = {
+			tooltip = SOV_FARM_POINT_20
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+			custom_effect_tooltip = SOV_PARAMETER
+			}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR4
+				}   
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR4
+					add_idea = SOV_FACTORY_FACTOR5
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR5
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR5
+					add_idea = SOV_FACTORY_FACTOR6
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR6
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR6
+					add_idea = SOV_FACTORY_FACTOR7
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_FACTORY_FACTOR7
+				}
+				swap_ideas = {
+					remove_idea = SOV_FACTORY_FACTOR7
+					add_idea = SOV_FACTORY_FACTOR8
+					}
+			}
+		}
+	}
+	focus = {
+		id = SOV_FACTRY_9
+		icon = "GFX_focus_SOV_reinforce_eastern_naval_bases"
+		prerequisite = { focus = SOV_FACTRY_8 }
+		prerequisite = { focus = SOV_FACTRY_6 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 4
+		relative_position_id = SOV_FACTRY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = { 
+				is_ai = yes  
+				check_variable = {
+					SOV.FARM_POINT < 6
+					}			
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = SOV_FARM_POINT_5
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {
+			swap_ideas = {
+				remove_idea = SOV_FACTORY_FACTOR8
+				add_idea = SOV_FACTORY_FACTOR9
+				}
+			}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SOV_FACTORY_FACTOR8
+				add_idea = SOV_FACTORY_FACTOR9
+				}
+		}
+	}
+	focus = {
+		id = SOV_FACTRY_10
+		icon = "GFX_focus_generic_aircraft_production"
+		prerequisite = { focus = SOV_FACTRY_9 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 5
+		relative_position_id = SOV_FACTRY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			custom_effect_tooltip = SOV_good_country_15
+			add_to_variable = {
+				var = SOV.real_good_country_point
+				value = 15
+			 }
+			 if = {
+				limit = {
+					has_idea = SOV_politics_civilwar1 
+				}   
+				swap_ideas = {
+					remove_idea = SOV_politics_civilwar1 
+					add_idea = SOV_politics_civilwar2
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_politics_civilwar2
+				}
+				swap_ideas = {
+					remove_idea = SOV_politics_civilwar2
+					add_idea = SOV_politics_civilwar3
+					}
+			}
+			else_if = {
+				limit = {
+					has_idea = SOV_politics_civilwar3
+				}
+				remove_ideas = SOV_politics_civilwar3
+			}
+		}
+	}
+	focus = {
+		id = SOV_ARMY_1
+		icon = "GFX_focus_SOV_support_spanish_poum"
+		prerequisite = { focus = SOV_NATIONAL_FORCUS }
+		#mutually_exclusive = { focus =  }
+		x = -8
+		y = 2
+		relative_position_id = SOV_NATIONAL_FORCUS
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+			custom_effect_tooltip = SOV_RED_ARMY_RELATED_POINT_15
+			add_to_variable = {
+				var = SOV.RED_ARMY_RELATED_POINT
+				value = -15
+			 }
+		}
+	} 
+	focus = {
+		id = SOV_ARMY_2
+		icon = "GFX_focus_generic_military_academy"
+		prerequisite = { focus = SOV_ARMY_1 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+		custom_effect_tooltip = SOVIET_sikan_school
+		}
+	} 
+	focus = {
+		id = SOV_ARMY_3
+		icon = "GFX_focus_SOV_mobilization_plan"
+		prerequisite = { focus = SOV_ARMY_2 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+			custom_effect_tooltip = SOVIET_sikan_hero
+		}
+	} 
+	focus = {
+		id = SOV_ARMY_4
+		icon = "GFX_focus_POL_sanation_right"
+		prerequisite = { focus = SOV_ARMY_3 }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 3
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+			custom_effect_tooltip = SOVIET_sikan_citizn
+		}
+	}
+	focus = {
+		id = SOV_ARMY_5
+		icon = "GFX_focus_generic_women_in_military"
+		prerequisite = { focus = SOV_ARMY_4 }
+		#mutually_exclusive = { focus =  }
+		x = 1
+		y = 4
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+			custom_effect_tooltip = SOV_RED_ARMY_RELATED_POINT_15
+			add_to_variable = {
+				var = SOV.RED_ARMY_RELATED_POINT
+				value = -15
+			 }
+		}
+	}
+	focus = {
+		id = SOV_ARMY_6
+		icon = "GFX_focus_SOV_builder_of_the_red_army"
+		prerequisite = { focus = SOV_ARMY_3 }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 3
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+		custom_effect_tooltip = SOV_RED_ARMY_SCHOOL_OFFENS
+		}
+	}
+	focus = {
+		id = SOV_ARMY_7
+		icon = "GFX_focus_eng_concessions_to_the_trade_unions"
+		prerequisite = { focus = SOV_ARMY_6 }
+		#mutually_exclusive = { focus =  }
+		x = -1
+		y = 4
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+			custom_effect_tooltip = SOV_RED_ARMY_SCHOOL_PLAM
+		}
+	}
+	focus = {
+		id = SOV_ARMY_8
+		icon = "GFX_focus_generic_military_dictatorship"
+		prerequisite = { focus = SOV_ARMY_7 }
+		prerequisite = { focus = SOV_ARMY_5 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 5
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = SOV_ARMY_9
+		icon = "GFX_focus_spa_save_the_alcazar"
+		prerequisite = { focus = SOV_ARMY_1 }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 1
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = SOV_ARMY_10
+		icon = "GFX_focus_mex_arrest_general_cedillo"
+		prerequisite = { focus = SOV_ARMY_9 }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 2
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = SOV_ARMY_11
+		icon = "GFX_focus_SOV_behead_the_snake"
+		prerequisite = { focus = SOV_ARMY_9 }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 2
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = SOV_ARMY_12
+		icon = "GFX_focus_SOV_penal_battalions"
+		prerequisite = { focus = SOV_ARMY_10 }
+		prerequisite = { focus = SOV_ARMY_11 }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 3
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = SOV_ARMY_13
+		icon = "GFX_goal_generic_defence"
+		prerequisite = { focus = SOV_ARMY_12 }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 4
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = SOV_ARMY_14
+		icon = "GFX_focus_SOV_the_last_purge"
+		prerequisite = { focus = SOV_ARMY_13 }
+		x = 3
+		y = 5
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = SOV_ARMY_16
+		icon = "GFX_focus_generic_military_mission"
+		prerequisite = { focus = SOV_ARMY_1 }
+		x = -2
+		y = 1
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+			custom_effect_tooltip = SOV_RED_ARMY_BAD_POINT_10
+			add_to_variable = {
+				var = SOV.RED_ARMY_BAD_POINT
+				value = 10
+			}
+		}
+	}
+	focus = {
+		id = SOV_ARMY_17
+		icon = "GFX_goal_generic_cavalry"
+		prerequisite = { focus = SOV_ARMY_16 }
+		mutually_exclusive = { focus = SOV_ARMY_21 }
+		x = -3
+		y = 2
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = SOV_ARMY_18
+		icon = "GFX_focus_EST_era_of_silence"
+		prerequisite = { focus = SOV_ARMY_17 }
+		x = -3
+		y = 3
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = SOV_ARMY_19
+		icon = "GFX_focus_spr_torchbearers_of_tomorrow"
+		prerequisite = { focus = SOV_ARMY_18 }
+		x = -3
+		y = 4
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = SOV_ARMY_20
+		icon = "GFX_focus_POL_beck_ribbentrop"
+		prerequisite = { focus = SOV_ARMY_19 }
+		x = -3
+		y = 5
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = SOV_ARMY_21
+		icon = "GFX_goal_generic_improve_relations"
+		prerequisite = { focus = SOV_ARMY_16 }
+		mutually_exclusive = { focus = SOV_ARMY_17 }
+		x = -5
+		y = 2
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+			custom_effect_tooltip = SOV_RED_ARMY_BAD_POINT_5
+			add_to_variable = {
+				var = SOV.RED_ARMY_BAD_POINT
+				value = -5
+			}
+			add_ideas = SOV_SINEI_SYOUKOU
+		}
+	}
+	focus = {
+		id = SOV_ARMY_22
+		icon = "GFX_goal_generic_demand_territory"
+		prerequisite = { focus = SOV_ARMY_21 }
+		x = -5
+		y = 3
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SOV_SINEI_SYOUKOU
+				add_idea = SOV_SINEI_SYOUKOU1
+				}
+		}
+	}
+	focus = {
+		id = SOV_ARMY_23
+		icon = "GFX_focus_generic_concessions"
+		prerequisite = { focus = SOV_ARMY_22 }
+		x = -5
+		y = 4
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SOV_SINEI_SYOUKOU1
+				add_idea = SOV_SINEI_SYOUKOU2
+				}
+		}
+	}
+	focus = {
+		id = SOV_ARMY_24
+		icon = "GFX_focus_generic_join_comintern"
+		prerequisite = { focus = SOV_ARMY_23 }
+		x = -5
+		y = 5
+		relative_position_id = SOV_ARMY_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SOV_SINEI_SYOUKOU2
+				add_idea = SOV_SINEI_SYOUKOU3
+				}
+		}
+	}
+	focus = {
+		id = SOV_POLITICS_1
+		icon = "GFX_focus_SOV_the_supreme_soviet"
+		prerequisite = { focus = SOV_NATIONAL_FORCUS }
+		#mutually_exclusive = { focus =  }
+		x = 6
+		y = 2
+		relative_position_id = SOV_NATIONAL_FORCUS
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_2
+		icon = "GFX_focus_por_workers_of_iberia"
+		prerequisite = { focus = SOV_POLITICS_1 }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 1
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_3
+		icon = "GFX_goal_generic_territory_or_war"
+		prerequisite = { focus = SOV_POLITICS_2 }
+		#mutually_exclusive = { focus =  }
+		x = -2
+		y = 2
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_4
+		icon = "GFX_goal_generic_consumer_goods"
+		prerequisite = { focus = SOV_POLITICS_3 }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 3
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_5
+		icon = "GFX_goal_generic_construction2"
+		prerequisite = { focus = SOV_POLITICS_4 }
+		#mutually_exclusive = { focus =  }
+		x = -3
+		y = 4
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_6
+		icon = "GFX_goal_generic_war_with_comintern"
+		prerequisite = { focus = SOV_POLITICS_1 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 1
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_7
+		icon = "GFX_goal_generic_political_pressure"
+		prerequisite = { focus = SOV_POLITICS_6 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 2
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_8
+		icon = "GFX_focus_CZE_german_puppet"
+		prerequisite = { focus = SOV_POLITICS_7 }
+		prerequisite = { focus = SOV_POLITICS_11 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 3
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_9
+		icon = "GFX_focus_SOV_military_purge"
+		prerequisite = { focus = SOV_POLITICS_7 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 4
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_10
+		icon = "GFX_focus_YUG_pan_slavic_congress"
+		prerequisite = { focus = SOV_POLITICS_1 }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 1
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_11
+		icon = "GFX_focus_SOV_womens_fascist_movement"
+		prerequisite = { focus = SOV_POLITICS_10 }
+		#mutually_exclusive = { focus =  }
+		x = 2
+		y = 2
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_12
+		icon = "GFX_focus_generic_military_academy"
+		prerequisite = { focus = SOV_POLITICS_10 }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 2
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_13
+		icon = "GFX_focus_generic_self_management"
+		prerequisite = { focus = SOV_POLITICS_10 }
+		#mutually_exclusive = { focus =  }
+		x = 6
+		y = 2
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_14
+		icon = "GFX_focus_POL_warsaw_main_station"
+		prerequisite = { focus = SOV_POLITICS_12 }
+		prerequisite = { focus = SOV_POLITICS_13 }
+		#mutually_exclusive = { focus =  }
+		x = 5
+		y = 3
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_15
+		icon = "GFX_goal_generic_national_unity"
+		prerequisite = { focus = SOV_POLITICS_12 }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 3
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_16
+		icon = "GFX_focus_generic_support_the_left_right"
+		prerequisite = { focus = SOV_POLITICS_15 }
+		#mutually_exclusive = { focus =  }
+		x = 3
+		y = 4
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_17
+		icon = "GFX_focus_eng_crush_the_dream"
+		prerequisite = { focus = SOV_POLITICS_14 }
+		#mutually_exclusive = { focus =  }
+		x = 5
+		y = 4
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_18
+		icon = "GFX_focus_spr_crush_the_revolution"
+		prerequisite = { focus = SOV_POLITICS_17 }
+		prerequisite = { focus = SOV_POLITICS_16 }
+		#mutually_exclusive = { focus =  }
+		x = 4
+		y = 5
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+	focus = {
+		id = SOV_POLITICS_19
+		icon = "GFX_focus_generic_soviet_politics"
+		prerequisite = { focus = SOV_POLITICS_9 }
+		#mutually_exclusive = { focus =  }
+		x = 0
+		y = 5
+		relative_position_id =  SOV_POLITICS_1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		complete_tooltip = {}
+		completion_reward = {
+
+		}
+	} 
+}

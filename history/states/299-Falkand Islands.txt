@@ -1,0 +1,27 @@
+
+state={
+	id=299
+	name="STATE_299"
+
+	history={
+		owner = ARG
+		buildings = {
+			infrastructure = 1
+			12960 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = ARG
+
+	}
+
+	provinces={
+		12960 14012 14013 14014 14015 
+	}
+	manpower=2463
+	buildings_max_level_factor=1.000
+	state_category=enclave
+	local_supplies=0.000
+}

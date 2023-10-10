@@ -1,0 +1,28 @@
+
+state={
+	id=1017
+	name="STATE_1017"
+
+	history={
+		owner = ARG
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 6
+			10953 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = ARG
+
+	}
+
+	provinces={
+		2149 10935 12494 14208 14209 14210 
+	}
+	manpower=975313
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

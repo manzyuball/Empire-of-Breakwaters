@@ -1,0 +1,563 @@
+CHI_habatukousou = {
+
+	CHI_koukuu1 = {
+
+		allowed = {
+				original_tag = CHI
+		}
+
+		cost = 25
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_koukuu
+         air_experience = 10
+         add_equipment_to_stockpile = {
+            type = fighter_equipment_1
+            amount = 25
+            producer = CHI
+            }
+			hidden_effect = {
+            add_to_variable = {
+               var = CHI.CHI_koukuu_h
+               value = 10
+            }
+          }
+		}
+	}
+
+   CHI_koukuu2 = {
+
+		allowed = {
+				original_tag = CHI
+		}
+
+		cost = 75
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_koukuu
+         air_experience = 20
+         random_owned_controlled_state = {
+         add_building_construction = {
+            type = air_base
+            level = 2
+            instant_build = yes
+            }
+         }
+			hidden_effect = {
+            add_to_variable = {
+               var = CHI.CHI_koukuu_h
+               value = 25
+            }
+          }
+
+		}
+	}
+
+   CHI_koukuu3 = {
+
+		allowed = {
+				original_tag = CHI
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_koukuu
+         set_rule = {
+            can_use_kamikaze_pilots = yes
+            }
+			hidden_effect = {
+            add_to_variable = {
+               var = CHI.CHI_koukuu_h
+               value = 30
+            }
+          }
+
+		}
+	}
+
+   CHI_koukuu4 = {
+
+		allowed = {
+				original_tag = CHI
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_koukuu
+         set_rule = {
+            can_generate_female_aces = yes
+            }
+			hidden_effect = {
+            add_to_variable = {
+               var = CHI.CHI_koukuu_h
+               value = 30
+            }
+          }
+
+		}
+	}
+
+   #############################################################
+   #############################################################
+   #############################################################
+   #############################################################
+   #############################################################
+   #############################################################
+   #############################################################
+   #############################################################
+   #############################################################
+
+   CHI_rikugun1 = {
+
+		allowed = {
+				original_tag = CHI
+		}
+
+		cost = 25
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_rikugun
+         army_experience = 10
+         add_manpower = 50000
+			hidden_effect = {
+            add_to_variable = {
+               var = CHI.CHI_riku_h
+               value = 10
+            }
+          }
+
+		}
+	}
+
+   CHI_rikugun2 = {
+
+		allowed = {
+				original_tag = CHI
+		}
+
+		cost = 75
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_rikugun
+         army_experience = 20
+         load_oob = "CHI_sinpei"
+			hidden_effect = {
+            add_to_variable = {
+               var = CHI.CHI_riku_h
+               value = 25
+            }
+          }
+
+		}
+	}
+   CHI_rikugun3 = {
+
+		allowed = {
+				original_tag = CHI
+		}
+
+		cost = 75
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 25
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_rikugun
+         army_experience = 20
+         random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+               type = arms_factory
+               level = 1
+               instant_build = yes
+               }
+          }
+			hidden_effect = {
+            add_to_variable = {
+               var = CHI.CHI_riku_h
+               value = 25
+            }
+          }
+
+		}
+	}
+   
+   #############################################################
+   #############################################################
+   #############################################################
+   #############################################################
+   #############################################################
+   #############################################################
+   #############################################################
+   #############################################################
+   #############################################################
+
+   CHI_tetudou1 = {
+
+		allowed = {
+				original_tag = CHI
+		}
+		cost = 25
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_tetudou
+         random_owned_controlled_state = {
+            add_resource = {
+            type = steel
+            amount = 6
+            }
+         }
+			hidden_effect = {
+            add_to_variable = {
+               var = CHI.CHI_tetu_h
+               value = 10
+            }
+         }
+
+		}
+	}
+
+   CHI_tetudou2 = {
+
+		allowed = {
+				original_tag = CHI
+		}
+
+		cost = 25
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_tetudou
+         random_owned_controlled_state = {
+            add_resource = {
+            type = Aluminium
+            amount = 5
+            }
+         }
+			hidden_effect = {
+            add_to_variable = {
+               var = CHI.CHI_tetu_h
+               value = 10
+            }
+         }
+
+		}
+	}
+
+   CHI_tetudou3 = {
+
+		allowed = {
+				original_tag = CHI
+		}
+		cost = 75
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_tetudou
+         random_owned_controlled_state = {
+            add_resource = {
+            type = Tungsten
+            amount = 5
+            }
+         }
+			hidden_effect = {
+            add_to_variable = {
+               var = CHI.CHI_tetu_h
+               value = 25
+            }
+         }
+
+		}
+	}
+
+   CHI_tetudou4 = {
+
+		allowed = {
+				original_tag = CHI
+		}
+
+		cost = 185
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_tetudou
+         random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+               type = synthetic_refinery
+               level = 1
+               instant_build = yes
+               }
+               
+            }
+			hidden_effect = {
+            add_to_variable = {
+               var = CHI.CHI_tetu_h
+               value = 45
+            }
+         }
+
+		}
+	}
+
+	CHI_asas = {
+
+		allowed = {
+				original_tag = CHI
+		}
+        icon = hol_attract_foreign_investors
+		cost = 50
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = CHI_ta
+			hidden_effect = {
+            add_to_variable = {
+               var = CHI.CHI_tetu_h
+               value = -10
+            }
+			add_to_variable = {
+				var = CHI.CHI_riku_h
+				value = -10
+			 }
+			 add_to_variable = {
+				var = CHI.CHI_koukuu_h
+				value = -10
+			 }
+         }
+
+		}
+	}
+
+}
+CHI_Gunzi_sakusen = {
+	CHI_KUUTEI = {
+		icon = generic_operation
+		available = {
+            AND = {
+                CHI = {  has_war_with = JAP }  
+                NOT = { has_country_flag = CHI_Para_OK }
+                NOT = { has_idea = ENG_Zyouriku_ideas }
+                OR = {
+                    AND = {
+                        has_equipment = {
+                            infantry_equipment > 9999
+                            }
+                            has_equipment = {
+                                artillery_equipment > 119
+                                }
+                                has_equipment = {
+                                    support_equipment > 339
+                                    }
+                    }
+                    is_ai = yes
+                }
+				controls_state = 1007
+            }
+		}
+		visible = {
+		}
+		cost = 50
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10000
+		}
+        days_remove = 65
+		 remove_effect = {
+         custom_effect_tooltip = CHI_Taiwan_DESDESC
+            set_country_flag = CHI_Para_OK
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = -10000
+                }
+                add_equipment_to_stockpile = {
+                    type = artillery_equipment
+                    amount = -120
+                    }
+                    add_equipment_to_stockpile = {
+                        type = support_equipment
+                        amount = -339
+                        }
+		}	
+	}
+    CHI_Taiwan_KUUTEI_Kekkou = {
+		icon = generic_ignite_civil_war
+		available = {
+            AND = {
+                has_country_flag = CHI_Para_OK
+                CHI = {  has_war_with = JAP } 
+				has_deployed_air_force_size = {
+					size > 1000
+					type = fighter
+				}
+            }
+            
+		}
+        highlight_states = {
+			highlight_state_targets = {
+				state = 524
+			} 
+		}
+		visible = {
+		}
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10000
+		}
+        complete_effect = {
+            hidden_effect = {
+                clr_country_flag = CHI_Para_OK
+            }
+        }
+        days_remove = 5
+		  remove_effect = {
+            custom_effect_tooltip = CHI_taiwan_Kekkoui
+            hidden_effect = {
+                clr_country_flag = CHI_Para_OK
+                load_oob = "CHI_Taiwan"
+                set_province_controller = 12068
+                set_province_controller = 1091
+                set_province_controller = 7186
+            }
+		}
+	}
+	CHI_Okinawa_KUUTEI_Kekkou = {
+		icon = generic_ignite_civil_war
+		available = {
+            AND = {
+                has_country_flag = CHI_Para_OK
+                CHI = {  has_war_with = JAP } 
+				has_deployed_air_force_size = {
+					size > 1000
+					type = fighter
+				}
+				controls_state = 524
+            }
+            
+		}
+        highlight_states = {
+			highlight_state_targets = {
+				state = 526
+			} 
+		}
+		visible = {
+		}
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10000
+		}
+        complete_effect = {
+            hidden_effect = {
+                clr_country_flag = CHI_Para_OK
+            }
+        }
+        days_remove = 5
+		  remove_effect = {
+            custom_effect_tooltip = CHI_okinawa_Kekkoui
+            hidden_effect = {
+                clr_country_flag = CHI_Para_OK
+                load_oob = "CHI_Okinawa"
+                set_province_controller = 1123
+                set_province_controller = 11932
+            }
+		}
+	}
+	CHI_Tanegasima_KUUTEI_Kekkou = {
+		icon = generic_ignite_civil_war
+		available = {
+            AND = {
+                has_country_flag = CHI_Para_OK
+                CHI = {  has_war_with = JAP } 
+				has_deployed_air_force_size = {
+					size > 1000
+					type = fighter
+				}
+				controls_state = 526
+            }
+            
+		}
+        highlight_states = {
+			highlight_state_targets = {
+				state = 846
+			} 
+		}
+		visible = {
+		}
+		cost = 0
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10000
+		}
+        complete_effect = {
+            hidden_effect = {
+                clr_country_flag = CHI_Para_OK
+            }
+        }
+        days_remove = 5
+		  remove_effect = {
+            custom_effect_tooltip = CHI_Tanegasima_Kekkoui
+            hidden_effect = {
+                clr_country_flag = CHI_Para_OK
+                load_oob = "CHI_Tanega"
+                set_province_controller = 4198
+            }
+		}
+	}
+}

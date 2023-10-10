@@ -1,0 +1,1083 @@
+focus_tree = {
+	id = turkish_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = TUR
+		}
+	}
+#© 2022 Empire of Breakwaters制作チーム, 饅頭ボール. All rights reserved.
+#このファイルは著作権法で保護されており、このファイルの一部もしくは全体のEoB以外へのあらゆる利用は許可されていません。	
+	default = no
+
+	continuous_focus_position = { x = 100 y = 3250 }
+
+	focus = {
+		id = TUR_s1
+		icon ="GFX_focus_POL_warsaw_main_station"
+		x = -1
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+		factor = 50
+	    }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    completion_reward = {
+                swap_ideas = {
+                    remove_idea = rengou
+                    add_idea = rengou1
+                    }
+            
+            hidden_effect = {
+                news_event = {
+                    id = news.3
+                    days = 1
+                    random = 0
+                    }
+            }
+	    }
+}
+
+focus = {
+    id = TUR_s2
+    icon = "GFX_focus_GRE_reevaluating_the_drachma"
+    prerequisite = { focus = TUR_s1 }
+	relative_position_id = TUR_s1
+    x = -1
+    y = 1
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    add_stability = 0.05
+}
+}
+focus = {
+    id = TUR_s3
+    icon = "GFX_focus_research2"
+    prerequisite = { focus = TUR_s1 }
+	relative_position_id = TUR_s1
+    x = 1
+    y = 1
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    add_research_slot = 1
+}
+}
+focus = {
+    id = TUR_s4
+    icon = "GFX_focus_LAT_suspend_constitution_of_latvia"
+    prerequisite = { focus = TUR_s3 }
+	mutually_exclusive = { focus = TUR_s5 }
+	relative_position_id = TUR_s1
+    x = 2
+    y = 2
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+   swap_ideas = {
+    remove_idea = rengou1
+    add_idea = rengou2
+   }
+   custom_effect_tooltip = TUR_1agaru
+   hidden_effect = {
+   add_to_variable = {
+      var = TUR.TUR_KAIKAKUDO
+      value = 10
+   }
+ }
+}
+}
+focus = {
+    id = TUR_s5
+    icon = "GFX_focus_hol_abandon_the_gold_standard"
+    prerequisite = { focus = TUR_s2 }
+	mutually_exclusive = { focus = TUR_s4 }
+	relative_position_id = TUR_s1
+    x = -2
+    y = 2
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+   swap_ideas = {
+    remove_idea = rengou1
+    add_idea = hurui1
+   }
+   custom_effect_tooltip = TUR_1sagaru
+   hidden_effect = {
+   add_to_variable = {
+      var = TUR.TUR_KAIKAKUDO
+      value = -10
+   }
+ }
+}
+}
+focus = {
+    id = TUR_s6
+    icon = "GFX_focus_mex_arrest_general_cedillo"
+    prerequisite = { focus = TUR_s5 }
+	relative_position_id = TUR_s1
+    x = -4
+    y = 3
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    add_stability = 0.15
+    add_political_power = 100
+}
+}
+focus = {
+    id = TUR_s7
+    icon = "GFX_focus_SOV_merge_plants"
+    prerequisite = { focus = TUR_s5 }
+	relative_position_id = TUR_s1
+    x = -2
+    y = 3
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    swap_ideas = {
+        remove_idea = hurui1
+        add_idea = hurui2
+       }
+}
+}
+focus = {
+    id = TUR_s8
+    icon = "GFX_focus_SOV_south_manchuria_railway"
+    prerequisite = { focus = TUR_s5 focus = TUR_s4 }
+	relative_position_id = TUR_s1
+    x = 0
+    y = 3
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    random_owned_controlled_state = {
+        limit = {
+            free_building_slots = {
+                building = infrastructure
+                size > 1
+                include_locked = yes
+            }
+        }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+    random_owned_controlled_state = {
+        limit = {
+            free_building_slots = {
+                building = infrastructure
+                size > 1
+                include_locked = yes
+            }
+        }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+    random_owned_controlled_state = {
+        limit = {
+            free_building_slots = {
+                building = infrastructure
+                size > 1
+                include_locked = yes
+            }
+        }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+}
+
+focus = {
+    id = TUR_s9
+    icon = "GFX_focus_mex_privatisation"
+    prerequisite = { focus = TUR_s4 }
+	relative_position_id = TUR_s1
+    x = 2
+    y = 3
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    swap_ideas = {
+        remove_idea = rengou2
+        add_idea = rengou3
+       }
+}
+}
+focus = {
+    id = TUR_s10
+    icon = "GFX_focus_POL_riot_of_37"
+    prerequisite = { focus = TUR_s4 }
+	relative_position_id = TUR_s1
+    x = 4
+    y = 3
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    random_owned_controlled_state = {
+        limit = {
+            free_building_slots = {
+                building = industrial_complex
+                size > 1
+                include_locked = yes
+            }
+        }
+        add_extra_state_shared_building_slots = 2
+        add_building_construction = {
+            type = industrial_complex
+            level = 2
+            instant_build = yes
+        }
+    }
+    random_owned_controlled_state = {
+        limit = {
+            free_building_slots = {
+                building = industrial_complex
+                size > 1
+                include_locked = yes
+            }
+        }
+        add_extra_state_shared_building_slots = 2
+        add_building_construction = {
+            type = industrial_complex
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+}
+focus = {
+    id = TUR_s11
+    icon = "GFX_goal_generic_oil_refinery"
+    prerequisite = { focus = TUR_s8 }
+	relative_position_id = TUR_s1
+    x = 0
+    y = 4
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    add_timed_idea = {
+        idea = kane
+        days = 180
+        }
+}
+}
+focus = {
+    id = TUR_s12
+    icon = "GFX_focus_POL_develop_polish_shipbuilding"
+    prerequisite = { focus = TUR_s11 }
+	relative_position_id = TUR_s1
+    x = 0
+    y = 5
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    random_owned_controlled_state = {
+        limit = {
+            is_coastal = yes
+            free_building_slots = {
+                building = dockyard
+                size > 2
+                include_locked = yes
+            }
+        }
+        add_extra_state_shared_building_slots = 3
+        add_building_construction = {
+            type = dockyard
+            level = 3
+            instant_build = yes
+        }
+    }
+}
+}
+focus = {
+    id = TUR_s13
+    icon = "GFX_focus_jap_zaibatsu"
+    prerequisite = { focus = TUR_s9 }
+	prerequisite = { focus = TUR_s10 }
+	relative_position_id = TUR_s1
+    x = 3
+    y = 4
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    swap_ideas = {
+        remove_idea = rengou3
+        add_idea = rengou4
+       }
+}
+}
+focus = {
+    id = TUR_s14
+    icon = "GFX_focus_POL_complete_april_constitution"
+    prerequisite = { focus = TUR_s13 }
+	relative_position_id = TUR_s1
+    x = 3
+    y = 5
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    remove_ideas = rengou4
+    add_timed_idea = {
+        idea = rengou5
+        days = 360
+        }
+        custom_effect_tooltip = TUR_1agaru
+        hidden_effect = {
+        add_to_variable = {
+           var = TUR.TUR_KAIKAKUDO
+           value = 10
+        }
+      }
+}
+}
+focus = {
+    id = TUR_s15
+    icon = "GFX_focus_generic_africa_infrastructure"
+    prerequisite = { focus = TUR_s6 }
+	prerequisite = { focus = TUR_s7 }
+	relative_position_id = TUR_s1
+    x = -3
+    y = 4
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    swap_ideas = {
+        remove_idea = hurui2
+        add_idea = hurui3
+       }
+    random_owned_controlled_state = {
+        limit = {
+            free_building_slots = {
+                building = infrastructure
+                size > 1
+                include_locked = yes
+            }
+        }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+    random_owned_controlled_state = {
+        limit = {
+            free_building_slots = {
+                building = infrastructure
+                size > 1
+                include_locked = yes
+            }
+        }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+    random_owned_controlled_state = {
+        limit = {
+            free_building_slots = {
+                building = infrastructure
+                size > 1
+                include_locked = yes
+            }
+        }
+        add_building_construction = {
+            type = infrastructure
+            level = 2
+            instant_build = yes
+        }
+    }
+}
+}
+#© 2022 Empire of Breakwaters制作チーム, 饅頭ボール. All rights reserved.
+#このファイルは著作権法で保護されており、このファイルの一部もしくは全体のEoB以外へのあらゆる利用は許可されていません。
+focus = {
+    id = TUR_s16
+    icon = "GFX_focus_TUR_treaty_of_saadabad"
+    prerequisite = { focus = TUR_s15 }
+	relative_position_id = TUR_s1
+    x = -3
+    y = 5
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    remove_ideas = hurui3
+    add_stability = -0.15
+    custom_effect_tooltip = TUR_1sagaru
+    hidden_effect = {
+    add_to_variable = {
+       var = TUR.TUR_KAIKAKUDO
+       value = -10
+    }
+  }
+}
+}
+focus = {
+    id = TUR_s17
+    icon = "GFX_focus_SOV_rebuild_the_savior_cathedral"
+    prerequisite = { focus = TUR_s16 }
+	prerequisite = { focus = TUR_s12 }
+	relative_position_id = TUR_s1
+    x = -1
+    y = 6
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    add_stability = 0.15
+}
+}
+focus = {
+    id = TUR_s18
+    icon = "GFX_focus_spa_the_spanish_miracle"
+    prerequisite = { focus = TUR_s14 }
+	prerequisite = { focus = TUR_s12 }
+	relative_position_id = TUR_s1
+    x = 1
+    y = 6
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+   797 = {
+    set_state_category = megalopolis
+    add_building_construction = {
+        type = industrial_complex
+        level = 5
+        instant_build = yes
+        }
+        add_extra_state_shared_building_slots = 5
+   }
+}
+}
+focus = {
+    id = TUR_s19
+    icon = "GFX_focus_LAT_aizsargi"
+    prerequisite = { focus = TUR_s17 focus = TUR_s18 }
+	relative_position_id = TUR_s1
+    x = 0
+    y = 7
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+   add_ideas = TUR_keiza
+}
+}
+
+focus = {
+    id = TUR_g1
+    icon = "GFX_focus_generic_military_mission"
+    x = 8
+    y = 0
+
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    army_experience = 150
+}
+}
+focus = {
+    id = TUR_g2
+    icon = "GFX_focus_generic_military_academy"
+    x = 0
+    y = 1
+	prerequisite = {  focus = TUR_g1 }
+	relative_position_id = TUR_g1
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    swap_ideas = {
+        remove_idea = gun
+        add_idea = gun1
+       }
+}
+}
+focus = {
+    id = TUR_g3
+    icon = "GFX_focus_RAJ_lions_of_the_great_war"
+    x = -3
+    y = 2
+	prerequisite = {  focus = TUR_g2 }
+	relative_position_id = TUR_g1
+    cost = 5
+    mutually_exclusive = { focus = TUR_g4 }
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    swap_ideas = {
+        remove_idea = gun1
+        add_idea = guna1
+       }
+       add_tech_bonus = {
+        name = infantry_artillery_bonus
+        bonus = 2.0
+        uses = 1
+        category = infantry_weapons
+        category = artillery
+    }
+    custom_effect_tooltip = TUR_1sagaru
+    hidden_effect = {
+    add_to_variable = {
+       var = TUR.TUR_KAIKAKUDO
+       value = -10
+    }
+  }
+}
+}
+#© 2022 Empire of Breakwaters制作チーム, 饅頭ボール. All rights reserved.
+#このファイルは著作権法で保護されており、このファイルの一部もしくは全体のEoB以外へのあらゆる利用は許可されていません。
+focus = {
+    id = TUR_g4
+    icon = "GFX_focus_generic_military_dictatorship"
+    x = 3
+    y = 2
+	prerequisite = {  focus = TUR_g2 }
+	relative_position_id = TUR_g1
+    mutually_exclusive = { focus = TUR_g3 }
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    swap_ideas = {
+        remove_idea = gun1
+        add_idea = gun2
+       }
+       custom_effect_tooltip = TUR_1agaru
+       hidden_effect = {
+       add_to_variable = {
+          var = TUR.TUR_KAIKAKUDO
+          value = 10
+       }
+     }
+}
+}
+focus = {
+    id = TUR_g5
+    icon = "GFX_focus_SOV_flying_clubs"
+    x = 3
+    y = 3
+	prerequisite = {  focus = TUR_g4 }
+	relative_position_id = TUR_g1
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    add_doctrine_cost_reduction = {
+        name = air_doc_bonus
+        cost_reduction = 0.5
+        uses = 3
+        category = air_doctrine
+    }
+}
+}
+focus = {
+    id = TUR_g6
+    icon = "GFX_goal_generic_navy_submarine"
+    x = 3
+    y = 4
+	prerequisite = {  focus = TUR_g5 }
+	relative_position_id = TUR_g1
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    add_tech_bonus = {
+        name = cr_bonus
+        bonus = 3.0
+        ahead_reduction = 2
+        uses = 3
+        category = cl_tech
+        category = ca_tech
+    }
+}
+}
+focus = {
+    id = TUR_g7
+    icon = "GFX_focus_generic_tank_production"
+    x = 2
+    y = 5
+	prerequisite = {  focus = TUR_g6 }
+	prerequisite = {  focus = TUR_g9 }
+	relative_position_id = TUR_g1
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    add_tech_bonus = {
+        name = armor_bonus
+        bonus = 3.0
+        uses = 2
+        category = armor
+    }
+}
+}
+focus = {
+    id = TUR_g8
+    icon = "GFX_focus_POL_sanation_right"
+    x = 1
+    y = 2
+	prerequisite = {  focus = TUR_g2 }
+    mutually_exclusive = { focus = TUR_g10 }
+	relative_position_id = TUR_g1
+    cost = 5
+	available = {
+        has_completed_focus = TUR_g4
+        }
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    swap_ideas = {
+        remove_idea = gun2
+        add_idea = gun3
+       }
+       custom_effect_tooltip = TUR_1agaru
+       hidden_effect = {
+       add_to_variable = {
+          var = TUR.TUR_KAIKAKUDO
+          value = 10
+       }
+     }
+}
+}
+focus = {
+    id = TUR_g9
+    icon = "GFX_focus_generic_manpower"
+    x = 1
+    y = 3
+	prerequisite = {  focus = TUR_g8 }
+	relative_position_id = TUR_g1
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    swap_ideas = {
+        remove_idea = gun3
+        add_idea = gun4
+       }
+}
+}
+focus = {
+    id = TUR_g10
+    icon = "GFX_focus_generic_strike_at_democracy1"
+    x = -1
+    y = 2
+	prerequisite = {  focus = TUR_g2 }
+    mutually_exclusive = { focus = TUR_g8 }
+	relative_position_id = TUR_g1
+    cost = 5
+	available = {
+        has_completed_focus = TUR_g3
+        }
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    swap_ideas = {
+        remove_idea = guna1
+        add_idea = guna2
+       }
+       custom_effect_tooltip = TUR_1sagaru
+       hidden_effect = {
+       add_to_variable = {
+          var = TUR.TUR_KAIKAKUDO
+          value = -10
+       }
+     }
+}
+}
+focus = {
+    id = TUR_g11
+    icon = "GFX_focus_SOV_mobilization_plan"
+    x = -1
+    y = 3
+	prerequisite = {  focus = TUR_g10 }
+	relative_position_id = TUR_g1
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    swap_ideas = {
+        remove_idea = guna2
+        add_idea = guna3
+       }
+}
+}
+focus = {
+    id = TUR_g12
+    icon = "GFX_goal_generic_army_artillery2"
+    x = -3
+    y = 3
+	prerequisite = {  focus = TUR_g3 }
+	relative_position_id = TUR_g1
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    add_tech_bonus = {
+        name = infantry_artillery_bonus
+        ahead_reduction = 2
+        uses = 2
+        category = infantry_weapons
+        category = artillery
+    }
+}
+}
+focus = {
+    id = TUR_g13
+    icon = "GFX_goal_generic_cavalry"
+    x = -3
+    y = 4
+	prerequisite = {  focus = TUR_g12 }
+	relative_position_id = TUR_g1
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    add_doctrine_cost_reduction = {
+        name = land_doc_bonus
+        cost_reduction = 0.5
+        uses = 1
+        category = land_doctrine
+    }
+}
+}
+focus = {
+    id = TUR_g14
+    icon = "GFX_goal_generic_military_sphere"
+    x = -2
+    y = 5
+	prerequisite = {  focus = TUR_g13 }
+	prerequisite = {  focus = TUR_g11 }
+	relative_position_id = TUR_g1
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    swap_ideas = {
+        remove_idea = guna3
+        add_idea = guna4
+       }
+}
+}
+focus = {
+    id = TUR_g15
+    icon = "GFX_focus_TUR_pivot_to_the_past"
+    x = 0
+    y = 6
+	prerequisite = {  focus = TUR_g14 focus = TUR_g7 }
+	prerequisite = {  focus = TUR_g16 }
+	relative_position_id = TUR_g1
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    if = {
+        limit = {
+            has_completed_focus = TUR_g3	
+        }
+        add_stability = 0.15
+        add_war_support = 0.15
+    }
+    if = {
+        limit = {
+            has_completed_focus = TUR_g4	
+        }
+        add_ideas = TUIR_GUN
+    }
+}
+}
+focus = {
+    id = TUR_g16
+    icon = "GFX_focus_POL_beck_ribbentrop"
+    x = 0
+    y = 4
+	prerequisite = {  focus = TUR_g11 focus = TUR_g9 }
+	relative_position_id = TUR_g1
+    cost = 5
+
+    ai_will_do = {
+    factor = 50
+    }	
+    cancel_if_invalid = yes
+    continue_if_invalid = no
+    available_if_capitulated = no
+
+completion_reward = {
+    if = {
+        limit = {
+            has_completed_focus = TUR_g3	
+        }
+        add_stability = 0.15
+    }
+    if = {
+        limit = {
+            has_completed_focus = TUR_g4	
+        }
+        remove_ideas = gun4
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

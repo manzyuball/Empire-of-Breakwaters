@@ -1,0 +1,31 @@
+
+state={
+	id=308
+	name="STATE_308"
+
+	history={
+		add_core_of = CUB
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+			4450 = {
+				naval_base = 1
+
+			}
+			7123 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		4450 7123 14039 14040 14041 14042 
+	}
+	manpower=25678
+	buildings_max_level_factor=1.000
+	state_category=tiny_island
+	local_supplies=0.000
+}

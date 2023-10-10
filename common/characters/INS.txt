@@ -1,0 +1,81 @@
+characters={
+	INS_OKADA = {
+		name=INS_OKADA
+		portraits={
+			civilian={
+				large="gfx/leaders/_EOB/okada.dds"
+			}
+		}
+		country_leader={
+			ideology = conservatism 
+			traits = {
+				jap_syokumin2 
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	INS_amir_sjarifuddin_harahap={
+		name=INS_amir_sjarifuddin_harahap
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			traits = {
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	INS_suharto={
+		name=INS_suharto
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_fascism.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits = {
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	INS_sutan_sjahrir={
+		name=INS_sutan_sjahrir
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+			}
+		}
+		country_leader={
+			ideology=moderatism
+			traits = {
+			}
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	INS_hein_ter_poorten={
+		name =HOL_hein_ter_poorten
+		portraits={
+			army={
+				large="GFX_portrait_hol_hein_ter_poorten"
+				small="GFX_idea_HOL_hein_ter_poorten"
+			}
+		}
+		field_marshal={
+			traits={ logistics_wizard inspirational_leader }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+}

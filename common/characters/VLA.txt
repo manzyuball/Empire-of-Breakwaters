@@ -1,0 +1,18 @@
+characters={
+
+	VLA_tura = {
+		name = VLA_tura
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/_EOB/nikolay.dds"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = { tuarri }
+			expire = "1953.3.1.1"
+			id = -1
+		}
+	}
+
+}

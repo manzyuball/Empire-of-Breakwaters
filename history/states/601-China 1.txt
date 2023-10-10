@@ -1,0 +1,34 @@
+
+state={
+	id=601
+	name="STATE_601"
+	resources={
+		oil=2.000
+	}
+
+	history={
+		owner = TIB
+		add_core_of = TIB
+		add_claim_by = CHI
+		buildings = {
+			infrastructure = 1
+
+		}
+		1939.1.1 = {
+			buildings = {
+				infrastructure = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		5018 5080 8041 8059 10741 13426 13427 13451 
+	}
+	manpower=368200
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=1.000
+}

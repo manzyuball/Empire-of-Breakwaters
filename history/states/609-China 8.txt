@@ -1,0 +1,31 @@
+
+state={
+	id=609
+	name="STATE_609"
+
+	history={
+		owner = MAN
+		add_core_of = PRC
+		add_claim_by = CHI
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			3900 = {
+				naval_base = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		814 3814 3830 3881 3900 6837 6898 9905 11886 13307 13322 13323 
+	}
+	manpower=6400000
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

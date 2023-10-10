@@ -1,0 +1,35 @@
+
+state={
+	id=1043
+	name="STATE_1043"
+
+	history={
+		owner = ARG
+		buildings = {
+			infrastructure = 5
+			arms_factory = 4
+			industrial_complex = 13
+			dockyard = 1
+			12364 = {
+				naval_base = 10
+				bunker = 1
+				coastal_bunker = 1
+
+			}
+
+		}
+		add_core_of = ARG
+		victory_points = {
+			12364 45 
+		}
+
+	}
+
+	provinces={
+		12364 12379 14192 14193 14194 14195 14196 14197 14198 
+	}
+	manpower=4321785
+	buildings_max_level_factor=1.000
+	state_category=megalopolis
+	local_supplies=0.000
+}

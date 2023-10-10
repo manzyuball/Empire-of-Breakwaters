@@ -1,0 +1,27 @@
+
+state={
+	id=306
+	name="STATE_306"
+
+	history={
+		owner = COL
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 5
+			air_base = 2
+
+		}
+		add_core_of = COL
+
+
+	}
+
+	provinces={
+		2079 7936 7991 10846 13759 13769 13877 13882 13886 13887 13926 13995 14161 14162 14163 14164 
+	}
+	manpower=4953049
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=15.000
+}

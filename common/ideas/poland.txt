@@ -1,0 +1,550 @@
+ideas = {
+
+country = {
+	POL_GUNKOKU = {
+		allowed = {
+			original_tag = POL
+		}
+		removal_cost = -1
+		picture = generic_reserve_divisions
+		modifier = {
+			conscription = 0.01
+			training_time_army_factor = -0.25
+			industrial_capacity_factory = 0.15
+		}
+	}
+	POL_NOUGYOU = {
+		allowed = {
+			original_tag = POL
+		}
+		removal_cost = -1
+		picture = POL_the_peasants_strike
+		modifier = {
+			stability_factor = -0.10
+			surrender_limit = -0.1
+			conscription_factor = -0.35
+			consumer_goods_factor = 0.05
+		}
+	}
+	POL_NOUGYOU1 = {
+		allowed = {
+			original_tag = POL
+		}
+		removal_cost = -1
+		picture = POL_the_peasants_strike
+		modifier = {
+			surrender_limit = -0.1
+			conscription_factor = -0.35
+		}
+	}
+	POL_NOUGYOU2 = {
+		allowed = {
+			original_tag = POL
+		}
+		removal_cost = -1
+		picture = POL_looming_peasants_strike
+		modifier = {
+			global_building_slots_factor = 0.15
+		}
+	}
+	POL_NOUGYOU3 = {
+		allowed = {
+			original_tag = POL
+		}
+		removal_cost = -1
+		picture = LIT_invested_in_farms
+		modifier = {
+			consumer_goods_factor = -0.05
+			production_factory_start_efficiency_factor = 0.15
+			global_building_slots_factor = 0.15
+		}
+	}
+	POL_AUS_KEIZAITEIKEI = {
+		allowed = {	original_tag = POL	}
+		removal_cost = -1
+		picture = HUN_hungarian_monarchy_habsburg
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+		targeted_modifier = { tag = AUS trade_cost_for_target_factor = -0.5 }
+	}
+	POL_GER_KEIZAITEIKEI = {
+		allowed = {	original_tag = POL	}
+		removal_cost = -1
+		picture = ger_rebuild_the_nation
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+		targeted_modifier = { tag = LAT trade_cost_for_target_factor = -0.5 }
+	}
+	POL_HANKYOU = {
+		allowed = {	original_tag = POL	}
+		removal_cost = -1
+		picture = LIT_iron_wolf_bad_4
+		modifier = {
+			drift_defence_factor = 0.25
+		}
+		targeted_modifier = { tag = GER attack_bonus_against = 0.15 }
+		targeted_modifier = { tag = SOV attack_bonus_against = 0.15 }
+		targeted_modifier = { tag = FRA attack_bonus_against = 0.15 }
+	}
+	POL_ZAPAS = {
+		allowed = {	original_tag = POL	}
+		removal_cost = -1
+		picture = POL_ideology_drift_defence
+		modifier = {
+			defensive_war_stability_factor = 0.25
+			surrender_limit = 0.5
+			political_power_factor = 0.25
+		}
+	}
+	POL_MIN_KEIZAI = {
+		allowed = {	original_tag = POL	}
+		removal_cost = -1
+		picture = export_focus
+		modifier = {
+			production_factory_max_efficiency_factor = 0.1
+		}
+	}
+	POL_MIN_KEIZAI1 = {
+		allowed = {	original_tag = POL	}
+		removal_cost = -1
+		picture = free_trade
+		modifier = {
+			consumer_goods_factor = 0.05
+			production_factory_max_efficiency_factor = 0.15
+			production_factory_efficiency_gain_factor = 0.1
+			industrial_capacity_factory = 0.1
+		}
+	}
+	POL_ThreeHOU = {
+		allowed = {	original_tag = POL	}
+		removal_cost = -1
+		picture = hol_the_foundations_of_defense
+		modifier = {
+			stability_factor = 0.15
+			drift_defence_factor = -0.25
+			political_power_factor = -0.25
+		}
+	}
+	POL_DOKUSAI_KEIZAI = {
+		allowed = {	original_tag = POL	}
+		removal_cost = -1
+		picture = hol_the_foundations_of_defense
+		modifier = {
+			consumer_goods_factor = -0.05
+			production_speed_buildings_factor = 0.15
+		}
+	}
+	POL_DOKUSAI_KEIZAI1 = {
+		allowed = {	original_tag = POL	}
+		removal_cost = -1
+		picture = hol_the_foundations_of_defense
+		modifier = {
+			consumer_goods_factor = -0.05
+			production_speed_buildings_factor = 0.15
+			production_speed_infrastructure_factor = 0.25
+			production_speed_rail_way_factor = 0.25
+		}
+	}
+	POL_DOKUSAI_KEIZAI2 = {
+		allowed = {	original_tag = POL	}
+		removal_cost = -1
+		picture = hol_the_foundations_of_defense
+		modifier = {
+			consumer_goods_factor = -0.1
+			industrial_capacity_factory = 0.15
+			production_speed_buildings_factor = 0.15
+			production_speed_infrastructure_factor = 0.25
+			production_speed_rail_way_factor = 0.25
+		}
+	}
+}
+	materiel_manufacturer = {
+
+		designer = yes
+
+		POL_fb = {
+
+			allowed = {
+				has_dlc = "Poland: United and Ready"
+				original_TAG = POL
+			}
+
+			picture = generic_infantry_equipment_manufacturer_2
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+
+			traits = { infantry_equipment_manufacturer }
+
+			modifier = {
+			}
+		}
+
+		POL_lrl = {
+
+			allowed = {
+				has_dlc = "Poland: United and Ready"
+				original_TAG = POL
+			}
+
+			picture = generic_motorized_equipment_manufacturer_3
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+
+			traits = { motorized_equipment_manufacturer }
+
+			modifier = {
+			}
+		}
+
+		POL_smpa = {
+
+			allowed = {
+				has_dlc = "Poland: United and Ready"
+				original_TAG = POL
+			}
+
+			picture = generic_artillery_manufacturer_1
+
+			research_bonus = {
+				artillery = 0.15
+			}
+
+			traits = { artillery_manufacturer }
+
+			modifier = {
+			}
+		}
+
+		POL_ford = {
+
+			allowed = {
+				has_dlc = "Poland: United and Ready"
+				original_TAG = POL
+			}
+
+			visible = {
+			}
+
+			picture = ford_motor_company
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+
+			traits = { motorized_equipment_manufacturer }
+
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.15
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.15
+				}
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.025
+			}
+		}
+
+		POL_vauxhall = {
+
+			allowed = {
+				has_dlc = "Poland: United and Ready"
+				original_TAG = POL
+			}
+
+			visible = {
+			}
+
+			picture = vauxhall
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+
+			traits = { motorized_equipment_manufacturer }
+
+			equipment_bonus = {
+				motorized_equipment = {
+					maximum_speed = 0.05
+				}
+				mechanized_equipment = {
+					maximum_speed = 0.05
+				}
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		POL_somua = {
+
+			allowed = {
+				has_dlc = "Poland: United and Ready"
+				original_TAG = POL
+			}
+
+			visible = {
+			}
+
+			picture = somua
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+
+			traits = { motorized_equipment_manufacturer }
+
+			equipment_bonus = {
+				motorized_equipment = {
+					hardness = 0.05
+				}
+				mechanized_equipment = {
+					hardness = 0.05
+				}
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		POL_ford_free = {
+
+			allowed = {
+				has_dlc = "Poland: United and Ready"
+				original_TAG = POL
+			}
+
+			visible = {
+			}
+
+			picture = ford_motor_company
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+
+			traits = { motorized_equipment_manufacturer }
+
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.15
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.15
+				}
+			}
+		}
+
+		POL_vauxhall_free = {
+
+			allowed = {
+				has_dlc = "Poland: United and Ready"
+				original_TAG = POL
+			}
+
+			visible = {
+			}
+
+			picture = vauxhall
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+
+			traits = { motorized_equipment_manufacturer }
+
+			equipment_bonus = {
+				motorized_equipment = {
+					maximum_speed = 0.05
+				}
+				mechanized_equipment = {
+					maximum_speed = 0.05
+				}
+			}
+		}
+
+		POL_somua_free = {
+
+			allowed = {
+				has_dlc = "Poland: United and Ready"
+				original_TAG = POL
+			}
+
+			visible = {
+			}
+
+			picture = somua
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+
+			traits = { motorized_equipment_manufacturer }
+
+			equipment_bonus = {
+				motorized_equipment = {
+					hardness = 0.05
+				}
+				mechanized_equipment = {
+					hardness = 0.05
+				}
+			}
+		}
+	}
+
+	tank_manufacturer = {
+
+		POL_pzinz = {
+
+			allowed = {
+				original_tag = POL
+				has_dlc = "Poland: United and Ready"
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { tank_manufacturer }
+
+			modifier = {
+				# heavily armored light tanks 7TP, weak vs air ,diesel powered
+			}
+		}
+	}
+
+	naval_manufacturer = {
+
+		designer = yes
+
+		POL_stocznia_gdynia = {
+
+			picture = generic_naval_manufacturer_1
+
+
+			allowed = {
+				original_tag = POL
+				has_dlc = "Poland: United and Ready"
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			equipment_bonus = {
+				# Cant find any decent info here :/
+			}
+
+			traits = { naval_manufacturer }
+
+			modifier = {
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+
+		designer = yes
+
+		POL_pws = {
+
+			picture = generic_air_manufacturer_1
+
+
+			allowed = {
+				original_tag = POL
+				has_dlc = "Poland: United and Ready"
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+			traits = { light_aircraft_manufacturer }
+
+			equipment_bonus = {
+				# capable of aerobatics, forward shooting machine guns, low number of crashes
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		POL_pzl = {
+
+			picture = generic_air_manufacturer_2
+
+
+			allowed = {
+				original_tag = POL
+				has_dlc = "Poland: United and Ready"
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+			traits = { medium_aircraft_manufacturer }
+
+			equipment_bonus = {
+				# bomber airplanes
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	industrial_concern = {
+
+		POL_pkp = {
+
+			allowed = {
+				original_tag = POL
+				has_dlc = "Poland: United and Ready"
+			}
+
+			picture = generic_industrial_concern_1
+
+			research_bonus = {
+				industry = 0.15
+			}
+
+			traits = { industrial_concern }
+
+			modifier = {
+			}
+		}
+
+		POL_ava = {
+
+			allowed = {
+				original_tag = POL
+				has_dlc = "Poland: United and Ready"
+			}
+
+			picture = generic_industrial_concern_2
+
+			research_bonus = {
+				electronics = 0.15
+			}
+
+			traits = { electronics_concern }
+
+			modifier = {
+			}
+		}
+	}
+}

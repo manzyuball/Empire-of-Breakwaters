@@ -1,0 +1,12 @@
+CHI_habatukousou = {
+	icon = generic_crisis
+	allowed = {
+		original_tag = CHI
+	}
+}
+CHI_Gunzi_sakusen = {
+	icon = ger_military_buildup
+	allowed = {
+		original_tag = CHI
+	}
+}

@@ -1,0 +1,25 @@
+
+state={
+	id=404
+	name="STATE_404"
+
+	history={
+		owner = UZB
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = SOV
+		add_core_of = UZB
+		add_core_of = KAZ
+
+	}
+
+	provinces={
+		7600 7657 10220 10275 10452 10508 12177 12329 
+	}
+	manpower=667036
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=35.000
+}

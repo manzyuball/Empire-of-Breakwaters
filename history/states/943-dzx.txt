@@ -1,0 +1,24 @@
+
+state={
+	id=943
+	name="STATE_943"
+
+	history={
+		owner = INS
+		add_core_of = INS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+
+		}
+
+	}
+
+	provinces={
+		1428 12126 13507 13523 13524 13525 13526 13527 13528 13529 13530 13531 
+	}
+	manpower=64234
+	buildings_max_level_factor=1.000
+	state_category=small_island
+	local_supplies=0.000
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=611
+	name="STATE_611"
+
+	history={
+		owner = MON
+		add_core_of = MON
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			11752 4 
+		}
+
+	}
+
+	provinces={
+		828 1489 1590 4495 4612 7545 7674 10397 11752 13311 13324 13325 13327 13328 13329 13330 
+	}
+	manpower=1470000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

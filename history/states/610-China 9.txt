@@ -1,0 +1,26 @@
+
+state={
+	id=610
+	name="STATE_610"
+
+	history={
+		owner = MAN
+		add_core_of = MAN
+		add_core_of = PRC
+		add_claim_by = CHI
+		buildings = {
+			industrial_complex = 3
+			infrastructure = 2
+
+		}
+
+	}
+
+	provinces={
+		846 934 972 3828 3934 4514 6852 6893 6937 6951 6988 7575 7633 9788 9831 9835 9873 9927 10331 10426 11801 11815 11836 11855 13314 13315 13316 13332 13333 13337 13338 13339 
+	}
+	manpower=1975377
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

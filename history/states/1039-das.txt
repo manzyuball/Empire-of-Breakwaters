@@ -1,0 +1,23 @@
+
+state={
+	id=1039
+	name="STATE_1039"
+
+	history={
+		owner = BRA
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = BRA
+
+	}
+
+	provinces={
+		5083 8185 8213 12919 13083 13783 13784 13785 13786 13787 13788 13789 13794 13820 13861 13872 13873 13874 13907 13908 13910 13916 13927 13958 13964 14239 14243 14244 14245 14246 14247 
+	}
+	manpower=85314
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

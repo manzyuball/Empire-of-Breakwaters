@@ -1,0 +1,3936 @@
+focus_tree = {
+	id = yugoslavian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = YUG
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1650 }
+
+#	focus = {
+#		id = YUG_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#© 2022 Empire of Breakwaters制作チーム, 饅頭ボール. All rights reserved.
+#このファイルは著作権法で保護されており、このファイルの一部もしくは全体のEoB以外へのあらゆる利用は許可されていません。
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+focus = {
+	id = YUG_d1
+	icon = "GFX_goal_anschluss"
+	mutually_exclusive = { focus = YUG_k1 }
+	x = 5
+	y = 0
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		reverse_add_opinion_modifier = {
+			target = ROM
+			modifier = Doumeinoizi
+			}
+			reverse_add_opinion_modifier = {
+				target = ALB
+				modifier = Doumeinoizi
+				}
+				reverse_add_opinion_modifier = {
+					target = GRE
+					modifier = Doumeinoizi
+					}
+	}
+}
+focus = {
+	id = YUG_d2
+	icon = "GFX_focus_prc_infiltration"
+	prerequisite = { focus = YUG_d1 }
+	x = 6
+	y = 1
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		add_war_support = 0.05
+		AUS = {
+			add_stability = -0.1
+		}	
+	}
+}
+focus = {
+	id = YUG_d3
+	icon = "GFX_focus_generic_polish_deal"
+	prerequisite = { focus = YUG_d1 }
+	x = 8
+	y = 1
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		reverse_add_opinion_modifier = {
+			target = POL
+			modifier = kyuusekkinn
+			}
+	}
+}
+focus = {
+	id = YUG_d4
+	icon = "GFX_focus_BUL_bulgarian_administration_of_the_balkans"
+	prerequisite = { focus = YUG_d1 }
+	x = 4
+	y = 1
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		add_war_support = 0.05
+	}
+}
+focus = {
+	id = YUG_d5
+	icon = "GFX_goal_generic_construct_civilian"
+	prerequisite = { focus = YUG_d1 }
+	x = 0
+	y = 1
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		add_timed_idea = {
+			idea = Yonennkann
+			days = 1440
+			}
+	}
+}
+focus = {
+	id = YUG_d6
+	icon ="GFX_focus_eng_the_sun_never_sets"
+	prerequisite = { focus = YUG_d1 }
+	x = 2
+	y = 1
+	cost = 10
+	ai_will_do = {
+		factor = 0 
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		ENG = {
+			diplomatic_relation = {
+					country = YUG
+					relation = guarantee
+					active = yes
+					}
+				}
+				diplomatic_relation = {
+					country = ENG
+					relation = guarantee
+					active = yes
+					}
+			}
+}
+focus = {
+	id = YUG_d7
+	icon = "GFX_focus_TUR_reform_the_balkan_pact"
+	prerequisite = { focus = YUG_d2 }
+	prerequisite = { focus = YUG_d3 }
+	prerequisite = { focus = YUG_d4 }
+	x = 6
+	y = 2
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		custom_effect_tooltip = YUG_balkan
+		hidden_effect = {
+			reverse_add_opinion_modifier = {
+				target = BUL
+				modifier = dankou
+				}
+				reverse_add_opinion_modifier = {
+					target = TUR
+					modifier = dankou
+					}
+					reverse_add_opinion_modifier = {
+						target = AUS
+						modifier = dankou
+						}
+		}
+	}
+}
+focus = {
+	id = YUG_d8
+	icon = "GFX_focus_YUG_banovina_of_croatia"
+	prerequisite = { focus = YUG_d7 }
+	x = 6
+	y = 3
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		random_list = {
+			80 = {
+				custom_effect_tooltip = YUG_sanka
+				hidden_effect = {
+					set_global_flag = kroacia_sanka
+				}
+			}
+			20 = {
+				add_stability = -0.05
+			}
+		}
+	}
+
+}
+focus = {
+	id = YUG_d9
+	icon = "GFX_focus_renounce_the_treaty_of_trianon"
+	prerequisite = { focus = YUG_d8 }
+	x = 6
+	y = 4
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		random_list = {
+			50 = {
+				custom_effect_tooltip = YUG_sanka
+				hidden_effect = {
+					set_global_flag = srovenia_sanka
+				}
+			}
+			50 = {
+				add_stability = -0.04
+			}
+		}
+	}
+}
+focus = {
+	id = YUG_d10
+	icon = "GFX_focus_YUG_zmaj"
+	prerequisite = { focus = YUG_d9 }
+	x = 6
+	y = 5
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		random_list = {
+			40 = {
+				custom_effect_tooltip = YUG_sanka
+				hidden_effect = {
+					set_global_flag = cyeko_sanka
+				}
+			}
+			60 = {
+				add_stability = -0.03
+			}
+		}
+	}
+}
+focus = {
+	id = YUG_d11
+	icon = "GFX_goal_generic_demand_territory"
+	prerequisite = { focus = YUG_d10 }
+	x = 6
+	y = 6
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		random_list = {
+			30 = {
+				custom_effect_tooltip = YUG_sanka
+				hidden_effect = {
+					set_global_flag = slo_sanka
+				}
+			}
+			70 = {
+				add_stability = -0.02
+			}
+		}
+	}
+}
+focus = {
+	id = YUG_d12
+	icon = "GFX_focus_hun_assassinate_horthy"
+	prerequisite = { focus = YUG_d10 }
+	x = 4
+	y = 6
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		random_list = {
+			10 = {
+				custom_effect_tooltip = YUG_sanka
+				hidden_effect = {
+					set_global_flag = hun_sanka
+				}
+			}
+			90 = {
+				add_stability = -0.01
+			}
+		}
+	}
+}
+focus = {
+	id = YUG_d13
+	icon = "GFX_focus_proclaim_the_restauration_of_Austria_Hungary"
+	prerequisite = { focus = YUG_d11 }
+	prerequisite = { focus = YUG_d12 }
+	x = 5
+	y = 7
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		custom_effect_tooltip = YUG_war
+		declare_war_on = {
+			target = AUS
+			type = annex_everything
+			}
+			hidden_effect = {
+			if = {
+				limit = {
+					has_global_flag = kroacia_sanka
+				}   
+				transfer_state = 104
+				transfer_state = 109
+				transfer_state = 103
+				transfer_state = 163
+				transfer_state = 1046
+				transfer_state = 804
+			}
+			if = {
+				limit = {
+					has_global_flag = srovenia_sanka
+				}   
+				transfer_state = 102
+				transfer_state = 736
+				transfer_state = 853
+				transfer_state = 852
+			}
+			if = {
+				limit = {
+					has_global_flag = cyeko_sanka
+				}  
+				CZE = {
+					transfer_state = 9
+					transfer_state = 75
+					transfer_state = 69
+					transfer_state = 74
+					transfer_state = 72
+					load_oob = "CZE_1936"
+					declare_war_on = {
+						target = AUS
+						type = annex_everything
+						}
+						YUG = { add_to_faction = CZE }
+				}
+			}
+			if = {
+				limit = {
+					has_global_flag = slo_sanka
+				}
+				add_political_power = 150
+			}
+			if = {
+				limit = {
+					has_global_flag = hun_sanka
+				}
+				HUN = {
+					transfer_state = 155
+					transfer_state = 43
+					transfer_state = 154
+					transfer_state = 83
+					transfer_state = 76
+					transfer_state = 84
+					transfer_state = 82
+					transfer_state = 764
+					transfer_state = 45
+					transfer_state = 1014
+					transfer_state = 1015
+					transfer_state = 1016
+					transfer_state = 70
+					transfer_state = 71
+					transfer_state = 664
+					transfer_state = 73
+					load_oob = "HUN_1939"
+					declare_war_on = {
+						target = AUS
+						type = annex_everything
+						}
+						YUG = { add_to_faction = HUN }
+				}
+			}
+		}
+	}
+}
+focus = {
+	id = YUG_d14
+	icon = "GFX_focus_TUR_treaty_of_saadabad"
+	prerequisite = { focus = YUG_d7 }
+	x = 4
+	y = 3
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		add_political_power = -100
+		TUR = {
+			add_stability = -0.15
+		}
+	}
+}
+focus = {
+	id = YUG_d15
+	icon ="GFX_focus_GRE_reviving_the_spartan_warrior_spirit"
+	prerequisite = { focus = YUG_d7 }
+	x = 2
+	y = 3
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		custom_effect_tooltip = YUG_das
+		hidden_effect = {
+			transfer_state = 803
+		}
+    MAC = {
+		declare_war_on = {
+			target = BUL
+			type = annex_everything
+			}
+			transfer_state = 106
+	}
+	}
+}
+focus = {
+	id = YUG_d16
+	icon ="GFX_focus_generic_attack_bulgaria"
+	prerequisite = { focus = YUG_d15 }
+	prerequisite = { focus = YUG_d21 }
+	x = 2
+	y = 7
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = BUL
+			}
+	}
+}
+
+focus = {
+	id = YUG_d17
+	icon = "GFX_goal_tfv_saf_anti_colonialist_crusade"
+	prerequisite = { focus = YUG_d5 }
+	x = 0
+	y = 2
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		add_war_support = 0.15
+	}
+}
+focus = {
+	id = YUG_d18
+	icon = "GFX_focus_hol_the_foundations_of_defense"
+	prerequisite = { focus = YUG_d17 }
+	x = 0
+	y = 3
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		add_stability = 0.2
+	}
+}
+focus = {
+	id = YUG_d19
+	icon ="GFX_focus_SOV_restore_cossack_units"
+	prerequisite = { focus = YUG_d18 }
+	x = 1
+	y = 4
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		add_ideas = YUG_gua
+	}
+}
+focus = {
+	id = YUG_d20
+	icon = "GFX_focus_SOV_women_in_aviation"
+	prerequisite = { focus = YUG_d19 }
+	x = 1
+	y = 5
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = YUG_gua
+			add_idea = YUG_gua1
+			}
+	}
+}
+focus = {
+	id = YUG_d21
+	icon = "GFX_focus_generic_manpower"
+	prerequisite = { focus = YUG_d20 }
+	x = 1
+	y = 6
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = YUG_gua1
+			add_idea = YUG_gua2
+			}
+	}
+}
+focus = {
+	id = YUG_d22
+	icon = "GFX_focus_BUL_free_balkan_states"
+	prerequisite = { focus = YUG_d13 focus = YUG_d23 }
+	x = 5
+	y = 11
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		add_stability = 0.5
+		add_war_support = 0.5
+	}
+}
+focus = {
+	id = YUG_d23
+	icon = "GFX_focus_generic_support_the_left_right"
+	prerequisite = { focus = YUG_k14 }
+	x = 7
+	y = 10
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+		add_stability = 0.2
+	}
+}
+focus = {
+	id = YUG_k1
+	icon = "GFX_focus_renounce_the_treaty_of_trianon"
+	x = 10
+	y = 0
+	cost = 10
+	ai_will_do = {
+		factor = 0
+	}
+	mutually_exclusive = { focus = YUG_d1 }
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k2
+	icon = "GFX_focus_CZE_german_puppet"
+	x = 10
+	y = 1
+	prerequisite = { focus = YUG_k1 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k3
+	icon = "GFX_focus_proclaim_the_restauration_of_Austria_Hungary"
+	x = 10
+	y = 2
+	prerequisite = { focus = YUG_k2 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k4
+	icon = "GFX_focus_YUG_dissolve_serbia"
+	x = 10
+	y = 3
+	prerequisite = { focus = YUG_k3 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k5
+	icon = "GFX_focus_YUG_safeguard_bosnia"
+	x = 10
+	y = 4
+	prerequisite = { focus = YUG_k4 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k6
+	icon = "GFX_focus_YUG_banovina_of_croatia"
+	x = 10
+	y = 5
+	prerequisite = { focus = YUG_k5 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k7
+	icon = "GFX_focus_generic_befriend_bulgaria"
+	x = 10
+	y = 6
+	prerequisite = { focus = YUG_k6 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k8
+	icon = "GFX_focus_usa_reestablish_the_gold_standard"
+	x = 8
+	y = 3
+	prerequisite = { focus = YUG_k3 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k9
+	icon = "GFX_focus_SOV_merge_plants"
+	x = 8
+	y = 4
+	prerequisite = { focus = YUG_k8 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k10
+	icon = "GFX_goal_tfv_generic_tech_sharing"
+	x = 8
+	y = 5
+	prerequisite = { focus = YUG_k9 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k11
+	icon = "GFX_focus_spr_masters_of_our_own_fate"
+	x = 7
+	y = 7
+	prerequisite = { focus = YUG_k10 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k12
+	icon ="GFX_focus_spr_torchbearers_of_tomorrow"
+	x = 9
+	y = 7
+	prerequisite = { focus = YUG_k10 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k13
+	icon = "GFX_focus_eng_concessions_to_the_trade_unions"
+	x = 7
+	y = 8
+	prerequisite = { focus = YUG_k11 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k14
+	icon = "GFX_goal_generic_position_armies"
+	x = 7
+	y = 9
+	prerequisite = { focus = YUG_k13 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k15
+	icon = "GFX_focus_renounce_the_treaty_of_trianon"
+	x = 14
+	y = 1
+	prerequisite = { focus = YUG_k1 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k16
+	icon ="GFX_focus_YUG_dissolve_serbia"
+	x = 14
+	y = 2
+	prerequisite = { focus = YUG_k15 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k17
+	icon = "GFX_goal_support_democracy"
+	x = 14
+	y = 3
+	prerequisite = { focus = YUG_k16 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k18
+	icon = "GFX_focus_POL_complete_april_constitution"
+	x = 14
+	y = 4
+	prerequisite = { focus = YUG_k17 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k19
+	icon = "GFX_focus_rom_royal_dictatorship"
+	x = 13
+	y = 5
+	prerequisite = { focus = YUG_k18 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k20
+	icon = "GFX_focus_rom_handle_king"
+	x = 15
+	y = 5
+	prerequisite = { focus = YUG_k18 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k21
+	icon = "GFX_focus_generic_self_management"
+	x = 14
+	y = 6
+	prerequisite = { focus = YUG_k19 }
+	prerequisite = { focus = YUG_k20 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k22
+	icon = "GFX_goal_generic_national_unity"
+	x = 13
+	y = 7
+	prerequisite = { focus = YUG_k21 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k23
+	icon ="GFX_goal_generic_intelligence_exchange"
+	x = 11
+	y = 7
+	prerequisite = { focus = YUG_k21 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k24
+	icon ="GFX_goal_generic_attack_allies"
+	x = 18
+	y = 1
+	prerequisite = { focus = YUG_k1 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k25
+	icon = "GFX_goal_generic_propaganda"
+	x = 18
+	y = 2
+	prerequisite = { focus = YUG_k24 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k26
+	icon = "GFX_goal_support_communism"
+	x = 17
+	y = 3
+	prerequisite = { focus = YUG_k25 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k27
+	icon = "GFX_focus_YUG_pan_slavic_congress"
+	x = 17
+	y = 4
+	prerequisite = { focus = YUG_k26 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k28
+	icon ="GFX_focus_por_workers_of_iberia"
+	x = 17
+	y = 5
+	prerequisite = { focus = YUG_k27 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k29
+	icon = "GFX_goal_generic_political_pressure"
+	x = 16
+	y = 6
+	prerequisite = { focus = YUG_k28 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k30
+	icon = "GFX_focus_LIT_exile_voldemaras"
+	x = 18
+	y = 6
+	prerequisite = { focus = YUG_k28 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k31
+	icon = "GFX_goal_generic_territory_or_war"
+	x = 15
+	y = 7
+	prerequisite = { focus = YUG_k29 focus = YUG_k21 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k32
+	icon = "GFX_focus_prc_agrarian_socialism"
+	x = 18
+	y = 9
+	prerequisite = { focus = YUG_k30 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k33
+	icon = "GFX_focus_spr_the_anti_fascist_workers_revolution"
+	x = 15
+	y = 8
+	prerequisite = { focus = YUG_k31 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k34
+	icon = "GFX_focus_usa_guarantee_the_american_dream"
+	x = 15
+	y = 9
+	prerequisite = { focus = YUG_k33 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+focus = {
+	id = YUG_k35
+	icon = "GFX_goal_generic_intelligence_exchange"
+	x = 15
+	y = 10
+	prerequisite = { focus = YUG_k34 }
+	cost = 10
+	ai_will_do = {
+		factor = 100
+	}
+
+	available = {
+	}
+
+	bypass = {
+	}
+	completion_reward = {
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+	############################
+	######### INDUSTRY #########
+	############################
+
+	focus = {
+		id = YUG_industrialization_program
+		icon = GFX_goal_generic_construction
+		x = 22
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_expand_the_mining_industry
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = YUG_industrialization_program }
+		x = 0
+		y = 1
+		relative_position_id = YUG_industrialization_program
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+			modifier = {
+					factor = 1.2
+					OR = {
+						has_completed_focus = YUG_join_comintern
+						has_completed_focus = YUG_yugoslavian_path_to_communism
+					}
+				}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			add_ideas = YUG_idea_expanded_mining_industry
+		}
+	}
+
+	focus = {
+		id = YUG_rare_minerals_exploitation
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = YUG_expand_the_mining_industry }
+		x = -3
+		y = 1
+		relative_position_id = YUG_expand_the_mining_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+			modifier = {
+					factor = 1.2
+					OR = {
+						has_completed_focus = YUG_join_comintern
+						has_completed_focus = YUG_yugoslavian_path_to_communism
+					}
+			}
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			if = {
+				limit = {
+					105 = {
+						owner = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								AND = {
+									tag = MNT
+									is_in_faction_with = ROOT
+								}
+							}
+						}
+					}
+				}
+				105 = {
+					add_resource = {
+						type = tungsten
+						amount = 8
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 105 }
+					add_resource = {
+						type = tungsten
+						amount = 8
+					}
+				}
+			}
+			if = {
+				limit = {
+					109 = {
+						owner = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								AND = {
+									tag = MNT
+									is_in_faction_with = ROOT
+								}
+							}
+						}
+					}
+				}
+				109 = {
+					add_resource = {
+						type = chromium
+						amount = 8
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 109 }
+					add_resource = {
+						type = chromium
+						amount = 8
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_exploit_the_pannonian_deposits
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = YUG_rare_minerals_exploitation }
+		x = 0
+		y = 1
+		relative_position_id = YUG_rare_minerals_exploitation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+			modifier = {
+					factor = 1.2
+					OR = {
+						has_completed_focus = YUG_join_comintern
+						has_completed_focus = YUG_yugoslavian_path_to_communism
+					}
+			}
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 45 }
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_develop_civilian_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = YUG_expand_the_mining_industry }
+		mutually_exclusive = { focus = YUG_develop_military_industry }
+		x = -1
+		y = 1
+		relative_position_id = YUG_expand_the_mining_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+				modifier = {
+					factor = 1.2
+					OR = {
+						has_completed_focus = YUG_join_comintern
+						has_completed_focus = YUG_yugoslavian_path_to_communism
+					}
+				}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 102 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				prioritize = { 107 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				prioritize = { 109 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_expand_the_university_of_zagreb
+		icon = GFX_focus_research
+		prerequisite = { focus = YUG_develop_civilian_industry focus = YUG_develop_military_industry }
+		x = 0
+		y = 3
+		relative_position_id = YUG_industrialization_program
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		available = {
+			NOT = {
+				has_idea = YUG_idea_croatian_opposition
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = YUG_integrated_rail_network
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = YUG_expand_the_university_of_zagreb }
+		mutually_exclusive = { focus = YUG_improve_serbian_rail_network }
+		x = 0
+		y = 2
+		relative_position_id = YUG_develop_civilian_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+			modifier = {
+					factor = 1.2
+					OR = {
+						has_completed_focus = YUG_join_comintern
+						has_completed_focus = YUG_yugoslavian_path_to_communism
+					}
+				}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					owner = {
+						NOT = { tag = ROOT }
+						OR = {
+							original_tag = SER
+							original_tag = SLV
+							original_tag = CRO
+							original_tag = MNT
+							original_tag = KOS
+							original_tag = BOS
+							original_tag = HRZ
+							original_tag = MAC
+							original_tag = TRA
+							original_tag = HUN
+							original_tag = BUL
+						}
+						OR = {
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_improve_light_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = YUG_integrated_rail_network focus = YUG_improve_serbian_rail_network }
+		x = 1
+		y = 3
+		relative_position_id = YUG_develop_civilian_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 80
+			modifier = {
+					factor = 1.2
+					OR = {
+						has_completed_focus = YUG_join_comintern
+						has_completed_focus = YUG_yugoslavian_path_to_communism
+					}
+				}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 104 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_controlled_state = {
+				prioritize = { 106 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_develop_slovenian_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = YUG_integrated_rail_network }
+		x = 0
+		y = 4
+		relative_position_id = YUG_develop_civilian_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		complete_tooltip = {
+		
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					102 = {
+						owner = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								AND = {
+									tag = SLV
+									is_in_faction_with = ROOT
+								}
+							}
+						}
+					}
+				}
+				102 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 102 }
+					limit = {
+						ROOT = { has_full_control_of_state = PREV }
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_local_self_management
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = YUG_develop_slovenian_industry }
+		x = 0
+		y = 1
+		relative_position_id = YUG_develop_slovenian_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+			modifier = {
+					factor = 1.2
+					OR = {
+						has_completed_focus = YUG_join_comintern
+						has_completed_focus = YUG_yugoslavian_path_to_communism
+					}
+				}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			add_ideas = YUG_idea_local_self_management
+		}
+	}
+
+	focus = {
+		id = YUG_expand_the_university_of_ljubljana
+		icon = GFX_focus_research
+		prerequisite = { focus = YUG_develop_slovenian_industry }
+		x = -2
+		y = 1
+		relative_position_id = YUG_develop_slovenian_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		available = {
+			NOT = {
+				has_idea = YUG_idea_slovene_nationalism
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+######このNFはEmpire of Breakwaters制作チームによって作られました 
+######万が一このNFが別modに備わっていたならばそれは不正コピーです
+	focus = {
+		id = YUG_develop_military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = YUG_expand_the_mining_industry }
+		mutually_exclusive = { focus = YUG_develop_civilian_industry }
+		x = 1
+		y = 1
+		relative_position_id = YUG_expand_the_mining_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 107 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+#© 2022 Empire of Breakwaters制作チーム, 饅頭ボール. All rights reserved.
+#このファイルは著作権法で保護されており、このファイルの一部もしくは全体のEoB以外へのあらゆる利用は許可されていません。
+	focus = {
+		id = YUG_improve_serbian_rail_network
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = YUG_expand_the_university_of_zagreb }
+		mutually_exclusive = { focus = YUG_integrated_rail_network }
+		x = 0
+		y = 2
+		relative_position_id = YUG_develop_military_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 2
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+			OR = {
+				has_full_control_of_state = 45
+				has_full_control_of_state = 105
+				has_full_control_of_state = 107
+				has_full_control_of_state = 108
+				has_full_control_of_state = 764
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			if = {
+				limit = {
+					45 = {
+						owner = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				45 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					105 = {
+						owner = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				105 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					107 = {
+						owner = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				107 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					108 = {
+						owner = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				108 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					764 = {
+						owner = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				764 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					803 = {
+						owner = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				803 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_serbian_steel
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = YUG_improve_serbian_rail_network }
+		x = 1
+		y = 3
+		relative_position_id = YUG_develop_military_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+			has_full_control_of_state = 108
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			108 = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_expand_the_university_of_belgrad
+		icon = GFX_focus_research
+		prerequisite = { focus = YUG_improve_serbian_rail_network }
+		x = 0
+		y = 4
+		relative_position_id = YUG_develop_military_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = YUG_central_management
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = YUG_expand_the_university_of_belgrad }
+		x = 0
+		y = 5
+		relative_position_id = YUG_develop_military_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			add_ideas = YUG_idea_central_management
+		}
+	}
+
+	focus = {
+		id = YUG_expand_the_sarajevo_arsenals
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = YUG_local_self_management focus = YUG_central_management }
+		x = 1
+		y = 1
+		relative_position_id = YUG_local_self_management
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			if = {
+				limit = {
+					104 = {
+						owner = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								AND = {
+									tag = BOS
+									is_in_faction_with = ROOT
+								}
+							}
+						}
+					}
+				}
+				104 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 104 }
+					limit = {									
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	
+	############################
+	######## AIR FORCE #########
+	############################
+
+	focus = {
+		id = YUG_modernize_the_air_force
+		icon = GFX_goal_generic_air_doctrine
+		x = 22
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+			modifier = {
+				factor = 1.2
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_local_developers
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = YUG_modernize_the_air_force }
+		x = 0
+		y = 1
+		relative_position_id = YUG_modernize_the_air_force
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_ideas = HUN_indigenous_designs #emergency fix
+		}
+	}
+
+	focus = {
+		id = YUG_ikarus
+		icon = GFX_focus_YUG_ikarus
+		prerequisite = { focus = YUG_local_developers }
+		x = -2
+		y = 1
+		relative_position_id = YUG_local_developers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			custom_effect_tooltip = YUG_designer_tt
+
+			random_owned_controlled_state = {
+				prioritize = { 107 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_rogozarski
+		icon = GFX_focus_YUG_rogozarski
+		prerequisite = { focus = YUG_local_developers }
+		x = 0
+		y = 1
+		relative_position_id = YUG_local_developers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			custom_effect_tooltip = YUG_designer_tt
+			random_owned_controlled_state = {
+				prioritize = { 107 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_zmaj
+		icon = GFX_focus_YUG_zmaj
+		prerequisite = { focus = YUG_local_developers }
+		x = 2
+		y = 1
+		relative_position_id = YUG_local_developers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			custom_effect_tooltip = YUG_designer_tt
+			random_owned_controlled_state = {
+				prioritize = { 107 }
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_the_ik_3
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = YUG_ikarus focus = YUG_rogozarski focus = YUG_zmaj }
+		x = 0
+		y = 2
+		relative_position_id = YUG_local_developers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_the_ik_3
+				bonus = 3.0
+				ahead_reduction = 2
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_heavy_fighter_project
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = YUG_the_ik_3 }
+		x = -1
+		y = 3
+		relative_position_id = YUG_local_developers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_heavy_fighter_project
+				bonus = 1.0
+				uses = 1
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_bomber_project
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = YUG_the_ik_3 }
+		x = 1
+		y = 3
+		relative_position_id = YUG_local_developers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_bomber_project
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+
+
+
+	############################
+	######## LAND FORCE ########
+	############################
+
+	focus = {
+		id = YUG_army_modernization
+		icon = GFX_goal_generic_army_doctrines
+		x = 31
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+			modifier = {
+				factor = 1.2
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = YUG_motorize_the_cavalry
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = YUG_army_modernization }
+		x = -3
+		y = 1
+		relative_position_id =  YUG_army_modernization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 1.2
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_motorize_the_cavalry
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_motorized_logistics
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = YUG_motorize_the_cavalry }
+		x = -2
+		y = 1
+		relative_position_id = YUG_motorize_the_cavalry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 1.2
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_motorized_logistics
+				bonus = 1.0
+				uses = 2
+				category = hospital_tech
+				category = logistics_tech
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_armored_cavalry
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = YUG_motorize_the_cavalry }
+		x = 0
+		y = 1
+		relative_position_id = YUG_motorize_the_cavalry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 1.5
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_armored_cavalry
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_tank_conversions
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = YUG_armored_cavalry }
+		mutually_exclusive = { focus = YUG_modern_tanks }
+		x = -2
+		y = 2
+		relative_position_id = YUG_motorize_the_cavalry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+		completion_reward = {
+			add_ideas = YUG_idea_tank_conversions
+		}
+	}
+
+	focus = {
+		id = YUG_modern_tanks
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = YUG_armored_cavalry }
+		mutually_exclusive = { focus = YUG_tank_conversions }
+		x = 0
+		y = 2
+		relative_position_id = YUG_motorize_the_cavalry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 3
+				is_in_faction_with = GER
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_modern_tanks
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+
+	focus = {
+		id = YUG_small_arms
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = YUG_army_modernization }
+		x = -1
+		y = 1
+		relative_position_id = YUG_army_modernization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_small_arms
+				bonus = 1.00
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_domestic_artillery_production
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = YUG_small_arms }
+		x = 0
+		y = 1
+		relative_position_id = YUG_small_arms
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_domestic_artillery_production
+				bonus = 1.00
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_anti_tank_defenses
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = YUG_domestic_artillery_production }
+		x = 0
+		y = 2
+		relative_position_id = YUG_small_arms
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_anti_tank_defenses
+				bonus = 3.0
+				uses = 1
+				category = cat_anti_tank
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_mountain_brigades
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = YUG_army_modernization }
+		x = 1
+		y = 1
+		relative_position_id = YUG_army_modernization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_mountain_brigades
+				bonus = 3.0
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_independent_engineer_regiments
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = YUG_mountain_brigades }
+		x = 0
+		y = 1
+		relative_position_id = YUG_mountain_brigades
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_independent_engineer_regiments
+				bonus = 3.0
+				uses = 1
+				category = engineers_tech
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_motorized_recon_companies
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = YUG_independent_engineer_regiments }
+		x = 0
+		y = 2
+		relative_position_id = YUG_mountain_brigades
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_motorized_recon_companies
+				bonus = 3.0
+				uses = 1
+				category = recon_tech
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_form_parachute_battalions
+		icon = GFX_focus_generic_paratrooper
+		prerequisite = { focus = YUG_motorized_recon_companies }
+		x = 0
+		y = 3
+		relative_position_id = YUG_mountain_brigades
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_form_parachute_battalions
+				bonus = 3.0
+				uses = 1
+				category = para_tech
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_army_maneuvers
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = YUG_army_modernization }
+		x = 4
+		y = 1
+		relative_position_id = YUG_army_modernization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = YUG_army_maneuvers
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_supremacy_of_offense
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = YUG_army_maneuvers }
+		mutually_exclusive = { focus = YUG_supremacy_of_defense }
+		x = -1
+		y = 1
+		relative_position_id = YUG_army_maneuvers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = YUG_supremacy_of_offense
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_mobile_warfare
+				category = cat_superior_firepower
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_supremacy_of_defense
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = YUG_army_maneuvers }
+		mutually_exclusive = { focus = YUG_supremacy_of_offense }
+		x = 1
+		y = 1
+		relative_position_id = YUG_army_maneuvers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = YUG_supremacy_of_defense
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+				category = cat_mass_assault
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_artillery_regiments
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = YUG_supremacy_of_offense focus = YUG_supremacy_of_defense }
+		x = 0
+		y = 2
+		relative_position_id = YUG_army_maneuvers
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+
+		completion_reward = {
+			add_ideas = YUG_artillery_regiments
+		}
+	}
+
+	############################
+	######## BOAT FORCE ########
+	############################
+
+	focus = {
+		id = YUG_expand_the_split_shipyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		mutually_exclusive = { focus = YUG_expand_the_serbian_shipyards }
+		x = 26
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			OR = {
+				has_full_control_of_state = 103
+				any_other_country = {
+					OR = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+					has_full_control_of_state = 103
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			103 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_contest_the_adriatic
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = YUG_expand_the_split_shipyards }
+		x = 0
+		y = 1
+		relative_position_id = YUG_expand_the_split_shipyards
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = YUG_contest_the_adriatic
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_replace_the_dalmacija
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = YUG_contest_the_adriatic }
+		x = -1
+		y = 2
+		relative_position_id = YUG_expand_the_split_shipyards
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_replace_the_dalmacija
+				bonus = 1.0
+				uses = 1
+				category = cl_tech
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_naval_bombers
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = YUG_contest_the_adriatic focus = YUG_coastal_defense }
+		x = 1
+		y = 2
+		relative_position_id = YUG_expand_the_split_shipyards
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_naval_bombers
+				bonus = 1.0
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_heavy_cruiser_project
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = YUG_replace_the_dalmacija }
+		x = -1
+		y = 3
+		relative_position_id = YUG_expand_the_split_shipyards
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_heavy_cruiser_project
+				bonus = 1.0
+				uses = 1
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_modern_destroyers
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = YUG_naval_bombers }
+		x = 1
+		y = 3
+		relative_position_id = YUG_expand_the_split_shipyards
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_modern_destroyers
+				bonus = 1.0
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_expand_the_serbian_shipyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		mutually_exclusive = { focus = YUG_expand_the_split_shipyards }
+		x = 3
+		y = 0
+		relative_position_id = YUG_expand_the_split_shipyards
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			OR = {
+				has_full_control_of_state = 105
+				any_other_country = {
+					OR = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+					has_full_control_of_state = 105
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			105 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_coastal_defense
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = YUG_expand_the_serbian_shipyards }
+		x = -1
+		y = 1
+		relative_position_id = YUG_expand_the_serbian_shipyards
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			OR = {
+				has_full_control_of_state = 103
+				any_other_country = {
+					OR = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+					has_full_control_of_state = 103
+				}
+				has_full_control_of_state = 105
+				any_other_country = {
+					OR = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+					has_full_control_of_state = 105
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+
+
+		completion_reward = {
+			#forts on coast and harbor
+			if = {
+				limit = { 
+					OR = {
+						has_full_control_of_state = 103
+						any_other_country = {
+							OR = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+							has_full_control_of_state = 103
+						}
+					}
+				}
+				103 = {
+					custom_effect_tooltip = YUG_coastal_defense_effect_tt1
+					custom_effect_tooltip = YUG_coastal_defense_effect_tt2
+					hidden_effect = {
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_coastal = yes
+							}
+							level = 2
+							instant_build = yes
+						}			
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+#© 2022 Empire of Breakwaters制作チーム, 饅頭ボール. All rights reserved.
+#このファイルは著作権法で保護されており、このファイルの一部もしくは全体のEoB以外へのあらゆる利用は許可されていません。			
+			if = {
+				limit = { 
+					OR = {
+						has_full_control_of_state = 105
+						any_other_country = {
+							OR = {
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+					}
+							has_full_control_of_state = 105
+						}
+					} 
+				}
+				105 = {
+					custom_effect_tooltip = YUG_coastal_defense_effect_tt1
+					custom_effect_tooltip = YUG_coastal_defense_effect_tt2
+					hidden_effect = {
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_coastal = yes
+							}
+							level = 2
+							instant_build = yes
+						}			
+						add_building_construction = {
+							type = coastal_bunker
+							province = {
+								all_provinces = yes
+								limit_to_naval_base = yes
+							}
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_expand_the_submarine_fleet
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = YUG_coastal_defense }
+		x = 0
+		y = 2
+		relative_position_id = YUG_expand_the_serbian_shipyards
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = YUG_expand_the_submarine_fleet
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=1003
+	name="STATE_1003"
+
+	history={
+		owner = AST
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = AST
+
+	}
+
+	provinces={
+		5207 8209 8247 10937 10958 11016 13133 13627 
+	}
+	manpower=123532
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

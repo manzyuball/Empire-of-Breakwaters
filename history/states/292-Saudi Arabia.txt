@@ -1,0 +1,36 @@
+
+state={
+	id=292
+	name="STATE_292"
+	resources={
+		oil=46.000
+	}
+
+	history={
+		owner = SAU
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+			12702 = {
+				naval_base = 6
+
+			}
+
+		}
+		victory_points = {
+			12727 5 
+		}
+		add_core_of = SAU
+		add_claim_by = TUR
+
+	}
+
+	provinces={
+		8004 12727 12813 12870 
+	}
+	manpower=1440000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

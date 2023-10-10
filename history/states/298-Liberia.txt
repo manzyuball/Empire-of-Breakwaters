@@ -1,0 +1,34 @@
+state=
+{
+	id=298
+	name="STATE_298"
+	manpower = 745000
+	
+	state_category = town
+	resources={
+		rubber=6 # was: 7
+	}	
+	
+
+	history= {
+		owner = GNA
+		buildings = {
+			infrastructure = 1
+			arms_factory = 3
+			industrial_complex = 1
+			7959 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			7959 3
+		}
+		add_core_of = TZN
+		add_core_of = GNA
+	}
+	provinces={
+		7959 8006
+	}
+
+	local_supplies=0.0 
+}

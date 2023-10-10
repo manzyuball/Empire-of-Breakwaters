@@ -1,0 +1,340 @@
+﻿add_namespace = news
+
+# フランスのアフリカ進出
+news_event = {
+	id = news.1
+	title = news.1.t
+	desc = news.1.d
+	picture = GFX_news_event_032
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.1.a
+		trigger = {
+			NOT = {
+				is_in_faction_with = GER
+				is_in_faction_with = ENG
+			}
+		}
+	}
+	option = {
+		name = news.1.b
+		is_in_faction_with = FRA
+	}
+	option = {
+		name = news.1.c
+		is_in_faction_with = ENG
+	}
+}
+
+# 1936年ソフィアオリンピック
+news_event = {
+	id = news.2
+	title = news.2.t
+	desc = news.2.d
+	picture = GFX_news_event_070
+	
+	major = yes
+	
+	is_triggered_only = yes
+	option = {
+		name = news.2.a
+		trigger = {
+			NOT = {
+				TAG = BUL
+			}
+		}
+	}
+	option = {
+		name = news.2.b
+		trigger = { TAG = BUL }
+	}
+}
+
+# イスタンブール＝バクダード鉄道の全面開通
+news_event = {
+	id = news.3
+	title = news.3.t
+	desc = news.3.d
+	picture = GFX_news_event_enosis
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3.a
+		trigger = {
+			NOT = {
+				is_in_faction_with = AUS
+			}
+		}
+	}
+	option = {
+		name = news.3.b
+		trigger = { is_in_faction_with = AUS }
+	}
+}
+#ベオグラード条約機構の崩壊
+news_event = {
+	id = news.4
+	title = news.4.t
+	desc = news.4.d
+	picture = GFX_news_event_imro
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.4.a
+		trigger = {
+			NOT = {
+				is_in_faction_with = AUS
+			}
+		}
+	}
+	option = {
+		name = news.4.b
+		trigger = { is_in_faction_with = AUS }
+	}
+}
+#ローマ再興
+news_event = { 
+	id = news.5
+	title = news.5.t
+	desc = news.5.d
+	picture = GFX_news_event_008
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.5.a
+		trigger = {
+			NOT = {
+				TAG = BUL
+			}
+		}
+	}
+	option = {
+		name = news.5.b
+		trigger = { TAG = BUL }
+	}
+}
+#小説：太陽の夜
+news_event = { 
+	id = news.6
+	title = news.6.t
+	desc = news.6.d
+	picture = GFX_news_event_008
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.6.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = news.6.b
+		trigger = { TAG = JAP }
+	}
+}
+#日本が日英同盟を尊重
+news_event = {
+	id = news.7
+	title = news.7.t
+	desc = news.7.d
+	picture = GFX_news_event_020
+	major = yes
+	trigger = {
+		has_global_flag = NitieiPact
+	}
+	option = {
+		name = news.7.a
+		trigger = {
+			NOT = {
+				OR = {
+				TAG = JAP
+				TAG = ENG
+				}
+			}
+		}
+		hidden_effect = {
+			clr_global_flag = NitieiPact
+		}
+	}
+	option = {
+		name = news.7.b
+		trigger = { 
+			OR = {
+				TAG = JAP 
+				TAG = ENG
+			}
+
+			}
+			hidden_effect = {
+				clr_global_flag = NitieiPact
+			}
+		}
+}
+#ヒトラー氏当選
+news_event = { 
+	id = news.8
+	title = news.8.t
+	desc = news.8.d
+	picture = GFX_news_event_german_speech
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.8.a
+		trigger = {
+			NOT = {
+				TAG = AUS
+			}
+		}
+	}
+	option = {
+		name = news.8.b
+		trigger = { TAG = AUS }
+	}
+}
+#第4インターナショナルの北欧侵攻
+news_event = { 
+	id = news.9
+	title = news.9.t
+	desc = news.9.d
+	picture = GFX_news_event_011
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.9.a
+		trigger = {
+			OR = {
+				NOT = {
+				TAG = GER
+				TAG = FRA
+				}
+			}
+		}
+	}
+	option = {
+		name = news.9.b
+		trigger = { 
+			OR = {
+			TAG = GER
+			TAG = FRA
+		}
+	}
+	}
+}
+ #アメリカ内戦の再開
+news_event = { 
+	id = news.10
+	title = news.10.t
+	desc = news.10.d
+	picture = GFX_news_event_saf_soldiers_3
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.10.a
+		trigger = {
+			OR = {
+				NOT = {
+				TAG = USN
+				TAG = USB
+				TAG = CSA
+				TAG = USA	
+				}
+			}
+		}
+	}
+	option = {
+		name = news.10.b
+		trigger = { 
+			OR = {
+				TAG = USN
+				TAG = USB
+				TAG = CSA
+				TAG = USA	
+		}
+	}
+	}
+}
+ #アメリカ内戦延長戦
+ news_event = {
+	id = news.11
+	title = news.11.t
+	desc = news.11.d
+	picture = GFX_news_event_005
+	major = yes
+	trigger = {
+		OR= {
+			AND = {
+				CSA = {
+					NOT = { has_war = yes }
+				   }
+			    USB = { NOT = { exists = yes } }
+				USN = { NOT = { exists = yes } }
+			}
+			AND = {
+				USB = {
+					NOT = { has_war = yes }
+				   }
+			    CSA = { NOT = { exists = yes } }
+				USN = { NOT = { exists = yes } }
+			}
+			AND = {
+				USN = {
+					NOT = { has_war = yes }
+				   }
+			    USB = { NOT = { exists = yes } }
+				CSA = { NOT = { exists = yes } }
+			}
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = news.11.a
+		if = {
+			limit = { USB = { exists = yes  } }
+			USB = {
+				remove_ideas = naisenn
+				declare_war_on = {
+					target = USA
+					type = annex_everything
+					}
+			}
+		}
+		if = {
+			limit = { USN = { exists = yes  } }
+			USN = {
+				remove_ideas = naisenn
+				declare_war_on = {
+					target = USA
+					type = annex_everything
+					}
+			}
+		}
+		if = {
+			limit = { CSA = { exists = yes  } }
+			CSA = {
+				remove_ideas = naisenn
+				declare_war_on = {
+					target = USA
+					type = annex_everything
+					}
+			}
+		}
+	}
+}

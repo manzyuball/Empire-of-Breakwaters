@@ -1,0 +1,32 @@
+
+state={
+	id=499
+	name="STATE_499"
+
+	history={
+		owner = BRA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			air_base = 1
+			10946 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = BRA
+		victory_points = {
+			10946 1 
+		}
+
+	}
+
+	provinces={
+		4617 8143 8184 8197 10392 10419 10946 12422 14058 14059 14060 14061 14062 14063 
+	}
+	manpower=4233900
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

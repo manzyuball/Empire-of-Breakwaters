@@ -1,0 +1,41 @@
+
+state={
+	id=716
+	name="STATE_716"
+	resources={
+		steel=47.000
+	}
+
+	history={
+		owner = MAN
+		add_core_of = MAN
+		add_core_of = PRC
+		add_claim_by = CHI
+		buildings = {
+			infrastructure = 4
+			arms_factory = 4
+			industrial_complex = 4
+			air_base = 5
+			964 = {
+				naval_base = 3
+
+			}
+
+		}
+		victory_points = {
+			4572 1 
+		}
+		victory_points = {
+			11771 3 
+		}
+
+	}
+
+	provinces={
+		836 887 892 916 945 964 987 1567 3783 3839 3849 3888 3895 3913 3932 3949 3970 4572 4642 6804 6860 6868 6905 6910 6918 6947 6981 7663 9759 9781 9803 9848 9854 9866 9885 11744 11764 11771 11808 13356 13357 13360 13367 13369 13375 
+	}
+	manpower=10264620
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

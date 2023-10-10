@@ -1,0 +1,39 @@
+
+state={
+	id=506
+	name="STATE_506"
+	resources={
+		tungsten=2.000
+	}
+
+	history={
+		owner = CHL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			air_base = 1
+			12994 = {
+				naval_base = 1
+
+			}
+			5228 = {
+				naval_base = 2
+
+			}
+
+		}
+		add_core_of = CHL
+		victory_points = {
+			12994 5 
+		}
+
+	}
+
+	provinces={
+		5146 5171 5192 5228 8194 11000 12914 12994 13840 13841 13842 13929 14126 14127 14128 14129 14130 14131 14132 14133 14134 14135 14199 14200 14201 14202 
+	}
+	manpower=283605
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

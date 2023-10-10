@@ -1,0 +1,12 @@
+JAP_bouhatei = {
+	icon = jap_pacific_guardian
+	allowed = {
+		original_tag = JAP
+	}
+}
+JAP_Zyouriku = {
+	icon = infiltration
+	allowed = {
+		original_tag = JAP
+	}
+}

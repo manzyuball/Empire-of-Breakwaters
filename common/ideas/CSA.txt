@@ -1,0 +1,66 @@
+ideas = {
+		country = {
+			CSA1 = {
+				name = CSA1
+				picture = usa_department_of_defense
+				modifier = {
+					conscription = 0.05
+					ai_focus_aggressive_factor = 0.85
+					army_core_defence_factor = 0.10
+				}
+			}
+
+		}
+	aircraft_manufacturer = {
+	
+		designer = yes
+		
+		CSA_avions_fairey = {
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				original_tag = CSA
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# Tipsy B, firefly, fairey fox
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CSA_renard = {
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				original_tag = CSA
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# Tipsy B, firefly, fairey fox
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	
+}

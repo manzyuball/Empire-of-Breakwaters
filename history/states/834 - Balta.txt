@@ -1,0 +1,39 @@
+
+state = {
+	id = 834
+	name = "STATE_834"
+	manpower = 183748
+	
+	state_category = town
+
+	history = {
+		owner = ROM
+		victory_points = {
+			3757 5 
+		}
+		victory_points = {
+			741 3 
+		}
+		buildings = {
+			industrial_complex = 3
+			infrastructure = 3
+			
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+		add_claim_by = VLA
+		add_core_of = MOL
+		add_core_of = ROM
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+			}
+		}
+	}
+
+	provinces = {
+		741 754 3757 9576
+	}
+
+	local_supplies = 6.0 
+}

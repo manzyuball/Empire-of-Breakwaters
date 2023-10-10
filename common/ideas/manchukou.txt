@@ -1,0 +1,219 @@
+ideas = {
+	
+	country = {
+		MAN_Tetudou = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_build_infrastructure
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.15
+			}
+		}
+		five_years_MAN = {
+			removal_cost = -1
+			picture = generic_build_infrastructure
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+	}
+
+	political_advisor = {
+
+		MAN_megata_toshiro = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = MAN
+			}
+			
+			traits = { armaments_organizer }
+		}
+
+		MAN_nalan_kang_an = {
+
+			picture = generic_political_advisor_asia_3
+				
+			allowed = {
+				original_tag = MAN
+			}
+			
+			traits = { fortification_engineer }
+		}
+
+		MAN_songgotu_zhanshan = {
+
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = MAN
+			}
+
+			available = {
+				if = {
+					limit = { has_dlc = "Waking the Tiger" }
+				}
+			}
+			
+			traits = { captain_of_industry }
+		}
+	}
+
+	aircraft_manufacturer = {
+		designer = yes
+
+		MAN_manshu = {
+
+			picture = generic_air_manufacturer_1
+
+			available = {
+			}
+
+			allowed = {
+				original_tag = MAN
+			}
+			
+			research_bonus = {
+				air_equipment = 0.25
+			}
+			
+			traits = { light_aircraft_manufacturer }
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MAN_manshu = {
+
+			picture = generic_air_manufacturer_1
+
+			available = {
+				controls_state = 714
+			}
+
+			allowed = {
+				original_tag = MAN
+				NOT = { has_dlc = "Waking the Tiger" }
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MAN_mamc_light = {
+
+			picture = generic_air_manufacturer_1
+
+			available = {
+			}
+
+			allowed = {
+				original_tag = MAN
+				has_dlc = "Waking the Tiger"
+			}
+
+			cost = 75
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		MAN_mamc_medium = {
+
+			picture = generic_air_manufacturer_1
+
+			available = {
+			}
+
+			allowed = {
+				original_tag = MAN
+				has_dlc = "Waking the Tiger"
+			}
+
+			cost = 75
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		MAN_mamc_heavy = {
+
+			picture = generic_air_manufacturer_1
+
+			available = {
+			}
+
+			allowed = {
+				original_tag = MAN
+				has_dlc = "Waking the Tiger"
+			}
+
+			cost = 75
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+	industrial_concern = {
+		MAN_south_manchuria_railway_company = {
+
+			picture = generic_industrial_concern_2			
+			
+			available = {
+				
+			}
+
+			allowed = {
+				has_dlc = "Waking the Tiger"
+				original_tag = MAN
+			}
+
+			traits = {
+				construction_company
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+
+}

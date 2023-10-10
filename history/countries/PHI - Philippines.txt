@@ -1,0 +1,58 @@
+﻿capital = 327
+
+oob = "PHI_1936"
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "PHI_1936_air_bba"
+	else = {
+		set_air_oob = "PHI_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+		}
+	}
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+}
+
+set_convoys = 55
+recruit_character = JAP_koiso
+recruit_character = PHI_pedro_p_baguisa
+recruit_character = PHI_deodato_jacinto
+recruit_character = PHI_hermano_jacinto
+recruit_character = PHI_pelagio_cruz
+recruit_character = PHI_jose_v_andrada
+recruit_character = PHI_leoncio_s_tan
+recruit_character = PHI_benito_n_ebuen
+recruit_character = PHI_basilio_fernando
+recruit_character = PHI_basilio_j_valdez
+recruit_character = PHI_santiago_nuval
+recruit_character = PHI_heraclio_alano
+recruit_character = PHI_ramon_a_alcaraz
+recruit_character = PHI_victor_h_dizon
+recruit_character = PHI_edwin_andrews
+recruit_character = PHI_eustacio_orobia
+recruit_character = PHI_vicente_p_lim
+recruit_character = PHI_emilio_aguinaldo
+recruit_character = PHI_juan_sumulong
+recruit_character = PHI_sergio_osmena
+
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.9.15"
+	election_frequency = 72
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 82
+	fascism = 9
+	communism = 9
+}

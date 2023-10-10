@@ -1,0 +1,30 @@
+
+state={
+	id=547
+	name="STATE_547" #Kenya
+	manpower = 678400
+	
+	state_category = city
+
+	history={
+		owner = KEN
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+			air_base = 4
+			5210 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			1939 30
+		}
+		add_core_of = KEN
+	}
+
+	provinces={
+		1939 10962 5079 2066 13135 
+	}
+
+	local_supplies=6.0 
+}

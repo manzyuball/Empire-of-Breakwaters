@@ -1,0 +1,26 @@
+
+state={
+	id=434
+	name="STATE_434"
+	resources={
+		tungsten=49.000
+	}
+
+	history={
+		owner = IVO
+		add_core_of = IVO
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		1116 1996 7455 10349 10810 12322 12730 
+	}
+	manpower=200000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=3.000
+}

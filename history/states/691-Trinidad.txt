@@ -1,0 +1,33 @@
+
+state={
+	id=691
+	name="STATE_691"
+	resources={
+		oil=12.000
+	}
+
+	history={
+		add_core_of = CUB
+		owner = ENG
+		victory_points = {
+			3284 1 
+		}
+		buildings = {
+			infrastructure = 2
+			3284 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		3284 13012 14046 
+	}
+	manpower=413119
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=2.000
+}

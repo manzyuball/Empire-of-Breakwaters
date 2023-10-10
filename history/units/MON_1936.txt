@@ -1,0 +1,175 @@
+﻿division_template = {
+	name = "モンゴル騎兵隊"			# Cavalry Division
+
+	division_names_group = MON_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 0 y = 4 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+		cavalry = { x = 1 y = 4 }
+	}
+}
+
+units = {
+	##### Mongol Ardyn Armiin #####
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 4801
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 10627
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 10627
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 7870
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 4823
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 4709
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 4682
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 10911
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 7940
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 4986
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 1853
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 11752
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 952
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 9776
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 6904
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 1137
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 13150
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 4792
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 10647
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 12675
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 13146
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 1708
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "モンゴル騎兵隊"
+		location = 5031
+		division_template = "モンゴル騎兵隊"
+		start_experience_factor = 0.3
+	}
+}
+
+
+##### No notable air force (only about 6 aircraft in 1936) #####
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "MON"
+		}
+		requested_factories = 7
+		progress = 0.20
+		efficiency = 100
+	}
+}

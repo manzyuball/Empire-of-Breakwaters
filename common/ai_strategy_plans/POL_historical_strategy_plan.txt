@@ -1,0 +1,70 @@
+POL_historical_plan = {
+	name = "POL historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = POL_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = POL_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = POL_ai_behavior
+				option = HISTORICAL
+			}
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		POL_S1
+		POL_S2
+		POL_S3
+		POL_S4
+		POL_Factory_1
+		POL_Factory_7
+		POL_Factory_9
+		POL_Factory_8
+		POL_S5
+		POL_S6
+		POL_S7
+		POL_S9
+		POL_S8
+		POL_S10
+		POL_S11
+		POL_Factory_6
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+	traits = {
+		captain_of_industry = 10
+		popular_figurehead = 5
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
