@@ -535,11 +535,12 @@ focus = {
 			transfer_state = 803
 		}
     MAC = {
+		transfer_state = 106
 		declare_war_on = {
 			target = BUL
 			type = annex_everything
 			}
-			transfer_state = 106
+
 	}
 	}
 }

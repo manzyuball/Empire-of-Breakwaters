@@ -15,7 +15,7 @@ state={
 		owner = CSA
 		buildings = {
 			infrastructure = 3 #was: 5
-			industrial_complex = 3
+			industrial_complex = 2
 		}
 		add_core_of = USA
 		add_core_of = CSA

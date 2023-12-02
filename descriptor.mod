@@ -9,5 +9,7 @@ name="EoB ~testplay.ver~"
 dependencies={
 	"Japanese Language mod"
 }
-supported_version="1.12.12"
+replace_path="history/states"
+replace_path="map/strategicregions"
+supported_version="1.13.5"
 remote_file_id="2718964168"

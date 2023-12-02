@@ -46,13 +46,13 @@ units = {
 	division= {	
 		name = "クロアチア武装国防志願兵"
 		location = 3924
-		division_template = "オーストリア武装国防志願兵"
+		division_template = "クロアチア武装国防志願兵"
 		start_experience_factor = 0.8
 	}
 	division= {	
-		name = "オーストリア武装国防志願兵"
+		name = "クロアチア武装国防志願兵"
 		location = 591
-		division_template = "オーストリア武装国防志願兵"
+		division_template = "クロアチア武装国防志願兵"
 		start_experience_factor = 0.8
 	}
 }

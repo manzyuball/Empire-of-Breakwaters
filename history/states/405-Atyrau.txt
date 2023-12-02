@@ -21,7 +21,7 @@ state={
 		add_core_of = BUK
 		1939.1.1 = {
 			buildings = {
-				industrial_complex = 3
+				industrial_complex = 2
 
 			}
 

@@ -9,6 +9,11 @@ state={
 	history={
 		owner = ALG
 		add_core_of = ALG
+		FRA = {
+		set_province_controller = 1141
+		set_province_controller = 12034
+		set_province_controller = 9943
+	    }
 		victory_points = {
 			12034 1 
 		}

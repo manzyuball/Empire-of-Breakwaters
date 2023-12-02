@@ -8,14 +8,14 @@ state={
 	}
 
 	history={
-		owner = VNI
+		owner = LBV
 		victory_points = {
 			11584 10 
 		}
 		buildings = {
 			infrastructure = 3
 			arms_factory = 2
-			industrial_complex = 3
+			industrial_complex = 2
 			dockyard = 1
 			air_base = 3
 			11584 = {
@@ -24,16 +24,8 @@ state={
 			}
 
 		}
-		add_core_of = VNI
+		add_core_of = LBV
 		add_core_of = ITA
-		1939.1.1 = {
-			buildings = {
-				dockyard = 2
-				industrial_complex = 5
-
-			}
-
-		}
 
 	}
 

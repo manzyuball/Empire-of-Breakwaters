@@ -12,8 +12,8 @@ state={
 		add_core_of = TZN
 		buildings = {
 			infrastructure = 3
-			arms_factory = 4
-			industrial_complex = 5
+			arms_factory = 2
+			industrial_complex = 2
 			2050 = {
 				naval_base = 3
 

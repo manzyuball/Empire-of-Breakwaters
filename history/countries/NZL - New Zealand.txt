@@ -1,69 +1,11 @@
 ﻿capital = 284
 
 oob = "NZL_1936"
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "NZL_1936_air_bba"
-	else = {
-		set_air_oob = "NZL_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-			naval_bomber1 = 1
-
-		}
-	}
-}
+set_air_oob = "NZL_1936_air_bba"
 
 # Starting tech
 set_stability = 0.8
 set_war_support = 0.3
-
-set_technology = {
-	infantry_weapons = 1
-	infantry_weapons1 = 1
-	gw_artillery = 1
-	tech_support = 1		
-	tech_engineers = 1
-	tech_recon = 1
-	trench_warfare = 1
-	fleet_in_being = 1
-}
-if = {
-	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
-	set_technology = {
-		gwtank = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_technology = {
-		gwtank_chassis = 1
-	}
-}
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_destroyer = 1
-		early_light_cruiser = 1
-		transport = 1
-	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		basic_naval_mines = 1
-		early_ship_hull_light = 1
-		early_ship_hull_cruiser = 1
-		basic_battery = 1
-		basic_torpedo = 1
-		basic_depth_charges = 1
-		mtg_transport = 1
-	}
-}
 
 recruit_character = NZL_michael_joseph_savage
 recruit_character = NZL_sidney_holland
@@ -96,143 +38,6 @@ recruit_character = NZL_w_a_veitch_milne
 recruit_character = NZL_peter_fraser
 
 
-if = {
-	limit = { has_dlc = "Together for Victory" }
-
-	add_to_tech_sharing_group = commonwealth_research
-}
-
-1939.1.1 = {
-
-	add_political_power = 1198
-	add_command_power = 100
-	oob = "NZL_1939"
-	if = {
-		limit = { has_dlc = "By Blood Alone" }
-			set_air_oob = "NZL_1939_air_bba"
-		else = {
-			set_air_oob = "NZL_1939_air_legacy"
-		}
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "NZL_1939_naval_mtg"
-		else = {
-			set_naval_oob = "NZL_1939_naval_legacy"
-		}
-	}
-	
-	if = {
-		limit = { has_dlc = "Together for Victory" }
-		complete_national_focus = NZL_army_reforms
-		complete_national_focus = NZL_charlton_automatic_rifle
-		complete_national_focus = NZL_domestic_arms_industry
-		complete_national_focus = NZL_expand_the_nzpaf
-		complete_national_focus = NZL_form_the_rnzaf
-		complete_national_focus = NZL_national_roads_board
-		complete_national_focus = NZL_new_zealand_steel
-		complete_national_focus = NZL_taranaki_oil
-		complete_national_focus = NZL_bureau_of_industry 
-		
-		else = {
-			#generic focuses
-			complete_national_focus = army_effort
-			complete_national_focus = equipment_effort
-			complete_national_focus = motorization_effort
-			complete_national_focus = aviation_effort
-			complete_national_focus = naval_effort
-			complete_national_focus = large_navy
-			complete_national_focus = industrial_effort
-			complete_national_focus = construction_effort
-			complete_national_focus = production_effort
-		}
-	}
-
-	add_ideas = {
-		#laws
-		low_economic_mobilisation
-		limited_conscription
-	}
-
-	
-	set_technology = {
-		fighter1 = 1
-		early_bomber = 1
-		tactical_bomber1 = 1
-		interwar_artillery = 1
-		interwar_antitank = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		support_weapons2 = 1
-
-		#doctrines
-		air_superiority = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		submarine_operations = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		fuel_silos = 1
-		oil_processing = 1
-		improved_oil_processing = 1
-		construction1 = 1
-		construction2 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-	}
-	if = {
-		limit = {
-			NOT = {
-				has_dlc = "No Step Back"
-			}
-		}
-		set_technology = {
-			basic_light_tank = 1
-			improved_light_tank = 1
-			basic_medium_tank = 1
-			basic_heavy_tank = 1
-		}
-	}
-	if = {
-		limit = {
-			
-			has_dlc = "No Step Back"
-			
-		}
-		set_technology = {
-			basic_light_tank_chassis = 1
-			improved_light_tank_chassis = 1
-			basic_medium_tank_chassis = 1
-			basic_heavy_tank_chassis = 1
-		}
-	}
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		set_technology = {
-			basic_destroyer = 1
-		}
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		set_technology = {
-			basic_ship_hull_light = 1
-			basic_ship_hull_cruiser = 1
-		}
-	}
-}
 set_politics = {
 	ruling_party = democratic
 	last_election = "1935.11.27"
@@ -243,85 +48,254 @@ set_popularities = {
 	democratic = 100
 }
 
-set_convoys = 70
+set_convoys = 70# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
 
-1939.1.1 = {
-	set_politics = {
-		ruling_party = democratic
-		last_election = "1938.10.15"
-		election_frequency = 60
-		elections_allowed = yes
-	}
+	tech_trucks = 1
+	motorised_infantry = 1
+	armored_car1 = 1
 
-	# Didn't take office until '40, added for flavor
-	promote_character = NZL_peter_fraser
-	retire_character = NZL_michael_joseph_savage
-	set_convoys = 80
+	paratroopers = 1
+	marines = 1
+	tech_mountaineers = 1
+
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_signal_company = 1
+
+	basic_train = 1
+
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	improved_light_tank_chassis = 1
+	engine_tech_1 = 1
+	armor_tech_1 = 1
+
+	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	improved_depth_charges = 1
+	basic_depth_charges = 1
+	sonar = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	improved_airplane_launcher = 1
+	basic_cruiser_armor_scheme = 1
+	early_ship_hull_heavy = 1
+	basic_ship_hull_heavy = 1
+	early_ship_hull_carrier = 1
+	basic_ship_hull_carrier = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_light_shell = 1
+	basic_medium_battery = 1
+	basic_medium_shell = 1
+	basic_heavy_battery = 1 
+	basic_heavy_shell = 1
+	basic_torpedo = 1
+	improved_ship_torpedo_launcher = 1
+	mtg_transport = 1
+
+	transport = 1
+
+	iw_small_airframe = 1
+	basic_small_airframe = 1
+	iw_medium_airframe = 1
+	basic_medium_airframe = 1
+	iw_large_airframe = 1
+	early_bombs = 1
+	armor_piercing_bombs = 1
+	photo_reconnaisance = 1
+	air_torpedoe_1 = 1
+	aa_lmg = 1
+	engines_1 = 1
+	engines_2 = 1
+	aircraft_construction = 1
+	range_improvements = 1
+
+	fuel_silos = 1
+	synth_oil_experiments = 1
+	fuel_refining = 1
 }
 
-
-### VARIANTS ###
-# 1936 Start #
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	### Ship Variants ###
-	create_equipment_variant = {
-		name = "Leander Class"
-		type = light_cruiser_1
+create_equipment_variant = {
+		name = "1936年型軽戦車"
+		type = light_tank_chassis_2
+		parent_version = 1
+		modules = {
+			main_armament_slot = tank_auto_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
 		upgrades = {
-			ship_reliability_upgrade = 2
-			ship_engine_upgrade = 2
-			ship_gun_upgrade = 2
-			ship_anti_air_upgrade = 2
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 0
+		}
+		icon = "GFX_basic_light_tank_medium"
+	}
+	create_equipment_variant = {
+		name = "1936年型航空母艦"
+		type = ship_hull_carrier_1
+		parent_version = 1
+		modules = {
+			    fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = carrier_ship_engine_2
+				front_1_custom_slot = ship_deck_space
+				mid_1_custom_slot = ship_armor_carrier_deck
 		}
 	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	# Light Cruisers #
 	create_equipment_variant = {
-		name = "Danae Class"
-		type = ship_hull_cruiser_1
-		name_group = NZL_CL_HISTORICAL
-		parent_version = 0
+		name = "1936年型戦艦"
+		type = ship_hull_heavy_2
+		parent_version = 1
 		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_battery_slot = ship_heavy_battery_3
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_bb_1
+				front_1_custom_slot = ship_anti_air_2
+				mid_1_custom_slot = ship_airplane_launcher_2
+				mid_2_custom_slot = ship_anti_air_2
+				rear_1_custom_slot = ship_anti_air_2
+		}
+	}
+	create_equipment_variant = {
+		name = "1936年型巡洋戦艦"
+		type = ship_hull_heavy_2
+		parent_version = 1
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_3
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_c_1
+				front_1_custom_slot =  ship_heavy_battery_3
+				mid_1_custom_slot = ship_airplane_launcher_2
+				mid_2_custom_slot = ship_airplane_launcher_2
+				rear_1_custom_slot = ship_airplane_launcher_2
+		}
+	}
+	create_equipment_variant = {
+		name = "1936年型軽巡洋艦"
+		type = ship_hull_cruiser_2
+		parent_version = 1
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			front_1_custom_slot = ship_light_medium_battery_2
+			mid_1_custom_slot = ship_light_medium_battery_2
+			mid_2_custom_slot = ship_light_medium_battery_2
+			rear_1_custom_slot = ship_airplane_launcher_2
 		}
 	}
-}
-
-# 1939 Start #
-1939.1.1 = {
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		# Ship variants #
+	create_equipment_variant = {
+		name = "1936年型重巡洋艦"
+		type = ship_hull_cruiser_2
+		parent_version = 1
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_3
+			front_1_custom_slot = ship_medium_battery_2
+			mid_1_custom_slot = ship_anti_air_2
+			mid_2_custom_slot = ship_medium_battery_2
+			rear_1_custom_slot = ship_anti_air_2
+		}
 	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		# Light Cruisers #
-		create_equipment_variant = {
-			name = "Leander Class"
-			type = ship_hull_cruiser_2
-			name_group = NZL_CL_HISTORICAL
-			modules = {
-				fixed_ship_battery_slot = ship_light_medium_battery_1
+	create_equipment_variant = {
+		name = "1936年型駆逐艦"
+		type = ship_hull_light_2
+		parent_version = 1
+		modules = {
+				fixed_ship_battery_slot = dp_light_battery_2
 				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = cruiser_ship_engine_2
-				fixed_ship_armor_slot = ship_armor_cruiser_1
-				front_1_custom_slot = ship_anti_air_1
-				mid_1_custom_slot = ship_torpedo_1
-				mid_2_custom_slot = ship_airplane_launcher_1
-				rear_1_custom_slot = ship_light_medium_battery_1
+				fixed_ship_radar_slot = ship_sonar_1
+				fixed_ship_engine_slot = light_ship_engine_2
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = ship_depth_charge_2
+		}
+	}
+	create_equipment_variant = {
+			name = "1936年型潜水艦"
+			type = ship_hull_submarine_2
+			name_group = ENG_SS_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_torpedo_slot = ship_torpedo_sub_2
+				fixed_ship_engine_slot = sub_ship_engine_2
+				rear_1_custom_slot = ship_torpedo_sub_2
+			}
+	}
+
+	create_equipment_variant = {
+			name = "1936年型戦闘機" 
+			type = small_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x
+				fixed_auxiliary_weapon_slot_1 = light_mg_4x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = drop_tanks
 			}
 		}
-	}
-}
+
+		create_equipment_variant = {
+			name = "1936年型近接航空支援機" 
+			type = small_plane_cas_airframe_1
+			modules = {
+				fixed_main_weapon_slot = small_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = empty
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = drop_tanks
+				special_type_slot_2 = dive_brakes_small
+			}
+		}
+		create_equipment_variant = {
+			name = "1936年型艦上攻撃機" 
+			type = cv_small_plane_naval_bomber_airframe_1
+			modules = {
+				fixed_main_weapon_slot = torpedo_mounting
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = drop_tanks
+				special_type_slot_2 = fuel_tanks_small
+			}
+		}
+		create_equipment_variant = {
+			name = "1936年型艦載戦闘機" 
+			type = cv_small_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = drop_tanks
+				special_type_slot_2 = fuel_tanks_small
+			}
+		}

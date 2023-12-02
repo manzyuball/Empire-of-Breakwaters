@@ -73,37 +73,25 @@ division_template = {
 units = {
 	division = {
 		name = "赤色民兵"
-		location = 6875
+		location = 9584
 		division_template = "赤色民兵"
 		start_experience_factor = 0.15
 	}
 	division = {
 		name = "赤色民兵"
-		location = 9750
+		location = 3780
 		division_template = "赤色民兵"
 		start_experience_factor = 0.15
 	}
 	division = {
 		name = "赤色民兵"
-		location = 3885
+		location = 6790
 		division_template = "赤色民兵"
 		start_experience_factor = 0.15
 	}
 	division = {
 		name = "赤色民兵"
-		location = 9879
-		division_template = "赤色民兵"
-		start_experience_factor = 0.15
-	}
-	division = {
-		name = "赤色民兵"
-		location = 9924
-		division_template = "赤色民兵"
-		start_experience_factor = 0.15
-	}
-	division = {
-		name = "赤色民兵"
-		location = 6793
+		location = 9752
 		division_template = "赤色民兵"
 		start_experience_factor = 0.15
 	}
@@ -115,43 +103,73 @@ units = {
 	}
 	division = {
 		name = "赤色民兵"
-		location = 9752
+		location = 6793
+		division_template = "赤色民兵"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "赤色民兵"
+		location = 9924
+		division_template = "赤色民兵"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "赤色民兵"
+		location = 782
+		division_template = "赤色民兵"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "赤色民兵"
+		location = 6985
+		division_template = "赤色民兵"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "赤色民兵"
+		location = 3976
+		division_template = "赤色民兵"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "赤色民兵"
+		location = 6973
 		division_template = "赤色民兵"
 		start_experience_factor = 0.15
 	}
 	division = {
 		name = "アルプス山岳兵団"
-		location = 6790
+		location = 6780
 		division_template = "赤色猟兵"
 		start_experience_factor = 0.6
 	}
 	division = {
 		name = "アルプス山岳兵団"
-		location = 3780
+		location = 6780
 		division_template = "赤色猟兵"
 		start_experience_factor = 0.6
 	}
 	division = {
 		name = "アルプス山岳兵団"
-		location = 9584
+		location = 6780
 		division_template = "赤色猟兵"
 		start_experience_factor = 0.6
 	}
 	division = {
 		name = "特別機械化騎兵隊"
-		location = 11833
+		location = 6788
 		division_template = "赤色機械化騎兵"
 		start_experience_factor = 0.6
 	}
 	division = {
 		name = "特別機械化騎兵隊"
-		location = 9907
+		location = 6788
 		division_template = "赤色機械化騎兵"
 		start_experience_factor = 0.6
 	}
 	division = {
 		name = "特別機械化騎兵隊"
-		location = 6973
+		location = 6788
 		division_template = "赤色機械化騎兵"
 		start_experience_factor = 0.6
 	}
@@ -168,9 +186,6 @@ units = {
 
 ####### Starting Production Queue #######
 instant_effect = { 
-	if = { 
-		limit = { is_tutorial = no } 
-
 		##### Equipments #####
 		add_equipment_production = { 
 			equipment = { 
@@ -178,7 +193,7 @@ instant_effect = {
 				creator = "ITA" 
 			} 
 
-			requested_factories = 4 
+			requested_factories = 6
 			progress = 0.1 
 			efficiency = 50 
 		} 
@@ -200,7 +215,7 @@ instant_effect = {
 				creator = "ITA" 
 			} 
 
-			requested_factories = 1 
+			requested_factories = 2 
 			progress = 0.4 
 			efficiency = 50 
 		} 
@@ -216,15 +231,4 @@ instant_effect = {
 			efficiency = 50 
 		} 
 
-		add_equipment_production = { 
-			equipment = { 
-				type = CAS_equipment_1 
-				creator = "ITA" 
-			} 
-
-			requested_factories = 1 
-			progress = 0.2 
-			efficiency = 50 
-		} 
 	}
-} 

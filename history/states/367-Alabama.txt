@@ -10,7 +10,7 @@ state={
 		owner = CSA
 		buildings = {
 			infrastructure = 3 #was: 5
-			industrial_complex = 3
+			industrial_complex = 2
 			7480 = {
 				naval_base = 3
 			}

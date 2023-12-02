@@ -10,7 +10,7 @@ state={
 		owner = UKR
 		buildings = {
 			infrastructure = 3
-			arms_factory = 4
+			arms_factory = 2
 			industrial_complex = 4
 			air_base = 3
 

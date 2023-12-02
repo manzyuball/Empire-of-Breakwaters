@@ -1,15 +1,5 @@
 capital = 271
 
-# add_ideas = {
-# }
-
-# Starting tech
-set_technology = {
-	infantry_weapons = 1
-	tech_mountaineers = 1
-	basic_train = 1
-}
-
 recruit_character = ETH_haile_selassie
 recruit_character = ETH_haile_selassie_gugsa
 recruit_character = ETH_alemework_beyene
@@ -23,59 +13,6 @@ recruit_character = ETH_makonnen_endelkatchew
 # Military Advisors
 recruit_character = ETH_john_robinson
 
-IF = {
-	limit = { has_dlc = "By Blood Alone" }
-	recruit_character = ETH_hailu_tekle_haymanot
-	recruit_character = ETH_abba_jofir
-	recruit_character = ETH_amha_selassie
-	# Generals 
-	recruit_character = ETH_mulugeta_yeggazu_of_illubabor
-	recruit_character = ETH_abebe_aregai
-	recruit_character = ETH_balcho_safo
-	recruit_character = ETH_ayalew_birru
-	recruit_character = ETH_beyene_merid
-	recruit_character = ETH_nasibu_zeamanuel
-	recruit_character = ETH_random_general_1
-	recruit_character = ETH_random_general_2
-	recruit_character = ETH_random_general_3
-	recruit_character = ETH_random_general_4
-	recruit_character = ETH_random_general_5
-	recruit_character = ETH_random_general_6
-	# political Advisors
-	recruit_character = ETH_abuna_qerellos_iv
-	recruit_character = IA_emma_goldman
-	recruit_character = ETH_heruy_wolde_selassie
-	recruit_character = ETH_getachew_abate
-	recruit_character = IA_sakutaro_iwasa
-	recruit_character = IA_sanshiro_ishikawa
-	recruit_character = ETH_workneh_eshete
-	recruit_character = ETH_tadesse_birru
-	recruit_character = ETH_yilma_deressa
-	recruit_character = ETH_menen_asfaw
-	recruit_character = ETH_abuna_abraham
-	recruit_character = ETH_tekle_hawariat_tekle_mariyam
-	recruit_character = ETH_random_leader_1
-	recruit_character = ETH_random_leader_2
-	recruit_character = ETH_random_leader_3
-	recruit_character = ETH_random_leader_4
-	recruit_character = ETH_random_leader_5
-	recruit_character = ETH_random_leader_6
-	recruit_character = ETH_senedu_gebru
-	recruit_character = ETH_random_sud_advisor
-	recruit_character = ETH_random_som_advisor
-	recruit_character = ETH_anarchist_council
-	recruit_character = ETH_prov_mil_admin
-	
-	# Military Advisors
-	recruit_character = ETH_viking_tamm
-	recruit_character = ETH_carl_gustav_von_rosen
-	recruit_character = ETH_domenico_mondelli
-	recruit_character = ETH_wehib_pasha
-	recruit_character = ETH_feodor_konovalov
-}
-
-IF = { 
-	limit = { NOT = { has_dlc = "By Blood Alone" } }
 	recruit_character = ETH_fitawrari_yeebio_woldai
 	recruit_character = ETH_amare_makonnen
 	# recruit_character = ETH_haile_mariam
@@ -91,7 +28,7 @@ IF = {
 	recruit_character = ETH_lij_johannes
 	recruit_character = ETH_fitauri_zawde_gobena
 	recruit_character = ETH_bedjironde_tekle_hawariate
-}
+
 
 set_convoys = 25
 
@@ -101,18 +38,261 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
-IF = {
-	limit = { has_dlc = "By Blood Alone" }
 	set_popularities = {
 		neutrality = 70
 		fascism = 20 
 		democratic = 5
 		communism = 5
 	}
+
+	# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+
+	tech_trucks = 1
+	motorised_infantry = 1
+	armored_car1 = 1
+
+	paratroopers = 1
+	marines = 1
+	tech_mountaineers = 1
+
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_signal_company = 1
+
+	basic_train = 1
+
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	improved_light_tank_chassis = 1
+	engine_tech_1 = 1
+	armor_tech_1 = 1
+
+	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
+
+	early_ship_hull_light = 1
+	basic_ship_hull_light = 1
+	improved_depth_charges = 1
+	basic_depth_charges = 1
+	sonar = 1
+	early_ship_hull_cruiser = 1
+	basic_ship_hull_cruiser = 1
+	improved_airplane_launcher = 1
+	basic_cruiser_armor_scheme = 1
+	early_ship_hull_heavy = 1
+	basic_ship_hull_heavy = 1
+	early_ship_hull_carrier = 1
+	basic_ship_hull_carrier = 1
+	early_ship_hull_submarine = 1
+	basic_ship_hull_submarine = 1
+
+	basic_battery = 1
+	basic_light_battery = 1
+	basic_light_shell = 1
+	basic_medium_battery = 1
+	basic_medium_shell = 1
+	basic_heavy_battery = 1 
+	basic_heavy_shell = 1
+	basic_torpedo = 1
+	improved_ship_torpedo_launcher = 1
+	mtg_transport = 1
+
+	transport = 1
+
+	iw_small_airframe = 1
+	basic_small_airframe = 1
+	iw_medium_airframe = 1
+	basic_medium_airframe = 1
+	iw_large_airframe = 1
+	early_bombs = 1
+	armor_piercing_bombs = 1
+	photo_reconnaisance = 1
+	air_torpedoe_1 = 1
+	aa_lmg = 1
+	engines_1 = 1
+	engines_2 = 1
+	aircraft_construction = 1
+	range_improvements = 1
+
+	fuel_silos = 1
+	synth_oil_experiments = 1
+	fuel_refining = 1
 }
-IF = {
-	limit = { NOT = { has_dlc = "By Blood Alone" } }
-	set_popularities = {
-		neutrality = 100
+
+create_equipment_variant = {
+		name = "1936年型軽戦車"
+		type = light_tank_chassis_2
+		parent_version = 1
+		modules = {
+			main_armament_slot = tank_auto_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 0
+		}
+		icon = "GFX_basic_light_tank_medium"
 	}
-}
+	create_equipment_variant = {
+		name = "1936年型航空母艦"
+		type = ship_hull_carrier_1
+		parent_version = 1
+		modules = {
+			    fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = carrier_ship_engine_2
+				front_1_custom_slot = ship_deck_space
+				mid_1_custom_slot = ship_armor_carrier_deck
+		}
+	}
+	create_equipment_variant = {
+		name = "1936年型戦艦"
+		type = ship_hull_heavy_2
+		parent_version = 1
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_3
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_bb_1
+				front_1_custom_slot = ship_anti_air_2
+				mid_1_custom_slot = ship_airplane_launcher_2
+				mid_2_custom_slot = ship_anti_air_2
+				rear_1_custom_slot = ship_anti_air_2
+		}
+	}
+	create_equipment_variant = {
+		name = "1936年型巡洋戦艦"
+		type = ship_hull_heavy_2
+		parent_version = 1
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_3
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_c_1
+				front_1_custom_slot =  ship_heavy_battery_3
+				mid_1_custom_slot = ship_airplane_launcher_2
+				mid_2_custom_slot = ship_airplane_launcher_2
+				rear_1_custom_slot = ship_airplane_launcher_2
+		}
+	}
+	create_equipment_variant = {
+		name = "1936年型軽巡洋艦"
+		type = ship_hull_cruiser_2
+		parent_version = 1
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			front_1_custom_slot = ship_light_medium_battery_2
+			mid_1_custom_slot = ship_light_medium_battery_2
+			mid_2_custom_slot = ship_light_medium_battery_2
+			rear_1_custom_slot = ship_airplane_launcher_2
+		}
+	}
+	create_equipment_variant = {
+		name = "1936年型重巡洋艦"
+		type = ship_hull_cruiser_2
+		parent_version = 1
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_3
+			front_1_custom_slot = ship_medium_battery_2
+			mid_1_custom_slot = ship_anti_air_2
+			mid_2_custom_slot = ship_medium_battery_2
+			rear_1_custom_slot = ship_anti_air_2
+		}
+	}
+	create_equipment_variant = {
+		name = "1936年型駆逐艦"
+		type = ship_hull_light_2
+		parent_version = 1
+		modules = {
+				fixed_ship_battery_slot = dp_light_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_radar_slot = ship_sonar_1
+				fixed_ship_engine_slot = light_ship_engine_2
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = ship_depth_charge_2
+		}
+	}
+	create_equipment_variant = {
+			name = "1936年型潜水艦"
+			type = ship_hull_submarine_2
+			name_group = ENG_SS_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_torpedo_slot = ship_torpedo_sub_2
+				fixed_ship_engine_slot = sub_ship_engine_2
+				rear_1_custom_slot = ship_torpedo_sub_2
+			}
+	}
+
+	create_equipment_variant = {
+			name = "1936年型戦闘機" 
+			type = small_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x
+				fixed_auxiliary_weapon_slot_1 = light_mg_4x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = drop_tanks
+			}
+		}
+
+		create_equipment_variant = {
+			name = "1936年型近接航空支援機" 
+			type = small_plane_cas_airframe_1
+			modules = {
+				fixed_main_weapon_slot = small_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = empty
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = drop_tanks
+				special_type_slot_2 = dive_brakes_small
+			}
+		}
+		create_equipment_variant = {
+			name = "1936年型艦上攻撃機" 
+			type = cv_small_plane_naval_bomber_airframe_1
+			modules = {
+				fixed_main_weapon_slot = torpedo_mounting
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = drop_tanks
+				special_type_slot_2 = fuel_tanks_small
+			}
+		}
+		create_equipment_variant = {
+			name = "1936年型艦載戦闘機" 
+			type = cv_small_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = drop_tanks
+				special_type_slot_2 = fuel_tanks_small
+			}
+		}

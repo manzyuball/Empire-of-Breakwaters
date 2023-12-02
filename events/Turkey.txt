@@ -72,6 +72,7 @@ country_event = {
 	option = {
 		name = turkey.3.a
 		hidden_effect = {
+			set_global_flag = OTTMAN_END
 			SAU = {
 				transfer_state  = 679
 				transfer_state  = 455
@@ -605,7 +606,8 @@ country_event = {
 									IRQ = { change_tag_from = TUR }
 		}
 	}
-	country_event = {
+}
+country_event = {
 		id = turkey.4
 		title = turkey.4.t
 		desc = turkey.4.d
@@ -623,6 +625,7 @@ country_event = {
 				}
 			}
 		}	
+		hidden = yes
 		option = {
 			name = turkey.4.a
 			annex_country = {
@@ -642,5 +645,4 @@ country_event = {
 							transfer_troops = yes
 							}
 		}			
-	}
 }

@@ -29,7 +29,7 @@ state= {
 				synthetic_refinery = 3
 				anti_air_building = 5
 				dockyard = 7
-				arms_factory = 4
+				arms_factory = 2
 			}
 		}
 	}

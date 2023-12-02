@@ -10,9 +10,6 @@
 		infantry = { x = 1 y = 2 }
 		infantry = { x = 1 y = 3 }
 	}
-	support = {
-  	      engineer = { x = 0 y = 0 }
- 	}
 }
 division_template = {
 	name = "自衛団騎兵課"  		# Cavalry Division
@@ -30,92 +27,74 @@ division_template = {
 
 units = {
 	division= {
-        name = "シチリア自衛団"
-		location = 7059
+        name = "自衛団"
+		location = 967
 		division_template = "自衛団"
 		start_experience_factor = 0.3
 	}
 	division= {
-        name = "シチリア自衛団"
-		location = 4014
+        name = "自衛団"
+		location = 11861
 		division_template = "自衛団"
 		start_experience_factor = 0.3
 	}
 	division= {
-        name = "シチリア自衛団"
-		location = 4159
+        name = "自衛団"
+		location = 3885
 		division_template = "自衛団"
 		start_experience_factor = 0.3
 	}
 	division= {
-        name = "シチリア自衛団"
-		location = 9990
+        name = "自衛団"
+		location = 9794
 		division_template = "自衛団"
 		start_experience_factor = 0.3
 	}
 	division= {
-        name = "シチリア自衛団"
-		location = 11837 
+        name = "自衛団"
+		location = 11882
 		division_template = "自衛団"
 		start_experience_factor = 0.3
 	}
 	division= {
-        name = "シチリア自衛団"
-		location = 883 
+        name = "自衛団"
+		location = 963
 		division_template = "自衛団"
 		start_experience_factor = 0.3
 	}
 	division= {
-        name = "シチリア自衛団"
-		location = 819
-		division_template = "自衛団"
-		start_experience_factor = 0.3
-	}
-	division= {
-        name = "ローマ自衛団"
-		location = 11846 
-		division_template = "自衛団"
-		start_experience_factor = 0.3
-	}
-	division= {
-        name = "ローマ自衛団"
-		location = 9904 
-		division_template = "自衛団"
-		start_experience_factor = 0.3
-	}
-	division= {
-        name = "ローマ自衛団"
+        name = "自衛団"
 		location = 6831
 		division_template = "自衛団"
 		start_experience_factor = 0.3
 	}
 	division= {
-        name = "国境警備隊"
-		location = 6862
+        name = "警備隊"
+		location = 925
 		division_template = "自衛団騎兵課"
 		start_experience_factor = 0.3
 	}
 	division= {
-        name = "国境警備隊"
-		location = 9794
+        name = "警備隊"
+		location = 925
 		division_template = "自衛団騎兵課"
 		start_experience_factor = 0.3
 	}
 	division= {
-        name = "国境警備隊"
-		location = 6926
+        name = "警備隊"
+		location = 925
 		division_template = "自衛団騎兵課"
 		start_experience_factor = 0.3
 	}
 	division= {
-        name = "国境警備隊"
-		location = 11861
+        name = "警備隊"
+		location =925
 		division_template = "自衛団騎兵課"
 		start_experience_factor = 0.3
 	}
 	division= {
-        name = "国境警備隊"
-		location = 967
+        name = "警備隊"
+		location = 925
 		division_template = "自衛団騎兵課"
 		start_experience_factor = 0.3
 	}
@@ -127,28 +106,10 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_1
-			creator = "ENG"
-		}
-		requested_factories = 1
-		progress = 0.5
-		efficiency = 100
-	}
-	add_equipment_production = {
-		equipment = {
-			type = support_equipment_1
-			creator = "ENG"
-		}
-		requested_factories = 1
-		progress = 0.27
-		efficiency = 100
-	}
-	add_equipment_production = {
-		equipment = {
-			type = fighter_equipment_0
 			creator = "MLT"
 		}
-		requested_factories = 1
-		progress = 0.35
+		requested_factories = 2
+		progress = 0.5
 		efficiency = 100
 	}
 }

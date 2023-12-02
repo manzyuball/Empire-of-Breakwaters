@@ -11,9 +11,6 @@
 		infantry = { x = 2 y = 1 }
 		infantry = { x = 2 y = 2 }
 	}
-	support = {
-		recon = { x = 0 y = 0 }
-	}
 }
 division_template = {
 	name = "Militia"				# Militia units (lowest experience, oldest equipment)
@@ -35,102 +32,58 @@ units = {
 	#Royal Afghani Army
 	division = {
 		name = "アフリカ自由軍"
-		location = 11921
+		location = 12051
 		division_template = "反乱軍"
 		start_experience_factor = 0.2
 	}
 	division = {
 		name = "アフリカ自由軍"
-		location = 11921
+		location = 9976
 		division_template = "反乱軍"
 		start_experience_factor = 0.2
 	}
 	division = {
 		name = "アフリカ自由軍"
-		location = 11921
+		location = 10059
 		division_template = "反乱軍"
 		start_experience_factor = 0.2
 	}	division = {
 		name = "アフリカ自由軍"
-		location = 11921
+		location = 12888
 		division_template = "反乱軍"
 		start_experience_factor = 0.2
 	}	division = {
 		name = "アフリカ自由軍"
-		location = 7180
+		location = 4970
 		division_template = "反乱軍"
 		start_experience_factor = 0.2
-	}	division = {
+	}	
+	division = {
 		name = "アフリカ自由軍"
-		location = 4163
-		division_template = "反乱軍"
-		start_experience_factor = 0.2
-	}	division = {
-		name = "アフリカ自由軍"
-		location = 11953
-		division_template = "反乱軍"
-		start_experience_factor = 0.2
-	}	division = {
-		name = "アフリカ自由軍"
-		location = 7065
-		division_template = "反乱軍"
-		start_experience_factor = 0.2
-	}	division = {
-		name = "アフリカ自由軍"
-		location = 4146
-		division_template = "反乱軍"
-		start_experience_factor = 0.2
-	}	division = {
-		name = "アフリカ自由軍"
-		location = 9964
-		division_template = "反乱軍"
-		start_experience_factor = 0.2
-	}	division = {
-		name = "アフリカ自由軍"
-		location = 4116
+		location = 12051
 		division_template = "反乱軍"
 		start_experience_factor = 0.2
 	}
 	division = {
 		name = "アフリカ自由軍"
-		location = 7173
+		location = 9976
 		division_template = "反乱軍"
 		start_experience_factor = 0.2
 	}
 	division = {
 		name = "アフリカ自由軍"
-		location = 4139
+		location = 10059
 		division_template = "反乱軍"
 		start_experience_factor = 0.2
-	}
-	division = {
+	}	division = {
 		name = "アフリカ自由軍"
-		location = 4116
+		location = 12888
 		division_template = "反乱軍"
 		start_experience_factor = 0.2
-	}
-	division = {
+	}	division = {
 		name = "アフリカ自由軍"
-		location = 11943
+		location = 4970
 		division_template = "反乱軍"
 		start_experience_factor = 0.2
-	}
-	division = {
-		name = "アフリカ自由軍"
-		location = 4933
-		division_template = "反乱軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "アフリカ自由軍"
-		location = 4933
-		division_template = "反乱軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "アフリカ自由軍"
-		location = 4933
-		division_template = "反乱軍"
-		start_experience_factor = 0.2
-	}
+	}	
 }

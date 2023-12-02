@@ -6,6 +6,7 @@ state={
 	history={
 		owner = ALG
 		add_core_of = ALG
+		controller = FRA
 		victory_points = {
 			7005 1 
 		}

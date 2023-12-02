@@ -10,7 +10,7 @@ state={
 		owner = UKR
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 5
+			industrial_complex = 2
 
 		}
 		add_core_of = SOV

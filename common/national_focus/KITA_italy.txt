@@ -73,8 +73,16 @@
 		bypass = {
 		}
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = MLT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TOS
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = PAP
 				type = annex_everything
 			}
 		}
@@ -92,7 +100,15 @@
 			factor = 10
 		}
 		available = {
-			has_war = no
+			TOS = {
+				exists = no
+			}
+			MLT = {
+				exists = no
+			}
+			PAP = {
+				exists = no
+			}
 		}
 		bypass = {
 		}
@@ -102,10 +118,6 @@
 			add_state_core = 115
 			add_state_core = 849
 			add_state_core = 978
-			annex_country = {
-				target = MLT
-				transfer_troops = yes
-				}	
 		}
 	}
 	focus = { 
@@ -168,7 +180,7 @@
 		bypass = {
 		}
 		completion_reward = {
-			declare_war_on = {
+			create_wargoal = {
 				target = TUN
 				type = annex_everything
 			}
@@ -212,14 +224,20 @@
 			factor = 10
 		}
 		available = {
-			has_war = no
+			TUN = {
+				exists = no
+			}
 		}
 		bypass = {
 		}
 		completion_reward = {
 			set_rule = {
 				can_create_factions = yes
-				}
+			}
+			set_rule = {
+				can_be_called_to_war = yes
+			}
+			set_capital = 986
 			set_cosmetic_tag = BIG_ITA
 			set_major = yes
 			hidden_effect = {

@@ -11,7 +11,7 @@ state={
 		add_core_of = IVO
 		buildings = {
 			infrastructure = 2
-			arms_factory = 3
+			arms_factory = 2
 
 		}
 

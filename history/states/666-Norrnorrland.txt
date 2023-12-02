@@ -12,7 +12,7 @@ state={
 		owner = SWE
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 3
+			industrial_complex = 2
 
 		}
 		add_core_of = SWE

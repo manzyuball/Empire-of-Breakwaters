@@ -5,15 +5,15 @@ state={
 		9904 
 	}
 	history={
-		owner = MLT
+		owner = PAP
 		victory_points = {
 			9904 40 
 		}
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 8
+			industrial_complex = 4
 		}
-		add_core_of = MLT
+		add_core_of = PAP
 		add_core_of = ITA
 
 	}

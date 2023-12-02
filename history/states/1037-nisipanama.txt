@@ -8,7 +8,7 @@ state={
 		buildings = {
 			infrastructure = 2
 			dockyard = 1
-			industrial_complex = 3
+			industrial_complex = 2
 			4611 = {
 				naval_base = 1
 

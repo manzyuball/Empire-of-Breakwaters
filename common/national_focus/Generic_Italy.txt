@@ -1,0 +1,26 @@
+﻿focus_tree = {
+	id = ITALY_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			OR = {
+				tag = LBV
+				tag = TOS
+				tag = PAP
+				tag = TUN
+				tag = SPM
+			}
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1100 }
+
+	shared_focus = Italy_Naisei
+	shared_focus = Italy_GUN
+	
+}

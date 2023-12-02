@@ -1,4 +1,45 @@
 TUR_kaikaku = {
+	TUR_syesttem = {
+
+		visible = {
+			tag = TUR
+			is_ai = yes
+			has_war = no
+			OR = {
+				CYP = {
+					exists = yes
+				}
+				IRQ = {
+					exists = yes
+				}
+			}
+
+		}
+		cost = 0
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 5000
+		}
+		complete_effect = {
+        	annex_country = {
+				target = LEB
+				transfer_troops = yes
+				}
+				annex_country = {
+					target = CYP
+					transfer_troops = yes
+					}
+					annex_country = {
+						target = IRQ
+						transfer_troops = yes
+						}
+						annex_country = {
+							target = KUR
+							transfer_troops = yes
+							}
+		}
+	}
 
 	TUR_YON = {
 

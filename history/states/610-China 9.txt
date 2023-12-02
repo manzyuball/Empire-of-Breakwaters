@@ -9,7 +9,7 @@ state={
 		add_core_of = PRC
 		add_claim_by = CHI
 		buildings = {
-			industrial_complex = 3
+			industrial_complex = 2
 			infrastructure = 2
 
 		}

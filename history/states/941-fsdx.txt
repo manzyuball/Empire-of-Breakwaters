@@ -6,7 +6,7 @@ state={
 	}
 	state_category = city
 	history={
-		owner = MLT
+		owner = PAP
 		victory_points = {
 			11846 5 
 		}
@@ -14,7 +14,7 @@ state={
 			infrastructure = 4
 			air_base = 8
 			arms_factory = 4
-			industrial_complex = 7
+			industrial_complex = 1
 			11751 = {
 				naval_base = 5
 
@@ -25,7 +25,7 @@ state={
 			}
 
 		}
-		add_core_of = MLT
+		add_core_of = PAP
 		add_core_of = ITA
 
 	}

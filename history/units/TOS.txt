@@ -1,0 +1,82 @@
+﻿####### Division Templates #######
+division_template = { 
+	name = "歩兵編成I" 
+	regiments = { 
+		infantry = { x = 0 y = 0 } 
+		infantry = { x = 0 y = 1 } 
+		infantry = { x = 0 y = 2 } 
+		infantry = { x = 1 y = 0 } 
+		infantry = { x = 1 y = 1 } 
+		infantry = { x = 1 y = 2 } 
+	} 
+} 
+division_template = { 
+	name = "郷土治安維持隊" 
+	regiments = { 
+		cavalry = { x = 0 y = 0 } 
+		cavalry = { x = 0 y = 1 } 
+		cavalry = { x = 1 y = 0 } 
+		cavalry = { x = 1 y = 1 } 
+	} 
+}
+####### OOB #######
+units = {
+	division = {
+		name = "歩兵編成I"
+		location = 6946
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "歩兵編成I"
+		location = 1616
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "歩兵編成I"
+		location = 11889
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "歩兵編成I"
+		location =11751
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "歩兵編成I"
+		location = 6862
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "歩兵編成I"
+		location = 9750
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "歩兵編成I"
+		location = 9879
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.15
+	}
+}
+
+
+####### Starting Production Queue #######
+instant_effect = { 
+		##### Equipments #####
+		add_equipment_production = { 
+			equipment = { 
+				type = infantry_equipment_1 
+				creator = "TOS" 
+			} 
+
+			requested_factories = 4 
+			progress = 0.1 
+			efficiency = 50 
+		} 
+} 
