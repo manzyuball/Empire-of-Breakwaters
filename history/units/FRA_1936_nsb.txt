@@ -670,7 +670,7 @@ units = {
 	}
 	division= {
 	    name = "アフリカ革命軍"
-		location = 12051
+		location = 7081
 		division_template = "歩兵編制I"
 		start_experience_factor = 0.7
 	}
@@ -694,7 +694,7 @@ units = {
 	}
 	division= {
 	    name = "アフリカ革命軍"
-		location = 12051
+		location = 7081
 		division_template = "歩兵編制I"
 		start_experience_factor = 0.7
 	}
