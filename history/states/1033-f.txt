@@ -13,7 +13,7 @@ state={
 		add_core_of = PRU
 
 	}
-
+	impassable = yes
 	manpower=45314
 	state_category=pastoral
 	buildings_max_level_factor=1.000

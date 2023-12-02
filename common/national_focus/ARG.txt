@@ -886,7 +886,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			907 = {
+			1043 = {
 				add_extra_state_shared_building_slots = 5
 			}
 		}
@@ -903,7 +903,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			907 = {
+			1043 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
@@ -926,7 +926,7 @@ focus = {
 
 		completion_reward = {
 			add_stability = 0.1
-			907 = {
+			1043 = {
 				add_manpower = -431231
 			}
 			278 = {
@@ -1045,7 +1045,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			907 = {
+			1043 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
@@ -1067,7 +1067,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			907 = {
+			1043 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
@@ -1089,7 +1089,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			907 = {
+			1043 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
@@ -1111,7 +1111,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			907 = {
+			1043 = {
 				set_building_level = {
 					type = air_base
 					level = 10
@@ -1132,7 +1132,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			907 = {
+			1043 = {
 				add_building_construction = {
 				type = naval_base
 				level = 6

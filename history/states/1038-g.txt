@@ -12,7 +12,7 @@ state={
 		add_core_of = BRA
 
 	}
-
+	impassable = yes
 	provinces={
 		2198 5216 8254 10960 12965 13821 13862 13863 13915 13919 13968 13980 14256 
 	}

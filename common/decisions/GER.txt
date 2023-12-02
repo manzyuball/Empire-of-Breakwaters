@@ -88,7 +88,7 @@ GER_Ryoud_Kakutyo = {
 	GER_Hokuou_Sinko = {
 		icon = generic_operation
 		available = {
-		date > 1939.01.01
+		date > 1940.09.22
 		}
 		visible = {
 		}

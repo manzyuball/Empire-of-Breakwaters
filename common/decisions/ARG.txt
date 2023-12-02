@@ -11,7 +11,7 @@ ARG_sangyou = {
 		cost = 20
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 		complete_effect = {
 			set_country_flag = ARG_sikin
@@ -28,7 +28,7 @@ ARG_sangyou = {
 		cost = 0
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 		complete_effect = {
 			set_country_flag = ARG_sikin
@@ -50,7 +50,7 @@ ARG_sangyou = {
 		days_remove = 40
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 		complete_effect = {
 			set_country_flag = ARG_sikin
@@ -71,7 +71,7 @@ ARG_sangyou = {
 		days_remove = 40
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 		complete_effect = {
 			set_country_flag = ARG_sikin
@@ -95,7 +95,7 @@ ARG_sangyou = {
 		days_remove = 40
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 		complete_effect = {
 			clr_country_flag = ARG_sikin
@@ -121,7 +121,7 @@ ARG_sangyou = {
 		days_remove = 40
 		fire_only_once = no
 		ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 		complete_effect = {
 			clr_country_flag = ARG_sikin
@@ -153,7 +153,7 @@ ARG_sangyou = {
 		fire_only_once = no
 		days_remove = 50
 		ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 		complete_effect = {
 			clr_country_flag = ARG_sikin
@@ -177,7 +177,7 @@ ARG_sangyou = {
 		fire_only_once = no
 		days_remove = 50
 		ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 		complete_effect = {
 			clr_country_flag = ARG_sikin
@@ -195,7 +195,7 @@ ARG_sangyou = {
 		fire_only_once = no
 		days_remove = 50
 		ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 		complete_effect = {
 			clr_country_flag = ARG_sikin
