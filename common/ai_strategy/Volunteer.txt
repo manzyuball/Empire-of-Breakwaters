@@ -1,0 +1,87 @@
+DEM_volunteers = {
+	enable = {
+		has_government = democratic
+	}
+	
+	abort = {
+		NOT= {
+			has_government = democratic
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPR
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = VLA
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = USN
+		value = 100
+	}
+}
+FAS_NER_volunteers = {
+	enable = {
+		OR={
+			has_government = fascism	
+			has_government = neutrality
+		}
+	}
+	
+	abort = {
+		NOT= {
+			OR={
+				has_government = fascism	
+				has_government = neutrality
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = MOR
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = VLA
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CSA
+		value = 100
+	}
+}
+COM_volunteers = {
+	enable = {
+		has_government = communism
+	}
+	
+	abort = {
+		NOT= {
+			has_government = communism
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CAT
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SOV
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = USB
+		value = 100
+	}
+}

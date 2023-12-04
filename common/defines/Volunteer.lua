@@ -1,0 +1,14 @@
+NDefines.NAI.SEND_VOLUNTEER_EVAL_BASE_DISTANCE = 750.0  -- How far away it will evaluate sending volunteers if not a major power
+NDefines.NAI.SEND_VOLUNTEER_EVAL_MAJOER_POWER = 3.5 	-- How willing major powers are to send volunteers.
+NDefines.NAI.SEND_VOLUNTEER_EVAL_CONTAINMENT_FACTOR = 0.5 -- How much AI containment factors into its evaluation of sending volunteers.
+NDefines.NAI.SEND_VOLUNTEER_AIDESIRE_SAME_IDEOLOGY = 60					-- Added to AI desire to send volunteers if recipent is same ideology (and AI can't declare war on recipient)
+NDefines.NAI.SEND_VOLUNTEER_AIDESIRE_SAME_IDEOLOGY_CIVIL_WAR = 40		-- Added to AI desire to send volunteers if recipent is same ideology and they are currently in civil war
+NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0.25			-- Each army unit owned by the source country contributes this amount of volunteers to the limit.
+NDefines.NDiplomacy.VOLUNTEERS_RETURN_EQUIPMENT = 1.0			-- Returning volunteers keep this much equipment
+NDefines.NDiplomacy.VOLUNTEERS_TRANSFER_SPEED = 10				-- days to transfer a unit to another nation
+NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 20			-- This many divisons are required for the country to be able to send volunteers.
+NDefines.NDiplomacy.TENSION_VOLUNTEER_FORCE_DIVISION = 0		-- Amount of tension generated for each sent division
+NDefines.NCountry.STARTING_COMMAND_POWER = 60.0					-- starting command power for every country
+NDefines.NCountry.BASE_MAX_COMMAND_POWER = 999.0					-- base value for maximum command power
+NDefines.NCountry.BASE_COMMAND_POWER_GAIN = 1.5	
+NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 0.85				-- base value for daily command power gain

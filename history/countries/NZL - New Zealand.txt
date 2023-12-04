@@ -131,6 +131,20 @@ set_technology = {
 	fuel_silos = 1
 	synth_oil_experiments = 1
 	fuel_refining = 1
+
+	basic_machine_tools = 1
+	improved_machine_tools = 1
+	improved_equipment_conversion = 1
+	construction1  = 1
+	excavation1 = 1
+	construction2 = 1
+	excavation2 = 1
+	
+	electronic_mechanical_engineering = 1
+	radio = 1
+	radio_detection = 1
+	decimetric_radar = 1
+	mechanical_computing = 1
 }
 
 create_equipment_variant = {

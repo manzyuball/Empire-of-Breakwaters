@@ -1,6 +1,20 @@
 ﻿##### Division Templates #####
 division_template = {
-	name = "赤軍歩兵部隊"
+	name = "歩兵編成I"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "歩兵編成II"
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -15,11 +29,12 @@ division_template = {
 	support = {
 		recon = { x = 0 y = 0 } 		
 		engineer = { x = 0 y = 1 } 
-		artillery = { x = 0 y = 0 } 
+		artillery = { x = 0 y = 2 } 
+		
 	}
 }
 division_template = {
-	name = "赤軍騎兵隊" 
+	name = "騎兵編制I" 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
@@ -28,7 +43,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "赤軍機甲師団" 
+	name = "歩兵編成I" 
 	regiments = {
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }
@@ -45,440 +60,346 @@ division_template = {
 ##### OOB #####
 units = {
 	division= {
-		name = "戦線守備兵"
-		location = 7407
-		division_template = "赤軍歩兵部隊"
+		name = "通常歩兵"
+		location = 6380
+		division_template = "歩兵編成II"
 		start_experience_factor = 0.3
 	}
 	division= {
-		name = "戦線守備兵"
-		location = 12152
-		division_template = "赤軍歩兵部隊"
+		name = "通常歩兵"
+		location = 6380
+		division_template = "歩兵編成II"
 		start_experience_factor = 0.3
 	}
 	division= {
-		name = "戦線守備兵"
-		location = 1375
-		division_template = "赤軍歩兵部隊"
+		name = "通常歩兵"
+		location = 6380
+		division_template = "歩兵編成II"
 		start_experience_factor = 0.3
 	}
 	division= {
-		name = "戦線守備兵"
-		location = 10633
-		division_template = "赤軍歩兵部隊"
+		name = "通常歩兵"
+		location = 6380
+		division_template = "歩兵編成II"
+		start_experience_factor = 0.3
+	}
+
+	division= {
+		name = "通常歩兵"
+		location =3151
+		division_template = "歩兵編成II"
 		start_experience_factor = 0.3
 	}
 	division= {
-		name = "戦線守備兵"
-		location = 1309
-		division_template = "赤軍歩兵部隊"
+		name = "通常歩兵"
+		location =3151
+		division_template = "歩兵編成II"
 		start_experience_factor = 0.3
 	}
 	division= {
-		name = "戦線守備兵"
-		location = 12619
-		division_template = "赤軍歩兵部隊"
+		name = "通常歩兵"
+		location =3151
+		division_template = "歩兵編成II"
 		start_experience_factor = 0.3
 	}
 	division= {
-		name = "機械化戦線守備兵"
-		location = 1292
-		division_template = "赤軍機甲師団"
+		name = "通常歩兵"
+		location =3151
+		division_template = "歩兵編成II"
 		start_experience_factor = 0.3
 	}
+
 	division= {
-		name = "機械化戦線守備兵"
-		location = 1292
-		division_template = "赤軍機甲師団"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "機械化戦線守備兵"
-		location = 4824
-		division_template = "赤軍機甲師団"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "機械化戦線守備兵"
-		location = 4824
-		division_template = "赤軍機甲師団"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "機械化戦線守備兵"
-		location = 4780
-		division_template = "赤軍機甲師団"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "機械化戦線守備兵"
-		location = 9292
-		division_template = "赤軍機甲師団"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "コサック部隊"
-		location = 7661
-		division_template = "赤軍騎兵隊"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "コサック部隊"
-		location = 1599
-		division_template = "赤軍騎兵隊"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "コサック部隊"
-		location = 3653
-		division_template = "赤軍騎兵隊"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "コサック部隊"
-		location = 3672
-		division_template = "赤軍騎兵隊"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "コサック部隊"
-		location = 3668
-		division_template = "赤軍騎兵隊"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "コサック部隊"
-		location = 719
-		division_template = "赤軍騎兵隊"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "コサック部隊"
-		location = 9417
-		division_template = "赤軍騎兵隊"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "コサック部隊"
-		location = 3529
-		division_template = "赤軍騎兵隊"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "コサック部隊"
-		location = 3529
-		division_template = "赤軍騎兵隊"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "コサック部隊"
-		location = 9753
-		division_template = "赤軍騎兵隊"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "コサック部隊"
-		location = 3578
-		division_template = "赤軍騎兵隊"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "コサック部隊"
-		location = 11225
-		division_template = "赤軍騎兵隊"
-		start_experience_factor = 0.3
-	}
-	division= {
-		name = "西方都市守備隊"
+		name = "通常歩兵"
 		location = 3686
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
+		division_template = "歩兵編成II"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "西方都市守備隊"
-		location = 11437
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
+		name = "通常歩兵"
+		location = 3686
+		division_template = "歩兵編成II"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "西方都市守備隊"
-		location = 3452
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
+		name = "通常歩兵"
+		location = 3686
+		division_template = "歩兵編成II"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "西方都市守備隊"
-		location = 11670
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 11504
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 525
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 6593
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 9288
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 6373
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 306
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 11230
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
+		name = "通常歩兵"
+		location = 3686
+		division_template = "歩兵編成II"
+		start_experience_factor = 0.3
 	}
 
 	division= {
-		name = "西方都市守備隊"
-		location = 11370
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
+		name = "通常歩兵"
+		location = 3529
+		division_template = "歩兵編成II"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "西方都市守備隊"
-		location = 11202
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
+		name = "通常歩兵"
+		location = 3529
+		division_template = "歩兵編成II"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "西方都市守備隊"
-		location = 3151
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
+		name = "通常歩兵"
+		location = 3529
+		division_template = "歩兵編成II"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "西方都市守備隊"
-		location = 3140
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 306
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 6380
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 6380
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 9355
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 121
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 11349
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 3338
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
-	}
-	division= {
-		name = "西方都市守備隊"
-		location = 3134
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
+		name = "通常歩兵"
+		location = 3529
+		division_template = "歩兵編成II"
+		start_experience_factor = 0.3
 	}
 
 	division= {
-		name = "西方都市守備隊"
-		location = 9131
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.2
+		name = "戦線守備兵"
+		location = 10659
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 121
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 7681
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 11344
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 10600
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 11375
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 4780
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 9258
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 12521
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 3578
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 1294
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 6398
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 1775
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 3356
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 12185
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 9355
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 4369
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 6262
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 12285
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 3578
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 1276
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 11225
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 4337
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 6338
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "コサック部隊"
+		location = 12266
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 6278
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "コサック部隊"
+		location = 1272
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 1278
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "コサック部隊"
+		location = 10277
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 6124
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "コサック部隊"
+		location = 7392
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 7375
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "コサック部隊"
+		location = 7354
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 1821
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "コサック部隊"
+		location = 7243
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 256
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "コサック部隊"
+		location = 4638
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 324
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "コサック部隊"
+		location = 7486
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
+	}
+	
+	division= {
+		name = "戦線守備兵"
+		location = 10659
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 3302
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 7681
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 1599
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 10600
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 470
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 4780
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 9270
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 12521
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
 	division= {
-		name = "地方都市守備隊"
-		location = 3189
-		division_template = "赤軍歩兵部隊"
-		start_experience_factor = 0.1
+		name = "戦線守備兵"
+		location = 1294
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
 	}
-
+	division= {
+		name = "戦線守備兵"
+		location = 1775
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "戦線守備兵"
+		location = 12185
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "戦線守備兵"
+		location = 4369
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "戦線守備兵"
+		location = 12285
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "戦線守備兵"
+		location = 1276
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "戦線守備兵"
+		location = 4337
+		division_template = "歩兵編成I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "コサック部隊"
+		location = 12266
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "コサック部隊"
+		location = 1272
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "コサック部隊"
+		location = 10277
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "コサック部隊"
+		location = 7392
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "コサック部隊"
+		location = 7354
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "コサック部隊"
+		location = 7243
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "コサック部隊"
+		location = 4638
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "コサック部隊"
+		location = 7486
+		division_template = "騎兵編制I"
+		start_experience_factor = 0.3
+	}
 }
 
 instant_effect = {
