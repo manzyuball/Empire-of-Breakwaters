@@ -7,21 +7,28 @@ state={
 		owner = ARG
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 6
-			dockyard = 1
+			industrial_complex = 7
+			dockyard = 4
 			12364 = {
 				naval_base = 10
-				bunker = 1
-				coastal_bunker = 1
+				bunker = 3
+				coastal_bunker = 5
 
 			}
+			12379 = {
+				naval_base = 10
+				bunker = 3
+				coastal_bunker = 5
 
+			}
 		}
 		add_core_of = ARG
 		victory_points = {
-			12364 45 
+			12364 50
 		}
-
+		victory_points = {
+			12379 50 
+		}
 	}
 
 	provinces={
