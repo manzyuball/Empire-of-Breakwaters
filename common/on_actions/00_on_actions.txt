@@ -320,6 +320,15 @@ on_actions = {
 	#ROOT = nation being released, FROM = overlord
 	on_startup = {
 		effect = {
+			if = {
+				limit = {
+					tag = FRA 
+				}
+				country_event = {
+					id = National_introduction.1
+					days = 0
+				}
+			}
 		}
 	}
 
