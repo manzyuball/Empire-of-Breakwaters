@@ -12,5 +12,6 @@ dependencies={
 replace_path="history/states"
 replace_path="map/strategicregions"
 replace_path="map/terrain"
+replace_path="gfx/loadingscreens"
 supported_version="1.13.5"
 remote_file_id="2718964168"
