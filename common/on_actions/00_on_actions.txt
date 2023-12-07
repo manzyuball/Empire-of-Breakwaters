@@ -324,10 +324,7 @@ on_actions = {
 				limit = {
 					tag = FRA 
 				}
-				country_event = {
-					id = National_introduction.1
-					days = 0
-				}
+
 			}
 		}
 	}
