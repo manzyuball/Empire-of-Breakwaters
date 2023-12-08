@@ -7,11 +7,10 @@
  #  #  # #  # # # ## 
 
  #################### 
-
-
  Fourth_International_Tsnk_organization = {
 	name = Fourth_International_Tsnk_organization_desc
 	icon = GFX_idea_SOV_mytishchy_machine_building_plant
+	
 	allowed = {	
 		OR = {
 			tag = FRA 
@@ -29,11 +28,11 @@
 	}
 
 	initial_trait = {
+		name = Fourth_International_Tsnk_organization_name
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.1
 		}
 	}
-
 
 	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank mio_cat_eq_all_heavy_tank }
 	research_categories = { mio_cat_tech_light_armor_and_modules mio_cat_tech_medium_armor_and_modules mio_cat_tech_heavy_armor_and_modules }
@@ -41,7 +40,7 @@
 
 	trait = {
 		token = Fourth_International_mio_trait_Seizing_control_of_the_arsenal
-		name = Fourth_International_mio_trait_Seizing_control_of_the_arsenal #工廠を掌握する
+		name = Fourth_International_mio_trait_Seizing_control_of_the_arsenal #工廠の掌握
 		icon = GFX_generic_mio_department_icon_facilities
 
 		position = { x=4 y=0 }
@@ -55,7 +54,7 @@
 		token = Fourth_International_mio_trait_Focus_on_attack
 		name = Fourth_International_mio_trait_Focus_on_attack #攻撃重視
 		icon = GFX_generic_mio_department_icon_tank_medium_tank_spg
-		mutually_exclusive = { Fourth_International_mio_trait_Focus_on_defense }
+		mutually_exclusive = { Fourth_International_mio_trait_large_fleet }
 		position = { x=5 y=1 }
 		all_parents = {  Fourth_International_mio_trait_Seizing_control_of_the_arsenal }
 		equipment_bonus = {
@@ -84,7 +83,7 @@
 		}
 	}
 	trait = {
-		token = Fourth_International_mio_trait_Focus_on_defense_A_3
+		token = Fourth_International_mio_trait_Focus_on_attack_A_3
 		name = Fourth_International_mio_trait_Focus_on_attack_A_3 #火力戦
 		icon = GFX_generic_mio_department_icon_tank_heavy_tank_at
 		position = { x=7 y=2 }
@@ -106,8 +105,8 @@
 		}
 	}
 	trait = {
-		token = Fourth_International_mio_trait_Focus_on_defense_B_1
-		name = Fourth_International_mio_trait_Focus_on_defense_B_1 #防御重視
+		token = Fourth_International_mio_trait_Focus_on_defense_A_1
+		name = Fourth_International_mio_trait_Focus_on_defense_A_1 #防御重視
 		icon = GFX_generic_mio_department_icon_tank_medium_tank_armor
 		position = { x=3 y=2 }
 		all_parents = {  Fourth_International_mio_trait_Focus_on_defense }
@@ -116,19 +115,19 @@
 		}
 	}
 	trait = {
-		token = Fourth_International_mio_trait_Focus_on_defense_B_2
-		name = Fourth_International_mio_trait_Focus_on_defense_B_2 #対戦車
+		token = Fourth_International_mio_trait_Focus_on_defense_A_2
+		name = Fourth_International_mio_trait_Focus_on_defense_A_2 #対戦車
 		icon = GFX_generic_mio_department_icon_tank_medium_tank_spg
 		position = { x=2 y=3 }
-		all_parents = { Fourth_International_mio_trait_Focus_on_defense_B_1 }
+		all_parents = { Fourth_International_mio_trait_Focus_on_defense_A_1 }
 		equipment_bonus = {
 			ap_attack = 0.15
 			hard_attack = 0.15
 		}
 	}
 	trait = {
-		token = Fourth_International_mio_trait_Focus_on_defense_B_3
-		name = Fourth_International_mio_trait_Focus_on_defense_B_3 #装甲
+		token = Fourth_International_mio_trait_Focus_on_defense_A_3
+		name = Fourth_International_mio_trait_Focus_on_defense_A_3 #装甲
 		icon = GFX_generic_mio_department_icon_tank_general_armor
 		position = { x=1 y=2 }
 		all_parents = { Fourth_International_mio_trait_Focus_on_defense }
@@ -183,10 +182,8 @@
 		}
 	}
 }
-
-
 Fourth_International_AIR_organization  = {
-	icon = GFX_idea_amiot
+		icon = GFX_idea_amiot
 
 	allowed = {
 		OR = {
@@ -208,7 +205,7 @@ Fourth_International_AIR_organization  = {
 
 
 	initial_trait = {
-		name = generic_mio_initial_trait_general_aircraft_designer
+		name = generic_mio_initial_trait_Fourth_International_AIR_organization_name
 
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.1
@@ -462,16 +459,6 @@ Fourth_International_AIR_organization  = {
 		}
 	}
 }
-
-
-#FRA_amx_organization = { # TODO set up correct from focus if needed
-#	include = generic_mobile_tank_organization
-#	icon = GFX_idea_generic_tank_manufacturer_2
-#	allowed = {	
-#		tag = FRA 
-#	}
-#}
-
 #####################
 
  ## #  # ### ###   ## 
@@ -481,40 +468,217 @@ Fourth_International_AIR_organization  = {
 ##  #  # ### #    ##  
  
 #####################
-
-FRA_fcm_organization = {
-	include = generic_escort_ship_organization
-	icon = GFX_idea_fcm
+Fourth_International_Navy_organization = {
+	name = Fourth_International_Navy_organization_desc
+	icon = GFX_idea_generic_the_london_naval_treaty
 	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+		OR = {
+			tag = FRA 
+			tag = GER
+			tag = HOL
+			tag = ITA
+			tag = SPR
+		}
 	}
-}
 
-FRA_aeb_organization = {
-	include = generic_task_force_ship_organization
-	icon = GFX_idea_FRA_aeb
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+	visible = {
 	}
-}
 
-FRA_acl_organization = {
-	include = generic_battle_line_ship_organization
-	icon = GFX_idea_FRA_acl
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+	available = {
 	}
-}
 
-FRA_acf_organization = {
-	include = generic_raider_ship_organization
-	icon = GFX_idea_FRA_acf
-	allowed = {	
-		tag = FRA 
-		has_dlc = "Arms Against Tyranny"
+	initial_trait = {
+		name = Fourth_International_Navy_organization_name
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+		}
+	}
+
+
+	equipment_type = {
+		capital_ship
+		screen_ship
+		ship_hull_submarine
+	}
+	research_categories = { naval_equipment }
+
+
+	trait = {
+		token = Fourth_International_mio_trait_creation_of_the_navy
+		name = Fourth_International_mio_trait_creation_of_the_navy #海軍の創設
+		icon = GFX_generic_mio_department_icon_ship_general
+		position = { x=4 y=0 }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.3
+			production_resource_need_factor = -0.5
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_Decimal_elite
+		name = Fourth_International_mio_trait_Decimal_elite #小規模艦隊主義
+		icon = "GFX_generic_mio_trait_icon_lg_attack"
+		mutually_exclusive = { Fourth_International_mio_trait_large_fleet }
+		position = { x=5 y=1 }
+		all_parents = { Fourth_International_mio_trait_creation_of_the_navy}
+		equipment_bonus = {
+			soft_attack = 0.08
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_Decimal_elite_A_1
+		name = Fourth_International_mio_trait_Decimal_elite_A_1 #潜水艦の弾倉
+		icon = "GFX_generic_mio_department_icon_ship_submarine_weapons"
+		position = { x=5 y=2 }
+		all_parents = {  Fourth_International_mio_trait_Decimal_elite }
+		limit_to_equipment_type = { ship_hull_submarine }
+
+		equipment_bonus = {
+			torpedo_attack = 0.05
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_Decimal_elite_A_2
+		name = Fourth_International_mio_trait_Decimal_elite_A_2 #隠密性の強化
+		icon = "GFX_generic_mio_department_icon_ship_submarine_survivability"
+		position = { x=6 y=3 }
+		all_parents = {  Fourth_International_mio_trait_Decimal_elite_A_1 }
+		limit_to_equipment_type = { ship_hull_submarine }
+
+		equipment_bonus = {
+			surface_visibility = -0.1
+			sub_visibility = -0.1
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_Decimal_elite_A_3
+		name = Fourth_International_mio_trait_Decimal_elite_A_3 #魚雷命中率強化
+		icon = "GFX_generic_mio_department_icon_ship_submarine_offense"
+		position = { x=5 y=4 }
+		all_parents = {  Fourth_International_mio_trait_Decimal_elite_A_1 }
+		limit_to_equipment_type = { ship_hull_submarine }
+
+		equipment_bonus = {
+			surface_detection = 0.1
+			sub_visibility = 0.05
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_Decimal_elite_B_1
+		name = Fourth_International_mio_trait_Decimal_elite_B_1 #軽巡洋艦の製造
+		icon = "GFX_generic_mio_department_icon_ship_screen_ship_quality"
+		position = { x=8 y=2 }
+		all_parents = {  Fourth_International_mio_trait_Decimal_elite }
+		equipment_bonus = {
+			anti_air_attack = 0.05
+			lg_attack = 0.05
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_Decimal_elite_B_2
+		name = Fourth_International_mio_trait_Decimal_elite_B_2 #索敵効率の強化
+		icon = "GFX_generic_mio_trait_icon_detection"
+		position = { x=9 y=3 }
+		all_parents = {  Fourth_International_mio_trait_Decimal_elite_B_1 }
+		equipment_bonus = {
+			sub_detection = 0.1
+			patrol_coordination = 0.1
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_Decimal_elite_B_3
+		name = Fourth_International_mio_trait_Decimal_elite_B_3 #速度の向上
+		icon = "GFX_generic_mio_trait_icon_maximum_speed"
+		position = { x=8 y=4 }
+		all_parents = {  Fourth_International_mio_trait_Decimal_elite_B_1 }
+
+		equipment_bonus = {
+			naval_speed = 0.08
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_Decimal_elite_B_4
+		name = Fourth_International_mio_trait_Decimal_elite_B_4 #一撃離脱
+		icon = "GFX_generic_mio_trait_icon_air_agility"
+		position = { x=10 y=4 }
+		all_parents = {  Fourth_International_mio_trait_Decimal_elite_B_1 }
+		equipment_bonus = {
+			lg_armor_piercing = 0.15
+			armor_value = -0.05
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_large_fleet
+		name = Fourth_International_mio_trait_large_fleet #大規模艦隊
+		icon = "GFX_generic_mio_trait_icon_hg_attack"
+		position = { x=3 y=1 }
+		mutually_exclusive = { Fourth_International_mio_trait_Decimal_elite }
+		all_parents = {  Fourth_International_mio_trait_creation_of_the_navy}
+		equipment_bonus = {
+			anti_air_attack = 0.05
+			lg_attack = 0.05
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_large_fleet_A_1
+		name = Fourth_International_mio_trait_large_fleet_A_1 #製造コストの軽減
+		icon = "GFX_generic_mio_trait_icon_build_cost_ic"
+		position = { x=3 y=2 }
+		all_parents = {  Fourth_International_mio_trait_large_fleet }
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_large_fleet_A_2
+		name = Fourth_International_mio_trait_large_fleet_A_2 #プレハブ型建艦
+		icon = "GFX_generic_mio_department_icon_ship_capital_ship_engine"
+		position = { x=3 y=3 }
+		all_parents = { Fourth_International_mio_trait_large_fleet_A_1 }
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_large_fleet_A_3
+		name = Fourth_International_mio_trait_large_fleet_A_3 #超大型砲
+		icon = "GFX_generic_mio_department_icon_ship_capital_screen_weapons"
+		position = { x=3 y=4 }
+		all_parents = { Fourth_International_mio_trait_large_fleet_A_2 }
+		equipment_bonus = {
+			hg_attack = 0.1
+			hg_armor_piercing = 0.1
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_large_fleet_B_1
+		name = Fourth_International_mio_trait_large_fleet_B_1 #空母大艦隊
+		icon = "GFX_generic_mio_department_icon_ship_carrier"
+		position = { x=1 y=2 }
+		all_parents = { Fourth_International_mio_trait_large_fleet }
+		equipment_bonus = {
+			carrier_size = 1
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_large_fleet_B_2
+		name = Fourth_International_mio_trait_large_fleet_B_2 #空母大艦隊
+		icon = "GFX_generic_mio_department_icon_ship_carrier"
+		position = { x=0 y=3 }
+		all_parents = { Fourth_International_mio_trait_large_fleet_B_1 }
+        equipment_bonus = {
+			build_cost_ic = -0.10
+		}
+	}
+	trait = {
+		token = Fourth_International_mio_trait_large_fleet_B_3
+		name = Fourth_International_mio_trait_large_fleet_B_3 #空母大艦隊
+		icon = "GFX_generic_mio_department_icon_ship_carrier"
+		position = { x=1 y=4 }
+		all_parents = { Fourth_International_mio_trait_large_fleet_B_1 }
+		equipment_bonus = {
+			carrier_size = 1
+		}
 	}
 }
 
