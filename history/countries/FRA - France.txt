@@ -3,9 +3,12 @@
 set_oob = "FRA_1936_nsb"
 
 starting_train_buffer = 2
-country_event = {
-	id = National_introduction.1
+FRA = {
+	country_event = {
+		id = National_introduction.1
+	}
 }
+
 		set_naval_oob = "FRA_1936_naval_mtg"
 		set_war_support = 0.7
 		set_air_oob = "FRA_1936_air_bba"
