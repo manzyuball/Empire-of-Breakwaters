@@ -11,8 +11,7 @@ state={
 
 
 	history={
-		add_core_of = OMA
-		owner = OMA
+		owner = ENG
 		victory_points = {
 			7960 1 
 		}
@@ -26,7 +25,7 @@ state={
 	}
 
 	provinces={
-		2048 7960 8108 10904 
+		2048 4932 7960 8108 10904 
 	}
 
 	local_supplies=4.0 

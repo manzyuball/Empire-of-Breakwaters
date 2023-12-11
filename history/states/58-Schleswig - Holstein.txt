@@ -12,7 +12,7 @@ state= {
 		victory_points = {
 			9347 20
 		}
-		owner = GER
+		owner = LAT
 		add_core_of = LAT
 		buildings = {
 			infrastructure = 3
@@ -24,14 +24,6 @@ state= {
 			}
 		}
 		add_core_of = GER
-		1939.1.1 = {
-			buildings = {
-				synthetic_refinery = 3
-				anti_air_building = 5
-				dockyard = 7
-				arms_factory = 2
-			}
-		}
 	}
 
 	provinces= {

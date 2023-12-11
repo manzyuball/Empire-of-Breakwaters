@@ -24,7 +24,6 @@ state={
 			}
 
 		}
-		add_claim_by = TUR
 		add_core_of = EGY
 
 	}

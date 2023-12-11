@@ -5,7 +5,7 @@ state={
 		2129 5135 10954 11004 11018 12428 
 	}
 	history={
-		owner = AST
+		owner = LAT
 		buildings = {
 			infrastructure = 0
 		}

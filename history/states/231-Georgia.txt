@@ -3,7 +3,7 @@ state = {
 	name = "STATE_231"
 
 	history = {
-		owner = SOV
+		owner = TUR
 		add_core_of = VLA
 		victory_points = {
 			1599 5 
@@ -24,14 +24,7 @@ state = {
 		}
 		add_core_of = SOV
 		add_core_of = GEO
-		1939.1.1 = {
-			buildings = {
-				industrial_complex = 2
-
-			}
-
-		}
-
+		add_core_of = TUR
 	}
 
 	provinces = {

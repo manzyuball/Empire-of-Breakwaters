@@ -7,8 +7,7 @@ state={
 	state_category = city
 
 	history={
-		owner = EGY
-		add_core_of = EGY
+		owner = TUR
 		add_core_of = TUR
 		buildings = {
 			infrastructure = 3 #was: 5
@@ -28,7 +27,6 @@ state={
 		victory_points = {
 			1065 5 
 		}
-		add_core_of = PAL
 		add_core_of = ISR
 	}
 

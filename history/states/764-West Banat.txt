@@ -6,8 +6,8 @@ state={
 	state_category = rural
 
 	history={
-		owner = AUS
-		controller = AUS
+		owner = HUN
+		controller = HUN
 		victory_points = {
 			3614 1
 		}
@@ -16,7 +16,6 @@ state={
 			infrastructure = 3 #was: 6
 		}
 		add_core_of = YUG
-		add_core_of = AUS
 		add_core_of = HUN
 	}
 

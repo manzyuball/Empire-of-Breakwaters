@@ -7,7 +7,7 @@ state=
 	
 	history=
 	{
-		owner = JAP
+		owner = LAT
 		add_core_of = CHI
 		add_core_of = PRC
 		victory_points = {
@@ -24,10 +24,6 @@ state=
 			}
 	
 
-		}
-
-		1938.10.25 = {
-			controller = JAP
 		}
 	}
 	provinces={

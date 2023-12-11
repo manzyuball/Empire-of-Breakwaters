@@ -4,7 +4,7 @@ state={
 	name="STATE_731"
 
 	history={
-		owner = BUL
+		owner = GRE
 		victory_points = {
 			11818 5 
 		}
@@ -18,7 +18,7 @@ state={
 			}
 
 		}
-		add_core_of = BUL
+		add_claim_by = BUL
 		add_core_of = GRE
 
 	}

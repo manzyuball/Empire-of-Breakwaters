@@ -4,18 +4,17 @@ state={
 	name="STATE_895"
 
 	history={
-		owner = SAF
+		owner = TZN
+		add_core_of = TZN
 		buildings = {
 			infrastructure = 2
 
 		}
-		add_core_of = SAF
-		add_core_of = NMB
 
 	}
 
 	provinces={
-		8136 10957 
+		8136 10957 12519 7770 13736 13217
 	}
 	manpower=92400
 	buildings_max_level_factor=1.000

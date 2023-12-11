@@ -2,18 +2,19 @@ state={
 	id=1012
 	name="STATE_1012"
 	provinces={
-		3488 
+		3488 11562
 	}
 	history={
-		owner = GER
-		add_core_of = LAT
+		owner = FRA
 		buildings = {
 			infrastructure = 3
-			dockyard = 1
 			industrial_complex = 2
 
+		}		
+		victory_points = {
+			11562 1 
 		}
-		add_core_of = GER
+		add_core_of = FRA
 	}
 
 	manpower=64321

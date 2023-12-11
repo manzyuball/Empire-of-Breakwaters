@@ -7,15 +7,13 @@ state={
 	state_category = rural
 	history={
 
-	owner = DEN
-	add_core_of = GER
-	add_core_of = DEN
-	add_core_of = LAT
+		owner = LAT
+		add_core_of = LAT
+		add_core_of = GER
 		buildings = {
 			infrastructure = 1
 			arms_factory = 1
 		}
-		set_demilitarized_zone = yes
 
 }
 	manpower=635123

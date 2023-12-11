@@ -12,29 +12,18 @@ state={
 			infrastructure = 2
 			arms_factory = 1
 			industrial_complex = 2
-			anti_air_building = 2
 			air_base = 3
 
 		}
 		add_core_of = GER
 		add_core_of = LAT
-		1939.1.1 = {
-			buildings = {
-				air_base = 10
-				anti_air_building = 5
-				arms_factory = 2
-				industrial_complex = 4
-
-			}
-
-		}
 
 	}
 
 	provinces={
-		375 3367 3499 3522 6487 9456 9560 11219 11359 
+		3522 6487 9560 11359 
 	}
-	manpower=2912412
+	manpower=1212412
 	buildings_max_level_factor=1.000
 	state_category=city
 	local_supplies=0.000

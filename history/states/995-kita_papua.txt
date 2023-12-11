@@ -4,7 +4,7 @@ state={
 	name="STATE_995"
 
 	history={
-		owner = AST
+		owner = LAT
 		buildings = {
 			infrastructure = 2
 			12237 = {

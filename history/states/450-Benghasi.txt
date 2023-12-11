@@ -4,8 +4,7 @@ state={
 	name="STATE_450"
 
 	history={
-		owner = EGY
-		add_core_of = EGY
+		owner = ENG
 		victory_points = {
 			11954 3 
 		}
@@ -19,13 +18,11 @@ state={
 			}
 
 		}
-		add_core_of = LBA
-		add_claim_by = TUR
 
 	}
 
 	provinces={
-		1062 1127 4120 7063 7139 10123 11954 12079 13743 
+		1062 1127 1198 4057 4120 7063 7139 10123 11954 12079 13743 
 	}
 	manpower=82535
 	buildings_max_level_factor=1.000

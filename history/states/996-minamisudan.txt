@@ -7,13 +7,11 @@ state={
 		owner = EGY
 		add_core_of = EGY
 		add_core_of = SUD
-		add_core_of = TZN
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 
 		}
-		add_claim_by = TUR
 
 	}
 
