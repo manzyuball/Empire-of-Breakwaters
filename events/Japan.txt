@@ -3,3 +3,297 @@
 ###########################
 
 add_namespace = japan
+country_event = {
+	id = japan.1 #南京市場からの撤退
+	title = japan.1.t
+	desc = japan.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.1.a
+		add_offsite_building = {
+			type = industrial_complex
+			level = -6
+		}
+	}
+}
+country_event = {
+	id = japan.2 #アメリカ市場からの撤退
+	title = japan.2.t
+	desc = japan.2.d
+	picture = GFX_report_event_worker_protests
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.2.a
+		add_offsite_building = {
+			type = industrial_complex
+			level = -6
+		}
+	}
+}
+country_event = {
+	id = japan.3 #朝鮮における抵抗運動
+	title = japan.3.t
+	desc = japan.3.d
+	picture = GFX_report_event_long_march
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.3.a
+		every_state = {
+			limit = {
+				is_core_of = KOR
+			}
+			add_resistance_target = 50
+		}
+		country_event = {
+			id = japan.4
+			days = 3
+			random = 5
+		}
+	}
+	option = {
+		name = japan.3.b
+		every_state = {
+			limit = {
+				is_core_of = KOR
+			}
+			add_resistance_target = 50
+		}
+		country_event = {
+			id = japan.5
+			days = 3
+			random = 5
+		}
+	}
+}
+country_event = {
+	id = japan.4 #朝鮮における自治?
+	title = japan.4.t
+	desc = japan.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.4.a
+		every_state = {
+			limit = {
+				is_core_of = KOR
+			}
+			add_resistance_target = -20
+			add_compliance = 5
+		}
+	}
+}
+country_event = {
+	id = japan.5 #鎮圧の結果
+	title = japan.5.t
+	desc = japan.5.d
+	picture = GFX_report_event_japanese_transport_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.5.a
+		every_state = {
+			limit = {
+				is_core_of = KOR
+			}
+			add_resistance_target = -50
+			add_compliance = -30
+		}
+	}
+}
+
+
+country_event = {
+	id = japan.6 #富嶽計画
+	title = japan.6.t
+	desc = japan.6.d
+	picture = GFX_report_event_ace_died
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.6.a
+		mio:JAP_nakajima_organization = {
+			add_mio_size = 5
+		}
+	}
+	option = {
+		name = japan.6.b
+		add_tech_bonus = {
+			name = JAP_strategic_bomber_effort
+			bonus = 2.0
+			uses = 1
+			category = cat_strategic_bomber	
+		}
+	}
+}
+country_event = {
+	id = japan.7 #海軍の誇り
+	title = japan.7.t
+	desc = japan.7.d
+	picture = GFX_report_event_usa_heavy_cruiser
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.7.a
+		set_technology = {
+			improved_heavy_shell = 1
+			improved_ship_hull_heavy = 1
+			improved_heavy_armor_scheme = 1
+			basic_heavy_armor_scheme = 1
+		}
+		create_equipment_variant = {
+			name = "大和型戦艦"
+			type = ship_hull_heavy_3
+			parent_version = 1
+			modules = {
+				    fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = heavy_ship_engine_3
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = ship_anti_air_3
+					mid_2_custom_slot = ship_anti_air_3
+					mid_3_custom_slot = ship_airplane_launcher_2
+					rear_1_custom_slot = ship_airplane_launcher_2
+			}
+		}
+		add_equipment_production = {
+			equipment = {
+			type = ship_hull_heavy_3
+			}
+			requested_factories = 5
+			progress = 0.5
+			amount = 1
+		}
+		add_equipment_production = {
+			equipment = {
+			type = ship_hull_heavy_3
+			}
+			requested_factories = 5
+			progress = 0.5
+			amount = 1
+		}
+		add_equipment_production = {
+			equipment = {
+			type = ship_hull_heavy_3
+			}
+			requested_factories = 5
+			progress = 0.5
+			amount = 1
+		}
+	}
+	option = {
+		name = japan.7.b
+		set_technology = {
+			improved_ship_hull_carrier = 1
+			basic_heavy_armor_scheme = 1
+			improved_heavy_armor_scheme = 1
+		}
+		create_equipment_variant = {
+			name = "翔鶴型航空母艦"
+			type = ship_hull_carrier_2
+			parent_version = 1
+			modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = carrier_ship_engine_3
+					front_1_custom_slot = ship_deck_space
+					mid_1_custom_slot = ship_deck_space
+					mid_2_custom_slot = ship_deck_space
+					fixed_ship_armor_slot = ship_armor_cruiser_4
+			}
+		}
+		add_equipment_production = {
+			equipment = {
+			type = ship_hull_carrier_2
+			}
+			requested_factories = 10
+			progress = 0.5
+			amount = 1
+		}
+		add_equipment_production = {
+			equipment = {
+			type = ship_hull_carrier_2
+			}
+			requested_factories = 10
+			progress = 0.5
+			amount = 1
+		}
+	}
+	option = {
+		name = japan.7.c
+		set_technology = {
+			improved_heavy_shell = 1
+			improved_ship_hull_heavy = 1
+			improved_ship_hull_carrier = 1
+			basic_heavy_armor_scheme = 1
+			improved_heavy_armor_scheme = 1
+		}
+		create_equipment_variant = {
+			name = "翔鶴型航空母艦"
+			type = ship_hull_carrier_2
+			parent_version = 1
+			modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = carrier_ship_engine_3
+					front_1_custom_slot = ship_deck_space
+					mid_1_custom_slot = ship_deck_space
+					mid_2_custom_slot = ship_deck_space
+					fixed_ship_armor_slot = ship_armor_cruiser_4
+			}
+		}
+		create_equipment_variant = {
+			name = "大和型戦艦"
+			type = ship_hull_heavy_3
+			parent_version = 1
+			modules = {
+				    fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = heavy_ship_engine_3
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = ship_anti_air_2
+					mid_2_custom_slot = ship_anti_air_2
+					mid_3_custom_slot = ship_airplane_launcher_2
+					rear_1_custom_slot = ship_airplane_launcher_2
+			}
+		}
+		add_equipment_production = {
+			equipment = {
+			type = ship_hull_heavy_3
+			}
+			requested_factories = 5
+			progress = 0.5
+			amount = 1
+		}
+		add_equipment_production = {
+			equipment = {
+			type = ship_hull_heavy_3
+			}
+			requested_factories = 5
+			progress = 0.5
+			amount = 1
+		}
+		add_equipment_production = {
+			equipment = {
+			type = ship_hull_carrier_2
+			}
+			requested_factories = 10
+			progress = 0.5
+			amount = 1
+		}
+	}
+}

@@ -11,64 +11,67 @@ ideas = {
 			targeted_modifier = { tag = IVO attack_bonus_against = 0.05 }
 		}
 
-		Shared_shells = {
-			name = JP_SS
-			picture = JAP_share_shell
-		}
-		to_kikan = {
-			name = TOKIKAN
-			picture = JAP_to_kikan
-			modifier = {
-				operative_slot = 2
-			}
-		}
-		Oxygen_torpedoes = {
-			name = OT
-			picture = JAP_type_93_torpedo
-		}
-		Preservation_of_old_ships = {
-			name = POOS
-			picture = JAP_naval_escort_battle
-		}
+		#Shared_shells = {
+		#	name = JP_SS
+		#	picture = JAP_share_shell
+		#}
+		#to_kikan = {
+		#	name = TOKIKAN
+		#	picture = JAP_to_kikan
+		#	modifier = {
+		#		operative_slot = 2
+		#	}
+		#}
+		#Oxygen_torpedoes = {
+		#	name = OT
+		#	picture = JAP_type_93_torpedo
+		#}
+		#Preservation_of_old_ships = {
+		#	name = POOS
+		#	picture = JAP_naval_escort_battle
+		#}
 		SyouwaKyoukou = { #昭和恐慌
 			picture = great_depression
 			modifier = {
-				consumer_goods_factor = 0.1
-				stability_factor = -0.15
-				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.8
+				stability_factor = -0.2
+				production_speed_buildings_factor = -0.5
 			}
 		}
 		SyouwaKyoukou1 = { #昭和恐慌
 		picture = great_depression
 		modifier = {
-			consumer_goods_factor = 0.05
-			stability_factor = -0.05
-			production_speed_buildings_factor = -0.1
+			consumer_goods_factor = 0.65
+			stability_factor = -0.2
+			production_speed_buildings_factor = -0.25
 		}
 	}
 	SyouwaKyoukou2= { #昭和恐慌
 	picture = great_depression
 	modifier = {
-		consumer_goods_factor = 0.05
-		stability_factor = -0.05
+		consumer_goods_factor = 0.4
+		stability_factor = -0.1
+			production_speed_buildings_factor = -0.25
 	}
     }
 	SyouwaKyoukou3= { #昭和恐慌
 	picture = great_depression
 	modifier = {
-		stability_factor = -0.05
+		consumer_goods_factor = 0.25
+		stability_factor = -0.1
+		production_speed_buildings_factor = -0.25
 	}
     }
 		KaihatuKeikaku = { #第1次匡救政策
 			picture = JAP_industrial_standard
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.15
 			}
 		}
 		KaihatuKeikaku2 = { #第二次匡救政策
 		picture = JAP_industrial_standard
 		modifier = {
-			consumer_goods_factor = 0.05
+			consumer_goods_factor = 0.25
 			production_speed_infrastructure_factor = 0.4
 			production_speed_rail_way_factor = 0.4
 		}
@@ -76,7 +79,7 @@ ideas = {
 		KaihatuKeikaku3 = { #第3次匡救政策
 		picture = JAP_industrial_standard
 		modifier = {
-			consumer_goods_factor = 0.05
+			consumer_goods_factor = 0.25
 			production_speed_industrial_complex_factor = 0.3
 			production_speed_infrastructure_factor = 0.1
 			production_speed_rail_way_factor = 0.1
@@ -85,8 +88,8 @@ ideas = {
 		KaihatuKeikaku4 = { #第4次匡救政策
 		picture = JAP_industrial_standard
 		modifier = {
-			consumer_goods_factor = 0.05
-			industrial_capacity_factory = 0.25
+			consumer_goods_factor = 0.25
+			industrial_capacity_factory = 0.05
 			production_speed_arms_factory_factor = 0.3
 			production_speed_industrial_complex_factor = 0.1
 			production_speed_infrastructure_factor = 0.1
@@ -96,10 +99,8 @@ ideas = {
 		KaihatuKeikaku5 = { #帝国の産業政策
 		picture = JAP_industrial_standard
 		modifier = {
-			industrial_capacity_factory = 0.25
+			industrial_capacity_factory = 0.15
 			production_speed_buildings_factor = 0.2
-			production_factory_efficiency_gain_factor = 0.2
-			local_resources_factor = 0.2
 		}
     	}
 		Touyounominsyusyugi = { #東洋の民主主義

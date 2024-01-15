@@ -10,7 +10,16 @@ set_variable = {
 	var = LAT.LAT_Kageki
 	value = 0
 }
-
+set_autonomy = {
+	target = LIT
+	autonomous_state = autonomy_collaboration_government
+	freedom_level = 0.1
+}
+set_autonomy = {
+	target = TZN
+	autonomous_state = autonomy_collaboration_government
+	freedom_level = 0.1
+}
 add_manpower = 994210
 
 recruit_character = LAT_gustavs_celminsh

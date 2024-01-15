@@ -12,7 +12,8 @@ leader_traits = {
 		production_speed_air_base_factor = 0.2
 		production_speed_anti_air_building_factor = 0.2
 		production_speed_radar_station_factor = 0.2
-		
+		production_speed_rail_way_station_factor = 0.5
+		production_speed_supply_node_station_factor = 2.5
 		ai_will_do = {
 			factor = 1
 		}

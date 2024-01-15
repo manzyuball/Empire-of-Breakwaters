@@ -7,20 +7,14 @@ set_war_support = 0.5
 
 set_research_slots = 5
 set_fuel_ratio = 1.0
-
+add_offsite_building = {
+	type = industrial_complex
+	level = 12
+}
 add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
-
-
-	The_Fourth_Fleet_Incident
-	disaster_prone_countries
-	Shared_shells
-	to_kikan
-	Oxygen_torpedoes
-	Preservation_of_old_ships
-
 	SyouwaKyoukou
 	KaihatuKeikaku
 }

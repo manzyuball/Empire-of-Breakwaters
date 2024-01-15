@@ -19,7 +19,11 @@ if = {
 		puppet = LBV
 	}
 }
-
+set_autonomy = {
+	target = HUN
+	autonomous_state = autonomy_collaboration_government
+	freedom_level = 0.1
+}
 set_air_oob = "AUS_1936_air_bba"
 
 add_manpower = 664210

@@ -8,6 +8,16 @@ AUS_decisions = {
 	original_tag = AUS
 }
 }
+AI_decisions = {
+	icon = SOV_propaganda
+	visible = {
+		is_ai = yes
+	}
+	allowed = {
+		is_ai = yes
+		tag = NZL
+   }
+}
 AUS_SS_decisions = {
 	icon = GFX_decision_category_generic_fascism
 	visible = {
