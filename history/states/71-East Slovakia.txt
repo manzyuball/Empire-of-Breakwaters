@@ -9,7 +9,8 @@ state={
 		victory_points = {
 			3581 3
 		}
-		owner = HUN
+		owner = AUS
+add_core_of = AUS
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2

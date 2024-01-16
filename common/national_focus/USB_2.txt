@@ -61,7 +61,7 @@ focus = {
 	y = 2
 	relative_position_id = USB_SEI1
 	cost = 10
-	ai_will_do = { factor = 1 }
+	ai_will_do = { factor = 100 }
 	available = { }
 	bypass = { }
 	cancel_if_invalid = yes
@@ -148,7 +148,7 @@ focus = {
 	available_if_capitulated = no
 	complete_tooltip = { }
 	completion_reward = {
-		add_offsite_building = { type = arms_factory level = 6 }
+		add_offsite_building = { type = arms_factory level = 15 }
 	}
 }
 focus = {
@@ -277,7 +277,7 @@ focus = {
 	y = 2
 	relative_position_id = USB_SEI1
 	cost = 10
-	ai_will_do = { factor = 1 }
+	ai_will_do = { factor = 10 }
 	available = { OR = { has_completed_focus = USB_SEI33 has_completed_focus = USB_SEI43 } }
 	bypass = { }
 	cancel_if_invalid = yes
@@ -299,7 +299,7 @@ focus = {
 	y = 4
 	relative_position_id = USB_SEI1
 	cost = 10
-	ai_will_do = { factor = 1 }
+	ai_will_do = { factor = 10 }
 	available = { has_completed_focus = USB_SEI44 }
 	bypass = { }
 	cancel_if_invalid = yes
@@ -318,11 +318,12 @@ focus = {
 	y = 4
 	relative_position_id = USB_SEI1
 	cost = 10
-	ai_will_do = { factor = 1 }
+	ai_will_do = { factor = 100 }
 	available = { has_completed_focus = USB_SEI45 }
 	bypass = { }
 	cancel_if_invalid = yes
 	continue_if_invalid = no
+	will_lead_to_war_with = ENG
 	available_if_capitulated = no
 	complete_tooltip = { }
 	completion_reward = {
@@ -340,10 +341,11 @@ focus = {
 	y = 4
 	relative_position_id = USB_SEI1
 	cost = 10
-	ai_will_do = { factor = 1 }
+	ai_will_do = { factor = 100 }
 	available = { has_completed_focus = USB_SEI45 }
 	bypass = { }
 	cancel_if_invalid = yes
+	will_lead_to_war_with = JAP
 	continue_if_invalid = no
 	available_if_capitulated = no
 	complete_tooltip = { }
@@ -366,6 +368,9 @@ focus = {
 	available = { has_completed_focus = USB_SEI45 }
 	bypass = { }
 	cancel_if_invalid = yes
+	will_lead_to_war_with = MEX
+	will_lead_to_war_with = PRU
+
 	continue_if_invalid = no
 	available_if_capitulated = no
 	complete_tooltip = { }

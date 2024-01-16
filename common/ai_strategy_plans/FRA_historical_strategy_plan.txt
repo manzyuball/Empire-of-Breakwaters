@@ -51,11 +51,14 @@ FRA_historical_plan = {
 		FRA_s18
 		FRA_n12
 		FRA_g3
-		FRA_s19
 		#1940
 		FRA_g5
 		FRA_n8
 		FRA_s16
+	    FRA_EU1 
+		FRA_EU2
+		FRA_EU4
+		FRA_EU3
 	}
 	research = {
 	}

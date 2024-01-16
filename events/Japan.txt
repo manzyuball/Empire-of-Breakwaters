@@ -165,27 +165,39 @@ country_event = {
 		}
 		add_equipment_production = {
 			equipment = {
-			type = ship_hull_heavy_3
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
 			}
+			name = "大和" 
 			requested_factories = 5
-			progress = 0.5
+			progress = 0.75
 			amount = 1
+			industrial_manufacturer = mio:JAP_kure_naval_arsenal_organization
 		}
 		add_equipment_production = {
 			equipment = {
-			type = ship_hull_heavy_3
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
 			}
+			name = "武蔵" 
 			requested_factories = 5
-			progress = 0.5
+			progress = 0.75
 			amount = 1
+			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
 		}
 		add_equipment_production = {
 			equipment = {
-			type = ship_hull_heavy_3
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
 			}
+			name = "信濃" 
 			requested_factories = 5
-			progress = 0.5
+			progress = 0.75
 			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
 		}
 	}
 	option = {
@@ -213,19 +225,27 @@ country_event = {
 		}
 		add_equipment_production = {
 			equipment = {
-			type = ship_hull_carrier_2
+				type = ship_hull_carrier_2
+				creator = "JAP" 
+				version_name = "翔鶴型航空母艦"
 			}
-			requested_factories = 10
-			progress = 0.5
+			name = "瑞鶴" 
+			requested_factories = 5
+			progress = 0.75
 			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
 		}
 		add_equipment_production = {
 			equipment = {
-			type = ship_hull_carrier_2
+				type = ship_hull_carrier_2
+				creator = "JAP" 
+				version_name = "翔鶴型航空母艦"
 			}
-			requested_factories = 10
-			progress = 0.5
+			name = "翔鶴" 
+			requested_factories = 5
+			progress = 0.75
 			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
 		}
 	}
 	option = {
@@ -273,27 +293,39 @@ country_event = {
 		}
 		add_equipment_production = {
 			equipment = {
-			type = ship_hull_heavy_3
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
 			}
+			name = "大和" 
 			requested_factories = 5
-			progress = 0.5
+			progress = 0.75
 			amount = 1
+			industrial_manufacturer = mio:JAP_kure_naval_arsenal_organization
 		}
 		add_equipment_production = {
 			equipment = {
-			type = ship_hull_heavy_3
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
 			}
+			name = "武蔵" 
 			requested_factories = 5
-			progress = 0.5
+			progress = 0.75
 			amount = 1
+			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
 		}
 		add_equipment_production = {
 			equipment = {
-			type = ship_hull_carrier_2
+				type = ship_hull_carrier_2
+				creator = "JAP" 
+				version_name = "翔鶴型航空母艦"
 			}
-			requested_factories = 10
-			progress = 0.5
+			name = "翔鶴" 
+			requested_factories = 5
+			progress = 0.75
 			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
 		}
 	}
 }

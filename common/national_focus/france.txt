@@ -1669,38 +1669,59 @@ focus = {
 		prerequisite = { Focus = FRA_EU2 }
 		prerequisite = { Focus = FRA_EU3 }
 		relative_position_id = FRA_EU1
-		cost = 10
+		cost = 5
 	
 		ai_will_do = {
-			factor = 10
+			factor = 10000
 		}
 	
 		available = {
-			AND = {
-				GER = {
-					has_opinion = {
-						target = FRA
-						value > 50
-						}
-				}
-				HOL = {
-					has_opinion = {
-						target = FRA
-						value > 50
-						}
-				}
-			    ITA = {
-					has_opinion = {
-						target = FRA
-						value > 50
-						}
-				}
-				OR = {
-					GER = { surrender_progress > 0.3 }
-					ITA = { surrender_progress > 0.3 }
-					HOL = { surrender_progress > 0.3 }
+			if = {
+				limit = {
+					FRA = {
+						is_ai = yes
+					}
+					OR = {
+						FRA = { surrender_progress > 0.1 }
+						GER = { surrender_progress > 0.1 }
+						ITA = { surrender_progress > 0.1 }
+						HOL = { surrender_progress > 0.1 }
 					}
 				}
+			}
+			else_if = {
+				limit = {
+					FRA = { 
+						is_ai = no
+					}
+				}
+				AND = {
+					GER = {
+						has_opinion = {
+							target = FRA
+							value > 50
+							}
+					}
+					HOL = {
+						has_opinion = {
+							target = FRA
+							value > 50
+							}
+					}
+					ITA = {
+						has_opinion = {
+							target = FRA
+							value > 50
+							}
+					}
+					OR = {
+						GER = { surrender_progress > 0.3 }
+						ITA = { surrender_progress > 0.3 }
+						HOL = { surrender_progress > 0.3 }
+					}
+				}
+			}
+
 
 		}
 		bypass = {
@@ -1720,6 +1741,11 @@ focus = {
 				target = GER
 				transfer_troops = yes
 				}
+				GER = {
+					every_unit_leader = {
+						set_nationality = FRA
+					}
+				}
 		}
 		else = {
 		}
@@ -1734,6 +1760,11 @@ focus = {
 				target = HOL
 				transfer_troops = yes
 				}
+				HOL = {
+					every_unit_leader = {
+						set_nationality = FRA
+					}
+				}
 		}
 		else = {
 		}
@@ -1747,6 +1778,11 @@ focus = {
 			annex_country = {
 				target = ITA
 				transfer_troops = yes
+				}
+				ITA = {
+					every_unit_leader = {
+						set_nationality = FRA
+					}
 				}
 		}
 		else = {

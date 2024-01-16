@@ -4,7 +4,8 @@ state={
 	name="STATE_103"
 
 	history={
-		owner = HUN
+		owner = AUS
+add_core_of = AUS
 		buildings = {
 			infrastructure = 3
 			dockyard = 1

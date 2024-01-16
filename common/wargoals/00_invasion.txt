@@ -22,7 +22,7 @@ wargoal_types = {
 		take_states_limit = 500
 		take_states_cost = -35
 
-		expire = 180
+		expire = 360
 
 		threat = 5
 	}
@@ -49,7 +49,7 @@ wargoal_types = {
 		take_states_limit = 500
 		take_states_cost = -35
 
-		expire = 730
+		expire = 360
 
 		threat = 3
 	}
@@ -71,7 +71,7 @@ wargoal_types = {
 
 		puppet_cost = -75
 
-		expire = 730
+		expire = 360
 
 		threat = 2
 	}
