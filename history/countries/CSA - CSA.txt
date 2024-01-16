@@ -4,7 +4,7 @@ oob = "CSA_fascist_uprising"
 
 set_research_slots = 4
 set_stability = 0.75
-set_war_support = 95
+set_war_support = 0.6
 add_command_power = 20
 add_political_power = 450
 # Starting tech
@@ -30,7 +30,8 @@ recruit_character = CSA_yvan_gerard
 add_ideas = {
 	#laws
 	Total_Mobilization
-	Service by_Requirement
+	Service
+	by_Requirement
 	CSA1
 }
 

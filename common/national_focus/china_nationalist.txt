@@ -538,10 +538,26 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -566,7 +582,7 @@
 		completion_reward = {
 			add_resource = {
 				type = steel
-				amount = 8
+				amount = 34
 				state = 613
 			}
 		}
@@ -848,19 +864,14 @@
 		}
 
 		completion_reward = {
-			random_owned_state = {
+			964 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = radar_station
-					level = 2
+					level = 6
 					instant_build = yes
 				}
 			}
-			modify_building_resources = {
-				building = radar_station
-				resource = rubber
-				amount = 2
-				}
 		}
 	}
 	focus = {
@@ -882,7 +893,7 @@
 		completion_reward = {
 			add_resource = {
 			type = oil
-			amount = 10
+			amount = 32
 			state = 750
 			}
 		}
@@ -920,6 +931,38 @@
 					instant_build = yes
 				}
 			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -939,6 +982,38 @@
 		}
 
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0

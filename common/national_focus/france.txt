@@ -1689,12 +1689,7 @@ focus = {
 					}
 				}
 			}
-			else_if = {
-				limit = {
-					FRA = { 
-						is_ai = no
-					}
-				}
+			else = {
 				AND = {
 					GER = {
 						has_opinion = {

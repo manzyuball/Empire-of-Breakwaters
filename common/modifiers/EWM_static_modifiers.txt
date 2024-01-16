@@ -1,7 +1,7 @@
 diff_strong_ai_generic = {
 conscription = 0.2	
 industrial_capacity_factory = 2.5
-industrial_capacity_dockyard = 2.5
+industrial_capacity_dockyard = 6.0
 land_doctrine_cost_factor = -0.5
 training_time_army_factor = -0.5
 }

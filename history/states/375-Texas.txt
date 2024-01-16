@@ -24,10 +24,10 @@ state={
 		add_core_of = CSA
 		add_core_of = USN
 		victory_points = {
-			10337 10 
+			10337 15 
 		}
 		victory_points = {
-			3960 10 
+			3960 15
 		}
 
 	}
