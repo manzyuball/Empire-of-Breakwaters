@@ -52,6 +52,7 @@ focus_tree = {
 		completion_reward = {
 		add_political_power = 135
 	    custom_effect_tooltip = SOV_PARAMETER
+		add_threat = 5
 		}
 	} 
 	focus = {

@@ -2,16 +2,11 @@
 state={
 	id=385
 	name="STATE_385"
-	resources={
-		gold=21.000
-	}
-
 	history={
 		owner = USN
 		add_core_of = USN
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
 		}
 		add_core_of = USA
 		add_core_of = USB

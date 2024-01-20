@@ -2,11 +2,6 @@ FRA_Ryoud_Kakutyo = {
 	FRA_SPAIN_SEIKYU = {
 		icon = generic_operation
 		available = {
-            AND = {
-                SPR = { has_war = no }
-                CAT = { has_war = no }
-                MOR = { has_war = no }
-            }
             is_puppet = no
 		}
 		visible = {
@@ -18,23 +13,18 @@ FRA_Ryoud_Kakutyo = {
 		}
 		complete_effect = {
 			add_war_support = 0.05
-            custom_effect_tooltip = FRA_spaon
-            add_state_claim = 165
-            add_state_claim = 794
-            add_state_claim = 166
-            add_state_claim = 167
-            add_state_claim = 168
-            add_state_claim = 793
-            add_state_claim = 176
-            add_state_claim = 172
-            add_state_claim = 792
-            add_state_claim = 177
-            add_state_claim = 173
+            every_state = {
+                limit = {
+                    is_core_of = SPR
+                }
+                add_claim_by = SPR
+            }
 		}
 	}
     FRA_SPAIN_SENSO = {
 		icon = generic_ignite_civil_war
 		available = {
+         date > 1936.06.22
          165 = { is_claimed_by = FRA }
          is_puppet = no
 		}
@@ -45,25 +35,19 @@ FRA_Ryoud_Kakutyo = {
 		ai_will_do = {
 			factor = 1000
 		}
+        days_remove = 30
+        will_lead_to_war_with = SPR
 		complete_effect = {
 			add_war_support = 0.05
-            custom_effect_tooltip = FRA_spain_war
-            hidden_effect = {
                 declare_war_on = {
                     target = SPR
                     type = annex_everything
-                    }
-                    declare_war_on = {
-                        target = CAT
-                        type = annex_everything
-                        }   
-                        declare_war_on = {
-                            target = MOR
-                            type = annex_everything
-                            }
-            }
+                }
 
 		}
+        remove_effect = {
+            
+        }
 	}
     FRA_SPAIN_Soutokuhu = {
 		icon = generic_political_discourse

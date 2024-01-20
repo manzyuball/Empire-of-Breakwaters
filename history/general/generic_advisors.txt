@@ -36,7 +36,7 @@ every_possible_country = {
 		picture = FRA_matignon_agreements
 	}
 	generate_character = {
-		token_base = generic_war_industrialist #軍備重視人事配置
+		token_base = generic_RIKUGUNSYOU #軍備重視人事配置
 		advisor = {
 			slot = political_advisor
 			traits = { RIKUGUNSYOU  }

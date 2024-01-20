@@ -57,7 +57,7 @@ focus = {
 	icon = "GFX_focus_chi_reach_out_to_france"
 	prerequisite = { focus = USB_SEI2 }
 	mutually_exclusive = { focus = USB_SEI4 }
-	x = -4
+	x = -5
 	y = 2
 	relative_position_id = USB_SEI1
 	cost = 10
@@ -178,7 +178,7 @@ focus = {
 	icon = "GFX_focus_chi_mission_to_the_soviet_union"
 	prerequisite = { focus = USB_SEI2 }
 	mutually_exclusive = { focus = USB_SEI3 }
-	x = 4
+	x = 5
 	y = 2
 	relative_position_id = USB_SEI1
 	cost = 10
@@ -274,7 +274,7 @@ focus = {
 	icon = "GFX_NO_IMAGE"
 	#mutually_exclusive = { focus =  }
 	x = 0
-	y = 2
+	y = 3
 	relative_position_id = USB_SEI1
 	cost = 10
 	ai_will_do = { factor = 10 }
@@ -296,7 +296,7 @@ focus = {
 	icon = "GFX_USA_senryaku"
 	#mutually_exclusive = { focus =  }
 	x = 0
-	y = 4
+	y = 5
 	relative_position_id = USB_SEI1
 	cost = 10
 	ai_will_do = { factor = 10 }
@@ -314,8 +314,8 @@ focus = {
 	id = USB_SEI46
 	icon = "GFX_NO_IMAGE"
 	#mutually_exclusive = { focus =  }
-	x = 2
-	y = 4
+	x = 3
+	y = 5
 	relative_position_id = USB_SEI1
 	cost = 10
 	ai_will_do = { factor = 100 }
@@ -337,8 +337,8 @@ focus = {
 	id = USB_SEI47
 	icon = "GFX_NO_IMAGE"
 	#mutually_exclusive = { focus =  }
-	x = -2
-	y = 4
+	x = -3
+	y = 5
 	relative_position_id = USB_SEI1
 	cost = 10
 	ai_will_do = { factor = 100 }
@@ -361,7 +361,7 @@ focus = {
 	icon = "GFX_NO_IMAGE"
 	#mutually_exclusive = { focus =  }
 	x = 0
-	y = 5.6
+	y = 7
 	relative_position_id = USB_SEI1
 	cost = 10
 	ai_will_do = { factor = 1 }

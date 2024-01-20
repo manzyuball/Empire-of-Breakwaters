@@ -114,41 +114,7 @@ AI_decisions = {
 		}
     }
 
-	SOV_war_centerAzia = {
-		icon = generic_operation
-		available = {
-			SOV ={
-				controls_state = 569
-			}
-		}
-		visible = {
-		}
-		cost = 0
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1000
-		}
-		complete_effect = {
-			SOV = {
-				create_wargoal = {
-					target = TAJ
-					type = annex_everything
-				}
-				create_wargoal = {
-					target = TMS
-					type = annex_everything
-				}
-				create_wargoal = {
-					target = BUK
-					type = annex_everything
-				}
-				create_wargoal = {
-					target = KYR
-					type = annex_everything
-				}
-			}
-		}
-    }
+
 	IVO_war_centerAzia = {
 		icon = generic_operation
 		available = {

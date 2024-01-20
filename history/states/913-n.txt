@@ -10,8 +10,8 @@ state={
 		add_core_of = USN
 		buildings = {
 			infrastructure = 3
-			arms_factory = 2
-			industrial_complex = 2
+			arms_factory = 1
+			industrial_complex = 1
 			dockyard = 2
 		}
 		add_core_of = USA

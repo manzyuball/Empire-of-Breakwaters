@@ -22,11 +22,16 @@ news_event = {
 	}
 	option = {
 		name = news.1.b
-		is_in_faction_with = FRA
+		trigger = {
+			is_in_faction_with = FRA
+		}
+		
 	}
 	option = {
 		name = news.1.c
-		is_in_faction_with = ENG
+		trigger = {
+			NOT = { is_in_faction_with = FRA }
+		}
 	}
 }
 
@@ -157,9 +162,7 @@ news_event = {
 	desc = news.7.d
 	picture = GFX_news_event_020
 	major = yes
-	trigger = {
-		has_global_flag = NitieiPact
-	}
+	is_triggered_only = yes
 	option = {
 		name = news.7.a
 		trigger = {
@@ -336,5 +339,27 @@ news_event = {
 					}
 			}
 		}
+	}
+}
+news_event = {  #セルビアへの先制攻撃
+	id = news.12
+	title = news.12.t
+	desc = news.12.d
+	picture = GFX_news_event_038
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.12.a
+	}
+}
+news_event = {  #ブルガリア併合
+	id = news.13
+	title = news.13.t
+	desc = news.13.d
+	picture = GFX_news_event_016
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.13.a
 	}
 }

@@ -9,12 +9,16 @@ state={
 	resources={
 		oil=44 # w
 	}
+	resources={
+		steel=34 # was: 84
+	}
 
 	history={
 		owner = CSA
 		buildings = {
 			infrastructure = 3 #was: 5
 			industrial_complex = 2
+			arms_factory = 4
 			air_base = 5
 			7552 = {
 				naval_base = 5

@@ -198,11 +198,9 @@
 		completion_reward = {
 			custom_effect_tooltip = JAP_NITIEIDOUMEI
 			hidden_effect = {
-			ENG = {
-			set_country_flag = ENG_Japanesepact
+			news_event = news.7
 		    }
 		}
-	}
 	}
 	focus = {
 		id = JAP_NITIEI11

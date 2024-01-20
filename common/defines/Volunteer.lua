@@ -1,9 +1,9 @@
 NDefines.NAI.SEND_VOLUNTEER_EVAL_BASE_DISTANCE = 750.0  -- How far away it will evaluate sending volunteers if not a major power
 NDefines.NAI.SEND_VOLUNTEER_EVAL_MAJOER_POWER = 3.5 	-- How willing major powers are to send volunteers.
 NDefines.NAI.SEND_VOLUNTEER_EVAL_CONTAINMENT_FACTOR = 0.5 -- How much AI containment factors into its evaluation of sending volunteers.
-NDefines.NAI.SEND_VOLUNTEER_AIDESIRE_SAME_IDEOLOGY = 60					-- Added to AI desire to send volunteers if recipent is same ideology (and AI can't declare war on recipient)
-NDefines.NAI.SEND_VOLUNTEER_AIDESIRE_SAME_IDEOLOGY_CIVIL_WAR = 40		-- Added to AI desire to send volunteers if recipent is same ideology and they are currently in civil war
-NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0.25			-- Each army unit owned by the source country contributes this amount of volunteers to the limit.
+NDefines.NAI.SEND_VOLUNTEER_AIDESIRE_SAME_IDEOLOGY = 15			-- Added to AI desire to send volunteers if recipent is same ideology (and AI can't declare war on recipient)
+NDefines.NAI.SEND_VOLUNTEER_AIDESIRE_SAME_IDEOLOGY_CIVIL_WAR = 5		-- Added to AI desire to send volunteers if recipent is same ideology and they are currently in civil war
+NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0.1			-- Each army unit owned by the source country contributes this amount of volunteers to the limit.
 NDefines.NDiplomacy.VOLUNTEERS_RETURN_EQUIPMENT = 1.0			-- Returning volunteers keep this much equipment
 NDefines.NDiplomacy.VOLUNTEERS_TRANSFER_SPEED = 2				-- days to transfer a unit to another nation
 NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 20			-- This many divisons are required for the country to be able to send volunteers.
@@ -33,3 +33,27 @@ NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 20
 NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 100
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 15
 NDefines.NProduction.MAX_MIL_FACTORIES_PER_LINE = 500
+
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0
+NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0
+NDefines.NMilitary.LAND_EQUIPMENT_BASE_COST = 0
+NDefines.NMilitary.LAND_EQUIPMENT_RAMP_COST = 0
+NDefines.NMilitary.NAVAL_EQUIPMENT_BASE_COST = 0
+NDefines.NMilitary.NAVAL_EQUIPMENT_RAMP_COST = 0
+NDefines.NMilitary.AIR_EQUIPMENT_BASE_COST = 0
+NDefines.NMilitary.AIR_EQUIPMENT_RAMP_COST = 0
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 240			-- how many divisions a corps commander is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.CORPS_COMMANDER_ARMIES_CAP = 0	-- how many armies a corps commander is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 10			-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = -1				-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
+NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 10.0		-- armies gets increased cap when they are garrisoned
+
+NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.75
+NDefines.NBuildings.MAX_BUILDING_LEVELS = 35
+NDefines.NBuildings.MAX_SHARED_SLOTS = 50
+NDefines.NGame.GAME_SPEED_SECONDS = { 0.5, 0.25, 0.15, 0.1, 0.0 }
+NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 1000
+NDefines.NGame.LAG_DAYS_FOR_PAUSE = 2500
+NDefines.NDiplomacy.TENSION_TIME_SCALE_MONTHLY_FACTOR = 0.0
+NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.0

@@ -699,3 +699,300 @@ AUS_Dai_mother_land_war = {
 	}
 
 }
+
+AUS_balance_of_the_balkan_decisions = {
+	AUS_preemptive_attack = {
+		available = {
+		 date > 1937.06.01
+		}
+		fire_only_once = yes
+		days_remove = 30
+		icon = GFX_decision_generic_assassination
+		cost = 50
+
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			news_event = {
+				id = news.12
+				days = 1
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+				target = YUG
+				type = annex_everything
+			}
+		}
+	}
+	AUS_occupation_of_Bulgaria = {
+		available = {
+		 date > 1938.02.01
+		}
+		fire_only_once = yes
+		days_remove = 30
+		icon = GFX_decision_generic_nationalism
+		cost = 100
+
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			news_event = {
+				id = news.13
+				days = 1
+			}
+		}
+		remove_effect = {
+			annex_country = {
+				target = BUL
+				transfer_troops = no
+			}
+		}
+	}
+}
+AUS_Vienna_Military_Academy_decision = { 
+	Recruitment_of_generals0 = {
+		available = {
+		}
+		fire_only_once = yes
+		days_remove = 30
+		icon = GFX_decision_generic_army_support
+		cost = 25
+
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+					create_corps_commander = {
+						name = "Robert Musil"
+					    picture = "GFX_portrait_FIN_lauri_torni"
+						traits = { trickster }
+						skill = 2
+						attack_skill = 3
+						defense_skill = 2
+						planning_skill = 3
+						logistics_skill = 2
+					}
+		}
+	}
+	Recruitment_of_generals1 = {
+		available = {
+		}
+		fire_only_once = yes
+		days_remove = 30
+		icon = GFX_decision_generic_army_support
+		cost = 25
+
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+					create_corps_commander = {
+						name = "Franz Grillparzer"
+						picture = "GFX_portrait_DEN_carl_jacobsen"
+						traits = { }
+						skill = 1
+						attack_skill = 3
+						defense_skill = 2
+						planning_skill = 3
+						logistics_skill = 3
+					}
+		}
+	}
+	Recruitment_of_generals2 = {
+		available = {
+		}
+		fire_only_once = yes
+		days_remove = 30
+		icon = GFX_decision_generic_army_support
+		cost = 25
+
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+					create_corps_commander = {
+						name = "Peter Handke"
+						picture = "GFX_portrait_DEN_frederik_ix"
+						traits = { inflexible_strategist }
+						skill = 2
+						attack_skill = 3
+						defense_skill = 2
+						planning_skill = 2
+						logistics_skill = 3
+					}
+		}
+	}
+	Recruitment_of_generals3 = {
+		available = {
+		}
+		fire_only_once = yes
+		days_remove = 30
+		icon = GFX_decision_generic_army_support
+		cost = 25
+
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+					create_corps_commander = {
+						name = "Ernst Mach"
+						picture = "GFX_portrait_NOR_jacob_hvinden_haug"
+						traits = { infantry_officer }
+						skill = 2
+						attack_skill = 2
+						defense_skill = 2
+						planning_skill = 2
+						logistics_skill = 2
+					}
+		}
+	}
+	Recruitment_of_generals4 = {
+		available = {
+		}
+		fire_only_once = yes
+		days_remove = 30
+		icon = GFX_decision_generic_army_support
+		cost = 25
+
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+					create_corps_commander = {
+						name = "Ludwig Wittgenstein"
+						picture = "GFX_portrait_NOR_wilhelm_von_tangen_hansteen"
+						traits = { commando }
+						skill = 2
+						attack_skill = 1
+						defense_skill = 3
+						planning_skill = 1
+						logistics_skill = 2
+					}
+		}
+	}
+	Recruitment_of_generals5 = {
+		available = {
+		}
+		fire_only_once = yes
+		days_remove = 30
+		icon = GFX_decision_generic_army_support
+		cost = 25
+
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+					create_corps_commander = {
+						name = "Karl Popper"
+						picture = "GFX_portrait_ITA_pompeo_colajanni"
+						traits = { winter_specialist }
+						skill = 2
+						attack_skill = 1
+						defense_skill = 2
+						planning_skill = 3
+						logistics_skill = 3
+					}
+		}
+	}
+	Recruitment_of_generals_elite1 = {
+		available = {
+		}
+		visible = {
+			has_completed_focus = Defence_by_the_elite
+		}
+		fire_only_once = yes
+		days_remove = 30
+		icon = GFX_decision_generic_army_support
+		cost = 40
+
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+					create_corps_commander = {
+						name = "Rainer Maria Rilke"
+						picture = "GFX_portrait_SWI_adolf_furrer"
+						traits = { trait_mountaineer winter_specialist }
+						skill = 4
+						attack_skill = 2
+						defense_skill = 5
+						planning_skill = 3
+						logistics_skill = 4
+					}
+		}
+	}
+	Recruitment_of_generals_elite2 = {
+		available = {
+		}
+		visible = {
+			has_completed_focus =  Defence_by_the_elite
+		}
+		fire_only_once = yes
+		days_remove = 30
+		icon = GFX_decision_generic_army_support
+		cost = 40
+
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+					create_corps_commander = {
+						name = "Arthur Schnitzler"
+						picture = "GFX_portrait_SWI_max_waibel"
+						traits = { trait_engineer commando }
+						skill = 4
+						attack_skill = 4
+						defense_skill = 2
+						planning_skill = 3
+						logistics_skill = 4
+					}
+		}
+	}
+	Recruitment_of_generals_elite3 = {
+		available = {
+		}
+		fire_only_once = yes
+		days_remove = 30
+		icon = GFX_decision_generic_army_support
+		cost = 40
+		visible = {
+			has_completed_focus =  Defence_by_the_elite
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+					create_corps_commander = {
+						name = "Georg Trakl"
+						picture = "GFX_portrait_SWI_jakob_huber"
+						traits = { panzer_leader panzer_expert brilliant_strategist armor_officer }
+						skill = 4
+						attack_skill = 5
+						defense_skill = 1
+						planning_skill = 3
+						logistics_skill = 4
+					}
+		}
+	}
+}

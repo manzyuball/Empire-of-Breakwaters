@@ -14,13 +14,489 @@ focus_tree = {
 	default = no
 	
 	continuous_focus_position = { x = 50 y = 2200 }
+	focus = {
+		id = AUS_Disenfranchisement_of_kings
+		icon = GFX_focus_rom_handle_king
+		x = 25
+		y = 0
+		cost = 15
+        #prerequisite = { focus = GER_n1 }
+		#relative_position_id = GER_n1
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = AUS_na_1 }
+				is_subject = no
+			}
+		}
 
+		offset = {
+			x = -15
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = AUS_Disenfranchisement_of_kings
+			}
+		}
+
+		completion_reward = {
+			promote_character = AUS_Karl_Renner
+			add_political_power = 35
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+				}
+		}
+	}
+	focus = {
+		id = AUS_Vienna_Military_Academy
+		icon = GFX_focus_ETH_ecole_militaire_haile_selassie_1er
+		x = -8
+		y = 1
+		cost = 10
+        prerequisite = { focus = AUS_Disenfranchisement_of_kings }
+		relative_position_id = AUS_Disenfranchisement_of_kings
+		completion_reward = {
+			custom_effect_tooltip = AUS_Vienna_Military_Academy_tooltip
+		}
+	}
+	focus = {
+		id = Reorganisation_of_the_armed_forces	
+		icon = GFX_focus_POL_sanation_right
+		x = 3
+		y = 1
+		cost = 10
+        prerequisite = { focus = AUS_Vienna_Military_Academy }
+		relative_position_id = AUS_Vienna_Military_Academy
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = Elimination_of_the_old_system
+		icon =  GFX_focus_generic_tankette
+		x = -1
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = Lessons_from_the_Great_War
+		}
+        prerequisite = { focus = Reorganisation_of_the_armed_forces	 }
+		relative_position_id = Reorganisation_of_the_armed_forces	
+		completion_reward = {
+			add_ideas = AUS_Elimination_of_the_old_system
+		}
+	}
+	focus = {
+		id = Modern_warfare_research
+		icon = GFX_focus_generic_military_mission
+		x = -1
+		y = 2
+		cost = 10
+        prerequisite = { focus = Elimination_of_the_old_system }
+		relative_position_id = Reorganisation_of_the_armed_forces	
+		completion_reward = {
+			army_experience = 75
+		}
+	}
+	focus = {
+		id = Research_on_tanks
+		icon = GFX_goal_generic_army_tanks
+		x = -3
+		y = 2
+		cost = 10
+        prerequisite = { focus = Elimination_of_the_old_system }
+		relative_position_id = Reorganisation_of_the_armed_forces	
+		completion_reward = {
+			add_tech_bonus = {
+				name = JAP_armored_divisions
+				bonus = 2.0
+				uses = 1
+				category = armor	
+			}
+		}
+	}
+	focus = {
+		id = Lessons_from_the_Great_War
+		icon = GFX_focus_generic_university_1
+		x = 3
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = Elimination_of_the_old_system	
+		}
+        prerequisite = { focus = Reorganisation_of_the_armed_forces	 }
+		relative_position_id = Reorganisation_of_the_armed_forces	
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = Czechoslovak_border_fortifications
+		icon = GFX_goal_generic_fortify_city
+		x = -1
+		y = 1
+		cost = 10
+        prerequisite = { focus = Lessons_from_the_Great_War	 }
+		relative_position_id = Lessons_from_the_Great_War	
+		completion_reward = {
+			add_ideas = CZE_fortification_focus4
+		}
+	}
+	focus = {
+		id = Research_on_trench_warfare
+		icon = GFX_focus_ETH_peacekeeping_forces
+		x = 1
+		y = 1
+		cost = 10
+        prerequisite = { focus = Lessons_from_the_Great_War	 }
+		relative_position_id = Lessons_from_the_Great_War	
+		completion_reward = {
+			add_tech_bonus = {
+				name = AUS_trench_warfe
+				bonus = 2.0
+				ahead_reduction = 5
+				uses = 1
+				
+				category = engineers_tech
+			}
+		}
+	}
+	focus = {
+		id = Control_of_the_Adriatic_Sea
+		icon = GFX_focus_generic_adriatic_sea_focus
+		x = 0
+		y = 2
+		cost = 10
+        prerequisite = { focus =Lessons_from_the_Great_War	 }
+		relative_position_id = Lessons_from_the_Great_War	
+		completion_reward = {
+			navy_experience = 50
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				set_technology = { midget_submarines = 1 }
+			}
+			else = {
+				navy_experience = 50
+			}
+		}
+	}
+	focus = {
+		id = Learning_from_our_friends_in_the_Alps
+		icon = GFX_focus_SWI_federal_police
+		x = 2
+		y = 2
+		cost = 10
+        prerequisite = { focus =Lessons_from_the_Great_War	 }
+		relative_position_id = Lessons_from_the_Great_War	
+		completion_reward = {
+			add_ideas = AUS_Learning_from_our_friends
+			SWI = {
+				add_ideas = AUS_our_friends
+			}
+		}
+	}
+	focus = {
+		id = civil_defence
+		icon = GFX_focus_generic_limited_social_mobilization
+		x = 2
+		y = 3
+		cost = 10
+        prerequisite = { focus = Learning_from_our_friends_in_the_Alps }
+		relative_position_id = Lessons_from_the_Great_War	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AUS_Learning_from_our_friends
+				add_idea = AUS_Learning_from_our_friends_2
+			}
+		}
+	}
+
+	focus = {
+		id = Defence_by_the_elite
+		icon = GFX_goal_generic_special_forces
+		x = -1
+		y = 1
+		cost = 10
+        prerequisite = { focus = AUS_Vienna_Military_Academy }
+		relative_position_id = AUS_Vienna_Military_Academy	
+		completion_reward = {
+			add_ideas = AUS_Defence_by_the_elite
+		}
+	}
+	focus = {
+		id = rigorous_training
+		icon = GFX_focus_SWE_varnplikt
+		x = -1
+		y =1
+		cost = 10
+        prerequisite = { focus = Defence_by_the_elite }
+		relative_position_id = Defence_by_the_elite	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AUS_Defence_by_the_elite
+				add_idea = AUS_Defence_by_the_elite_2
+			}
+		}
+	}
+	focus = {
+		id = Soldiers_of_Steel
+		icon = GFX_focus_generic_manpower
+		x = -1
+		y =2
+		cost = 10
+        prerequisite = { focus = Defence_by_the_elite }
+		relative_position_id = Defence_by_the_elite	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AUS_Defence_by_the_elite_2
+				add_idea = AUS_Defence_by_the_elite_3
+			}
+		}
+	}
+	focus = {
+		id = balance_of_the_balkan
+		icon = GFX_focus_BUL_free_balkan_states
+		x = -3
+		y = 1
+		cost = 15
+        prerequisite = { focus =AUS_Disenfranchisement_of_kings }
+		relative_position_id =AUS_Disenfranchisement_of_kings	
+		completion_reward = {
+			custom_effect_tooltip = AUS_balkan_balance_decision
+		}
+	}
+	focus = {
+		id = close_alliance
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = -1
+		y = 1
+		cost = 10
+        prerequisite = { focus =AUS_Disenfranchisement_of_kings }
+		relative_position_id =AUS_Disenfranchisement_of_kings	
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = Alliance_support
+		icon = GFX_focus_DEN_no_regulations
+		x = -2
+		y = 2
+		cost = 10
+        prerequisite = { focus = close_alliance }
+		relative_position_id =AUS_Disenfranchisement_of_kings	
+		completion_reward = {
+			AUS = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = AUS
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = Developing_an_empire
+		icon = GFX_focus_NORDIC_com_civilian
+		x = 3
+		y = 1
+		cost = 10
+        prerequisite = { focus =  AUS_Disenfranchisement_of_kings	}
+		relative_position_id =AUS_Disenfranchisement_of_kings	
+		completion_reward = {
+			add_tech_bonus = {
+				name = "帝国の開発"
+				bonus = 1.0	uses = 2 category = industry
+			}
+		}
+	}
+	focus = {
+		id = Strengthening_local_infrastructure
+		icon = GFX_focus_generic_industry_3
+		x = 3
+		y = 2
+		cost = 10
+        prerequisite = { focus = Developing_an_empire }
+		relative_position_id =AUS_Disenfranchisement_of_kings	
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					infrastructure < 3
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = Investing_in_building_companies
+		icon= GFX_goal_generic_construction
+		x = 4
+		y = 3
+		cost = 10
+        prerequisite = { focus =  Strengthening_local_infrastructure }
+		relative_position_id =AUS_Disenfranchisement_of_kings	
+		completion_reward = {
+			add_ideas = AUS_Investing_in_building_companies
+		}
+	}
+	focus = {
+		id = traditional_industry
+		icon= GFX_goal_generic_construct_civ_factory
+		x = 4
+		y = 4
+		cost = 10
+        prerequisite = { focus =  Strengthening_local_infrastructure }
+		relative_position_id =AUS_Disenfranchisement_of_kings	
+		completion_reward = {
+	add_ideas = AUS_traditional_factory
+		}
+	}
+	focus = {
+		id = Support_for_military_companies
+		icon =GFX_goal_generic_intelligence_exchange
+		x = 2
+		y = 3
+		cost = 10
+        prerequisite = { focus = Strengthening_local_infrastructure }
+		relative_position_id =AUS_Disenfranchisement_of_kings	
+		completion_reward = {
+			add_ideas = AUS_Support_for_military_companies
+		}
+	}
+	focus = {
+		id = Establishment_of_arsenals
+		icon = GFX_focus_generic_modernize_industry
+		x = 0
+		y = 3
+		cost = 10
+        prerequisite = { focus = Strengthening_local_infrastructure }
+		relative_position_id =AUS_Disenfranchisement_of_kings	
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
 	focus = {
 		id = AUS_na_1
 		icon = "GFX_focus_proclaim_the_restauration_of_Austria_Hungary"
 		x = 10
 		y = 0
 		cost = 7.14
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = { has_completed_focus = AUS_Disenfranchisement_of_kings }
+				is_subject = no
+			}
+		}
         #prerequisite = { focus = GER_n1 }
 		#relative_position_id = GER_n1
 		completion_reward = {

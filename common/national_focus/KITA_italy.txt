@@ -34,6 +34,7 @@
 		}
 		completion_reward = {
 			add_war_support = 0.15
+			add_threat = 5
 		}
 	}
 	focus = { 
@@ -237,6 +238,7 @@
 			set_rule = {
 				can_be_called_to_war = yes
 			}
+			add_threat = 5
 			set_capital = 986
 			set_cosmetic_tag = BIG_ITA
 			set_major = yes

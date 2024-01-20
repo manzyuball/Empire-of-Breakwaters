@@ -1076,6 +1076,7 @@
 		completion_reward = {
 			add_war_support = 0.1
 			add_stability = 0.05
+			add_threat = 5
 		}
 	}
 	focus = {
@@ -1622,12 +1623,14 @@
 			factor = 10
 		}
 		available = {
-			controls_state = 851
+			controls_state = 994
 		}
 
 		completion_reward = {
 			set_major = yes
-			
+			set_capital = {
+				state = 994
+			}
 			army_experience = 150
 		}
 	}
@@ -1653,43 +1656,42 @@
 				MAN = {
 					is_puppet_of = CHI
 				}
-			}
+			    }
+
 			annex_country = {
 				target = MAN
-				transfer_troops = yes
+				transfer_troops = no
 				}
+			}
+			MAN = {
+				every_unit_leader = {
+					set_nationality = CHI
+				}
+			}
+			every_state = {
+				limit = { is_core_of = MAN }
+				add_core_of = ROOT
 			}
 			if = {
 				limit = {
 				MON = {
 					is_puppet_of = CHI
 				}
-			}
+			    }
 			annex_country = {
 				target = MON
 				transfer_troops = yes
 				}
-				add_state_core = 817
-				add_state_core = 330
-				add_state_core = 819
-				add_state_core = 886
-				add_state_core = 820
-				add_state_core = 818
-				add_state_core = 329
-				add_state_core = 885
 			}
-			add_state_core = 758
-			add_state_core = 322
-			add_state_core = 757
-			add_state_core = 604
-			add_state_core = 601
-			add_state_core = 408
-			add_state_core = 857
-			add_state_core = 409
-			add_state_core = 657
-			add_state_core = 560
-			add_state_core = 655
-			add_state_core = 537
+			MON = {
+				every_unit_leader = {
+					set_nationality = CHI
+				}
+			}
+			every_state = {
+				limit = { is_core_of = MON }
+				add_core_of = ROOT
+			}
 		}
 	}
 

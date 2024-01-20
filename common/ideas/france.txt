@@ -1,6 +1,15 @@
 ideas = {
 
 	country = {
+		
+		FRA_discus_soviet = {
+			picture = fourth_international
+			removal_cost = -1
+			modifier = {
+				political_advisor_cost_factor = -0.5
+				political_power_gain = 0.25
+			}
+		}
 		FRA_la_KAKUMEI = {
 			picture = generic_victors_of_ww1
 			removal_cost = -1
