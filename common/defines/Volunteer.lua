@@ -11,7 +11,6 @@ NDefines.NDiplomacy.TENSION_VOLUNTEER_FORCE_DIVISION = 0		-- Amount of tension g
 NDefines.NCountry.STARTING_COMMAND_POWER = 60.0					-- starting command power for every country
 NDefines.NCountry.BASE_MAX_COMMAND_POWER = 999.0					-- base value for maximum command power
 NDefines.NCountry.BASE_COMMAND_POWER_GAIN = 1.5	
-NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 0.85				-- base value for daily command power gain
 NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN = 2
 NDefines.NSupply.CAPITAL_INITIAL_SUPPLY_FLOW = 8.0 -- 5.0
 NDefines.NSupply.CAPITAL_STARTING_PENALTY_PER_PROVINCE = 0.5 -- 0.5
@@ -50,7 +49,7 @@ NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = -1				-- how many armies a field m
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 10.0		-- armies gets increased cap when they are garrisoned
 
 NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.75
-NDefines.NBuildings.MAX_BUILDING_LEVELS = 35
+NDefines.NBuildings.MAX_BUILDING_LEVELS = 50
 NDefines.NBuildings.MAX_SHARED_SLOTS = 50
 NDefines.NGame.GAME_SPEED_SECONDS = { 0.5, 0.25, 0.15, 0.1, 0.0 }
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 1000

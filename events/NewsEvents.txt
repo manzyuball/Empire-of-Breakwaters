@@ -163,6 +163,7 @@ news_event = {
 	picture = GFX_news_event_020
 	major = yes
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = news.7.a
 		trigger = {
@@ -173,9 +174,6 @@ news_event = {
 				}
 			}
 		}
-		hidden_effect = {
-			clr_global_flag = NitieiPact
-		}
 	}
 	option = {
 		name = news.7.b
@@ -184,12 +182,8 @@ news_event = {
 				TAG = JAP 
 				TAG = ENG
 			}
-
-			}
-			hidden_effect = {
-				clr_global_flag = NitieiPact
-			}
 		}
+	}
 }
 #ヒトラー氏当選
 news_event = { 
@@ -249,6 +243,7 @@ news_event = {
 	picture = GFX_news_event_saf_soldiers_3
 	major = yes
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = news.10.a
 		trigger = {
@@ -261,6 +256,9 @@ news_event = {
 				}
 			}
 		}
+		hidden_effect = {
+			play_song = "Marching_geogia"
+		}
 	}
 	option = {
 		name = news.10.b
@@ -270,8 +268,11 @@ news_event = {
 				TAG = USB
 				TAG = CSA
 				TAG = USA	
+			}
 		}
-	}
+		hidden_effect = {
+			play_song = "Marching_geogia"
+		}
 	}
 }
  #アメリカ内戦延長戦
@@ -361,5 +362,90 @@ news_event = {  #ブルガリア併合
 	is_triggered_only = yes
 	option = {
 		name = news.13.a
+	}
+}
+news_event = {  #アメリカ参戦
+	id = news.14
+	title = news.14.t
+	fire_only_once = yes
+	desc = news.14.d
+	picture = GFX_news_event_016
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.14.a
+		hidden_effect = {
+			play_song = "America_civil_war"
+		}
+	}
+}
+news_event = {  #日中戦争
+id = news.15
+title = news.15.t
+desc = news.15.d
+fire_only_once = yes
+picture = GFX_news_event_016
+major = yes
+is_triggered_only = yes
+option = {
+	name = news.15.a
+	hidden_effect = {
+		play_song = "JA_CH_WAR"
+	}
+}
+}
+news_event = {  #インターの中央攻め
+	id = news.16
+	title = news.16.t
+	fire_only_once = yes
+	hidden = yes
+	desc = news.16.d
+	picture = GFX_news_event_016
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.16.a
+		hidden_effect = {
+			play_song = "Berioz_war"
+		}
+	}
+}
+
+news_event = {  #北方戦争
+	id = news.17
+	title = news.17.t
+	fire_only_once = yes
+	desc = news.17.d
+	picture = GFX_news_event_016
+	hidden = yes
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.17.a
+		
+	}
+	immediate = {
+		hidden_effect = {
+			play_song = "Russ_War"
+		}
+	}
+}
+news_event = {  #インターの連合攻め
+	id = news.18
+	title = news.18.t
+	desc = news.18.d
+	hidden = yes
+	fire_only_once = yes
+	picture = GFX_news_event_016
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.18.a
+		
+	}
+	immediate = {
+		hidden_effect = {
+			play_song = "WW2"
+		}
 	}
 }

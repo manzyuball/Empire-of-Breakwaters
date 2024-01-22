@@ -261,6 +261,65 @@ on_actions = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					SOV = {
+						has_war_with = VLA
+					}
+				}
+					news_event = {
+						id = news.17
+					}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_war_with = ENG
+					}
+				}
+					news_event = {
+						id = news.18
+					}
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_war_with = AUS
+					}
+				}
+					news_event = {
+						id = news.16
+					}
+			}
+		if = {
+			limit = {
+				CSA = {
+					has_war = yes
+					has_completed_focus = CSA_Over_there
+				}
+			}
+			every_country = {
+				news_event = {
+					id = news.14
+					days = 1
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				CHI = {
+					has_war_with = JAP
+				}
+			}
+			every_country = {
+				news_event = {
+					id = news.15
+					days = 1
+				}
+			}
+		}
+
 		}
 	}
 

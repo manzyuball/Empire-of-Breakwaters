@@ -24,36 +24,37 @@ ENG_historical_plan = {
 			}
 		}
 	}
-	abort = {
-		GER = {
-			has_completed_focus = GER_oppose_hitler
-		}
-	}
 
 	ai_national_focuses = {
-		uk_b1 #February 20 1938	
-		uk_b2 #April 30 1938
-		uk_b5 #July 10 1938
-		uk_b56#September 20 1938
 		uk_fu #March 10 1936	
 		uk_fu2 #May 20 1936	
 		uk_fu21 #July 30 1936
 		uk_fu23 #October 10 1936
 		uk_fu22 #October 10 1936	
 		uk_fu24 #December 20 1936
-		uk_fu25 #February 30 1937
-		uk_fu26  #May 10 1937	
-		uk_fu1  #July 20 1937
-		uk_fu13 #September 30 1937	
-		uk_fu14 #December 10 1937
-		uk_b57 #November 30 1938
-		uk_b58 #February 10 1939
-		uk_b59 #April 20 1939
-		uk_b60#June 30 1939
-		uk_b3#September 10 1939
-		uk_b31 #November 20 1939
-		uk_b32 #January 30 1940
-		uk_b38 #April 10 1940
+		ENG_Democratic_Defend_democracy #February 30 1937
+		ENG_Isle_of_Liberty  #May 10 1937	
+		ENG_Compromise_to_economic_liberals #July 20 1937
+		ENG_Behavioural_Government #September 30 1937	
+		ENG_Integration_of_the_imperial_economy #December 10 1937
+		ENG_Federal_reunification #November 30 1938
+		uk_empire_focus  #February 10 1939
+		uk_service_focus  #April 20 1939
+		uk_colonial_focus  #June 30 1939
+		uk_commonwealth_focus #September 10 1939
+		uk_india_focus  #November 20 1939
+		uk_australia_focus  #January 30 1940
+		uk_new_zealand_focus  #April 10 1940
+		uk_canada_focus 
+		ENG_Raise_the_King
+		uk_fu25
+		uk_fu26
+		uk_fu14
+		uk_fu15
+		ENG_Concentration_on_the_mainland
+		ENG_Fort_Britain_Island
+		ENG_Evacuation_from_abroad
+		ENG_development_of_the_mainland
 		uk_gu #June 20 1940	
 		uk_gu4 #August 30 1940
 		uk_gu42 #November 10 1940

@@ -15,6 +15,12 @@ generic_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 
 	}
 
@@ -243,6 +249,12 @@ generic_infantry_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_3
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -513,6 +525,12 @@ generic_mobile_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_3
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -734,6 +752,12 @@ generic_medium_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_2
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -971,6 +995,12 @@ generic_heavy_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_3
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -1222,6 +1252,12 @@ generic_tank_refurbishment_plant_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_3
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -1514,6 +1550,12 @@ generic_task_force_ship_organization = {
 	icon = GFX_idea_generic_naval_manufacturer_1
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -1774,6 +1816,12 @@ generic_battle_line_ship_organization = {
 	icon = GFX_idea_generic_naval_manufacturer_2
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -2037,6 +2085,12 @@ generic_escort_ship_organization = {
 	icon = GFX_idea_generic_naval_manufacturer_1
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CAN tag = SWE tag = HUN tag = CZE tag = ROM tag = YUG tag = POR tag = GRE tag = TUR tag = LAT tag = EST } }
 		NOT = { OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD } }
 		NOT = {
@@ -2297,6 +2351,12 @@ generic_raider_ship_organization = {
 	icon = GFX_idea_generic_naval_manufacturer_3
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		AND = {
 			has_dlc = "Arms Against Tyranny"
 			original_tag = ICE
@@ -2600,6 +2660,12 @@ generic_submarine_organization = {
 	icon = GFX_idea_generic_naval_manufacturer_1
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -2926,6 +2992,12 @@ generic_black_sea_fleet_organization = {
 	icon = GFX_idea_generic_naval_manufacturer_2
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -3235,6 +3307,12 @@ generic_refurbishment_repair_organization = {
 	icon = GFX_idea_generic_naval_manufacturer_1
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -3517,6 +3595,12 @@ generic_general_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CAN tag = YUG tag = ROM tag = CZE tag = HUN tag = CHI tag = MAN tag = HOL tag = BUL tag = GRE tag = TUR tag = LAT tag = LIT } }
 		NOT = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
 		NOT = {
@@ -3828,6 +3912,12 @@ generic_light_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -4165,6 +4255,12 @@ generic_medium_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_3
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -4488,6 +4584,12 @@ generic_heavy_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_2
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -4783,6 +4885,12 @@ generic_cas_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -5040,6 +5148,12 @@ generic_naval_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -5314,6 +5428,12 @@ generic_multi_role_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_3
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -5666,6 +5786,12 @@ generic_high_agility_fighter_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -5942,6 +6068,12 @@ generic_range_focused_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 		
 	}
 
@@ -6276,6 +6408,12 @@ generic_artillery_organization = {
 	icon = GFX_idea_generic_artillery_manufacturer_2
 
 	allowed = {
+		NOT ={
+			OR = {
+				tag = FRA
+				tag = JAP 
+			}
+		}
 	}
 
 	equipment_type = {
@@ -6586,6 +6724,11 @@ generic_infantry_equipment_organization = {
 	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
 
 	allowed = {
+		NOT ={
+		OR = {
+			tag = FRA
+			tag = JAP
+		}}
 		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CZE tag = HUN tag = YUG tag = ROM tag = MEX tag = TUR tag = EST } }
 		NOT = {
 			AND = {
@@ -6933,6 +7076,11 @@ generic_support_equipment_organization = {
 	icon = GFX_idea_generic_infantry_equipment_manufacturer_1
 
 	allowed = {
+		NOT ={
+		OR = {
+			tag = FRA
+			tag = JAP
+		}}
 		
 	}
 
@@ -7201,6 +7349,11 @@ generic_motorized_mechanized_organization = {
 	icon = GFX_idea_generic_motorized_equipment_manufacturer_3
 
 	allowed = {
+		NOT ={
+		OR = {
+			tag = FRA
+			tag = JAP
+		}}
 		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CZE tag = ROM tag = MEX } }
 		NOT = {
 			AND = {
@@ -7566,6 +7719,11 @@ generic_armored_car_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
 
 	allowed = {
+		NOT ={
+		OR = {
+			tag = FRA
+			tag = JAP
+		}}
 		
 		has_dlc = "La Resistance"
 	}

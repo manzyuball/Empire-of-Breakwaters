@@ -272,7 +272,7 @@ focus_tree = {
 		x = -1
 		y =2
 		cost = 10
-        prerequisite = { focus = Defence_by_the_elite }
+        prerequisite = { focus = rigorous_training }
 		relative_position_id = Defence_by_the_elite	
 		completion_reward = {
 			swap_ideas = {

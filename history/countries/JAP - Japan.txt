@@ -15,8 +15,9 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
-	SyouwaKyoukou
 	KaihatuKeikaku
+	SyouwaKyoukou
+	
 }
 
 set_autonomy = {

@@ -7,6 +7,6 @@ JAP_bouhatei = {
 JAP_Zyouriku = {
 	icon = infiltration
 	allowed = {
-		original_tag = JAP
+		always = no
 	}
 }

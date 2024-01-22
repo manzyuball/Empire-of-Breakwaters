@@ -1,7 +1,21 @@
 ideas = {
 
 	country = {
-
+		ENG_Fort_Britain_Island_idea = {
+			picture = hol_caved_to_the_british
+			modifier = {
+				production_speed_coastal_bunker_factor = 0.25
+				coastal_bunker_effectiveness_factor = 0.25
+				static_anti_air_damage_factor = 0.2
+				static_anti_air_hit_chance_factor = 0.2
+			}		
+		}
+		ENG_subject_ideas_reunification = {
+			picture = eng_the_sun_never_sets
+			modifier = {
+				political_power_gain = 0.25
+			}
+		}
 		ENG_Zyouriku_ideas = { 
 			name = ENG_Zyouriku_ideas
 			picture = generic_coastal_defense_ships
@@ -17,7 +31,7 @@ ideas = {
 			picture = generic_industrial_concern_1
 			modifier = {
 				production_speed_buildings_factor = 0.2
-				production_speed_industrial_complex_factor = 1
+				production_speed_industrial_complex_factor = 0.1
 			}
 		}
 		ENG_republic = {
@@ -220,7 +234,38 @@ ideas = {
 				MONTHLY_POPULATION = 0.1
 			}
 		}
+		ENG_the_sun_never_sets_idea = {
 
+			name = ENG_the_sun_never_sets
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				screen_ship = {
+					naval_speed = 0.1 naval_range = 0.25
+				}
+				carrier = {
+					naval_speed = 0.1 naval_range = 0.25
+				}
+				capital_ship = {
+					naval_speed = 0.1 naval_range = 0.25
+				}
+				submarine = {
+					naval_speed = 0.1 naval_range = 0.25
+				}
+			}
+
+			picture = eng_the_sun_never_sets
+			
+			removal_cost = -1	
+
+		}
 		george_v = {
 			
 			allowed = {

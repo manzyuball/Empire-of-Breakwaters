@@ -15,3 +15,13 @@ music = {
 	file = "WW2.ogg"
 	volume = 1.35
 }
+music = {
+	name = "Berioz_war"
+	file = "Berioz_war.ogg"
+	volume = 1.35
+}
+music = {
+	name = "Marching_geogia"
+	file = "Marching_geogia.ogg"
+	volume = 1.35
+}

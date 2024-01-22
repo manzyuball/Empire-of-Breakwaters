@@ -79,18 +79,35 @@ set_politics = {
 	elections_allowed = yes ##suspended through duration of war, which is handled via event
 }
 set_popularities = {
-	democratic = 97
-	fascism = 2
-	communism = 1
+	democratic = 75
+	fascism = 5
+	communism = 20
 }
 
-create_faction = Allies
+create_faction = "日英同盟"
 add_to_faction = ENG
 add_to_faction = SAR
+add_to_faction = JAP
 add_to_faction = CAN
 add_to_faction = AST
 add_to_faction = NZL
 add_to_faction = SAF
+TUR = {
+	give_military_access = ENG
+	give_resource_rights = { receiver = ENG state = 291 }
+}
+
+TUN = {
+	give_military_access = ENG
+
+}
+PER = {
+	give_military_access = ENG
+	give_resource_rights = { receiver = ENG state = 1019 }
+	give_resource_rights = { receiver = ENG state = 1020 }
+    give_resource_rights = { receiver = ENG state = 413 }
+}
+
 give_military_access = TUR
 give_military_access = TUN
 add_to_faction = RAJ
@@ -99,6 +116,9 @@ add_to_faction = SPM
 add_to_faction = RAJ
 give_guarantee = OMA
 give_guarantee = JAP
+JAP = {
+	give_guarantee = ENG
+}
 give_guarantee = TZN
 
 

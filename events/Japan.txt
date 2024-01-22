@@ -85,6 +85,7 @@ country_event = {
 			add_resistance_target = -20
 			add_compliance = 5
 		}
+		set_country_flag = JAP_Korean_goverment
 	}
 }
 country_event = {
@@ -103,6 +104,7 @@ country_event = {
 			add_resistance_target = -50
 			add_compliance = -30
 		}
+		set_country_flag = JAP_Korean_annex
 	}
 }
 
@@ -125,8 +127,9 @@ country_event = {
 		add_tech_bonus = {
 			name = JAP_strategic_bomber_effort
 			bonus = 2.0
-			uses = 1
-			category = cat_strategic_bomber	
+			ahead_reduction = 2
+			uses = 3
+			category = air_equipment
 		}
 	}
 }
@@ -314,6 +317,111 @@ country_event = {
 			progress = 0.75
 			amount = 1
 			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_carrier_2
+				creator = "JAP" 
+				version_name = "翔鶴型航空母艦"
+			}
+			name = "翔鶴" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
+		}
+	}
+	option = {
+		name = japan.7.d
+		add_political_power = -100
+		set_technology = {
+			improved_heavy_shell = 1
+			improved_ship_hull_heavy = 1
+			improved_ship_hull_carrier = 1
+			basic_heavy_armor_scheme = 1
+			improved_heavy_armor_scheme = 1
+		}
+		create_equipment_variant = {
+			name = "翔鶴型航空母艦"
+			type = ship_hull_carrier_2
+			parent_version = 1
+			modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = carrier_ship_engine_3
+					front_1_custom_slot = ship_deck_space
+					mid_1_custom_slot = ship_deck_space
+					mid_2_custom_slot = ship_deck_space
+					fixed_ship_armor_slot = ship_armor_cruiser_4
+			}
+		}
+		create_equipment_variant = {
+			name = "大和型戦艦"
+			type = ship_hull_heavy_3
+			parent_version = 1
+			modules = {
+				    fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = heavy_ship_engine_3
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = ship_anti_air_2
+					mid_2_custom_slot = ship_anti_air_2
+					mid_3_custom_slot = ship_airplane_launcher_2
+					rear_1_custom_slot = ship_airplane_launcher_2
+			}
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
+			}
+			name = "大和" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_kure_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
+			}
+			name = "武蔵" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
+			}
+			name = "信濃" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_carrier_2
+				creator = "JAP" 
+				version_name = "翔鶴型航空母艦"
+			}
+			name = "瑞鶴" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
 		}
 		add_equipment_production = {
 			equipment = {

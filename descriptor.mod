@@ -5,7 +5,7 @@ tags={
 	"Alternative History"
 	"Gameplay"
 }
-name="EoB ~testplay.ver~"
+name="Empire of Breakwaters"
 dependencies={
 	"Japanese Language mod"
 }

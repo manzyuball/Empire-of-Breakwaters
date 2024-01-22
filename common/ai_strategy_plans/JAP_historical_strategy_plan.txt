@@ -24,21 +24,24 @@ JAP_historical_plan = {
 		JAP_NITIEI4 #October 10 1936	
 		JAP_NITIEI9 #December 20 1936	
 		#1937
-		JAP_NITIEI5 #February 30 1937	
-		JAP_NITIEI10 #May 10 1937	
+		JAP_NITIEI10 #February 30 1937	
+		JAP_NITIEI5 #May 10 1937	
 		JAP_NITIEI6 #July 20 1937	
 		JAP_NITIEI7 #September 30 1937	
 		JAP_NITIEI8 #December 10 1937	
 		#1938
-		JAP_NITIEI15 #February 20 1938	
-		JAP_NITIEI22 #April 30 1938	
-		JAP_NITIEI11 #July 10 1938	
-		JAP_NITIEI12 #September 20 1938	
-		JAP_NITIEI13 #August 10 1942	
+		JAP_NITIEI11 #February 20 1938	
+		JAP_NAVY_shipbuilding_project #April 30 1938	
+		JAP_NAVY_near_sea_emphasis #July 10 1938	
+		JAP_NAVY_Focus_on_larger_vessels #September 20 1938	
+		JAP_NAVY_Battleship_and_carrier_focus #August 10 1942	
 		#1939
-		JAP_NITIEI31 #October 20 1942	
-		JAP_NITIEI32 #June 30 1939	
-		JAP_NITIEI33 #November 30 1938
+		JAP_ARMY_Reform_of_the_Japanese_Army #October 20 1942	
+		JAP_ARMY_Centralisation_of_structures #June 30 1939	
+		JAP_ARMY_Armoured_forces_research #November 30 1938
+		JAP_NITIEI31
+		JAP_NITIEI32
+		JAP_NITIEI33
 	}
 
 	research = {
