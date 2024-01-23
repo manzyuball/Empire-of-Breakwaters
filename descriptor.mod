@@ -9,7 +9,11 @@ name="Empire of Breakwaters"
 dependencies={
 	"Japanese Language mod"
 }
+replace_path="common/scripted_effects"
+replace_path="common/national_focus"
+replace_path="common/decisions"
 replace_path="history/states"
+replace_path="events"
 replace_path="map/strategicregions"
 replace_path="map/terrain"
 replace_path="gfx/loadingscreens"

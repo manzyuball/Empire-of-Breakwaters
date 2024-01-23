@@ -1,10 +1,19 @@
 spriteTypes = {	
 	SpriteType = {
-		name = GFX_DISCORD_EOB
+		name = "GFX_DISCORD_EOB"
 		texturefile = "gfx/Discord.png"
 	}
 	SpriteType = {
-		name = GFX_National_introduction_France
+		name = "GFX_National_introduction_France"
 		texturefile = "gfx/interface/National_introduction_France.png"
 	}
+	spriteType = {
+		name = "GFX_trade_bg_a"
+		texturefile = "gfx/interface/tradeview/trade_bg_a.png"
+	}
+	spriteType = {
+		name = "GFX_trade_resource_bg_2"
+		texturefile = "gfx/interface/tradeview/trade_resource_bg_2.png"
+	}
+
 }
