@@ -5,7 +5,9 @@ state={
 	manpower = 980533
 	
 	state_category = pastoral
-
+	resources = {
+		COAL = 32
+	}
 	history={
 		owner = VLA
 		add_core_of = KAZ
