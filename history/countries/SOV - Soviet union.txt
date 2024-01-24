@@ -18,7 +18,6 @@ set_party_name = {
 
 #COUNTRY LEADERS
 recruit_character = SOV_BUHA
-recruit_character = SOV_supreme_soviet #This is a fake character! Proper country leader role is added via focus
 if = {
 	limit = {
 		has_dlc = "No Step Back"
@@ -40,26 +39,26 @@ recruit_character = SOV_mikhail_kalinin
 recruit_character = SOV_nikita_khrushchyov
 recruit_character = SOV_nikolay_voznesensky
 recruit_character = SOV_lazar_kaganovich
-recruit_character = SOV_genrikh_yagoda
-recruit_character = SOV_nikolay_yezhov
-recruit_character = SOV_lavrenty_beriya
+#recruit_character = SOV_genrikh_yagoda
+#recruit_character = SOV_nikolay_yezhov
+#recruit_character = SOV_lavrenty_beriya
 recruit_character = SOV_vsevolod_merkulov
 recruit_character = SOV_vyacheslav_molotov
 recruit_character = SOV_maksim_litvinov
 
-recruit_character = SOV_lev_trotsky
-recruit_character = SOV_ivan_smirnov
-recruit_character = SOV_ivar_smilga
+#recruit_character = SOV_lev_trotsky
+#recruit_character = SOV_ivan_smirnov
+#recruit_character = SOV_ivar_smilga
 recruit_character = SOV_karl_radek
 recruit_character = SOV_yevgeny_preobrazhensky
-recruit_character = SOV_aleksandr_shlyapnikov
-recruit_character = SOV_nikolay_bukharin
+#recruit_character = SOV_aleksandr_shlyapnikov
+#recruit_character = SOV_nikolay_bukharin
 recruit_character = SOV_aleksey_rykov
 recruit_character = SOV_mikhail_tomsky
 recruit_character = SOV_grigory_sokolnikov
-recruit_character = SOV_grigory_zinovyev
-recruit_character = SOV_lev_kamenev
-recruit_character = SOV_martemyan_ryutin
+#recruit_character = SOV_grigory_zinovyev
+#recruit_character = SOV_lev_kamenev
+#recruit_character = SOV_martemyan_ryutin
 recruit_character = SOV_patriarch_sergy
 recruit_character = SOV_aleksandr_kerensky
 recruit_character = SOV_konstantin_rodzayevsky
@@ -144,7 +143,7 @@ if = {
 	# recruit_character = SOV_grigory_semyonov # starts as an advisor to Puyi
 	recruit_character = SOV_metropolitan_anastasy
 	recruit_character = SOV_metropolitan_nikolay
-	recruit_character = SOV_nikolay_ustryalov
+	#recruit_character = SOV_nikolay_ustryalov
 	recruit_character = SOV_aleksandr_kazembek
 	recruit_character = SOV_metropolitan_aleksy
 	recruit_character = SOV_aleksandr_prokofyev_seversky
@@ -168,30 +167,10 @@ set_research_slots = 5
 set_stability = 0.5
 set_war_support = 0.4
 
-set_variable = {
-	var = SOV.RED_ARMY_BAD_POINT
-	value = 10
-}
-set_variable = {
-	var = SOV.RED_ARMY_RELATED_POINT
-	value = 100
-}
-set_variable = {
-	var = SOV.FARM_POINT
-	value = 100
-}
-set_variable = {
-	var = SOV.BAD_LERDER_POINT
-	value = 10
-}
-set_variable = {
-	var = SOV.real_good_country_point
-	value = 5
-}
-
 add_ideas = {	
 	SOV_soviet_FACTORY
 	SOV_politics_civilwar1 
+	SOV_No_adviser_idea
 	}
 	if = {
 		limit = {

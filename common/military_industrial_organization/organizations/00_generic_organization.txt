@@ -756,6 +756,7 @@ generic_medium_tank_organization = {
 			OR = {
 				tag = FRA
 				tag = JAP 
+				tag = SOV
 			}
 		}
 		

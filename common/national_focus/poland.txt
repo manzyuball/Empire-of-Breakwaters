@@ -72,6 +72,7 @@ focus = {
 	available_if_capitulated = no
 	complete_tooltip = { }
 	completion_reward = {
+		army_experience = 125
 	}
 }
 focus = {
@@ -141,8 +142,12 @@ focus = {
 	complete_tooltip = { }
 	completion_reward = {
 		set_major = yes
-		activate_decision = POL_KAKUDAI
-		custom_effect_tooltip = POL_KAKUDAI_D
+	every_state = {
+		limit = {
+			is_core_of = LIT
+		}
+		add_claim_by = POL
+	}
 		hidden_effect = {
 			AUS = { add_to_faction = POL }
 		}
@@ -153,7 +158,7 @@ focus = {
 	icon = "GFX_focus_proclaim_the_restauration_of_Austria_Hungary"
 	prerequisite = { focus =  POL_S6 }
 	#mutually_exclusive = { focus =  }
-	x = 2
+	x = 1
 	y = 5
 	relative_position_id = POL_S4
 	cost = 10
@@ -169,11 +174,11 @@ focus = {
 	}
 }
 focus = {
-	id = POL_S8
-	icon = "GFX_focus_SOV_panslavic_nationalism"
+	id = POL_S9
+	icon = "GFX_focus_ger_oppose_hitler"
 	prerequisite = { focus =  POL_S6 }
 	#mutually_exclusive = { focus =  }
-	x = 0
+	x = -1
 	y = 4
 	relative_position_id = POL_S4
 	cost = 10
@@ -185,50 +190,16 @@ focus = {
 	available_if_capitulated = no
 	complete_tooltip = { }
 	completion_reward = {
-	}
-}
-focus = {
-	id = POL_S9
-	icon = "GFX_focus_ger_oppose_hitler"
-	prerequisite = { focus =  POL_S6 }
-	#mutually_exclusive = { focus =  }
-	x = -2
-	y = 5
-	relative_position_id = POL_S4
-	cost = 10
-	ai_will_do = { factor = 1 }
-	available = { }
-	bypass = { }
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-	complete_tooltip = { }
-	completion_reward = {
-	}
-}
-focus = {
-	id = POL_S10
-	icon = "GFX_focus_SOV_zemsky_sobor"
-	prerequisite = { focus =  POL_S8 }
-	#mutually_exclusive = { focus =  }
-	x = 0
-	y = 5
-	relative_position_id = POL_S4
-	cost = 10
-	ai_will_do = { factor = 1 }
-	available = { }
-	bypass = { }
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-	complete_tooltip = { }
-	completion_reward = {
+		add_offsite_building = {
+			type = arms_factory
+			level = 4
+		}
 	}
 }
 focus = {
 	id = POL_S11
 	icon = "GFX_focus_ger_great_red_menace"
-	prerequisite = { focus =  POL_S10 focus =  POL_S9 focus =  POL_S7 }
+	prerequisite = {  focus =  POL_S9 focus =  POL_S7 }
 	#mutually_exclusive = { focus =  }
 	x = 0
 	y = 6
@@ -263,6 +234,7 @@ focus = {
 	complete_tooltip = { }
 	completion_reward = {
 		set_global_flag = AUS_ENG_POL_KOUWA
+		add_political_power = 175
 	}
 }
 focus = {
@@ -282,8 +254,18 @@ focus = {
 	available_if_capitulated = no
 	complete_tooltip = { }
 	completion_reward = {
-		add_stability = 0.15
-		add_war_support = 0.15
+		every_state = {
+			limit = {
+				is_core_of = UKR
+			}
+			add_claim_by = POL
+		}
+		every_state = {
+			limit = {
+				is_core_of = BLR
+			}
+			add_claim_by = POL
+		}
 	}
 }
 focus = {
@@ -312,7 +294,7 @@ focus = {
 	icon = "GFX_focus_ger_return_of_the_kaiser"
 	prerequisite = { focus =  POL_S9 }
 	#mutually_exclusive = { focus =  }
-	x = 0
+	x = -1
 	y = 1
 	relative_position_id = POL_S9
 	cost = 10
@@ -324,12 +306,10 @@ focus = {
 	available_if_capitulated = no
 	complete_tooltip = { }
 	completion_reward = {
-	LAT = {
-		add_opinion_modifier = {
-			target = POL
-			modifier = kyuusekkinn
-			}
-	}
+		add_offsite_building = {
+			type = arms_factory
+			level = 4
+		}
 	}
 }
 focus = {
@@ -337,7 +317,7 @@ focus = {
 	icon ="GFX_focus_secret_rearmament"
 	prerequisite = { focus =  POL_GERMAN_1 }
 	#mutually_exclusive = { focus =  }
-	x = 0
+	x = -1
 	y = 2
 	relative_position_id = POL_S9
 	cost = 10
@@ -358,7 +338,7 @@ focus = {
 	icon = "GFX_focus_jap_newdeal2"
 	prerequisite = { focus =  POL_GERMAN_1 }
 	#mutually_exclusive = { focus =  }
-	x = -2
+	x = -3
 	y = 2
 	relative_position_id = POL_S9
 	cost = 10
@@ -450,7 +430,7 @@ focus = {
 	relative_position_id = POL_S4
 	cost = 10
 	ai_will_do = { factor = 1 }
-	available = { random_owned_controlled_state = {is_coastal = yes } }
+	available = { }
 	bypass = { }
 	cancel_if_invalid = yes
 	continue_if_invalid = no

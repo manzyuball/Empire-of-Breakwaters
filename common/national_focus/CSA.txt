@@ -28,7 +28,10 @@
 		bypass = {
 		}
 		completion_reward = {
-			add_threat = 5
+	country_event = {
+		id = CSA.1
+		days = 5
+	}
 		}
 	}
 	focus = {

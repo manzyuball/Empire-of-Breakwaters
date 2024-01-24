@@ -421,8 +421,7 @@ news_event = {  #北方戦争
 	major = yes
 	is_triggered_only = yes
 	option = {
-		name = news.17.a
-		
+		name = news.17.a	
 	}
 	immediate = {
 		hidden_effect = {

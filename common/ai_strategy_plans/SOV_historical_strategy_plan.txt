@@ -14,7 +14,6 @@ SOV_historical_plan = {
 					option = DEFAULT
 				}
 			}
-			has_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL
 			has_game_rule = {
 				rule = SOV_ai_behavior
 				option = HISTORICAL
@@ -24,8 +23,42 @@ SOV_historical_plan = {
 	abort = {
 		is_subject = yes
 	}
-
 	ai_national_focuses = {
+		# grab as fast as you can if available
+		SOV_NATIONAL_FORCUS
+
+		SOV_POLITICS_1
+		SOV_POLITICS_10
+		SOV_FACTRY_1
+		SOV_FACTRY_2
+		SOV_FACTRY_3
+		SOV_FACTRY_4
+		SOV_FACTRY_6
+		SOV_FACTRY_5
+		SOV_FACTRY_7
+		SOV_POLITICS_12
+		SOV_POLITICS_14
+		SOV_ARMY_1
+		SOV_ARMY_9
+		SOV_ARMY_10
+		SOV_ARMY_11
+		#1937
+		SOV_FACTRY_6
+		SOV_FACTRY_8
+		SOV_FACTRY_9
+		SOV_FACTRY_10
+		SOV_POLITICS_15
+		SOV_POLITICS_16
+		SOV_POLITICS_18
+		#1938
+		SOV_ARMY_12
+		SOV_ARMY_3
+		SOV_ARMY_4
+		SOV_ARMY_5
+		SOV_ARMY_8
+		SOV_ARMY_16
+		SOV_ARMY_21
+		SOV_ARMY_22
 	}
 
 	research = {

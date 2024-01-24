@@ -1,0 +1,28 @@
+SOV_T34_organization = {
+	include = generic_medium_tank_organization 
+	icon = GFX_idea_morozov_design_bureau
+	
+	allowed = {	
+	tag = SOV
+	}
+
+	visible = {
+	}
+	initial_trait = {
+		name = SOV_T34_mio_initial_trait_medium_tank_designer
+
+		organization_modifier = {
+		}
+		equipment_bonus = {
+		}
+		production_bonus = {
+			production_capacity_factor = 0.15
+
+		}
+	}
+	available = {
+		SOV = {
+			has_completed_focus = SOV_ARMY_11
+		}
+	}
+}

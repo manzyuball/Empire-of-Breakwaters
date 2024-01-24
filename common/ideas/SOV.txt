@@ -3,18 +3,50 @@ ideas = {
 	country = {
 
 		#初期アイデア
-		SOV_soviet_FACTORY = {  #市場経済での成功
+		SOV_No_adviser_idea = {  #脆弱なソビエト産業
+		allowed = {
+			always = no
+		}
+		removal_cost = -1
+		picture = generic_neutrality_drift_bonus
+		modifier = {
+			disabled_ideas = 1
+		}
+	}	
+		SOV_soviet_FACTORY = {  #脆弱なソビエト産業
 			allowed = {
 				always = no
 			}
 			removal_cost = -1
-			picture = can_wartime_prices_and_trade_board
+			picture = SOV_factionalism_modifier
 			modifier = {
-				production_factory_max_efficiency_factor = 0.05
-				industrial_capacity_factory = 0.05
-				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = -0.25
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.05
 			}
 		}		
+		SOV_soviet_FACTORY1 = {  #脆弱なソビエト産業
+		allowed = {
+			always = no
+		}
+		removal_cost = -1
+		picture = SOV_factionalism_modifier
+		modifier = {
+			production_factory_max_efficiency_factor = -0.2
+			industrial_capacity_factory = -0.1
+		}
+	}	
+	SOV_soviet_FACTORY2 = {  #脆弱なソビエト産業
+	allowed = {
+		always = no
+	}
+	removal_cost = -1
+	picture = SOV_factionalism_modifier
+	modifier = {
+		production_factory_max_efficiency_factor = -0.1
+		industrial_capacity_factory = -0.05
+	}
+}	
 		SOV_politics_civilwar1 = {  #政治的準内戦
 		allowed = {
 			always = no
@@ -231,6 +263,31 @@ ideas = {
 	army_core_defence_factor = 0.1
 	}
     }
+	SOV_planning_skill = {
+		removal_cost = -1
+		picture = socialist_science_focus
+		modifier = {
+			max_planning_factor = 0.15
+			planning_speed = -0.05
+		}
+	}
+
+	SOV_planning_skill2 = {
+		removal_cost = -1
+		picture = socialist_science_focus
+		modifier = {
+			max_planning_factor = 0.25
+			planning_speed = -0.1
+		}
+	}
+	SOV_planning_skill3 = {
+		removal_cost = -1
+		picture = socialist_science_focus
+		modifier = {
+			max_planning_factor = 0.35
+			planning_speed = -0.15
+		}
+	}
 	}
 		
 	tank_manufacturer = {
@@ -762,7 +819,9 @@ ideas = {
 
 			visible = {
 			}
-			
+			available = {
+				 has_completed_focus = SOV_POLITICS_16
+			}
 			research_bonus = {
 				industry = 0.25
 			}
@@ -770,7 +829,7 @@ ideas = {
 			traits = { industrial_concern }
 			
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.25
 			}
 		}
 		leningrad_polytechnical_institute_improved = {
@@ -802,18 +861,22 @@ ideas = {
 
 			allowed = {
 				original_TAG = SOV
-				
 			}
+			available = {
+				has_completed_focus = SOV_POLITICS_15
+			}
+
 			cost = 75
 
 			research_bonus = {
-				train_tech = 0.25
+				train_tech = 0.5
 			}
 			
 			traits = { railway_company }
 			
 			modifier = {
-				mobilization_speed = 0.05
+				army_speed_factor = 0.25
+				mobilization_speed = 0.25
 			}
 		}
 		SOV_gosproyektstroy_2_ger = {
@@ -825,7 +888,9 @@ ideas = {
 			allowed = {
 				original_tag = SOV
 			}
-
+			available = {
+			NOT = { has_completed_focus = SOV_POLITICS_16 }	
+			}
 			visible = {
 			}
 
@@ -834,7 +899,6 @@ ideas = {
 			traits = { construction_company }
 			
 			modifier = {
-				custom_modifier_tooltip = SOV_gosproyektstroy_1_tt
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
