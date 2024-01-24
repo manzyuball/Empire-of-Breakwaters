@@ -5,7 +5,9 @@ state={
 	manpower = 939067
 	
 	state_category = rural
-
+	resources = {
+		COAL = 24
+	}
 	history={
 		owner = SOV
 		victory_points = {
