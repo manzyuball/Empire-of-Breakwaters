@@ -1987,12 +1987,12 @@ SOV_ivan_yakubovsky = {
 				AND = {
 					tag = SOV
 					SOV_is_left_opposition = yes 
-					has_completed_focus = SOV_bring_old_trotskyists_back
+					# has_completed_focus = SOV_bring_old_trotskyists_back
 				}
 				AND = {
 					tag = SOV
 					SOV_is_right_opposition = yes 
-					has_completed_focus = SOV_cooperation_against_stalin 
+					# has_completed_focus = SOV_cooperation_against_stalin 
 				}
 				AND = {
 					SOV_is_exiles = yes 

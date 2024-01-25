@@ -1,7 +1,7 @@
 ﻿capital = 856
 
 oob = "AUS_1936"
-set_naval_oob = "AUS_1936_naval_mtg"
+#set_naval_oob = "AUS_1936_naval_mtg"
 
 set_research_slots = 5
 if = {

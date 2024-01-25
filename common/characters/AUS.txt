@@ -49,6 +49,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
+			idea_token = AUS_doruhusu
 			allowed  = {
 				has_country_flag = AUS_nazi
 				original_tag  = AUS

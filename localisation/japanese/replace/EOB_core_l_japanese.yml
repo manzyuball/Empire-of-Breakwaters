@@ -8,7 +8,7 @@
  LOAD_GFX_PDXMAP_TREES:0 "アマゾンに放火中"
  LOAD_GFX_PDXMAP_RIVERS:0 "黄河を死守中"
  LOAD_GFX_PDXMAP_STATIC_OBJECTS:0 "二重帝国を破壊中"
- LOAD_INIT:0 "ゲームを初期化中……"
+ LOAD_INIT:0 "革命を宣言中"
  LOAD_EVENTS:0 "レーションを生産中"
  FE_SELECT_SCENARIO:0 "シナリオ選択"
  FE_CHANGE_SCENARIO:0 "シナリオ変更"

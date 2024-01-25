@@ -1,7 +1,7 @@
 ﻿capital = 49
 
 	set_oob = "TUR_1936_nsb"
-	set_naval_oob = "TUR_1936_naval_mtg"
+	#set_naval_oob = "TUR_1936_naval_mtg"
 	set_air_oob = "TUR_1936_air_bba"
 ###################
 #### 3D MODELS ####
