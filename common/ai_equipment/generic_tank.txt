@@ -719,7 +719,7 @@ generic_medium_tanks = {
 			}
 			upgrades = {
 				tank_nsb_engine_upgrade = 6
-				tank_nsb_armor_upgrade = 5 {
+				tank_nsb_armor_upgrade =  {
 					base = 3
 					modifier = {
 						add = 2
@@ -787,7 +787,7 @@ generic_medium_tanks = {
 			}
 			upgrades = {
 				tank_nsb_engine_upgrade = 9
-				tank_nsb_armor_upgrade = 9 {
+				tank_nsb_armor_upgrade = {
 					base = 4
 					modifier = {
 						add = 3

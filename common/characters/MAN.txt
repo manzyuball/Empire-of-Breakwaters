@@ -368,7 +368,7 @@ characters={
 			visible = {
 				OR = {
 					has_idea = SOV_grigory_semyonov
-					has_completed_focus = SOV_approach_semyonov
+					# has_completed_focus = SOV_approach_semyonov
 				}
 			}
 		}

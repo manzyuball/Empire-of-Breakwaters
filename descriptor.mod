@@ -11,7 +11,11 @@ dependencies={
 }
 replace_path="common/scripted_effects"
 replace_path="common/national_focus"
+replace_path="common/ai_strategy"
+replace_path="common/decisions"
 replace_path="history/states"
+replace_path="history/countries"
+replace_path="history/units"
 replace_path="events"
 replace_path="map/strategicregions"
 replace_path="map/terrain"

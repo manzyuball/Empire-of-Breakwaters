@@ -1,7 +1,7 @@
 ﻿capital = 112
 
 oob = "POR_1936"
-		set_naval_oob = "POR_1936_naval_mtg"
+		#set_naval_oob = "POR_1936_naval_mtg"
 		set_air_oob = "POR_1936_air_bba"
 
 set_research_slots = 3

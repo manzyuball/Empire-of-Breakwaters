@@ -64,19 +64,19 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					has_completed_focus  = USA_suspend_the_presecution 
-					NOT  = {
-						focus_progress  = {
-							focus  = USA_neutrality_act 
-							progress > 0.000
-						}
-					}
-					NOT  = {
-						focus_progress  = {
-							focus  = USA_limited_intervention 
-							progress > 0.000
-						}
-					}
+					# has_completed_focus  = USA_suspend_the_presecution 
+					# NOT  = {
+					# 	focus_progress  = {
+					# 		focus  = USA_neutrality_act 
+					# 		progress > 0.000
+					# 	}
+					# }
+					# NOT  = {
+					# 	focus_progress  = {
+					# 		focus  = USA_limited_intervention 
+					# 		progress > 0.000
+					# 	}
+					# }
 					NOT  = {
 						has_autonomy_state  = autonomy_supervised_state
 					}
@@ -364,9 +364,9 @@ characters={
 			allowed = {
 				original_tag = USA
 			}
-			available = {
-				has_completed_focus = USA_war_plans_division
-			}
+			# available = {
+			# 	has_completed_focus = USA_war_plans_division
+			# }
 			traits = {
 				army_chief_planning_2
 			}
@@ -708,9 +708,9 @@ characters={
 			defense_skill = 1
 			planning_skill = 3
 			logistics_skill = 3
-			visible = { 
-				has_completed_focus = USA_intervention_in_asia 
-			}
+			# visible = { 
+			# 	has_completed_focus = USA_intervention_in_asia 
+			# }
 		}
 	}
 
@@ -1211,9 +1211,9 @@ characters={
 			allowed = {
 				original_tag = USA
 			}
-			available = {
-				has_completed_focus = USA_send_lindbergh_to_germany
-			}
+			# available = {
+			# 	has_completed_focus = USA_send_lindbergh_to_germany
+			# }
 			visible = {
 				has_dlc = "Man the Guns"
 			}
@@ -1365,12 +1365,12 @@ characters={
 				original_tag  = USA
 			}
 			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus  = USA_reach_out_to_the_ware_group 
-				}
+				# if  = {
+				# 	limit  = {
+				# 		has_dlc = "Man the Guns"
+				# 	}
+				# 	# has_completed_focus  = USA_reach_out_to_the_ware_group 
+				# }
 				NOT  = {
 					has_idea  = USA_henry_morgenthau 
 				}
@@ -1407,12 +1407,12 @@ characters={
 				original_tag  = USA
 			}
 			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus  = USA_reach_out_to_the_ware_group 
-				}
+				# if  = {
+				# 	limit  = {
+				# 		has_dlc = "Man the Guns"
+				# 	}
+				# 	has_completed_focus  = USA_reach_out_to_the_ware_group 
+				# }
 			}
 			visible  = {
 				has_dlc = "Man the Guns"
@@ -1446,12 +1446,12 @@ characters={
 				original_tag  = USA
 			}
 			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus  = USA_reach_out_to_the_ware_group 
-				}
+				# if  = {
+				# 	limit  = {
+				# 		has_dlc = "Man the Guns"
+				# 	}
+				# 	has_completed_focus  = USA_reach_out_to_the_ware_group 
+				# }
 			}
 			visible  = {
 				has_dlc = "Man the Guns"
@@ -1485,12 +1485,12 @@ characters={
 				original_tag  = USA
 			}
 			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus  = USA_america_first 
-				}
+				# if  = {
+				# 	limit  = {
+				# 		has_dlc = "Man the Guns"
+				# 	}
+				# 	has_completed_focus  = USA_america_first 
+				# }
 			}
 			visible  = {
 				has_dlc = "Man the Guns"
@@ -1526,12 +1526,12 @@ characters={
 				original_tag  = USA
 			}
 			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus  = USA_america_first 
-				}
+				# if  = {
+				# 	limit  = {
+				# 		has_dlc = "Man the Guns"
+				# 	}
+				# 	has_completed_focus  = USA_america_first 
+				# }
 			}
 			visible  = {
 				has_dlc = "Man the Guns"
@@ -1604,24 +1604,24 @@ characters={
 				original_tag  = USA
 			}
 			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus  = USA_america_first 
-					NOT  = {
-						focus_progress  = {
-							focus  = USA_neutrality_act 
-							progress > 0.000
-						}
-					}
-					NOT  = {
-						focus_progress  = {
-							focus  = USA_limited_intervention 
-							progress > 0.000
-						}
-					}
-				}
+				# if  = {
+				# 	limit  = {
+				# 		has_dlc = "Man the Guns"
+				# 	}
+				# 	has_completed_focus  = USA_america_first 
+				# 	NOT  = {
+				# 		focus_progress  = {
+				# 			focus  = USA_neutrality_act 
+				# 			progress > 0.000
+				# 		}
+				# 	}
+				# 	NOT  = {
+				# 		focus_progress  = {
+				# 			focus  = USA_limited_intervention 
+				# 			progress > 0.000
+				# 		}
+				# 	}
+				# }
 				if  = {
 					limit  = {
 						has_dlc = "Man the Guns"
@@ -1692,9 +1692,9 @@ characters={
 			allowed  = {
 				original_tag  = USA
 			}
-			available  = {
-				has_completed_focus  = USA_empower_the_huac 
-			}
+			# available  = {
+			# 	has_completed_focus  = USA_empower_the_huac 
+			# }
 			traits  = {
 				anti_communist_crusader 
 			}

@@ -166,7 +166,7 @@ generic_fighter = {
 
 generic_cas = {
 	category = air
-}
+
 
 	available_for = {}
 

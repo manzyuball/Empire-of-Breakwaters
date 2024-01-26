@@ -5,7 +5,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_National_introduction_France"
-		texturefile = "gfx/interface/National_introduction_France.png"
+		texturefile = "gfx/interface/National_introduction/National_introduction_France.png"
 	}
 	spriteType = {
 		name = "GFX_trade_bg_a"
@@ -15,5 +15,9 @@ spriteTypes = {
 		name = "GFX_trade_resource_bg_2"
 		texturefile = "gfx/interface/tradeview/trade_resource_bg_2.png"
 	}
-
+	spriteType = {
+		name = "GFX_buildings_strip"
+		textureFile = "gfx/interface/buildings/building_icon_strip.png"
+		noOfFrames = 21
+	}
 }

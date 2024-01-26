@@ -1,7 +1,7 @@
 ﻿capital = 613
 
 oob = "CHI_1936"
-set_naval_oob = "CHI_1936_naval_mtg"
+#set_naval_oob = "CHI_1936_naval_mtg"
 set_air_oob = "CHI_1936_air_bba"
 
 recruit_character = CHI_chiang_kaishek

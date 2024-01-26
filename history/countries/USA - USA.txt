@@ -4,7 +4,7 @@ oob = "USA_1936"
 
 starting_train_buffer = 5
 
-set_naval_oob = "USA_1936_naval_mtg"
+#set_naval_oob = "USA_1936_naval_mtg"
 set_air_oob = "USA_1936_air_bba"
 set_research_slots = 4
 set_stability = 0.75

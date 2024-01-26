@@ -639,15 +639,15 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/report_event_japanese_chinese_surrender.dds"
 	}
 
-	spriteType = {
-		name = "GFX_DDD"
-		texturefile = "gfx/event_pictures/DDD.dds"
-	}
+	# spriteType = {
+	# 	name = "GFX_DDD"
+	# 	texturefile = "gfx/event_pictures/DDD.dds"
+	# }
 
-	spriteType = {
-		name = "GFX_DDD"
-		texturefile = "gfx/event_pictures/DDD.dds"
-	}
+	# spriteType = {
+	# 	name = "GFX_DDD"
+	# 	texturefile = "gfx/event_pictures/DDD.dds"
+	# }
 
 	spriteType = {
 		name = "GFX_report_event_japanese_officers"
