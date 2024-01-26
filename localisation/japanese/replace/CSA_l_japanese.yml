@@ -72,6 +72,9 @@
  CSA_rebuilding_the_fleet_ideas:0 "艦隊の再建"
  CSA_rebuilding_the_fleet_ideas2:0 "大洋の支配者"
  
+ CSA.2.t:0 "ハワイ強襲"
+ CSA.2.d:0 "本日、自由の女神の加護を受け、海軍航空隊が日本軍のハワイ・ホノルル海軍基地にて港湾爆撃を行った後、海兵隊がハワイ全島に上陸をした。敵の守備隊の数は少なく、この強襲上陸作戦は完全に成功したのだ!"
+ CSA.2.a:0 "太平洋の足掛かりを手に入れた!"
 
  CSA_end_of_civil_war_tooltip:0 "他国家方針ツリーをアンロックします"
  CSA_reconstruction_tooltip:0 "国家方針の段階「再建」を踏む"

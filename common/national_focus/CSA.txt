@@ -258,6 +258,9 @@
 		completion_reward = {
 			custom_effect_tooltip = CSA_end_of_civil_war_tooltip
 			remove_ideas = naisenn
+			set_capital = {
+				state = 361
+			}
 		}
 	}
 
@@ -403,7 +406,7 @@
 		#relative_position_id = CSA_military_Research_on_civil_wars
 		#prerequisite = { focus =  CSA_military_Research_on_civil_wars }
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -431,7 +434,7 @@
 		relative_position_id = CSA_industry_Rebuilding_the_industry
 		prerequisite = { focus =  CSA_industry_Rebuilding_the_industry }
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -474,7 +477,7 @@
 		relative_position_id = CSA_industry_Rebuilding_the_industry
 		prerequisite = { focus =  CSA_industry_Rebuilding_the_industry }
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -518,7 +521,7 @@
 		prerequisite = { focus =   CSA_industry_State_development }
 		prerequisite = { focus =   CSA_industry_State_development2 }
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -546,7 +549,7 @@
 		relative_position_id = CSA_industry_Rebuilding_the_industry
 		prerequisite = { focus =  CSA_industry_Recapture_of_capital_resources }
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -589,7 +592,7 @@
 		relative_position_id = CSA_industry_Rebuilding_the_industry
 		prerequisite = { focus =  CSA_industry_Recapture_of_capital_resources }
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -633,7 +636,7 @@
 		prerequisite = { focus =  CSA_industry_Subsidies_for_builders }
 		prerequisite = { focus =  CSA_industry_Subsidies_for_builders2 }
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -722,10 +725,21 @@
 		}
 		bypass = {
 		}
-		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
+		complete_tooltip = {
+			country_event = {
+				id = CSA.2
+				days = 1
+			}
+			declare_war_on = {
 				target = JAP
+				type = puppet_wargoal_focus
+			}
+		}
+		completion_reward = {
+
+			country_event = {
+				id = CSA.2
+				days = 1
 			}
 		}
 	}
@@ -839,7 +853,7 @@
 		relative_position_id = CSA_military_army_reform
 		prerequisite = { focus =  CSA_military_army_reform }
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -882,7 +896,7 @@
 		relative_position_id = CSA_military_army_reform
 		prerequisite = { focus =  CSA_military_army_reform }
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -925,7 +939,7 @@
 		relative_position_id = CSA_military_army_reform
 		prerequisite = { focus =  CSA_military_army_reform }
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -968,7 +982,7 @@
 		relative_position_id = CSA_military_army_reform
 		prerequisite = { focus =  CSA_military_army_reform }
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}

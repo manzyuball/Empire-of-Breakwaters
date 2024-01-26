@@ -759,7 +759,9 @@
 		prerequisite = { focus = JAP_NITIEI9 }
 		completion_reward = {
 			custom_effect_tooltip = JAP_NITIEIDOUMEI
-			set_faction_name = "連合国"
+			ENG = {
+				set_faction_name = "連合国"
+			}
 			hidden_effect = {
 				news_event = {
 					id = news.7

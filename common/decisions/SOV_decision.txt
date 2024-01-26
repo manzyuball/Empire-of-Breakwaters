@@ -77,6 +77,10 @@ SOV_Ryodo = {
             target = VLA
             type = annex_everything
             }
+            news_event = {
+                id = news.17
+                days = 1
+            }
       }
       }
       soviet_Austria_war = {

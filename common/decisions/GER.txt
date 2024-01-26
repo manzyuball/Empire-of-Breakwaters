@@ -98,23 +98,7 @@ GER_Ryoud_Kakutyo = {
 			factor = 100
 		}
 		complete_effect = {
-			declare_war_on = {
-				target = SWE
-				type = annex_everything
-				}
-				declare_war_on = {
-                    target = DEN
-                    type = annex_everything
-                    }
-					declare_war_on = {
-						target = NOR
-						type = annex_everything
-						}
-						hidden_effect = {
-						DEN = { add_ideas = Hokuou_DANKETI_IDEAS }
-						NOR = { add_ideas = Hokuou_DANKETI_IDEAS }
-						SWE = { add_ideas = Hokuou_DANKETI_IDEAS }
-						}
+
 						
 		}
 	}

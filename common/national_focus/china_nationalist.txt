@@ -1628,9 +1628,6 @@
 
 		completion_reward = {
 			set_major = yes
-			set_capital = {
-				state = 994
-			}
 			army_experience = 150
 		}
 	}
@@ -2080,7 +2077,7 @@
 
 		available = {
 		}
-
+will_lead_to_war_with = JAP
 		completion_reward = {
 			declare_war_on = {
 				type = annex_everything
@@ -2093,6 +2090,10 @@
 			add_timed_idea = {
 				idea = CHI_daityuuka
 				days = 180
+				}
+				news_event = {
+					id = news.15
+					days = 1
 				}
 		}
 	}

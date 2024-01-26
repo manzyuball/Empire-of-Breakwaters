@@ -6,20 +6,7 @@ FRA_historical_plan = {
 		original_tag = FRA
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = FRA_ai_behavior
-					option = DEFAULT
-				}	
-			}
-			has_game_rule = {
-				rule = FRA_ai_behavior
-				option = DEMOCRATIC_HISTORICAL
-			}
-			has_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
-		}
+	is_historical_focus_on = yes
 	}
 	abort = {
 		has_game_rule = {
@@ -37,28 +24,24 @@ FRA_historical_plan = {
 		#1937
 		FRA_n3
 		FRA_n6
-		FRA_n2
-		FRA_g2
 		FRA_s9
-		#1938
 		FRA_s10
 		FRA_s12
+		#1938
 		FRA_n11
-		FRA_g12
-		FRA_g13
-		#1939
-		FRA_s13
-		FRA_s18
 		FRA_n12
-		FRA_g3
-		#1940
-		FRA_g5
-		FRA_n8
+		FRA_s13
+		FRA_s14
+		FRA_g2
+		#1939
+		FRA_s18
 		FRA_s16
-	    FRA_EU1 
+		FRA_s19
+		FRA_EU1
 		FRA_EU2
-		FRA_EU4
 		FRA_EU3
+		FRA_EU4
+		FRA_EU5
 	}
 	research = {
 	}

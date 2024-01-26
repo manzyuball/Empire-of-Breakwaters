@@ -717,11 +717,11 @@ focus = {
 		SPR = {
 			leave_faction = yes
 		}
-		create_wargoal = {
+		declare_war_on ={
 			type = puppet_wargoal_focus
 			target = SPR
 		}
-		create_wargoal = {
+		declare_war_on ={
 			type = puppet_wargoal_focus
 			target = POR
 		}
@@ -749,11 +749,15 @@ focus = {
 	bypass = {
 
 	}
-
+	will_lead_to_war_with = AUS
 	completion_reward = {
-		create_wargoal = {
+		declare_war_on ={
 			type = puppet_wargoal_focus
 			target = AUS
+		}
+		news_event = {
+			id = news.16
+			days = 1
 		}
 	}
 }
@@ -809,17 +813,25 @@ focus = {
 	bypass = {
 
 	}
-
+	will_lead_to_war_with = ENG
 	completion_reward = {
-		create_wargoal = {
+		news_event = {
+			id = news.18
+			days = 1
+		}
+		declare_war_on ={
 			type = puppet_wargoal_focus
 			target = ENG
+			}
+			add_timed_idea = {
+				idea = FRA_EGY
+				days = 120
 			}
 	}
 }
 focus = {
 	id = FRA_s19
-	icon = "GFX_focus_generic_africa_naval"
+	icon = GFX_focus_SWE_the_nordic_defense_council
 	x = 1
 	y = 8
 	mutually_exclusive = {
@@ -841,14 +853,27 @@ focus = {
 	}
 
 	completion_reward = {
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = EGY
-			}
-			add_timed_idea = {
-				idea = FRA_EGY
-				days = 120
-			}
+		declare_war_on = {
+				target = SWE
+				type = annex_everything
+				}
+				declare_war_on = {
+                    target = DEN
+                    type = annex_everything
+                    }
+					declare_war_on = {
+						target = NOR
+						type = annex_everything
+						}
+						hidden_effect = {
+						DEN = { add_ideas = Hokuou_DANKETI_IDEAS }
+						NOR = { add_ideas = Hokuou_DANKETI_IDEAS }
+						SWE = { add_ideas = Hokuou_DANKETI_IDEAS }
+						news_event = {
+							id = news.9
+							days = 1
+						}
+						}
 	}
 }
 focus = {
@@ -873,9 +898,9 @@ focus = {
 	bypass = {
 
 	}
-
+	will_lead_to_war_with = SOV
 	completion_reward = {
-		create_wargoal = {
+		declare_war_on ={
 			type = puppet_wargoal_focus
 			target = SOV
 			}
@@ -1640,11 +1665,6 @@ focus = {
 							target = FRA
 							value > 70
 							}
-					}
-					OR = {
-						GER = { surrender_progress > 0.3 }
-						ITA = { surrender_progress > 0.3 }
-						HOL = { surrender_progress > 0.3 }
 					}
 				}
 			}

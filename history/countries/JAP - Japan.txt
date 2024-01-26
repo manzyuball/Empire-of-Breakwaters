@@ -30,11 +30,6 @@ set_autonomy = {
 	autonomous_state = autonomy_dominion
 	freedom_level = 0.3
 }
-set_autonomy = {
-	target = HAW
-	autonomous_state = autonomy_dominion
-	freedom_level = 0.1
-}
 
 set_oob = "JAP_1936_nsb"
 set_naval_oob = "JAP_1936_naval"
@@ -56,10 +51,6 @@ if = {
 		target = PHI
 		autonomous_state =  autonomy_puppet
 	}
-	set_autonomy = {
-		target = HAW
-		autonomous_state =  autonomy_puppet
-	}
 }
 if = {
 	limit = { 
@@ -67,11 +58,6 @@ if = {
 	}
 	set_autonomy = {
 		target = INS
-		autonomous_state = autonomy_wtt_imperial_protectorate
-	}
-
-	set_autonomy = {
-		target = HAW
 		autonomous_state = autonomy_wtt_imperial_protectorate
 	}
 
