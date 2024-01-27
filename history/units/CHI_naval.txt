@@ -1,0 +1,88 @@
+﻿# 8-11 torpedo boats / destroyers for each Torpedo boat Flottila (Torpedobootflotte)
+# 4-5 cruisers / battlecruisers formed a Scouting Group (Aufklarungsgruppe)
+# 4-5 battleships made up 1 Division, 2 Divisons formed a Battle Squadron (Geschwader)
+# Assuming the same logic, 2 Aircraft Carrier made up 1 Aircraft Carrier Squadron (Fleugzeug Geschwader)
+
+units = {
+	fleet = {
+		name = "Fleet"
+		naval_base = 7014 #Wilhelmshaven
+		task_force = {
+			name = "Fleet"
+			location = 7014 #Wilhelmshaven
+			ship = { name = "1936年型戦艦" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = CHI version_name = "1936年型戦艦" } } }
+			ship = { name = "1936年型戦艦" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = CHI version_name = "1936年型戦艦" } } }
+			ship = { name = "1936年型戦艦" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = CHI version_name = "1936年型戦艦" } } }
+			ship = { name = "1936年型戦艦" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = CHI version_name = "1936年型戦艦" } } }
+			ship = { name = "1936年型軽巡洋艦" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CHI version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "1936年型軽巡洋艦" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CHI version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "1936年型軽巡洋艦" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CHI version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "1936年型軽巡洋艦" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = CHI version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "1936年型駆逐艦" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦11" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦12" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦13" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦14" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦15" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+		}
+		task_force = {
+			name = "Fleet2"
+			location = 9974 #Kiel
+			ship = { name = "1936年型重巡洋艦" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CHI version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "1936年型重巡洋艦" definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CHI version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "1936年型駆逐艦16" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦17" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦18" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦19" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦20" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦21" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+		}
+		task_force = {
+			name = "Fleet3"
+			location = 9974 #Danzig
+			ship = { name = "1936年型駆逐艦" definition = destroyer equipment = { ship_hull_light_2  = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦" definition = destroyer equipment = { ship_hull_light_2  = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦" definition = destroyer equipment = { ship_hull_light_2  = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦" definition = destroyer equipment = { ship_hull_light_2  = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦" definition = destroyer equipment = { ship_hull_light_2  = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CHI version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "1936年型駆逐艦" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CHI version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "1936年型駆逐艦" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CHI version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "1936年型駆逐艦B288" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦S324" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦V201" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦H214" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦H213" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+			ship = { name = "1936年型駆逐艦S323" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHI version_name = "1936年型駆逐艦" } } }
+		}
+		task_force = {
+			name = "II. submarine"
+			location = 7071 #Wilhelmshaven
+			ship = { name = "1936年型潜水艦31" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦32" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦33" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦34" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦67" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦68" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦69" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦70" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦73" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+		}
+		task_force = {
+			name = "III. submarine"
+			location = 7071 #Kiel
+			ship = { name = "1936年型潜水艦74" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦75" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦76" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦77" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦86" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦87" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦88" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦89" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦90" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦91" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦92" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+			ship = { name = "1936年型潜水艦93" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = CHI version_name = "1936年型潜水艦" } } }
+		}
+	}
+}

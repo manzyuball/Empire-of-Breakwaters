@@ -1,0 +1,165 @@
+﻿# 8-11 torpedo boats / destroyers for each Torpedo boat Flottila (Torpedobootflotte)
+# 4-5 cruisers / battlecruisers formed a Scouting Group (Aufklarungsgruppe)
+# 4-5 battleships made up 1 Division, 2 Divisons formed a Battle Squadron (Geschwader)
+# Assuming the same logic, 2 Aircraft Carrier made up 1 Aircraft Carrier Squadron (Fleugzeug Geschwader)
+
+units = {
+	fleet = {
+		name = "k.u.k Schlachts-Flotte"
+		naval_base = 6626
+		task_force = {
+			name = "k.u.k I. Schlachtschwadron"
+			location = 6626
+			ship = { name = "SMS Schwarzenberg" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = AUS version_name = "1936年型戦艦" } } }
+			ship = { name = "SMS Debrecen" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "SMS Custozza" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "SMS Lissa" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "SMS Vejle" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "SMS Tátra" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Trabant" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Satellit" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Magnet" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Merkur" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Venus" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Mimas" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Charon" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+		}
+		task_force = {
+			name = "k.u.k II. Schlachtschwadron"
+			location = 6626
+			ship = { name = "SMS Hunyadi" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = AUS version_name = "1936年型戦艦" } } }
+			ship = { name = "SMS Graf Daun" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = AUS version_name = "1936年型戦艦" } } }
+			ship = { name = "SMS Trient" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "SMS Admiral Vukovich" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "SMS Admiral Haus" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "SMS Admiral Njegovan" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "SMS Triglav" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Warasdiner" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Wildspitze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Weißkugel" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Meteor" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Similaun" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Hochwilde" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Vaskapu" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+		}
+		task_force = {
+			name = "k.u.k III. Schlachtschwadron"
+			location = 6626
+			ship = { name = "SMS Tegetthoff" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = AUS version_name = "Tegetthoff Class" } } }
+			ship = { name = "SMS Prinz Eugen" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = AUS version_name = "Tegetthoff Class" } } }
+			ship = { name = "SMS Linz" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "SMS Admiral Montecuccoli" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "SMS Admiral Daublebsky" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "SMS Lippa" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "Lippa Class" } } }
+			ship = { name = "SMS Huszár" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Roth Martón" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Kis-Déchy" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Weber" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Késmárki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Keskeny" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Fischbacher" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Seetaler" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+		}
+		task_force = {
+			name = "Reservegeschwader"
+			location = 6626
+			ship = { name = "SMS Erzherzog Franz Ferdinand" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "Erzherzog Franz Ferdinand Class" } } }
+			ship = { name = "SMS Erzherzogin Sophie" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "Erzherzog Franz Ferdinand Class" } } }
+			ship = { name = "SMS Triest" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "SMS Zagreb" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "SMS Mortara" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "Lippa Class" } } }
+			ship = { name = "SMS Cetingrad" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = AUS version_name = "Lippa Class" } } }
+			ship = { name = "SMS Almás" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Szemenik" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Anina" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Lokva" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Orsova" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Arágyes" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Bukura" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Lázár" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Radstádter" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Schladminger" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Wölzer" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Rottenmanner" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Békássy Ferenc" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Moldován" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Negoj" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Nagy-Vist" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Leszpez" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Buteanu" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Dara" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Zerge" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Podragu" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Vaiuga" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Csortea" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+			ship = { name = "SMS Honvéd" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = AUS version_name = "1936年型駆逐艦" } } }
+		}
+	}
+	fleet = {
+		name = "k.u.k U-Boot-Flotte"
+		naval_base = 3943
+		task_force = {
+			name = "U-Boot-schwadron A"
+			location = 3943
+			ship = { name = "SMS U-102" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-103" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-104" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-105" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-106" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-107" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+		}
+		task_force = {
+			name = "U-Boot-schwadron B"
+			location = 3943
+			ship = { name = "SMS U-109" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-110" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-111" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-112" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-113" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-114" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+		}
+		task_force = {
+			name = "U-Boot-schwadron C"
+			location = 3943
+			ship = { name = "SMS U-116" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-117" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-118" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-123" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-124" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-125" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+		}
+		task_force = {
+			name = "U-Boot-schwadron D"
+			location = 3943
+			ship = { name = "SMS U-120" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-121" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-126" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-128" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-129" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-130" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-131" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+		}
+		task_force = {
+			name = "U-Boot-schwadron E"
+			location = 3943
+			ship = { name = "SMS U-142" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-143" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-144" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-145" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-146" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-147" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-148" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-149" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+		}
+		task_force = {
+			name = "U-Boot-schwadron F"
+			location = 3943
+			ship = { name = "SMS U-150" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-151" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-152" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-153" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-154" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+			ship = { name = "SMS U-155" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "1936年型潜水艦" } } }
+		}
+	}
+}

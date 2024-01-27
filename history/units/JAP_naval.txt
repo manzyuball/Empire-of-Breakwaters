@@ -1,0 +1,256 @@
+﻿# 8-11 torpedo boats / destroyers for each Torpedo boat Flottila (Torpedobootflotte)
+# 4-5 cruisers / battlecruisers formed a Scouting Group (Aufklarungsgruppe)
+# 4-5 battleships made up 1 Division, 2 Divisons formed a Battle Squadron (Geschwader)
+# Assuming the same logic, 2 Aircraft Carrier made up 1 Aircraft Carrier Squadron (Fleugzeug Geschwader)
+
+units = {
+	fleet = {
+		name = "Dai-1 Kantai"
+		naval_base = 9950 ###Change to proper province number
+		task_force = {
+			name = "Dai-1 Kantai"
+			location = 9950 ###Change to proper province number
+			ship = { name = "Akagi" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = JAP version_name = "1936年型巡洋戦艦" } } }
+			ship = { name = "Mutsu" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = JAP version_name = "1936年型戦艦" } } }
+			ship = { name = "Hōshō" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = JAP version_name = "1936年型航空母艦" } } }
+			ship = { name = "Ryūjō" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = JAP version_name = "1936年型航空母艦" } } }
+			ship = { name = "Fubuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Isonami" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Miyuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Shikinami" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Shinonome" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Shirakumo" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Shirayuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Uranami" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Usugumo" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Aoi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Ashi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Fuji" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Hagi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Hasu" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Hishi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Kaki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Kaya" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Kiku" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Kuri" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Nashi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Nire" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Sumire" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Susuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Take" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Tsuga" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Tsuta" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Kiso" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Isuzu" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Tatsuta" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Tenryū" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Rokkaku" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "Tokachi" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "1936年型重巡洋艦" } } }
+		}
+	}
+	fleet = {
+		name = "Dai-2 Kantai"
+		naval_base = 1092 ###Change to proper province number
+		task_force = {
+			name = "Dai-2 Kantai"
+			location = 1092 ###Change to proper province number
+			ship = { name = "Amagi" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = JAP version_name = "1936年型巡洋戦艦" } } }
+			ship = { name = "Amagiri" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Asagiri" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Ayanami" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Oboro" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Sagiri" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Yūgiri" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Fumizuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Hakaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Hamakaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Harukaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Kikuzuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Kisaragi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Mikazuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Minazuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Minekaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Mochizuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Nadakaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Nagatsuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Okikaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Satsuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Sawakaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Shimakaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Tokitsukaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Uzuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Yakaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Yayoi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Mutsuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Yūzuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Asagao" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Fuyō" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Karukaya" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Kuretake" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Wakatake" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Sanae" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Sawarabi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Tade" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Omodoka" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Yomogi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Yūgao" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Abukuma" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Kitakami" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Kuma" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Natori" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Yura" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Kinu" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Nagara" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Monobe" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "Sumida" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "Suzuka" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "Ryūen" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = JAP version_name = "1936年型航空母艦" } } }
+			ship = { name = "Sōryū" definition = carrier equipment = { ship_hull_carrier_1 = { amount = 1 owner = JAP version_name = "1936年型航空母艦" } } }
+			ship = { name = "Owari" definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = JAP version_name = "1936年型戦艦" } } }
+		}
+	}
+	fleet = {
+		name = "Dai-3 Kantai"
+		naval_base = 9998 ###Change to proper province number
+		task_force = {
+			name = "Dai-3 Kantai"
+			location = 9998 ###Change to proper province number
+			ship = { name = "Akatsuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Akebono" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Hatsuyuki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Hibiki" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Ikazuchi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Inazuma" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Sazanami" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Ushio" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Akikaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Asakaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Asanagi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Hatakazei" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Hayate" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Hokaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Kamikaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Matsukaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Namikaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Nokaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Numakaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Oite" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Shiokaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Tachikaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Yūkaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Yūnagi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Momi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Ariake" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Hatsuharu" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Hatsushimo" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Kawakaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Murasame" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Nenohi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Shigure" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Shiratsuyu" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Umikaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Wakaba" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Yūdachi" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Yūgure" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Suzukaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Harusame" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Samidare" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Yamakaze" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = JAP version_name = "1936年型駆逐艦" } } }
+			ship = { name = "Ōi" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Tama" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Jintsū" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "Sendai Class" } } }
+			ship = { name = "Naka" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "Sendai Class" } } }
+			ship = { name = "Sendai" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "Sendai Class" } } }
+			ship = { name = "Yūbari" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = JAP version_name = "1936年型軽巡洋艦" } } }
+			ship = { name = "Kuzuryū" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "Mikuma" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "Mogami" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = JAP version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "Aoba" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = JAP version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "Kinugasa" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = JAP version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "Furataka" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = JAP version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "Kako" definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = JAP version_name = "1936年型重巡洋艦" } } }
+			ship = { name = "Tosa" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = JAP version_name = "1936年型戦艦" } } }
+			ship = { name = "Nagato" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = JAP version_name = "1936年型戦艦" } } }
+			ship = { name = "Atago" definition = battle_cruiser equipment = { ship_hull_heavy_1 = { amount = 1 owner = JAP version_name = "1936年型巡洋戦艦" } } }
+			ship = { name = "Kaga" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = JAP version_name = "1936年型戦艦" } } }
+			ship = { name = "Kii" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_heavy_2 = { amount = 1 owner = JAP version_name = "1936年型戦艦" } } }
+		}
+	}
+	fleet = {
+		name = "Dai-4 Kantai"
+		naval_base = 1150 ###Change to proper province number
+		task_force = {
+			name = "Dai-4 Kantai"
+			location = 1150 ###Change to proper province number
+			ship = { name = "I-1" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-2" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-29" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-30" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-31" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-32" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-57" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-58" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-59" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-60" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-61" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-62" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-63" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-64" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-65" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-66" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-67" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-68" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+		}
+	}
+	fleet = {
+		name = "Dai-5 Kantai"
+		naval_base = 7072 ###Change to proper province number
+		task_force = {
+			name = "Dai-5 Kantai"
+			location = 7072 ###Change to proper province number
+			ship = { name = "I-3" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-5" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-51" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-52" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-53" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-54" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-55" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-56" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-57" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-58" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-59" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-60" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-63" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-21" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-22" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-23" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-24" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+		}
+	}
+	fleet = {
+		name = "Dai-6 Kantai"
+		naval_base = 9998 ###Change to proper province number
+		task_force = {
+			name = "Dai-6 Kantai"
+			location = 9998 ###Change to proper province number
+			ship = { name = "I-4" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-6" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-33" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "Ro-34" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-61" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-62" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-64" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-65" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-66" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-67" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-68" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-69" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-70" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-71" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-72" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-73" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-74" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+			ship = { name = "I-75" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = JAP version_name = "1936年型潜水艦" } } }
+		}
+	}
+}
