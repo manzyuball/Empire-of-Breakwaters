@@ -1,1 +1,131 @@
-﻿
+﻿units = {
+fleet = {
+	name = "Battle Force"			
+	naval_base = 1562 # San Diego
+	task_force = {				
+		name = "Battleships, Battle Force"
+		location = 1562 # San Diego
+		### Battleship Division 1 ###			
+		ship = { name = "USS Nevada" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "1936年型戦艦" } } }				
+		ship = { name = "USS Arizona" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "1936年型戦艦" } } }				
+		ship = { name = "USS Pennsylvania" pride_of_the_fleet = yes definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "1936年型戦艦" } } }				
+		### Battleship Division 2 ###			
+		ship = { name = "USS Oklahoma" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "1936年型戦艦" } } }				
+		ship = { name = "USS Tennessee" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "1936年型戦艦" } } }				
+		ship = { name = "USS California" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "1936年型戦艦" } } }				
+		### Battleship Division 3 ###			
+		ship = { name = "USS New Mexico" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "1936年型戦艦" } } }				
+		ship = { name = "USS Mississippi" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "1936年型戦艦" } } }				
+		ship = { name = "USS Idaho" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "1936年型戦艦" } } }				
+		### Battleship Division 4 ###			
+		ship = { name = "USS Colorado" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "1936年型戦艦" } } }				
+		ship = { name = "USS West Virginia" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "1936年型戦艦" } } }				
+		ship = { name = "USS Maryland" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_2 = { amount = 1 owner = USA version_name = "1936年型戦艦" } } }				
+	}				
+	task_force = {					
+		name = "Carrier Division, Battle Force"		
+		location = 1562 # San Diego
+		ship = { name = "USS Ranger" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_1 = { amount = 1 owner = USA version_name = "1936年型航空母艦" } } 
+			
+		}
+		ship = { name = "USS Lexington" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_1= { amount = 1 owner = USA version_name = "1936年型航空母艦" } } 
+			
+		}
+		ship = { name = "USS Saratoga" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_1 = { amount = 1 owner = USA version_name = "1936年型航空母艦" } } 
+			
+		}
+	}					
+	task_force = {					
+		name = "Cruisers, Battle Force"
+		location = 9814 # Los Angeles
+		# Cruiser Division 2 #			
+		ship = { name = "USS Omaha" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }				
+		ship = { name = "USS Milwaukee" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }				
+		ship = { name = "USS Cincinnati" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }				
+		# Cruiser Division 6 #		
+		ship = { name = "USS New Orleans" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "1936年型重巡洋艦" } } }				
+		ship = { name = "USS Astoria" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "1936年型重巡洋艦" } } }				
+		ship = { name = "USS Minneapolis" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "1936年型重巡洋艦" } } }				
+		ship = { name = "USS Indianapolis" definition = heavy_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "1936年型重巡洋艦" } } }				
+	}			
+	### Destroyer Flotilla 1 ###				
+	task_force = {					
+		name = "Destroyer Flotilla 1"				
+		location = 1562 # San Diego
+		ship = { name = "USS Raleigh" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }				
+		### Destroyer Squadron 1 ###				
+		# 1st Destroyer Division				
+		ship = { name = "USS Dewey" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }
+		ship = { name = "USS Hull" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }
+		ship = { name = "USS MacDonough" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }
+		ship = { name = "USS Worden" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }
+		# 2nd Destroyer Division				
+		ship = { name = "USS Farragut" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }
+		ship = { name = "USS Dale" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }
+		ship = { name = "USS Monaghan" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }
+		ship = { name = "USS Aylwin" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }
+		### Destroyer Squadron 9 ###				
+		# 17th Destroyer Division				
+		ship = { name = "USS Hatfield" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Brooks" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Fox" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Kane" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		# 19th Destroyer Division		
+		ship = { name = "USS Rathburne" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Talbot" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Waters" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Dent" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		### Destroyer Squadron 11 ###				
+		ship = { name = "USS MacLeish" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		# 25th Destroyer Division				
+		ship = { name = "USS McCormick" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Sturtevant" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Overton" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Bainbridge" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		# 26th Destroyer Division				
+		ship = { name = "USS King" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Sands" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Lawrence" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Humphreys" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+	}					
+	### Destroyer Flotilla 2 ###				
+	task_force = {					
+		name = "Destroyer Flotilla 2"				
+		location = 9814 # Los Angeles
+		ship = { name = "USS Detroit" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "1936年型軽巡洋艦" } } }				
+		### Destroyer Squadron 7 ###
+		# 24th Destroyer Division			
+		ship = { name = "USS Zane" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Wasmuth" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Trever" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Perry" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		# 28th Destroyer Division				
+		ship = { name = "USS Chandler" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Southard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Hovey" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Long" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		### Destroyer Squadron 8 ###
+		ship = { name = "USS Dallas" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		# 9th Destroyer Division				
+		ship = { name = "USS Reuben James" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Goff" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Barry" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Hopkins" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		# 10th Destroyer Division				
+		ship = { name = "USS Broome" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Borie" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Simpson" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Truxtun" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+	}	
+	# Separate DESRONS #
+	task_force = {					
+		name = "Destroyer Division 20"				
+		location = 9671 # San Francisco
+		# 20th Destroyer Division				
+		ship = { name = "USS Breckinridge" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Barney" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Blakeley" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+		ship = { name = "USS Biddle" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "1936年型駆逐艦" } } }		
+	}					
+}
+}

@@ -753,6 +753,9 @@ focus_tree = {
 		available_if_capitulated = no
 		complete_tooltip = {}
 		completion_reward = {
+			set_technology = {
+				motorized_rocket_unit = 1
+			}
 			army_experience = 100
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
