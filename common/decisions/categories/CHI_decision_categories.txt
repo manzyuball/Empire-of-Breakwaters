@@ -8,5 +8,12 @@ CHI_Gunzi_sakusen = {
 	icon = ger_military_buildup
 	allowed = {
 		original_tag = CHI
+		is_ai = yes
+	}
+}
+Ivo_war_times = {
+	icon = ger_military_buildup
+	allowed = {
+		original_tag = IVO
 	}
 }

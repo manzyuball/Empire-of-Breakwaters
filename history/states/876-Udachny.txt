@@ -14,7 +14,6 @@ state = {
 		add_core_of = VLA
 
 	}
-	impassable = yes
 	provinces = {
 		1722 2853 3184 6085 13060 
 	}

@@ -161,3 +161,12 @@
  wtt_china.1.d:0 "先日ロマノフから我々に対する使節団が送られてきた、彼らはタンヌ地域や上満州地方の譲渡と相互防衛協定の受諾を要求した。断る理由もないが、果たしてどう行動すべきだろうか?"
  wtt_china.1.a:0 "要求を受諾しよう"
  wtt_china.1.b:0 "使節団を皆殺しにし、送り返せ"
+ 
+ CHI_west_tank_tech:0 "西洋の戦車技術共有"
+ CHI_Tank_tech:0 "西洋の戦車技術"
+
+ Ivo_war_times:0 "インドの戦争計画"
+ IVO_war_centerAzia:0 "アフガニスタンの征服"
+ IVO_war_centerAzia2:0 "ペルシアへの遠征"
+ IVO_war_turkey:0 "トルコ遠征"
+ IVO_war_BRM:0 "ビルマ併合"

@@ -1,0 +1,90 @@
+Ivo_war_times = {
+	IVO_war_centerAzia = {
+		icon = generic_operation
+		available = {
+			date > 1937.03.01
+		}
+		visible = {
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		complete_effect = {
+			IVO = {
+				create_wargoal = {
+					target = AFG
+					type = annex_everything
+				}
+				create_wargoal = {
+					target = KKP
+					type = annex_everything
+				}
+			}
+		}
+    }
+	IVO_war_centerAzia2 = {
+		icon = generic_operation
+		available = {
+			date > 1938.05.15
+		}
+		visible = {
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		complete_effect = {
+			IVO = {
+				create_wargoal = {
+					target = PER
+					type = annex_everything
+				}
+			}
+		}
+    }
+	IVO_war_turkey = {
+		icon = generic_operation
+		available = {
+			CHI = {
+				has_war_with = JAP
+			}
+		}
+		visible = {
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		complete_effect = {
+			IVO = {
+				create_wargoal = {
+					target = TUR
+					type = annex_everything
+				}
+			}
+		}
+    }
+	IVO_war_BRM = {
+		icon = generic_operation
+		available = {
+		}
+		visible = {
+		}
+		cost = 250
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		complete_effect = {
+			IVO = {
+annex_country = {
+	target = BRM
+}
+			}
+		}
+    }
+}

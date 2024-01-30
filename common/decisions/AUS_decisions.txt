@@ -726,6 +726,30 @@ AUS_balance_of_the_balkan_decisions = {
 			}
 		}
 	}
+	AUS_preemptive_attack_to_soviet = {
+		available = {
+		VLA = {
+			exists = no
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		icon = GFX_decision_generic_assassination
+		cost = 50
+
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			create_wargoal = {
+				target = SOV
+				type = annex_everything
+			}
+		}
+		remove_effect = {
+
+		}
+	}
 	AUS_occupation_of_Bulgaria = {
 		available = {
 		 date > 1938.02.01

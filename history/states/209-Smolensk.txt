@@ -8,6 +8,7 @@ state={
 
 	history={
 		owner = SOV
+		add_claim_by =  EST
 		victory_points = {
 			11202 3
 		}

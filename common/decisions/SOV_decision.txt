@@ -104,6 +104,14 @@ SOV_Ryodo = {
               target = AUS
               type = annex_everything
               }
+              declare_war_on = {
+                target = UKR
+                type = annex_everything
+                }
+                declare_war_on = {
+                    target = POL
+                    type = annex_everything
+                    }
         }
         }
         soviet_VLA_annex = {

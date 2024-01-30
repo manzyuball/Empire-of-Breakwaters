@@ -11,6 +11,7 @@ state={
 	
 	history={
 		owner = LAT
+		add_claim_by =  EST
 		victory_points = {
 			10493 1 #Valmiera
 		}

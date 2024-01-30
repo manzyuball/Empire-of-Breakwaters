@@ -46,29 +46,5 @@ AI_decisions = {
 		}
     }
 
-	IVO_war_centerAzia = {
-		icon = generic_operation
-		available = {
-			date > 1937.03.01
-		}
-		visible = {
-		}
-		cost = 0
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1000
-		}
-		complete_effect = {
-			IVO = {
-				create_wargoal = {
-					target = AFG
-					type = annex_everything
-				}
-				create_wargoal = {
-					target = KKP
-					type = annex_everything
-				}
-			}
-		}
-    }
+
 }

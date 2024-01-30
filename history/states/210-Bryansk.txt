@@ -8,6 +8,7 @@ state={
 
 	history={
 		owner = SOV
+		add_claim_by =  EST
 		buildings = {
 			infrastructure = 3 #was: 5
 		}

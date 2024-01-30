@@ -2168,6 +2168,14 @@ will_lead_to_war_with = JAP
 				can_create_factions = yes
 				can_declare_war_without_wargoal_when_in_war = yes
 				}
+				create_wargoal = {
+					type = annex_everything
+					target = VLA
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = SOV
+						}
 		}
 	}
 	focus = {

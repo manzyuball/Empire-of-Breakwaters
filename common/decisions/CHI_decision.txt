@@ -1,5 +1,28 @@
 CHI_habatukousou = {
+	
+	
+	CHI_west_tank_tech = {
 
+		allowed = {
+		original_tag = CHI
+		}
+		available = {
+			date > 1938.12.25
+		}
+
+		cost = 50
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		complete_effect = {
+			set_technology = {
+				CHI_Tank_tech  = 1
+			}
+		}
+	}
 	CHI_koukuu1 = {
 
 		allowed = {

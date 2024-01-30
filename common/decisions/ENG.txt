@@ -109,19 +109,14 @@ fire_only_once = yes
                 OR = {
                     free_building_slots = {
                         building = arms_factory
-                        size > 2
+                        size < 2
                         included_locked = yes
                         }
                         free_building_slots = {
                             building = industrial_complex
-                            size > 2
+                            size < 2
                             included_locked = yes
                             }
-                            free_building_slots = {
-                                building = dockyard
-                                size > 2
-                                included_locked = yes
-                                }
                 }
             }
 		}
