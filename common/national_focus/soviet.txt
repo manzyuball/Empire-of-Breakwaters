@@ -77,7 +77,30 @@ focus_tree = {
 		complete_tooltip = {}
 		completion_reward = {
 		add_stability = 0.1
-		
+		if = {
+			limit = {
+				has_idea = SOV_politics_civilwar1 
+			}   
+			swap_ideas = {
+				remove_idea = SOV_politics_civilwar1 
+				add_idea = SOV_politics_civilwar2
+				}
+		}
+		else_if = {
+			limit = {
+				has_idea = SOV_politics_civilwar2
+			}
+			swap_ideas = {
+				remove_idea = SOV_politics_civilwar2
+				add_idea = SOV_politics_civilwar3
+				}
+		}
+		else_if = {
+			limit = {
+				has_idea = SOV_politics_civilwar3
+			}
+			remove_ideas = SOV_politics_civilwar3
+		}
 		add_ideas = SOV_FACTORY_FACTOR1
 		}
 	} 
@@ -555,30 +578,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			 if = {
-				limit = {
-					has_idea = SOV_politics_civilwar1 
-				}   
-				swap_ideas = {
-					remove_idea = SOV_politics_civilwar1 
-					add_idea = SOV_politics_civilwar2
-					}
-			}
-			else_if = {
-				limit = {
-					has_idea = SOV_politics_civilwar2
+			swap_ideas = {
+				remove_idea = SOV_FACTORY_FACTOR9
+				add_idea = SOV_FACTORY_FACTOR10
 				}
-				swap_ideas = {
-					remove_idea = SOV_politics_civilwar2
-					add_idea = SOV_politics_civilwar3
-					}
-			}
-			else_if = {
-				limit = {
-					has_idea = SOV_politics_civilwar3
-				}
-				remove_ideas = SOV_politics_civilwar3
-			}
 		}
 	}
 	focus = {

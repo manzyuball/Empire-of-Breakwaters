@@ -102,7 +102,7 @@ ideas = {
 			picture = MEX_politicised_army_2
 			modifier = {
 				army_leader_start_level = 2
-				max_planning = 25
+				max_planning = 0.25
 				army_attack_against_minor_factor = 0.25
 				army_defence_against_minor_factor = 0.25
 			}

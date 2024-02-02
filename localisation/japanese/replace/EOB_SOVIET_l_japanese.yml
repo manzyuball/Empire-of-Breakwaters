@@ -67,6 +67,7 @@
  SOV_FACTORY_FACTOR7:0 "工業化の進展"
  SOV_FACTORY_FACTOR8:0 "工業化の進展"
  SOV_FACTORY_FACTOR9:0 "工業化の達成"
+ SOV_FACTORY_FACTOR10:0 "ソビエト工業"
  SOV_FACTORY_FACTOR_ARMY:0 "軍需産業への転換"
  SOV_FACTORY_FACTOR_MINKA:0 "経済の還元"
  soviet_tenkan110:0 "転換の終了"
