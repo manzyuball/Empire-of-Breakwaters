@@ -374,6 +374,10 @@ news_event = {  #アメリカ参戦
 	is_triggered_only = yes
 	option = {
 		name = news.14.a
+
+	}
+	immediate = {
+		
 		hidden_effect = {
 			play_song = "America_civil_war"
 		}
@@ -389,6 +393,9 @@ major = yes
 is_triggered_only = yes
 option = {
 	name = news.15.a
+
+}
+immediate = {
 	hidden_effect = {
 		play_song = "JA_CH_WAR"
 	}
@@ -405,6 +412,9 @@ news_event = {  #インターの中央攻め
 	is_triggered_only = yes
 	option = {
 		name = news.16.a
+
+	}
+	immediate = {
 		hidden_effect = {
 			play_song = "Berioz_war"
 		}

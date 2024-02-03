@@ -15,11 +15,38 @@ ideas = {
 				cic_to_target_factor = 0.15
 			}
 		}
+		MAN_Tetudou2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_build_infrastructure
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.2
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
 		five_years_MAN = {
 			removal_cost = -1
 			picture = generic_build_infrastructure
 			modifier = {
 				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		five_years_MAN2 = {
+			removal_cost = -1
+			picture = generic_build_infrastructure
+			modifier = {
+				industrial_capacity_factory = 0.25
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.05
 			}

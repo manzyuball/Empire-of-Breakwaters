@@ -87,7 +87,7 @@ buildings = {
 		show_on_map_meshes = 3
 		always_shown = yes
 		base_cost = 5000
-		per_level_extra_cost = 1000
+		per_level_extra_cost = 0
 		provincial = yes
 		only_costal = yes
 		is_port = yes
@@ -183,7 +183,7 @@ buildings = {
 		fuel_silo = yes
 		
 		show_modifier = yes
-		max_fuel_building = 500.0 #k
+		max_fuel_building = 5000.0 #k
 	}
 
 	radar_station = {

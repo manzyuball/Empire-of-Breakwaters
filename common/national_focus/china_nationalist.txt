@@ -1685,10 +1685,7 @@
 					set_nationality = CHI
 				}
 			}
-			every_state = {
-				limit = { is_core_of = MON }
-				add_core_of = ROOT
-			}
+
 		}
 	}
 
@@ -2024,11 +2021,24 @@
 		}
 
 		available = {
-			controls_state = 613
-			controls_state = 615
-			controls_state = 599
-			controls_state = 325
-			controls_state = 605
+			MON = {
+				exists = no
+			}
+			TAN = {
+				exists = no
+			}
+			GXC= {
+				exists = no
+			}
+			YUN = {
+				exists = no
+			}
+			MEN = {
+				exists = no
+			}
+			SHX = {
+				exists = no
+			}
 		}
 
 		completion_reward = {
@@ -2060,6 +2070,15 @@
 				type = annex_everything
 				target = TIB
 				}
+				every_owned_state = {
+					limit = { 
+						is_core_of = MON
+						is_core_of = CHI
+					}
+                    remove_core_of = MON
+				}
+				release_puppet = MON
+
 		}
 	}
 	focus = {

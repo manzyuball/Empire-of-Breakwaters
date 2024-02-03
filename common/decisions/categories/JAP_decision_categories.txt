@@ -10,3 +10,9 @@ JAP_Zyouriku = {
 		always = no
 	}
 }
+JAP_interservice_rivalry = {
+	icon = jap_pacific_guardian
+	allowed = {
+		original_tag = JAP
+	}
+}

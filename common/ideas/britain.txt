@@ -52,7 +52,7 @@ ideas = {
 			name = ENG_tank
 			picture = eng_preparing_the_second_front
 			modifier = {
-				army_armor_speed_factor = -0.08
+				army_armor_speed_factor = -0.05
 				army_armor_defence_factor = 0.40
 			}
 		}
@@ -60,14 +60,14 @@ ideas = {
 			name = ENG_d
 			picture = generic_acquire_tanks
 			modifier = {
-				defence = 0.15
+				army_armor_defence_factor = 0.15
 			}
 		}
 		ENG_k = {
 			name = ENG_k
 			picture = generic_acquire_tanks
 			modifier = {
-				offence = 0.15
+				army_armor_attack_factor = 0.15
 			}
 		}
 		ENG_mamoru = {
@@ -150,7 +150,7 @@ ideas = {
 			name = ENG_Kyoukou
 			picture = usa_great_depression_3
 			modifier = {
-				consumer_goods_factor = 0.15
+				consumer_goods_factor = 0.35
 				production_factory_start_efficiency_factor = -0.1
 				industrial_capacity_factory = -0.1
 			}
@@ -163,7 +163,7 @@ ideas = {
 			picture = usa_great_depression_2
 
 			modifier = {
-				consumer_goods_factor = 0.15
+				consumer_goods_factor = 0.25
 				production_factory_start_efficiency_factor = -0.05
 				industrial_capacity_factory = -0.05
 			}
@@ -183,8 +183,8 @@ ideas = {
 			picture = free_trade
 
 			modifier = {
-				min_export = 0.15
-				consumer_goods_factor = -0.2
+				min_export = 0.05
+				consumer_goods_factor = -0.15
 				production_speed_buildings_factor = 0.1
 			}
 		}
@@ -194,7 +194,7 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.15
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.10
 			}
 		}
 		ENG_Kyoukou6 = {
@@ -202,7 +202,7 @@ ideas = {
 			picture = POL_succesful_four_year_plan
 
 			modifier = {
-				production_speed_industrial_complex_factor = 0.25
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_infrastructure_factor = 0.25
 			}
 		}
@@ -231,7 +231,6 @@ ideas = {
 			modifier = {
 				stability_factor = 0.50
 				consumer_goods_factor = 0.15
-				MONTHLY_POPULATION = 0.1
 			}
 		}
 		ENG_the_sun_never_sets_idea = {

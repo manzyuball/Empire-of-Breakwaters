@@ -12,7 +12,11 @@ technologies = {
 		}
 
 		on_research_complete = {
-		
+			
+		set_technology = {
+			mechanised_infantry = 1
+		}
+
 		}
 
 		show_effect_as_desc = no

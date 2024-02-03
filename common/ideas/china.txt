@@ -94,8 +94,8 @@ ideas = {
 			picture = chi_army_corruption
 
 			modifier = {
-				army_core_attack_factor = 0.3
-				army_core_defence_factor = 0.3
+				army_core_attack_factor = 0.45
+				army_core_defence_factor = 0.45
 			}
 		}
 		CHI_kougyouka = {
@@ -116,8 +116,8 @@ ideas = {
 
 			modifier = {
 				ai_focus_aggressive_factor = 0.5
-				army_core_attack_factor = 0.3
-				army_core_defence_factor = 0.3
+				army_core_attack_factor = 0.4
+				army_core_defence_factor = 0.4
 				max_command_power = 25
 			}
 		}
@@ -128,8 +128,8 @@ ideas = {
 
 			modifier = {
 				ai_focus_aggressive_factor = 0.5
-				army_core_attack_factor = 0.3
-				army_core_defence_factor = 0.3
+				army_core_attack_factor = 0.4
+				army_core_defence_factor = 0.4
 				planning_speed = 0.10
 				max_planning = 0.25
 				max_command_power = 25
@@ -142,8 +142,8 @@ ideas = {
 
 			modifier = {
 				ai_focus_aggressive_factor = 0.5
-				army_core_attack_factor = 0.3
-				army_core_defence_factor = 0.3
+				army_core_attack_factor = 0.4
+				army_core_defence_factor = 0.4
 				planning_speed = 0.10
 				max_planning = 0.25
 				max_command_power = 25
@@ -169,7 +169,6 @@ ideas = {
 			modifier = {
 				army_artillery_attack_factor = 0.15
 				army_artillery_defence_factor = 0.05
-				max_dig_in = 1
 				dig_in_speed = 0.25
 			}
 		}
@@ -266,8 +265,6 @@ ideas = {
 
 			modifier = {
 				stability_factor = 0.45
-				offence = 0.1
-				defence = 0.25
 			}
 		}
 		CHI_tetudoua = {
@@ -296,7 +293,7 @@ ideas = {
 
 			modifier = {
 				equipment_upgrade_xp_cost = -0.75
-				production_factory_max_efficiency_factor = 0.25
+				production_factory_max_efficiency_factor = 0.1
 				equipment_conversion_speed = 0.25
 			}
 		}

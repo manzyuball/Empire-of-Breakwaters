@@ -48,124 +48,17 @@
 #	}
 
 	focus = {
-		id = MAN_s1
-		icon = "GFX_goal_molotov_ribbentrop_pact"
-		mutually_exclusive = {
-			focus = Romanov1
-		}
-		x = 6
-		y = 0
-		cost = 5
-		ai_will_do = {
-			factor = 100
-		}
-		available = {
-		}
-		bypass = {
-		}
-		complete_tooltip = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		id = MAN_s2
-		icon = "GFX_focus_jap_pacific_guardian"
-		prerequisite = { focus = MAN_s1 }
-		x = 0
-		y = 1
-		relative_position_id = MAN_s1
-		cost = 10
-		ai_will_do = {
-			factor = 100
-		}
-		available = {
-		}
-		bypass = {
-		}
-		complete_tooltip = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		id = MAN_s3
-		icon = "GFX_focus_POL_beck_ribbentrop"
-		prerequisite = { focus = MAN_s2 }
-		x = 0
-		y = 2
-		mutually_exclusive = {
-			focus = MAN_s28
-		}
-		relative_position_id = MAN_s1
-		cost = 10
-		ai_will_do = {
-			factor = 100
-		}
-		available = {
-		}
-		bypass = {
-		}
-		complete_tooltip = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		id = MAN_s4
-		icon = "GFX_focus_spa_caudillo_of_spain"
-		prerequisite = { focus = MAN_s3 }
-		x = 0
-		y = 3
-		relative_position_id = MAN_s1
-		cost = 10
-		ai_will_do = {
-			factor = 100
-		}
-		available = {
-		}
-		bypass = {
-		}
-		complete_tooltip = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
-		id = MAN_s5
-		icon = "GFX_goal_support_democracy"
-		prerequisite = { focus = MAN_s4 }
-		x = 0
-		y = 4
-		relative_position_id = MAN_s1
-		cost = 10
-		ai_will_do = {
-			factor = 100
-		}
-		available = {
-		}
-		bypass = {
-		}
-		complete_tooltip = {
-		}
-		completion_reward = {
-		}
-	}
-	focus = {
 		id = MAN_s6
 		icon = "GFX_focus_generic_industry_3"
-		x = -3
+		x = 2
 		y = 2
-		relative_position_id = MAN_s1
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
-		}
-		complete_tooltip = {
 		}
 		completion_reward = {
 			add_ideas = five_years_MAN
@@ -176,17 +69,15 @@
 		icon = "GFX_goal_generic_construct_mil_factory"
 		prerequisite = { focus = MAN_s6 }
 		x = -4
-		y = 3
-		relative_position_id = MAN_s1
+		y = 1
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
-		}
-		complete_tooltip = {
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -212,19 +103,33 @@
 		icon = "GFX_focus_generic_aircraft_production"
 		prerequisite = { focus = MAN_s7 }
 		x = -4
-		y = 4
-		relative_position_id = MAN_s1
+		y = 2
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -232,19 +137,33 @@
 		icon = "GFX_focus_jap_zero"
 		prerequisite = { focus = MAN_s8 }
 		x = -4
-		y = 5
-		relative_position_id = MAN_s1
+		y = 3
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -252,19 +171,22 @@
 		icon = "GFX_focus_generic_steel"
 		prerequisite = { focus = MAN_s6 }
 		x = -1
-		y = 5
-		relative_position_id = MAN_s1
+		y = 1
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 48
+				state = 716
+				}
 		}
 	}
 	focus = {
@@ -272,19 +194,33 @@
 		icon = "GFX_goal_generic_production2"
 		prerequisite = { focus = MAN_s10 }
 		x = -1
-		y = 6
-		relative_position_id = MAN_s1
+		y = 2
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -292,19 +228,21 @@
 		icon = "GFX_focus_chi_collaboration_with_the_japanese"
 		prerequisite = { focus = MAN_s6 }
 		x = -7
-		y = 3
-		relative_position_id = MAN_s1
+		y = 1
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 5
+			}
 		}
 	}
 	focus = {
@@ -312,19 +250,23 @@
 		icon = "GFX_goal_generic_position_armies"
 		prerequisite = { focus = MAN_s12 }
 		x = -7
-		y = 4
-		relative_position_id = MAN_s1
+		y = 3
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
 		}
 	}
 	focus = {
@@ -335,19 +277,33 @@
 			focus = MAN_s15
 		}
 		x = -6
-		y = 5
-		relative_position_id = MAN_s1
+		y = 4
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -358,19 +314,33 @@
 			focus = MAN_s14
 		}
 		x = -8
-		y = 5
-		relative_position_id = MAN_s1
+		y = 4
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -378,41 +348,44 @@
 		icon = "GFX_focus_SOV_south_manchuria_railway"
 		prerequisite = { focus = MAN_s13 }
 		x = -10
-		y = 5
-		relative_position_id = MAN_s1
+		y = 4
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = MAN_Tetudou
+				add_idea = MAN_Tetudou2
+			}
 		}
 	}
 	focus = {
 		id = MAN_s17
 		icon = "GFX_goal_shine_test"
-		prerequisite = { focus = MAN_s9 }
 		prerequisite = { focus = MAN_s15 focus = MAN_s14 }
 		prerequisite = { focus = MAN_s16 }
-		x = -7
+		x = -8
 		y = 6
-		relative_position_id = MAN_s1
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = five_years_MAN 
+				add_idea = five_years_MAN2
+			}
 		}
 	}
 	focus = {
@@ -420,19 +393,21 @@
 		icon = "GFX_focus_chi_british_cooperation"
 		prerequisite = { focus = MAN_s6 }
 		x = -9
-		y = 3
-		relative_position_id = MAN_s1
+		y = 1
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 5
+			}
 		}
 	}
 	focus = {
@@ -440,18 +415,40 @@
 		icon = "GFX_focus_chi_one_china_policy"
 		x = -9
 		y = 7
-		relative_position_id = MAN_s1
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10000
 		}
 		available = {
+				GXC = {
+					exists = no
+				}
+				TAN = {
+					exists = no
+				}
+				YUN = {
+					exists = no
+				}
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+				state = 994
+				num_provinces = 4
+				on_win = wtt_china.2
+				on_lose = wtt_china.2
+				}
+				defender = {
+				state = 611
+				num_provinces = 4
+				on_win = wtt_china.2
+				on_lose = wtt_china.2
+				}
+				}
 		}
 	}
 	focus = {
@@ -460,18 +457,28 @@
 		prerequisite = { focus = MAN_s22 }
 		x = -11
 		y = 8
-		relative_position_id = MAN_s1
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 50
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+        994 = {
+			add_building_construction = {
+				type = bunker
+				level = 4
+				instant_build = yes
+				province = {
+				all_provinces = yes
+				limit_to_border = yes
+				}
+			}
+		}
+				
 		}
 	}
 	focus = {
@@ -480,16 +487,14 @@
 		prerequisite = { focus = MAN_s22 }
 		x = -9
 		y = 8
-		relative_position_id = MAN_s1
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
-		}
-		complete_tooltip = {
 		}
 		completion_reward = {
 		}
@@ -500,38 +505,64 @@
 		prerequisite = { focus = MAN_s22 }
 		x = -7
 		y = 8
-		relative_position_id = MAN_s1
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 50
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
 		id = MAN_s26
 		icon = "GFX_goal_generic_construct_mil_factory"
 		prerequisite = { focus = MAN_s17 }
-		x = -5
+		x = -6
 		y = 7
-		relative_position_id = MAN_s1
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -540,18 +571,32 @@
 		prerequisite = { focus = MAN_s17 }
 		x = -5
 		y = 8
-		relative_position_id = MAN_s1
+		relative_position_id = MAN_s6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
 		}
-		complete_tooltip = {
-		}
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -559,17 +604,15 @@
 	focus = {
 		id = MAN_t1
 		icon = "GFX_focus_prc_infiltration"
-		x = 3
-		y = 7
+		x = 1
+		y = 6
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
-		}
-		complete_tooltip = {
 		}
 		completion_reward = {
 		}
@@ -583,13 +626,11 @@
 		relative_position_id = MAN_t1
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
-		}
-		complete_tooltip = {
 		}
 		completion_reward = {
 		}
@@ -606,13 +647,11 @@
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
-		}
-		complete_tooltip = {
 		}
 		completion_reward = {
 		}
@@ -629,13 +668,11 @@
 		}
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
-		}
-		complete_tooltip = {
 		}
 		completion_reward = {
 		}
@@ -649,13 +686,11 @@
 		relative_position_id = MAN_t1
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
-		}
-		complete_tooltip = {
 		}
 		completion_reward = {
 		}
@@ -669,13 +704,11 @@
 		relative_position_id = MAN_t1
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
-		}
-		complete_tooltip = {
 		}
 		completion_reward = {
 		}
@@ -689,13 +722,11 @@
 		relative_position_id = MAN_t1
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 10
 		}
 		available = {
 		}
 		bypass = {
-		}
-		complete_tooltip = {
 		}
 		completion_reward = {
 		}
