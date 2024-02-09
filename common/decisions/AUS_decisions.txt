@@ -701,6 +701,19 @@ AUS_Dai_mother_land_war = {
 }
 
 AUS_balance_of_the_balkan_decisions = {
+	AUS_Soviet_pact = {		
+	   available = {
+		has_war_with = FRA
+	   }
+	   icon = GFX_decision_SOV_right_opposition_state
+	   cost = 15
+	   complete_effect = {
+		custom_effect_tooltip = AUS_Soviet_pact_decision_tooltips
+		SOV = {
+			country_event = NSB_soviet.2
+		}
+	}
+	}
 	AUS_preemptive_attack = {
 		available = {
 		 date > 1937.06.01

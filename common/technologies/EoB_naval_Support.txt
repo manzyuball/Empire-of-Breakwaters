@@ -6,7 +6,21 @@ technologies = {
 	#  # #  # #   # #  # #   # #   #  #  #    #
 	#  # #  # #   # #  # #   # ### #  #  #  ##
 
+	naval_buildings_tech = {
 
+		research_cost = 1
+
+		industrial_capacity_dockyard = 0.45
+
+		start_year = 1936
+		allow = { always = no } #Only forcus
+		ai_will_do = {
+			factor = 10
+		}
+		categories = {
+			naval_equipment
+		}
+	}
 	advanced_heavy_battery_JAP = {
 
 		research_cost = 1

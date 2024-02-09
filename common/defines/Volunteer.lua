@@ -54,3 +54,6 @@ NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.0
 
 NDefines.NCountry.WAR_SUPPORT_OFFNSIVE_WAR = 0
 NDefines.NCountry.NUCLEAR_BOMB_DROP_WAR_SUPPORT_EFFECT_MAX_INFRA = 0
+
+NDefines.NAI.EQUIPMENT_MARKET_UPDATE_FREQUENCY_DAYS = 15                   -- How often the AI runs its market logic        -- Ratio of available civilian factories to max use for equipment purchases (0.2 = 20 %, so 50 available civs would mean max ca 10 civs to spend on purchases at any one time). Gets modified by equipment_market_spend_factories AI strategy.
+NDefines.NAI.EQUIPMENT_MARKET_BASE_MARKET_RATIO = 0.0                       -- The AI tries to keep ca this ratio of equipment surplus for sale on the market. Gets modified by equipment_market_for_sale_factor AI strategy.

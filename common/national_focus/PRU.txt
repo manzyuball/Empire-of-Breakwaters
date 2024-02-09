@@ -75,7 +75,7 @@ focus = {
 	relative_position_id = PRU_se1
 	prerequisite = { focus = PRU_seA }
 	completion_reward = {
-		add_stability = 0.1
+		add_stability = 0.05
 	}
 }
 focus = {
@@ -161,26 +161,18 @@ focus = {
 			days = 60
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -203,7 +195,7 @@ focus = {
 	relative_position_id = PRU_se1
 	prerequisite = { focus = PRU_seK2 }
 	completion_reward = {
-		add_offsite_building = { type = industrial_complex level = 3 }
+		add_offsite_building = { type = industrial_complex level = 2 }
 		add_timed_idea = {
 			idea = PRU_AHEN1
 			days = 60
@@ -228,7 +220,7 @@ focus = {
 	prerequisite = { focus = PRU_seK3 }
 	completion_reward = {
 		add_tech_bonus = {
-			bonus = 3
+			bonus = 1
 			uses = 3
 			category = industry
 		}
@@ -255,8 +247,8 @@ focus = {
 	relative_position_id = PRU_se1
 	prerequisite = { focus = PRU_seK4 }
 	completion_reward = {
-		add_political_power = 150
-		add_stability = 0.15
+		add_political_power = 75
+		add_stability = 0.10
 		add_timed_idea = {
 			idea = PRU_AHEN1
 			days = 60
@@ -285,34 +277,18 @@ focus = {
 			days = 60
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -428,26 +404,18 @@ focus = {
 	prerequisite = { focus = PRU_seK10 }
 	completion_reward = {
 		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
-				level = 2
+				level = 1
 				instant_build = yes
 			}
 		}
 		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
+				level = 1
 				instant_build = yes
 			}
 		}
@@ -471,26 +439,18 @@ focus = {
 	prerequisite = { focus = PRU_seK11 }
 	completion_reward = {
 		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
-				level = 2
+				level = 1
 				instant_build = yes
 			}
 		}
 		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
-				level = 2
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
+				level = 1
 				instant_build = yes
 			}
 		}
@@ -852,7 +812,7 @@ focus = {
 	completion_reward = {
 		custom_effect_tooltip = PRU_nsa
 		hidden_effect = {
-			set_country_flag = PRU_Ansatu
+			#set_country_flag = PRU_Ansatu
 		}
 	}
 }

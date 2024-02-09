@@ -20,13 +20,33 @@ add_core_of = MAN
 				naval_base = 3
 
 			}
-
+            11771 = {
+				bunker = 3
+			}
+			987 = {
+				bunker = 3
+			}
+			9781 = {
+				bunker = 3
+			}
+			11764 = {
+				bunker = 3
+			}
+			4572 = {
+				bunker = 4
+			}
+			4642 = {
+				bunker = 4
+			}
+			11744 = {
+				bunker = 4
+			}
 		}
 		victory_points = {
-			4572 1 
+			4572 5
 		}
 		victory_points = {
-			11771 3 
+			11771 10
 		}
 
 	}

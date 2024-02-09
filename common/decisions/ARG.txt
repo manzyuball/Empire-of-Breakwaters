@@ -60,30 +60,6 @@ ARG_sangyou = {
 				}
 		}
 	}
-	ARG_keizai4 = {
-		icon = "GFX_decision_ger_mefo_bills"
-		available = {
-        NOT = { has_country_flag = ARG_sikin }
-		}
-		visible = {
-		}
-		cost = 0
-		days_remove = 40
-		fire_only_once = no
-		ai_will_do = {
-			factor = 0
-		}
-		complete_effect = {
-			set_country_flag = ARG_sikin
-			random_owned_controlled_state = {
-				limit = { industrial_complex > 1 }
-				remove_building = {
-					type = industrial_complex
-					level = 1
-					}
-			}
-		}
-	}
 	ARG_keizai5 = {
 		icon = "GFX_decision_generic_operation"
 		available = {

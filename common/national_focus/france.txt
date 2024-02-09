@@ -1194,7 +1194,9 @@ focus = {
 	bypass = {
 
 	}
+    complete_tooltip = {
 
+	}
 	completion_reward = {
 		29 = {
 			add_extra_state_shared_building_slots = 2
@@ -1219,7 +1221,7 @@ focus = {
 				level = 2
 				instant_build = yes
 			}
-		}
+		}	
 	}
 }
 focus = {
@@ -1441,7 +1443,11 @@ focus = {
 				level = 2
 				instant_build = yes
 			}
-		}
+		}	
+	}
+	complete_tooltip = {
+
+	
 	}
 }
 focus = {
@@ -1576,11 +1582,22 @@ focus = {
 		bypass = {
 	
 		}
-	
+	complete_tooltip = {
+		add_timed_idea = {
+			idea = FRA_EUq2
+			days = 100
+		}
+	}
 		completion_reward = {
 			add_timed_idea = {
 				idea = FRA_EUq2
 				days = 100
+			}
+			hidden_effect = {
+				modify_timed_idea = {
+					idea = FRA_EUq2
+					days = 80
+				}
 			}
 		}
 	}
@@ -1602,11 +1619,16 @@ focus = {
 		bypass = {
 	
 		}
-	
 		completion_reward = {
 			add_timed_idea = {
 				idea = FRA_EUq1
 				days = 100
+			}
+			hidden_effect = {
+				modify_timed_idea = {
+					idea = FRA_EUq1
+					days = 80
+				}
 			}
 		}
 	}
@@ -1633,6 +1655,12 @@ focus = {
 			add_timed_idea = {
 				idea = FRA_EUq3
 				days = 100
+			}
+			hidden_effect = {
+				modify_timed_idea = {
+					idea = FRA_EUq3
+					days = 80
+				}
 			}
 		}
 	}
@@ -1891,6 +1919,8 @@ focus = {
 	
 		available = {
 			num_subjects > 30
+			has_completed_focus = FRA_EU7
+			has_completed_focus = FRA_EU6
 		}
 		bypass = {
 	

@@ -410,7 +410,7 @@ focus_tree = {
 		x = 4
 		y = 4
 		cost = 10
-        prerequisite = { focus =  Strengthening_local_infrastructure }
+        prerequisite = { focus = Investing_in_building_companies }
 		relative_position_id =AUS_Disenfranchisement_of_kings	
 		completion_reward = {
 	add_ideas = AUS_traditional_factory

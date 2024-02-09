@@ -2,7 +2,10 @@
 state={
 	id=964
 	name="STATE_964"
-
+    resources = {
+		steel=26
+		aluminium = 31
+	}
 	history={
 		owner = CHI
 		add_core_of = CHI
@@ -14,7 +17,7 @@ state={
 			anti_air_building = 5
 			radar_station = 3
 			air_base = 10
-
+            synthetic_refinery = 5
 		}
 		victory_points = {
 			4619 25 

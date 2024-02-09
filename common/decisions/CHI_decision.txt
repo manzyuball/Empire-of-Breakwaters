@@ -1,3 +1,7 @@
+
+
+
+
 CHI_habatukousou = {
 	
 	
@@ -16,7 +20,12 @@ CHI_habatukousou = {
 		ai_will_do = {
 			factor = 50
 		}
-
+		days_remove = 40
+       remove_effect = {
+		hidden_effect = {
+			country_event =  wtt_china.4
+		}
+	   }
 		complete_effect = {
 			set_technology = {
 				CHI_Tank_tech  = 1

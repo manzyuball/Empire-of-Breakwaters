@@ -20,15 +20,15 @@ ITA_historical_plan = {
 		Italy_Naisei1
 		Italy_Naisei2
 		ITA_Rome
+		Italy_GUN
+		Italy_GUN1
 		ITA_Rome2
 		ITA_Rome1
 		ITA_Rome4
 		ITA_Rome7
+		ITA_Rome5
 		ITA_Rome3
 		ITA_Rome6
-		ITA_Rome5
-		Italy_GUN
-		Italy_GUN1
 		ITA_Rome8
 	}				
 

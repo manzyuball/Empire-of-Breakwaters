@@ -128,6 +128,8 @@ set_technology = {
 	aircraft_construction = 1
 	range_improvements = 1
 
+	naval_buildings_tech = 1
+
 	fuel_silos = 1
 	synth_oil_experiments = 1
 	fuel_refining = 1

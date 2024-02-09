@@ -364,6 +364,7 @@ news_event = {  #ブルガリア併合
 		name = news.13.a
 	}
 }
+
 news_event = {  #アメリカ参戦
 	id = news.14
 	title = news.14.t
@@ -456,5 +457,16 @@ news_event = {  #インターの連合攻め
 		hidden_effect = {
 			play_song = "WW2"
 		}
+	}
+}
+news_event = {  #租借地攻撃
+	id = news.19
+	title = news.19.t
+	desc = news.19.d
+	picture = GFX_news_event_016
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.19.a
 	}
 }

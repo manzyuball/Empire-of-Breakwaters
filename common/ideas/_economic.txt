@@ -224,9 +224,9 @@ ideas = {
 	
 			modifier = {
 				consumer_goods_expected_value = 0.15
-				industrial_capacity_factory = 0.15
+				industrial_capacity_factory = 0.10
 				industrial_capacity_dockyard = 0.15
-				production_speed_industrial_complex_factor = 0.3
+				production_speed_industrial_complex_factor = 0.10
 				production_speed_infrastructure_factor = 0.3
 			}
 	

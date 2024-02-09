@@ -24,7 +24,7 @@
 		y = 0
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -96,7 +96,7 @@
 		relative_position_id = ITA_Rome
 		prerequisite = { focus = ITA_Rome2 }
 		mutually_exclusive = { }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}

@@ -864,13 +864,24 @@
 		}
 
 		completion_reward = {
-			964 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = radar_station
-					level = 6
-					instant_build = yes
+			add_tech_bonus = {
+				name = GER_coal_liquidization
+				bonus = 3.0
+				uses = 1
+				category = synth_resources
+			}
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 2
+						instant_build = yes
+					}
 				}
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 1
 			}
 		}
 	}
@@ -891,10 +902,10 @@
 		}
 
 		completion_reward = {
-			add_resource = {
-			type = oil
-			amount = 32
-			state = 750
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = 3
 			}
 		}
 	}
@@ -1715,6 +1726,14 @@
 
 		completion_reward = {
 			add_political_power = 200
+			964 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = radar_station
+					level = 6
+					instant_build = yes
+				}
+			}
 			add_victory_points = {
 				province = 4130
 				value = 10
@@ -1764,6 +1783,16 @@
 
 		completion_reward = {
 			add_ideas = CHI_WAR_CITY
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 2
+			}
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = 12
+			}
 		}
 	}
 	focus = {
@@ -2044,6 +2073,7 @@
 		completion_reward = {
 			is_major = yes
 			remove_ideas = CHI_BUNRETU
+			country_event = wtt_china.3
 			add_research_slot = 1
 			add_political_power = 250
 			add_stability = 0.15

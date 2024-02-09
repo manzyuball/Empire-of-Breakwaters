@@ -8,12 +8,6 @@ FRA_historical_plan = {
 	enable = {
 	is_historical_focus_on = yes
 	}
-	abort = {
-		has_game_rule = {
-			rule = FRA_ai_behavior
-			option = DEFAULT
-		}
-	}
 
 	ai_national_focuses = {
 		FRA_g1
