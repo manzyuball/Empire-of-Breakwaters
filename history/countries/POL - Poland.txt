@@ -10,7 +10,7 @@ add_ideas = {
 	POL_ThreeHOU
 	POL_NOUGYOU
 }
-add_manpower = 1264210
+add_manpower = 2864210
 set_convoys = 50
 
 

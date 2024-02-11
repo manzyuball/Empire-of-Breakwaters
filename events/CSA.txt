@@ -57,6 +57,12 @@ country_event = {
 		target = JAP
 		type = puppet_wargoal_focus
 	}
+	CSA = {
+		set_province_controller = 4180
+		set_province_controller = 10048
+		set_province_controller = 7195
+	}
+	load_oob = "CSA_marines"
 	news_event = {
 		id = news.14
 		days = 1

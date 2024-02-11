@@ -82,7 +82,7 @@ country_event = {
 			limit = {
 				is_core_of = KOR
 			}
-			add_resistance_target = -20
+			add_resistance_target = -50
 			add_compliance = 5
 		}
 		set_country_flag = JAP_Korean_goverment
@@ -101,8 +101,8 @@ country_event = {
 			limit = {
 				is_core_of = KOR
 			}
-			add_resistance_target = -50
-			add_compliance = -30
+			add_resistance_target = -30
+			add_compliance = -25
 		}
 		set_country_flag = JAP_Korean_annex
 	}

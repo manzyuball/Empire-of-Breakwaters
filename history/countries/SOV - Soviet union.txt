@@ -200,7 +200,7 @@ set_popularities = {
 	communism = 88
 }
 
-create_faction = "第３インターナショナル"
+create_faction = "第三インターナショナル"
 add_to_faction = SOV
 # Starting tech
 set_technology = {

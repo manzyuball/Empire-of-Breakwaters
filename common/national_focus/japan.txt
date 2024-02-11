@@ -1046,11 +1046,11 @@
 		relative_position_id = JAP_NITIEI1
 		prerequisite = { focus = JAP_NITIEI15 }
 		completion_reward = {
-			add_timed_idea = {
-				idea = Tenkan
-				days = 100
-				}
-		 }
+			add_offsite_building = {
+				type = arms_factory
+				level = 6
+			}
+		}
 	}
 	focus = {
 		id = JAP_NITIEI24
@@ -1063,7 +1063,12 @@
 		}
 		relative_position_id = JAP_NITIEI1
 		prerequisite = { focus = JAP_NITIEI16 }
-		completion_reward = { air_experience = 250 }
+		completion_reward = { 
+			air_experience = 250 
+			set_technology = {
+				JAP_AIR_tech = 1
+			}
+	}
 	}
 	focus = {
 		id = JAP_NITIEI25
@@ -1107,7 +1112,10 @@
 		}
 		relative_position_id = JAP_NITIEI1
 		prerequisite = { focus = JAP_NITIEI25 }
-		completion_reward = { add_war_support = 0.25 }
+		completion_reward = { 
+			add_war_support = 0.25 
+			add_stability = 0.25
+		}
 	}
 	focus = {
 		id = JAP_NITIEI28

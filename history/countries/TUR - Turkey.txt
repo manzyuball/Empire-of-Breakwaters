@@ -18,10 +18,10 @@ set_research_slots = 3
 AUS = { add_to_faction = TUR }
 add_ideas = {
 	#TUR_hinsi
-	rengou
+	#rengou
 	#arabu
 	#kenpou
-	gun
+	#gun
 }
 set_variable = {
 	var = TUR.TUR_KAIKAKUDO

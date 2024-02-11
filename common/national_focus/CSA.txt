@@ -282,6 +282,7 @@
 		bypass = {
 		}
 		completion_reward = {
+			add_threat = 5
 			set_cosmetic_tag = CSA_win_to_civil_war
 		}
 	}
@@ -700,6 +701,7 @@
 		bypass = {
 		}
 		completion_reward = {
+			add_threat = 5
 			create_wargoal = {
 				type = puppet_wargoal_focus
 				target = MEX
@@ -726,6 +728,7 @@
 		bypass = {
 		}
 		complete_tooltip = {
+			add_threat = 5
 			country_event = {
 				id = CSA.2
 				days = 1
@@ -736,7 +739,7 @@
 			}
 		}
 		completion_reward = {
-
+			add_threat = 5
 			country_event = {
 				id = CSA.2
 				days = 1
@@ -763,6 +766,7 @@
 		bypass = {
 		}
 		completion_reward = {
+			add_threat = 5
 			create_wargoal = {
 				type = puppet_wargoal_focus
 				target = ENG
@@ -786,6 +790,7 @@
 		bypass = {
 		}
 		completion_reward = {
+			add_threat = 5
 			create_wargoal = {
 				type = puppet_wargoal_focus
 				target = FRA

@@ -2168,6 +2168,7 @@ focus = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			add_political_power = 200
 			custom_effect_tooltip = unlock_buildings_slot_ENG_NF_tooltip
 		}
 	}
@@ -2220,6 +2221,7 @@ focus = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			add_political_power = 200
 			custom_effect_tooltip = unlock_Evacuation_from_abroad_ENG_NF_tooltip
 		}
 	}
@@ -2238,6 +2240,7 @@ focus = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
+			add_political_power = 200
 			custom_effect_tooltip = unlock_development_of_the_mainland_ENG_NF_tooltip
 		}
 	}
@@ -2302,7 +2305,7 @@ focus = {
 		y = 0
 		cost = 3
 		mutually_exclusive = {
-			focus = uk_b1
+			focus = ENG_Democratic_Defend_democracy
 		}
 		ai_will_do = {
 			factor = 10

@@ -20,8 +20,8 @@ ideas = {
 			removal_cost = -1
 			picture = SOV_factionalism_modifier
 			modifier = {
-				production_factory_max_efficiency_factor = -0.25
-				industrial_capacity_factory = -0.2
+				production_factory_max_efficiency_factor = -0.10
+				industrial_capacity_factory = -0.1
 				production_speed_buildings_factor = -0.05
 			}
 		}		
@@ -32,7 +32,7 @@ ideas = {
 		removal_cost = -1
 		picture = SOV_factionalism_modifier
 		modifier = {
-			production_factory_max_efficiency_factor = -0.2
+			production_factory_max_efficiency_factor = -0.1
 			industrial_capacity_factory = -0.1
 		}
 	}	
@@ -156,7 +156,8 @@ ideas = {
 	picture = SOV_stakhanovite_movement
 	modifier = {
 		industrial_factory_donations = 30
-		production_speed_industrial_complex_factor = 0.3
+		production_speed_industrial_complex_factor = 0.25
+		production_speed_buildings_factor = 0.05
 	}
     }
 	SOV_FACTORY_FACTOR7 = {  #工業化の進展7
@@ -167,7 +168,8 @@ ideas = {
 	picture = SOV_stakhanovite_movement
 	modifier = {
 		industrial_factory_donations = 35
-		production_speed_industrial_complex_factor = 0.35
+		production_speed_industrial_complex_factor = 0.25
+		production_speed_buildings_factor = 0.1
 	}
     }
 	SOV_FACTORY_FACTOR8 = {  #工業化の進展8
@@ -178,7 +180,8 @@ ideas = {
 	picture = SOV_stakhanovite_movement
 	modifier = {
 		industrial_factory_donations = 40
-		production_speed_industrial_complex_factor = 0.40
+		production_speed_industrial_complex_factor = 0.25
+		production_speed_buildings_factor = 0.15
 	}
     }
 	SOV_FACTORY_FACTOR9 = {  #工業化の進展9
@@ -189,7 +192,8 @@ ideas = {
 	picture = SOV_stakhanovite_movement
 	modifier = {
 		industrial_factory_donations = 50
-		production_speed_industrial_complex_factor = 0.5
+		production_speed_industrial_complex_factor = 0.25
+		production_speed_buildings_factor = 0.2
 	}
     }
 	SOV_FACTORY_FACTOR10 = {  #工業化の進展10
@@ -200,8 +204,8 @@ ideas = {
 	picture = SOV_stakhanovite_movement
 	modifier = {
 		industrial_factory_donations = 50
-		production_speed_industrial_complex_factor = 0.2
-		production_speed_arms_factory_factor = 0.3
+		production_speed_industrial_complex_factor = 0.15
+		production_speed_buildings_factor = 0.35
 	}
     }
 	SOV_FACTORY_FACTOR_ARMY = {  #軍需産業への転換
@@ -213,7 +217,8 @@ ideas = {
 	modifier = {
 		military_factory_donations = 50
 		production_lack_of_resource_penalty_factor = -0.5
-		industrial_capacity_factory = 0.3
+		production_factory_max_efficiency_factor = 0.1
+		production_speed_buildings_factor = 0.35
 	}
     }
 	SOV_FACTORY_FACTOR_MINKA = {  #経済の還元

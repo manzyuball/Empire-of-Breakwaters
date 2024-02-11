@@ -13,7 +13,6 @@ buildings = {
 		value = 1
 
 		show_modifier = yes
-		max_fuel_building = 1.5 #k
 		allied_build = yes
 
 		infrastructure_construction_effect = yes
@@ -59,7 +58,7 @@ buildings = {
 
 	supply_node = {
 		show_on_map = 1
-		base_cost = 20000
+		base_cost = 5000
 		provincial = yes
 		disabled_in_dmz = yes
 		icon_frame = 15
@@ -73,8 +72,8 @@ buildings = {
 	}	
 	
 	rail_way = {
-		base_cost = 170
-		per_level_extra_cost = 130
+		base_cost = 150
+		per_level_extra_cost = 100
 		provincial = yes
 		disabled_in_dmz = yes
 		icon_frame = 16
@@ -148,7 +147,7 @@ buildings = {
 		icon_frame = 9
 		anti_air = yes
 		disabled_in_dmz = yes
-		air_defence = 1
+		air_defence = 0
 		max_level = 5 # This is the max unlock level
 		damage_factor = 0.1
 		value = 1
@@ -183,7 +182,7 @@ buildings = {
 		fuel_silo = yes
 		
 		show_modifier = yes
-		max_fuel_building = 5000.0 #k
+		max_fuel_building = 25.0 #k
 	}
 
 	radar_station = {

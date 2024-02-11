@@ -93,7 +93,11 @@ focus = {
 	complete_tooltip = { }
 	completion_reward = {
 		set_politics = {
-			ruling_party = fascism
+			ruling_party = democratic
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.25
 			}
 			hidden_effect = {
 				AUS = { add_to_faction = POL }

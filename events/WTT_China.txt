@@ -161,22 +161,6 @@ country_event = {
 					division = "name = \"中戦車編制\" division_template = \"中戦車編制\" start_experience_factor = 0.32 start_equipment_factor = 1.0"
 					owner = CHI
 				}
-				create_unit = {
-					division = "name = \"中戦車編制\" division_template = \"中戦車編制\" start_experience_factor = 0.32 start_equipment_factor = 1.0"
-					owner = CHI
-				}
-				create_unit = {
-					division = "name = \"中戦車編制\" division_template = \"中戦車編制\" start_experience_factor = 0.32 start_equipment_factor = 1.0"
-					owner = CHI
-				}
-				create_unit = {
-					division = "name = \"中戦車編制\" division_template = \"中戦車編制\" start_experience_factor = 0.32 start_equipment_factor = 1.0"
-					owner = CHI
-				}
-				create_unit = {
-					division = "name = \"中戦車編制\" division_template = \"中戦車編制\" start_experience_factor = 0.32 start_equipment_factor = 1.0"
-					owner = CHI
-				}
 			}
         }
 	}

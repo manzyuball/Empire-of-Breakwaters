@@ -291,6 +291,7 @@ focus_tree = {
 		relative_position_id =AUS_Disenfranchisement_of_kings	
 		completion_reward = {
 			custom_effect_tooltip = AUS_balkan_balance_decision
+			add_threat = 5
 		}
 	}
 	focus = {

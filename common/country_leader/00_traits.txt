@@ -304,10 +304,10 @@ leader_traits = {
 	
 	SOVIET_BUHA = {
 		random = no
-		stability_factor = 0.05
+		stability_factor = 0.1
 		production_factory_max_efficiency_factor = 0.05
-		industrial_capacity_factory = 0.1
-		communism_acceptance = -20
+		industrial_capacity_factory = 0.05
+		communism_acceptance = -35
 
 		ai_will_do = {
 			factor = 1

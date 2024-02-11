@@ -724,12 +724,26 @@ AUS_balance_of_the_balkan_decisions = {
 		cost = 50
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		complete_effect = {
 			news_event = {
 				id = news.12
 				days = 1
+			}
+			if = {
+				limit = { 
+					is_ai = yes
+				}
+				load_oob = "AUS_1936"
+			}
+			if = {
+				limit = {
+					POL = {is_ai = yes }
+				}
+				POL = {
+					load_oob = "POL_1936"
+				}
 			}
 		}
 		remove_effect = {
@@ -773,7 +787,7 @@ AUS_balance_of_the_balkan_decisions = {
 		cost = 100
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		complete_effect = {
 			news_event = {
@@ -833,7 +847,7 @@ AUS_Vienna_Military_Academy_decision = {
 					create_corps_commander = {
 						name = "Franz Grillparzer"
 						picture = "GFX_portrait_DEN_carl_jacobsen"
-						traits = { }
+						traits = {  }
 						skill = 1
 						attack_skill = 3
 						defense_skill = 2

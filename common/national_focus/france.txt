@@ -657,6 +657,7 @@ focus = {
 
 	completion_reward = {
 		add_country_leader_trait = torotcy
+		add_threat = 5
 		hidden_effect = {
 			set_global_flag = CHI_syowww
 		}
@@ -716,6 +717,7 @@ focus = {
 	}
 
 	completion_reward = {
+		add_threat = 5
 		SPR = {
 			leave_faction = yes
 		}
@@ -753,6 +755,11 @@ focus = {
 	}
 	will_lead_to_war_with = AUS
 	completion_reward = {
+		add_threat = 5
+		add_timed_idea = {
+			idea = FRA_Austria
+			days = 35
+		}
 		declare_war_on ={
 			type = puppet_wargoal_focus
 			target = AUS
@@ -760,6 +767,12 @@ focus = {
 		news_event = {
 			id = news.16
 			days = 1
+		}
+		hidden_effect = {
+			news_event = {
+				id = news.20
+				days = 75
+			}
 		}
 	}
 }
@@ -817,6 +830,7 @@ focus = {
 	}
 	will_lead_to_war_with = ENG
 	completion_reward = {
+		add_threat = 5
 		news_event = {
 			id = news.18
 			days = 1
@@ -855,6 +869,7 @@ focus = {
 	}
 
 	completion_reward = {
+		add_threat = 5
 		declare_war_on = {
 				target = SWE
 				type = annex_everything
@@ -902,6 +917,7 @@ focus = {
 	}
 	will_lead_to_war_with = SOV
 	completion_reward = {
+		add_threat = 5
 		declare_war_on ={
 			type = puppet_wargoal_focus
 			target = SOV
@@ -1724,6 +1740,7 @@ focus = {
 	
 		completion_reward = {
 		set_cosmetic_tag = FRA_EUAw
+		add_threat = 5
 		if = {
 			limit = { GER = { is_ai = yes } }
 			GER = {

@@ -61,6 +61,28 @@ ideas = {
 				mobilization_speed = 0.4
 			}
 		}
+		FRA_Austria= {
+			picture = SPR_class_war
+			removal_cost = -1
+			targeted_modifier = {
+				tag = LAT
+				attack_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = AUS
+				attack_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = POL
+				attack_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = TUR
+				attack_bonus_against = 0.25
+			}
+			modifier = {
+			}
+		}
 		FRA_EGY = {
 			picture = isolation
 			removal_cost = -1

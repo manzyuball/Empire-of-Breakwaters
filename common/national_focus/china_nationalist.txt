@@ -583,7 +583,7 @@
 			add_resource = {
 				type = steel
 				amount = 34
-				state = 613
+				state = 964
 			}
 		}
 	}
@@ -605,7 +605,7 @@
 
 		completion_reward = {
 			add_stability = 0.05
-		620 = {
+		964 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
@@ -613,7 +613,7 @@
 				instant_build = yes
 			}
 		}
-		607 = {
+		963 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
@@ -746,14 +746,7 @@
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+			964 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -761,14 +754,7 @@
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+			963 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -1244,7 +1230,7 @@
 		}
 
 		completion_reward = {
-		613 = {	
+		964 = {	
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = arms_factory
@@ -1989,6 +1975,7 @@
 		}
 
 		completion_reward = {
+			add_threat = 5
 			CHI = {
 				create_wargoal = {
 					type = annex_everything
@@ -2022,6 +2009,7 @@
 		}
 
 		completion_reward = {
+			add_threat = 5
 				create_wargoal = {
 					type = annex_everything
 					target = MON
@@ -2050,9 +2038,6 @@
 		}
 
 		available = {
-			MON = {
-				exists = no
-			}
 			TAN = {
 				exists = no
 			}
@@ -2074,6 +2059,7 @@
 			is_major = yes
 			remove_ideas = CHI_BUNRETU
 			country_event = wtt_china.3
+			add_threat = 5
 			add_research_slot = 1
 			add_political_power = 250
 			add_stability = 0.15
@@ -2128,6 +2114,7 @@
 		}
 will_lead_to_war_with = JAP
 		completion_reward = {
+			add_threat = 5
 			declare_war_on = {
 				type = annex_everything
 				target = MAN
@@ -2213,6 +2200,7 @@ will_lead_to_war_with = JAP
 		}
 
 		completion_reward = {
+			add_threat = 5
 			set_rule = {
 				can_create_factions = yes
 				can_declare_war_without_wargoal_when_in_war = yes

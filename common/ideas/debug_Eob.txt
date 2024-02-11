@@ -1,0 +1,11 @@
+ideas = {
+	country = {
+		nav_movie = {
+			icon = generic_tank
+			modifier = {
+				industrial_capacity_dockyard = 1000
+				industrial_capacity_factory = 1000
+			}
+		}
+	}
+}

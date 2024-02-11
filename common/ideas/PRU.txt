@@ -258,6 +258,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				army_attack_factor = 0.1
+				heat_attrition = -0.25
 			}
 		}
 		PRU_KAGAKUSENSOU1 = {
@@ -269,6 +270,7 @@ ideas = {
 			modifier = {
 				army_attack_factor = 0.1
 				army_org_Factor = 0.15
+				heat_attrition = -0.25
 			}
 		}
 		PRU_SIWOSUUHAI = {
@@ -281,6 +283,7 @@ ideas = {
 				army_attack_factor = 0.2
 				army_org_Factor = 0.15
 				conscription = 0.05
+				heat_attrition = -0.25
 			}
 		}
 		PRU_SIWOSUUHAI1 = {
@@ -294,6 +297,7 @@ ideas = {
 				army_org_Factor = 0.15
 				conscription = 0.1
 				mobilization_speed = 0.25
+				heat_attrition = -0.25
 			}
 		}
 		PRU_SIWOSUUHAI2 = {
@@ -307,6 +311,7 @@ ideas = {
 				army_org_Factor = 0.2
 				conscription = 0.15
 				mobilization_speed = 0.5
+				heat_attrition = -0.25
 			}
 		}
 		PRU_SIWOSUUHAI3 = {
@@ -321,6 +326,7 @@ ideas = {
 				army_org_Factor = 0.2
 				conscription = 0.5
 				mobilization_speed = 0.5
+				heat_attrition = -0.25
 			}
 		}
 	}

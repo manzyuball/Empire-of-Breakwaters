@@ -16,7 +16,7 @@ SOV_T34_organization = {
 		equipment_bonus = {
 		}
 		production_bonus = {
-			production_capacity_factor = 0.35
+			production_capacity_factor = 1.0
 
 		}
 	}

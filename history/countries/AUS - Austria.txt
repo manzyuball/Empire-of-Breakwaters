@@ -21,7 +21,7 @@ if = {
 }
 set_air_oob = "AUS_1936_air_bba"
 
-add_manpower = 664210
+add_manpower = 1464210
 create_faction = "プラハ協定"
 add_to_faction = AUS
 add_to_faction = BUL

@@ -15,6 +15,7 @@ technologies = {
 			
 		set_technology = {
 			mechanised_infantry = 1
+			mechanised_infantry2 = 1
 		}
 
 		}
@@ -28,6 +29,35 @@ technologies = {
 		categories = {
 			armor
 		}
+	}
+	JAP_AIR_tech = {
+
+		allow = { always = no } #Only forcus
+
+		enable_equipments = {
+			small_plane_airframe_2_JAP
+			large_plane_airframe_3_JAP
+		}
+
+		on_research_complete = {
+		}
+
+		show_effect_as_desc = no
+
+		research_cost = 1
+		start_year = 1936
+
+
+		categories = {
+			light_air
+			light_fighter
+			heavy_air
+			cat_strategic_bomber
+			mio_cat_all_heavy_aircraft_and_modules
+		}
+
+
+			
 	}
 	SOV_Tank_tech = {
 

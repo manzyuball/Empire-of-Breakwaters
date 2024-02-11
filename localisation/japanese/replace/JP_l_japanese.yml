@@ -189,6 +189,7 @@
  #ディシジョン
  JAP_bouhatei:0 "防波堤の帝国"
  JAP_bouhatei_desc:0 "帝国は第一次世界大戦から今日までの数十年間、経済・外交・軍事\nあらゆる点において戦い続けてきた、そして戦いはいよいよ終末を迎える。\n最終決戦に挑む前に防波堤を修理し、迫りくる赤き洪水と戦う準備をしなければならない"
+ JAP_anti_submarine:0 "緊急対潜水艦艦隊創設"
  JAP_bou1:0 "円ブロックの強化"
  JAP_Zyouriku:0 "上陸作戦"
  JAP_ZYOURIKU_OK:0 "上陸作戦を計画した"
@@ -314,6 +315,9 @@
  JAP_Tank_tech:0 "日本の戦車研究"
  heavy_tank_chassis_4_JAP:0 "大和式戦車"
  tank_heavy_cannon_3_JAP:0 "発展型対戦車砲"
+ JAP_AIR_tech:0 "日式戦闘機と日式重爆撃機"
+ large_plane_airframe_3_JAP:0 "日式重爆撃機"
+ small_plane_airframe_2_JAP:0 "日式戦闘機"
  ship_heavy_battery_4_JAP:0 "46cm砲"
  ship_deck_space_JAP:0 "拡張デッキ"
  JAP_tank_tank_tank:0 "新型戦車師団の創設"

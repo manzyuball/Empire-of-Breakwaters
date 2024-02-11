@@ -5,8 +5,10 @@ state=
 	manpower = 4592537
 	
 	state_category = large_city
-	history=
-	{
+	resources={
+		steel=27.000
+	}
+	history={
 		owner = JAP
 		add_core_of = CHI
 		add_core_of = JAP
@@ -15,7 +17,7 @@ state=
 			infrastructure = 3 #was: 5
 			arms_factory = 2
 			air_base = 6
-			industrial_complex = 1
+			industrial_complex = 4
 			12068 = {
 				naval_base = 10
 			}

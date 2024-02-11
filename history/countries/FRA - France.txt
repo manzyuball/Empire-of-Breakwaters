@@ -27,7 +27,7 @@ set_popularities = {
 add_ideas = {
 	
 }
-create_faction = "第４インターナショナル"
+create_faction = "第四インターナショナル"
 declare_war_on = {
 	target = ALG
 	type = annex_everything
