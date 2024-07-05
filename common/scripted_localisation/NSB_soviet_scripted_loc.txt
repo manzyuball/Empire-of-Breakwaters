@@ -708,7 +708,7 @@
 # 	}
 # }
 
-# defined_text = { #Yes this is nonsense but atm gui loc needs to pass through scripted_loc in order to work with $$ 
+# defined_text = { #yes this is nonsense but atm gui loc needs to pass through scripted_loc in order to work with $$ 
 # 	name = GetAppropriateLastPurgeFocusName
 # 	text = {
 # 		localization_key = SOV_last_purge_focus_name

@@ -6327,7 +6327,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			915 = { # Yes, I know that there's a chance three different countries own these states but it's not worth the hassle trying to untangle that, so at least you'll get Bohuslän
+			915 = { # yes, I know that there's a chance three different countries own these states but it's not worth the hassle trying to untangle that, so at least you'll get Bohuslän
 				OWNER = {
 					country_event = {
 						id = AAT_norway.17

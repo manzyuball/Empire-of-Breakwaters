@@ -1,7 +1,9 @@
 CHI_nationalist_historical_plan = {
 	name = "Nationalist China historical plan"
 	desc = "Essentially historical behavior for Nationalist China"
-
+	enabled = {
+		is_historical_focus_on = yes
+	}
 	allowed = {
 		original_tag = CHI
 	}
@@ -34,7 +36,7 @@ CHI_nationalist_historical_plan = {
 		CHI_S34
 		CHI_H10
 		CHI_S35
-		CHI_S36
+		# CHI_S36
 		CHI_S37
 		CHI_S38
 	}

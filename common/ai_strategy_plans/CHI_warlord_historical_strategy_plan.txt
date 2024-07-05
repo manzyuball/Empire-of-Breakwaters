@@ -14,7 +14,7 @@ CHI_warlord_historical_plan_nationalist = {
 	}
 	abort = {
 		NOT = {
-			has_focus_tree = china_warlord_focus
+			# has_focus_tree = china_warlord_focus
 		}
 	}
 
@@ -23,8 +23,8 @@ CHI_warlord_historical_plan_nationalist = {
 
 	focus_factors = {
 		#Never attempt a take over
-		CHI_join_the_republican_government = 0
-		CHI_power_struggle = 0
+		# CHI_join_the_republican_government = 0
+		# CHI_power_struggle = 0
 	}
 
 	research = {

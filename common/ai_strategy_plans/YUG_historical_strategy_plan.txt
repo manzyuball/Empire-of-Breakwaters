@@ -4,7 +4,9 @@ YUG_historical = {
 	abort = {
 		
 	}
-
+	enable  ={
+		is_historical_focus_on = yes
+	}
 	ai_national_focuses = {
 		YUG_d1
 		YUG_d2

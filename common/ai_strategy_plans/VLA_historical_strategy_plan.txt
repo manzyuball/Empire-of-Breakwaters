@@ -6,25 +6,25 @@ FRA_historical_plan = {
 		original_tag = VLA
 	}
 	enable = {
-		OR = {
-			AND = {
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = VLA_ai_behavior
-					option = DEFAULT
-				}	
-			}
-			has_game_rule = {
-				rule = VLA_ai_behavior
-				option = DEMOCRATIC_HISTORICAL
-			}
-		}
+		# OR = {
+		# 	AND = {
+		# 		is_historical_focus_on = yes
+		# 		has_game_rule = {
+		# 			rule = VLA_ai_behavior
+		# 			option = DEFAULT
+		# 		}	
+		# 	}
+		# 	has_game_rule = {
+		# 		rule = VLA_ai_behavior
+		# 		option = DEMOCRATIC_HISTORICAL
+		# 	}
+		# }
 	}
 	abort = {
-		has_game_rule = {
-			rule = VLA_ai_behavior
-			option = DEFAULT
-		}
+		# has_game_rule = {
+		# 	rule = VLA_ai_behavior
+		# 	option = DEFAULT
+		# }
 	}
 
 	ai_national_focuses = {

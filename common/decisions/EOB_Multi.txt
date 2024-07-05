@@ -293,7 +293,7 @@ generic_Syoutyou = {
             }
             complete_effect = {
                 set_politics = {
-                    parties = {
+                    set_popularities={
                     democratic = {
                     popularity = 100
                     }
@@ -325,7 +325,7 @@ generic_Syoutyou = {
             }
             complete_effect = {
                 set_politics = {
-                    parties = {
+                    set_popularities={
                     democratic = {
                     popularity = 0
                     }
@@ -356,7 +356,7 @@ generic_Syoutyou = {
             }
             complete_effect = {
                 set_politics = {
-                    parties = {
+                    set_popularities={
                     democratic = {
                     popularity = 0
                     }
@@ -387,7 +387,7 @@ generic_Syoutyou = {
             }
             complete_effect = {
                 set_politics = {
-                    parties = {
+                    set_popularities={
                     democratic = {
                     popularity = 0
                     }

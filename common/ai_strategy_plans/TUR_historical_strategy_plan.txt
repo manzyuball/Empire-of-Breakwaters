@@ -32,10 +32,10 @@ TUR_historical_plan = {
 	}
 
 	ideas = {
-		TUR_hilmi_uran = 15
-		TUR_ismet_inonu = 10
-		TUR_sukru_saracoglu_prime_minister = 7
-		TUR_fevzi_cakmak = 5
+		# TUR_hilmi_uran = 15
+		# TUR_ismet_inonu = 10
+		# TUR_sukru_saracoglu_prime_minister = 7
+		# TUR_fevzi_cakmak = 5
 	}
 
 	# Keep small, as it is used as a factor for some things (such as research needs)

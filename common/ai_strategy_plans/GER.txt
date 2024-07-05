@@ -94,7 +94,7 @@ German_historical = {
 	}
 
 	focus_factors = {
-		GER_rhineland = 1.0
+		# GER_rhineland = 1.0
 	}
 
 }

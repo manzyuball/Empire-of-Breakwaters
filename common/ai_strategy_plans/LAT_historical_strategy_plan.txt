@@ -56,8 +56,8 @@ LAT_historical = {
 	}
 
 	focus_factors = {
-		LAT_formalize_baltic_entente = 0
-		LAT_beyond_the_baltic = 0.01
+		# LAT_formalize_baltic_entente = 0
+		# LAT_beyond_the_baltic = 0.01
 	}
 
 }

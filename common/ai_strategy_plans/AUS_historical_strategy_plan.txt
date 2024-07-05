@@ -13,22 +13,22 @@ AST_historical = {
 	}
 
 	ai_national_focuses = {
-		AUS_Disenfranchisement_of_kings		
-		close_alliance			#1930s
-		Developing_an_empire			#1941
-		Strengthening_local_infrastructure		#1937
-		Investing_in_building_companies			#1936
-		traditional_industry			#1938
-		AUS_Vienna_Military_Academy			#1930s
-		Reorganisation_of_the_armed_forces							#1938
-		Lessons_from_the_Great_War			#1939
-		balance_of_the_balkan		#1938
-		Czechoslovak_border_fortifications					#1937
-		Research_on_trench_warfare						#1940
-		Learning_from_our_friends_in_the_Alps								#1936
-		civil_defence						#1939
-		Establishment_of_arsenals						#1939
-		Support_for_military_companies	#1936
+		# AUS_Disenfranchisement_of_kings		
+		# close_alliance			#1930s
+		# Developing_an_empire			#1941
+		# Strengthening_local_infrastructure		#1937
+		# Investing_in_building_companies			#1936
+		# traditional_industry			#1938
+		# AUS_Vienna_Military_Academy			#1930s
+		# Reorganisation_of_the_armed_forces							#1938
+		# Lessons_from_the_Great_War			#1939
+		# balance_of_the_balkan		#1938
+		# Czechoslovak_border_fortifications					#1937
+		# Research_on_trench_warfare						#1940
+		# Learning_from_our_friends_in_the_Alps								#1936
+		# civil_defence						#1939
+		# Establishment_of_arsenals						#1939
+		# Support_for_military_companies	#1936
 	}
 
 	research = {
