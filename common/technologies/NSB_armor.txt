@@ -193,9 +193,9 @@ technologies = {
 				if = { #Italian templates
 					limit = {
 						original_tag = ITA
-						has_completed_focus = ITA_italian_tankettes
+						
 					}
-					ITA_add_improved_light_tank_templates = yes
+					
 				}
 			}
 
@@ -324,9 +324,9 @@ technologies = {
 			if = { #Italian templates
 				limit = {
 					original_tag = ITA
-					has_completed_focus = ITA_italian_tankettes
+					
 				}
-				ITA_add_improved_light_tank_templates = yes
+				
 			}
 			IF = { #Hungarian templates
 				limit = {

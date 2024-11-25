@@ -1,0 +1,301 @@
+anti_submarine_strategy_required_trigger = {
+	OR = {
+		AND = {
+			tag = ENG
+			not = { is_in_faction_with = GER }
+			GER = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		AND = {
+			tag = USA
+			not = { is_in_faction_with = GER }
+			GER = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		AND = {
+			tag = JAP
+			not = { is_in_faction_with = USA }
+		}
+		AND = {
+			has_war = yes
+			any_enemy_country = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		convoy_threat > 0.3
+	}
+}
+
+
+is_csa_state = {
+	OR = {
+		state = 366
+		state = 365
+		state = 367
+		state = 370
+		state = 362
+		state = 363
+		state = 364
+		state = 371
+		state = 375
+		state = 368
+		state = 372
+	}
+}
+
+has_naval_treaty_trigger = {
+	OR = {
+		has_idea = MTG_naval_treaty_adherent
+		has_idea = MTG_naval_treaty_cheating
+		has_idea = MTG_naval_treaty_adherent_reduced
+		has_idea = MTG_naval_treaty_cheating_reduced
+	}
+}
+
+ai_air_doctrine_tier_1_trigger = {
+	OR = {
+		has_tech = naval_strike_tactics
+		has_tech = direct_ground_support
+		has_tech = low_echelon_support
+	}
+}
+
+ai_air_doctrine_tier_2_trigger = {
+	OR = {
+		has_tech = multialtitude_flying
+		has_tech = hunt_and_destroy
+		has_tech = operational_destruction
+	}
+}
+ai_air_doctrine_tier_3_trigger = {
+	OR = {
+		has_tech = flying_fortress
+		has_tech = naval_strike_torpedo_tactics
+		has_tech = infiltration_bombing
+	}
+}
+
+ai_land_doctrine_tier_1_trigger = {
+	OR = {
+		has_tech = elastic_defence
+		has_tech = mobile_defence
+		has_tech = grand_assault
+		has_tech = defence_in_depth
+	}
+}
+
+#scripted triggers for Ethiopia
+
+# Is initial war still ongoing?
+has_lon_arms_embargo = {
+	custom_trigger_tooltip = {
+		#TODO Localize this properly
+		tooltip = lon_arms_resolution_tt
+		has_global_flag = second_italo_ethiopian_war_flag
+		FROM = { has_idea = league_of_nations_member_idea }
+	}	
+}
+
+# Is the government either anarchist or anarchist communist ? 
+has_anarchist_government = {
+	custom_trigger_tooltip = {
+		tooltip = has_anarchist_government_tt
+		OR = {
+			has_country_leader_ideology = anarchist_communism 
+			has_country_leader_ideology = anarchism 
+		}
+	}	
+}
+
+# Does Ethiopia (or anyone else that want to use this) have a Military Academy? 
+# Add triggers for those countries as needed 
+has_military_academy = {
+	IF = {
+		limit = { 
+			original_tag = ETH 
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_military_academy_tt 
+			has_completed_focus = ETH_ecole_militaire_haile_selassie_1er
+		}
+	}
+}
+
+
+# Does Ethiopia (or anyone else that want to use this) have a Naval Academy? 
+# Add triggers for those countries as needed 
+has_naval_academy = {
+	IF = {
+		limit = { 
+			original_tag = ETH 
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_naval_academy_tt 
+			has_completed_focus = ETH_asmera_naval_college
+		}
+	}
+}
+
+# Does Ethiopia (or anyone else that want to use this) have an Air Force Academy? 
+# Add triggers for those countries as needed 
+has_air_academy = {
+	IF = {
+		limit = { 
+			original_tag = ETH 
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_air_academy_tt 
+			has_completed_focus = ETH_debre_zeyit_air_force_training_center
+		}
+	}
+}
+# Does Ethiopia (or anyone else that want to use this) have an established Air Force? 
+# Add triggers for those countries as needed 
+has_air_force_command = {
+	IF = {
+		limit = { 
+			original_tag = ETH 
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_air_force_command_tt 
+			has_completed_focus = ETH_the_ethiopian_air_force
+		}
+	}
+}
+
+# War Escalation triggers
+has_war_escalation_level_1 = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_escalation_level_1_tt
+		check_variable = { ETH.ETH_war_escalation_level > 0 }
+	}
+}
+has_war_escalation_level_2 = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_escalation_level_2_tt
+		check_variable = { ETH.ETH_war_escalation_level > 1 }
+	}
+}
+has_war_escalation_level_3 = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_escalation_level_3_tt
+		check_variable = { ETH.ETH_war_escalation_level > 2 }
+	}
+}
+has_war_escalation_level_4 = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_escalation_level_4_tt
+		check_variable = { ETH.ETH_war_escalation_level > 3 }
+	}
+}
+has_war_escalation_level_5 = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_escalation_level_5_tt
+		check_variable = { ETH.ETH_war_escalation_level > 4 }
+	}
+}
+has_war_escalation_level_6 = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_escalation_level_6_tt
+		check_variable = { ETH.ETH_war_escalation_level > 5 }
+	}
+}
+has_war_escalation_level_7 = {
+	custom_trigger_tooltip = {
+		tooltip = has_war_escalation_level_7_tt
+		check_variable = { ETH.ETH_war_escalation_level > 6 }
+	}
+}
+
+league_of_nations_is_active = {
+	custom_trigger_tooltip = {
+		tooltip = league_of_nations_is_active_tt
+		NOT = { has_global_flag = LoN_disbanded_flag }
+		ETH = { NOT = { has_completed_focus = ETH_international_mediation}}
+	}
+}
+
+controls_all_ethiopian_core_states = {
+	custom_trigger_tooltip = {
+		tooltip = controls_ethiopian_cores_tt 
+		controls_state = 271 
+		controls_state = 835 
+		controls_state = 836 
+		controls_state = 837
+		controls_state = 838
+		controls_state = 839 
+		controls_state = 840
+		controls_state = 841 
+		controls_state = 842 
+		controls_state = 843 
+	}
+}
+
+controls_half_ethiopian_owned_states = {
+	custom_trigger_tooltip = {  
+		tooltip = controls_50_percent_of_territory
+		check_variable = { 
+			var = num_owned_controlled_states 
+			value = controlled_owned_50 
+			compare = greater_than_or_equals
+		}
+	}
+}
+controls_more_than_half_ethiopian_owned_states = {
+	custom_trigger_tooltip = {  
+		tooltip = controls_more_than_50_percent_of_territory
+		check_variable = { 
+			var = num_owned_controlled_states 
+			value = controlled_owned_50 
+			compare = greater_than
+		}
+	}
+}
+
+is_or_will_be_jimma = {
+	custom_trigger_tooltip = {  
+		tooltip = is_or_will_be_jimma_tt
+		OR = {
+			has_cosmetic_tag = jimma 
+			has_country_flag = jofir_rising_planned_flag
+		}
+	}
+}
+
+is_or_will_be_gojjam = {
+	custom_trigger_tooltip = {  
+		tooltip = is_or_will_be_gojjam_tt
+		OR = {
+			has_cosmetic_tag = gojjam 
+			has_country_flag = hayamot_rising_planned_flag
+		}
+	}
+}
+
+# East African Colony state ? 
+is_east_african_colony_state = {
+	custom_trigger_tooltip = {
+		tooltip = is_east_african_state_tt 
+		#TODO_TA update when air zone rework is in
+		OR = {
+			region = 17 # Ethiopian Highlands
+			region = 273 # Danakil 
+			region = 274 # Ogaden 
+			region = 217 # Lake Victoria
+			region = 216 # Upper Nile
+		}
+		NOT = { is_core_of = THIS.owner }
+	}
+
+}

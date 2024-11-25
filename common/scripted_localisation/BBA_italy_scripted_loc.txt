@@ -145,7 +145,7 @@
 # 	name = GetTankettesTooltip
 # 	text = {
 # 		trigger = {
-# 			has_completed_focus = ITA_italian_tankettes #Focus grants bonuses
+# 			 #Focus grants bonuses
 # 		}
 # 		localization_key = ITA_military_industry_dynamic_modifier_tankettes_tt
 # 	}
