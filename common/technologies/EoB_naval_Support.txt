@@ -1,56 +1,56 @@
-technologies = {
+# technologies = {
 
-	 ##  ###  #   #  ##  #   # ### #  # ###  ##
-	#  # #  # ## ## #  # ## ## #   ## #  #  #
-	#### ###  # # # #### # # # ##  # ##  #   #
-	#  # #  # #   # #  # #   # #   #  #  #    #
-	#  # #  # #   # #  # #   # ### #  #  #  ##
-
-
-	advanced_heavy_battery_JAP = {
-
-		research_cost = 1
-
-		start_year = 1944
-		allow = { always = no } #Only forcus
-		enable_equipment_modules = {
-			ship_heavy_battery_4_JAP
-		}
-
-		on_research_complete = {
-		}
+# 	 ##  ###  #   #  ##  #   # ### #  # ###  ##
+# 	#  # #  # ## ## #  # ## ## #   ## #  #  #
+# 	#### ###  # # # #### # # # ##  # ##  #   #
+# 	#  # #  # #   # #  # #   # #   #  #  #    #
+# 	#  # #  # #   # #  # #   # ### #  #  #  ##
 
 
-		ai_will_do = {
-			factor = 10
-		}
+# 	advanced_heavy_battery_JAP = {
 
-		categories = {
-			naval_equipment
-			ship_modules_tech
-		}
-	}
-	ship_deck_space_JAP = {
+# 		research_cost = 1
 
-		research_cost = 1
+# 		start_year = 1944
+# 		allow = { always = no } #Only forcus
+# 		enable_equipment_modules = {
+# 			ship_heavy_battery_4_JAP
+# 		}
 
-		start_year = 1944
-		allow = { always = no } #Only forcus
-		enable_equipment_modules = {
-			ship_deck_space_JAP
-		}
-
-		on_research_complete = {
-		}
+# 		on_research_complete = {
+# 		}
 
 
-		ai_will_do = {
-			factor = 10
-		}
+# 		ai_will_do = {
+# 			factor = 10
+# 		}
 
-		categories = {
-			naval_equipment
-			ship_modules_tech
-		}
-	}
-}
+# 		categories = {
+# 			naval_equipment
+# 			ship_modules_tech
+# 		}
+# 	}
+# 	ship_deck_space_JAP = {
+
+# 		research_cost = 1
+
+# 		start_year = 1944
+# 		allow = { always = no } #Only forcus
+# 		enable_equipment_modules = {
+# 			ship_deck_space_JAP
+# 		}
+
+# 		on_research_complete = {
+# 		}
+
+
+# 		ai_will_do = {
+# 			factor = 10
+# 		}
+
+# 		categories = {
+# 			naval_equipment
+# 			ship_modules_tech
+# 		}
+# 	}
+# }

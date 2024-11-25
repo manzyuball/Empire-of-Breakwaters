@@ -3,6 +3,8 @@
 generic_light_tanks = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
+
 	available_for = {}
 
 	roles = {
@@ -27,7 +29,7 @@ generic_light_tanks = {
 			type = light_tank_chassis_0
 			modules = {
 				main_armament_slot = tank_heavy_machine_gun
-				turret_type_slot = tank_light_three_man_tank_turret
+				turret_type_slot = tank_light_one_man_tank_turret
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_riveted_armor
 				engine_type_slot = tank_gasoline_engine
@@ -59,8 +61,9 @@ generic_light_tanks = {
 
 	basic_light_tank_default = {
 		priority = {
-			factor = 200
+			factor = 100
 			modifier = { 
+				has_tech = improved_light_tank_chassis 
 				factor = 0 #let's not waste XP here
 			}
 		}
@@ -80,7 +83,7 @@ generic_light_tanks = {
 						tank_heavy_machine_gun 
 					} 
 				}
-				turret_type_slot = tank_light_three_man_tank_turret
+				turret_type_slot = tank_light_one_man_tank_turret
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_riveted_armor
 				engine_type_slot = tank_gasoline_engine
@@ -118,8 +121,9 @@ generic_light_tanks = {
 
 	improved_light_tank_default = {
 		priority = {
-			factor = 100
+			factor = 10
 			modifier = { 
+				has_tech = advanced_light_tank_chassis 
 				factor = 0 #let's not waste XP here
 			}
 		}
@@ -247,6 +251,8 @@ generic_light_tanks = {
 generic_light_tank_destroyers = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
+
 	available_for = {}
 
 	roles = {
@@ -371,6 +377,7 @@ generic_light_tank_destroyers = {
 generic_light_tank_artillery = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
 
 	available_for = {}
 
@@ -517,7 +524,8 @@ generic_light_tank_artillery = {
 generic_light_tank_anti_air = {
 	category = land
 
-	
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
+
 	available_for = {}
 
 	roles = {
@@ -669,6 +677,7 @@ generic_light_tank_anti_air = {
 generic_medium_tanks = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
 
 	available_for = {}
 
@@ -677,22 +686,23 @@ generic_medium_tanks = {
 	}
 
 	priority = {
-		factor = 400
+		factor = 2000
 		modifier = {
-			num_of_factories < 50
+			num_of_factories < 100
 			factor = 0.5
 		}
 		modifier = {
 			num_of_factories < 50
-			factor = 0
+			factor = 0.5
 		}
 	}
 
 	basic_medium_tank_default = {
 		priority = {
-			factor = 600
+			factor = 100
 			modifier = { 
-				factor = 10 #let's not waste XP here
+				has_tech = improved_medium_tank_chassis
+				factor = 0 #let's not waste XP here
 			}
 		}
 
@@ -708,18 +718,18 @@ generic_medium_tanks = {
 						tank_small_cannon 
 					} 
 				}
-				turret_type_slot = tank_medium_three_man_tank_turret
+				turret_type_slot = tank_medium_two_man_tank_turret
 				suspension_type_slot = tank_bogie_suspension
-				armor_type_slot = tank_welded_armor
+				armor_type_slot = tank_riveted_armor
 				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = sloped_armor
-				special_type_slot_2 = smoke_launchers
-				special_type_slot_3 = tank_radio_module
-				special_type_slot_4 = tank_small_cannon 
+				special_type_slot_1 = empty
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 6
-				tank_nsb_armor_upgrade =  {
+				tank_nsb_engine_upgrade = 5
+				tank_nsb_armor_upgrade = {
 					base = 3
 					modifier = {
 						add = 2
@@ -750,9 +760,10 @@ generic_medium_tanks = {
 
 	improved_medium_tank_default = {
 		priority = {
-			factor = 600
+			factor = 100
 			modifier = { 
-				factor = 10 #let's not waste XP here
+				has_tech = advanced_medium_tank_chassis 
+				factor = 0 #let's not waste XP here
 			}
 		}
 
@@ -764,12 +775,15 @@ generic_medium_tanks = {
 					any_of = { 
 						tank_medium_cannon_2 
 						tank_medium_cannon 
-						tank_close_support_gun   
+						tank_close_support_gun 
+						tank_small_cannon_2 
+						tank_high_velocity_cannon 
 					} 
 				}
 				turret_type_slot = { 
 					any_of = { 
 						tank_medium_three_man_tank_turret 
+						tank_medium_two_man_tank_turret 
 					}
 				}
 				suspension_type_slot = tank_bogie_suspension
@@ -780,13 +794,13 @@ generic_medium_tanks = {
 					} 
 				}
 				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = tank_radio_2
-				special_type_slot_2 = secondary_turret_hmg
-				special_type_slot_3 = sloped_armor
-				special_type_slot_4 = smoke_launchers
+				special_type_slot_1 = tank_radio_module
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 9
+				tank_nsb_engine_upgrade = 5
 				tank_nsb_armor_upgrade = {
 					base = 4
 					modifier = {
@@ -823,7 +837,7 @@ generic_medium_tanks = {
 
 	advanced_medium_tank_default = {
 		priority = {
-			factor = 400
+			factor = 100
 		}
 
 		target_variant = {
@@ -835,10 +849,10 @@ generic_medium_tanks = {
 				suspension_type_slot = tank_torsion_bar_suspension
 				armor_type_slot = tank_welded_armor
 				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = tank_radio_3
+				special_type_slot_1 = tank_radio_module
 				special_type_slot_2 = sloped_armor
 				special_type_slot_3 = smoke_launchers
-				special_type_slot_4 = secondary_turret_hmg
+				special_type_slot_4 = empty
 			}
 			upgrades = {
 				tank_nsb_engine_upgrade = {
@@ -883,6 +897,7 @@ generic_medium_tanks = {
 generic_medium_tank_destroyer = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
 
 	available_for = {}
 
@@ -1079,6 +1094,7 @@ generic_medium_tank_destroyer = {
 generic_medium_tank_artillery = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
 
 	available_for = {}
 
@@ -1225,6 +1241,7 @@ generic_medium_tank_artillery = {
 generic_medium_tank_anti_air = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
 
 	available_for = {}
 
@@ -1377,6 +1394,7 @@ generic_medium_tank_anti_air = {
 generic_heavy_tanks = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
 
 	available_for = {}
 
@@ -1600,6 +1618,7 @@ generic_heavy_tanks = {
 generic_heavy_tank_destroyer = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
 
 	available_for = {}
 
@@ -1798,6 +1817,7 @@ generic_heavy_tank_destroyer = {
 generic_heavy_tank_artillery = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
 
 	available_for = {}
 
@@ -1944,6 +1964,8 @@ generic_heavy_tank_artillery = {
 
 generic_heavy_tank_anti_air = {
 	category = land
+
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
 
 	available_for = {}
 
@@ -2096,6 +2118,7 @@ generic_heavy_tank_anti_air = {
 generic_super_heavy_tanks = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
 
 	available_for = {}
 
@@ -2187,6 +2210,8 @@ generic_super_heavy_tanks = {
 generic_modern_tanks = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
+
 	available_for = {}
 
 	roles = {
@@ -2270,6 +2295,7 @@ generic_modern_tanks = {
 generic_modern_tank_destroyer = {
 	category = land
 
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
 
 	available_for = {}
 
@@ -2355,7 +2381,8 @@ generic_modern_tank_destroyer = {
 generic_amphibious_tanks = {
 	category = land
 
-	
+	blocked_for = {GER SOV ENG USA FRA JAP ITA HUN}
+
 	available_for = {}
 
 	roles = {

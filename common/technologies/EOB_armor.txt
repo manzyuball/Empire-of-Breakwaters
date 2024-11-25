@@ -1,50 +1,50 @@
-technologies = {
+# technologies = {
 
-	JAP_Tank_tech = {
+# 	JAP_Tank_tech = {
 
-		allow = { always = no } #Only forcus
+# 		allow = { always = no } #Only forcus
 
-		enable_equipments = {
-			heavy_tank_chassis_4_JAP
-		}
-		enable_equipment_modules = {
-			tank_heavy_cannon_3_JAP
-		}
+# 		enable_equipments = {
+# 			heavy_tank_chassis_4_JAP
+# 		}
+# 		enable_equipment_modules = {
+# 			tank_heavy_cannon_3_JAP
+# 		}
 
-		on_research_complete = {
+# 		on_research_complete = {
 		
-		}
+# 		}
 
-		show_effect_as_desc = no
+# 		show_effect_as_desc = no
 
-		research_cost = 1
-		start_year = 1936
+# 		research_cost = 1
+# 		start_year = 1936
 
 
-		categories = {
-			armor
-		}
-	}
-	SOV_Tank_tech = {
+# 		categories = {
+# 			armor
+# 		}
+# 	}
+# 	SOV_Tank_tech = {
 
-		allow = { always = no } #Only forcus
+# 		allow = { always = no } #Only forcus
 
-		enable_equipments = {
-			medium_tank_chassis_SOV_T34
-		}
+# 		enable_equipments = {
+# 			medium_tank_chassis_SOV_T34
+# 		}
 
-		on_research_complete = {
+# 		on_research_complete = {
 		
-		}
+# 		}
 
-		show_effect_as_desc = no
+# 		show_effect_as_desc = no
 
-		research_cost = 1
-		start_year = 1939
+# 		research_cost = 1
+# 		start_year = 1939
 
 
-		categories = {
-			armor
-		}
-	}
-}
+# 		categories = {
+# 			armor
+# 		}
+# 	}
+# }
