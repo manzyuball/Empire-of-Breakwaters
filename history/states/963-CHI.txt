@@ -9,7 +9,7 @@ state={
 		add_core_of = MAN
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 2
+			industrial_complex = 5
 			arms_factory = 2
 			synthetic_refinery = 2
 		}
