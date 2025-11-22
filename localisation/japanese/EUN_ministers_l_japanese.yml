@@ -1,0 +1,42 @@
+l_japanese:
+ # --- Leaders ---
+ EUN_lev_trotsky:0 "レフ・トロツキー"
+ EUN_lev_trotsky_desc:0 "「世界革命の精神的指導者」。彼は躊躇わない。欧州、そして世界に革命をもたらし、一国社会主義者共の巣、モスクワに凱旋するのだ。彼の望みは「全世界革命を実現する事」のみ。外交などという生ぬるい手段はフランス派閥には存在しない。"
+ 
+ EUN_otto_strasser:0 "オットー・シュトラッサー"
+ EUN_otto_strasser_desc:0 "「鋼鉄の意志、コンクリートの要塞」。ナショナル・ボルシェビズムの旗手であり、ドイツの再興と社会主義の融合を目指す。"
+ 
+ EUN_benito_mussolini:0 "ベニト・ムッソリーニ"
+ EUN_benito_mussolini_desc:0 "「プロレタリアートのドゥーチェ」。社会党を追放されず、党内の過激派を掌握して「国家サンディカリズム」を確立した。「ファシズム？ なんだそれは？」彼は赤いシャツを着てローマへ進軍した。彼にとって革命とは、イタリア民族が世界を支配するための手段に過ぎない。"
+ 
+ EUN_paul_henri_spaak:0 "ポール＝アンリ・スパーク"
+ EUN_paul_henri_spaak_desc:0 "「パンと自由を人々に！」。ベネルクスの穏健派リーダーであり、過激化する欧州連合の中で理性を保とうと奮闘している。"
+
+ # --- Characters / Ministers ---
+ EUN_jacques_doriot:0 "ジャック・ドリオ"
+ EUN_alphonse_juin:0 "アルフォンス・ジュアン"
+ EUN_ernst_thalmann:0 "エルンスト・テールマン"
+ EUN_heinz_guderian:0 "ハインツ・グデーリアン"
+ EUN_antonio_gramsci:0 "アントニオ・グラムシ"
+ EUN_italo_balbo:0 "イタロ・バルボ"
+
+ # --- Minister Ideas ---
+ EUN_PM_FRA:0 "トロツキー政権"
+ EUN_PM_GER:0 "シュトラッサー政権"
+ EUN_PM_ITA:0 "ムッソリーニ政権"
+ EUN_PM_BEN:0 "スパーク政権"
+
+ EUN_INT_FRA:0 "内務人民委員：ジャック・ドリオ"
+ EUN_INT_GER:0 "内務人民委員：革命警察"
+ EUN_INT_ITA:0 "内務人民委員：アントニオ・グラムシ"
+ EUN_INT_BEN:0 "内務人民委員：市民選挙管理委員会"
+
+ EUN_ECO_FRA:0 "経済人民委員：軍需計画局"
+ EUN_ECO_GER:0 "経済人民委員：エルンスト・テールマン"
+ EUN_ECO_ITA:0 "経済人民委員：産業復興機構(IRI)"
+ EUN_ECO_BEN:0 "経済人民委員：経済計画最高評議会"
+
+ EUN_MIL_FRA:0 "軍事人民委員：アルフォンス・ジュアン"
+ EUN_MIL_GER:0 "軍事人民委員：ハインツ・グデーリアン"
+ EUN_MIL_ITA:0 "軍事人民委員：イタロ・バルボ"
+ EUN_MIL_BEN:0 "軍事人民委員：ベネルクス防衛軍"

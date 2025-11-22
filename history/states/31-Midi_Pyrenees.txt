@@ -4,7 +4,7 @@ state={
 	name="STATE_31"
 
 	history={
-		owner = FRA
+		owner = EUN
 		victory_points = {
 			6766 5 
 		}
@@ -15,7 +15,7 @@ state={
 			air_base = 2
 			synthetic_refinery = 2
 		}
-		add_core_of = FRA
+		add_core_of = EUN
 
 	}
 
@@ -27,3 +27,4 @@ state={
 	state_category=city
 	local_supplies=0.000
 }
+

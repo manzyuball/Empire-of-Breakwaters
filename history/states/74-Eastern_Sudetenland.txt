@@ -21,7 +21,7 @@ state=
 		add_core_of = CZE
 
 		1938.9.30 = {
-			owner = GER
+			owner = EUN
 			controller = GER
 		}
 	}
@@ -31,3 +31,4 @@ state=
 
 	local_supplies=2.0 
 }
+

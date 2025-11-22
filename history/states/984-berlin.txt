@@ -5,7 +5,7 @@ state={
 
 	history={
 		owner = LAT
-		add_core_of = GER
+		add_core_of = EUN
 		add_core_of = LAT
 		victory_points = {
 			6521 45 
@@ -29,3 +29,4 @@ state={
 	state_category=megalopolis
 	local_supplies=0.000
 }
+

@@ -1,0 +1,121 @@
+characters = {
+    # --- French Faction ---
+    EUN_lev_trotsky = {
+        name = EUN_lev_trotsky
+        portraits = {
+            civilian = { large = "GFX_portrait_sov_lev_trotsky" }
+        }
+        country_leader = {
+            ideology = marxism
+            traits = { dictator } # World Revolution
+            desc = EUN_lev_trotsky_desc
+        }
+    }
+    EUN_jacques_doriot = {
+        name = EUN_jacques_doriot
+        portraits = {
+            civilian = { large = "GFX_portrait_fra_jacques_doriot" }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = EUN_INT_FRA
+            traits = { silent_workhorse }
+        }
+    }
+    EUN_alphonse_juin = {
+        name = EUN_alphonse_juin
+        portraits = {
+            army = { large = "GFX_portrait_fra_alphonse_juin" }
+        }
+        advisor = {
+            slot = army_chief
+            idea_token = EUN_MIL_FRA
+            traits = { army_chief_offensive_2 }
+        }
+    }
+
+    # --- German Faction ---
+    EUN_otto_strasser = {
+        name = EUN_otto_strasser
+        portraits = {
+            civilian = { large = "GFX_portrait_ger_otto_strasser" }
+        }
+        country_leader = {
+            ideology = nazism # National Bolshevism in this mod context? Using generic for now or mapping to mod ideology
+            traits = { dictator }
+            desc = EUN_otto_strasser_desc
+        }
+    }
+    EUN_ernst_thalmann = {
+        name = EUN_ernst_thalmann
+        portraits = {
+            civilian = { large = "GFX_portrait_ger_ernst_thalmann" }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = EUN_ECO_GER
+            traits = { captain_of_industry }
+        }
+    }
+    EUN_heinz_guderian = {
+        name = EUN_heinz_guderian
+        portraits = {
+            army = { large = "GFX_portrait_ger_heinz_guderian" }
+        }
+        advisor = {
+            slot = army_chief
+            idea_token = EUN_MIL_GER
+            traits = { army_chief_armored_2 }
+        }
+    }
+
+    # --- Italian Faction ---
+    EUN_benito_mussolini = {
+        name = EUN_benito_mussolini
+        portraits = {
+            civilian = { large = "GFX_portrait_ita_benito_mussolini" }
+        }
+        country_leader = {
+            ideology = fascism # Red Fascism / National Syndicalism
+            traits = { dictator }
+            desc = EUN_benito_mussolini_desc
+        }
+    }
+    EUN_antonio_gramsci = {
+        name = EUN_antonio_gramsci
+        portraits = {
+            civilian = { large = "GFX_portrait_ita_antonio_gramsci" }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = EUN_INT_ITA
+            traits = { ideologue }
+        }
+    }
+    EUN_italo_balbo = {
+        name = EUN_italo_balbo
+        portraits = {
+            civilian = { large = "GFX_portrait_ita_italo_balbo" }
+            army = { large = "GFX_portrait_ita_italo_balbo" }
+        }
+        advisor = {
+            slot = air_chief
+            idea_token = EUN_MIL_ITA
+            traits = { air_chief_reform_2 }
+        }
+    }
+
+    # --- Benelux Faction ---
+    EUN_paul_henri_spaak = {
+        name = EUN_paul_henri_spaak
+        portraits = {
+            civilian = { large = "GFX_portrait_bel_paul_henri_spaak" }
+        }
+        country_leader = {
+            ideology = socialism
+            traits = { }
+            desc = EUN_paul_henri_spaak_desc
+        }
+    }
+    # Generic/Organization Advisors for Benelux (No portraits needed, handled via Ideas)
+}

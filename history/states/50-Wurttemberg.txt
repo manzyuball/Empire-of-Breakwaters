@@ -7,7 +7,7 @@ state={
 
 	state_category = large_city
 	history={
-		owner = GER
+		owner = EUN
 		add_core_of = LAT
 		victory_points = {
 			9517 20
@@ -31,7 +31,7 @@ state={
 			air_base = 3
 
 		}
-		add_core_of = GER
+		add_core_of = EUN
 
 	}
 
@@ -43,3 +43,4 @@ state={
 
 	local_supplies=0.0 
 }
+

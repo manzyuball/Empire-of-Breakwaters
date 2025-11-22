@@ -7,7 +7,7 @@ state={
 	}
 
 	history={
-		owner = FRA
+		owner = EUN
 		add_core_of = LAT
 		victory_points = {
 			9559 10 
@@ -16,7 +16,7 @@ state={
 			infrastructure = 4
 			industrial_complex = 2
 		}
-		add_core_of = FRA
+		add_core_of = EUN
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 4
@@ -35,3 +35,4 @@ state={
 	state_category=city
 	local_supplies=14.000
 }
+

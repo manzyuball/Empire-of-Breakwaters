@@ -4,7 +4,7 @@ state={
 	name="STATE_24"
 
 	history={
-		owner = FRA
+		owner = EUN
 		victory_points = {
 			512 15 
 		}
@@ -13,7 +13,7 @@ state={
 			industrial_complex = 3
 			arms_factory = 2
 		}
-		add_core_of = FRA
+		add_core_of = EUN
 	}
 
 	provinces={
@@ -24,3 +24,4 @@ state={
 	state_category=large_town
 	local_supplies=15.000
 }
+

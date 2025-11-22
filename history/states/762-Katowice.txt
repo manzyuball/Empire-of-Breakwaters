@@ -19,9 +19,10 @@ state={
 			infrastructure = 3 #was: 6
 			industrial_complex = 2
 		}
-		add_core_of = GER
+		add_core_of = EUN
 		add_core_of = LAT
 	}
 
 	local_supplies=0.0 
 }
+

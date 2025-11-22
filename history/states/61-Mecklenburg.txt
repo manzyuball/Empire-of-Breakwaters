@@ -26,7 +26,7 @@ state={
 			}
 			air_base = 3
 		}
-		add_core_of = GER
+		add_core_of = EUN
 	}
 
 	provinces={
@@ -35,3 +35,4 @@ state={
 
 	local_supplies=3.0 
 }
+

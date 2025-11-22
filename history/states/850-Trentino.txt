@@ -14,7 +14,7 @@ state = {
 		buildings = {
 			infrastructure = 2 #was 3 before split
 		}
-		add_core_of = ITA
+		add_core_of = EUN
 		add_core_of = AUS
 	}
 
@@ -24,3 +24,4 @@ state = {
 
 	local_supplies = 0.0 
 }
+

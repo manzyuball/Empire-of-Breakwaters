@@ -19,7 +19,7 @@ state={
 				naval_base = 5
 			}
 		}
-		add_core_of = GER
+		add_core_of = EUN
 		add_core_of = POL
 		add_core_of = LAT
 	}
@@ -30,3 +30,4 @@ state={
 
 	local_supplies=0.0 
 }
+

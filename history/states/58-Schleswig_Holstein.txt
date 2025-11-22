@@ -23,7 +23,7 @@ state= {
 				naval_base = 8
 			}
 		}
-		add_core_of = GER
+		add_core_of = EUN
 	}
 
 	provinces= {
@@ -32,3 +32,4 @@ state= {
 
 	local_supplies=0.0 
 }
+

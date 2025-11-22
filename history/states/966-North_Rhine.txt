@@ -5,7 +5,7 @@ state={
 		529 3512 6469 6570 9482 
 	}
 	history={
-		owner = GER
+		owner = EUN
 		add_core_of = LAT
 		victory_points = {
 			6469 10 
@@ -15,10 +15,11 @@ state={
 			arms_factory = 1
 			industrial_complex = 1
 		}
-		add_core_of = GER
+		add_core_of = EUN
 	}
 	manpower=712131
 	state_category=metropolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
+

@@ -20,9 +20,9 @@ state={
 		}
 		add_core_of = AUS
 		1938.3.12 = {
-			owner = GER
+			owner = EUN
 			controller = GER
-			add_core_of = GER
+			add_core_of = EUN
 
 		}
 		1939.1.1 = {
@@ -43,3 +43,4 @@ state={
 	state_category=city
 	local_supplies=0.000
 }
+

@@ -1,0 +1,144 @@
+ideas = {
+	country = {
+        # --- Prime Ministers (Leader Traits handled via Character System, these are Ideas for the slot if needed, or just markers) ---
+        # In this system, PM is the Country Leader, so we might not need an Idea for them unless it's a "Head of Government" slot.
+        # But the user requested "4 posts". If PM is Country Leader, we don't need an Idea *unless* we want extra modifiers.
+        # Let's keep them as Ideas for the "Prime Minister" slot (if using a custom slot) or just apply them as national spirits.
+        # For simplicity, we will apply them as National Spirits representing the administration's focus.
+
+        EUN_PM_FRA = {
+            allowed = { always = no }
+            on_add = { log = "[EOB] Trotsky Administration" }
+            modifier = {
+                political_power_gain = 0.20
+                war_support_factor = 0.15
+                stability_factor = -0.15
+                justify_war_goal_time_factor = -0.25
+            }
+        }
+        EUN_PM_GER = {
+            allowed = { always = no }
+            modifier = {
+                research_speed_factor = 0.15
+                industrial_capacity_factory = 0.10
+                consumer_goods_factor = 0.05
+                political_power_gain = -0.1
+            }
+        }
+        EUN_PM_ITA = {
+            allowed = { always = no }
+            modifier = {
+                political_power_gain = 0.25
+                stability_factor = 0.10
+                surrender_limit = 0.1
+                army_defence_factor = -0.1
+            }
+        }
+        EUN_PM_BEN = {
+            allowed = { always = no }
+            modifier = {
+                stability_factor = 0.20
+                consumer_goods_factor = -0.10
+                war_support_factor = -0.30
+            }
+        }
+
+        # --- Interior Ministers ---
+        EUN_INT_FRA = { # Jacques Doriot
+            allowed = { always = no }
+            modifier = {
+                resistance_decay = 0.15
+                compliance_gain = -0.05
+                stability_factor = -0.05
+                political_power_gain = 0.05
+            }
+        }
+        EUN_INT_GER = { # Generic/Gestapo
+            allowed = { always = no }
+            modifier = {
+                foreign_subversive_activites = -0.3
+                stability_factor = 0.1
+            }
+        }
+        EUN_INT_ITA = { # Antonio Gramsci
+            allowed = { always = no }
+            modifier = {
+                political_power_gain = 0.15
+                ideology_drift_defence_factor = 0.2
+            }
+        }
+        EUN_INT_BEN = { # Civil Control Committee
+            allowed = { always = no }
+            modifier = {
+                stability_factor = 0.15
+                political_power_cost_factor = -0.1
+            }
+        }
+
+        # --- Economy Ministers ---
+        EUN_ECO_FRA = { # Generic French
+            allowed = { always = no }
+            modifier = {
+                production_speed_arms_factory_factor = 0.15
+                conversion_cost_civ_to_mil_factor = -0.2
+            }
+        }
+        EUN_ECO_GER = { # Ernst Thalmann
+            allowed = { always = no }
+            modifier = {
+                industrial_capacity_factory = 0.10
+                production_speed_industrial_complex_factor = 0.10
+                consumer_goods_factor = 0.05
+            }
+        }
+        EUN_ECO_ITA = { # Generic Italian
+            allowed = { always = no }
+            modifier = {
+                production_speed_dockyard_factor = 0.20
+                production_speed_infrastructure_factor = 0.1
+            }
+        }
+        EUN_ECO_BEN = { # Supreme Economic Council
+            allowed = { always = no }
+            modifier = {
+                trade_laws_cost_factor = -0.5
+                consumer_goods_factor = -0.05
+                production_speed_civ_factory_factor = 0.1
+            }
+        }
+
+        # --- Military Ministers ---
+        EUN_MIL_FRA = { # Alphonse Juin
+            allowed = { always = no }
+            modifier = {
+                army_attack_factor = 0.15
+                army_org_factor = 0.05
+                planning_speed = 0.1
+            }
+        }
+        EUN_MIL_GER = { # Heinz Guderian
+            allowed = { always = no }
+            modifier = {
+                armor_tech_research_speed_factor = 0.20
+                army_armor_attack_factor = 0.10
+                army_armor_speed_factor = 0.10
+            }
+        }
+        EUN_MIL_ITA = { # Italo Balbo
+            allowed = { always = no }
+            modifier = {
+                air_superiority_efficiency = 0.15
+                air_ace_generation_chance_factor = 0.2
+                air_cas_efficiency = 0.1
+            }
+        }
+        EUN_MIL_BEN = { # Benelux Defense Force
+            allowed = { always = no }
+            modifier = {
+                army_defence_factor = 0.15
+                entrenchment = 5
+                max_dig_in = 5
+            }
+        }
+    }
+}

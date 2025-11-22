@@ -20,7 +20,7 @@ state=
 			}
 		}
 		add_core_of = LAT
-		add_core_of = GER
+		add_core_of = EUN
 	}
 	provinces={
 		3288 	
@@ -28,3 +28,4 @@ state=
 
 	local_supplies=0.0 
 }
+

@@ -6,7 +6,7 @@ state={
 	}
 	
 	history={
-		owner = ITA
+		owner = EUN
 		victory_points = {
 			3780 15 
 		}
@@ -15,10 +15,11 @@ state={
 			arms_factory = 2
 			industrial_complex = 4
 		}
-		add_core_of = ITA
+		add_core_of = EUN
 	}
 	manpower=597704
 	state_category=metropolis
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
+

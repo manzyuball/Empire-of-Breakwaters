@@ -24,7 +24,7 @@ state={
 		add_claim_by = GRE
 
 		1939.4.12 = {
-			owner = ITA
+			owner = EUN
 			controller = ITA
 			remove_claim_by = ITA
 		}
@@ -32,3 +32,4 @@ state={
 
 	local_supplies=0.0 
 }
+

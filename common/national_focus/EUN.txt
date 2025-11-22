@@ -1,0 +1,29 @@
+focus_tree = {
+	id = EUN_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EUN
+		}
+	}
+	
+	default = no
+
+    focus = {
+        id = EUN_first_election
+        icon = GFX_goal_generic_political_pressure
+        x = 10
+        y = 0
+        cost = 10
+        completion_reward = {
+            add_political_power = 150
+            # Set French PM as confirmed
+            EUN_appoint_PM_FRA = yes
+            set_country_flag = EUN_PM_FRA_selected
+            # Trigger the rest of the cabinet selection
+            country_event = { id = eun_election.3 }
+        }
+    }
+}

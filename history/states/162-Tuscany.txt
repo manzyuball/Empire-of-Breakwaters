@@ -28,7 +28,7 @@ state={
 			}
 		}
 		add_core_of = TOS
-		add_core_of = ITA
+		add_core_of = EUN
 	}
 
 	provinces={
@@ -37,3 +37,4 @@ state={
 
 	local_supplies=0.0 
 }
+

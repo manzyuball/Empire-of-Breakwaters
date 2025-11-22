@@ -1,0 +1,54 @@
+add_namespace = eun_bad_events
+
+# Monopoly Event
+country_event = {
+    id = eun_bad_events.1
+    title = eun_bad_events.1.t
+    desc = eun_bad_events.1.d
+    picture = GFX_report_event_generic_parliament
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = eun_bad_events.1.a
+        add_stability = -0.2
+        add_political_power = -100
+        # Could trigger civil war or massive debuffs
+    }
+}
+
+# Paralysis Event
+country_event = {
+    id = eun_bad_events.2
+    title = eun_bad_events.2.t
+    desc = eun_bad_events.2.d
+    picture = GFX_report_event_generic_parliament
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = eun_bad_events.2.a
+        add_stability = -0.1
+        add_political_power = -50
+        add_research_speed = -0.1
+    }
+}
+
+# Dictatorship Event
+country_event = {
+    id = eun_bad_events.3
+    title = eun_bad_events.3.t
+    desc = eun_bad_events.3.d
+    picture = GFX_report_event_generic_parliament
+    
+    is_triggered_only = yes
+    
+    option = {
+        name = eun_bad_events.3.a
+        add_stability = -0.3
+        add_political_power = -200
+        add_war_support = -0.2
+        # Massive debuffs
+        add_ideas = EUN_dictatorship_penalty
+    }
+}

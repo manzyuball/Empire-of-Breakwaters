@@ -4,8 +4,8 @@ state={
 	name="STATE_735"
 
 	history={
-		owner = FRA
-		add_core_of = FRA
+		owner = EUN
+		add_core_of = EUN
 		victory_points = {
 			778 1 
 		}
@@ -33,3 +33,4 @@ state={
 	state_category=town
 	local_supplies=0.000
 }
+

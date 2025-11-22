@@ -19,9 +19,9 @@ state={
 		add_core_of = AUS
 
 		1938.3.12 = {
-			owner = GER
+			owner = EUN
 			controller = GER
-			add_core_of = GER
+			add_core_of = EUN
 		}
 	}
 
@@ -31,3 +31,4 @@ state={
 
 	local_supplies=12.0 
 }
+

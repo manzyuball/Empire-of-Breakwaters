@@ -14,7 +14,7 @@ state={
 			fuel_silo = 1
 
 		}
-		add_core_of = GER
+		add_core_of = EUN
 
 	}
 
@@ -26,3 +26,4 @@ state={
 	state_category=town
 	local_supplies=3.000
 }
+

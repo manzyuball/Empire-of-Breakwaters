@@ -16,7 +16,7 @@ state={
 
 			anti_air_building = 2
 		}
-		add_core_of = GER
+		add_core_of = EUN
 		add_core_of = LAT
 
 	}
@@ -25,3 +25,4 @@ state={
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
+

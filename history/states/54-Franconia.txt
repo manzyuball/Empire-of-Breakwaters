@@ -7,7 +7,7 @@ state={
 	state_category = city
 
 	history={
-		owner = GER
+		owner = EUN
 		add_core_of = LAT
 		buildings = {
 			infrastructure = 4
@@ -15,7 +15,7 @@ state={
 		victory_points = {
 			11544 10 
 		}
-		add_core_of = GER
+		add_core_of = EUN
 	}
 
 	provinces={
@@ -24,3 +24,4 @@ state={
 
 	local_supplies=0.0 
 }
+

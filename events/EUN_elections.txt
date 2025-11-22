@@ -1,0 +1,287 @@
+add_namespace = eun_election
+
+# --- Start of Congress ---
+country_event = {
+	id = eun_election.1
+	title = eun_election.1.t
+	desc = eun_election.1.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+    immediate = {
+        # Dictatorship Check (> 75)
+        if = {
+            limit = {
+                OR = {
+                    check_variable = { var = EOB_FRA_inf value = 75 compare = greater_than }
+                    check_variable = { var = EOB_GER_inf value = 75 compare = greater_than }
+                    check_variable = { var = EOB_ITA_inf value = 75 compare = greater_than }
+                    check_variable = { var = EOB_BEN_inf value = 75 compare = greater_than }
+                }
+            }
+            country_event = { id = eun_bad_events.3 } # Dictatorship Event
+        }
+    }
+
+	option = {
+		name = eun_election.1.a
+        trigger = {
+            NOT = {
+                OR = {
+                    check_variable = { var = EOB_FRA_inf value = 75 compare = greater_than }
+                    check_variable = { var = EOB_GER_inf value = 75 compare = greater_than }
+                    check_variable = { var = EOB_ITA_inf value = 75 compare = greater_than }
+                    check_variable = { var = EOB_BEN_inf value = 75 compare = greater_than }
+                }
+            }
+        }
+        country_event = { id = eun_election.2 days = 2 }
+	}
+}
+
+# --- Prime Minister Selection (Automatic based on Influence) ---
+country_event = {
+    id = eun_election.2
+    title = eun_election.2.t
+    desc = eun_election.2.d
+    picture = GFX_report_event_generic_parliament
+    
+    is_triggered_only = yes
+    
+    immediate = {
+        # Logic to determine highest influence
+        if = {
+            limit = {
+                check_variable = { var = EOB_FRA_inf value = EOB_GER_inf compare = greater_than_or_equals }
+                check_variable = { var = EOB_FRA_inf value = EOB_ITA_inf compare = greater_than_or_equals }
+                check_variable = { var = EOB_FRA_inf value = EOB_BEN_inf compare = greater_than_or_equals }
+            }
+            EUN_appoint_PM_FRA = yes
+            set_country_flag = EUN_PM_FRA_selected
+        }
+        else_if = {
+            limit = {
+                check_variable = { var = EOB_GER_inf value = EOB_FRA_inf compare = greater_than_or_equals }
+                check_variable = { var = EOB_GER_inf value = EOB_ITA_inf compare = greater_than_or_equals }
+                check_variable = { var = EOB_GER_inf value = EOB_BEN_inf compare = greater_than_or_equals }
+            }
+            EUN_appoint_PM_GER = yes
+            set_country_flag = EUN_PM_GER_selected
+        }
+        else_if = {
+            limit = {
+                check_variable = { var = EOB_ITA_inf value = EOB_FRA_inf compare = greater_than_or_equals }
+                check_variable = { var = EOB_ITA_inf value = EOB_GER_inf compare = greater_than_or_equals }
+                check_variable = { var = EOB_ITA_inf value = EOB_BEN_inf compare = greater_than_or_equals }
+            }
+            EUN_appoint_PM_ITA = yes 
+            set_country_flag = EUN_PM_ITA_selected
+        }
+        else = {
+            EUN_appoint_PM_BEN = yes
+            set_country_flag = EUN_PM_BEN_selected
+        }
+    }
+    
+    option = {
+        name = eun_election.2.a
+        country_event = { id = eun_election.3 days = 1 }
+    }
+}
+
+# --- Interior Minister Selection ---
+country_event = {
+    id = eun_election.3
+    title = eun_election.3.t
+    desc = eun_election.3.d
+    picture = GFX_report_event_generic_parliament
+    
+    is_triggered_only = yes
+    
+    # French Option
+    option = {
+        name = eun_election.3.fra
+        available = { check_variable = { var = EOB_FRA_inf value = 10 compare = gte } }
+        EUN_appoint_INT_FRA = yes
+        add_to_variable = { var = EOB_FRA_inf value = -10 }
+        country_event = { id = eun_election.4 days = 1 }
+    }
+    # German Option
+    option = {
+        name = eun_election.3.ger
+        available = { check_variable = { var = EOB_GER_inf value = 10 compare = gte } }
+        EUN_appoint_INT_GER = yes
+        add_to_variable = { var = EOB_GER_inf value = -10 }
+        country_event = { id = eun_election.4 days = 1 }
+    }
+    # Italian Option
+    option = {
+        name = eun_election.3.ita
+        available = { check_variable = { var = EOB_ITA_inf value = 10 compare = gte } }
+        EUN_appoint_INT_ITA = yes
+        add_to_variable = { var = EOB_ITA_inf value = -10 }
+        country_event = { id = eun_election.4 days = 1 }
+    }
+    # Benelux Option
+    option = {
+        name = eun_election.3.ben
+        available = { check_variable = { var = EOB_BEN_inf value = 10 compare = gte } }
+        EUN_appoint_INT_BEN = yes
+        add_to_variable = { var = EOB_BEN_inf value = -10 }
+        country_event = { id = eun_election.4 days = 1 }
+    }
+}
+
+# --- Economy Minister Selection ---
+country_event = {
+    id = eun_election.4
+    title = eun_election.4.t
+    desc = eun_election.4.d
+    picture = GFX_report_event_generic_parliament
+    
+    is_triggered_only = yes
+    
+    # French Option
+    option = {
+        name = eun_election.4.fra
+        available = { check_variable = { var = EOB_FRA_inf value = 10 compare = gte } }
+        EUN_appoint_ECO_FRA = yes
+        add_to_variable = { var = EOB_FRA_inf value = -10 }
+        country_event = { id = eun_election.5 days = 1 }
+    }
+    # German Option
+    option = {
+        name = eun_election.4.ger
+        available = { check_variable = { var = EOB_GER_inf value = 10 compare = gte } }
+        EUN_appoint_ECO_GER = yes
+        add_to_variable = { var = EOB_GER_inf value = -10 }
+        country_event = { id = eun_election.5 days = 1 }
+    }
+    # Italian Option
+    option = {
+        name = eun_election.4.ita
+        available = { check_variable = { var = EOB_ITA_inf value = 10 compare = gte } }
+        EUN_appoint_ECO_ITA = yes
+        add_to_variable = { var = EOB_ITA_inf value = -10 }
+        country_event = { id = eun_election.5 days = 1 }
+    }
+    # Benelux Option
+    option = {
+        name = eun_election.4.ben
+        available = { check_variable = { var = EOB_BEN_inf value = 10 compare = gte } }
+        EUN_appoint_ECO_BEN = yes
+        add_to_variable = { var = EOB_BEN_inf value = -10 }
+        country_event = { id = eun_election.5 days = 1 }
+    }
+}
+
+# --- Military Minister Selection ---
+country_event = {
+    id = eun_election.5
+    title = eun_election.5.t
+    desc = eun_election.5.d
+    picture = GFX_report_event_generic_parliament
+    
+    is_triggered_only = yes
+    
+    # French Option
+    option = {
+        name = eun_election.5.fra
+        available = { check_variable = { var = EOB_FRA_inf value = 10 compare = gte } }
+        EUN_appoint_MIL_FRA = yes
+        add_to_variable = { var = EOB_FRA_inf value = -10 }
+        country_event = { id = eun_election.6 days = 1 }
+    }
+    # German Option
+    option = {
+        name = eun_election.5.ger
+        available = { check_variable = { var = EOB_GER_inf value = 10 compare = gte } }
+        EUN_appoint_MIL_GER = yes
+        add_to_variable = { var = EOB_GER_inf value = -10 }
+        country_event = { id = eun_election.6 days = 1 }
+    }
+    # Italian Option
+    option = {
+        name = eun_election.5.ita
+        available = { check_variable = { var = EOB_ITA_inf value = 10 compare = gte } }
+        EUN_appoint_MIL_ITA = yes
+        add_to_variable = { var = EOB_ITA_inf value = -10 }
+        country_event = { id = eun_election.6 days = 1 }
+    }
+    # Benelux Option
+    option = {
+        name = eun_election.5.ben
+        available = { check_variable = { var = EOB_BEN_inf value = 10 compare = gte } }
+        EUN_appoint_MIL_BEN = yes
+        add_to_variable = { var = EOB_BEN_inf value = -10 }
+        country_event = { id = eun_election.6 days = 1 }
+    }
+}
+
+# --- Final Review (Monopoly/Paralysis Check) ---
+country_event = {
+    id = eun_election.6
+    title = eun_election.6.t
+    desc = eun_election.6.d
+    picture = GFX_report_event_generic_parliament
+    
+    is_triggered_only = yes
+    
+    immediate = {
+        # Monopoly Check (All same faction)
+        if = {
+            limit = {
+                OR = {
+                    AND = { has_idea = EUN_PM_FRA has_idea = EUN_INT_FRA has_idea = EUN_ECO_FRA has_idea = EUN_MIL_FRA }
+                    AND = { has_idea = EUN_PM_GER has_idea = EUN_INT_GER has_idea = EUN_ECO_GER has_idea = EUN_MIL_GER }
+                    AND = { has_idea = EUN_PM_ITA has_idea = EUN_INT_ITA has_idea = EUN_ECO_ITA has_idea = EUN_MIL_ITA }
+                    AND = { has_idea = EUN_PM_BEN has_idea = EUN_INT_BEN has_idea = EUN_ECO_BEN has_idea = EUN_MIL_BEN }
+                }
+            }
+            country_event = { id = eun_bad_events.1 } # Monopoly Event
+        }
+        # Paralysis Check (All different factions)
+        else_if = {
+            limit = {
+                # This is complex to check efficiently, so we check if NO faction has >= 2 posts
+                NOT = {
+                    OR = {
+                        AND = { has_idea = EUN_PM_FRA has_idea = EUN_INT_FRA }
+                        AND = { has_idea = EUN_PM_FRA has_idea = EUN_ECO_FRA }
+                        AND = { has_idea = EUN_PM_FRA has_idea = EUN_MIL_FRA }
+                        AND = { has_idea = EUN_INT_FRA has_idea = EUN_ECO_FRA }
+                        AND = { has_idea = EUN_INT_FRA has_idea = EUN_MIL_FRA }
+                        AND = { has_idea = EUN_ECO_FRA has_idea = EUN_MIL_FRA }
+                        
+                        AND = { has_idea = EUN_PM_GER has_idea = EUN_INT_GER }
+                        AND = { has_idea = EUN_PM_GER has_idea = EUN_ECO_GER }
+                        AND = { has_idea = EUN_PM_GER has_idea = EUN_MIL_GER }
+                        AND = { has_idea = EUN_INT_GER has_idea = EUN_ECO_GER }
+                        AND = { has_idea = EUN_INT_GER has_idea = EUN_MIL_GER }
+                        AND = { has_idea = EUN_ECO_GER has_idea = EUN_MIL_GER }
+
+                        AND = { has_idea = EUN_PM_ITA has_idea = EUN_INT_ITA }
+                        AND = { has_idea = EUN_PM_ITA has_idea = EUN_ECO_ITA }
+                        AND = { has_idea = EUN_PM_ITA has_idea = EUN_MIL_ITA }
+                        AND = { has_idea = EUN_INT_ITA has_idea = EUN_ECO_ITA }
+                        AND = { has_idea = EUN_INT_ITA has_idea = EUN_MIL_ITA }
+                        AND = { has_idea = EUN_ECO_ITA has_idea = EUN_MIL_ITA }
+
+                        AND = { has_idea = EUN_PM_BEN has_idea = EUN_INT_BEN }
+                        AND = { has_idea = EUN_PM_BEN has_idea = EUN_ECO_BEN }
+                        AND = { has_idea = EUN_PM_BEN has_idea = EUN_MIL_BEN }
+                        AND = { has_idea = EUN_INT_BEN has_idea = EUN_ECO_BEN }
+                        AND = { has_idea = EUN_INT_BEN has_idea = EUN_MIL_BEN }
+                        AND = { has_idea = EUN_ECO_BEN has_idea = EUN_MIL_BEN }
+                    }
+                }
+            }
+            country_event = { id = eun_bad_events.2 } # Paralysis Event
+        }
+    }
+    
+    option = {
+        name = eun_election.6.a
+    }
+}

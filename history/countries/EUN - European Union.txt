@@ -1,0 +1,62 @@
+capital = 16 # Paris
+set_oob = "FRA_1936_nsb" # Temporary OOB
+
+set_research_slots = 4
+set_stability = 0.6
+set_war_support = 0.5
+
+set_convoys = 500
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 24 # 2 years
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 0
+	fascism = 0
+	communism = 100
+	neutrality = 0
+}
+
+# Initialize Faction Influence
+set_variable = { var = EOB_FRA_inf value = 50 }
+set_variable = { var = EOB_GER_inf value = 20 }
+set_variable = { var = EOB_ITA_inf value = 10 }
+set_variable = { var = EOB_BEN_inf value = 35 }
+
+add_ideas = {
+    # Will add faction ideas later
+}
+
+# Recruit Characters
+recruit_character = EUN_lev_trotsky
+recruit_character = EUN_jacques_doriot
+recruit_character = EUN_alphonse_juin
+recruit_character = EUN_otto_strasser
+recruit_character = EUN_ernst_thalmann
+recruit_character = EUN_heinz_guderian
+recruit_character = EUN_benito_mussolini
+recruit_character = EUN_antonio_gramsci
+recruit_character = EUN_italo_balbo
+recruit_character = EUN_paul_henri_spaak
+
+# Initial Leader (Trotsky - French Faction)
+promote_character = EUN_lev_trotsky
+
+# Starting Tech (Generic Western)
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_artillery = 1
+	basic_train = 1
+	electronic_mechanical_engineering = 1
+	basic_machine_tools = 1
+	construction1 = 1
+}

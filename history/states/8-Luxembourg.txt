@@ -12,14 +12,14 @@ state=
 
 	history=
 	{
-		owner = FRA
+		owner = EUN
 		buildings = {
 			infrastructure = 3
 			arms_factory = 2
 			industrial_complex = 1
 		}
 		victory_points = { 6583 5 }
-		add_core_of = FRA
+		add_core_of = EUN
 	}
 
 	provinces=
@@ -28,3 +28,4 @@ state=
 
 	local_supplies=0.0 
 }
+

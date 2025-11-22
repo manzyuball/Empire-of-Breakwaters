@@ -15,7 +15,7 @@ state={
 			}
 		}
 		add_core_of = TOS
-		add_core_of = ITA
+		add_core_of = EUN
 	}
 
 	provinces={
@@ -26,3 +26,4 @@ state={
 	state_category=large_city
 	local_supplies=0.000
 }
+

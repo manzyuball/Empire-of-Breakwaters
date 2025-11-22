@@ -7,13 +7,13 @@ state={
 		victory_points = {
 			651 1 
 		}
-		owner = FRA
+		owner = EUN
 		buildings = {
 			infrastructure = 3
 			arms_factory = 2
 			industrial_complex = 2
 		}
-		add_core_of = FRA
+		add_core_of = EUN
 
 	}
 
@@ -25,3 +25,4 @@ state={
 	state_category=town
 	local_supplies=0.000
 }
+

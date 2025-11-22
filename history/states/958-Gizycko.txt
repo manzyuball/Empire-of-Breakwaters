@@ -11,7 +11,7 @@ state={
 
 		}
 		add_core_of = LAT
-		add_core_of = GER
+		add_core_of = EUN
 
 	}
 
@@ -23,3 +23,4 @@ state={
 	state_category=city
 	local_supplies=0.000
 }
+

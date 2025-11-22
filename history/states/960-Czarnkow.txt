@@ -17,7 +17,7 @@ state={
 			}
 
 		}
-		add_core_of = GER
+		add_core_of = EUN
 		add_core_of = LAT
 
 	}

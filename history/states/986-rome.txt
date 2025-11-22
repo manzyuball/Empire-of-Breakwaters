@@ -14,7 +14,7 @@ state={
 			industrial_complex = 4
 		}
 		add_core_of = PAP
-		add_core_of = ITA
+		add_core_of = EUN
 
 	}
 	manpower=1002142
@@ -22,3 +22,4 @@ state={
 	local_supplies=0.000
 	state_category= city
 }
+
