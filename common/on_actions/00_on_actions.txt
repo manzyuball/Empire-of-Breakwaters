@@ -49,63 +49,6 @@ on_actions = {
 				goto_state = FROM
 				set_country_flag = achievement_has_dropped_nuke
 			}
-			if = {
-				limit = {
-					FROM = { state = 378 }
-				}
-				set_country_flag = achievement_has_nuked_california
-			}
-			if = {
-				limit = {
-					FROM = { is_core_of = AST }
-				}
-				set_country_flag = achievement_AST_nuke_self
-			}
-			if = {
-				limit = {
-					tag = SWE
-					FROM = {
-						is_owned_by = DEN
-						is_core_of = DEN
-					}
-				}
-				set_country_flag = achievement_med_plutonium
-			}
-
-			if = { #Med Plutonium 2 
-				limit = {
-					tag = DEN
-					FROM = {
-						is_owned_by = SWE
-						is_core_of = SWE
-					}
-				}
-				set_country_flag = achievement_med_plutonium_2
-			}
-			if = {
-				limit = {
-					FROM = {
-						is_core_of = JAP
-					}
-					has_global_flag = JAP_nuke_1
-					NOT = {
-						has_global_flag = JAP_nuke_2
-					}
-				}
-				set_global_flag = JAP_nuke_2
-			}
-			if = {
-				limit = {
-					FROM = {
-						is_core_of = JAP
-					}
-					NOT = {
-						has_global_flag = JAP_nuke_1
-					}
-				}
-				set_global_flag = JAP_nuke_1
-			}
-
 			news_event = { id = nuke_dropped.2 days = 1}
 			news_event = { id = nuke_dropped.3 days = 1}
 			news_event = { id = nuke_dropped.4 days = 1}
@@ -132,21 +75,6 @@ on_actions = {
 
 	on_leave_faction = {
 		effect = {
-			if = {
-				limit = {
-					has_country_flag = TO_joined_brussels_treaty
-				}
-				clr_country_flag = TO_joined_brussels_treaty
-			}
-			if = {
-				limit = {
-					AND = {
-						tag = CAN
-						NOT = { has_dlc = "Together for Victory" }
-					}
-				}
-				abandon_colony_tag = yes
-			}
 			FROM = {
 				add_opinion_modifier = {
 					modifier = faction_traitor
@@ -170,24 +98,6 @@ on_actions = {
 			if = {
 				limit = {
 					FROM = { is_puppet = no }
-					OR = {
-						AND = {
-							tag = MEX
-							FROM = {
-								capital_scope = {
-									NOT = { is_on_continent = south_america }
-								}
-							}
-						}
-						AND = {
-							FROM = {
-								tag = MEX
-							}
-							capital_scope = {
-								NOT = { is_on_continent = south_america }
-							}
-						}
-					}
 				}
 				set_country_flag = achievement_failed_sunset_invasion
 			}
@@ -357,30 +267,6 @@ on_actions = {
 		}
 	}
 
-	# root country that invades
-	# scope state that is invaded
-	# from scope state that the invasion started
-	on_naval_invasion = {
-	 	effect = {
-		 	if = {
-				limit = {
-					ROOT = {
-						divisions_in_state = {
-							 unit = marine_commando
-							 size > 0
-							 state = PREV
-						}
-						 has_tech = marines_commandos_demolition 
-					}
-					NOT = { has_state_flag = marines_commando_effect }
-					OWNER = { NOT = { tag = ROOT } }
-				}
-				SF_marine_demoliton_effect = yes # Note that the state flag condition is not preventing it from doing 1 damage per division 
-			}
-	 	}
-	}
-
-
 	# root country that paradrops
 	# scope state that is paradroped into
 	# from scope state that the paradrop started
@@ -451,71 +337,4 @@ on_actions = {
 		}
 	}
 
-	on_peaceconference_started = {
-		effect = {
-			if = {
-				limit = {
-					295 = { has_state_flag = prevent_auto_flip_after_capitulation }
-				}
-				295 = { clr_state_flag = prevent_auto_flip_after_capitulation }
-			}
-
-			if = {
-				limit = {
-					538 = { has_state_flag = prevent_auto_flip_after_capitulation }
-				}
-				538 = { clr_state_flag = prevent_auto_flip_after_capitulation }
-			}
-
-			if = {
-				limit = {
-					888 = { has_state_flag = prevent_auto_flip_after_capitulation }
-				}
-				888 = { clr_state_flag = prevent_auto_flip_after_capitulation }
-			}
-
-			if = {
-				limit = {
-					889 = { has_state_flag = prevent_auto_flip_after_capitulation }
-				}
-				889 = { clr_state_flag = prevent_auto_flip_after_capitulation }
-			}
-
-			if = {
-				limit = {
-					890 = { has_state_flag = prevent_auto_flip_after_capitulation }
-				}
-				890 = { clr_state_flag = prevent_auto_flip_after_capitulation }
-			}
-
-
-			if = {
-				limit = {
-					769 = { has_state_flag = prevent_auto_flip_after_capitulation }
-				}
-				769 = { clr_state_flag = prevent_auto_flip_after_capitulation }
-			}
-
-			if = {
-				limit = {
-					768 = { has_state_flag = prevent_auto_flip_after_capitulation }
-				}
-				768 = { clr_state_flag = prevent_auto_flip_after_capitulation }
-			}
-
-			if = {
-				limit = {
-					718 = { has_state_flag = prevent_auto_flip_after_capitulation }
-				}
-				718 = { clr_state_flag = prevent_auto_flip_after_capitulation }
-			}
-
-			if = {
-				limit = {
-					635 = { has_state_flag = prevent_auto_flip_after_capitulation }
-				}
-				635 = { clr_state_flag = prevent_auto_flip_after_capitulation }
-			}
-		}
-	}
 }

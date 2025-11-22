@@ -6,7 +6,7 @@ state={
 	
 	state_category = pastoral
 	resources = {
-		COAL = 32
+		coal = 32
 	}
 	history={
 		owner = VLA

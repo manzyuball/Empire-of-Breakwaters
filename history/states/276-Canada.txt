@@ -4,7 +4,7 @@ state={
 	name="STATE_276" # Southern Ontario
 	manpower = 3117017
 	resources={
-		COPPER=41
+		
 	}
 	state_category = large_city
 	

@@ -6,7 +6,7 @@ state={
 	
 	state_category = rural
 	resources={
-		COPPER=19
+		
 	}
 
 	history={

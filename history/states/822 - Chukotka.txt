@@ -2,7 +2,7 @@ state = {
 	id = 822
 	name = "STATE_822" #Chukotka
 	resources = {
-		COAL = 5
+		coal = 5
 	}
 	history = {
 		owner = VLA

@@ -5,7 +5,7 @@ state={
 		375 3367 3499 9456 11219 
 	}
 	resources = {
-		COAL = 23
+		coal = 23
 	}
 	history={
 		owner = LAT

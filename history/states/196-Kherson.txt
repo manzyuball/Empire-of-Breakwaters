@@ -4,7 +4,7 @@ state={
 	name="STATE_196"
 	resources={
 		chromium=15.000
-		COAL = 21
+		coal = 21
 	}
 
 	history={

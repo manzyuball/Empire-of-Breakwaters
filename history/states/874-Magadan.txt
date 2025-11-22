@@ -6,7 +6,7 @@ state = {
 	state_category = pastoral
 	impassable = yes
 	resources = {
-		COAL = 4
+		coal = 4
 	}
 	history = {
 		victory_points = { 

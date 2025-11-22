@@ -1,10 +1,6 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			every_country = {
-				limit = { tag = FRA }
-				country_event = { id = National_introduction.1 }
-			}
 		}
 	}
 }
