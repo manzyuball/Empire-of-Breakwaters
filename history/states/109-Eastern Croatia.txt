@@ -5,6 +5,7 @@ state={
 
 	history={
 		owner = AUS
+add_core_of = AUS
 		buildings = {
 			infrastructure = 3
 			industrial_complex =3
@@ -15,7 +16,7 @@ state={
 		}
 		add_core_of = YUG
 		add_core_of = CRO
-		add_core_of = AUS
+		add_core_of = HUN
 
 	}
 

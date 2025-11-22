@@ -5,12 +5,11 @@ state={
 	state_category = pastoral
 
 	history={
-		owner = KEN
+		owner = ENG
 		buildings = {
 			infrastructure = 1
 
 		}
-		add_core_of = KEN
 	}
 
 	provinces={

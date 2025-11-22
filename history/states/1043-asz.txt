@@ -7,8 +7,8 @@ state={
 		owner = ARG
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 7
-			dockyard = 4
+			industrial_complex = 4
+			dockyard = 2
 			12364 = {
 				naval_base = 10
 				bunker = 3
@@ -34,7 +34,7 @@ state={
 	provinces={
 		12364 12379 14192 14193 14194 14195 14196 14197 14198 
 	}
-	manpower=4321785
+	manpower=9824296
 	buildings_max_level_factor=1.000
 	state_category=megalopolis
 	local_supplies=0.000

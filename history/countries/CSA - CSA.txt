@@ -4,10 +4,27 @@ oob = "CSA_fascist_uprising"
 
 set_research_slots = 4
 set_stability = 0.75
-set_war_support = 95
+set_war_support = 0.6
 add_command_power = 20
 add_political_power = 450
 # Starting tech
+recruit_character = USA_george_s_patton
+recruit_character = USA_omar_bradley
+recruit_character = USA_dwight_d_eisenhower
+recruit_character = USA_geoffrey_keyes
+recruit_character = USA_lucian_truscott
+recruit_character = USA_mark_clark
+recruit_character = USA_douglas_macarthur
+recruit_character = USA_walter_krueger
+recruit_character = USA_lloyd_fredendall
+recruit_character = USA_leslie_mcnair
+recruit_character = USA_jonathan_wainwright
+recruit_character = USA_russell_hartle
+recruit_character = USA_leonard_gerow
+recruit_character = USA_edward_brooks
+recruit_character = USA_clarence_huebner
+recruit_character = USA_alexander_patch
+recruit_character = USA_william_simpson
 
 recruit_character = CSA_georges_vereecken
 recruit_character = CSA_raoul_overstraeten
@@ -29,10 +46,10 @@ recruit_character = CSA_mak
 recruit_character = CSA_yvan_gerard
 add_ideas = {
 	#laws
-	Total_Mobilization
-	Service by_Requirement
-	CSA1
+	war_economy
+	limited_conscription
 }
+add_manpower = 1550000
 
 set_convoys = 100
 
@@ -42,11 +59,11 @@ set_politics = {
 	ruling_party = fascism
 	last_election = "1932.11.8"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 set_popularities = {
-	democratic = 20
-	fascism = 60
+	democratic = 40
+	fascism = 40
 	communism = 20
 }
 # Starting tech
@@ -128,6 +145,8 @@ set_technology = {
 	engines_2 = 1
 	aircraft_construction = 1
 	range_improvements = 1
+
+	naval_buildings_tech = 1
 
 	fuel_silos = 1
 	synth_oil_experiments = 1

@@ -1457,11 +1457,11 @@ characters={
 			allowed = {
 				original_tag = ENG
 			}
-			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
-			}
+			# available = {
+			# 	NOT = {
+			# 		has_completed_focus = ENG_eliminate_the_upper_class
+			# 	}
+			# }
 			traits = {
 				navy_amphibious_assault_3
 			}
@@ -1507,9 +1507,9 @@ characters={
 			slot = high_command
 			idea_token = ENG_david_stirling
 			ledger = army
-			available = {
-				has_completed_focus = ENG_special_air_service
-			}
+			# available = {
+			# 	has_completed_focus = ENG_special_air_service
+			# }
 			allowed = {
 				original_tag = ENG
 			}
@@ -1543,14 +1543,14 @@ characters={
 			slot = political_advisor
 			idea_token = clement_attlee
 			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_completed_focus  = ENG_a_change_in_course 
-					}
-				}
+				# if  = {
+				# 	limit  = {
+				# 		has_dlc = "Man the Guns"
+				# 	}
+				# 	NOT = {
+				# 		has_completed_focus  = ENG_a_change_in_course 
+				# 	}
+				# }
 				if  = {
 					limit  = {
 						has_dlc = "Man the Guns"
@@ -1635,9 +1635,9 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					NOT = {
-						has_completed_focus  = ENG_no_further_appeasement 
-					}
+					# NOT = {
+					# 	has_completed_focus  = ENG_no_further_appeasement 
+					# }
 					has_government  = democratic 
 				}
 			}
@@ -1650,10 +1650,10 @@ characters={
 			ai_will_do  = {
 				factor  = 2.000
 				modifier  = {
-					has_country_leader = {
-						character = ENG_stanley_baldwin
-						ruling_only = yes 
-					}
+					# has_country_leader = {
+					# 	character = ENG_stanley_baldwin
+					# 	ruling_only = yes 
+					# }
 					factor  = 10.000
 				}
 			}
@@ -2110,7 +2110,7 @@ characters={
 			idea_token = ENG_corgis_1
 			available  = {
 				has_government  = neutrality 
-				has_completed_focus  = ENG_the_kings_party 
+				# has_completed_focus  = ENG_the_kings_party 
 				has_country_leader  = {
 					name = "Elizabeth II"
 					ruling_only  = yes 
@@ -2147,7 +2147,7 @@ characters={
 			idea_token = ENG_corgis_2
 			available  = {
 				has_government  = neutrality 
-				has_completed_focus  = ENG_the_kings_party 
+				# has_completed_focus  = ENG_the_kings_party 
 				has_country_leader  = {
 					name = "Elizabeth II"
 					ruling_only  = yes 
@@ -2184,7 +2184,7 @@ characters={
 			idea_token = ENG_corgis_3
 			available  = {
 				has_government  = neutrality 
-				has_completed_focus  = ENG_the_kings_party 
+				# has_completed_focus  = ENG_the_kings_party 
 				has_country_leader  = {
 					name = "Elizabeth II"
 					ruling_only  = yes 
@@ -2246,7 +2246,7 @@ characters={
 				has_intelligence_agency  = yes 
 				custom_trigger_tooltip  = {
 					tooltip  = cyptology_tooltip_tt
-					has_done_agency_upgrade  = upgrade_form_department 
+					# has_done_agency_upgrade  = upgrade_form_department 
 				}
 			}
 			ai_will_do  = {

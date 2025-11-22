@@ -4,7 +4,7 @@ state={
 	name="STATE_984"
 
 	history={
-		owner = GER
+		owner = LAT
 		add_core_of = GER
 		add_core_of = LAT
 		victory_points = {

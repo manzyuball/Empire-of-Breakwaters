@@ -107,7 +107,10 @@ POL_KAKUDAI = {
 			FROM = {	
                 any_neighbor_state = { is_core_of = POL }
 				NOT = { is_core_of = POL }
-				NOT = { is_claimed_by = POL }
+				is_claimed_by = POL
+				NOT = {
+					is_owned_by = SOV
+				}
 			}
 		}
 		ai_will_do = {
@@ -115,7 +118,7 @@ POL_KAKUDAI = {
 		}
 		state_target = yes
 		on_map_mode = map_and_decisions_view 
-		target_array = owned_states
+		#target_array = any_neighbor_state
 		cost = 25
 		fire_only_once = yes
 		days_remove = 35
@@ -126,17 +129,53 @@ POL_KAKUDAI = {
 				FROM = {
 					num_owned_neighbour_states = {
 						owner = POL
-						count = 1
+						count > 0
 						}
 					NOT = { is_core_of = POL }
-					NOT = { is_claimed_by = POL }
 				}
 		}
 		complete_effect = {
 		}
 		remove_effect = {
 			FROM = {
-				add_claimed_by = POL
+				add_core_of = POL
+				transfer_state_to = POL
+			}
+		}
+	}
+	POL_EStnian_goverment = {
+		available = {
+		}
+		ai_will_do = {
+			base = 100
+		}
+		cost = 150
+		fire_only_once = yes
+		days_remove = 35
+		modifier = {
+			stability_factor = -0.05
+		}
+		visible = {
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			every_state = {
+				limit = {
+					is_claimed_by = EST
+					NOT = {
+						is_owned_by = SOV
+					}
+				}
+				add_core_of = EST
+				transfer_state_to = EST
+			}
+			POL = {
+				set_autonomy = {
+					target = EST
+					autonomous_state = autonomy_personal_union
+					freedom_level = 0.5
+				}
 			}
 		}
 	}

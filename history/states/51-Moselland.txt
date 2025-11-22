@@ -4,6 +4,7 @@ state={
 	name="STATE_51"
 	resources={
 		steel=30.000
+
 	}
 
 	history={
@@ -14,8 +15,8 @@ state={
 		}
 		buildings = {
 			infrastructure = 4
-			arms_factory = 2
-			industrial_complex = 4
+			arms_factory = 1
+			industrial_complex = 3
 			air_base = 3
 
 		}

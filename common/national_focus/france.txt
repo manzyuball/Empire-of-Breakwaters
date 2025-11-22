@@ -129,15 +129,9 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = fighter_bonus
-				bonus = 1.0
+				bonus = 2.0
 				uses = 2
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				technology = air_equipment
 			}
 		}
 	}
@@ -305,6 +299,7 @@
 			add_ideas = {
 				FRA_GUN
 			}
+
 		}
 	}
 	focus = {
@@ -389,6 +384,7 @@ focus = {
 
 	completion_reward = {
 		add_war_support = 0.15
+		add_threat = 5
 		annex_country = {
 			target = ALG
 			}
@@ -496,7 +492,7 @@ focus = {
 focus = {
 	id = FRA_s5
 	icon = "GFX_focus_SOV_the_supreme_soviet"
-	x = 0
+	x = -2
 	y = 2
 	mutually_exclusive = {
 	
@@ -518,40 +514,13 @@ focus = {
 	}
 
 	completion_reward = {
-	
-	}
-}
-focus = {
-	id = FRA_s6
-	icon = "GFX_focus_fra_french_union"
-	x = -2
-	y = 2
-	mutually_exclusive = {
-	
-	}
-	prerequisite = { Focus = FRA_s2 }
-	relative_position_id = FRA_s1
-	cost = 10
-
-	ai_will_do = {
-		factor = 10
-	}
-
-	available = {
-	}
-
-	bypass = {
-
-	}
-
-	completion_reward = {
-	
+	add_ideas = FRA_discus_soviet
 	}
 }
 focus = {
 	id = FRA_s7
 	icon = "GFX_goal_generic_soviet_construction"
-	x = -3
+	x = -1
 	y = 3
 	mutually_exclusive = { focus = FRA_s9 }
 	prerequisite = { Focus = FRA_s2 }
@@ -576,36 +545,9 @@ focus = {
 	}
 }
 focus = {
-	id = FRA_s8
-	icon = "GFX_goal_generic_war_with_comintern"
-	x = 0
-	y = 4
-	mutually_exclusive = {
-	
-	}
-	prerequisite = { Focus = FRA_s5 }
-	relative_position_id = FRA_s1
-	cost = 10
-
-	ai_will_do = {
-		factor = 10
-	}
-
-	available = {
-	}
-
-	bypass = {
-
-	}
-
-	completion_reward = {
-	
-	}
-}
-focus = {
 	id = FRA_s9
 	icon = "GFX_focus_SOV_support_spanish_poum"
-	x = 3
+	x = 1
 	y = 3
 	mutually_exclusive = { focus = FRA_s7 }
 	prerequisite = { Focus = FRA_s3 }
@@ -632,7 +574,7 @@ focus = {
 focus = {
 	id = FRA_s10
 	icon = "GFX_focus_up_joan_of_arc"
-	x = 2
+	x = 1
 	y = 4
 	mutually_exclusive = {
 	
@@ -653,6 +595,7 @@ focus = {
 	}
 
 	completion_reward = {
+
 		swap_ideas = {
 			remove_idea = FRA_intaI
 			add_idea = FRA_inta
@@ -662,7 +605,7 @@ focus = {
 focus = {
 	id = FRA_s11
 	icon = "GFX_focus_prc_agrarian_socialism"
-	x = -2
+	x = -1
 	y = 4
 	mutually_exclusive = {
 	
@@ -714,6 +657,7 @@ focus = {
 
 	completion_reward = {
 		add_country_leader_trait = torotcy
+		add_threat = 5
 		hidden_effect = {
 			set_global_flag = CHI_syowww
 		}
@@ -745,7 +689,7 @@ focus = {
 	completion_reward = {
 	add_timed_idea = {
 		idea = FRA_sada
-		days = 110
+		days = 360
 	}
 	}
 }
@@ -764,7 +708,7 @@ focus = {
 	ai_will_do = {
 		factor = 10
 	}
-
+    will_lead_to_war_with = SPR
 	available = {
 	}
 
@@ -773,37 +717,18 @@ focus = {
 	}
 
 	completion_reward = {
-		create_wargoal = {
+		add_threat = 5
+		SPR = {
+			leave_faction = yes
+		}
+		declare_war_on ={
 			type = puppet_wargoal_focus
 			target = SPR
-			}
-	}
-}
-focus = {
-	id = FRA_s15
-	icon = "GFX_focus_attack_italy"
-	x = -3
-	y = 8
-	mutually_exclusive = {
-	
-	}
-	prerequisite = { Focus = FRA_s14 }
-	relative_position_id = FRA_s1
-	cost = 10
-
-	ai_will_do = {
-		factor = 10
-	}
-
-	available = {
-	}
-
-	bypass = {
-
-	}
-
-	completion_reward = {
-	
+		}
+		declare_war_on ={
+			type = puppet_wargoal_focus
+			target = POR
+		}
 	}
 }
 focus = {
@@ -828,12 +753,27 @@ focus = {
 	bypass = {
 
 	}
-
+	will_lead_to_war_with = AUS
 	completion_reward = {
-		create_wargoal = {
+		add_threat = 5
+		add_timed_idea = {
+			idea = FRA_Austria
+			days = 35
+		}
+		declare_war_on ={
 			type = puppet_wargoal_focus
 			target = AUS
+		}
+		news_event = {
+			id = news.16
+			days = 1
+		}
+		hidden_effect = {
+			news_event = {
+				id = news.20
+				days = 75
 			}
+		}
 	}
 }
 focus = {
@@ -888,17 +828,26 @@ focus = {
 	bypass = {
 
 	}
-
+	will_lead_to_war_with = ENG
 	completion_reward = {
-		create_wargoal = {
+		add_threat = 5
+		news_event = {
+			id = news.18
+			days = 1
+		}
+		declare_war_on ={
 			type = puppet_wargoal_focus
 			target = ENG
+			}
+			add_timed_idea = {
+				idea = FRA_EGY
+				days = 120
 			}
 	}
 }
 focus = {
 	id = FRA_s19
-	icon = "GFX_focus_generic_africa_naval"
+	icon = GFX_focus_SWE_the_nordic_defense_council
 	x = 1
 	y = 8
 	mutually_exclusive = {
@@ -920,14 +869,28 @@ focus = {
 	}
 
 	completion_reward = {
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = EGY
-			}
-			add_timed_idea = {
-				idea = FRA_EGY
-				days = 120
-			}
+		add_threat = 5
+		declare_war_on = {
+				target = SWE
+				type = annex_everything
+				}
+				declare_war_on = {
+                    target = DEN
+                    type = annex_everything
+                    }
+					declare_war_on = {
+						target = NOR
+						type = annex_everything
+						}
+						hidden_effect = {
+						DEN = { add_ideas = Hokuou_DANKETI_IDEAS }
+						NOR = { add_ideas = Hokuou_DANKETI_IDEAS }
+						SWE = { add_ideas = Hokuou_DANKETI_IDEAS }
+						news_event = {
+							id = news.9
+							days = 1
+						}
+						}
 	}
 }
 focus = {
@@ -952,9 +915,10 @@ focus = {
 	bypass = {
 
 	}
-
+	will_lead_to_war_with = SOV
 	completion_reward = {
-		create_wargoal = {
+		add_threat = 5
+		declare_war_on ={
 			type = puppet_wargoal_focus
 			target = SOV
 			}
@@ -1014,7 +978,10 @@ focus = {
 	}
 
 	completion_reward = {
-	
+	add_offsite_building = {
+		type = arms_factory
+		level = 5
+	}
 	}
 }
 focus = {
@@ -1243,7 +1210,9 @@ focus = {
 	bypass = {
 
 	}
+    complete_tooltip = {
 
+	}
 	completion_reward = {
 		29 = {
 			add_extra_state_shared_building_slots = 2
@@ -1268,15 +1237,7 @@ focus = {
 				level = 2
 				instant_build = yes
 			}
-		}
-		14 = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-		}
+		}	
 	}
 }
 focus = {
@@ -1299,7 +1260,23 @@ focus = {
 	}
 
 	completion_reward = {
-
+    965 = {
+		add_building_construction = {
+			type = bunker
+			level = 10
+			province = 1156
+		}
+		add_building_construction = {
+			type = bunker
+			level = 10
+			province = 1156
+		}
+		add_building_construction = {
+			type = bunker
+			level = 10
+			province = 11518
+		}
+	}
 	}
 }
 focus = {
@@ -1451,21 +1428,42 @@ focus = {
 	}
 
 	completion_reward = {
-		every_owned_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 1
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 1
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
-				level = 1
+				level = 2
 				instant_build = yes
 			}
-	  }
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}	
+	}
+	complete_tooltip = {
+
+	
 	}
 }
 focus = {
@@ -1600,11 +1598,22 @@ focus = {
 		bypass = {
 	
 		}
-	
+	complete_tooltip = {
+		add_timed_idea = {
+			idea = FRA_EUq2
+			days = 100
+		}
+	}
 		completion_reward = {
 			add_timed_idea = {
 				idea = FRA_EUq2
 				days = 100
+			}
+			hidden_effect = {
+				modify_timed_idea = {
+					idea = FRA_EUq2
+					days = 80
+				}
 			}
 		}
 	}
@@ -1626,11 +1635,16 @@ focus = {
 		bypass = {
 	
 		}
-	
 		completion_reward = {
 			add_timed_idea = {
 				idea = FRA_EUq1
 				days = 100
+			}
+			hidden_effect = {
+				modify_timed_idea = {
+					idea = FRA_EUq1
+					days = 80
+				}
 			}
 		}
 	}
@@ -1658,6 +1672,12 @@ focus = {
 				idea = FRA_EUq3
 				days = 100
 			}
+			hidden_effect = {
+				modify_timed_idea = {
+					idea = FRA_EUq3
+					days = 80
+				}
+			}
 		}
 	}
 	focus = {
@@ -1669,38 +1689,49 @@ focus = {
 		prerequisite = { Focus = FRA_EU2 }
 		prerequisite = { Focus = FRA_EU3 }
 		relative_position_id = FRA_EU1
-		cost = 10
+		cost = 5
 	
 		ai_will_do = {
-			factor = 10
+			factor = 10000
 		}
 	
 		available = {
-			AND = {
-				GER = {
-					has_opinion = {
-						target = FRA
-						value > 50
-						}
-				}
-				HOL = {
-					has_opinion = {
-						target = FRA
-						value > 50
-						}
-				}
-			    ITA = {
-					has_opinion = {
-						target = FRA
-						value > 50
-						}
-				}
-				OR = {
-					GER = { surrender_progress > 0.3 }
-					ITA = { surrender_progress > 0.3 }
-					HOL = { surrender_progress > 0.3 }
+			if = {
+				limit = {
+					FRA = {
+						is_ai = yes
+					}
+					OR = {
+						FRA = { surrender_progress > 0.1 }
+						GER = { surrender_progress > 0.1 }
+						ITA = { surrender_progress > 0.1 }
+						HOL = { surrender_progress > 0.1 }
 					}
 				}
+			}
+			else = {
+				AND = {
+					GER = {
+						has_opinion = {
+							target = FRA
+							value > 70
+							}
+					}
+					HOL = {
+						has_opinion = {
+							target = FRA
+							value > 70
+							}
+					}
+					ITA = {
+						has_opinion = {
+							target = FRA
+							value > 70
+							}
+					}
+				}
+			}
+
 
 		}
 		bypass = {
@@ -1709,6 +1740,7 @@ focus = {
 	
 		completion_reward = {
 		set_cosmetic_tag = FRA_EUAw
+		add_threat = 5
 		if = {
 			limit = { GER = { is_ai = yes } }
 			GER = {
@@ -1719,6 +1751,11 @@ focus = {
 			annex_country = {
 				target = GER
 				transfer_troops = yes
+				}
+				GER = {
+					every_unit_leader = {
+						set_nationality = FRA
+					}
 				}
 		}
 		else = {
@@ -1734,6 +1771,11 @@ focus = {
 				target = HOL
 				transfer_troops = yes
 				}
+				HOL = {
+					every_unit_leader = {
+						set_nationality = FRA
+					}
+				}
 		}
 		else = {
 		}
@@ -1747,6 +1789,11 @@ focus = {
 			annex_country = {
 				target = ITA
 				transfer_troops = yes
+				}
+				ITA = {
+					every_unit_leader = {
+						set_nationality = FRA
+					}
 				}
 		}
 		else = {
@@ -1889,6 +1936,8 @@ focus = {
 	
 		available = {
 			num_subjects > 30
+			has_completed_focus = FRA_EU7
+			has_completed_focus = FRA_EU6
 		}
 		bypass = {
 	

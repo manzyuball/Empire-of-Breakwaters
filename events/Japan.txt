@@ -3,3 +3,507 @@
 ###########################
 
 add_namespace = japan
+country_event = {
+	id = japan.1 #南京市場からの撤退
+	title = japan.1.t
+	desc = japan.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.1.a
+		add_offsite_building = {
+			type = industrial_complex
+			level = -6
+		}
+	}
+}
+country_event = {
+	id = japan.2 #アメリカ市場からの撤退
+	title = japan.2.t
+	desc = japan.2.d
+	picture = GFX_report_event_worker_protests
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.2.a
+		add_offsite_building = {
+			type = industrial_complex
+			level = -6
+		}
+	}
+}
+country_event = {
+	id = japan.3 #朝鮮における抵抗運動
+	title = japan.3.t
+	desc = japan.3.d
+	picture = GFX_report_event_long_march
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.3.a
+		every_state = {
+			limit = {
+				is_core_of = KOR
+			}
+			add_resistance_target = 50
+		}
+		country_event = {
+			id = japan.4
+			days = 3
+			random = 5
+		}
+	}
+	option = {
+		name = japan.3.b
+		every_state = {
+			limit = {
+				is_core_of = KOR
+			}
+			add_resistance_target = 50
+		}
+		country_event = {
+			id = japan.5
+			days = 3
+			random = 5
+		}
+	}
+}
+country_event = {
+	id = japan.4 #朝鮮における自治?
+	title = japan.4.t
+	desc = japan.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.4.a
+		every_state = {
+			limit = {
+				is_core_of = KOR
+			}
+			add_resistance_target = -50
+			add_compliance = 5
+		}
+		set_country_flag = JAP_Korean_goverment
+	}
+}
+country_event = {
+	id = japan.5 #鎮圧の結果
+	title = japan.5.t
+	desc = japan.5.d
+	picture = GFX_report_event_japanese_transport_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.5.a
+		every_state = {
+			limit = {
+				is_core_of = KOR
+			}
+			add_resistance_target = -30
+			add_compliance = -25
+		}
+		set_country_flag = JAP_Korean_annex
+	}
+}
+
+
+country_event = {
+	id = japan.6 #富嶽計画
+	title = japan.6.t
+	desc = japan.6.d
+	picture = GFX_report_event_ace_died
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.6.a
+		mio:JAP_nakajima_organization = {
+			add_mio_size = 5
+		}
+	}
+	option = {
+		name = japan.6.b
+		add_tech_bonus = {
+			name = JAP_strategic_bomber_effort
+			bonus = 2.0
+			ahead_reduction = 2
+			uses = 3
+			category = air_equipment
+		}
+	}
+}
+country_event = {
+	id = japan.7 #海軍の誇り
+	title = japan.7.t
+	desc = japan.7.d
+	picture = GFX_report_event_usa_heavy_cruiser
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.7.a
+		set_technology = {
+			improved_heavy_shell = 1
+			improved_ship_hull_heavy = 1
+			improved_heavy_armor_scheme = 1
+			basic_heavy_armor_scheme = 1
+		}
+		create_equipment_variant = {
+			name = "大和型戦艦"
+			type = ship_hull_heavy_3
+			parent_version = 1
+			modules = {
+				    fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = heavy_ship_engine_3
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = ship_anti_air_3
+					mid_2_custom_slot = ship_anti_air_3
+					mid_3_custom_slot = ship_airplane_launcher_2
+					rear_1_custom_slot = ship_airplane_launcher_2
+			}
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
+			}
+			name = "大和" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_kure_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
+			}
+			name = "武蔵" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
+			}
+			name = "信濃" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
+		}
+	}
+	option = {
+		name = japan.7.b
+		set_technology = {
+			improved_ship_hull_carrier = 1
+			basic_heavy_armor_scheme = 1
+			improved_heavy_armor_scheme = 1
+		}
+		create_equipment_variant = {
+			name = "翔鶴型航空母艦"
+			type = ship_hull_carrier_2
+			parent_version = 1
+			modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = carrier_ship_engine_3
+					front_1_custom_slot = ship_deck_space
+					mid_1_custom_slot = ship_deck_space
+					mid_2_custom_slot = ship_deck_space
+					fixed_ship_armor_slot = ship_armor_cruiser_4
+			}
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_carrier_2
+				creator = "JAP" 
+				version_name = "翔鶴型航空母艦"
+			}
+			name = "瑞鶴" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_carrier_2
+				creator = "JAP" 
+				version_name = "翔鶴型航空母艦"
+			}
+			name = "翔鶴" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
+		}
+	}
+	option = {
+		name = japan.7.c
+		set_technology = {
+			improved_heavy_shell = 1
+			improved_ship_hull_heavy = 1
+			improved_ship_hull_carrier = 1
+			basic_heavy_armor_scheme = 1
+			improved_heavy_armor_scheme = 1
+		}
+		create_equipment_variant = {
+			name = "翔鶴型航空母艦"
+			type = ship_hull_carrier_2
+			parent_version = 1
+			modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = carrier_ship_engine_3
+					front_1_custom_slot = ship_deck_space
+					mid_1_custom_slot = ship_deck_space
+					mid_2_custom_slot = ship_deck_space
+					fixed_ship_armor_slot = ship_armor_cruiser_4
+			}
+		}
+		create_equipment_variant = {
+			name = "大和型戦艦"
+			type = ship_hull_heavy_3
+			parent_version = 1
+			modules = {
+				    fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = heavy_ship_engine_3
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = ship_anti_air_2
+					mid_2_custom_slot = ship_anti_air_2
+					mid_3_custom_slot = ship_airplane_launcher_2
+					rear_1_custom_slot = ship_airplane_launcher_2
+			}
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
+			}
+			name = "大和" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_kure_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
+			}
+			name = "武蔵" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_carrier_2
+				creator = "JAP" 
+				version_name = "翔鶴型航空母艦"
+			}
+			name = "翔鶴" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
+		}
+	}
+	option = {
+		name = japan.7.d
+		add_political_power = -100
+		set_technology = {
+			improved_heavy_shell = 1
+			improved_ship_hull_heavy = 1
+			improved_ship_hull_carrier = 1
+			basic_heavy_armor_scheme = 1
+			improved_heavy_armor_scheme = 1
+		}
+		create_equipment_variant = {
+			name = "翔鶴型航空母艦"
+			type = ship_hull_carrier_2
+			parent_version = 1
+			modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = carrier_ship_engine_3
+					front_1_custom_slot = ship_deck_space
+					mid_1_custom_slot = ship_deck_space
+					mid_2_custom_slot = ship_deck_space
+					fixed_ship_armor_slot = ship_armor_cruiser_4
+			}
+		}
+		create_equipment_variant = {
+			name = "大和型戦艦"
+			type = ship_hull_heavy_3
+			parent_version = 1
+			modules = {
+				    fixed_ship_battery_slot = ship_heavy_battery_3
+					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = heavy_ship_engine_3
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = ship_heavy_battery_3
+					mid_1_custom_slot = ship_anti_air_2
+					mid_2_custom_slot = ship_anti_air_2
+					mid_3_custom_slot = ship_airplane_launcher_2
+					rear_1_custom_slot = ship_airplane_launcher_2
+			}
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
+			}
+			name = "大和" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_kure_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
+			}
+			name = "武蔵" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_sasebo_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_heavy_3
+				creator = "JAP" 
+				version_name = "大和型戦艦"
+			}
+			name = "信濃" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_carrier_2
+				creator = "JAP" 
+				version_name = "翔鶴型航空母艦"
+			}
+			name = "瑞鶴" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
+		}
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_carrier_2
+				creator = "JAP" 
+				version_name = "翔鶴型航空母艦"
+			}
+			name = "翔鶴" 
+			requested_factories = 5
+			progress = 0.75
+			amount = 1
+			industrial_manufacturer = mio:JAP_yokosuka_naval_arsenal_organization
+		}
+	}
+}
+country_event = {
+	id = japan.8 #雪の帝都
+	title = japan.8.t
+	desc = japan.8.d
+	picture = GFX_report_event_mussolini_hotel
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.8.a
+	}
+}
+
+country_event = {
+	id = japan.9 #雪の帝都:幣原喜重郎
+	title = japan.9.t
+	desc = japan.9.d
+	picture = GFX_report_event_gre_city_devastated
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.9.a
+		custom_effect_tooltip = death_of_sidehara
+	}
+}
+country_event = {
+	id = japan.10 #雪の帝都:片山哲
+	title = japan.10.t
+	desc = japan.10.d
+	picture = GFX_report_event_japanese_transport_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.10.a
+		custom_effect_tooltip = death_of_katayamatetu
+	}
+}
+country_event = {
+	id = japan.11 #雪の帝都:安部磯雄
+	title = japan.11.t
+	desc = japan.11.d
+	picture = GFX_report_event_FIN_karelian_forest_guerillas
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.11.a
+		custom_effect_tooltip = death_of_abe
+	}
+}
+country_event = {
+	id = japan.12 #雪の帝都:議員達
+	title = japan.12.t
+	desc = japan.12.d
+	picture = GFX_report_event_FIN_petsamo_mine
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.12.a
+	}
+}
+country_event = {
+	id = japan.13 #雪の帝都:結末
+	title = japan.13.t
+	desc = japan.13.d
+	picture = GFX_report_event_japan_europe_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = japan.13.a
+	}
+}

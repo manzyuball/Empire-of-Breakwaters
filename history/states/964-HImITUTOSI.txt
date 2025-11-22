@@ -2,19 +2,22 @@
 state={
 	id=964
 	name="STATE_964"
-
+    resources = {
+		steel=26
+		aluminium = 31
+	}
 	history={
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = PRC
+		add_core_of = MAN
 		buildings = {
 			infrastructure = 5
-			arms_factory = 2
+			arms_factory = 5
 			industrial_complex = 4
 			anti_air_building = 5
 			radar_station = 3
 			air_base = 10
-
+            synthetic_refinery = 3
 		}
 		victory_points = {
 			4619 25 
@@ -27,7 +30,7 @@ state={
 	provinces={
 		1036 4130 4619 4631 9999 12467 
 	}
-	manpower=21214
+	manpower=24289800
 	buildings_max_level_factor=1.000
 	state_category=metropolis
 	local_supplies=0.000

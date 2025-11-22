@@ -10,6 +10,7 @@ state={
 		steel=180 # was: 32
 		chromium=10 # was: 2
 		tungsten=180 # was: 34
+		COAL = 98
 	}
 
 	history={

@@ -19,6 +19,7 @@ state={
 		add_core_of = UKR
 		add_core_of = CZE
 		add_core_of = ROM
+		add_core_of = POL
 	}
 	provinces={
 		577 9548

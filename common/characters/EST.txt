@@ -68,10 +68,10 @@ characters={
 				original_tag = EST
 			}
 			available = {
-				if = {
-					limit = { has_DLC = "No Step Back" }
-					has_completed_focus = BALTIC_restore_workers_republic
-				}
+				# if = {
+				# 	limit = { has_DLC = "No Step Back" }
+				# 	has_completed_focus = BALTIC_restore_workers_republic
+				# }
 			}
 			traits = {
 				communist_revolutionary 
@@ -104,12 +104,12 @@ characters={
 			allowed = {
 				original_tag = EST
 			}
-			available = {
-				IF = { 
-					limit = { has_dlc = "No Step Back" }
-					has_completed_focus = EST_establish_the_rahvuskogu 
-				}
-			}
+			# available = {
+			# 	IF = { 
+			# 		limit = { has_dlc = "No Step Back" }
+			# 		has_completed_focus = EST_establish_the_rahvuskogu 
+			# 	}
+			# }
 			traits = {
 				democratic_reformer 
 			}
@@ -152,12 +152,12 @@ characters={
 			allowed = {
 				original_tag = EST
 			}
-			available = {
-				IF = { 
-					limit = { has_dlc = "No Step Back" }
-					has_completed_focus = EST_rally_the_nation 
-				}
-			}
+			# available = {
+			# 	IF = { 
+			# 		limit = { has_dlc = "No Step Back" }
+			# 		has_completed_focus = EST_rally_the_nation 
+			# 	}
+			# }
 			traits = {
 				fascist_demagogue 
 			}
@@ -605,9 +605,9 @@ characters={
 					original_tag = EST
 					has_dlc = "No Step Back"
 			}
-			available = {
-				has_completed_focus = BALTIC_revolutionary_cabinet 
-			}
+			# available = {
+			# 	has_completed_focus = BALTIC_revolutionary_cabinet 
+			# }
 			traits = {
 				revolutionary_poet 
 			}
@@ -647,9 +647,9 @@ characters={
 					original_tag = EST
 					has_dlc = "No Step Back"
 			}
-			available = {
-				has_completed_focus = EST_veterans_government 
-			}
+			# available = {
+			# 	has_completed_focus = EST_veterans_government 
+			# }
 			traits = {
 				veteran_anti_bolshevik 
 			}
@@ -670,9 +670,9 @@ characters={
 				original_tag = EST
 				has_dlc = "No Step Back"
 			}
-			available = {
-				has_completed_focus = BALTIC_revolutionary_cabinet 
-			}
+			# available = {
+			# 	has_completed_focus = BALTIC_revolutionary_cabinet 
+			# }
 			traits = {
 				socialist_justice 
 			}
@@ -693,9 +693,9 @@ characters={
 					original_tag = EST
 					has_dlc = "No Step Back"
 			}
-			available = {
-				has_completed_focus = BALTIC_revolutionary_cabinet 
-			}
+			# available = {
+			# 	has_completed_focus = BALTIC_revolutionary_cabinet 
+			# }
 			traits = {
 				patriotic_socialist 
 			}
@@ -716,9 +716,9 @@ characters={
 				original_tag = EST
 				has_dlc = "No Step Back"
 			}
-			available = {
-				has_completed_focus = EST_veterans_government 
-			}
+			# available = {
+			# 	has_completed_focus = EST_veterans_government 
+			# }
 			traits = {
 				vapsid_economist 
 			}
@@ -739,9 +739,9 @@ characters={
 				original_tag = EST
 				has_dlc = "No Step Back"
 			}
-			available = {
-				has_completed_focus = EST_veterans_government 
-			}
+			# available = {
+			# 	has_completed_focus = EST_veterans_government 
+			# }
 			traits = {
 				subservient_ultranationalist 
 			}

@@ -4,13 +4,14 @@ state={
 	name="STATE_196"
 	resources={
 		chromium=15.000
+		COAL = 21
 	}
 
 	history={
 		victory_points = {
 			721 1 
 		}
-		owner = SOV
+		owner = UKR
 		add_core_of = VLA
 		buildings = {
 			infrastructure = 3

@@ -75,7 +75,7 @@ focus = {
 	relative_position_id = PRU_se1
 	prerequisite = { focus = PRU_seA }
 	completion_reward = {
-		add_stability = 0.1
+		add_stability = 0.05
 	}
 }
 focus = {
@@ -161,26 +161,18 @@ focus = {
 			days = 60
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -203,7 +195,7 @@ focus = {
 	relative_position_id = PRU_se1
 	prerequisite = { focus = PRU_seK2 }
 	completion_reward = {
-		add_offsite_building = { type = industrial_complex level = 3 }
+		add_offsite_building = { type = industrial_complex level = 2 }
 		add_timed_idea = {
 			idea = PRU_AHEN1
 			days = 60
@@ -228,7 +220,7 @@ focus = {
 	prerequisite = { focus = PRU_seK3 }
 	completion_reward = {
 		add_tech_bonus = {
-			bonus = 3
+			bonus = 1
 			uses = 3
 			category = industry
 		}
@@ -244,7 +236,7 @@ focus = {
 	x = -1
 	y = 9
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -255,8 +247,8 @@ focus = {
 	relative_position_id = PRU_se1
 	prerequisite = { focus = PRU_seK4 }
 	completion_reward = {
-		add_political_power = 150
-		add_stability = 0.15
+		add_political_power = 75
+		add_stability = 0.10
 		add_timed_idea = {
 			idea = PRU_AHEN1
 			days = 60
@@ -269,7 +261,7 @@ focus = {
 	x = -1
 	y = 10
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -285,34 +277,18 @@ focus = {
 			days = 60
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -324,7 +300,7 @@ focus = {
 	x = -1
 	y = 11
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -416,7 +392,7 @@ focus = {
 	x = 1
 	y = 9
 
-	cost = 5
+    cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -428,26 +404,18 @@ focus = {
 	prerequisite = { focus = PRU_seK10 }
 	completion_reward = {
 		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
-				level = 2
+				level = 1
 				instant_build = yes
 			}
 		}
 		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
+				level = 1
 				instant_build = yes
 			}
 		}
@@ -459,7 +427,7 @@ focus = {
 	x = 1
 	y = 10
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -471,26 +439,18 @@ focus = {
 	prerequisite = { focus = PRU_seK11 }
 	completion_reward = {
 		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
-				level = 2
+				level = 1
 				instant_build = yes
 			}
 		}
 		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = arms_factory
-				level = 2
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
+				level = 1
 				instant_build = yes
 			}
 		}
@@ -502,7 +462,7 @@ focus = {
 	x = 1
 	y = 11
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -549,7 +509,7 @@ focus = {
 	x = 0
 	y = 12
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -570,7 +530,7 @@ focus = {
 	x = 0
 	y = 13
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -593,7 +553,7 @@ focus = {
 	x = 0
 	y = 14
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -616,7 +576,7 @@ focus = {
 	x = 0
 	y = 15
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -741,6 +701,7 @@ focus = {
 	relative_position_id = PRU_seG1
 	prerequisite = { focus = PRU_seG4 }
 	completion_reward = {
+		add_threat = 5
 		PRU = {
 			create_wargoal = {
 				type = annex_everything
@@ -769,7 +730,7 @@ focus = {
 	x = 0
 	y = 5
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -780,6 +741,7 @@ focus = {
 	relative_position_id = PRU_seG1
 	prerequisite = { focus = PRU_seG5 }
 	completion_reward = {
+		add_threat = 5
 		PRU = {
 			create_wargoal = {
 				type = annex_everything
@@ -799,7 +761,7 @@ focus = {
 	x = 0
 	y = 6
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -810,6 +772,7 @@ focus = {
 	relative_position_id = PRU_seG1
 	prerequisite = { focus = PRU_seG6 }
 	completion_reward = {
+		add_threat = 5
 		add_state_claim = 689
 		add_state_claim = 690
 		add_state_claim = 693
@@ -852,7 +815,7 @@ focus = {
 	completion_reward = {
 		custom_effect_tooltip = PRU_nsa
 		hidden_effect = {
-			set_country_flag = PRU_Ansatu
+			#set_country_flag = PRU_Ansatu
 		}
 	}
 }
@@ -939,7 +902,7 @@ focus = {
 	x = -1
 	y = 4
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -962,7 +925,7 @@ focus = {
 	x = -1
 	y = 5
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -985,7 +948,7 @@ focus = {
 	x = -1
 	y = 6
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -1056,7 +1019,7 @@ focus = {
 	x = 1
 	y = 4
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -1076,7 +1039,7 @@ focus = {
 	x = 1
 	y = 5
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -1096,7 +1059,7 @@ focus = {
 	x = 1
 	y = 6
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -1119,7 +1082,7 @@ focus = {
 	x = 0
 	y = 7
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -1143,7 +1106,7 @@ focus = {
 	x = 0
 	y = 8
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -1166,7 +1129,7 @@ focus = {
 	x = 0
 	y = 9
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -1244,6 +1207,7 @@ focus = {
 	prerequisite = { focus = PRU_seW2}
 	completion_reward = {
 		PRU = {
+			add_threat = 5
 			create_wargoal = {
 				type = annex_everything
 				target = CHL
@@ -1297,6 +1261,7 @@ focus = {
 	prerequisite = { focus = PRU_seW4}
 	completion_reward = {
 		PRU = {
+			add_threat = 5
 			create_wargoal = {
 				type = annex_everything
 				target = COL
@@ -1349,6 +1314,7 @@ focus = {
 	relative_position_id = PRU_seW1
 	prerequisite = { focus = PRU_seW6}
 	completion_reward = {
+		add_threat = 5
 		PRU = {
 			create_wargoal = {
 				type = annex_everything
@@ -1368,7 +1334,7 @@ focus = {
 	x = 0
 	y = 5
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -1379,6 +1345,7 @@ focus = {
 	relative_position_id = PRU_seW1
 	prerequisite = { focus = PRU_seW7}
 	completion_reward = {
+		add_threat = 5
 		PRU = {
 			create_wargoal = {
 				type = annex_everything
@@ -1398,7 +1365,7 @@ focus = {
 	x = 0
 	y = 6
 
-	cost = 5
+	cost = 10
 
 	ai_will_do = {
 	factor = 1
@@ -1409,6 +1376,7 @@ focus = {
 	relative_position_id = PRU_seW1
 	prerequisite = { focus = PRU_seW8}
 	completion_reward = {
+		add_threat = 5
 		PRU = {
 			create_wargoal = {
 				type = annex_everything

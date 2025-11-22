@@ -42,169 +42,139 @@ units = {
 		location = 3938
 		division_template = "正規兵"
 		start_experience_factor = 0.2
-	}	
-	division = {			
-		name = "スペイン正規兵"		
-		location = 875
-		division_template = "正規兵"
-		start_experience_factor = 0.2
-	}	
-	division = {			
-		name = "スペイン正規兵"		
-		location = 875
-		division_template = "正規兵"
-		start_experience_factor = 0.2
-	}	
-	division = {			
-		name = "スペイン正規兵"		
-		location = 1048
-		division_template = "正規兵"
-		start_experience_factor = 0.2
-	}	
-	division = {			
-		name = "スペイン正規兵"		
-		location = 1048
-		division_template = "正規兵"
-		start_experience_factor = 0.2
-	}	
+	}
 	division = {			
 		name = "スペイン正規兵"		
 		location = 3938
 		division_template = "正規兵"
 		start_experience_factor = 0.2
-	}	
+	}
 	division = {			
 		name = "スペイン正規兵"		
-		location = 875
+		location = 9764
 		division_template = "正規兵"
 		start_experience_factor = 0.2
-	}	
+	}
 	division = {			
 		name = "スペイン正規兵"		
-		location = 875
+		location = 11707
 		division_template = "正規兵"
 		start_experience_factor = 0.2
-	}	
+	}
 	division = {			
 		name = "スペイン正規兵"		
-		location = 1048
+		location = 12038
 		division_template = "正規兵"
 		start_experience_factor = 0.2
-	}	
+	}
 	division = {			
 		name = "スペイン正規兵"		
-		location = 1048
+		location = 740
 		division_template = "正規兵"
 		start_experience_factor = 0.2
-	}	
+	}
 	division = {			
-		name = "国境守備隊"		
+		name = "スペイン正規兵"		
+		location = 7183
+		division_template = "正規兵"
+		start_experience_factor = 0.2
+	}
+	division = {			
+		name = "スペイン正規兵"		
+		location = 9764
+		division_template = "正規兵"
+		start_experience_factor = 0.2
+	}
+	division = {			
+		name = "スペイン正規兵"		
+		location = 11707
+		division_template = "正規兵"
+		start_experience_factor = 0.2
+	}
+	division = {			
+		name = "スペイン正規兵"		
+		location = 12038
+		division_template = "正規兵"
+		start_experience_factor = 0.2
+	}
+	division = {			
+		name = "スペイン正規兵"		
+		location = 740
+		division_template = "正規兵"
+		start_experience_factor = 0.2
+	}
+	division = {			
+		name = "スペイン正規兵"		
+		location = 7183
+		division_template = "正規兵"
+		start_experience_factor = 0.2
+	}
+	division = {			
+		name = "スペイン正規兵"		
+		location = 7183
+		division_template = "正規兵"
+		start_experience_factor = 0.2
+	}
+	division = {			
+		name = "スペイン正規兵"		
+		location = 13228
+		division_template = "正規兵"
+		start_experience_factor = 0.2
+	}
+	division = {			
+		name = "スペイン正規兵"		
+		location = 7153
+		division_template = "正規兵"
+		start_experience_factor = 0.2
+	}
+	division = {			
+		name = "スペイン正規兵"		
+		location = 758
+		division_template = "正規兵"
+		start_experience_factor = 0.2
+	}
+	division = {			
+		name = "スペイン正規兵"		
+		location = 9686
+		division_template = "正規兵"
+		start_experience_factor = 0.3
+	}
+	division = {			
+		name = "スペイン正規兵"		
 		location = 874
-		division_template = "守備隊"
-		start_experience_factor = 0.2
+		division_template = "正規兵"
+		start_experience_factor = 0.3
 	}
 	division = {			
-		name = "国境守備隊"		
-		location = 6867
-		division_template = "守備隊"
-		start_experience_factor = 0.2
+		name = "スペイン正規兵"		
+		location = 11851
+		division_template = "正規兵"
+		start_experience_factor = 0.3
 	}
 	division = {			
-		name = "国境守備隊"		
-		location = 3874
-		division_template = "守備隊"
-		start_experience_factor = 0.2
+		name = "スペイン正規兵"		
+		location = 920
+		division_template = "正規兵"
+		start_experience_factor = 0.3
 	}
 	division = {			
-		name = "国境守備隊"		
-		location = 9800
-		division_template = "守備隊"
-		start_experience_factor = 0.2
+		name = "スペイン正規兵"		
+		location = 11851
+		division_template = "正規兵"
+		start_experience_factor = 0.3
 	}
 	division = {			
-		name = "国境守備隊"		
-		location = 3794
-		division_template = "守備隊"
-		start_experience_factor = 0.2
+		name = "スペイン正規兵"		
+		location = 6734
+		division_template = "正規兵"
+		start_experience_factor = 0.3
 	}
 	division = {			
-		name = "国境守備隊"		
-		location = 977
-		division_template = "守備隊"
-		start_experience_factor = 0.2
+		name = "スペイン正規兵"		
+		location = 6906
+		division_template = "正規兵"
+		start_experience_factor = 0.3
 	}
-	division = {			
-		name = "国境守備隊"		
-		location = 9767
-		division_template = "守備隊"
-		start_experience_factor = 0.2
-	}
-	division = {			
-		name = "国境守備隊"		
-		location = 6914
-		division_template = "守備隊"
-		start_experience_factor = 0.2
-	}
-	division = {			
-		name = "国境守備隊"		
-		location = 11863
-		division_template = "守備隊"
-		start_experience_factor = 0.2
-	}
-	division = {			
-		name = "国境守備隊"		
-		location = 3953
-		division_template = "守備隊"
-		start_experience_factor = 0.2
-	}
-	division = {			
-		name = "国境守備隊"		
-		location = 9828
-		division_template = "守備隊"
-		start_experience_factor = 0.2
-	}
-	division = {			
-		name = "国境守備隊"		
-		location = 12083
-		division_template = "守備隊"
-		start_experience_factor = 0.2
-	}
-	division = {			
-		name = "国境守備隊"		
-		location = 1192
-		division_template = "守備隊"
-		start_experience_factor = 0.2
-	}
-	division = {			
-		name = "国境守備隊"		
-		location = 7196
-		division_template = "守備隊"
-	}
-	division = {			
-		name = "国境守備隊"		
-		location = 12083
-		division_template = "守備隊"
-		start_experience_factor = 0.2
-	}
-	division = {			
-		name = "国境守備隊"		
-		location = 1192
-		division_template = "守備隊"
-		start_experience_factor = 0.2
-	}
-	division = {			
-		name = "国境守備隊"		
-		location = 7196
-		division_template = "守備隊"
-		start_experience_factor = 0.2
-	}
-	division = {			
-		name = "国境守備隊"		
-		location = 4065
-		division_template = "守備隊"
-		start_experience_factor = 0.2
-	}
-
 }
 
 instant_effect = {
@@ -213,7 +183,7 @@ instant_effect = {
 			type = infantry_equipment_1
 			creator = "SPR"
 		}
-		requested_factories = 2
+		requested_factories = 5
 		progress = 0.42
 		efficiency = 100
 	}

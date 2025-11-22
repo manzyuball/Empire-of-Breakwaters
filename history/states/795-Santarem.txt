@@ -3,6 +3,7 @@ state={
 	name="STATE_795"
 	resources={
 		chromium=20.000 #added due to portugal setup
+		COAL = 8
 	}
 	history={
 		owner = POR

@@ -9,12 +9,16 @@ state={
 	resources={
 		oil=44 # w
 	}
+	resources={
+		steel=34 # was: 84
+	}
 
 	history={
 		owner = CSA
 		buildings = {
 			infrastructure = 3 #was: 5
-			industrial_complex = 2
+			industrial_complex = 5
+			arms_factory = 7
 			air_base = 5
 			7552 = {
 				naval_base = 5
@@ -26,7 +30,7 @@ state={
 		add_core_of = USB
 		add_core_of = USN
 		victory_points = {
-			7552 25 
+			7552 20
 		}
 
 	}

@@ -17,6 +17,9 @@ characters={
 
 	TUR_mustafa_kemal_ataturk={
 		instance = {
+			allowed = {
+				original_tag = TUR
+			}
 			name=TUR_mustafa_kemal_ataturk
 			portraits={
 				civilian={
@@ -28,6 +31,9 @@ characters={
 			}
 		}
 		instance = {
+			allowed = {
+				original_tag = TUR
+			}
 			name=TUR_mustafa_kemal_ataturk
 			portraits={
 				civilian={
@@ -41,7 +47,8 @@ characters={
 	}
 
 	TUR_sefik_husnu={
-		instance = {
+		# instance = {
+			
 			name=TUR_sefik_husnu
 			portraits={
 				civilian={
@@ -53,12 +60,15 @@ characters={
 			}
 			advisor={
 				slot = political_advisor
+				idea_token = TUR_sefik_husnu
 				allowed = {
 					original_tag = TUR
 				}
 				available = {
 					custom_trigger_tooltip = {
 						tooltip = TUR_can_only_have_one_prime_minister_tt
+					}
+				}
 				traits = {
 				}
 			}
@@ -69,22 +79,22 @@ characters={
 				expire="1965.1.1.1"
 				id=-1
 			}
-		}
-		instance = {
-			allowed = {
-			}
-			name=TUR_sefik_husnu
-			portraits={
-				civilian={
-					large="gfx/leaders/TUR/Portrait_Turkey_Sefik_Husnu.dds"
-				}
-			}
-			country_leader={
-				ideology=stalinism
-				expire="1965.1.1.1"
-				id=-1
-			}
-		}
+		# }
+		# instance = {
+		# 	allowed = {
+		# 	}
+		# 	name=TUR_sefik_husnu
+		# 	portraits={
+		# 		civilian={
+		# 			large="gfx/leaders/TUR/Portrait_Turkey_Sefik_Husnu.dds"
+		# 		}
+		# 	}
+		# 	country_leader={
+		# 		ideology=stalinism
+		# 		expire="1965.1.1.1"
+		# 		id=-1
+		# 	}
+		# }
 	}
 
 	TUR_celal_bayar={
@@ -107,12 +117,13 @@ characters={
 			}
 
 			advisor={
+				idea_token = TUR_celal_bayar
 				slot = political_advisor
 				allowed = {
 					original_tag = TUR
 				}
 				available = {
-					custom_trigger_tooltip = {
+					# custom_trigger_tooltip = {}
 				}
 				visible = {
 				}
@@ -153,6 +164,7 @@ characters={
 			}
 			advisor={
 				slot = political_advisor
+				idea_token = TUR_ismet_inonu
 				allowed = {
 					original_tag = TUR
 				}
@@ -601,19 +613,19 @@ characters={
 						}
 					}
 					not_already_hired_except_as = political_advisor
-					OR = {
-						has_completed_focus = TUR_continue_the_policy_of_etatism 
-						has_completed_focus = TUR_holding_our_first_multi_party_election 
-					}
+					# OR = {
+					# 	has_completed_focus = TUR_continue_the_policy_of_etatism 
+					# 	has_completed_focus = TUR_holding_our_first_multi_party_election 
+					# }
 				}
 				visible = {
 					NOT = {
 						OR = {
-							has_completed_focus = TUR_kemalist_socialist_theory 
-							has_completed_focus = TUR_readdress_the_montreux_convention 
-							has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc 
+							# has_completed_focus = TUR_kemalist_socialist_theory 
+							# has_completed_focus = TUR_readdress_the_montreux_convention 
+							# has_completed_focus = TUR_anti_bolshevik_mediterranean_bloc 
 							and = {
-								has_completed_focus = TUR_democratic_capstone_focus 
+								# has_completed_focus = TUR_democratic_capstone_focus 
 								has_country_leader = {
 									character = TUR_celal_bayar
 									ruling_only = yes 
@@ -776,7 +788,7 @@ characters={
 					has_dlc = "Battle for the Bosporus"
 				}
 				available = {
-					has_completed_focus = TUR_hava_okulu
+					# has_completed_focus = TUR_hava_okulu
 					NOT = {
 						has_country_flag = TUR_ottoman_officers_invited_back
 					}
@@ -1643,7 +1655,7 @@ characters={
 				OR = {
 					has_government = fascism 
 					has_government = communism 
-					has_completed_focus = TUR_pivot_to_the_past 
+					# has_completed_focus = TUR_pivot_to_the_past 
 					has_country_leader = {
 						character = TUR_adnan_menderes
 						ruling_only = yes 
@@ -1670,9 +1682,9 @@ characters={
 				original_tag = TUR
 				has_dlc = "Battle for the Bosporus"
 			}
-			available = {
-				has_completed_focus = TUR_misak_i_milli 
-			}
+			# available = {
+			# 	has_completed_focus = TUR_misak_i_milli 
+			# }
 			traits = {
 				avid_turanist 
 			}
@@ -1712,17 +1724,17 @@ characters={
 						}
 					}
 				}
-				has_completed_focus = TUR_continue_the_policy_of_etatism 
+				# has_completed_focus = TUR_continue_the_policy_of_etatism 
 			}
 			visible = {
 				has_government = neutrality 
-				NOT = {
-					OR = {
-						has_completed_focus = TUR_pivot_to_the_past 
-						has_completed_focus = TUR_rehabilitate_the_kadro_movement 
-						has_completed_focus = TUR_fully_integrate_the_is_bank 
-					}
-				}
+				# NOT = {
+				# 	OR = {
+				# 		has_completed_focus = TUR_pivot_to_the_past 
+				# 		has_completed_focus = TUR_rehabilitate_the_kadro_movement 
+				# 		has_completed_focus = TUR_fully_integrate_the_is_bank 
+				# 	}
+				# }
 			}
 			traits = {
 				prime_minister_saracoglu 
@@ -1770,7 +1782,7 @@ characters={
 			}
 			visible = {
 				and = {
-					has_completed_focus = TUR_democratic_capstone_focus 
+					# has_completed_focus = TUR_democratic_capstone_focus 
 					NOT = {
 						has_country_leader = {
 							character = TUR_adnan_menderes
@@ -1921,12 +1933,12 @@ characters={
 					}
 				}
 			}
-			visible = {
-				has_completed_focus = TUR_fully_integrate_the_is_bank 
-				NOT = {
-					has_completed_focus = TUR_pivot_to_the_past 
-				}
-			}
+			# visible = {
+			# 	has_completed_focus = TUR_fully_integrate_the_is_bank 
+			# 	NOT = {
+			# 		has_completed_focus = TUR_pivot_to_the_past 
+			# 	}
+			# }
 			traits = {
 				prime_minister_okyar 
 			}
@@ -1998,9 +2010,9 @@ characters={
 				original_tag = TUR
 				has_dlc = "Battle for the Bosporus"
 			}
-			available = {
-				has_completed_focus = TUR_the_sun_language_theory 
-			}
+			# available = {
+			# 	has_completed_focus = TUR_the_sun_language_theory 
+			# }
 			traits = {
 				feminist_ultranationalist 
 			}
@@ -2027,12 +2039,12 @@ characters={
 					has_dlc = "Battle for the Bosporus"
 				}
 				available = {
-					NOT = {
-						OR = {
-							has_completed_focus = TUR_revive_turkish_revolutionism 
-							has_completed_focus = TUR_pivot_to_the_past 
-						}
-					}
+					# NOT = {
+					# 	OR = {
+					# 		has_completed_focus = TUR_revive_turkish_revolutionism 
+					# 		has_completed_focus = TUR_pivot_to_the_past 
+					# 	}
+					# }
 				}
 				traits = {
 					fortification_engineer 
@@ -2087,7 +2099,7 @@ characters={
 				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
-				has_completed_focus = TUR_kemalist_socialist_theory 
+				# has_completed_focus = TUR_kemalist_socialist_theory 
 				custom_trigger_tooltip = {
 					tooltip = TUR_can_only_have_one_prime_minister_tt
 					NOT = {
@@ -2108,9 +2120,9 @@ characters={
 				}
 			}
 			visible = {
-				has_completed_focus = TUR_revive_turkish_revolutionism 
+				# has_completed_focus = TUR_revive_turkish_revolutionism 
 				NOT = {
-					has_completed_focus = TUR_kemalism_and_the_modern_movement 
+					# has_completed_focus = TUR_kemalism_and_the_modern_movement 
 					has_country_leader = {
 						character = TUR_sevket_sureyya_aydemir
 						ruling_only = yes 
@@ -2137,12 +2149,12 @@ characters={
 				original_tag = TUR
 				has_dlc = "Battle for the Bosporus"
 			}
-			available = {
-				OR = {
-					has_completed_focus = TUR_revive_turkish_revolutionism 
-					has_completed_focus = TUR_reinvigorate_turkish_nationalism 
-				}
-			}
+			# available = {
+			# 	OR = {
+			# 		has_completed_focus = TUR_revive_turkish_revolutionism 
+			# 		has_completed_focus = TUR_reinvigorate_turkish_nationalism 
+			# 	}
+			# }
 			traits = {
 				vatan_ideologue 
 			}
@@ -2187,7 +2199,7 @@ characters={
 				OR = {
 					is_in_faction_with = GER
 					has_government = fascism 
-					has_completed_focus = TUR_pivot_to_the_past 
+					# has_completed_focus = TUR_pivot_to_the_past 
 					has_country_flag = TUR_sponsored_killigil_armaments_flag 
 				}
 			}
@@ -2231,9 +2243,9 @@ characters={
 					}
 				}
 			}
-			visible = {
-				has_completed_focus = TUR_pivot_to_the_past 
-			}
+			# visible = {
+			# 	has_completed_focus = TUR_pivot_to_the_past 
+			# }
 			traits = {
 				grand_vizier_nursi 
 			}
@@ -2258,7 +2270,7 @@ characters={
 				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
-				has_completed_focus = TUR_integrate_the_fascist_council 
+				# has_completed_focus = TUR_integrate_the_fascist_council 
 				custom_trigger_tooltip = {
 					tooltip = TUR_can_only_have_one_prime_minister_tt
 					NOT = {
@@ -2279,7 +2291,7 @@ characters={
 				}
 			}
 			visible = {
-				has_completed_focus = TUR_revive_turkish_revolutionism 
+				# has_completed_focus = TUR_revive_turkish_revolutionism 
 				NOT = {
 					has_country_leader = {
 						character = TUR_mehmet_recep_peker
@@ -2386,9 +2398,9 @@ characters={
 					}
 				}
 			}
-			visible = {
-				has_completed_focus = TUR_turanist_ambition 
-			}
+			# visible = {
+			# 	has_completed_focus = TUR_turanist_ambition 
+			# }
 			traits = {
 				prime_minister_atsiz 
 			}
@@ -2409,12 +2421,12 @@ characters={
 				original_tag = TUR
 				has_dlc = "Battle for the Bosporus"
 			}
-			available = {
-				OR = {
-					has_completed_focus = TUR_establish_the_committee_of_pan_turkism 
-					has_completed_focus = TUR_misak_i_milli 
-				}
-			}
+			# available = {
+			# 	OR = {
+			# 		has_completed_focus = TUR_establish_the_committee_of_pan_turkism 
+			# 		has_completed_focus = TUR_misak_i_milli 
+			# 	}
+			# }
 			traits = {
 				pan_turkic_doyen 
 			}
@@ -2471,7 +2483,7 @@ characters={
 			planning_skill = 3
 			logistics_skill = 3
 			legacy_id = 75
-			visible = { has_completed_focus = TUR_invite_german_officers_to_izmir }
+			# visible = { has_completed_focus = TUR_invite_german_officers_to_izmir }
 		}
 	}
 
@@ -2491,7 +2503,7 @@ characters={
 			defense_skill = 2
 			planning_skill = 4
 			logistics_skill = 2
-			visible = { has_completed_focus = TUR_invite_german_officers_to_izmir }
+			# visible = { has_completed_focus = TUR_invite_german_officers_to_izmir }
 		}
 	}
 
@@ -2511,10 +2523,8 @@ characters={
 			defense_skill = 3
 			maneuvering_skill = 4
 			coordination_skill = 3
-			visible = { has_completed_focus = TUR_the_italo_turkish_naval_academy }
+			# visible = { has_completed_focus = TUR_the_italo_turkish_naval_academy }
 		}
 	}
 }
-}
-}
-}
+

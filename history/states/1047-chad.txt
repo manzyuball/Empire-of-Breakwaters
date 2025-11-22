@@ -1,0 +1,23 @@
+
+state={
+	id=1047
+	name="STATE_1047"
+
+	history={
+		owner = GNA
+
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		1473 3123 3181 4897 4978 7919 13138 13678 
+	}
+	manpower=442456
+	state_category=pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

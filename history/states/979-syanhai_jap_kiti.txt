@@ -6,10 +6,10 @@ state={
 	history={
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = PRC
+		add_core_of = MAN
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 4
+			industrial_complex = 7
 			air_base = 3
 			dockyard = 4
 			11928 = {
@@ -24,7 +24,7 @@ state={
 	provinces={
 		1089 4091 9953 11928 
 	}
-	manpower=14200
+	manpower=2314200
 	buildings_max_level_factor=1.000
 	state_category=city
 	local_supplies=0.000

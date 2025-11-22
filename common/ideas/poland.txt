@@ -54,7 +54,7 @@ country = {
 		removal_cost = -1
 		picture = LIT_invested_in_farms
 		modifier = {
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.25
 			production_factory_start_efficiency_factor = 0.15
 			global_building_slots_factor = 0.15
 		}
@@ -64,7 +64,7 @@ country = {
 		removal_cost = -1
 		picture = HUN_hungarian_monarchy_habsburg
 		modifier = {
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.25
 		}
 		targeted_modifier = { tag = AUS trade_cost_for_target_factor = -0.5 }
 	}
@@ -73,7 +73,7 @@ country = {
 		removal_cost = -1
 		picture = ger_rebuild_the_nation
 		modifier = {
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.25
 		}
 		targeted_modifier = { tag = LAT trade_cost_for_target_factor = -0.5 }
 	}
@@ -132,7 +132,7 @@ country = {
 		removal_cost = -1
 		picture = hol_the_foundations_of_defense
 		modifier = {
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.25
 			production_speed_buildings_factor = 0.15
 		}
 	}
@@ -141,7 +141,7 @@ country = {
 		removal_cost = -1
 		picture = hol_the_foundations_of_defense
 		modifier = {
-			consumer_goods_factor = -0.05
+			consumer_goods_factor = -0.25
 			production_speed_buildings_factor = 0.15
 			production_speed_infrastructure_factor = 0.25
 			production_speed_rail_way_factor = 0.25
@@ -313,7 +313,7 @@ country = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.25
 			}
 		}
 

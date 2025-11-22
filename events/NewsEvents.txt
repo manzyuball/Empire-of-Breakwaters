@@ -22,11 +22,16 @@ news_event = {
 	}
 	option = {
 		name = news.1.b
-		is_in_faction_with = FRA
+		trigger = {
+			is_in_faction_with = FRA
+		}
+		
 	}
 	option = {
 		name = news.1.c
-		is_in_faction_with = ENG
+		trigger = {
+			NOT = { is_in_faction_with = FRA }
+		}
 	}
 }
 
@@ -157,9 +162,8 @@ news_event = {
 	desc = news.7.d
 	picture = GFX_news_event_020
 	major = yes
-	trigger = {
-		has_global_flag = NitieiPact
-	}
+	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = news.7.a
 		trigger = {
@@ -170,9 +174,6 @@ news_event = {
 				}
 			}
 		}
-		hidden_effect = {
-			clr_global_flag = NitieiPact
-		}
 	}
 	option = {
 		name = news.7.b
@@ -181,12 +182,8 @@ news_event = {
 				TAG = JAP 
 				TAG = ENG
 			}
-
-			}
-			hidden_effect = {
-				clr_global_flag = NitieiPact
-			}
 		}
+	}
 }
 #ヒトラー氏当選
 news_event = { 
@@ -246,6 +243,7 @@ news_event = {
 	picture = GFX_news_event_saf_soldiers_3
 	major = yes
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = news.10.a
 		trigger = {
@@ -258,6 +256,9 @@ news_event = {
 				}
 			}
 		}
+		hidden_effect = {
+			play_song = "Marching_geogia"
+		}
 	}
 	option = {
 		name = news.10.b
@@ -267,8 +268,11 @@ news_event = {
 				TAG = USB
 				TAG = CSA
 				TAG = USA	
+			}
 		}
-	}
+		hidden_effect = {
+			play_song = "Marching_geogia"
+		}
 	}
 }
  #アメリカ内戦延長戦
@@ -333,6 +337,155 @@ news_event = {
 				declare_war_on = {
 					target = USA
 					type = annex_everything
+					}
+			}
+		}
+	}
+}
+news_event = {  #セルビアへの先制攻撃
+	id = news.12
+	title = news.12.t
+	desc = news.12.d
+	picture = GFX_news_event_038
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.12.a
+	}
+}
+news_event = {  #ブルガリア併合
+	id = news.13
+	title = news.13.t
+	desc = news.13.d
+	picture = GFX_news_event_016
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.13.a
+	}
+}
+
+news_event = {  #アメリカ参戦
+	id = news.14
+	title = news.14.t
+	fire_only_once = yes
+	desc = news.14.d
+	picture = GFX_news_event_016
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.14.a
+
+	}
+	immediate = {
+		
+		hidden_effect = {
+			play_song = "America_civil_war"
+		}
+	}
+}
+news_event = {  #日中戦争
+id = news.15
+title = news.15.t
+desc = news.15.d
+fire_only_once = yes
+picture = GFX_news_event_016
+major = yes
+is_triggered_only = yes
+option = {
+	name = news.15.a
+
+}
+immediate = {
+	hidden_effect = {
+		play_song = "JA_CH_WAR"
+	}
+}
+}
+news_event = {  #インターの中央攻め
+	id = news.16
+	title = news.16.t
+	fire_only_once = yes
+	hidden = yes
+	desc = news.16.d
+	picture = GFX_news_event_016
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.16.a
+
+	}
+	immediate = {
+		hidden_effect = {
+			play_song = "Berioz_war"
+		}
+	}
+}
+
+news_event = {  #北方戦争
+	id = news.17
+	title = news.17.t
+	fire_only_once = yes
+	desc = news.17.d
+	picture = GFX_news_event_016
+	hidden = yes
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.17.a	
+	}
+	immediate = {
+		hidden_effect = {
+			play_song = "Russ_War"
+		}
+	}
+}
+news_event = {  #インターの連合攻め
+	id = news.18
+	title = news.18.t
+	desc = news.18.d
+	hidden = yes
+	fire_only_once = yes
+	picture = GFX_news_event_016
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.18.a
+		
+	}
+	immediate = {
+		hidden_effect = {
+			play_song = "WW2"
+		}
+	}
+}
+news_event = {  #租借地攻撃
+	id = news.19
+	title = news.19.t
+	desc = news.19.d
+	picture = GFX_news_event_016
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.19.a
+	}
+}
+news_event = {  #アフリカ作戦
+	id = news.20
+	title = news.20.t
+	desc = news.20.d
+	picture = GFX_news_event_042
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = news.20.a
+	}
+	immediate = {
+		hidden_effect = {
+			ENG ={
+				annex_country = {
+					target = TZN
+					transfer_troops = no
 					}
 			}
 		}

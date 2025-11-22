@@ -10,7 +10,7 @@ state={
 	state_category = metropolis
 
 	history={
-		owner = HOL
+		owner = FRA
 		victory_points = { 516 30 }
 		victory_points = { 6598 30 }
 		victory_points = { 6560 5 }
@@ -19,7 +19,7 @@ state={
 		buildings = {
 			infrastructure = 3 #was: 5
 			arms_factory = 2
-			industrial_complex = 4
+			industrial_complex = 6
 			air_base = 3
 			6560 = {
 				naval_base = 3
@@ -28,10 +28,9 @@ state={
 				naval_base = 8
 			}
 		}
-		
+		add_core_of = FRA
 		add_extra_state_shared_building_slots = 2
 		
-		add_core_of = HOL
 	}
 
 	provinces={

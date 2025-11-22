@@ -5,7 +5,9 @@ state={
 	manpower = 761769
 	
 	state_category = rural
-
+	resources = {
+		COAL = 4
+	}
 	history={
 		owner = SOV
 		add_core_of = VLA

@@ -1,0 +1,307 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+leader_traits = {
+	
+	BOUEISYOU = {
+		sprite = 1
+		random = no
+		production_speed_bunker_factor = 0.2
+		production_speed_coastal_bunker_factor = 0.2
+		production_speed_air_base_factor = 0.2
+		production_speed_anti_air_building_factor = 0.2
+		production_speed_radar_station_factor = 0.2
+		production_speed_rail_way_factor = 0.35
+		production_speed_supply_node_factor = 1.5
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GAIMUSYOU = {
+		sprite = 2
+		random = no
+
+		operative_slot = 2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Factory_syou = {
+		sprite = 2
+		random = no
+
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	RIKUGUNSYOU = {
+		sprite = 3
+		random = no
+
+		production_speed_arms_factory_factor = 0.15
+		production_speed_dockyard_factor = 0.15
+		conscription = 0.01
+		training_time_army_factor = -0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SOUMUTYOU = {
+		sprite = 4
+		random = no
+		political_power_factor = 0.20
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	KYOUIKUTYOU = {
+		sprite = 5
+		random = no
+		research_speed_factor = 0.14
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Sangyo = {
+		sprite = 9
+		random = no
+		production_speed_industrial_complex_factor = 0.10
+		production_speed_infrastructure_factor = 0.15
+		production_speed_naval_base_factor = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Zaimu = {
+		sprite = 11
+		random = no
+		consumer_goods_factor = -0.2
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ENG_Lerder_traits = {
+		sprite = 1
+		random = no
+		political_power_factor = 0.15
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		surrender_limit = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	USA_USB = {
+		sprite = 1
+		random = no
+		political_power_factor = 0.15
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		surrender_limit = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SUBARASII = {
+		random = no
+		political_power_factor = 0.20
+		stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	Kaihatud = {
+		random = no
+		political_power_factor = 0.20
+		production_speed_buildings_factor = 0.1
+		consumer_goods_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	kat = {
+		random = no
+		drift_defence_factor = -0.5
+		stability_factor = -0.10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Russia_king = {
+		random = no
+		conscription = 0.02
+		political_power_factor = 0.1
+		defensive_war_stability_factor = 0.25
+		offensive_war_stability_factor = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	luber = {
+		random = no
+		Industrial_factory_donations = 4
+		country_resource_rubber = 25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	heiwasyugisysa = {
+		random = no
+		political_power_factor = 0.25
+		political_advisor_cost_factor = -0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ITA_Caesaru = {
+		random = no
+		army_attack_against_major_factor = 0.4	
+        army_breakthrough_against_major_factor = 0.4
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chi_q = {
+		random = no
+		stability_factor = -0.10
+		drift_defence_factor = 0.5
+		political_power_factor = 0.35
+		resistance_growth_on_our_occupied_states = 0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	jap_syokumin = {
+		random = no
+		targeted_modifier = { tag = JAP cic_to_target_factor = 0.25 }
+		acclimatization_hot_climate_gain_factor = 0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	jap_syokumin3 = {
+		random = no
+		political_power_factor = 0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	jap_syokumin2 = {
+		random = no
+		targeted_modifier = { tag = JAP cic_to_target_factor = 0.25 }
+		democratic_drift = 0.10
+		consumer_goods_factor = -0.15
+		local_resources_factor = 0.20
+		stability_factor = 0.15
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	jap_Manzyu = {
+		random = no
+		targeted_modifier = { tag = JAP cic_to_target_factor = 0.4 }
+		democratic_drift = 0.10
+		consumer_goods_factor = -0.15
+		local_resources_factor = 0.20
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	karihu = {
+		random = no
+		stability_factor = 0.10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	zikoku = {
+		random = no
+		political_power_factor = 0.3
+		subjects_autonomy_gain = -95
+		subversive_activites_upkeep = -0.65
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kouniti = {
+		random = no
+		ai_focus_aggressive_factor = 0.5
+		army_core_attack_factor = 0.15
+		ai_strategy = {
+			type = antagonize
+			id = "JAP"			
+			value = 200
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tuarri = {
+		random = no
+		stability_factor = 0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	torotcy = {
+		random = no
+		ai_focus_aggressive_factor = 0.5
+		offensive_war_stability_factor = 0.5
+		war_support_factor = 0.05
+		justify_war_goal_time = -0.85
+		political_power_factor = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	SOVIET_BUHA = {
+		random = no
+		stability_factor = 0.1
+		production_factory_max_efficiency_factor = 0.05
+		industrial_capacity_factory = 0.05
+		communism_acceptance = -35
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

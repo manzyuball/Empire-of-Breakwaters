@@ -19,7 +19,7 @@ state={
 		add_core_of = AUS
 	}
 
-	manpower=353782
+	manpower=653782
 	state_category =megalopolis
 	buildings_max_level_factor=1.000
 	local_supplies=35.000

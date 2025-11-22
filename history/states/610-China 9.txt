@@ -2,11 +2,12 @@
 state={
 	id=610
 	name="STATE_610"
-
+	resources = {
+		COAL = 21
+	}
 	history={
 		owner = MAN
-		add_core_of = MAN
-		add_core_of = PRC
+add_core_of = MAN
 		add_claim_by = CHI
 		buildings = {
 			industrial_complex = 2

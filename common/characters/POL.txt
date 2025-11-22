@@ -204,21 +204,6 @@ characters = {
 		}
 	}
 
-	POL_wladyslaw_raczkiewicz = {
-		name=POL_wladyslaw_raczkiewicz
-		portraits = {
-			civilian = {
-				large="GFX_portrait_POL_wladyslaw_raczkiewicz"
-			}
-		}
-		country_leader = {
-			ideology=liberalism
-			traits = { democratic_restorationist }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
 	POL_wincenty_witos = {
 		name=POL_wincenty_witos
 		portraits = {
@@ -229,21 +214,6 @@ characters = {
 		country_leader = {
 			ideology=socialism
 			traits = { morges_champion }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-
-	POL_stanislaw_mikolajczyk = {
-		name=POL_stanislaw_mikolajczyk
-		portraits = {
-			civilian = {
-				large="GFX_portrait_POL_stanislaw_mikolajczyk"
-			}
-		}
-		country_leader = {
-			ideology=socialism
-			traits = { polish_peasant_champion }
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -285,23 +255,17 @@ characters = {
 			traits = {
 				fascist_demagogue 
 			}
-			ai_will_do = {
-				factor = 0.000
-				modifier = {
-					add = 100.000
-					OR = {
-						has_country_flag = POL_AI_RANDOM_FASCIST 
-						has_game_rule = {
-							rule = POL_ai_behavior 
-							option = FASCIST 
-						}
-					}
-				}
-			}
 		}
 		
 		country_leader = {
 			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+			traits = { father_of_polish_nationalism }
+		}
+				
+		country_leader = {
+			ideology=liberalism
 			expire="1965.1.1.1"
 			id=-1
 			traits = { father_of_polish_nationalism }
@@ -971,9 +935,9 @@ characters = {
 	}
 
 	POL_mieczyslaw_michalowicz={
-			allowed = {
-				original_tag = POL
-			}
+			# allowed = {
+			# 	original_tag = POL
+			# }
 			name=POL_mieczyslaw_michalowicz
 			portraits={
 				army={
@@ -1133,9 +1097,9 @@ characters = {
 				}
 			available = {
 			}
-			visible = {
-				has_completed_focus = POL_assemble_the_regency_council
-			}
+			# visible = {
+			# 	has_completed_focus = POL_assemble_the_regency_council
+			# }
 			traits = {
 				staunch_aristocrat 
 			}

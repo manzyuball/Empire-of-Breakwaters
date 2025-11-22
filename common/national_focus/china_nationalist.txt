@@ -538,10 +538,26 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -566,8 +582,8 @@
 		completion_reward = {
 			add_resource = {
 				type = steel
-				amount = 8
-				state = 613
+				amount = 34
+				state = 964
 			}
 		}
 	}
@@ -589,7 +605,7 @@
 
 		completion_reward = {
 			add_stability = 0.05
-		620 = {
+		964 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
@@ -597,7 +613,7 @@
 				instant_build = yes
 			}
 		}
-		607 = {
+		963 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
@@ -730,14 +746,7 @@
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+			964 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -745,14 +754,7 @@
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+			963 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -848,19 +850,25 @@
 		}
 
 		completion_reward = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = radar_station
-					level = 2
-					instant_build = yes
-				}
+			add_tech_bonus = {
+				name = GER_coal_liquidization
+				bonus = 3.0
+				uses = 1
+				category = synth_resources
 			}
-			modify_building_resources = {
-				building = radar_station
-				resource = rubber
-				amount = 2
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 2
+						instant_build = yes
+					}
 				}
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 1
+			}
 		}
 	}
 	focus = {
@@ -880,10 +888,10 @@
 		}
 
 		completion_reward = {
-			add_resource = {
-			type = oil
-			amount = 10
-			state = 750
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = 3
 			}
 		}
 	}
@@ -904,6 +912,38 @@
 		}
 
 		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 			random_owned_controlled_state = {
 				limit = {
 					dockyard > 0
@@ -971,6 +1011,38 @@
 					instant_build = yes
 				}
 			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -1001,6 +1073,7 @@
 		completion_reward = {
 			add_war_support = 0.1
 			add_stability = 0.05
+			add_threat = 5
 		}
 	}
 	focus = {
@@ -1157,7 +1230,7 @@
 		}
 
 		completion_reward = {
-		613 = {	
+		964 = {	
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = arms_factory
@@ -1547,12 +1620,11 @@
 			factor = 10
 		}
 		available = {
-			controls_state = 851
+			controls_state = 994
 		}
 
 		completion_reward = {
 			set_major = yes
-			
 			army_experience = 150
 		}
 	}
@@ -1578,43 +1650,39 @@
 				MAN = {
 					is_puppet_of = CHI
 				}
-			}
+			    }
+
 			annex_country = {
 				target = MAN
-				transfer_troops = yes
+				transfer_troops = no
 				}
+			}
+			MAN = {
+				every_unit_leader = {
+					set_nationality = CHI
+				}
+			}
+			every_state = {
+				limit = { is_core_of = MAN }
+				add_core_of = ROOT
 			}
 			if = {
 				limit = {
 				MON = {
 					is_puppet_of = CHI
 				}
-			}
+			    }
 			annex_country = {
 				target = MON
 				transfer_troops = yes
 				}
-				add_state_core = 817
-				add_state_core = 330
-				add_state_core = 819
-				add_state_core = 886
-				add_state_core = 820
-				add_state_core = 818
-				add_state_core = 329
-				add_state_core = 885
 			}
-			add_state_core = 758
-			add_state_core = 322
-			add_state_core = 757
-			add_state_core = 604
-			add_state_core = 601
-			add_state_core = 408
-			add_state_core = 857
-			add_state_core = 409
-			add_state_core = 657
-			add_state_core = 560
-			add_state_core = 655
-			add_state_core = 537
+			MON = {
+				every_unit_leader = {
+					set_nationality = CHI
+				}
+			}
+
 		}
 	}
 
@@ -1644,6 +1712,14 @@
 
 		completion_reward = {
 			add_political_power = 200
+			964 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = radar_station
+					level = 6
+					instant_build = yes
+				}
+			}
 			add_victory_points = {
 				province = 4130
 				value = 10
@@ -1693,6 +1769,16 @@
 
 		completion_reward = {
 			add_ideas = CHI_WAR_CITY
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 2
+			}
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = oil
+				amount = 12
+			}
 		}
 	}
 	focus = {
@@ -1889,6 +1975,7 @@
 		}
 
 		completion_reward = {
+			add_threat = 5
 			CHI = {
 				create_wargoal = {
 					type = annex_everything
@@ -1922,6 +2009,7 @@
 		}
 
 		completion_reward = {
+			add_threat = 5
 				create_wargoal = {
 					type = annex_everything
 					target = MON
@@ -1950,16 +2038,28 @@
 		}
 
 		available = {
-			controls_state = 613
-			controls_state = 615
-			controls_state = 599
-			controls_state = 325
-			controls_state = 605
+			TAN = {
+				exists = no
+			}
+			GXC= {
+				exists = no
+			}
+			YUN = {
+				exists = no
+			}
+			MEN = {
+				exists = no
+			}
+			SHX = {
+				exists = no
+			}
 		}
 
 		completion_reward = {
 			is_major = yes
 			remove_ideas = CHI_BUNRETU
+			country_event = wtt_china.3
+			add_threat = 5
 			add_research_slot = 1
 			add_political_power = 250
 			add_stability = 0.15
@@ -1986,6 +2086,15 @@
 				type = annex_everything
 				target = TIB
 				}
+				every_owned_state = {
+					limit = { 
+						is_core_of = MON
+						is_core_of = CHI
+					}
+                    remove_core_of = MON
+				}
+				release_puppet = MON
+
 		}
 	}
 	focus = {
@@ -2003,8 +2112,9 @@
 
 		available = {
 		}
-
+will_lead_to_war_with = JAP
 		completion_reward = {
+			add_threat = 5
 			declare_war_on = {
 				type = annex_everything
 				target = MAN
@@ -2016,6 +2126,10 @@
 			add_timed_idea = {
 				idea = CHI_daityuuka
 				days = 180
+				}
+				news_event = {
+					id = news.15
+					days = 1
 				}
 		}
 	}
@@ -2086,10 +2200,19 @@
 		}
 
 		completion_reward = {
+			add_threat = 5
 			set_rule = {
 				can_create_factions = yes
 				can_declare_war_without_wargoal_when_in_war = yes
 				}
+				create_wargoal = {
+					type = annex_everything
+					target = VLA
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = SOV
+						}
 		}
 	}
 	focus = {

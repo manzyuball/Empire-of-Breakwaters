@@ -1,7 +1,6 @@
 ideas = {
 	country = {
 		JAP_Zyouriku_ideas = { 
-			name = JAP_Zyouriku_ideas
 			picture = generic_coastal_defense_ships
 			modifier = {
 				ai_focus_aggressive_factor = 0.25
@@ -10,96 +9,166 @@ ideas = {
 			targeted_modifier = { tag = CHI attack_bonus_against = 0.10 }
 			targeted_modifier = { tag = IVO attack_bonus_against = 0.05 }
 		}
-
-		Shared_shells = {
-			name = JP_SS
-			picture = JAP_share_shell
-		}
-		to_kikan = {
-			name = TOKIKAN
-			picture = JAP_to_kikan
+		JAP_fortification = { 
+			picture = generic_wall_line
 			modifier = {
-				operative_slot = 2
+				production_speed_rail_way_factor = 0.25
+				production_speed_air_base_factor = 0.25
+				production_speed_bunker_factor = 0.25
+				production_speed_supply_node_factor = 0.25
+				production_speed_naval_base_factor = 0.25
 			}
 		}
-		Oxygen_torpedoes = {
-			name = OT
-			picture = JAP_type_93_torpedo
+		JAP_supply_ideas = { 
+			picture = generic_supply_lines
+			modifier = {
+				supply_node_range = 0.1
+			}
 		}
-		Preservation_of_old_ships = {
-			name = POOS
-			picture = JAP_naval_escort_battle
+		JAP_supply_ideas2 = { 
+			picture = generic_supply_lines
+			modifier = {
+				supply_node_range = 0.25
+			}
 		}
+		JAP_supply_ideas3 = { 
+			picture = generic_supply_lines
+			modifier = {
+				supply_node_range = 0.3
+				army_armor_attack_factor = 0.15
+				army_armor_speed_factor = 0.15
+			}
+		}
+		JAP_command_centres = { 
+			picture = generic_army_war_college
+			modifier = {
+				command_power_gain_mult = 0.25
+				max_planning_factor = 0.1
+			}
+		}
+		
+		JAP_command_centres1 = { 
+			picture = generic_army_war_college
+			modifier = {
+				command_power_gain_mult = 0.25
+				max_planning_factor = 0.1
+				experience_loss_factor = -0.85
+				land_reinforce_rate = 0.05
+			}
+		}
+		
+		JAP_command_centres2 = { 
+			picture = generic_army_war_college
+			modifier = {
+				command_power_gain_mult = 0.25
+				max_planning_factor = 0.25
+				experience_loss_factor = -0.85
+				land_reinforce_rate = 0.05
+			}
+		}
+		
+		JAP_command_centres3 = { 
+			picture = generic_army_war_college
+			modifier = {
+				command_power_gain_mult = 0.25
+				max_planning_factor = 0.25
+				experience_loss_factor = -0.85
+				land_reinforce_rate = 0.05
+				naval_invasion_capacity = 60
+				invasion_preparation = -0.5
+				naval_invasion_penalty = -0.3
+			}
+		}
+		#Shared_shells = {
+		#	name = JP_SS
+		#	picture = JAP_share_shell
+		#}
+		#to_kikan = {
+		#	name = TOKIKAN
+		#	picture = JAP_to_kikan
+		#	modifier = {
+		#		operative_slot = 2
+		#	}
+		#}
+		#Oxygen_torpedoes = {
+		#	name = OT
+		#	picture = JAP_type_93_torpedo
+		#}
+		#Preservation_of_old_ships = {
+		#	name = POOS
+		#	picture = JAP_naval_escort_battle
+		#}
 		SyouwaKyoukou = { #昭和恐慌
 			picture = great_depression
 			modifier = {
-				consumer_goods_factor = 0.1
-				stability_factor = -0.15
-				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.8
+				stability_factor = -0.2
+				production_speed_buildings_factor = -0.5
 			}
 		}
 		SyouwaKyoukou1 = { #昭和恐慌
 		picture = great_depression
 		modifier = {
-			consumer_goods_factor = 0.05
-			stability_factor = -0.05
-			production_speed_buildings_factor = -0.1
+			consumer_goods_factor = 0.65
+			stability_factor = -0.2
+			production_speed_buildings_factor = -0.25
 		}
-	}
+     	}
 	SyouwaKyoukou2= { #昭和恐慌
 	picture = great_depression
 	modifier = {
-		consumer_goods_factor = 0.05
-		stability_factor = -0.05
+		consumer_goods_factor = 0.4
+		stability_factor = -0.1
+			production_speed_buildings_factor = -0.25
 	}
     }
 	SyouwaKyoukou3= { #昭和恐慌
 	picture = great_depression
 	modifier = {
-		stability_factor = -0.05
+		consumer_goods_factor = 0.25
+		stability_factor = -0.1
+		production_speed_buildings_factor = -0.25
 	}
     }
 		KaihatuKeikaku = { #第1次匡救政策
-			picture = JAP_industrial_standard
+			picture = generic_improved_industries
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.15
 			}
 		}
 		KaihatuKeikaku2 = { #第二次匡救政策
-		picture = JAP_industrial_standard
+		picture = generic_improved_industries
 		modifier = {
-			consumer_goods_factor = 0.05
-			production_speed_infrastructure_factor = 0.4
-			production_speed_rail_way_factor = 0.4
+			consumer_goods_factor = 0.25
+			production_speed_infrastructure_factor = 0.5
+			production_speed_rail_way_factor = 0.5
 		}
     	}
 		KaihatuKeikaku3 = { #第3次匡救政策
-		picture = JAP_industrial_standard
+		picture = generic_improved_industries
 		modifier = {
-			consumer_goods_factor = 0.05
-			production_speed_industrial_complex_factor = 0.3
+			consumer_goods_factor = 0.25
+			production_speed_industrial_complex_factor = 0.4
 			production_speed_infrastructure_factor = 0.1
 			production_speed_rail_way_factor = 0.1
 		}
     	}
 		KaihatuKeikaku4 = { #第4次匡救政策
-		picture = JAP_industrial_standard
+		picture = generic_improved_industries
 		modifier = {
-			consumer_goods_factor = 0.05
-			industrial_capacity_factory = 0.25
-			production_speed_arms_factory_factor = 0.3
+			consumer_goods_factor = 0.25
+			industrial_capacity_factory = 0.05
+			production_speed_arms_factory_factor = 0.4
 			production_speed_industrial_complex_factor = 0.1
 			production_speed_infrastructure_factor = 0.1
 			production_speed_rail_way_factor = 0.1
 		}
     	}
 		KaihatuKeikaku5 = { #帝国の産業政策
-		picture = JAP_industrial_standard
+		picture = generic_improved_industries
 		modifier = {
-			industrial_capacity_factory = 0.25
-			production_speed_buildings_factor = 0.2
-			production_factory_efficiency_gain_factor = 0.2
-			local_resources_factor = 0.2
+			industrial_capacity_factory = 0.15
+			production_speed_buildings_factor = 0.3
 		}
     	}
 		Touyounominsyusyugi = { #東洋の民主主義
@@ -173,7 +242,7 @@ ideas = {
 			global_building_slots_factor = 0.25
 			production_speed_buildings_factor = 0.25
 		}
-		targeted_modifier = { tag = JAP cic_to_target_factor = 0.25 trade_cost_for_target_factor = -0.5 }
+		targeted_modifier = { tag = JAP mic_to_target_factor = 0.7  cic_to_target_factor = 0.7 trade_cost_for_target_factor = -0.75 }
         }
 		ENblo = {
 			picture = gre_schachtplan
@@ -189,7 +258,7 @@ ideas = {
 			modifier = {
 				experience_gain_army = 0.5
 				experience_gain_air = 0.5
-				training_time_factor = -0.25
+				training_time_factor = -0.20
 			}
 		}
 	}

@@ -6,12 +6,12 @@ state={
 	history={
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = PRC
+		add_core_of = MAN
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 2
+			industrial_complex = 5
 			arms_factory = 2
-
+			synthetic_refinery = 2
 		}
 		victory_points = {
 			7097 25 
@@ -22,7 +22,7 @@ state={
 	provinces={
 		1640 7097 10517 12483 13140 13143 
 	}
-	manpower=729422
+	manpower=41289800
 	buildings_max_level_factor=1.000
 	state_category=metropolis
 	local_supplies=0.000

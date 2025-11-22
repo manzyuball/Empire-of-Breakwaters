@@ -1,0 +1,27 @@
+state={
+	id=1050
+	name="STATE_1050"
+	provinces={
+		375 3367 3499 9456 11219 
+	}
+	resources = {
+		COAL = 23
+	}
+	history={
+		owner = LAT
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+
+			anti_air_building = 2
+		}
+		add_core_of = GER
+		add_core_of = LAT
+
+	}
+	manpower=1512412
+	state_category=city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

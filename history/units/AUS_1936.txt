@@ -481,7 +481,6 @@ units = {
 		location = 9598  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 
@@ -490,7 +489,6 @@ units = {
 		location = 3943  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {	
@@ -498,7 +496,6 @@ units = {
 		location = 9555  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {	
@@ -506,7 +503,6 @@ units = {
 		location = 3569  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -514,7 +510,6 @@ units = {
 		location = 11539  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -522,7 +517,6 @@ units = {
 		location = 6799  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -530,7 +524,6 @@ units = {
 		location = 3601  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -538,7 +531,6 @@ units = {
 		location = 690  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -546,7 +538,6 @@ units = {
 		location = 9606  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -554,7 +545,6 @@ units = {
 		location = 746  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -562,7 +552,6 @@ units = {
 		location = 3581  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -570,7 +559,6 @@ units = {
 		location = 3585  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {	
@@ -578,7 +566,6 @@ units = {
 		location = 11542  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 
@@ -587,7 +574,6 @@ units = {
 		location = 3569  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {	
@@ -595,7 +581,6 @@ units = {
 		location = 9660  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {	
@@ -603,7 +588,6 @@ units = {
 		location = 6711  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -611,7 +595,6 @@ units = {
 		location = 619  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -619,7 +602,6 @@ units = {
 		location = 6626  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -627,7 +609,6 @@ units = {
 		location = 3601  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -635,7 +616,6 @@ units = {
 		location = 3924  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -643,7 +623,6 @@ units = {
 		location = 9606  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -651,7 +630,6 @@ units = {
 		location = 746  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -659,7 +637,6 @@ units = {
 		location = 3581  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 	division= {
@@ -667,7 +644,6 @@ units = {
 		location = 3585  # Vienna
 		division_template = "Infanterie Division2"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.9
 
 	}
 }

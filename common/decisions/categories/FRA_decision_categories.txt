@@ -1,6 +1,7 @@
 FRA_Ryoud_Kakutyo = {
 	icon = sov_great_patriotic_war
 	allowed = {
-		original_tag = FRA
+		#original_tag = FRA
+		always = no
 	}
 }

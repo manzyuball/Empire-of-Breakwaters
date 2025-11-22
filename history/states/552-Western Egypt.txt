@@ -10,8 +10,6 @@ state={
 
 		}
 		add_core_of = EGY
-		add_core_of = GNA
-		add_claim_by = TUR
 
 	}
 	impassable = yes

@@ -1,5 +1,119 @@
 ideas = {
 	country = {
+		AUS_Support_for_military_companies = {
+			picture = NOR_printing_money
+			allowed = {
+			}
+
+			removal_cost = -1
+			modifier = {	
+				military_industrial_organization_funds_gain = 0.5
+			}
+		}
+		AUS_Investing_in_building_companies = {
+			picture = generic_exploit_mines
+			allowed = {
+			}
+
+			removal_cost = -1
+			modifier = {	
+				civilian_factory_use = 7
+				production_speed_buildings_factor = 0.25
+			}
+		}
+		AUS_Elimination_of_the_old_system = {
+			picture = generic_exploit_mines
+			allowed = {
+			}
+
+			removal_cost = -1
+			research_bonus = {
+				armor = 0.15
+			}
+		}
+		AUS_Learning_from_our_friends = {
+			picture = SWI_weaponize_Swissness
+			allowed = {
+			}
+
+			removal_cost = -1
+			modifier = {	
+				terrain_penalty_reduction = 0.3
+				army_core_defence_factor = 0.15
+			}
+		}
+		AUS_Learning_from_our_friends_2 = {
+			picture = SWI_weaponize_Swissness
+			allowed = {
+			}
+
+			removal_cost = -1
+			modifier = {	
+				terrain_penalty_reduction = 0.3
+				army_core_defence_factor = 0.25
+				resistance_growth_on_our_occupied_states = 0.75
+			}
+		}
+		AUS_Defence_by_the_elite = {
+			picture = generic_reserve_divisions
+			allowed = {
+			}
+
+			removal_cost = -1
+			modifier = {	
+				conscription_factor = -0.15
+				minimum_training_level = 0.4
+				army_morale_factor = 0.25
+			}
+		}
+		AUS_Defence_by_the_elite_2 = {
+			picture = generic_reserve_divisions
+			allowed = {
+			}
+
+			removal_cost = -1
+			modifier = {	
+				conscription_factor = -0.15
+				minimum_training_level = 0.7
+				army_morale_factor = 0.25
+				army_defence_factor = 0.20
+			}
+		}
+		AUS_Defence_by_the_elite_3 = {
+			picture = generic_reserve_divisions
+			allowed = {
+			}
+
+			removal_cost = -1
+			modifier = {	
+				conscription_factor = -0.15
+				minimum_training_level = 0.7
+				army_morale_factor = 0.25
+				army_defence_factor = 0.20
+				army_strength_factor = 0.15
+			}
+		}
+		AUS_our_friends = {
+			picture = generic_volunteer_expedition_bonus
+			allowed = {
+			}
+
+			removal_cost = -1
+			modifier = {	
+			democratic_acceptance = 250
+			join_faction_tension = -0.5
+			}
+		}
+		AUS_traditional_factory = {
+			picture = hol_depillarization
+			allowed = {
+			}
+
+			removal_cost = -1
+			modifier = {	
+				production_factory_max_efficiency_factor = 0.2 
+			}
+		}
 		AUS_na1 = {
 			picture = generic_deal_with_the_devil
 			allowed = {

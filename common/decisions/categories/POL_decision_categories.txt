@@ -4,10 +4,7 @@ POL_KAKUDAI = {
 		original_tag = POL
 	}
 	available = { 
-		OR = {
-			has_completed_focus = POL_PI4
-			has_completed_focus = POL_S6
-		}
+		has_completed_focus = POL_S6
 	}
 }
 POL_UKR_SINK = {

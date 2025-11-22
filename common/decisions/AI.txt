@@ -1,0 +1,50 @@
+AI_decisions = {
+	JAP_EV1 = {
+			icon = generic_operation
+			available = {
+				date > 1936.03.01
+			}
+			visible = {
+			}
+			cost = 0
+			fire_only_once = yes
+			ai_will_do = {
+				factor = 1000
+			}
+			complete_effect = {
+				JAP = {
+					country_event = {
+						id = japan.1
+						days = 1
+						random = 30
+					}
+				}
+		    }
+	}
+	JAP_EV2 = {
+		icon = generic_operation
+		available = {
+			USB = {
+				has_war = yes
+			}
+		}
+		visible = {
+		}
+		cost = 0
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1000
+		}
+		complete_effect = {
+			JAP = {
+				country_event = {
+					id = japan.2
+					days = 1
+					random = 10
+				}
+			}
+		}
+    }
+
+
+}

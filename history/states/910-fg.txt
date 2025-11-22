@@ -14,7 +14,8 @@ state={
 		add_core_of = USN
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 2
+			industrial_complex = 5
+			arms_factory = 4
 			air_base = 3
 			6785 = {
 				naval_base = 1
@@ -26,7 +27,7 @@ state={
 		add_core_of = USB
 		add_core_of = CSA
 		victory_points = {
-			12782 5
+			12782 10
 		}
 
 	}

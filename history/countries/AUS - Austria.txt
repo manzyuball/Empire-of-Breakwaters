@@ -1,7 +1,7 @@
 ﻿capital = 856
 
 oob = "AUS_1936"
-set_naval_oob = "AUS_1936_naval_mtg"
+set_naval_oob = "AUS_naval"
 
 set_research_slots = 5
 if = {
@@ -19,11 +19,10 @@ if = {
 		puppet = LBV
 	}
 }
-
 set_air_oob = "AUS_1936_air_bba"
 
-add_manpower = 664210
-create_faction = "中央同盟国"
+add_manpower = 1464210
+create_faction = "プラハ協定"
 add_to_faction = AUS
 add_to_faction = BUL
 add_to_faction = TUR
@@ -32,6 +31,7 @@ add_to_faction = FIN
 add_to_faction = POL
 add_to_faction = UKR
 recruit_character = AUS_Wilhelm
+recruit_character = AUS_Karl_Renner
 recruit_character = AUS_karl_renner
 recruit_character = AUS_Adolf_Hitler
 recruit_character = AUS_alfred_klahr
@@ -65,11 +65,11 @@ set_politics = {
 set_popularities = {
 	neutrality = 5
 	fascism = 25
-	democratic = 45
-	communism = 25
+	democratic = 55
+	communism = 15
 }
 
-set_stability = 0.20
+set_stability = 0.5
 
 
 # Starting tech
@@ -151,6 +151,8 @@ set_technology = {
 	engines_2 = 1
 	aircraft_construction = 1
 	range_improvements = 1
+
+	naval_buildings_tech = 1
 
 	fuel_silos = 1
 	synth_oil_experiments = 1

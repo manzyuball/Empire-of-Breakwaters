@@ -3,11 +3,13 @@ state={
 	name="STATE_61"
 	manpower = 836353
 
-
+	resources = {
+		COAL = 14
+	}
 	state_category = town
 
 	history={
-		owner = GER
+		owner = LAT
 		add_core_of = LAT
 		victory_points = {
 			321 5

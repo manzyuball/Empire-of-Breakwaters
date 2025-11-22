@@ -1,10 +1,6 @@
 spriteTypes = {	
 	SpriteType = {
-		name = GFX_DISCORD_EOB
+		name = "GFX_DISCORD_EOB"
 		texturefile = "gfx/Discord.png"
-	}
-	SpriteType = {
-		name = GFX_National_introduction_France
-		texturefile = "gfx/interface/National_introduction_France.png"
 	}
 }

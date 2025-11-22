@@ -7,7 +7,6 @@ state={
 	state_category = town
 	history={
 		owner = GNA
-		add_core_of = TZN
 		add_core_of = GNA
 		victory_points = {
 			10803 1

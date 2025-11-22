@@ -22,7 +22,7 @@ state={
 		add_core_of = USB
 		add_core_of = USN
 		victory_points = {
-			12501 3 
+			12501 5 
 		}
 
 	}

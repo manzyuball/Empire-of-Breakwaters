@@ -12,7 +12,6 @@ state={
 			air_base = 2
 
 		}
-		add_claim_by = TUR
 		add_core_of = SUD
 
 	}

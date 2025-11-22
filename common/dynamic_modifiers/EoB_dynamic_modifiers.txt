@@ -1,0 +1,8 @@
+
+ENG_development_of_the_mainland_develop_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_industry
+	
+	state_resources_factor = 0.5
+}

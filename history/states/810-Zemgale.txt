@@ -5,6 +5,7 @@ state={
 
 	history={
 		owner = LAT
+		add_claim_by =  EST
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1

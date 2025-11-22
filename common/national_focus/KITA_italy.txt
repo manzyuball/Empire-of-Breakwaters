@@ -24,7 +24,7 @@
 		y = 0
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -34,6 +34,7 @@
 		}
 		completion_reward = {
 			add_war_support = 0.15
+			add_threat = 5
 		}
 	}
 	focus = { 
@@ -95,7 +96,7 @@
 		relative_position_id = ITA_Rome
 		prerequisite = { focus = ITA_Rome2 }
 		mutually_exclusive = { }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
@@ -237,6 +238,7 @@
 			set_rule = {
 				can_be_called_to_war = yes
 			}
+			add_threat = 5
 			set_capital = 986
 			set_cosmetic_tag = BIG_ITA
 			set_major = yes

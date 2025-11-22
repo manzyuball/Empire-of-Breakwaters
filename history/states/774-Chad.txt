@@ -4,22 +4,21 @@ state={
 	name="STATE_774"
 
 	history={
-		owner = TZN
-		add_core_of = TZN
-		victory_points = {
-			2081 1 
-		}
+		owner = GNA
+		add_core_of = GNA
 		buildings = {
 			infrastructure = 1
 
 		}
-
+		victory_points = {
+			2081 1 
+		}
 	}
 
 	provinces={
-		1473 1883 1993 2081 3123 3181 4897 4978 7919 9152 13138 13211 13678 13740 
+		1883 2081 9152 13740 
 	}
-	manpower=1442456
+	manpower=1032456
 	buildings_max_level_factor=1.000
 	state_category=pastoral
 	local_supplies=3.000

@@ -1,5 +1,37 @@
-CHI_habatukousou = {
 
+
+
+
+CHI_habatukousou = {
+	
+	
+	CHI_west_tank_tech = {
+
+		allowed = {
+		original_tag = CHI
+		}
+		available = {
+			date > 1938.12.25
+		}
+
+		cost = 50
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 50
+		}
+		days_remove = 40
+       remove_effect = {
+		hidden_effect = {
+			country_event =  wtt_china.4
+		}
+	   }
+		complete_effect = {
+			set_technology = {
+				CHI_Tank_tech  = 1
+			}
+		}
+	}
 	CHI_koukuu1 = {
 
 		allowed = {
@@ -7,7 +39,7 @@ CHI_habatukousou = {
 		}
 
 		cost = 25
-		fire_only_once = no
+		fire_only_once = yes
 
 		ai_will_do = {
 			factor = 50
@@ -37,7 +69,7 @@ CHI_habatukousou = {
 		}
 
 		cost = 75
-		fire_only_once = no
+		fire_only_once = yes
 
 		ai_will_do = {
 			factor = 25
@@ -136,7 +168,7 @@ CHI_habatukousou = {
 		}
 
 		cost = 25
-		fire_only_once = no
+		fire_only_once = yes
 
 		ai_will_do = {
 			factor = 50
@@ -163,7 +195,7 @@ CHI_habatukousou = {
 		}
 
 		cost = 75
-		fire_only_once = no
+		fire_only_once = yes
 
 		ai_will_do = {
 			factor = 25
@@ -189,7 +221,7 @@ CHI_habatukousou = {
 		}
 
 		cost = 75
-		fire_only_once = no
+		fire_only_once = yes
 
 		ai_will_do = {
 			factor = 25
@@ -232,7 +264,7 @@ CHI_habatukousou = {
 				original_tag = CHI
 		}
 		cost = 25
-		fire_only_once = no
+		fire_only_once = yes
 
 		ai_will_do = {
 			factor = 50
@@ -263,7 +295,7 @@ CHI_habatukousou = {
 		}
 
 		cost = 25
-		fire_only_once = no
+		fire_only_once = yes
 
 		ai_will_do = {
 			factor = 50
@@ -293,7 +325,7 @@ CHI_habatukousou = {
 				original_tag = CHI
 		}
 		cost = 75
-		fire_only_once = no
+		fire_only_once = yes
 
 		ai_will_do = {
 			factor = 20
@@ -324,7 +356,7 @@ CHI_habatukousou = {
 		}
 
 		cost = 185
-		fire_only_once = no
+		fire_only_once = yes
 
 		ai_will_do = {
 			factor = 20

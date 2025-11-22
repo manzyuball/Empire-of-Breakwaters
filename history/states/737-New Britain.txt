@@ -4,7 +4,7 @@ state={
 	name="STATE_737"
 
 	history={
-		owner = AST
+		owner = LAT
 		buildings = {
 			infrastructure = 2
 			air_base = 1

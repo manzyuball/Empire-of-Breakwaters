@@ -23,3 +23,15 @@ music = {
 		factor = 0
 	}
 }
+music = {
+	song = "Berioz_war"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "Marching_geogia"
+	chance = {
+		factor = 0
+	}
+}

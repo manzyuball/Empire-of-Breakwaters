@@ -7,22 +7,17 @@ set_war_support = 0.5
 
 set_research_slots = 5
 set_fuel_ratio = 1.0
-
+add_offsite_building = {
+	type = industrial_complex
+	level = 12
+}
 add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
-
-
-	The_Fourth_Fleet_Incident
-	disaster_prone_countries
-	Shared_shells
-	to_kikan
-	Oxygen_torpedoes
-	Preservation_of_old_ships
-
-	SyouwaKyoukou
 	KaihatuKeikaku
+	SyouwaKyoukou
+	
 }
 
 set_autonomy = {
@@ -35,14 +30,9 @@ set_autonomy = {
 	autonomous_state = autonomy_dominion
 	freedom_level = 0.3
 }
-set_autonomy = {
-	target = HAW
-	autonomous_state = autonomy_dominion
-	freedom_level = 0.1
-}
 
 set_oob = "JAP_1936_nsb"
-set_naval_oob = "JAP_1936_naval"
+set_naval_oob = "JAP_naval"
 set_air_oob = "JAP_1936_air_bba"
 set_convoys = 480
 
@@ -61,10 +51,6 @@ if = {
 		target = PHI
 		autonomous_state =  autonomy_puppet
 	}
-	set_autonomy = {
-		target = HAW
-		autonomous_state =  autonomy_puppet
-	}
 }
 if = {
 	limit = { 
@@ -72,11 +58,6 @@ if = {
 	}
 	set_autonomy = {
 		target = INS
-		autonomous_state = autonomy_wtt_imperial_protectorate
-	}
-
-	set_autonomy = {
-		target = HAW
 		autonomous_state = autonomy_wtt_imperial_protectorate
 	}
 
@@ -248,6 +229,8 @@ set_technology = {
 	engines_2 = 1
 	aircraft_construction = 1
 	range_improvements = 1
+
+	naval_buildings_tech = 1
 
 	fuel_silos = 1
 	synth_oil_experiments = 1

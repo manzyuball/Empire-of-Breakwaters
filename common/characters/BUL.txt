@@ -58,9 +58,9 @@ characters = {
 	}
 
 	BUL_georgi_dimitrov = {
-			allowed = {
+			# allowed = {
 		
-			}
+			# }
 			name = BUL_georgi_dimitrov
 			portraits = {
 				civilian = {
@@ -424,9 +424,9 @@ characters = {
 				original_tag = BUL
 			}
 			available = {
-				NOT = {
-					has_completed_focus = BUL_oppose_the_royal_dictatorship
-				}
+				# NOT = {
+				# 	has_completed_focus = BUL_oppose_the_royal_dictatorship
+				# }
 				NOT = {
 					has_government = communism
 				}
@@ -605,9 +605,9 @@ characters = {
 					original_tag = BUL
 				}
 				available = {
-					NOT = {
-						has_completed_focus = BUL_join_the_tripartite_pact
-					}
+					# NOT = {
+					# 	has_completed_focus = BUL_join_the_tripartite_pact
+					# }
 					NOT = {
 						has_government = fascism
 					}
@@ -933,9 +933,9 @@ characters = {
 				original_tag = BUL
 			}
 			available = {
-				NOT = {
-					has_completed_focus = BUL_approach_germany
-				}
+				# NOT = {
+				# 	has_completed_focus = BUL_approach_germany
+				# }
 				NOT = {
 					has_government = fascism
 				}
@@ -1576,7 +1576,7 @@ characters = {
 							BUL_is_monarchist_ferdinand_ai = yes
 							BUL_is_historical_ai = yes
 						}
-						NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
+						# NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
 						democratic < 0.2
 					}
 					modifier = {
@@ -1585,7 +1585,7 @@ characters = {
 							BUL_is_monarchist_ferdinand_ai = yes
 							BUL_is_historical_ai = yes
 						}
-						has_completed_focus = BUL_illusions_of_a_non_partisan_system
+						# has_completed_focus = BUL_illusions_of_a_non_partisan_system
 						democratic > 0.8
 					}
 				}
@@ -1625,9 +1625,9 @@ characters = {
 					has_dlc = "Battle for the Bosporus"
 					original_tag = BUL
 				}
-				available = {
-					has_completed_focus = BUL_democratic_principles 
-				}
+				# available = {
+				# 	has_completed_focus = BUL_democratic_principles 
+				# }
 				traits = {
 					compassionate_gentleman 
 				}
@@ -1679,9 +1679,9 @@ characters = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
 			}
-			available = {
-				has_completed_focus = BUL_democratic_principles 
-			}
+			# available = {
+			# 	has_completed_focus = BUL_democratic_principles 
+			# }
 			traits = {
 				industry_reformer 
 			}
@@ -1712,12 +1712,12 @@ characters = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
 			}
-			available = {
-				OR = {
-					has_completed_focus = BUL_limited_womens_suffrage 
-					has_completed_focus = BUL_full_voting_rights_for_women 
-				}
-			}
+			# available = {
+			# 	OR = {
+			# 		has_completed_focus = BUL_limited_womens_suffrage 
+			# 		has_completed_focus = BUL_full_voting_rights_for_women 
+			# 	}
+			# }
 			traits = {
 				womens_rights_activist 
 			}
@@ -1736,13 +1736,13 @@ characters = {
 						BUL_is_monarchist_ferdinand_ai = yes
 						BUL_is_historical_ai = yes
 					}
-					NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
+					# NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
 					democratic < 0.2
 				}
 				modifier = {
 					factor = 0.000
 					BUL_is_monarchist_ferdinand_ai = yes 
-					has_completed_focus = BUL_illusions_of_a_non_partisan_system 
+					# has_completed_focus = BUL_illusions_of_a_non_partisan_system 
 				}
 			}
 		}
@@ -1756,11 +1756,11 @@ characters = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
 			}
-			available = {
-				NOT = {
-					has_completed_focus = BUL_power_to_the_tsar 
-				}
-			}
+			# available = {
+			# 	NOT = {
+			# 		has_completed_focus = BUL_power_to_the_tsar 
+			# 	}
+			# }
 			traits = {
 				communist_revolutionary 
 			}
@@ -1791,9 +1791,9 @@ characters = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
 			}
-			available = {
-				has_completed_focus = BUL_appoint_communist_ministers 
-			}
+			# available = {
+			# 	has_completed_focus = BUL_appoint_communist_ministers 
+			# }
 			traits = {
 				captain_of_industry 
 			}
@@ -1851,11 +1851,11 @@ characters = {
 				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
 			}
-			available = {
-				NOT = {
-					has_completed_focus = BUL_oppose_the_royal_dictatorship 
-				}
-			}
+			# available = {
+			# 	NOT = {
+			# 		has_completed_focus = BUL_oppose_the_royal_dictatorship 
+			# 	}
+			# }
 			traits = {
 				fascist_demagogue 
 			}
@@ -1871,7 +1871,7 @@ characters = {
 						BUL_is_monarchist_ferdinand_ai = yes
 						BUL_is_historical_ai = yes
 					}
-					NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
+					# NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
 				}
 			}
 		}
@@ -1908,7 +1908,7 @@ characters = {
 						BUL_is_monarchist_ferdinand_ai = yes
 						BUL_is_historical_ai = yes
 					}
-					NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
+					# NOT = { has_completed_focus = BUL_illusions_of_a_non_partisan_system }
 				}
 			}
 		}
@@ -1932,7 +1932,7 @@ characters = {
 				original_tag = BUL
 			}
 			available = {
-				has_completed_focus = BUL_appoint_right_wing_ministers 
+				# has_completed_focus = BUL_appoint_right_wing_ministers 
 				NOT = {
 					has_government = democratic 
 				}
@@ -1971,11 +1971,11 @@ characters = {
 					has_dlc = "Battle for the Bosporus"
 					original_tag = BUL
 				}
-				available = {
-					NOT = {
-						has_completed_focus = BUL_oppose_the_royal_dictatorship 
-					}
-				}
+				# available = {
+				# 	NOT = {
+				# 		has_completed_focus = BUL_oppose_the_royal_dictatorship 
+				# 	}
+				# }
 				traits = {
 					captain_of_industry 
 				}
@@ -2028,7 +2028,7 @@ characters = {
 				original_tag = BUL
 			}
 			available = {
-				has_completed_focus = BUL_approach_germany 
+				# has_completed_focus = BUL_approach_germany 
 				NOT = {
 					has_government = democratic 
 				}
@@ -2068,7 +2068,7 @@ characters = {
 				original_tag = BUL
 			}
 			available = {
-				has_completed_focus = BUL_approach_germany 
+				# has_completed_focus = BUL_approach_germany 
 				NOT = {
 					has_government = democratic 
 				}

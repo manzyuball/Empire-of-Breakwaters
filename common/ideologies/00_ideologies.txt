@@ -110,8 +110,9 @@ ideologies = {
 		faction_impact_on_world_tension = 0.8
 
 		modifiers = {
-			generate_wargoal_tension = 1.00
-			join_faction_tension = 0.80
+			generate_wargoal_tension = 0.2
+			justify_war_goal_time = -0.75
+			join_faction_tension = 0.5
 			lend_lease_tension = 0
 			send_volunteers_tension = 0
 			guarantee_tension = 0.80
@@ -179,8 +180,9 @@ ideologies = {
 		faction_impact_on_world_tension = 0.8
 
 		modifiers = {
-			generate_wargoal_tension = 1.00
-			join_faction_tension = 0.80
+			generate_wargoal_tension = 0.2
+			justify_war_goal_time = -0.75
+			join_faction_tension = 0.5
 			lend_lease_tension = 0
 			send_volunteers_tension = 0
 			guarantee_tension = 0.80
@@ -248,8 +250,8 @@ ideologies = {
 		faction_impact_on_world_tension = 0.8
 
 		modifiers = {
-			generate_wargoal_tension = 1.00
-			join_faction_tension = 0.80
+			generate_wargoal_tension = 0.2
+			join_faction_tension = 0.5
 			lend_lease_tension = 0
 			send_volunteers_tension = 0
 			guarantee_tension = 0.80

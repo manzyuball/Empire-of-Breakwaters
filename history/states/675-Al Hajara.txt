@@ -4,7 +4,7 @@ state={
 	name="STATE_675"
 
 	history={
-		owner = TUR
+		owner = SAU
 		victory_points = {
 			12413 1 
 		}
@@ -12,14 +12,12 @@ state={
 			infrastructure = 1
 
 		}
-		add_core_of = IRQ
-		add_core_of = TUR
 		add_core_of = SAU
-
+		add_claim_by = TUR
 	}
 
 	provinces={
-		1631 4951 10744 12413 12879 
+		1631 4440 4951 10383 10744 12316 
 	}
 	manpower=122093
 	buildings_max_level_factor=1.000
