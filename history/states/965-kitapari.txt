@@ -1,0 +1,36 @@
+state={
+	id=965
+	name="STATE_965"
+	provinces={
+		9534 11506 11518 
+	}
+	history={
+		owner = EUN
+		victory_points = {
+			11506 50 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 2
+			anti_air_building = 3
+			air_base = 5
+
+		}
+		add_core_of = EUN
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+				industrial_complex = 2
+
+			}
+
+		}
+
+	}
+
+	manpower=4038500
+	state_category=megalopolis
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

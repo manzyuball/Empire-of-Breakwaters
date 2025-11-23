@@ -19,11 +19,7 @@ state = {
 				naval_base = 2
 			}
 		}
-<<<<<<< HEAD
-		add_core_of = EUN
-=======
 		
->>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 		add_core_of = YUG
 		add_core_of = VNI
 		add_core_of = CRO
@@ -38,4 +34,3 @@ state = {
 
 	local_supplies = 0.0 
 }
-

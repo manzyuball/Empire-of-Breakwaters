@@ -20,11 +20,7 @@ state={
 				naval_base = 5
 			}
 		}
-<<<<<<< HEAD
-		add_core_of = EUN
-=======
 		
->>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 		add_core_of = POL
 		
 	}
@@ -35,4 +31,3 @@ state={
 
 	local_supplies=0.0 
 }
-

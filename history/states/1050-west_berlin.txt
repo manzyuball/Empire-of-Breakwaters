@@ -17,13 +17,8 @@ state={
 
 			anti_air_building = 2
 		}
-<<<<<<< HEAD
-		add_core_of = EUN
-		add_core_of = LAT
-=======
 		
 		
->>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 
 	}
 	manpower=1512412
@@ -31,4 +26,3 @@ state={
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
-

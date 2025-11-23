@@ -20,13 +20,8 @@ state={
 			}
 
 		}
-<<<<<<< HEAD
-		add_core_of = EUN
-		add_core_of = LAT
-=======
 		
 		
->>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 
 	}
 
@@ -38,4 +33,3 @@ state={
 	state_category=city
 	local_supplies=0.000
 }
-

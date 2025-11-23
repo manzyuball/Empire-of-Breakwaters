@@ -1,0 +1,27 @@
+state={
+	id=1013
+	name="STATE_1013"
+	provinces={
+		678 1346 6529 9503 
+	}
+	history={
+		owner = EUN
+		
+		victory_points = {
+			678 5 
+		}
+		victory_points = {
+			9503 5
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			air_base = 1
+		}
+		add_core_of = EUN
+	}
+	manpower=915600
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=city
+}

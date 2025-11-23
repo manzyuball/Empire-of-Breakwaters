@@ -14,11 +14,7 @@ state={
 			industrial_complex = 4
 		}
 		add_core_of = PAP
-<<<<<<< HEAD
-		add_core_of = EUN
-=======
 		
->>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 
 	}
 	manpower=1002142
@@ -26,4 +22,3 @@ state={
 	local_supplies=0.000
 	state_category= city
 }
-

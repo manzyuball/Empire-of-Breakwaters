@@ -21,11 +21,7 @@ state={
 		1938.3.12 = {
 			owner = EUN
 			controller = GER
-<<<<<<< HEAD
-			add_core_of = EUN
-=======
 			
->>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 		}
 	}
 
@@ -35,4 +31,3 @@ state={
 
 	local_supplies=12.0 
 }
-

@@ -27,4 +27,3 @@ state={
 	state_category=city
 	local_supplies=0.000
 }
-

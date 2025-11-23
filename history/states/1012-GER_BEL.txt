@@ -1,0 +1,24 @@
+state={
+	id=1012
+	name="STATE_1012"
+	provinces={
+		3488 11562
+	}
+	history={
+		owner = EUN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}		
+		victory_points = {
+			11562 1 
+		}
+		add_core_of = EUN
+	}
+
+	manpower=64321
+	state_category = rural
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

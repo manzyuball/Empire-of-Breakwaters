@@ -15,13 +15,8 @@ state={
 			air_base = 3
 
 		}
-<<<<<<< HEAD
-		add_core_of = LAT
-		add_core_of = EUN
-=======
 		
 		
->>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 
 	}
 
@@ -33,4 +28,3 @@ state={
 	state_category=city
 	local_supplies=0.000
 }
-

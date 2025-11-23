@@ -292,11 +292,7 @@
  EUN_carrier_primacy_desc:0 "巨砲の時代は終わった。これからは航空母艦が海の王者となる。"
  EUN_modern_regia_marina:0 "近代海軍"
  EUN_modern_regia_marina_desc:0 "旧態依然とした海軍を一新し、高速で打撃力の高い艦隊を建設する。"
-<<<<<<< HEAD
- 
-=======
  EUN_italian_air_superiority:0 "空優勢主義"
->>>>>>> bc7c5a383d7aca8f42b6652854dba2713b518eef
  # Benelux
  EUN_defensive_posture:0 "防衛的態勢"
  EUN_defensive_posture_desc:0 "我々は侵略者ではない。鉄壁の防御こそが平和を守る唯一の手段である。"
@@ -320,30 +316,6 @@
  EUN_mil_justify_time_25_tooltip:0 "§G連合革命軍§!: 正当化時間 §G-25%§!"
  EUN_mil_training_time_10_tooltip:0 "§G連合革命軍§!: 訓練時間 §G-10%§!"
  
-<<<<<<< HEAD
- EUN_mil_armor_attack_10_tooltip:0 "§G連合革命軍§!: 装甲部隊攻撃 §G+10%§!"
- EUN_mil_prussian_discipline_tooltip:0 "§G連合革命軍§!: 陸軍防御 §G+5%§!, 組織率 §G+5%§!"
- EUN_mil_armor_defence_10_tooltip:0 "§G連合革命軍§!: 装甲部隊防御 §G+10%§!"
- 
- EUN_mil_battleship_cost_10_tooltip:0 "§G連合革命軍§!: 戦艦生産コスト §G-10%§!"
- EUN_mil_air_superiority_10_tooltip:0 "§G連合革命軍§!: 制空権任務効率 §G+10%§!"
- EUN_mil_carrier_cost_15_tooltip:0 "§G連合革命軍§!: 空母生産コスト §G-15%§!"
- EUN_mil_naval_strike_10_tooltip:0 "§G連合革命軍§!: 対艦攻撃任務効率 §G+10%§!"
- 
- EUN_mil_capital_ship_attack_10_tooltip:0 "§G連合革命軍§!: 主力艦攻撃 §G+10%§!"
- EUN_mil_air_agility_10_tooltip:0 "§G連合革命軍§!: 航空機機動性 §G+10%§!"
- EUN_mil_screen_attack_10_tooltip:0 "§G連合革命軍§!: 直衛艦攻撃 §G+10%§!"
- 
- EUN_mil_army_defence_10_tooltip:0 "§G連合革命軍§!: 陸軍防御 §G+10%§!"
- EUN_mil_supply_consumption_10_tooltip:0 "§G連合革命軍§!: 補給物資消費 §G-10%§!"
- EUN_mil_army_org_10_tooltip:0 "§G連合革命軍§!: 組織率 §G+10%§!"
- 
- EUN_mil_recovery_rate_10_tooltip:0 "§G連合革命軍§!: 師団回復率 §G+10%§!"
- EUN_mil_breakthrough_10_tooltip:0 "§G連合革命軍§!: 突破 §G+10%§!"
- EUN_mil_naval_strike_efficiency_15_tooltip:0 "§G連合革命軍§!: 対艦攻撃任務効率 §G+15%§!"
- EUN_mil_entrenchment_speed_20_tooltip:0 "§G連合革命軍§!: 塹壕構築速度 §G+20%§!"
- EUN_mil_max_dig_in_5_tooltip:0 "§G連合革命軍§!: 最大塹壕 §G+5.0§!"
-=======
  EUN_mil_armor_attack_10_tooltip:0 "§G連合革命軍§!: 機甲部隊攻撃 §G+10%§!"
  EUN_mil_prussian_discipline_tooltip:0 "§G連合革命軍§!: 師団防御 §G+5%§!, 師団指揮統制率 §G+5%§!"
  EUN_mil_armor_defence_10_tooltip:0 "§G連合革命軍§!: 機甲部隊防御 §G+10%§!"
@@ -366,7 +338,6 @@
  EUN_mil_naval_strike_efficiency_15_tooltip:0 "§G連合革命軍§!: 対艦攻撃任務効率 §G+15%§!"
  EUN_mil_entrenchment_speed_20_tooltip:0 "§G連合革命軍§!: 塹壕構築速度 §G+20%§!"
  EUN_mil_max_dig_in_5_tooltip:0 "§G連合革命軍§!: 最大塹壕陣地強度 §G+5.0§!"
->>>>>>> bc7c5a383d7aca8f42b6652854dba2713b518eef
 
  # New Focuses
  EUN_political_commissars:0 "政治委員の派遣"

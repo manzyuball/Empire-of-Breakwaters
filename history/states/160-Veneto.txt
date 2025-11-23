@@ -25,11 +25,7 @@ state={
 
 		}
 		add_core_of = LBV
-<<<<<<< HEAD
-		add_core_of = EUN
-=======
 		
->>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 
 	}
 
@@ -41,4 +37,3 @@ state={
 	state_category=large_city
 	local_supplies=5.000
 }
-

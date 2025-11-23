@@ -33,4 +33,3 @@ state={
 	state_category=town
 	local_supplies=0.000
 }
-

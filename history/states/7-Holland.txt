@@ -42,4 +42,3 @@ state={
 	state_category=metropolis
 	local_supplies=0.000
 }
-

@@ -14,11 +14,7 @@ state = {
 		buildings = {
 			infrastructure = 2 #was 3 before split
 		}
-<<<<<<< HEAD
-		add_core_of = EUN
-=======
 		
->>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 		add_core_of = AUS
 	}
 
@@ -28,4 +24,3 @@ state = {
 
 	local_supplies = 0.0 
 }
-

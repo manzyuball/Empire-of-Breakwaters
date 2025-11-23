@@ -20,13 +20,8 @@ state=
 				naval_base = 1
 			}
 		}
-<<<<<<< HEAD
-		add_core_of = LAT
-		add_core_of = EUN
-=======
 		
 		
->>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 	}
 	provinces={
 		3288 	
@@ -34,4 +29,3 @@ state=
 
 	local_supplies=0.0 
 }
-

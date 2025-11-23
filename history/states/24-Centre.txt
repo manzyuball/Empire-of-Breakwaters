@@ -24,4 +24,3 @@ state={
 	state_category=large_town
 	local_supplies=15.000
 }
-

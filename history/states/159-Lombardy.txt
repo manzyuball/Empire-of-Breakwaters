@@ -13,11 +13,7 @@ state={
 
 		}
 		add_core_of = LBV
-<<<<<<< HEAD
-		add_core_of = EUN
-=======
 		
->>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 	}
 
 	provinces={
@@ -28,4 +24,3 @@ state={
 	state_category=metropolis
 	local_supplies=0.000
 }
-
