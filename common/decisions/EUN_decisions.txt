@@ -1,0 +1,316 @@
+EUN_political_struggle = {
+	icon = generic_political_actions
+
+	# -------------------------------------------------------------------------
+	# Influence Management
+	# -------------------------------------------------------------------------
+
+	EUN_support_french_faction = {
+		icon = generic_communism
+		allowed = { tag = EUN }
+		available = {
+			political_power > 25
+		}
+		cost = 25
+		days_remove = 30
+		modifier = {
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			add_to_variable = { EUN_french_influence = 5 }
+			add_to_variable = { EUN_german_influence = -1 }
+			add_to_variable = { EUN_italian_influence = -1 }
+			add_to_variable = { EUN_benelux_influence = -1 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	EUN_support_german_faction = {
+		icon = generic_research_bonus
+		allowed = { tag = EUN }
+		available = {
+			political_power > 25
+		}
+		cost = 25
+		days_remove = 30
+		modifier = {
+			industrial_capacity_factory = 0.05
+		}
+		remove_effect = {
+			add_to_variable = { EUN_french_influence = -1 }
+			add_to_variable = { EUN_german_influence = 5 }
+			add_to_variable = { EUN_italian_influence = -1 }
+			add_to_variable = { EUN_benelux_influence = -1 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	EUN_support_italian_faction = {
+		icon = generic_air_bonus
+		allowed = { tag = EUN }
+		available = {
+			political_power > 25
+		}
+		cost = 25
+		days_remove = 30
+		modifier = {
+			war_support_factor = 0.05
+		}
+		remove_effect = {
+			add_to_variable = { EUN_french_influence = -1 }
+			add_to_variable = { EUN_german_influence = -1 }
+			add_to_variable = { EUN_italian_influence = 5 }
+			add_to_variable = { EUN_benelux_influence = -1 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	EUN_support_benelux_faction = {
+		icon = generic_construction_bonus
+		allowed = { tag = EUN }
+		available = {
+			political_power > 25
+		}
+		cost = 25
+		days_remove = 30
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+		remove_effect = {
+			add_to_variable = { EUN_french_influence = -1 }
+			add_to_variable = { EUN_german_influence = -1 }
+			add_to_variable = { EUN_italian_influence = -1 }
+			add_to_variable = { EUN_benelux_influence = 5 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# -------------------------------------------------------------------------
+	# Minister Appointments (Available during Party Congress or High Influence)
+	# -------------------------------------------------------------------------
+
+	# --- Prime Minister (Requires Party Congress Event to unlock usually, or very high influence) ---
+	# For simplicity, we'll make these available if influence is high enough (e.g. > 50)
+	
+	EUN_install_french_PM = {
+		icon = generic_communism
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_french_influence > 50 }
+			NOT = { has_country_leader = { character = EUN_lev_trotsky } }
+		}
+		cost = 100
+		complete_effect = {
+			EUN_set_PM_french
+			add_to_variable = { EUN_french_influence = -20 }
+			EUN_check_political_state
+		}
+	}
+
+	EUN_install_german_PM = {
+		icon = generic_research_bonus
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_german_influence > 50 }
+			NOT = { has_country_leader = { character = EUN_otto_strasser } }
+		}
+		cost = 100
+		complete_effect = {
+			EUN_set_PM_german
+			add_to_variable = { EUN_german_influence = -20 }
+			EUN_check_political_state
+		}
+	}
+
+	EUN_install_italian_PM = {
+		icon = generic_air_bonus
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_italian_influence > 50 }
+			NOT = { has_country_leader = { character = EUN_benito_mussolini } }
+		}
+		cost = 100
+		complete_effect = {
+			EUN_set_PM_italian
+			add_to_variable = { EUN_italian_influence = -20 }
+			EUN_check_political_state
+		}
+	}
+
+	EUN_install_benelux_PM = {
+		icon = generic_construction_bonus
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_benelux_influence > 50 }
+			NOT = { has_country_leader = { character = EUN_paul_henri_spaak } }
+		}
+		cost = 100
+		complete_effect = {
+			EUN_set_PM_benelux
+			add_to_variable = { EUN_benelux_influence = -20 }
+			EUN_check_political_state
+		}
+	}
+
+	# --- Interior Minister ---
+	EUN_appoint_french_interior = {
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_french_influence > 30 }
+			NOT = { check_variable = { EUN_Interior_faction = 1 } }
+		}
+		cost = 50
+		complete_effect = {
+			EUN_set_interior_french
+			add_to_variable = { EUN_french_influence = -10 }
+			EUN_check_political_state
+		}
+	}
+	EUN_appoint_german_interior = {
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_german_influence > 30 }
+			NOT = { check_variable = { EUN_Interior_faction = 2 } }
+		}
+		cost = 50
+		complete_effect = {
+			EUN_set_interior_german
+			add_to_variable = { EUN_german_influence = -10 }
+			EUN_check_political_state
+		}
+	}
+	EUN_appoint_italian_interior = {
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_italian_influence > 30 }
+			NOT = { check_variable = { EUN_Interior_faction = 3 } }
+		}
+		cost = 50
+		complete_effect = {
+			EUN_set_interior_italian
+			add_to_variable = { EUN_italian_influence = -10 }
+			EUN_check_political_state
+		}
+	}
+	EUN_appoint_benelux_interior = {
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_benelux_influence > 30 }
+			NOT = { check_variable = { EUN_Interior_faction = 4 } }
+		}
+		cost = 50
+		complete_effect = {
+			EUN_set_interior_benelux
+			add_to_variable = { EUN_benelux_influence = -10 }
+			EUN_check_political_state
+		}
+	}
+
+	# --- Economy Minister ---
+	EUN_appoint_french_economy = {
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_french_influence > 30 }
+			NOT = { check_variable = { EUN_Economy_faction = 1 } }
+		}
+		cost = 50
+		complete_effect = {
+			EUN_set_economy_french
+			add_to_variable = { EUN_french_influence = -10 }
+			EUN_check_political_state
+		}
+	}
+	EUN_appoint_german_economy = {
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_german_influence > 30 }
+			NOT = { check_variable = { EUN_Economy_faction = 2 } }
+		}
+		cost = 50
+		complete_effect = {
+			EUN_set_economy_german
+			add_to_variable = { EUN_german_influence = -10 }
+			EUN_check_political_state
+		}
+	}
+	EUN_appoint_italian_economy = {
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_italian_influence > 30 }
+			NOT = { check_variable = { EUN_Economy_faction = 3 } }
+		}
+		cost = 50
+		complete_effect = {
+			EUN_set_economy_italian
+			add_to_variable = { EUN_italian_influence = -10 }
+			EUN_check_political_state
+		}
+	}
+	EUN_appoint_benelux_economy = {
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_benelux_influence > 30 }
+			NOT = { check_variable = { EUN_Economy_faction = 4 } }
+		}
+		cost = 50
+		complete_effect = {
+			EUN_set_economy_benelux
+			add_to_variable = { EUN_benelux_influence = -10 }
+			EUN_check_political_state
+		}
+	}
+
+	# --- Military Minister ---
+	EUN_appoint_french_military = {
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_french_influence > 30 }
+			NOT = { check_variable = { EUN_Military_faction = 1 } }
+		}
+		cost = 50
+		complete_effect = {
+			EUN_set_military_french
+			add_to_variable = { EUN_french_influence = -10 }
+			EUN_check_political_state
+		}
+	}
+	EUN_appoint_german_military = {
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_german_influence > 30 }
+			NOT = { check_variable = { EUN_Military_faction = 2 } }
+		}
+		cost = 50
+		complete_effect = {
+			EUN_set_military_german
+			add_to_variable = { EUN_german_influence = -10 }
+			EUN_check_political_state
+		}
+	}
+	EUN_appoint_italian_military = {
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_italian_influence > 30 }
+			NOT = { check_variable = { EUN_Military_faction = 3 } }
+		}
+		cost = 50
+		complete_effect = {
+			EUN_set_military_italian
+			add_to_variable = { EUN_italian_influence = -10 }
+			EUN_check_political_state
+		}
+	}
+	EUN_appoint_benelux_military = {
+		allowed = { tag = EUN }
+		available = {
+			check_variable = { EUN_benelux_influence > 30 }
+			NOT = { check_variable = { EUN_Military_faction = 4 } }
+		}
+		cost = 50
+		complete_effect = {
+			EUN_set_military_benelux
+			add_to_variable = { EUN_benelux_influence = -10 }
+			EUN_check_political_state
+		}
+	}
+}

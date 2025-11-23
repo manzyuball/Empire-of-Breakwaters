@@ -1,0 +1,108 @@
+﻿l_japanese:
+ EUN_communism:0 "欧州連合"
+ EUN_communism_DEF:0 "欧州連合"
+ EUN_democratic:0 "欧州連合"
+ EUN_democratic_DEF:0 "欧州連合"
+ EUN_fascism:0 "欧州連合"
+ EUN_fascism_DEF:0 "欧州連合"
+ EUN_neutrality:0 "欧州連合"
+ EUN_neutrality_DEF:0 "欧州連合"
+ EUN_communism_ADJ:0 "欧州"
+ EUN_democratic_ADJ:0 "欧州"
+ EUN_fascism_ADJ:0 "欧州"
+ EUN_neutrality_ADJ:0 "欧州"
+
+ # Leaders
+ EUN_lev_trotsky:0 "レフ・トロツキー"
+ EUN_lev_trotsky_desc:0 "「世界革命の精神的指導者」。彼は躊躇わない。欧州、そして世界に革命をもたらし、一国社会主義者共の巣、モスクワに凱旋するのだ。彼の望みは「全世界革命を実現する事」のみ。外交などという生ぬるい手段はフランス派閥には存在しない。"
+
+ EUN_otto_strasser:0 "オットー・シュトラッサー"
+ EUN_otto_strasser_desc:0 "「鋼鉄の意志、コンクリートの要塞」。敗戦の恨みを科学力で晴らそうとする、マッドサイエンティストとプロイセン軍人の集まりであるドイツ派閥を率いる。彼らにとって革命とは、ドイツ民族の復権のための手段に過ぎない。"
+
+ EUN_benito_mussolini:0 "ベニト・ムッソリーニ"
+ EUN_benito_mussolini_desc:0 "「プロレタリアートのドゥーチェ」。この世界線の彼は、社会党を追放されず、党内の過激派を掌握して「国家サンディカリズム」を確立した。「ファシズム？ なんだそれは？」彼は赤いシャツを着てローマへ進軍した。彼にとって革命とは、イタリア民族が世界を支配するための手段に過ぎない。演説のカリスマ性は欧州一であり、民衆を熱狂させる天才。"
+
+ EUN_paul_henri_spaak:0 "ポール＝アンリ・スパーク"
+ EUN_paul_henri_spaak_desc:0 "「パンと平和、そして繁栄を」。革命を建前にした現実主義的な商人・銀行家たちであるベネルクス派閥を代表する。戦争はせず、選挙及び民主主義の積極的導入、そして経済の発展と工業化を場合によっては市場経済をも一部導入し推進していこうとする。"
+
+ # Ministers
+ EUN_jacques_doriot:0 "ジャック・ドリオ"
+ EUN_alphonse_juin:0 "アルフォンス・ジュアン"
+ EUN_pierre_monatte:0 "ピエール・モナット"
+ 
+ EUN_wilhelm_pieck:0 "ヴィルヘルム・ピーク"
+ EUN_ernst_thalmann:0 "エルンスト・テールマン"
+ EUN_heinz_guderian:0 "ハインツ・グデーリアン"
+ 
+ EUN_antonio_gramsci:0 "アントニオ・グラムシ"
+ EUN_nicola_bombacci:0 "ニコラ・ボンバッチ"
+ EUN_italo_balbo:0 "イタロ・バルボ"
+ 
+ EUN_civil_control_committee:0 "市民選挙管理委員会"
+ EUN_supreme_economic_council:0 "経済計画最高評議会"
+ EUN_henri_winkelman:0 "アンリ・ウィンケルマン"
+
+ # Traits
+ EUN_permanent_revolutionary:0 "永続革命論"
+ EUN_red_prussianism:0 "赤いプロイセン主義"
+ EUN_proletarian_duce:0 "プロレタリアートのドゥーチェ"
+ EUN_socialist_merchant:0 "社会主義の商人"
+
+ EUN_violent_agitation:0 "暴力的扇動"
+ EUN_aggressive_doctrine:0 "攻撃的ドクトリン"
+ EUN_workers_self_management:0 "労働者自主管理"
+
+ EUN_stasi_precursor:0 "秘密警察の先駆者"
+ EUN_planned_economy_expert:0 "計画経済の専門家"
+ EUN_blitzkrieg_theorist:0 "電撃戦の理論家"
+
+ EUN_cultural_hegemony:0 "文化的ヘゲモニー"
+ EUN_autarky_socialization:0 "アウタルキーと社会化"
+ EUN_knights_of_the_air:0 "空の騎士"
+
+ EUN_bureaucratic_efficiency:0 "官僚的効率性"
+ EUN_market_socialism:0 "市場社会主義"
+ EUN_neutrality_defender:0 "中立の守護者"
+
+ # Decisions
+ EUN_political_struggle:0 "欧州連合内部政治闘争"
+ EUN_support_french_faction:0 "フランス派閥への支援"
+ EUN_support_german_faction:0 "ドイツ派閥への支援"
+ EUN_support_italian_faction:0 "イタリア派閥への支援"
+ EUN_support_benelux_faction:0 "ベネルクス派閥への支援"
+
+ EUN_install_french_PM:0 "フランス派閥議長の選出"
+ EUN_install_german_PM:0 "ドイツ派閥議長の選出"
+ EUN_install_italian_PM:0 "イタリア派閥議長の選出"
+ EUN_install_benelux_PM:0 "ベネルクス派閥議長の選出"
+
+ EUN_appoint_french_interior:0 "フランス派閥内務大臣の任命"
+ EUN_appoint_german_interior:0 "ドイツ派閥内務大臣の任命"
+ EUN_appoint_italian_interior:0 "イタリア派閥内務大臣の任命"
+ EUN_appoint_benelux_interior:0 "ベネルクス派閥内務大臣の任命"
+
+ EUN_appoint_french_economy:0 "フランス派閥経済大臣の任命"
+ EUN_appoint_german_economy:0 "ドイツ派閥経済大臣の任命"
+ EUN_appoint_italian_economy:0 "イタリア派閥経済大臣の任命"
+ EUN_appoint_benelux_economy:0 "ベネルクス派閥経済大臣の任命"
+
+ EUN_appoint_french_military:0 "フランス派閥軍事大臣の任命"
+ EUN_appoint_german_military:0 "ドイツ派閥軍事大臣の任命"
+ EUN_appoint_italian_military:0 "イタリア派閥軍事大臣の任命"
+ EUN_appoint_benelux_military:0 "ベネルクス派閥軍事大臣の任命"
+
+ # Events
+ EUN_politics.1.t:0 "年次党大会"
+ EUN_politics.1.d:0 "2年に一度の党大会が開催された。各派閥は自らの影響力を拡大し、欧州連合の主導権を握ろうと躍起になっている。"
+ EUN_politics.1.a:0 "フランス派閥（革命委員会）を支持する"
+ EUN_politics.1.b:0 "ドイツ派閥（全ドイツ解放戦線）を支持する"
+ EUN_politics.1.c:0 "イタリア派閥（地中海未来派）を支持する"
+ EUN_politics.1.d:0 "ベネルクス派閥（欧州協同組合連合）を支持する"
+
+ EUN_politics.2.t:0 "派閥の暴走"
+ EUN_politics.2.d:0 "一つの派閥が全ての権力を掌握した結果、彼らの過激な思想が歯止めなく実行され始めている！他国はこれを脅威と見なし、包囲網を形成しつつある..."
+ EUN_politics.2.a:0 "我々はやりすぎたのか？"
+
+ EUN_politics.3.t:0 "政治的麻痺"
+ EUN_politics.3.d:0 "議長、内務、経済、軍事...全てのポストが異なる派閥によって占められている。意見の対立により、政府は完全に機能不全に陥っている。"
+ EUN_politics.3.a:0 "何も決められない..."

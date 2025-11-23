@@ -1,0 +1,153 @@
+# -----------------------------------------------------------------------------
+# EUN Minister Management Scripted Effects
+# -----------------------------------------------------------------------------
+
+# --- Clear Ministers ---
+
+EUN_clear_interior_minister = {
+	remove_advisor = EUN_jacques_doriot
+	remove_advisor = EUN_wilhelm_pieck
+	remove_advisor = EUN_antonio_gramsci
+	remove_advisor = EUN_civil_control_committee
+}
+
+EUN_clear_economic_minister = {
+	remove_advisor = EUN_pierre_monatte
+	remove_advisor = EUN_ernst_thalmann
+	remove_advisor = EUN_nicola_bombacci
+	remove_advisor = EUN_supreme_economic_council
+}
+
+EUN_clear_military_minister = {
+	remove_advisor = EUN_alphonse_juin
+	remove_advisor = EUN_heinz_guderian
+	remove_advisor = EUN_italo_balbo
+	remove_advisor = EUN_henri_winkelman
+}
+
+# --- Set Ministers ---
+
+# French Faction
+EUN_set_PM_french = {
+	set_country_leader_ideology = leninism # Trotsky
+	set_variable = { EUN_PM_faction = 1 } 
+}
+EUN_set_interior_french = {
+	EUN_clear_interior_minister
+	activate_advisor = EUN_jacques_doriot
+	add_advisor = EUN_jacques_doriot
+	set_variable = { EUN_Interior_faction = 1 }
+}
+EUN_set_economy_french = {
+	EUN_clear_economic_minister
+	activate_advisor = EUN_pierre_monatte
+	add_advisor = EUN_pierre_monatte
+	set_variable = { EUN_Economy_faction = 1 }
+}
+EUN_set_military_french = {
+	EUN_clear_military_minister
+	activate_advisor = EUN_alphonse_juin
+	add_advisor = EUN_alphonse_juin
+	set_variable = { EUN_Military_faction = 1 }
+}
+
+# German Faction
+EUN_set_PM_german = {
+	set_country_leader_ideology = anti_revisionism # Strasser
+	set_variable = { EUN_PM_faction = 2 }
+}
+EUN_set_interior_german = {
+	EUN_clear_interior_minister
+	activate_advisor = EUN_wilhelm_pieck
+	add_advisor = EUN_wilhelm_pieck
+	set_variable = { EUN_Interior_faction = 2 }
+}
+EUN_set_economy_german = {
+	EUN_clear_economic_minister
+	activate_advisor = EUN_ernst_thalmann
+	add_advisor = EUN_ernst_thalmann
+	set_variable = { EUN_Economy_faction = 2 }
+}
+EUN_set_military_german = {
+	EUN_clear_military_minister
+	activate_advisor = EUN_heinz_guderian
+	add_advisor = EUN_heinz_guderian
+	set_variable = { EUN_Military_faction = 2 }
+}
+
+# Italian Faction
+EUN_set_PM_italian = {
+	set_country_leader_ideology = anarchist_communism # Mussolini
+	set_variable = { EUN_PM_faction = 3 }
+}
+EUN_set_interior_italian = {
+	EUN_clear_interior_minister
+	activate_advisor = EUN_antonio_gramsci
+	add_advisor = EUN_antonio_gramsci
+	set_variable = { EUN_Interior_faction = 3 }
+}
+EUN_set_economy_italian = {
+	EUN_clear_economic_minister
+	activate_advisor = EUN_nicola_bombacci
+	add_advisor = EUN_nicola_bombacci
+	set_variable = { EUN_Economy_faction = 3 }
+}
+EUN_set_military_italian = {
+	EUN_clear_military_minister
+	activate_advisor = EUN_italo_balbo
+	add_advisor = EUN_italo_balbo
+	set_variable = { EUN_Military_faction = 3 }
+}
+
+# Benelux Faction
+EUN_set_PM_benelux = {
+	set_country_leader_ideology = socialism # Spaak
+	set_variable = { EUN_PM_faction = 4 }
+}
+EUN_set_interior_benelux = {
+	EUN_clear_interior_minister
+	activate_advisor = EUN_civil_control_committee
+	add_advisor = EUN_civil_control_committee
+	set_variable = { EUN_Interior_faction = 4 }
+}
+EUN_set_economy_benelux = {
+	EUN_clear_economic_minister
+	activate_advisor = EUN_supreme_economic_council
+	add_advisor = EUN_supreme_economic_council
+	set_variable = { EUN_Economy_faction = 4 }
+}
+EUN_set_military_benelux = {
+	EUN_clear_military_minister
+	activate_advisor = EUN_henri_winkelman
+	add_advisor = EUN_henri_winkelman
+	set_variable = { EUN_Military_faction = 4 }
+}
+
+# --- Check Dominance / Paralysis ---
+
+EUN_check_political_state = {
+	# Check for Total Control (All 4 chairs held by same faction)
+	if = {
+		limit = {
+			check_variable = { EUN_PM_faction = EUN_Interior_faction }
+			check_variable = { EUN_PM_faction = EUN_Economy_faction }
+			check_variable = { EUN_PM_faction = EUN_Military_faction }
+		}
+		country_event = { id = EUN_politics.2 } # Crisis Event
+	}
+	# Check for Paralysis (All 4 chairs held by different factions)
+	# This logic is a bit complex to do purely with variables in one go, 
+	# but we can check if we have 4 unique values.
+	# Simplified: If no two chairs match, it's paralysis.
+	else_if = {
+		limit = {
+			NOT = { check_variable = { EUN_PM_faction = EUN_Interior_faction } }
+			NOT = { check_variable = { EUN_PM_faction = EUN_Economy_faction } }
+			NOT = { check_variable = { EUN_PM_faction = EUN_Military_faction } }
+			NOT = { check_variable = { EUN_Interior_faction = EUN_Economy_faction } }
+			NOT = { check_variable = { EUN_Interior_faction = EUN_Military_faction } }
+			NOT = { check_variable = { EUN_Economy_faction = EUN_Military_faction } }
+		}
+		country_event = { id = EUN_politics.3 } # Paralysis Event
+	}
+}

@@ -1,0 +1,107 @@
+add_namespace = EUN_politics
+
+# -------------------------------------------------------------------------
+# Party Congress (Recurring every 2 years)
+# -------------------------------------------------------------------------
+country_event = {
+	id = EUN_politics.1
+	title = EUN_politics.1.t
+	desc = EUN_politics.1.d
+	picture = GFX_report_event_soviet_party_congress # Vanilla asset
+
+	trigger = {
+		tag = EUN
+		# Triggered by on_action or mean_time_to_happen
+	}
+
+	mean_time_to_happen = {
+		days = 730 # Approx 2 years
+	}
+
+	option = {
+		name = EUN_politics.1.a # French Faction gains influence
+		add_political_power = 50
+		add_to_variable = { EUN_french_influence = 10 }
+		add_to_variable = { EUN_german_influence = -5 }
+		add_to_variable = { EUN_italian_influence = -5 }
+		add_to_variable = { EUN_benelux_influence = -5 }
+	}
+
+	option = {
+		name = EUN_politics.1.b # German Faction gains influence
+		add_political_power = 50
+		add_to_variable = { EUN_french_influence = -5 }
+		add_to_variable = { EUN_german_influence = 10 }
+		add_to_variable = { EUN_italian_influence = -5 }
+		add_to_variable = { EUN_benelux_influence = -5 }
+	}
+
+	option = {
+		name = EUN_politics.1.c # Italian Faction gains influence
+		add_political_power = 50
+		add_to_variable = { EUN_french_influence = -5 }
+		add_to_variable = { EUN_german_influence = -5 }
+		add_to_variable = { EUN_italian_influence = 10 }
+		add_to_variable = { EUN_benelux_influence = -5 }
+	}
+
+	option = {
+		name = EUN_politics.1.d # Benelux Faction gains influence
+		add_political_power = 50
+		add_to_variable = { EUN_french_influence = -5 }
+		add_to_variable = { EUN_german_influence = -5 }
+		add_to_variable = { EUN_italian_influence = -5 }
+		add_to_variable = { EUN_benelux_influence = 10 }
+	}
+}
+
+# -------------------------------------------------------------------------
+# Crisis: Total Control (One faction holds all 4 chairs)
+# -------------------------------------------------------------------------
+country_event = {
+	id = EUN_politics.2
+	title = EUN_politics.2.t
+	desc = EUN_politics.2.d
+	picture = GFX_report_event_riot # Vanilla asset
+
+	is_triggered_only = yes
+
+	option = {
+		name = EUN_politics.2.a
+		add_stability = -0.20
+		add_political_power = -100
+		# Immediate war goal or bad effect
+		random_country = {
+			limit = {
+				NOT = { tag = EUN }
+				is_major = yes
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = EUN
+			}
+		}
+	}
+}
+
+# -------------------------------------------------------------------------
+# Crisis: Political Paralysis (All 4 chairs held by different factions)
+# -------------------------------------------------------------------------
+country_event = {
+	id = EUN_politics.3
+	title = EUN_politics.3.t
+	desc = EUN_politics.3.d
+	picture = GFX_report_event_congress # Vanilla asset
+
+	is_triggered_only = yes
+
+	option = {
+		name = EUN_politics.3.a
+		add_stability = -0.10
+		add_political_power = -50
+		add_modifier = {
+			modifier = EUN_political_paralysis_modifier
+			days = 180
+		}
+	}
+}
