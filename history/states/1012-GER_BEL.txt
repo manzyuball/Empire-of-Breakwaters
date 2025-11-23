@@ -5,7 +5,7 @@ state={
 		3488 11562
 	}
 	history={
-		owner = FRA
+		owner = EUN
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
@@ -14,7 +14,7 @@ state={
 		victory_points = {
 			11562 1 
 		}
-		add_core_of = FRA
+		add_core_of = EUN
 	}
 
 	manpower=64321

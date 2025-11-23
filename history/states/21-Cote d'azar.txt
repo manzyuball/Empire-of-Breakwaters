@@ -10,7 +10,7 @@ state={
 	state_category=metropolis
 
 	history={
-		owner = FRA
+		owner = EUN
 		victory_points = {
 			11834 10
 		}
@@ -30,7 +30,7 @@ state={
 				coastal_bunker = 1
 			}
 		}
-		add_core_of = FRA
+		add_core_of = EUN
 	}
 
 	provinces={

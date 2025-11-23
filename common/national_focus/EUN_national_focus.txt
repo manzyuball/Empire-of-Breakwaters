@@ -15,7 +15,7 @@ focus_tree = {
 		y = 1600
 	}
 	# -------------------------------------------------------------------------
-	# Root: First Party Congress
+	# Root: First Party CongressEUN_eco_weekly_stability
 	# -------------------------------------------------------------------------
 	focus = {
 		id = EUN_first_party_congress
@@ -43,7 +43,12 @@ focus_tree = {
 		y = 0
 		cost = 10
 		# No prerequisite (Independent Root)
-		available = { check_variable = { EUN_Economy_faction = 1 } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_french_economy_minister_check
+				check_variable = { EUN_Economy_faction = 1 }
+			}
+		}
 		completion_reward = {
 			add_to_variable = { EUN_eco_ic_bonus = 0.05 }
 			custom_effect_tooltip = EUN_eco_ic_bonus_05_tooltip
@@ -61,14 +66,8 @@ focus_tree = {
 		relative_position_id = EUN_revolutionary_agriculture
 		available = { check_variable = { EUN_Economy_faction = 1 } }
 		completion_reward = {
-			16 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
+			add_to_variable = { EUN_eco_infra_speed = 0.15 }
+			custom_effect_tooltip = EUN_eco_infra_speed_15_tooltip
 		}
 	}
 	focus = {
@@ -114,8 +113,9 @@ focus_tree = {
 		relative_position_id = EUN_revolutionary_agriculture
 		available = { check_variable = { EUN_Economy_faction = 1 } }
 		completion_reward = {
-			add_stability = 0.10
-			add_political_power = 100
+			add_to_variable = { EUN_eco_stability_factor = 0.10 }
+			add_to_variable = { EUN_eco_pp_gain_factor = 0.10 }
+			custom_effect_tooltip = EUN_eco_breadbasket_tooltip
 		}
 	}
 
@@ -144,9 +144,8 @@ focus_tree = {
 		relative_position_id = EUN_soldiers_bill_of_rights
 		available = { check_variable = { EUN_Economy_faction = 1 } }
 		completion_reward = {
-			add_stability = 0.05
-			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.03 } # Fixed: Penalty reduction is negative
-			custom_effect_tooltip = EUN_eco_consumer_goods_bonus_03_tooltip
+			add_to_variable = { EUN_eco_consumer_goods_penalty = 0.05 }
+			custom_effect_tooltip = EUN_eco_consumer_goods_penalty_05_tooltip
 		}
 	}
 	focus = {
@@ -159,8 +158,8 @@ focus_tree = {
 		relative_position_id = EUN_spirit_of_mass_conscription
 		available = { check_variable = { EUN_Economy_faction = 1 } }
 		completion_reward = {
-			add_to_variable = { EUN_eco_construction_bonus = 0.05 }
-			custom_effect_tooltip = EUN_eco_construction_bonus_05_tooltip
+			add_to_variable = { EUN_eco_arms_factory_speed = 0.10 }
+			custom_effect_tooltip = EUN_eco_arms_factory_speed_10_tooltip
 		}
 	}
 	focus = {
@@ -173,8 +172,7 @@ focus_tree = {
 		relative_position_id = EUN_revolutionary_agriculture
 		available = { check_variable = { EUN_Economy_faction = 1 } }
 		completion_reward = {
-			add_ideas = EUN_mass_conscription_idea
-			monthly_population = 0.10
+			add_ideas = extensive_conscription
 		}
 	}
 
@@ -202,7 +200,12 @@ focus_tree = {
 		y = 0
 		cost = 10
 		# No prerequisite
-		available = { check_variable = { EUN_Economy_faction = 2 } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_german_economy_minister_check
+				check_variable = { EUN_Economy_faction = 2 }
+			}
+		}
 		completion_reward = {
 			add_to_variable = { EUN_eco_ic_bonus = 0.05 }
 			custom_effect_tooltip = EUN_eco_ic_bonus_05_tooltip
@@ -240,11 +243,8 @@ focus_tree = {
 		prerequisite = { focus = EUN_build_combinats }
 		available = { check_variable = { EUN_Economy_faction = 2 } }
 		completion_reward = {
-			add_resource = {
-				type = steel
-				amount = 20
-				state = 64 # Brandenburg
-			}
+			add_to_variable = { EUN_eco_resource_factor = 0.15 }
+			custom_effect_tooltip = EUN_eco_resource_factor_15_tooltip
 		}
 	}
 	focus = {
@@ -277,8 +277,8 @@ focus_tree = {
 		prerequisite = { focus = EUN_heart_of_european_industry focus = EUN_rubber_oil_autarky }
 		available = { check_variable = { EUN_Economy_faction = 2 } }
 		completion_reward = {
-			add_to_variable = { EUN_eco_ic_bonus = 0.10 }
-			custom_effect_tooltip = EUN_eco_ic_bonus_10_tooltip
+			add_to_variable = { EUN_eco_prod_eff_cap = 0.05 }
+			custom_effect_tooltip = EUN_eco_prod_eff_cap_05_tooltip
 		}
 	}
 
@@ -331,7 +331,8 @@ focus_tree = {
 		prerequisite = { focus = EUN_new_four_year_plan }
 		available = { check_variable = { EUN_Economy_faction = 2 } }
 		completion_reward = {
-			add_research_slot = 1
+			add_to_variable = { EUN_eco_research_speed = 0.05 }
+			custom_effect_tooltip = EUN_eco_research_speed_05_tooltip
 		}
 	}
 	focus = {
@@ -360,8 +361,8 @@ focus_tree = {
 		prerequisite = { focus = EUN_mines_to_factories }
 		available = { check_variable = { EUN_Economy_faction = 2 } }
 		completion_reward = {
-			add_to_variable = { EUN_eco_ic_bonus = 0.15 }
-			custom_effect_tooltip = EUN_eco_ic_bonus_15_tooltip
+			add_to_variable = { EUN_eco_ic_bonus = 0.10 }
+			custom_effect_tooltip = EUN_eco_ic_bonus_10_tooltip
 		}
 	}
 
@@ -373,7 +374,12 @@ focus_tree = {
 		y = 5
 		cost = 10
 		# No prerequisite
-		available = { check_variable = { EUN_Economy_faction = 3 } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_italian_economy_minister_check
+				check_variable = { EUN_Economy_faction = 3 }
+			}
+		}
 		completion_reward = {
 			add_to_variable = { EUN_eco_construction_bonus = 0.10 }
 			custom_effect_tooltip = EUN_eco_construction_bonus_10_tooltip
@@ -391,8 +397,8 @@ focus_tree = {
 		prerequisite = { focus = EUN_expand_iri }
 		available = { check_variable = { EUN_Economy_faction = 3 } }
 		completion_reward = {
-			add_to_variable = { EUN_eco_construction_bonus = 0.05 }
-			custom_effect_tooltip = EUN_eco_construction_bonus_05_tooltip
+			add_to_variable = { EUN_eco_infra_speed = 0.20 }
+			custom_effect_tooltip = EUN_eco_infra_speed_20_tooltip
 		}
 	}
 	focus = {
@@ -472,12 +478,8 @@ focus_tree = {
 		prerequisite = { focus = EUN_mediterranean_shipbuilding }
 		available = { check_variable = { EUN_Economy_faction = 3 } }
 		completion_reward = {
-			add_tech_bonus = {
-				name = naval_bonus
-				bonus = 1.0
-				uses = 2
-				category = naval
-			}
+			add_to_variable = { EUN_eco_dockyard_output = 0.10 }
+			custom_effect_tooltip = EUN_eco_dockyard_output_10_tooltip
 		}
 	}
 	focus = {
@@ -490,14 +492,8 @@ focus_tree = {
 		prerequisite = { focus = EUN_expand_iri }
 		available = { check_variable = { EUN_Economy_faction = 3 } }
 		completion_reward = {
-			159 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
+			add_to_variable = { EUN_eco_airbase_speed = 0.20 }
+			custom_effect_tooltip = EUN_eco_aviation_tooltip
 		}
 	}
 	focus = {
@@ -511,12 +507,8 @@ focus_tree = {
 		prerequisite = { focus = EUN_foster_shipbuilding_industry }
 		available = { check_variable = { EUN_Economy_faction = 3 } }
 		completion_reward = {
-			117 = {
-				add_resource = {
-					type = oil
-					amount = 20
-				}
-			}
+			add_to_variable = { EUN_eco_oil_gain = 24 }
+			custom_effect_tooltip = EUN_eco_oil_gain_24_tooltip
 		}
 	}
 
@@ -531,9 +523,9 @@ focus_tree = {
 		prerequisite = { focus = EUN_modern_urban_planning focus = EUN_offshore_oil_drilling }
 		available = { check_variable = { EUN_Economy_faction = 3 } }
 		completion_reward = {
-			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.05 } # Fixed: Penalty reduction is negative
+			add_to_variable = { EUN_eco_consumer_goods_penalty = 0.10 }
 			add_to_variable = { EUN_eco_construction_bonus = 0.10 }
-			custom_effect_tooltip = EUN_eco_corporatism_bonus_tooltip
+			custom_effect_tooltip = EUN_eco_corporatism_new_tooltip
 		}
 	}
 
@@ -545,10 +537,16 @@ focus_tree = {
 		y = 5
 		cost = 10
 		# No prerequisite
-		available = { check_variable = { EUN_Economy_faction = 4 } }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_benelux_economy_minister_check
+				check_variable = { EUN_Economy_faction = 4 }
+			}
+		}
 		completion_reward = {
-			add_stability = 0.05
-			add_political_power = 50
+			add_to_variable = { EUN_eco_stability_factor = 0.05 }
+			add_to_variable = { EUN_eco_pp_gain_factor = 0.05 }
+			custom_effect_tooltip = EUN_eco_currency_reform_tooltip
 		}
 	}
 
@@ -635,8 +633,8 @@ focus_tree = {
 		prerequisite = { focus = EUN_currency_reform }
 		available = { check_variable = { EUN_Economy_faction = 4 } }
 		completion_reward = {
-			add_to_variable = { EUN_eco_ic_bonus = 0.05 }
-			custom_effect_tooltip = EUN_eco_ic_bonus_05_tooltip
+			add_to_variable = { EUN_eco_prod_eff_cap = 0.05 }
+			custom_effect_tooltip = EUN_eco_prod_eff_cap_05_tooltip
 		}
 	}
 	focus = {
@@ -649,9 +647,8 @@ focus_tree = {
 		prerequisite = { focus = EUN_relax_labor_laws }
 		available = { check_variable = { EUN_Economy_faction = 4 } }
 		completion_reward = {
-			add_stability = 0.05
-			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.03 } # Fixed: Penalty reduction is negative
-			custom_effect_tooltip = EUN_eco_consumer_goods_bonus_03_tooltip
+			add_to_variable = { EUN_eco_consumer_goods_penalty = 0.05 }
+			custom_effect_tooltip = EUN_eco_consumer_goods_penalty_05_tooltip
 		}
 	}
 	focus = {
@@ -684,9 +681,9 @@ focus_tree = {
 		prerequisite = { focus = EUN_guaranteed_minimum_wage }
 		available = { check_variable = { EUN_Economy_faction = 4 } }
 		completion_reward = {
-			add_stability = 0.10
-			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.05 } # Fixed: Penalty reduction is negative
-			custom_effect_tooltip = EUN_eco_consumer_goods_bonus_05_tooltip
+			add_to_variable = { EUN_eco_weekly_stability = 0.001 } 
+			add_to_variable = { EUN_eco_consumer_goods_penalty = 0.05 }
+			custom_effect_tooltip = EUN_eco_social_security_tooltip
 		}
 	}
 
@@ -727,7 +724,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.05 }
-			custom_effect_tooltip = EUN_eco_consumer_goods_bonus_05_tooltip
+			add_to_variable = { EUN_eco_research_speed = 0.1 }
+			custom_effect_tooltip = EUN_eco_research_speed_10_consumer_goods_bonus_05_tooltip
 		}
 	}
 
@@ -745,7 +743,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_to_variable = { EUN_eco_construction_bonus = 0.20 }
-			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.10 }
+			add_to_variable = { EUN_eco_consumer_goods_penalty = 0.10 }
 			custom_effect_tooltip = EUN_eco_state_capitalism_bonus_tooltip
 		}
 	}
@@ -763,8 +761,9 @@ focus_tree = {
 			has_completed_focus = EUN_social_security_network
 		}
 		completion_reward = {
-			add_stability = 0.20
-			add_political_power = 200
+			add_to_variable = { EUN_eco_weekly_stability = 0.001 } 
+			add_to_variable = { EUN_eco_pp_gain_factor = 0.10 }
+			custom_effect_tooltip = EUN_eco_universal_socialist_welfare_tooltip
 		}
 	}
 

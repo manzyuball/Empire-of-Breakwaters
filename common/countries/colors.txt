@@ -1,7 +1,7 @@
 #reload countrycolors
 GER = {
-	color = rgb { 139 0 0 }
-	color_ui = rgb { 138 155 116 }
+	color = rgb { 105 105 105 }
+	color_ui = rgb { 105 105 105 }
 }
 ENG = {
 	color = rgb { 201 56 93 }
@@ -49,8 +49,8 @@ EST = {
 	color_ui = rgb { 99 204 254 }
 }
 LAT = {
-	color = rgb { 105 105 105 }
-	color_ui = rgb { 105 105 105 }
+	color = rgb { 75 77 186 }
+	color_ui = rgb { 124 125 184 }
 }
 TZN = {
 	color = rgb { 105 105 105 }

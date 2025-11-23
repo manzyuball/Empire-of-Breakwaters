@@ -10,7 +10,8 @@ state={
 	}
 
 	history={
-		owner = ITA
+		owner = EUN
+		add_core_of = EUN
 		victory_points = {
 			6788 10 
 		}
@@ -25,7 +26,7 @@ state={
 
 			}
 		}
-		add_core_of = ITA
+		
 	}
 
 	provinces={

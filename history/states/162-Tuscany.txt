@@ -28,7 +28,7 @@ state={
 			}
 		}
 		add_core_of = TOS
-		add_core_of = ITA
+		
 	}
 
 	provinces={

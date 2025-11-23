@@ -6,12 +6,11 @@ state=
 	
 	state_category = rural
 	
-	history=
-	{
+	history={
 		victory_points = {
 			9793 1
 		}
-		owner = ENG
+		owner = SPR
 		add_core_of = SPR
 
 		buildings = {
@@ -25,9 +24,7 @@ state=
 			}
 		}
 	}
-	provinces=
-	{
-7114 9793 9845 	}
+	provinces={ 7114 9793 9845 	}
 
 	local_supplies=0.0 
 }

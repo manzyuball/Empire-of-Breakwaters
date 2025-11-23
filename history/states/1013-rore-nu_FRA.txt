@@ -5,8 +5,8 @@ state={
 		678 1346 6529 9503 
 	}
 	history={
-		owner = FRA
-		add_core_of = LAT
+		owner = EUN
+		
 		victory_points = {
 			678 5 
 		}
@@ -18,7 +18,7 @@ state={
 			industrial_complex = 2
 			air_base = 1
 		}
-		add_core_of = FRA
+		add_core_of = EUN
 	}
 	manpower=915600
 	buildings_max_level_factor=1.000

@@ -4,16 +4,16 @@ state= {
 	manpower = 3248150 
 	state_category = large_city
 	
-	history=
-	{
+	history={
 		victory_points = {
 			6389 10 
 		}
 		victory_points = {
 			9347 20
 		}
-		owner = LAT
-		add_core_of = LAT
+		owner = EUN
+		add_core_of = EUN
+		
 		buildings = {
 			infrastructure = 3
 			arms_factory = 2
@@ -23,7 +23,7 @@ state= {
 				naval_base = 8
 			}
 		}
-		add_core_of = GER
+		
 	}
 
 	provinces= {

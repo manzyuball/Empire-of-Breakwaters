@@ -5,7 +5,8 @@ state={
 		388 11232 
 	}
 	history={
-		owner = LAT
+		owner = GER
+        add_core_of = GER
 		buildings = {
 			infrastructure = 3
 			arms_factory = 2
@@ -17,8 +18,8 @@ state={
 			}
 
 		}
-		add_core_of = GER
-		add_core_of = LAT
+		
+		
 
 	}
 	manpower=133370

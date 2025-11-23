@@ -26,7 +26,7 @@ state={
 
 		}
 		add_core_of = MLT
-		add_core_of = ITA
+		
 
 	}
 

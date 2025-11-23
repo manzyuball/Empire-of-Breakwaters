@@ -4,7 +4,7 @@ state={
 	name="STATE_16"
 
 	history={
-		owner = FRA
+		owner = EUN
 		victory_points = {
 			9523 40
 		}
@@ -16,7 +16,7 @@ state={
 			air_base = 5
 
 		}
-		add_core_of = FRA
+		add_core_of = EUN
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 2

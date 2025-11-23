@@ -12,15 +12,16 @@ state={
 	state_category = large_city
 
 	history={
-		owner = GER
-		add_core_of = LAT
+		owner = EUN
+		add_core_of = EUN
+		
 		victory_points = { 3561 5 }
 		victory_points = { 425 3 }
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 		}
-		add_core_of = GER
+		
 	}
 
 	provinces={

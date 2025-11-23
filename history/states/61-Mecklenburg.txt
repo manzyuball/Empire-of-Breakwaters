@@ -9,8 +9,9 @@ state={
 	state_category = town
 
 	history={
-		owner = LAT
-		add_core_of = LAT
+		owner = GER
+        add_core_of = GER
+		
 		victory_points = {
 			321 5
 		}
@@ -26,7 +27,7 @@ state={
 			}
 			air_base = 3
 		}
-		add_core_of = GER
+		
 	}
 
 	provinces={
