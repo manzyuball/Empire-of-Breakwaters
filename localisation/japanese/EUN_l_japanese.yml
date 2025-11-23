@@ -261,3 +261,104 @@
  EUN_state_capitalism_desc:0 "国家資本主義体制を強化し、強力な指導力で経済成長を加速させる。"
  EUN_universal_socialist_welfare_desc:0 "普遍的な社会主義福祉制度を確立し、すべての国民に豊かな生活を保障する。"
  EUN_total_war_industrial_complex_desc:0 "総力戦に対応した産業複合体を形成し、軍事生産能力を最大化する。"
+ 
+ # Military Branch
+ # French
+ EUN_levee_en_masse:0 "国民総動員"
+ EUN_levee_en_masse_desc:0 "「祖国は危機にあり！」全市民を武装させ、革命防衛のために動員する。"
+ EUN_revolutionary_elan:0 "革命的エラン"
+ EUN_revolutionary_elan_desc:0 "兵士たちに革命への情熱を植え付け、敵を圧倒する攻撃精神（エラン）を養う。"
+ EUN_export_revolution:0 "革命の輸出"
+ EUN_export_revolution_desc:0 "革命は一国に留まってはならない。全欧州、全世界へと拡大させるのだ。"
+ EUN_napoleonic_spirit:0 "ナポレオンの精神"
+ EUN_napoleonic_spirit_desc:0 "かつて欧州を席巻した大陸軍の栄光を、革命軍の中に蘇らせる。"
+ 
+ # German
+ EUN_panzer_korps:0 "装甲軍団"
+ EUN_panzer_korps_desc:0 "機動力と火力を兼ね備えた装甲師団を編成し、電撃戦の主役とする。"
+ EUN_prussian_discipline:0 "プロイセンの規律"
+ EUN_prussian_discipline_desc:0 "鉄の規律と絶対的な服従。プロイセン軍の伝統を革命軍に導入する。"
+ EUN_mechanized_offensive:0 "機械化攻勢"
+ EUN_mechanized_offensive_desc:0 "歩兵を機械化し、戦車部隊と連携した高速機動戦を実現する。"
+ EUN_chemical_warfare:0 "化学戦"
+ EUN_chemical_warfare_desc:0 "「人道的配慮などブルジョワの戯言だ」。勝利のためならあらゆる手段を用いる。"
+ 
+ # Italian
+ EUN_mare_nostrum:0 "我らが海"
+ EUN_mare_nostrum_desc:0 "地中海は再びローマの、いや欧州連合の内海となる。"
+ EUN_knights_of_the_air:0 "空の騎士"
+ EUN_knights_of_the_air_desc:0 "空を制する者が戦争を制する。エリートパイロットを育成し、制空権を確保する。"
+ EUN_carrier_primacy:0 "空母至上主義"
+ EUN_carrier_primacy_desc:0 "巨砲の時代は終わった。これからは航空母艦が海の王者となる。"
+ EUN_modern_regia_marina:0 "近代海軍"
+ EUN_modern_regia_marina_desc:0 "旧態依然とした海軍を一新し、高速で打撃力の高い艦隊を建設する。"
+ 
+ # Benelux
+ EUN_defensive_posture:0 "防衛的態勢"
+ EUN_defensive_posture_desc:0 "我々は侵略者ではない。鉄壁の防御こそが平和を守る唯一の手段である。"
+ EUN_logistical_integration:0 "兵站統合"
+ EUN_logistical_integration_desc:0 "各国の兵站システムを統合し、無駄を省き効率的な補給網を構築する。"
+ EUN_professional_peacekeepers:0 "平和維持軍"
+ EUN_professional_peacekeepers_desc:0 "徴兵制ではなく、高度に訓練された職業軍人による精鋭部隊を育成する。"
+ EUN_fortress_europe:0 "革命の要塞"
+ EUN_fortress_europe_desc:0 "国境線に堅固な要塞線を築き、反革命勢力の侵入を許さない。"
+ EUN_international_arms_market:0 "国際兵器市場"
+ EUN_international_arms_market_desc:0 "兵器の輸出を規制せず、国際市場で兵器を販売する。"
+
+ # Military Tooltips
+ EUN_french_military_minister_check:0 "§Yフランス派閥§!が§Y軍事大臣§!に選出されている"
+ EUN_german_military_minister_check:0 "§Yドイツ派閥§!が§Y軍事大臣§!に選出されている"
+ EUN_italian_military_minister_check:0 "§Yイタリア派閥§!が§Y軍事大臣§!に選出されている"
+ EUN_benelux_military_minister_check:0 "§Yベネルクス派閥§!が§Y軍事大臣§!に選出されている"
+
+ EUN_mil_pop_factor_05_tooltip:0 "§G連合革命軍§!: 徴兵可能人口補正 §G+5%§!"
+ EUN_mil_army_attack_10_tooltip:0 "§G連合革命軍§!: 陸軍攻撃 §G+10%§!"
+ EUN_mil_justify_time_25_tooltip:0 "§G連合革命軍§!: 正当化時間 §G-25%§!"
+ EUN_mil_training_time_10_tooltip:0 "§G連合革命軍§!: 訓練時間 §G-10%§!"
+ 
+ EUN_mil_armor_attack_10_tooltip:0 "§G連合革命軍§!: 装甲部隊攻撃 §G+10%§!"
+ EUN_mil_prussian_discipline_tooltip:0 "§G連合革命軍§!: 陸軍防御 §G+5%§!, 組織率 §G+5%§!"
+ EUN_mil_armor_defence_10_tooltip:0 "§G連合革命軍§!: 装甲部隊防御 §G+10%§!"
+ 
+ EUN_mil_battleship_cost_10_tooltip:0 "§G連合革命軍§!: 戦艦生産コスト §G-10%§!"
+ EUN_mil_air_superiority_10_tooltip:0 "§G連合革命軍§!: 制空権任務効率 §G+10%§!"
+ EUN_mil_carrier_cost_15_tooltip:0 "§G連合革命軍§!: 空母生産コスト §G-15%§!"
+ EUN_mil_naval_strike_10_tooltip:0 "§G連合革命軍§!: 対艦攻撃任務効率 §G+10%§!"
+ 
+ EUN_mil_capital_ship_attack_10_tooltip:0 "§G連合革命軍§!: 主力艦攻撃 §G+10%§!"
+ EUN_mil_air_agility_10_tooltip:0 "§G連合革命軍§!: 航空機機動性 §G+10%§!"
+ EUN_mil_screen_attack_10_tooltip:0 "§G連合革命軍§!: 直衛艦攻撃 §G+10%§!"
+ 
+ EUN_mil_army_defence_10_tooltip:0 "§G連合革命軍§!: 陸軍防御 §G+10%§!"
+ EUN_mil_supply_consumption_10_tooltip:0 "§G連合革命軍§!: 補給物資消費 §G-10%§!"
+ EUN_mil_army_org_10_tooltip:0 "§G連合革命軍§!: 組織率 §G+10%§!"
+ 
+ EUN_mil_recovery_rate_10_tooltip:0 "§G連合革命軍§!: 師団回復率 §G+10%§!"
+ EUN_mil_breakthrough_10_tooltip:0 "§G連合革命軍§!: 突破 §G+10%§!"
+ EUN_mil_naval_strike_efficiency_15_tooltip:0 "§G連合革命軍§!: 対艦攻撃任務効率 §G+15%§!"
+ EUN_mil_entrenchment_speed_20_tooltip:0 "§G連合革命軍§!: 塹壕構築速度 §G+20%§!"
+ EUN_mil_max_dig_in_5_tooltip:0 "§G連合革命軍§!: 最大塹壕 §G+5.0§!"
+
+ # New Focuses
+ EUN_political_commissars:0 "政治委員の派遣"
+ EUN_political_commissars_desc:0 "各部隊に政治委員を派遣し、思想教育を徹底することで兵士の回復力を高める。"
+ EUN_mass_assault_doctrine:0 "人海戦術ドクトリン"
+ EUN_mass_assault_doctrine_desc:0 "圧倒的な人的資源を背景に、波状攻撃で敵を押し潰す戦術を採用する。"
+ EUN_grand_battery:0 "グラン・バッテリー"
+ EUN_grand_battery_desc:0 "ナポレオン時代の砲兵運用を現代に蘇らせ、集中砲火で敵陣地を粉砕する。"
+ 
+ EUN_stormtrooper_tactics:0 "突撃歩兵戦術"
+ EUN_stormtrooper_tactics_desc:0 "精鋭歩兵による浸透戦術を確立し、敵前線の突破能力を向上させる。"
+ EUN_rocket_artillery:0 "ロケット砲兵"
+ EUN_rocket_artillery_desc:0 "「カチューシャ」を超える破壊力を持つ多連装ロケット砲を開発・配備する。"
+ EUN_wunderwaffe_program:0 "驚異の兵器計画"
+ EUN_wunderwaffe_program_desc:0 "戦局を一変させる可能性を秘めた、極秘の兵器開発プロジェクトを推進する。"
+ 
+ EUN_naval_bombers:0 "雷撃機の量産"
+ EUN_naval_bombers_desc:0 "敵艦隊を空から殲滅するため、高性能な雷撃機を大量に配備する。"
+ EUN_frogmen_units:0 "フロッグマン部隊"
+ EUN_frogmen_units_desc:0 "水中工作部隊を編成し、敵港湾への潜入破壊工作を行う。"
+ EUN_littorio_class:0 "リットリオ級戦艦"
+ EUN_littorio_class_desc:0 "地中海の覇権を確実にするため、超弩級戦艦の建造技術を確立する。"
+ EUN_citizen_militia:0 "市民民兵"
+ EUN_citizen_militia_desc:0 "市民による自警団を組織し、徹底した抗戦体制を敷く。"

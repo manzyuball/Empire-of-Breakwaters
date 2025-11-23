@@ -23,9 +23,32 @@ EUN_revolutionary_army_modifier = {
 	icon = GFX_idea_generic_army_war_college
 	enable = { always = yes }
 	
-	army_attack_factor = var:EUN_army_attack_bonus
-	army_defence_factor = var:EUN_army_defence_bonus
-	training_time_factor = var:EUN_army_training_speed_bonus
+	army_attack_factor = var:EUN_mil_army_attack
+	army_defence_factor = var:EUN_mil_army_defence
+	training_time_factor = var:EUN_mil_training_time
+	
+	# French Faction (Attack, Manpower, Justification)
+	justify_war_goal_time = var:EUN_mil_justify_time
+	conscription_factor = var:EUN_mil_pop_factor
+	army_org_regain = var:EUN_mil_recovery_rate
+	
+	# German Faction (Tanks, Hard Attack)
+	army_armor_attack_factor = var:EUN_mil_armor_attack
+	army_armor_defence_factor = var:EUN_mil_armor_defence
+	breakthrough_factor = var:EUN_mil_breakthrough
+	
+	# Italian Faction (Navy, Air)
+	air_superiority_efficiency = var:EUN_mil_air_superiority
+	navy_capital_ship_attack_factor = var:EUN_mil_capital_ship_attack
+	air_agility_factor = var:EUN_mil_air_agility
+	navy_screen_attack_factor = var:EUN_mil_screen_attack
+	naval_strike = var:EUN_mil_naval_strike_efficiency
+	
+	# Benelux Faction (Defence, Supply)
+	supply_consumption_factor = var:EUN_mil_supply_consumption
+	army_org_factor = var:EUN_mil_army_org
+	dig_in_speed_factor = var:EUN_mil_entrenchment_speed
+	max_dig_in = var:EUN_mil_max_dig_in
 }
 
 EUN_factionalism_modifier = {
