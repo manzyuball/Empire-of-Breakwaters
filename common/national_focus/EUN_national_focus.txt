@@ -12,7 +12,7 @@ focus_tree = {
 	default = no
     continuous_focus_position = {
 		x = 120
-		y = 1600
+		y = 1350
 	}
 	# -------------------------------------------------------------------------
 	# Root: First Party CongressEUN_eco_weekly_stability
@@ -782,6 +782,458 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { EUN_eco_ic_bonus = 0.15 }
 			custom_effect_tooltip = EUN_eco_ic_bonus_15_tooltip
+		}
+	}
+
+	# -------------------------------------------------------------------------
+	# Military Branch (Depends on Military Minister Faction)
+	# -------------------------------------------------------------------------
+
+	# --- French Branch (Attack, Manpower, Speed) ---
+	focus = {
+		id = EUN_levee_en_masse
+		icon = GFX_goal_generic_major_war
+		x = 3
+		y = 14
+		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_french_military_minister_check
+				check_variable = { EUN_Military_faction = 1 }
+			}
+		}
+		completion_reward = {
+			add_to_variable = { EUN_mil_pop_factor = 0.05 }
+			custom_effect_tooltip = EUN_mil_pop_factor_05_tooltip
+		}
+	}
+	focus = {
+		id = EUN_revolutionary_elan
+		icon = GFX_goal_generic_army_motorized
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = EUN_levee_en_masse
+		prerequisite = { focus = EUN_levee_en_masse }
+		available = { check_variable = { EUN_Military_faction = 1 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_army_attack = 0.10 }
+			custom_effect_tooltip = EUN_mil_army_attack_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_export_revolution
+		icon = GFX_goal_generic_more_territory
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = EUN_levee_en_masse
+		prerequisite = { focus = EUN_levee_en_masse }
+		available = { check_variable = { EUN_Military_faction = 1 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_justify_time = -0.25 }
+			custom_effect_tooltip = EUN_mil_justify_time_25_tooltip
+		}
+	}
+	focus = {
+		id = EUN_napoleonic_spirit
+		icon = GFX_goal_generic_morale_bonus
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_revolutionary_elan
+		prerequisite = { focus = EUN_revolutionary_elan }
+		prerequisite = { focus = EUN_export_revolution }
+		available = { check_variable = { EUN_Military_faction = 1 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_training_time = -0.10 }
+			custom_effect_tooltip = EUN_mil_training_time_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_political_commissars
+		icon = GFX_goal_generic_political_pressure
+		x = -3
+		y = 1
+		cost = 10
+		relative_position_id = EUN_export_revolution
+		prerequisite = { focus = EUN_export_revolution }
+		available = { check_variable = { EUN_Military_faction = 1 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_recovery_rate = 0.10 }
+			custom_effect_tooltip = EUN_mil_recovery_rate_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_mass_assault_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = EUN_political_commissars
+		prerequisite = { focus = EUN_political_commissars }
+		available = { check_variable = { EUN_Military_faction = 1 } }
+		completion_reward = {
+			add_tech_bonus = {
+				name = mass_assault_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = EUN_grand_battery
+		icon = GFX_goal_generic_army_artillery
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_export_revolution
+		prerequisite = { focus = EUN_export_revolution }
+		available = { check_variable = { EUN_Military_faction = 1 } }
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	# --- German Branch (Armor, Hard Attack, Discipline) ---
+	focus = {
+		id = EUN_panzer_korps
+		icon = GFX_goal_generic_army_tanks
+		x = 7
+		y = 14
+		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_german_military_minister_check
+				check_variable = { EUN_Military_faction = 2 }
+			}
+		}
+		completion_reward = {
+			add_to_variable = { EUN_mil_armor_attack = 0.10 }
+			custom_effect_tooltip = EUN_mil_armor_attack_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_prussian_discipline
+		icon = GFX_goal_generic_army_doctrines
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = EUN_panzer_korps
+		prerequisite = { focus = EUN_panzer_korps }
+		available = { check_variable = { EUN_Military_faction = 2 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_army_defence = 0.05 }
+			add_to_variable = { EUN_mil_army_org = 0.05 }
+			custom_effect_tooltip = EUN_mil_prussian_discipline_tooltip
+		}
+	}
+	focus = {
+		id = EUN_mechanized_offensive
+		icon = GFX_goal_generic_army_artillery
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = EUN_panzer_korps
+		prerequisite = { focus = EUN_panzer_korps }
+		available = { check_variable = { EUN_Military_faction = 2 } }
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = EUN_chemical_warfare
+		icon = GFX_goal_generic_secret_weapon
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_wunderwaffe_program
+		prerequisite = { focus = EUN_wunderwaffe_program }
+		available = { check_variable = { EUN_Military_faction = 2 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_armor_defence = 0.10 }
+			custom_effect_tooltip = EUN_mil_armor_defence_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_stormtrooper_tactics
+		icon = GFX_goal_generic_special_forces
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_prussian_discipline
+		prerequisite = { focus = EUN_prussian_discipline }
+		available = { check_variable = { EUN_Military_faction = 2 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_breakthrough = 0.10 }
+			custom_effect_tooltip = EUN_mil_breakthrough_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_rocket_artillery
+		icon = GFX_goal_generic_army_artillery
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_wunderwaffe_program
+		prerequisite = { focus = EUN_wunderwaffe_program }
+		available = { check_variable = { EUN_Military_faction = 2 } }
+		completion_reward = {
+			add_tech_bonus = {
+				name = rocket_bonus
+				bonus = 1.0
+				uses = 2
+				category = rocketry
+			}
+		}
+	}
+	focus = {
+		id = EUN_wunderwaffe_program
+		icon = GFX_goal_generic_scientific_exchange
+		x = 1
+		y = 2
+		cost = 10
+		relative_position_id = EUN_panzer_korps
+		prerequisite = { focus = EUN_panzer_korps }
+		available = { check_variable = { EUN_Military_faction = 2 } }
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	# --- Italian Branch (Navy, Air, Carriers) ---
+	focus = {
+		id = EUN_mare_nostrum
+		icon = GFX_goal_generic_navy_battleship
+		x = 15
+		y = 14
+		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_italian_military_minister_check
+				check_variable = { EUN_Military_faction = 3 }
+			}
+		}
+		completion_reward = {
+			add_to_variable = { EUN_mil_capital_ship_attack = 0.10 }
+			custom_effect_tooltip = EUN_mil_capital_ship_attack_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_knights_of_the_air
+		icon = GFX_goal_generic_air_fighter
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = EUN_mare_nostrum
+		prerequisite = { focus = EUN_mare_nostrum }
+		available = { check_variable = { EUN_Military_faction = 3 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_air_superiority = 0.10 }
+			custom_effect_tooltip = EUN_mil_air_superiority_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_italian_air_superiority
+		icon = GFX_goal_generic_air_fighter
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = EUN_knights_of_the_air
+		prerequisite = { focus = EUN_knights_of_the_air }
+		available = { check_variable = { EUN_Military_faction = 3 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_air_agility = 0.10 }
+			custom_effect_tooltip = EUN_mil_air_agility_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_carrier_primacy
+		icon = GFX_goal_generic_navy_carrier
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = EUN_mare_nostrum
+		prerequisite = { focus = EUN_mare_nostrum }
+		available = { check_variable = { EUN_Military_faction = 3 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_air_agility = 0.10 }
+			custom_effect_tooltip = EUN_mil_air_agility_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_modern_regia_marina
+		icon = GFX_goal_generic_navy_cruiser
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = EUN_mare_nostrum
+		prerequisite = { focus = EUN_mare_nostrum }
+		available = { check_variable = { EUN_Military_faction = 3 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_screen_attack = 0.10 }
+			custom_effect_tooltip = EUN_mil_screen_attack_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_naval_bombers
+		icon = GFX_goal_generic_air_bomber
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_knights_of_the_air
+		prerequisite = { focus = EUN_knights_of_the_air }
+		prerequisite = { focus = EUN_carrier_primacy }
+		available = { check_variable = { EUN_Military_faction = 3 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_naval_strike_efficiency = 0.15 }
+			custom_effect_tooltip = EUN_mil_naval_strike_efficiency_15_tooltip
+		}
+	}
+	focus = {
+		id = EUN_frogmen_units
+		icon = GFX_goal_generic_amphibious_assault
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_modern_regia_marina
+		prerequisite = { focus = EUN_modern_regia_marina }
+		available = { check_variable = { EUN_Military_faction = 3 } }
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = {
+		id = EUN_littorio_class
+		icon = GFX_goal_generic_navy_battleship
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_modern_regia_marina
+		prerequisite = { focus = EUN_modern_regia_marina }
+		available = { check_variable = { EUN_Military_faction = 3 } }
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ship_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval
+			}
+		}
+	}
+
+	# --- Benelux Branch (Defence, Logistics, Peacekeeping) ---
+	focus = {
+		id = EUN_defensive_posture
+		icon = GFX_goal_generic_defence
+		x = 11
+		y = 14
+		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_benelux_military_minister_check
+				check_variable = { EUN_Military_faction = 4 }
+			}
+		}
+		completion_reward = {
+			add_to_variable = { EUN_mil_army_defence = 0.10 }
+			custom_effect_tooltip = EUN_mil_army_defence_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_logistical_integration
+		icon = GFX_goal_generic_truck
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = EUN_defensive_posture
+		prerequisite = { focus = EUN_defensive_posture }
+		available = { check_variable = { EUN_Military_faction = 4 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_supply_consumption = -0.10 }
+			custom_effect_tooltip = EUN_mil_supply_consumption_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_professional_peacekeepers
+		icon = GFX_goal_generic_small_army
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_logistical_integration
+		prerequisite = { focus = EUN_logistical_integration }
+		prerequisite = { focus = EUN_fortress_europe }
+		available = { check_variable = { EUN_Military_faction = 4 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_army_org = 0.10 }
+			custom_effect_tooltip = EUN_mil_army_org_10_tooltip
+		}
+	}
+	focus = {
+		id = EUN_fortress_europe
+		icon = GFX_goal_generic_fortify_city
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = EUN_defensive_posture
+		prerequisite = { focus = EUN_defensive_posture }
+		available = { check_variable = { EUN_Military_faction = 4 } }
+		completion_reward = {
+			7 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUN_international_arms_market
+		icon = GFX_goal_generic_trade
+		x = 1
+		y = 2
+		cost = 10
+		relative_position_id = EUN_defensive_posture
+		prerequisite = { focus = EUN_defensive_posture }
+		available = { check_variable = { EUN_Military_faction = 4 } }
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = EUN_citizen_militia
+		icon = GFX_goal_generic_morale_bonus
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = EUN_fortress_europe
+		prerequisite = { focus = EUN_fortress_europe }
+		available = { check_variable = { EUN_Military_faction = 4 } }
+		completion_reward = {
+			add_to_variable = { EUN_mil_max_dig_in = 5 }
+			custom_effect_tooltip = EUN_mil_max_dig_in_5_tooltip
 		}
 	}
 

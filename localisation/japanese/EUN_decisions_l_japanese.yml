@@ -1,0 +1,15 @@
+﻿l_japanese:
+ EUN_faction_politics:0 "欧州連合の派閥政治"
+ EUN_faction_politics_desc:0 "我々の国家は4つの柱によって支えられているが、その柱同士の軋轢は絶えない。どの派閥を支援し、どの派閥を抑え込むか、慎重な判断が求められる。"
+ 
+ EUN_support_FRA:0 "フランス派閥への支援"
+ EUN_support_FRA_desc:0 "革命防衛委員会に資金と権限を与える。\n\n「革命の炎を絶やすな!パリこそが欧州の心臓だ!」"
+ 
+ EUN_support_GER:0 "ドイツ派閥への支援"
+ EUN_support_GER_desc:0 "全ドイツ解放戦線の科学者と軍人を優遇する。\n\n「鉄と技術こそが力だ。ベルリンの奪還を忘れるな。」"
+ 
+ EUN_support_ITA:0 "イタリア派閥への支援"
+ EUN_support_ITA_desc:0 "地中海未来派の芸術家と提督たちを支援する。\n\n「海を我らの色に染め上げよ!空を制する者が世界を制す!」"
+ 
+ EUN_support_BEN:0 "ベネルクス派閥への支援"
+ EUN_support_BEN_desc:0 "欧州協同組合の商人たちに特権を与える。\n\n「平和と繁栄こそが市民の願いだ。戦争屋どもを黙らせろ。」"

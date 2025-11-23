@@ -5,24 +5,24 @@
 # --- Clear Ministers ---
 
 EUN_clear_interior_minister = {
-	remove_advisor = EUN_jacques_doriot
-	remove_advisor = EUN_wilhelm_pieck
-	remove_advisor = EUN_antonio_gramsci
-	remove_advisor = EUN_civil_control_committee
+	remove_ideas = EUN_jacques_doriot
+	remove_ideas = EUN_wilhelm_pieck
+	remove_ideas = EUN_antonio_gramsci
+	remove_ideas = EUN_civil_control_committee
 }
 
 EUN_clear_economic_minister = {
-	remove_advisor = EUN_pierre_monatte
-	remove_advisor = EUN_ernst_thalmann
-	remove_advisor = EUN_nicola_bombacci
-	remove_advisor = EUN_supreme_economic_council
+	remove_ideas = EUN_pierre_monatte
+	remove_ideas = EUN_ernst_thalmann
+	remove_ideas = EUN_nicola_bombacci
+	remove_ideas = EUN_supreme_economic_council
 }
 
 EUN_clear_military_minister = {
-	remove_advisor = EUN_alphonse_juin
-	remove_advisor = EUN_heinz_guderian
-	remove_advisor = EUN_italo_balbo
-	remove_advisor = EUN_henri_winkelman
+	remove_ideas = EUN_alphonse_juin
+	remove_ideas = EUN_heinz_guderian
+	remove_ideas = EUN_italo_balbo
+	remove_ideas = EUN_henri_winkelman
 }
 
 # --- Set Ministers ---
@@ -33,21 +33,21 @@ EUN_set_PM_french = {
 	set_variable = { EUN_PM_faction = 1 } 
 }
 EUN_set_interior_french = {
-	EUN_clear_interior_minister
+	EUN_clear_interior_minister = yes
 	activate_advisor = EUN_jacques_doriot
-	add_advisor = EUN_jacques_doriot
+	add_ideas = EUN_jacques_doriot
 	set_variable = { EUN_Interior_faction = 1 }
 }
 EUN_set_economy_french = {
-	EUN_clear_economic_minister
+	EUN_clear_economic_minister = yes
 	activate_advisor = EUN_pierre_monatte
-	add_advisor = EUN_pierre_monatte
+	add_ideas = EUN_pierre_monatte
 	set_variable = { EUN_Economy_faction = 1 }
 }
 EUN_set_military_french = {
-	EUN_clear_military_minister
+	EUN_clear_military_minister = yes
 	activate_advisor = EUN_alphonse_juin
-	add_advisor = EUN_alphonse_juin
+	add_ideas = EUN_alphonse_juin
 	set_variable = { EUN_Military_faction = 1 }
 }
 
@@ -57,21 +57,21 @@ EUN_set_PM_german = {
 	set_variable = { EUN_PM_faction = 2 }
 }
 EUN_set_interior_german = {
-	EUN_clear_interior_minister
+	EUN_clear_interior_minister = yes
 	activate_advisor = EUN_wilhelm_pieck
-	add_advisor = EUN_wilhelm_pieck
+	add_ideas = EUN_wilhelm_pieck
 	set_variable = { EUN_Interior_faction = 2 }
 }
 EUN_set_economy_german = {
-	EUN_clear_economic_minister
+	EUN_clear_economic_minister = yes
 	activate_advisor = EUN_ernst_thalmann
-	add_advisor = EUN_ernst_thalmann
+	add_ideas = EUN_ernst_thalmann
 	set_variable = { EUN_Economy_faction = 2 }
 }
 EUN_set_military_german = {
-	EUN_clear_military_minister
+	EUN_clear_military_minister = yes
 	activate_advisor = EUN_heinz_guderian
-	add_advisor = EUN_heinz_guderian
+	add_ideas = EUN_heinz_guderian
 	set_variable = { EUN_Military_faction = 2 }
 }
 
@@ -81,21 +81,21 @@ EUN_set_PM_italian = {
 	set_variable = { EUN_PM_faction = 3 }
 }
 EUN_set_interior_italian = {
-	EUN_clear_interior_minister
+	EUN_clear_interior_minister = yes
 	activate_advisor = EUN_antonio_gramsci
-	add_advisor = EUN_antonio_gramsci
+	add_ideas = EUN_antonio_gramsci
 	set_variable = { EUN_Interior_faction = 3 }
 }
 EUN_set_economy_italian = {
-	EUN_clear_economic_minister
+	EUN_clear_economic_minister = yes
 	activate_advisor = EUN_nicola_bombacci
-	add_advisor = EUN_nicola_bombacci
+	add_ideas = EUN_nicola_bombacci
 	set_variable = { EUN_Economy_faction = 3 }
 }
 EUN_set_military_italian = {
-	EUN_clear_military_minister
+	EUN_clear_military_minister = yes
 	activate_advisor = EUN_italo_balbo
-	add_advisor = EUN_italo_balbo
+	add_ideas = EUN_italo_balbo
 	set_variable = { EUN_Military_faction = 3 }
 }
 
@@ -105,21 +105,21 @@ EUN_set_PM_benelux = {
 	set_variable = { EUN_PM_faction = 4 }
 }
 EUN_set_interior_benelux = {
-	EUN_clear_interior_minister
+	EUN_clear_interior_minister = yes
 	activate_advisor = EUN_civil_control_committee
-	add_advisor = EUN_civil_control_committee
+	add_ideas = EUN_civil_control_committee
 	set_variable = { EUN_Interior_faction = 4 }
 }
 EUN_set_economy_benelux = {
-	EUN_clear_economic_minister
+	EUN_clear_economic_minister = yes
 	activate_advisor = EUN_supreme_economic_council
-	add_advisor = EUN_supreme_economic_council
+	add_ideas = EUN_supreme_economic_council
 	set_variable = { EUN_Economy_faction = 4 }
 }
 EUN_set_military_benelux = {
-	EUN_clear_military_minister
+	EUN_clear_military_minister = yes
 	activate_advisor = EUN_henri_winkelman
-	add_advisor = EUN_henri_winkelman
+	add_ideas = EUN_henri_winkelman
 	set_variable = { EUN_Military_faction = 4 }
 }
 
