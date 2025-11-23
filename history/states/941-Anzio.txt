@@ -26,7 +26,11 @@ state={
 
 		}
 		add_core_of = PAP
+<<<<<<< HEAD:history/states/941-Anzio.txt
 		add_core_of = EUN
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/941-fsdx.txt
 
 	}
 	manpower=2652391

@@ -6,7 +6,11 @@ state={
 	}
 	history={
 		owner = EUN
+<<<<<<< HEAD:history/states/1013-Strasbourg.txt
 		add_core_of = LAT
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/1013-rore-nu_FRA.txt
 		victory_points = {
 			678 5 
 		}

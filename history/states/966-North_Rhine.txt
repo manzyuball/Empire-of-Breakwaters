@@ -6,7 +6,12 @@ state={
 	}
 	history={
 		owner = EUN
+<<<<<<< HEAD:history/states/966-North_Rhine.txt
 		add_core_of = LAT
+=======
+		add_core_of = EUN
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/966-rain.txt
 		victory_points = {
 			6469 10 
 		}
@@ -15,7 +20,11 @@ state={
 			arms_factory = 1
 			industrial_complex = 1
 		}
+<<<<<<< HEAD:history/states/966-North_Rhine.txt
 		add_core_of = EUN
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/966-rain.txt
 	}
 	manpower=712131
 	state_category=metropolis

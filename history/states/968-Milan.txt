@@ -7,6 +7,10 @@ state={
 	
 	history={
 		owner = EUN
+<<<<<<< HEAD:history/states/968-Milan.txt
+=======
+		add_core_of = EUN
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/968-torino.txt
 		victory_points = {
 			3780 15 
 		}
@@ -15,7 +19,11 @@ state={
 			arms_factory = 2
 			industrial_complex = 4
 		}
+<<<<<<< HEAD:history/states/968-Milan.txt
 		add_core_of = EUN
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/968-torino.txt
 	}
 	manpower=597704
 	state_category=metropolis

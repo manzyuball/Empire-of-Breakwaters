@@ -1,0 +1,142 @@
+leader_traits = {
+
+	# -------------------------------------------------------------------------
+	# Faction Leaders (Prime Minister Traits)
+	# -------------------------------------------------------------------------
+
+	# Lev Trotsky (French Faction)
+	EUN_permanent_revolutionary = {
+		random = no
+		political_power_gain = 0.10
+		war_support_factor = 0.20
+		justify_war_goal_time = -0.50
+		stability_factor = -0.10
+		ai_will_do = { factor = 1 }
+	}
+
+	# Otto Strasser (German Faction)
+	EUN_red_prussianism = {
+		random = no
+		industrial_capacity_factory = 0.10
+		production_speed_buildings_factor = 0.10
+		army_core_attack_factor = 0.05
+		stability_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+
+	# Benito Mussolini (Italian Faction)
+	EUN_proletarian_duce = {
+		random = no
+		political_power_gain = 0.25
+		ideology_drift_defence_factor = 0.50
+		training_time_factor = -0.10
+		stability_factor = 0.15
+		ai_will_do = { factor = 1 }
+	}
+
+	# Paul-Henri Spaak (Benelux Faction)
+	EUN_socialist_merchant = {
+		random = no
+		consumer_goods_factor = -0.05
+		production_speed_civilian_factory_factor = 0.15
+		trade_laws_cost_factor = -0.50
+		war_support_factor = -0.10
+		ai_will_do = { factor = 1 }
+	}
+
+	# -------------------------------------------------------------------------
+	# Ministers (Advisor Traits)
+	# -------------------------------------------------------------------------
+
+	# --- French Faction ---
+	# Jacques Doriot (Interior)
+	EUN_violent_agitation = {
+		random = no
+		political_power_gain = 0.05
+		partisan_effect = 0.20
+		enemy_partisan_effect = -0.20
+	}
+	# Alphonse Juin (Military)
+	EUN_aggressive_doctrine = {
+		random = no
+		army_attack_factor = 0.10
+		army_defence_factor = -0.05
+		planning_speed = 0.10
+	}
+	# Pierre Monatte (Economy) - NEW
+	EUN_workers_self_management = {
+		random = no
+		production_factory_efficiency_gain_factor = 0.10
+		consumer_goods_factor = 0.05 # Inefficient but happy?
+		stability_factor = 0.05
+	}
+
+	# --- German Faction ---
+	# Wilhelm Pieck (Interior) - NEW
+	EUN_stasi_precursor = {
+		random = no
+		foreign_subversive_activites = -0.30
+		stability_factor = 0.10
+		political_power_cost = 0.10 # Bureaucracy
+	}
+	# Ernst Thalmann (Economy)
+	EUN_planned_economy_expert = {
+		random = no
+		production_speed_arms_factory_factor = 0.10
+		production_speed_industrial_complex_factor = 0.10
+		conversion_cost_civ_to_mil_factor = -0.20
+	}
+	# Heinz Guderian (Military)
+	EUN_blitzkrieg_theorist = {
+		random = no
+		armor_speed = 0.10
+		armor_attack_factor = 0.10
+		experience_gain_army_factor = 0.10
+	}
+
+	# --- Italian Faction ---
+	# Antonio Gramsci (Interior)
+	EUN_cultural_hegemony = {
+		random = no
+		political_power_gain = 0.15
+		stability_factor = 0.10
+		research_speed_factor = 0.05
+	}
+	# Nicola Bombacci (Economy) - NEW
+	EUN_autarky_socialization = {
+		random = no
+		production_speed_synthetic_refinery_factor = 0.15
+		resource_gain_efficiency_factor = 0.10
+		trade_laws_cost_factor = 0.50 # Hates trade
+	}
+	# Italo Balbo (Military)
+	EUN_knights_of_the_air = {
+		random = no
+		air_agility_factor = 0.10
+		air_superiority_efficiency = 0.10
+		air_ace_generation_chance_factor = 0.25
+	}
+
+	# --- Benelux Faction ---
+	# Civil Control Committee (Interior)
+	EUN_bureaucratic_efficiency = {
+		random = no
+		political_power_gain = -0.05
+		stability_factor = 0.20
+		compliance_growth = 0.10
+	}
+	# Supreme Economic Council (Economy)
+	EUN_market_socialism = {
+		random = no
+		consumer_goods_factor = -0.10
+		production_factory_max_efficiency_factor = 0.10
+		research_speed_industrial_folder_factor = 0.10
+	}
+	# Henri Winkelman (Military) - NEW
+	EUN_neutrality_defender = {
+		random = no
+		army_defence_factor = 0.15
+		entrenchment = 5.0
+		war_support_factor = -0.10
+	}
+}

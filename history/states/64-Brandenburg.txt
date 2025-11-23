@@ -6,7 +6,12 @@ state={
 		coal = 11
 	}
 	history={
+<<<<<<< HEAD
 		owner = LAT
+=======
+		owner = GER
+        add_core_of = GER
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 		victory_points = {
 			3522 5 
 		}
@@ -17,8 +22,13 @@ state={
 			air_base = 3
 
 		}
+<<<<<<< HEAD
 		add_core_of = EUN
 		add_core_of = LAT
+=======
+		
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 
 	}
 

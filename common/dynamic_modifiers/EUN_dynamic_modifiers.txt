@@ -1,0 +1,38 @@
+EUN_economy_modifier = {
+	icon = GFX_idea_generic_production_bonus
+	enable = { always = yes }
+	
+	# Effects scaled by variables
+	industrial_capacity_factory = var:EUN_eco_ic_bonus
+	production_speed_buildings_factor = var:EUN_eco_construction_bonus
+	consumer_goods_factor = var:EUN_eco_consumer_goods_penalty
+	stability_factor = var:EUN_eco_stability_factor
+	research_speed_factor = var:EUN_eco_research_speed
+	political_power_factor = var:EUN_eco_pp_gain_factor
+	local_resources_factor = var:EUN_eco_resource_factor
+	production_factory_max_efficiency_factor = var:EUN_eco_prod_eff_cap
+	production_speed_arms_factory_factor = var:EUN_eco_arms_factory_speed
+	production_speed_infrastructure_factor = var:EUN_eco_infra_speed
+	industrial_capacity_dockyard = var:EUN_eco_dockyard_output
+	production_speed_air_base_factor = var:EUN_eco_airbase_speed
+	country_resource_oil = var:EUN_eco_oil_gain
+	stability_weekly = var:EUN_eco_weekly_stability
+}
+
+EUN_revolutionary_army_modifier = {
+	icon = GFX_idea_generic_army_war_college
+	enable = { always = yes }
+	
+	army_attack_factor = var:EUN_army_attack_bonus
+	army_defence_factor = var:EUN_army_defence_bonus
+	training_time_factor = var:EUN_army_training_speed_bonus
+}
+
+EUN_factionalism_modifier = {
+	icon = GFX_idea_generic_political_advisor
+	enable = { always = yes }
+	
+	political_power_gain = var:EUN_factionalism_pp_penalty
+	stability_factor = var:EUN_factionalism_stability_penalty
+	war_support_factor = var:EUN_factionalism_ws_penalty
+}

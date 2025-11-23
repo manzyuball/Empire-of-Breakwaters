@@ -4,14 +4,20 @@ state={
 	name="STATE_958"
 
 	history={
-		owner = LAT
+		owner = GER
+        add_core_of = GER
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 4
 
 		}
+<<<<<<< HEAD:history/states/958-Gizycko.txt
 		add_core_of = LAT
 		add_core_of = EUN
+=======
+		
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/958-8.txt
 
 	}
 

@@ -15,7 +15,11 @@ state={
 		1938.3.12 = {
 			owner = EUN
 			controller = GER
+<<<<<<< HEAD:history/states/848-Vorarlberg.txt
 			add_core_of = EUN
+=======
+			
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/848-Voralberg.txt
 		}
 	}
 	provinces={

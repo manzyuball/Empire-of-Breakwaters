@@ -7,12 +7,22 @@ state={
 	state_category = city
 
 	history={
+<<<<<<< HEAD:history/states/53-Lower_Bavaria.txt
 		owner = LAT
 		add_core_of = LAT
 		buildings = {
 			infrastructure = 3
 		}
 		add_core_of = EUN
+=======
+		owner = GER
+        add_core_of = GER
+		
+		buildings = {
+			infrastructure = 3
+		}
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/53-Oberbayern.txt
 		victory_points = {
 			9515 3
 		}

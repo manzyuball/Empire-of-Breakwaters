@@ -10,14 +10,19 @@ state={
 		victory_points = {
 			3473 1 
 		}
-		owner = LAT
-		add_core_of = LAT
+		owner = GER
+        add_core_of = GER
+		
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 
 		}
+<<<<<<< HEAD:history/states/68-Ostmark.txt
 		add_core_of = EUN
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/68-Wartheland.txt
 	}
 
 	provinces={

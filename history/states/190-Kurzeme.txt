@@ -13,7 +13,8 @@ state={
 			3296 1 #Ventspils
 		}
 		owner = LAT
-		add_claim_by =  EST
+		add_core_of = LAT
+		
 		buildings = {
 			infrastructure = 3 #was: 5
 			9262 = {

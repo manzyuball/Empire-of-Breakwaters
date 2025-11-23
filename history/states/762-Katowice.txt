@@ -14,13 +14,19 @@ state={
 		victory_points = {
 			6464 5
 		}
-		owner = LAT
+		owner = GER
+        add_core_of = GER
 		buildings = {
 			infrastructure = 3 #was: 6
 			industrial_complex = 2
 		}
+<<<<<<< HEAD
 		add_core_of = EUN
 		add_core_of = LAT
+=======
+		
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 	}
 
 	local_supplies=0.0 

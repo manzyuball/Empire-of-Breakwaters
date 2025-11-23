@@ -10,6 +10,10 @@ state={
 	}
 	history={
 		owner = EUN
+<<<<<<< HEAD:history/states/967-Turin.txt
+=======
+		add_core_of = EUN
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/967-sanmarino.txt
 		victory_points = {
 			6780 5 
 		}
@@ -18,7 +22,11 @@ state={
 			arms_factory = 2
 			industrial_complex = 2
 		}
+<<<<<<< HEAD:history/states/967-Turin.txt
 		add_core_of = EUN
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/967-sanmarino.txt
 	}
 	buildings_max_level_factor=1.000
 	local_supplies=0.000

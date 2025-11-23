@@ -11,7 +11,11 @@ state={
 		owner = AUS
 		add_core_of = AUS
 		add_core_of = YUG
+<<<<<<< HEAD:history/states/736-Littoral.txt
 		add_core_of = EUN
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/736-Istria.txt
 		add_core_of = VNI
 		buildings = {
 			infrastructure = 1

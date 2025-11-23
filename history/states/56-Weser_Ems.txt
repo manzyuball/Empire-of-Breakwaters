@@ -7,7 +7,11 @@ state={
 
 	history={
 		owner = EUN
+<<<<<<< HEAD:history/states/56-Weser_Ems.txt
 		add_core_of = LAT
+=======
+		add_core_of = EUN
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/56-Weser-Ems.txt
 		victory_points = {
 			241 5 
 		}
@@ -27,7 +31,11 @@ state={
 			air_base = 3
 
 		}
+<<<<<<< HEAD:history/states/56-Weser_Ems.txt
 		add_core_of = EUN
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/56-Weser-Ems.txt
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 4

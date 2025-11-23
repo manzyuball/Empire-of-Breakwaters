@@ -20,7 +20,11 @@ state={
 			industrial_complex = 1
 		}
 		add_core_of = AUS
+<<<<<<< HEAD:history/states/39-Alto_Adige.txt
 		add_core_of = EUN
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/39-Britain.txt
 	}
 
 	provinces={

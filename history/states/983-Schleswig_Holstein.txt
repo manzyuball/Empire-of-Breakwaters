@@ -7,9 +7,16 @@ state={
 	state_category = rural
 	history={
 
+<<<<<<< HEAD:history/states/983-Schleswig_Holstein.txt
 		owner = LAT
 		add_core_of = LAT
 		add_core_of = EUN
+=======
+		owner = EUN
+		add_core_of = EUN
+		
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/983-german_state_1.txt
 		buildings = {
 			infrastructure = 1
 			arms_factory = 1

@@ -8,7 +8,12 @@ state={
 	state_category = large_city
 	history={
 		owner = EUN
+<<<<<<< HEAD:history/states/50-Wurttemberg.txt
 		add_core_of = LAT
+=======
+		add_core_of = EUN
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/50-Baden.txt
 		victory_points = {
 			9517 20
 		}
@@ -31,7 +36,11 @@ state={
 			air_base = 3
 
 		}
+<<<<<<< HEAD:history/states/50-Wurttemberg.txt
 		add_core_of = EUN
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/50-Baden.txt
 
 	}
 

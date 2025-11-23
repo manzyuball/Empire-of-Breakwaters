@@ -1,0 +1,263 @@
+﻿l_japanese:
+ EUN_communism:0 "欧州連合"
+ EUN_communism_DEF:0 "欧州連合"
+ EUN_democratic:0 "欧州連合"
+ EUN_democratic_DEF:0 "欧州連合"
+ EUN_fascism:0 "欧州連合"
+ EUN_fascism_DEF:0 "欧州連合"
+ EUN_neutrality:0 "欧州連合"
+ EUN_neutrality_DEF:0 "欧州連合"
+ EUN_communism_ADJ:0 "欧州"
+ EUN_democratic_ADJ:0 "欧州"
+ EUN_fascism_ADJ:0 "欧州"
+ EUN_neutrality_ADJ:0 "欧州"
+
+ # Leaders
+ EUN_lev_trotsky:0 "レフ・トロツキー"
+ EUN_lev_trotsky_desc:0 "「世界革命の精神的指導者」。彼は躊躇わない。欧州、そして世界に革命をもたらし、一国社会主義者共の巣、モスクワに凱旋するのだ。彼の望みは「全世界革命を実現する事」のみ。外交などという生ぬるい手段はフランス派閥には存在しない。"
+
+ EUN_otto_strasser:0 "オットー・シュトラッサー"
+ EUN_otto_strasser_desc:0 "「鋼鉄の意志、コンクリートの要塞」。敗戦の恨みを科学力で晴らそうとする、マッドサイエンティストとプロイセン軍人の集まりであるドイツ派閥を率いる。彼らにとって革命とは、ドイツ民族の復権のための手段に過ぎない。"
+
+ EUN_benito_mussolini:0 "ベニト・ムッソリーニ"
+ EUN_benito_mussolini_desc:0 "「プロレタリアートのドゥーチェ」。この世界線の彼は、社会党を追放されず、党内の過激派を掌握して「国家サンディカリズム」を確立した。「ファシズム？ なんだそれは？」彼は赤いシャツを着てローマへ進軍した。彼にとって革命とは、イタリア民族が世界を支配するための手段に過ぎない。演説のカリスマ性は欧州一であり、民衆を熱狂させる天才。"
+
+ EUN_paul_henri_spaak:0 "ポール＝アンリ・スパーク"
+ EUN_paul_henri_spaak_desc:0 "「パンと平和、そして繁栄を」。革命を建前にした現実主義的な商人・銀行家たちであるベネルクス派閥を代表する。戦争はせず、選挙及び民主主義の積極的導入、そして経済の発展と工業化を場合によっては市場経済をも一部導入し推進していこうとする。"
+
+ # Ministers
+ EUN_jacques_doriot:0 "ジャック・ドリオ"
+ EUN_alphonse_juin:0 "アルフォンス・ジュアン"
+ EUN_pierre_monatte:0 "ピエール・モナット"
+ 
+ EUN_wilhelm_pieck:0 "ヴィルヘルム・ピーク"
+ EUN_ernst_thalmann:0 "エルンスト・テールマン"
+ EUN_heinz_guderian:0 "ハインツ・グデーリアン"
+ 
+ EUN_antonio_gramsci:0 "アントニオ・グラムシ"
+ EUN_nicola_bombacci:0 "ニコラ・ボンバッチ"
+ EUN_italo_balbo:0 "イタロ・バルボ"
+ 
+ EUN_civil_control_committee:0 "市民選挙管理委員会"
+ EUN_supreme_economic_council:0 "経済計画最高評議会"
+ EUN_henri_winkelman:0 "アンリ・ウィンケルマン"
+
+ # Traits
+ EUN_permanent_revolutionary:0 "永続革命論"
+ EUN_red_prussianism:0 "赤いプロイセン主義"
+ EUN_proletarian_duce:0 "プロレタリアートのドゥーチェ"
+ EUN_socialist_merchant:0 "社会主義の商人"
+
+ EUN_violent_agitation:0 "暴力的扇動"
+ EUN_aggressive_doctrine:0 "攻撃的ドクトリン"
+ EUN_workers_self_management:0 "労働者自主管理"
+
+ EUN_stasi_precursor:0 "秘密警察の先駆者"
+ EUN_planned_economy_expert:0 "計画経済の専門家"
+ EUN_blitzkrieg_theorist:0 "電撃戦の理論家"
+
+ EUN_cultural_hegemony:0 "文化的ヘゲモニー"
+ EUN_autarky_socialization:0 "アウタルキーと社会化"
+ EUN_knights_of_the_air:0 "空の騎士"
+
+ EUN_bureaucratic_efficiency:0 "官僚的効率性"
+ EUN_market_socialism:0 "市場社会主義"
+ EUN_neutrality_defender:0 "中立の守護者"
+
+ # Decisions
+ EUN_political_struggle:0 "欧州連合内部政治闘争"
+ EUN_support_french_faction:0 "フランス派閥への支援"
+ EUN_support_german_faction:0 "ドイツ派閥への支援"
+ EUN_support_italian_faction:0 "イタリア派閥への支援"
+ EUN_support_benelux_faction:0 "ベネルクス派閥への支援"
+
+ EUN_install_french_PM:0 "フランス派閥議長の選出"
+ EUN_install_german_PM:0 "ドイツ派閥議長の選出"
+ EUN_install_italian_PM:0 "イタリア派閥議長の選出"
+ EUN_install_benelux_PM:0 "ベネルクス派閥議長の選出"
+
+ EUN_appoint_french_interior:0 "フランス派閥内務大臣の任命"
+ EUN_appoint_german_interior:0 "ドイツ派閥内務大臣の任命"
+ EUN_appoint_italian_interior:0 "イタリア派閥内務大臣の任命"
+ EUN_appoint_benelux_interior:0 "ベネルクス派閥内務大臣の任命"
+
+ EUN_appoint_french_economy:0 "フランス派閥経済大臣の任命"
+ EUN_appoint_german_economy:0 "ドイツ派閥経済大臣の任命"
+ EUN_appoint_italian_economy:0 "イタリア派閥経済大臣の任命"
+ EUN_appoint_benelux_economy:0 "ベネルクス派閥経済大臣の任命"
+
+ EUN_appoint_french_military:0 "フランス派閥軍事大臣の任命"
+ EUN_appoint_german_military:0 "ドイツ派閥軍事大臣の任命"
+ EUN_appoint_italian_military:0 "イタリア派閥軍事大臣の任命"
+ EUN_appoint_benelux_military:0 "ベネルクス派閥軍事大臣の任命"
+
+ # Events
+ EUN_politics.1.t:0 "年次党大会"
+ EUN_politics.1.d:0 "2年に一度の党大会が開催された。各派閥は自らの影響力を拡大し、欧州連合の主導権を握ろうと躍起になっている。"
+ EUN_politics.1.a:0 "フランス派閥（革命委員会）を支持する"
+ EUN_politics.1.b:0 "ドイツ派閥（全ドイツ解放戦線）を支持する"
+ EUN_politics.1.c:0 "イタリア派閥（地中海未来派）を支持する"
+ EUN_politics.1.d:0 "ベネルクス派閥（欧州協同組合連合）を支持する"
+
+ EUN_politics.2.t:0 "派閥の暴走"
+ EUN_politics.2.d:0 "一つの派閥が全ての権力を掌握した結果、彼らの過激な思想が歯止めなく実行され始めている！他国はこれを脅威と見なし、包囲網を形成しつつある..."
+ EUN_politics.2.a:0 "我々はやりすぎたのか？"
+
+ EUN_politics.3.t:0 "政治的麻痺"
+ EUN_politics.3.d:0 "議長、内務、経済、軍事...全てのポストが異なる派閥によって占められている。意見の対立により、政府は完全に機能不全に陥っている。"
+ EUN_politics.3.a:0 "何も決められない..."
+
+ # Dynamic Modifiers
+ EUN_economy_modifier:0 "欧州連合の経済"
+ EUN_revolutionary_army_modifier:0 "連合革命軍"
+ EUN_factionalism_modifier:0 "派閥主義"
+
+ # National Focus
+ EUN_first_party_congress:0 "第一回党大会"
+ EUN_first_party_congress_desc:0 "欧州連合の未来を決定する最初の党大会を開催する。"
+
+ EUN_political_agenda:0 "政治的アジェンダ"
+ 
+ # French Branch
+ EUN_revolutionary_agriculture:0 "革命的農業改革"
+ EUN_rural_electrification:0 "農村の電化"
+ EUN_mechanized_collectivization:0 "集団農場の機械化"
+ EUN_chemical_fertilizers:0 "化学肥料の導入"
+ EUN_breadbasket_of_europe:0 "欧州のパン籠"
+ 
+ EUN_soldiers_bill_of_rights:0 "兵士の権利章典"
+ EUN_veterans_pension:0 "退役軍人年金"
+ EUN_military_housing:0 "軍事住宅の建設"
+ EUN_spirit_of_mass_conscription:0 "国民皆兵の精神"
+ EUN_military_society:0 "軍事社会"
+
+ # German Branch
+ EUN_new_four_year_plan:0 "新四ヵ年計画"
+ EUN_build_combinats:0 "コンビナートの建設"
+ EUN_mines_to_factories:0 "鉱山から工場へ"
+ EUN_expand_military_industry:0 "軍需産業の拡大"
+ EUN_complete_four_year_plan:0 "四カ年計画の完遂"
+ 
+ EUN_synthetic_fuel_lab:0 "合成燃料研究所"
+ EUN_rubber_oil_autarky:0 "ゴム・石油の自給"
+ EUN_seize_kaiser_wilhelm_institute:0 "カイザー・ヴィルヘルム研究所の接収"
+ EUN_establish_revolutionary_institute:0 "革命的研究所の設立"
+ EUN_heart_of_european_industry:0 "欧州産業の心臓部"
+
+ # Italian Branch
+ EUN_expand_iri:0 "IRIの拡大"
+ EUN_autostrada_network:0 "アウトストラーダ網"
+ EUN_alpine_hydroelectric:0 "アルプス水力発電"
+ EUN_southern_development_plan:0 "南部開発計画"
+ EUN_modern_urban_planning:0 "近代都市計画"
+ 
+ EUN_mediterranean_shipbuilding:0 "地中海造船計画"
+ EUN_foster_shipbuilding_industry:0 "造船業の育成"
+ EUN_invest_aviation_industry:0 "航空産業への投資"
+ EUN_offshore_oil_drilling:0 "海上油田の掘削計画"
+ EUN_national_corporatism:0 "国家コーポラティズム"
+
+ # Benelux Branch
+ EUN_currency_reform:0 "通貨改革の断行"
+ EUN_abolish_tariffs:0 "関税障壁の撤廃"
+ EUN_deregulate_banks:0 "銀行規制の緩和"
+ EUN_expand_antwerp_rotterdam:0 "アントワープ・ロッテルダム港湾拡張"
+ EUN_peoples_bank:0 "人民銀行"
+ 
+ EUN_relax_labor_laws:0 "労働時間規制の緩和"
+ EUN_guaranteed_minimum_wage:0 "最低賃金の保障"
+ EUN_mass_consumption_society:0 "大衆消費社会"
+ EUN_social_security_network:0 "社会保障ネットワーク"
+ EUN_red_marketism:0 "赤い市場主義"
+
+ # Fusion Branch
+ EUN_scientific_collectivization:0 "科学的集団化"
+ EUN_state_capitalism:0 "国家資本主義"
+ EUN_universal_socialist_welfare:0 "普遍的社会主義福祉"
+ EUN_total_war_industrial_complex:0 "総力戦産業複合体"
+ EUN_technocratic_consortium:0 "テクノクラート・コンソーシアム"
+
+ EUN_eco_ic_bonus_05_tooltip:0 "§G欧州連合の経済§!: 工場出力 §G+5%§!"
+ EUN_eco_ic_bonus_10_tooltip:0 "§G欧州連合の経済§!: 工場出力 §G+10%§!"
+ EUN_eco_ic_bonus_15_tooltip:0 "§G欧州連合の経済§!: 工場出力 §G+15%§!"
+ EUN_eco_consumer_goods_bonus_05_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G-5%§!"
+ EUN_eco_consumer_goods_bonus_03_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G-3%§!"
+ EUN_eco_construction_bonus_05_tooltip:0 "§G欧州連合の経済§!: 建設速度 §G+5%§!"
+ EUN_eco_construction_bonus_10_tooltip:0 "§G欧州連合の経済§!: 建設速度 §G+10%§!"
+ EUN_eco_corporatism_bonus_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G-5%§!, 建設速度 §G+10%§!"
+ EUN_eco_state_capitalism_bonus_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G10%§!, 建設速度 §G+20%§!"
+
+ EUN_eco_breadbasket_tooltip:0 "§G欧州連合の経済§!: 安定度 §G+10%§!, 政治力獲得 §G+10%§!"
+ EUN_eco_currency_reform_tooltip:0 "§G欧州連合の経済§!: 安定度 §G+5%§!, 政治力獲得 §G+5%§!"
+ EUN_eco_research_speed_05_tooltip:0 "§G欧州連合の経済§!: 研究速度 §G+5%§!"
+ EUN_eco_research_speed_10_consumer_goods_bonus_05_tooltip:0 "§G欧州連合の経済§!: 研究速度 §G+10%§!, 消費財工場 §G-5%§!"
+ EUN_eco_corporatism_new_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G10%§!, 建設速度 §G+10%§!"
+ EUN_eco_consumer_goods_penalty_05_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §R+5%§!"
+ EUN_eco_resource_factor_15_tooltip:0 "§G欧州連合の経済§!: 資源産出量 §G+15%§!"
+ EUN_eco_prod_eff_cap_05_tooltip:0 "§G欧州連合の経済§!: 生産効率上限 §G+5%§!"
+ EUN_eco_oil_gain_24_tooltip:0 "§G欧州連合の経済§!: 石油 §G+24§!"
+ EUN_eco_aviation_tooltip:0 "§G欧州連合の経済§!: 航空基地建設速度 §G+20%§!"
+ EUN_eco_arms_factory_speed_10_tooltip:0 "§G欧州連合の経済§!: 軍需工場建設速度 §G+10%§!"
+ EUN_eco_infra_speed_15_tooltip:0 "§G欧州連合の経済§!: インフラ建設速度 §G+15%§!"
+ EUN_eco_infra_speed_20_tooltip:0 "§G欧州連合の経済§!: インフラ建設速度 §G+20%§!"
+ EUN_eco_dockyard_output_10_tooltip:0 "§G欧州連合の経済§!: 造船所出力 §G+10%§!"
+ EUN_eco_oil_gain_10_tooltip:0 "§G欧州連合の経済§!: 石油 §G+10§!"
+ EUN_eco_weekly_stability_10_tooltip:0 "§G欧州連合の経済§!: 週毎の安定度 §G+0.1%§!"
+ EUN_eco_pp_gain_factor_10_tooltip:0 "§G欧州連合の経済§!: 政治力 §G+10%§!"
+ EUN_eco_social_security_tooltip:0 "§G欧州連合の経済§!: 週毎の安定度 §G+0.1%§!, 政治力 §G+10%§!"
+ EUN_eco_universal_socialist_welfare_tooltip:0 "§G欧州連合の経済§!: 週毎の安定度 §G+0.1%§!, 政治力 §G+10%§!"
+ # Trigger Tooltips
+ EUN_french_economy_minister_check:0 "§Yフランス派閥§!が§Y経済大臣§!に選出されている"
+ EUN_german_economy_minister_check:0 "§Yドイツ派閥§!が§Y経済大臣§!に選出されている"
+ EUN_italian_economy_minister_check:0 "§Yイタリア派閥§!が§Y経済大臣§!に選出されている"
+ EUN_benelux_economy_minister_check:0 "§Yベネルクス派閥§!が§Y経済大臣§!に選出されている"
+
+ # Descriptions
+ EUN_revolutionary_agriculture_desc:0 "フランスの広大な農地を革命的農業の実験場とし、食料生産を抜本的に改革する。"
+ EUN_rural_electrification_desc:0 "農村部への電力供給網を整備し、農業の近代化と地方の生活水準向上を図る。"
+ EUN_mechanized_collectivization_desc:0 "トラクターやコンバインを大量投入し、集団農場の生産性を飛躍的に高める。"
+ EUN_chemical_fertilizers_desc:0 "化学肥料の生産を拡大し、単位面積当たりの収穫量を最大化する。"
+ EUN_breadbasket_of_europe_desc:0 "欧州連合は全欧州の食料庫となり、飢餓を過去のものとする。"
+ EUN_soldiers_bill_of_rights_desc:0 "兵士の権利を法的に保障し、軍の士気と忠誠心を高める。"
+ EUN_veterans_pension_desc:0 "退役軍人への手厚い年金制度を確立し、国家への奉仕に報いる。"
+ EUN_military_housing_desc:0 "軍人家族のための住宅を建設し、生活の安定を図る。"
+ EUN_spirit_of_mass_conscription_desc:0 "国民皆兵の精神を浸透させ、予備役の動員体制を強化する。"
+ EUN_military_society_desc:0 "軍と社会の垣根を取り払い、総力戦に耐えうる強靭な社会を構築する。"
+
+ EUN_new_four_year_plan_desc:0 "ドイツの工業力を結集し、新たな四カ年計画を発動して重工業を強化する。"
+ EUN_build_combinats_desc:0 "巨大なコンビナートを建設し、生産工程の効率化と集約化を進める。"
+ EUN_mines_to_factories_desc:0 "鉱山から工場への輸送網を整備し、資源の供給を円滑化する。"
+ EUN_expand_military_industry_desc:0 "軍需産業を拡張し、最新鋭の兵器を量産する体制を整える。"
+ EUN_complete_four_year_plan_desc:0 "四カ年計画の目標を達成し、欧州随一の工業力を確立する。"
+ EUN_synthetic_fuel_lab_desc:0 "合成燃料の研究施設を拡充し、石油資源の自給自足を目指す。"
+ EUN_rubber_oil_autarky_desc:0 "ゴムと石油の代替生産技術を確立し、輸入依存からの脱却を図る。"
+ EUN_seize_kaiser_wilhelm_institute_desc:0 "カイザー・ヴィルヘルム研究所を接収し、その研究成果を革命のために活用する。"
+ EUN_establish_revolutionary_institute_desc:0 "革命的科学研究所を設立し、次世代の技術開発を推進する。"
+ EUN_heart_of_european_industry_desc:0 "欧州の産業心臓部として、連合全体の経済を牽引する。"
+
+ EUN_expand_iri_desc:0 "産業復興公社（IRI）の機能を拡大し、国家主導の経済開発を推進する。"
+ EUN_autostrada_network_desc:0 "高速道路網（アウトストラーダ）を整備し、物流と軍事移動の迅速化を図る。"
+ EUN_alpine_hydroelectric_desc:0 "アルプス山脈の水力発電開発を進め、安価で豊富な電力を供給する。"
+ EUN_southern_development_plan_desc:0 "南部イタリアの未開発地域に投資し、南北の経済格差を是正する。"
+ EUN_modern_urban_planning_desc:0 "近代的な都市計画を導入し、労働者の生活環境を改善する。"
+ EUN_mediterranean_shipbuilding_desc:0 "地中海の造船所を拡張し、海軍力の増強と海運の活性化を図る。"
+ EUN_foster_shipbuilding_industry_desc:0 "造船産業を育成し、高度な建艦技術を習得する。"
+ EUN_invest_aviation_industry_desc:0 "航空産業への投資を拡大し、空の支配権を確立する。"
+ EUN_offshore_oil_drilling_desc:0 "海底油田の探査と掘削を進め、貴重なエネルギー資源を確保する。"
+ EUN_national_corporatism_desc:0 "国家と労働組合、企業が一体となったコーポラティズム体制を確立する。"
+
+ EUN_currency_reform_desc:0 "通貨制度を改革し、インフレの抑制と経済の安定化を図る。"
+ EUN_abolish_tariffs_desc:0 "域内の関税を撤廃し、自由な貿易と経済交流を促進する。"
+ EUN_deregulate_banks_desc:0 "銀行規制を緩和し、資金の流動性を高めて投資を活性化する。"
+ EUN_expand_antwerp_rotterdam_desc:0 "アントワープとロッテルダムの港湾機能を拡張し、欧州の貿易ハブとする。"
+ EUN_peoples_bank_desc:0 "人民銀行を設立し、中小企業や労働者への融資を拡大する。"
+ EUN_relax_labor_laws_desc:0 "労働法を柔軟化し、企業の雇用創出を支援する。"
+ EUN_guaranteed_minimum_wage_desc:0 "最低賃金制度を導入し、労働者の生活水準を底上げする。"
+ EUN_mass_consumption_society_desc:0 "大衆消費社会の到来を促し、内需主導の経済成長を実現する。"
+ EUN_social_security_network_desc:0 "包括的な社会保障ネットワークを構築し、国民の不安を解消する。"
+ EUN_red_marketism_desc:0 "市場メカニズムと社会主義的計画を融合させた「赤い市場主義」を推進する。"
+
+ EUN_scientific_collectivization_desc:0 "科学的知見に基づいた集団化を進め、農業生産の効率を極限まで高める。"
+ EUN_state_capitalism_desc:0 "国家資本主義体制を強化し、強力な指導力で経済成長を加速させる。"
+ EUN_universal_socialist_welfare_desc:0 "普遍的な社会主義福祉制度を確立し、すべての国民に豊かな生活を保障する。"
+ EUN_total_war_industrial_complex_desc:0 "総力戦に対応した産業複合体を形成し、軍事生産能力を最大化する。"

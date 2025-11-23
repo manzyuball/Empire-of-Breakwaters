@@ -11,7 +11,8 @@ state=
 		victory_points = {
 			3288 3
 		}
-		owner = LAT
+		owner = GER
+        add_core_of = GER
 		buildings = {
 			infrastructure = 3 #was: 5
 			industrial_complex = 1
@@ -19,8 +20,13 @@ state=
 				naval_base = 1
 			}
 		}
+<<<<<<< HEAD
 		add_core_of = LAT
 		add_core_of = EUN
+=======
+		
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 	}
 	provinces={
 		3288 	

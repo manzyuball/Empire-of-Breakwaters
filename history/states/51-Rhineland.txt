@@ -9,7 +9,12 @@ state={
 
 	history={
 		owner = EUN
+<<<<<<< HEAD:history/states/51-Rhineland.txt
 		add_core_of = LAT
+=======
+		add_core_of = EUN
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/51-Moselland.txt
 		victory_points = {
 			587 5 
 		}
@@ -20,7 +25,11 @@ state={
 			air_base = 3
 
 		}
+<<<<<<< HEAD:history/states/51-Rhineland.txt
 		add_core_of = EUN
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/51-Moselland.txt
 		1939.1.1 = {
 			buildings = {
 				air_base = 6

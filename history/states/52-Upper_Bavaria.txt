@@ -11,8 +11,14 @@ state={
 	
 
 	history={
+<<<<<<< HEAD:history/states/52-Upper_Bavaria.txt
 		owner = LAT
 		add_core_of = LAT
+=======
+		owner = GER
+        add_core_of = GER
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/52-Wuttemberg.txt
 		victory_points = {
 			692 20
 		}
@@ -25,7 +31,11 @@ state={
 			industrial_complex = 1
 			air_base = 6
 		}
+<<<<<<< HEAD:history/states/52-Upper_Bavaria.txt
 		add_core_of = EUN
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/52-Wuttemberg.txt
 
 		1939.1.1 = {
 			buildings = {

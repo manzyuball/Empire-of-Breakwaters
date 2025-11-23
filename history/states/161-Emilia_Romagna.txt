@@ -7,7 +7,11 @@ state={
 	}
 
 	history={
+<<<<<<< HEAD:history/states/161-Emilia_Romagna.txt
 		owner = EUN
+=======
+		owner = LBV
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/161-Emilia Romagna.txt
 		victory_points = {
 			6606 3 
 		}
@@ -21,7 +25,11 @@ state={
 			}
 
 		}
+<<<<<<< HEAD:history/states/161-Emilia_Romagna.txt
 		add_core_of = EUN
+=======
+		add_core_of = LBV
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/161-Emilia Romagna.txt
 
 	}
 

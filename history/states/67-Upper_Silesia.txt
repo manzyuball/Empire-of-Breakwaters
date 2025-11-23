@@ -17,13 +17,19 @@ state={
 		victory_points = {
 			9511 3
 		}
-		owner = LAT
+		owner = GER
+        add_core_of = GER
 		buildings = {
 			infrastructure = 3
 			arms_factory = 2
 		}
+<<<<<<< HEAD:history/states/67-Upper_Silesia.txt
 		add_core_of = LAT
 		add_core_of = EUN
+=======
+		
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/67-Oberschlesien.txt
 	}
 
 	provinces={

@@ -4,13 +4,19 @@ state={
 	name="STATE_959"
 
 	history={
-		owner = LAT
+		owner = GER
+        add_core_of = GER
 		buildings = {
 			infrastructure = 4
 
 		}
+<<<<<<< HEAD:history/states/959-Kwidzyn.txt
 		add_core_of = EUN
 		add_core_of = LAT
+=======
+		
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f:history/states/959-2.txt
 
 	}
 

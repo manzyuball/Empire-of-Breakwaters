@@ -11,6 +11,10 @@ state={
 
 	history={
 		owner = EUN
+<<<<<<< HEAD
+=======
+		add_core_of = EUN
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 		victory_points = {
 			6788 10 
 		}
@@ -25,7 +29,11 @@ state={
 
 			}
 		}
+<<<<<<< HEAD
 		add_core_of = EUN
+=======
+		
+>>>>>>> 54d1df7b8906e44b37a2ceea502b88169055123f
 	}
 
 	provinces={

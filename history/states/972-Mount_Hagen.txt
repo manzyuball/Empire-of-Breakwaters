@@ -5,7 +5,8 @@ state={
 		2129 5135 10954 11004 11018 12428 
 	}
 	history={
-		owner = LAT
+		owner = GER
+        add_core_of = GER
 		buildings = {
 			infrastructure = 0
 		}
