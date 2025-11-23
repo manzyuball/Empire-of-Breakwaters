@@ -1,0 +1,27 @@
+EUN_economy_modifier = {
+	icon = GFX_idea_generic_production_bonus
+	enable = { always = yes }
+	
+	# Effects scaled by variables
+	industrial_capacity_factory = var:EUN_eco_ic_bonus
+	production_speed_buildings_factor = var:EUN_eco_construction_bonus
+	consumer_goods_factor = var:EUN_eco_consumer_goods_penalty
+}
+
+EUN_revolutionary_army_modifier = {
+	icon = GFX_idea_generic_army_war_college
+	enable = { always = yes }
+	
+	army_attack_factor = var:EUN_army_attack_bonus
+	army_defence_factor = var:EUN_army_defence_bonus
+	training_time_factor = var:EUN_army_training_speed_bonus
+}
+
+EUN_factionalism_modifier = {
+	icon = GFX_idea_generic_political_advisor
+	enable = { always = yes }
+	
+	political_power_gain = var:EUN_factionalism_pp_penalty
+	stability_factor = var:EUN_factionalism_stability_penalty
+	war_support_factor = var:EUN_factionalism_ws_penalty
+}

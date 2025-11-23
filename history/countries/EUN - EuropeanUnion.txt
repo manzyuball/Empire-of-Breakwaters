@@ -42,9 +42,49 @@ recruit_character = EUN_paul_henri_spaak
 
 recruit_character = EUN_jacques_doriot
 recruit_character = EUN_alphonse_juin
+recruit_character = EUN_pierre_monatte
+
 recruit_character = EUN_ernst_thalmann
 recruit_character = EUN_heinz_guderian
+recruit_character = EUN_wilhelm_pieck
+
 recruit_character = EUN_antonio_gramsci
 recruit_character = EUN_italo_balbo
+recruit_character = EUN_nicola_bombacci
+
 recruit_character = EUN_supreme_economic_council
 recruit_character = EUN_civil_control_committee
+recruit_character = EUN_henri_winkelman
+
+set_variable = { EUN_french_influence = 45 }
+set_variable = { EUN_german_influence = 20 }
+set_variable = { EUN_italian_influence = 15 }
+set_variable = { EUN_benelux_influence = 35 }
+
+# Initial Faction Control (Trotsky is PM, others are mixed/unset or set via effect)
+# We should set initial ministers via effect or just assume they are empty/default.
+# Let's set initial variables to match the starting leader (Trotsky = French PM)
+set_variable = { EUN_PM_faction = 1 }
+# Others are 0 (None) initially until appointed
+set_variable = { EUN_Interior_faction = 0 }
+set_variable = { EUN_Economy_faction = 0 }
+set_variable = { EUN_Military_faction = 0 }
+
+# Dynamic Modifier Variables Initialization
+set_variable = { EUN_eco_ic_bonus = 0 }
+set_variable = { EUN_eco_construction_bonus = 0 }
+set_variable = { EUN_eco_consumer_goods_penalty = 0 }
+
+set_variable = { EUN_army_attack_bonus = 0 }
+set_variable = { EUN_army_defence_bonus = 0 }
+set_variable = { EUN_army_training_speed_bonus = 0 }
+
+set_variable = { EUN_factionalism_pp_penalty = 0 }
+set_variable = { EUN_factionalism_stability_penalty = 0 }
+set_variable = { EUN_factionalism_ws_penalty = 0 }
+
+# Apply Dynamic Modifiers
+add_dynamic_modifier = { modifier = EUN_economy_modifier }
+add_dynamic_modifier = { modifier = EUN_revolutionary_army_modifier }
+add_dynamic_modifier = { modifier = EUN_factionalism_modifier }
+

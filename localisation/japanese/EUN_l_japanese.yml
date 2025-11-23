@@ -106,3 +106,83 @@
  EUN_politics.3.t:0 "政治的麻痺"
  EUN_politics.3.d:0 "議長、内務、経済、軍事...全てのポストが異なる派閥によって占められている。意見の対立により、政府は完全に機能不全に陥っている。"
  EUN_politics.3.a:0 "何も決められない..."
+
+ # Dynamic Modifiers
+ EUN_economy_modifier:0 "欧州連合の経済"
+ EUN_revolutionary_army_modifier:0 "連合革命軍"
+ EUN_factionalism_modifier:0 "派閥主義"
+
+ # National Focus
+ EUN_first_party_congress:0 "第一回党大会"
+ EUN_first_party_congress_desc:0 "欧州連合の未来を決定する最初の党大会を開催する。"
+
+ EUN_political_agenda:0 "政治的アジェンダ"
+ 
+ # French Branch
+ EUN_revolutionary_agriculture:0 "革命的農業改革"
+ EUN_rural_electrification:0 "農村の電化"
+ EUN_mechanized_collectivization:0 "集団農場の機械化"
+ EUN_chemical_fertilizers:0 "化学肥料の導入"
+ EUN_breadbasket_of_europe:0 "欧州のパン籠"
+ 
+ EUN_soldiers_bill_of_rights:0 "兵士の権利章典"
+ EUN_veterans_pension:0 "退役軍人年金"
+ EUN_military_housing:0 "軍事住宅の建設"
+ EUN_spirit_of_mass_conscription:0 "国民皆兵の精神"
+ EUN_military_society:0 "軍事社会"
+
+ # German Branch
+ EUN_new_four_year_plan:0 "新四ヵ年計画"
+ EUN_build_combinats:0 "コンビナートの建設"
+ EUN_mines_to_factories:0 "鉱山から工場へ"
+ EUN_expand_military_industry:0 "軍需産業の拡大"
+ EUN_complete_four_year_plan:0 "四カ年計画の完遂"
+ 
+ EUN_synthetic_fuel_lab:0 "合成燃料研究所"
+ EUN_rubber_oil_autarky:0 "ゴム・石油の自給"
+ EUN_seize_kaiser_wilhelm_institute:0 "カイザー・ヴィルヘルム研究所の接収"
+ EUN_establish_revolutionary_institute:0 "革命的研究所の設立"
+ EUN_heart_of_european_industry:0 "欧州産業の心臓部"
+
+ # Italian Branch
+ EUN_expand_iri:0 "IRIの拡大"
+ EUN_autostrada_network:0 "アウトストラーダ網"
+ EUN_alpine_hydroelectric:0 "アルプス水力発電"
+ EUN_southern_development_plan:0 "南部開発計画"
+ EUN_modern_urban_planning:0 "近代都市計画"
+ 
+ EUN_mediterranean_shipbuilding:0 "地中海造船計画"
+ EUN_foster_shipbuilding_industry:0 "造船業の育成"
+ EUN_invest_aviation_industry:0 "航空産業への投資"
+ EUN_offshore_oil_drilling:0 "海上油田の掘削計画"
+ EUN_national_corporatism:0 "国家コーポラティズム"
+
+ # Benelux Branch
+ EUN_currency_reform:0 "通貨改革の断行"
+ EUN_abolish_tariffs:0 "関税障壁の撤廃"
+ EUN_deregulate_banks:0 "銀行規制の緩和"
+ EUN_expand_antwerp_rotterdam:0 "アントワープ・ロッテルダム港湾拡張"
+ EUN_peoples_bank:0 "人民銀行"
+ 
+ EUN_relax_labor_laws:0 "労働時間規制の緩和"
+ EUN_guaranteed_minimum_wage:0 "最低賃金の保障"
+ EUN_mass_consumption_society:0 "大衆消費社会"
+ EUN_social_security_network:0 "社会保障ネットワーク"
+ EUN_red_marketism:0 "赤い市場主義"
+
+ # Fusion Branch
+ EUN_scientific_collectivization:0 "科学的集団化"
+ EUN_state_capitalism:0 "国家資本主義"
+ EUN_universal_socialist_welfare:0 "普遍的社会主義福祉"
+ EUN_total_war_industrial_complex:0 "総力戦産業複合体"
+ EUN_technocratic_consortium:0 "テクノクラート・コンソーシアム"
+
+ EUN_eco_ic_bonus_05_tooltip:0 "§G欧州連合の経済§!: 工場出力 §G+5%§!"
+ EUN_eco_ic_bonus_10_tooltip:0 "§G欧州連合の経済§!: 工場出力 §G+10%§!"
+ EUN_eco_ic_bonus_15_tooltip:0 "§G欧州連合の経済§!: 工場出力 §G+15%§!"
+ EUN_eco_consumer_goods_bonus_05_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G-5%§!"
+ EUN_eco_consumer_goods_bonus_03_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G-3%§!"
+ EUN_eco_construction_bonus_05_tooltip:0 "§G欧州連合の経済§!: 建設速度 §G+5%§!"
+ EUN_eco_construction_bonus_10_tooltip:0 "§G欧州連合の経済§!: 建設速度 §G+10%§!"
+ EUN_eco_corporatism_bonus_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G-5%§!, 建設速度 §G+10%§!"
+ EUN_eco_state_capitalism_bonus_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G-10%§!, 建設速度 §G+20%§!"

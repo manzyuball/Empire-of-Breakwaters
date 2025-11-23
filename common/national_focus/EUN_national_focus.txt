@@ -1,0 +1,790 @@
+focus_tree = {
+	id = EUN_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EUN
+		}
+	}
+	
+	default = no
+    continuous_focus_position = {
+		x = 120
+		y = 1600
+	}
+	# -------------------------------------------------------------------------
+	# Root: First Party Congress
+	# -------------------------------------------------------------------------
+	focus = {
+		id = EUN_first_party_congress
+		icon = GFX_goal_generic_political_pressure
+		x = 15
+		y = 0
+		cost = 1.0 # Very fast (7 days)
+		
+		completion_reward = {
+			country_event = EUN_politics.1
+			add_political_power = 50
+		}
+	}
+
+	# -------------------------------------------------------------------------
+	# Economic Branch (Depends on Economy Minister Faction)
+	# -------------------------------------------------------------------------
+
+
+	# --- French Branch (Agriculture, Military, Welfare) ---
+	focus = {
+		id = EUN_revolutionary_agriculture
+		icon = GFX_goal_generic_agriculture
+		x = 3
+		y = 0
+		cost = 10
+		# No prerequisite (Independent Root)
+		available = { check_variable = { EUN_Economy_faction = 1 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_ic_bonus = 0.05 }
+			custom_effect_tooltip = EUN_eco_ic_bonus_05_tooltip
+		}
+	}
+
+	# Branch A: Agriculture (Left)
+	focus = {
+		id = EUN_rural_electrification
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = { focus = EUN_revolutionary_agriculture }
+		relative_position_id = EUN_revolutionary_agriculture
+		available = { check_variable = { EUN_Economy_faction = 1 } }
+		completion_reward = {
+			16 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUN_mechanized_collectivization
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = EUN_rural_electrification  }
+		prerequisite = { focus = EUN_chemical_fertilizers }
+		relative_position_id = EUN_rural_electrification
+		available = { check_variable = { EUN_Economy_faction = 1 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.05 }
+			custom_effect_tooltip = EUN_eco_consumer_goods_bonus_05_tooltip
+		}
+	}
+	focus = {
+		id = EUN_chemical_fertilizers
+		icon = GFX_goal_generic_scientific_exchange
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = EUN_revolutionary_agriculture }
+		relative_position_id = EUN_revolutionary_agriculture
+		available = { check_variable = { EUN_Economy_faction = 1 } }
+		completion_reward = {
+			add_tech_bonus = {
+				name = agriculture_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = EUN_breadbasket_of_europe
+		icon = GFX_goal_generic_trade
+		x = -2
+		y = 3
+		cost = 10
+		prerequisite = { focus = EUN_mechanized_collectivization }
+		relative_position_id = EUN_revolutionary_agriculture
+		available = { check_variable = { EUN_Economy_faction = 1 } }
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 100
+		}
+	}
+
+	# Branch B: Military Welfare (Right)
+	focus = {
+		id = EUN_soldiers_bill_of_rights
+		icon = GFX_goal_generic_morale_bonus
+		x = 3
+		y = 1
+		cost = 10
+		prerequisite = { focus = EUN_revolutionary_agriculture }
+		relative_position_id = EUN_revolutionary_agriculture
+		available = { check_variable = { EUN_Economy_faction = 1 } }
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+	focus = {
+		id = EUN_veterans_pension
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = EUN_soldiers_bill_of_rights }
+		prerequisite = { focus = EUN_spirit_of_mass_conscription }
+		relative_position_id = EUN_soldiers_bill_of_rights
+		available = { check_variable = { EUN_Economy_faction = 1 } }
+		completion_reward = {
+			add_stability = 0.05
+			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.03 } # Fixed: Penalty reduction is negative
+			custom_effect_tooltip = EUN_eco_consumer_goods_bonus_03_tooltip
+		}
+	}
+	focus = {
+		id = EUN_military_housing
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = EUN_spirit_of_mass_conscription }
+		relative_position_id = EUN_spirit_of_mass_conscription
+		available = { check_variable = { EUN_Economy_faction = 1 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_construction_bonus = 0.05 }
+			custom_effect_tooltip = EUN_eco_construction_bonus_05_tooltip
+		}
+	}
+	focus = {
+		id = EUN_spirit_of_mass_conscription
+		icon = GFX_goal_generic_position_armies
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = EUN_revolutionary_agriculture }
+		relative_position_id = EUN_revolutionary_agriculture
+		available = { check_variable = { EUN_Economy_faction = 1 } }
+		completion_reward = {
+			add_ideas = EUN_mass_conscription_idea
+			monthly_population = 0.10
+		}
+	}
+
+	# Convergence
+	focus = {
+		id = EUN_military_society
+		icon = GFX_goal_generic_army_doctrines
+		x = -1
+		y = 4
+		relative_position_id = EUN_revolutionary_agriculture
+		cost = 10
+		prerequisite = { focus = EUN_breadbasket_of_europe focus = EUN_military_housing }
+		available = { check_variable = { EUN_Economy_faction = 1 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_ic_bonus = 0.10 }
+			custom_effect_tooltip = EUN_eco_ic_bonus_10_tooltip
+		}
+	}
+
+	# --- German Branch (Industry, Science, Planned Economy) ---
+	focus = {
+		id = EUN_new_four_year_plan
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 10
+		y = 0
+		cost = 10
+		# No prerequisite
+		available = { check_variable = { EUN_Economy_faction = 2 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_ic_bonus = 0.05 }
+			custom_effect_tooltip = EUN_eco_ic_bonus_05_tooltip
+		}
+	}
+
+	# Branch A: Heavy Industry (Left)
+	focus = {
+		id = EUN_build_combinats
+		icon = GFX_goal_generic_production
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = EUN_new_four_year_plan
+		prerequisite = { focus = EUN_new_four_year_plan }
+		available = { check_variable = { EUN_Economy_faction = 2 } }
+		completion_reward = {
+			64 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUN_mines_to_factories
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_build_combinats
+		prerequisite = { focus = EUN_build_combinats }
+		available = { check_variable = { EUN_Economy_faction = 2 } }
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 20
+				state = 64 # Brandenburg
+			}
+		}
+	}
+	focus = {
+		id = EUN_expand_military_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_build_combinats
+		prerequisite = { focus = EUN_build_combinats }
+		available = { check_variable = { EUN_Economy_faction = 2 } }
+		completion_reward = {
+			64 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUN_complete_four_year_plan
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_heart_of_european_industry
+		prerequisite = { focus = EUN_heart_of_european_industry focus = EUN_rubber_oil_autarky }
+		available = { check_variable = { EUN_Economy_faction = 2 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_ic_bonus = 0.10 }
+			custom_effect_tooltip = EUN_eco_ic_bonus_10_tooltip
+		}
+	}
+
+	# Branch B: Science & Synthetics (Right)
+	focus = {
+		id = EUN_synthetic_fuel_lab
+		icon = GFX_goal_generic_oil_refinery
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = EUN_seize_kaiser_wilhelm_institute
+		prerequisite = { focus = EUN_seize_kaiser_wilhelm_institute }
+		available = { check_variable = { EUN_Economy_faction = 2 } }
+		completion_reward = {
+			64 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUN_rubber_oil_autarky
+		icon = GFX_goal_generic_scientific_exchange
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_synthetic_fuel_lab
+		prerequisite = { focus = EUN_synthetic_fuel_lab }
+		available = { check_variable = { EUN_Economy_faction = 2 } }
+		completion_reward = {
+			add_tech_bonus = {
+				name = synthetic_bonus
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = EUN_seize_kaiser_wilhelm_institute
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_new_four_year_plan
+		prerequisite = { focus = EUN_new_four_year_plan }
+		available = { check_variable = { EUN_Economy_faction = 2 } }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = EUN_establish_revolutionary_institute
+		icon = GFX_goal_generic_nuclear
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_synthetic_fuel_lab
+		prerequisite = { focus = EUN_synthetic_fuel_lab }
+		available = { check_variable = { EUN_Economy_faction = 2 } }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	# Convergence
+	focus = {
+		id = EUN_heart_of_european_industry
+		icon = GFX_goal_generic_production
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_expand_military_industry
+		prerequisite = { focus = EUN_expand_military_industry }
+		prerequisite = { focus = EUN_mines_to_factories }
+		available = { check_variable = { EUN_Economy_faction = 2 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_ic_bonus = 0.15 }
+			custom_effect_tooltip = EUN_eco_ic_bonus_15_tooltip
+		}
+	}
+
+	# --- Italian Branch (Finance, Development, Military) ---
+	focus = {
+		id = EUN_expand_iri
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 2
+		y = 5
+		cost = 10
+		# No prerequisite
+		available = { check_variable = { EUN_Economy_faction = 3 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_construction_bonus = 0.10 }
+			custom_effect_tooltip = EUN_eco_construction_bonus_10_tooltip
+		}
+	}
+
+	# Branch A: Infrastructure (Left)
+	focus = {
+		id = EUN_autostrada_network
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = EUN_expand_iri
+		prerequisite = { focus = EUN_expand_iri }
+		available = { check_variable = { EUN_Economy_faction = 3 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_construction_bonus = 0.05 }
+			custom_effect_tooltip = EUN_eco_construction_bonus_05_tooltip
+		}
+	}
+	focus = {
+		id = EUN_alpine_hydroelectric
+		icon = GFX_goal_generic_production
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = EUN_expand_iri
+		prerequisite = { focus = EUN_expand_iri }
+		available = { check_variable = { EUN_Economy_faction = 3 } }
+		completion_reward = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+	focus = {
+		id = EUN_southern_development_plan
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 2
+		cost = 10
+		relative_position_id = EUN_expand_iri
+		prerequisite = { focus = EUN_expand_iri }
+		available = { check_variable = { EUN_Economy_faction = 3 } }
+		completion_reward = {
+			117 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUN_modern_urban_planning
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = EUN_southern_development_plan
+		prerequisite = { focus = EUN_southern_development_plan }
+		available = { check_variable = { EUN_Economy_faction = 3 } }
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	# Branch B: Navy & Military (Right)
+	focus = {
+		id = EUN_mediterranean_shipbuilding
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = EUN_expand_iri
+		prerequisite = { focus = EUN_expand_iri }
+		available = { check_variable = { EUN_Economy_faction = 3 } }
+		completion_reward = {
+			117 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUN_foster_shipbuilding_industry
+		icon = GFX_goal_generic_navy_battleship
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_mediterranean_shipbuilding
+		prerequisite = { focus = EUN_mediterranean_shipbuilding }
+		available = { check_variable = { EUN_Economy_faction = 3 } }
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval
+			}
+		}
+	}
+	focus = {
+		id = EUN_invest_aviation_industry
+		icon = GFX_goal_generic_air_fighter
+		x = 1
+		y = 2
+		cost = 10
+		relative_position_id = EUN_expand_iri
+		prerequisite = { focus = EUN_expand_iri }
+		available = { check_variable = { EUN_Economy_faction = 3 } }
+		completion_reward = {
+			159 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUN_offshore_oil_drilling
+		icon = GFX_goal_generic_oil_refinery
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_invest_aviation_industry
+		prerequisite = { focus = EUN_invest_aviation_industry }
+		prerequisite = { focus = EUN_foster_shipbuilding_industry }
+		available = { check_variable = { EUN_Economy_faction = 3 } }
+		completion_reward = {
+			117 = {
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+			}
+		}
+	}
+
+	# Convergence
+	focus = {
+		id = EUN_national_corporatism
+		icon = GFX_goal_generic_political_pressure
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = EUN_offshore_oil_drilling
+		prerequisite = { focus = EUN_modern_urban_planning focus = EUN_offshore_oil_drilling }
+		available = { check_variable = { EUN_Economy_faction = 3 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.05 } # Fixed: Penalty reduction is negative
+			add_to_variable = { EUN_eco_construction_bonus = 0.10 }
+			custom_effect_tooltip = EUN_eco_corporatism_bonus_tooltip
+		}
+	}
+
+	# --- Benelux Branch (Trade, Finance, Welfare) ---
+	focus = {
+		id = EUN_currency_reform
+		icon = GFX_goal_generic_trade
+		x = 9
+		y = 5
+		cost = 10
+		# No prerequisite
+		available = { check_variable = { EUN_Economy_faction = 4 } }
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	# Branch A: Free Trade & Finance (Left)
+	focus = {
+		id = EUN_abolish_tariffs
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = EUN_currency_reform
+		prerequisite = { focus = EUN_currency_reform }
+		available = { check_variable = { EUN_Economy_faction = 4 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.05 }
+			custom_effect_tooltip = EUN_eco_consumer_goods_bonus_05_tooltip
+		}
+	}
+	focus = {
+		id = EUN_deregulate_banks
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 2
+		cost = 10
+		relative_position_id = EUN_currency_reform
+		prerequisite = { focus = EUN_currency_reform }
+		available = { check_variable = { EUN_Economy_faction = 4 } }
+		completion_reward = {
+			add_political_power = 50
+			add_to_variable = { EUN_eco_construction_bonus = 0.05 }
+			custom_effect_tooltip = EUN_eco_construction_bonus_05_tooltip
+		}
+	}
+	focus = {
+		id = EUN_expand_antwerp_rotterdam
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_currency_reform
+		prerequisite = { focus = EUN_currency_reform }
+		available = { check_variable = { EUN_Economy_faction = 4 } }
+		completion_reward = {
+			7 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUN_peoples_bank
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_deregulate_banks
+		prerequisite = { focus = EUN_deregulate_banks }
+		prerequisite = { focus = EUN_abolish_tariffs }
+		available = { check_variable = { EUN_Economy_faction = 4 } }
+		completion_reward = {
+			7 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# Branch B: Welfare & Consumption (Right)
+	focus = {
+		id = EUN_relax_labor_laws
+		icon = GFX_goal_generic_production
+		x = -3
+		y = 1
+		cost = 10
+		relative_position_id = EUN_currency_reform
+		prerequisite = { focus = EUN_currency_reform }
+		available = { check_variable = { EUN_Economy_faction = 4 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_ic_bonus = 0.05 }
+			custom_effect_tooltip = EUN_eco_ic_bonus_05_tooltip
+		}
+	}
+	focus = {
+		id = EUN_guaranteed_minimum_wage
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_relax_labor_laws
+		prerequisite = { focus = EUN_relax_labor_laws }
+		available = { check_variable = { EUN_Economy_faction = 4 } }
+		completion_reward = {
+			add_stability = 0.05
+			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.03 } # Fixed: Penalty reduction is negative
+			custom_effect_tooltip = EUN_eco_consumer_goods_bonus_03_tooltip
+		}
+	}
+	focus = {
+		id = EUN_mass_consumption_society
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_currency_reform
+		prerequisite = { focus = EUN_currency_reform }
+		available = { check_variable = { EUN_Economy_faction = 4 } }
+		completion_reward = {
+			7 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EUN_social_security_network
+		icon = GFX_goal_generic_morale_bonus
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_guaranteed_minimum_wage
+		prerequisite = { focus = EUN_guaranteed_minimum_wage }
+		available = { check_variable = { EUN_Economy_faction = 4 } }
+		completion_reward = {
+			add_stability = 0.10
+			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.05 } # Fixed: Penalty reduction is negative
+			custom_effect_tooltip = EUN_eco_consumer_goods_bonus_05_tooltip
+		}
+	}
+
+	# Convergence
+	focus = {
+		id = EUN_red_marketism
+		icon = GFX_goal_generic_construction
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_social_security_network
+		prerequisite = { focus = EUN_peoples_bank focus = EUN_social_security_network }
+		available = { check_variable = { EUN_Economy_faction = 4 } }
+		completion_reward = {
+			add_to_variable = { EUN_eco_construction_bonus = 0.10 }
+			custom_effect_tooltip = EUN_eco_construction_bonus_10_tooltip
+		}
+	}
+
+	# -------------------------------------------------------------------------
+	# Fusion Branch (Tier 5) - Floating Islands
+	# -------------------------------------------------------------------------
+	# These NFs have NO prerequisites (no lines).
+	# They are available only when specific conditions are met.
+	# They are positioned below the main trees.
+
+	# French (Agriculture) + German (Synthetics) = Scientific Collectivization
+	focus = {
+		id = EUN_scientific_collectivization
+		icon = GFX_goal_generic_agriculture
+		x = -5
+		y = 3
+		cost = 10
+		relative_position_id = EUN_new_four_year_plan
+		available = {
+			has_completed_focus = EUN_breadbasket_of_europe
+			has_completed_focus = EUN_establish_revolutionary_institute
+		}
+		completion_reward = {
+			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.05 }
+			custom_effect_tooltip = EUN_eco_consumer_goods_bonus_05_tooltip
+		}
+	}
+
+	# Benelux (Finance) + Italian (Development) = State Capitalism
+	focus = {
+		id = EUN_state_capitalism
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 3
+		y = 0
+		cost = 10
+		relative_position_id = EUN_expand_iri
+		available = {
+			has_completed_focus = EUN_red_marketism
+			has_completed_focus = EUN_national_corporatism
+		}
+		completion_reward = {
+			add_to_variable = { EUN_eco_construction_bonus = 0.20 }
+			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.10 }
+			custom_effect_tooltip = EUN_eco_state_capitalism_bonus_tooltip
+		}
+	}
+
+	# French (Welfare) + Benelux (Welfare) = Universal Socialist Welfare
+	focus = {
+		id = EUN_universal_socialist_welfare
+		icon = GFX_goal_generic_socialist_science
+		x = 1
+		y = 4 # Centered low
+		cost = 10
+		relative_position_id = EUN_revolutionary_agriculture
+		available = {
+			has_completed_focus = EUN_veterans_pension
+			has_completed_focus = EUN_social_security_network
+		}
+		completion_reward = {
+			add_stability = 0.20
+			add_political_power = 200
+		}
+	}
+
+	# German (Industry) + Italian (Navy) = Total War Industrial Complex
+	focus = {
+		id = EUN_total_war_industrial_complex
+		icon = GFX_goal_generic_military_deal
+		x = 4
+		y = -1
+		cost = 10
+		relative_position_id = EUN_expand_iri
+		available = {
+			has_completed_focus = EUN_complete_four_year_plan
+			has_completed_focus = EUN_foster_shipbuilding_industry
+		}
+		completion_reward = {
+			add_to_variable = { EUN_eco_ic_bonus = 0.15 }
+			custom_effect_tooltip = EUN_eco_ic_bonus_15_tooltip
+		}
+	}
+
+}
+
