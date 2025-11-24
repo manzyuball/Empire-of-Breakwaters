@@ -22,7 +22,7 @@ focus_tree = {
 	# --- French Branch (Agriculture, Military, Welfare) ---
 	focus = {
 		id = EUN_revolutionary_agriculture
-		icon = GFX_goal_collective_farming
+		icon = GFX_focus_ITA_grande_rivolta_rurale
 		x = 3
 		y = 0
 		cost = 10
@@ -42,7 +42,7 @@ focus_tree = {
 	# Branch A: Agriculture (Left)
 	focus = {
 		id = EUN_rural_electrification
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_generic_electrification
 		x = -3
 		y = 1
 		cost = 10
@@ -56,7 +56,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_mechanized_collectivization
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_modernize_agriculture_2
 		x = 1
 		y = 1
 		cost = 10
@@ -89,7 +89,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_breadbasket_of_europe
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_generic_modernizing_agriculture
 		x = -2
 		y = 3
 		cost = 10
@@ -106,7 +106,7 @@ focus_tree = {
 	# Branch B: Military Welfare (Right)
 	focus = {
 		id = EUN_soldiers_bill_of_rights
-		icon = GFX_goal_generic_morale_bonus
+		icon = GFX_focus_PHI_bill_of_rights_for_veterans
 		x = 3
 		y = 1
 		cost = 10
@@ -119,7 +119,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_veterans_pension
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = -1
 		y = 1
 		cost = 10
@@ -134,7 +134,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_military_housing
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_low_cost_housing
 		x = -1
 		y = 1
 		cost = 10
@@ -148,7 +148,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_spirit_of_mass_conscription
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_focus_SOV_builder_of_the_red_army
 		x = 1
 		y = 1
 		cost = 10
@@ -179,7 +179,7 @@ focus_tree = {
 	# --- German Branch (Industry, Science, Planned Economy) ---
 	focus = {
 		id = EUN_new_four_year_plan
-		icon = GFX_goal_generic_production2
+		icon = GFX_goal_support_fourth_int
 		x = 10
 		y = 0
 		cost = 10
@@ -199,7 +199,7 @@ focus_tree = {
 	# Branch A: Heavy Industry (Left)
 	focus = {
 		id = EUN_build_combinats
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_soviet_construction
 		x = -2
 		y = 1
 		cost = 10
@@ -219,7 +219,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_mines_to_factories
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_generic_mineral_prospecting
 		x = -1
 		y = 1
 		cost = 10
@@ -289,7 +289,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_rubber_oil_autarky
-		icon = GFX_goal_generic_scientific_exchange
+		icon = GFX_focus_GER_autarky_achieved
 		x = -1
 		y = 1
 		cost = 10
@@ -307,7 +307,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_seize_kaiser_wilhelm_institute
-		icon = GFX_goal_generic_intelligence_exchange
+		icon = GFX_focus_NORDIC_com_capstone_research
 		x = 1
 		y = 1
 		cost = 10
@@ -321,7 +321,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_establish_revolutionary_institute
-		icon = GFX_goal_generic_nuclear
+		icon = GFX_focus_research
 		x = 1
 		y = 1
 		cost = 10
@@ -336,7 +336,7 @@ focus_tree = {
 	# Convergence
 	focus = {
 		id = EUN_heart_of_european_industry
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_usa_focus_on_europe
 		x = -1
 		y = 1
 		cost = 10
@@ -373,7 +373,7 @@ focus_tree = {
 	# Branch A: Infrastructure (Left)
 	focus = {
 		id = EUN_autostrada_network
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_generic_road_investment
 		x = -2
 		y = 1
 		cost = 10
@@ -387,7 +387,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_alpine_hydroelectric
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_focus_generic_build_dam
 		x = 0
 		y = 1
 		cost = 10
@@ -400,7 +400,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_southern_development_plan
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_ITA_southern_industry
 		x = -1
 		y = 2
 		cost = 10
@@ -419,7 +419,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_modern_urban_planning
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_PRC_bolshevik_urbanization_1
 		x = 0
 		y = 1
 		cost = 10
@@ -482,7 +482,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_offshore_oil_drilling
-		icon = GFX_goal_generic_oil_refinery
+		icon = GFX_focus_generic_offshore_oil_rig
 		x = 1
 		y = 1
 		cost = 10
@@ -499,7 +499,7 @@ focus_tree = {
 	# Convergence
 	focus = {
 		id = EUN_national_corporatism
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
 		x = -2
 		y = 1
 		cost = 10
@@ -516,7 +516,7 @@ focus_tree = {
 	# --- Benelux Branch (Trade, Finance, Welfare) ---
 	focus = {
 		id = EUN_currency_reform
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_generic_currency_reforms
 		x = 9
 		y = 5
 		cost = 10
@@ -537,7 +537,7 @@ focus_tree = {
 	# Branch A: Free Trade & Finance (Left)
 	focus = {
 		id = EUN_abolish_tariffs
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 2
 		cost = 10
@@ -551,7 +551,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_deregulate_banks
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_PER_national_bank
 		x = 2
 		y = 2
 		cost = 10
@@ -566,7 +566,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_expand_antwerp_rotterdam
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_hol_the_zuiderzee_works
 		x = 1
 		y = 1
 		cost = 10
@@ -586,7 +586,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_peoples_bank
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_generic_stockpile_currency
 		x = -1
 		y = 1
 		cost = 10
@@ -609,7 +609,7 @@ focus_tree = {
 	# Branch B: Welfare & Consumption (Right)
 	focus = {
 		id = EUN_relax_labor_laws
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_worker_administration
 		x = -3
 		y = 1
 		cost = 10
@@ -623,7 +623,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_guaranteed_minimum_wage
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_GER_customs_union
 		x = 1
 		y = 1
 		cost = 10
@@ -637,7 +637,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_mass_consumption_society
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_consumer_goods
 		x = -1
 		y = 1
 		cost = 10
@@ -661,7 +661,7 @@ focus_tree = {
 	# French (Agriculture) + German (Synthetics) = Scientific Collectivization
 	focus = {
 		id = EUN_scientific_collectivization
-		icon = GFX_goal_generic_agriculture
+		icon = GFX_focus_generic_socialist_science
 		x = -5
 		y = 3
 		cost = 10
@@ -680,7 +680,7 @@ focus_tree = {
 	# Benelux (Finance) + Italian (Development) = State Capitalism
 	focus = {
 		id = EUN_state_capitalism
-		icon = GFX_goal_generic_production2
+		icon = GFX_goal_generic_construction
 		x = 3
 		y = 0
 		cost = 10
@@ -699,7 +699,7 @@ focus_tree = {
 	# French (Welfare) + Benelux (Welfare) = Universal Socialist Welfare
 	focus = {
 		id = EUN_universal_socialist_welfare
-		icon = GFX_goal_generic_socialist_science
+		icon = GFX_focus_FIN_socialist_welfare
 		x = 1
 		y = 4 # Centered low
 		cost = 10
@@ -718,7 +718,7 @@ focus_tree = {
 	# German (Industry) + Italian (Navy) = Total War Industrial Complex
 	focus = {
 		id = EUN_total_war_industrial_complex
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_generic_reorient_production
 		x = 4
 		y = -1
 		cost = 10
@@ -740,7 +740,7 @@ focus_tree = {
 	# --- French Branch (Attack, Manpower, Speed) ---
 	focus = {
 		id = EUN_levee_en_masse
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_JAP_raise_the_red_flag_high
 		x = 14
 		y = 9
 		cost = 10
@@ -757,7 +757,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_revolutionary_elan
-		icon = GFX_goal_generic_cavalry
+		icon = GFX_focus_PRC_raid_weapon_depots
 		x = -2
 		y = 1
 		cost = 10
@@ -771,7 +771,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_export_revolution
-		icon = GFX_goal_support_communism
+		icon = GFX_focus_focus_fra_revolution_utmost
 		x = 0
 		y = 1
 		cost = 10
@@ -785,7 +785,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_napoleonic_spirit
-		icon = GFX_goal_anschluss
+		icon = GFX_focus_fra_le_deluge
 		x = 1
 		y = 1
 		cost = 10
@@ -800,7 +800,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_political_commissars
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_CHI_political_advisors_in_every_division
 		x = -3
 		y = 1
 		cost = 10
@@ -814,7 +814,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_mass_assault_doctrine
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_focus_SOV_builder_of_the_red_army
 		x = 0
 		y = 1
 		cost = 10
@@ -832,7 +832,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_grand_battery
-		icon = GFX_goal_generic_army_artillery
+		icon = GFX_goal_generic_army_artillery2
 		x = 1
 		y = 1
 		cost = 10
@@ -852,7 +852,7 @@ focus_tree = {
 	# --- German Branch (Armor, Hard Attack, Discipline) ---
 	focus = {
 		id = EUN_panzer_korps
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_generic_tank_assault
 		x = 18
 		y = 9
 		cost = 10
@@ -869,7 +869,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_prussian_discipline
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_focus_GER_prussian_legacy
 		x = -2
 		y = 1
 		cost = 10
@@ -884,7 +884,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_mechanized_offensive
-		icon = GFX_goal_generic_army_artillery
+		icon = GFX_focus_generic_mechanized
 		x = 0
 		y = 1
 		cost = 10
@@ -902,7 +902,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_chemical_warfare
-		icon = GFX_goal_generic_secret_weapon
+		icon = GFX_focus_RAJ_a_private_military
 		x = 1
 		y = 1
 		cost = 10
@@ -929,8 +929,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = EUN_rocket_artillery
-		icon = GFX_goal_generic_army_artillery
+		id = EUN_rocket
+		icon = GFX_focus_rocketry
 		x = -1
 		y = 1
 		cost = 10
@@ -948,7 +948,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_wunderwaffe_program
-		icon = GFX_focus_research
+		icon = GFX_focus_GER_wunderwaffe
 		x = 1
 		y = 2
 		cost = 10
@@ -968,7 +968,7 @@ focus_tree = {
 	# --- Italian Branch (Navy, Air, Carriers) ---
 	focus = {
 		id = EUN_mare_nostrum
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_focus_PER_the_peoples_navy
 		x = 26
 		y = 9
 		cost = 10
@@ -985,7 +985,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_knights_of_the_air
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_PER_the_peoples_airforce
 		x = -2
 		y = 1
 		cost = 10
@@ -999,7 +999,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_italian_air_superiority
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_generic_tank_air_support
 		x = 0
 		y = 2
 		cost = 10
@@ -1013,7 +1013,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_carrier_primacy
-		icon = GFX_goal_generic_navy_carrier
+		icon = GFX_focus_generic_air_carrier
 		x = 0
 		y = 1
 		cost = 10
@@ -1027,7 +1027,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_modern_regia_marina
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_focus_generic_large_navy
 		x = 2
 		y = 1
 		cost = 10
@@ -1041,7 +1041,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_naval_bombers
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_generic_multi_role_aircraft
 		x = 1
 		y = 1
 		cost = 10
@@ -1056,7 +1056,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_frogmen_units
-		icon = GFX_goal_generic_amphibious_assault
+		icon = GFX_focus_generic_naval_invasion
 		x = 1
 		y = 1
 		cost = 10
@@ -1074,7 +1074,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_littorio_class
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
 		x = -1
 		y = 1
 		cost = 10
@@ -1111,7 +1111,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_logistical_integration
-		icon = GFX_goal_generic_truck
+		icon = GFX_focus_SOV_the_road_of_life
 		x = -2
 		y = 1
 		cost = 10
@@ -1125,7 +1125,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_professional_peacekeepers
-		icon = GFX_goal_generic_small_army
+		icon = GFX_focus_BEL_v_for_victory
 		x = 1
 		y = 1
 		cost = 10
@@ -1159,7 +1159,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_international_arms_market
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_AUS_raid_military_storages
 		x = 1
 		y = 2
 		cost = 10
@@ -1172,7 +1172,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EUN_citizen_militia
-		icon = GFX_goal_generic_morale_bonus
+		icon = GFX_focus_ITA_peasants_rise
 		x = 0
 		y = 2
 		cost = 10
@@ -1193,7 +1193,7 @@ focus_tree = {
 	
 	focus = {
 		id = EUN_first_congress
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_generic_soviet_politics
 		x = 21
 		y = 0
 		cost = 10
@@ -1205,7 +1205,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_second_congress
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_generic_soviet_politics
 		x = 0
 		y = 3
 		cost = 10
@@ -1223,7 +1223,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_third_congress
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_generic_soviet_politics
 		x = 0
 		y = 2
 		cost = 10
@@ -1241,7 +1241,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_total_mobilization
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_limited_social_mobilization
 		x = -2
 		y = 1
 		cost = 10
@@ -1283,7 +1283,7 @@ focus_tree = {
 	# Swiss Route (German/Benelux PM)
 	focus = {
 		id = EUN_swiss_route
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_attack_switzerland
 		x = -2
 		y = 1
 		cost = 10
@@ -1310,7 +1310,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_swiss_gold
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = -1
 		y = 1
 		cost = 10
@@ -1326,7 +1326,7 @@ focus_tree = {
 	# Algeria Route (French/Italian PM)
 	focus = {
 		id = EUN_algeria_route
-		icon = GFX_goal_generic_amphibious_assault
+		icon = GFX_focus_generic_africa_naval
 		x = 0
 		y = 1
 		cost = 10
@@ -1353,10 +1353,13 @@ focus_tree = {
 
 	focus = {
 		id = EUN_african_labor
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_CZE_german_puppet
 		x = 1
 		y = 1
 		cost = 10
+		mutually_exclusive = {
+			focus = EUN_colonial_route
+		}
 		relative_position_id = EUN_algeria_route
 		prerequisite = { focus = EUN_algeria_route }
 		completion_reward = {
@@ -1369,10 +1372,13 @@ focus_tree = {
 	# Colonial Route (Benelux/Italian PM)
 	focus = {
 		id = EUN_colonial_route
-		icon = GFX_goal_generic_colonialism
+		icon = GFX_focus_BRA_reach_out_to_military_dem
 		x = -1
 		y = 1
 		cost = 10
+		mutually_exclusive = {
+			focus = EUN_african_labor
+		}
 		relative_position_id = EUN_algeria_route
 		prerequisite = { focus = EUN_algeria_route }
 		available = {
@@ -1398,7 +1404,7 @@ focus_tree = {
 	# Spain Routes (Split: French vs Others)
 	focus = {
 		id = EUN_spain_french
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_intervention_spain_republic
 		x = -1
 		y = 1
 		cost = 10
@@ -1422,7 +1428,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_spain_other
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_generic_attack_republican_spain
 		x = -3
 		y = 1
 		cost = 10
@@ -1455,7 +1461,7 @@ focus_tree = {
 	# Secret Police Route (German/French Interior)
 	focus = {
 		id = EUN_secret_police_route
-		icon = GFX_goal_generic_secret_weapon
+		icon = GFX_focus_SOV_penal_battalions
 		x = 1
 		y = 1
 		cost = 10
@@ -1482,7 +1488,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_secret_intelligence
-		icon = GFX_goal_generic_intelligence_exchange
+		icon = GFX_focus_generic_secret_service_agency
 		x = 0
 		y = 1
 		cost = 10
@@ -1499,7 +1505,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_purge
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_GER_end_european_communism
 		x = 1
 		y = 1
 		cost = 10
@@ -1518,7 +1524,7 @@ focus_tree = {
 	# Freedom Route (Benelux/Italian Interior)
 	focus = {
 		id = EUN_freedom_route
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_support_democracy
 		x = 3
 		y = 1
 		cost = 10		
@@ -1545,7 +1551,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_risorgimento
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_ITA_peasants_rise
 		x = -7
 		y = 1
 		cost = 10
@@ -1563,7 +1569,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_german_friendship
-		icon = GFX_goal_molotov_ribbentrop_pact
+		icon = GFX_focus_GER_subdue_the_wehrmacht
 		x = 0
 		y = 1
 		cost = 10
@@ -1579,7 +1585,7 @@ focus_tree = {
 	# Bureaucracy Route (Benelux Interior)
 	focus = {
 		id = EUN_bureaucracy_route
-		icon = GFX_goal_generic_small_army
+		icon = GFX_focus_AFG_promote_the_counter_elite
 		x = -1
 		y = 1
 		cost = 10
@@ -1600,7 +1606,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_election_system
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_election
 		x = 3
 		y = 1
 		cost = 10
@@ -1618,7 +1624,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_consensus_formation
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_generic_military_academy
 		x = -1
 		y = 1
 		cost = 10
@@ -1648,7 +1654,7 @@ focus_tree = {
 	# Iron and Blood Route (German/Benelux)
 	focus = {
 		id = EUN_iron_blood_route
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_GER_subdue_the_wehrmacht
 		x = -5
 		y = 1
 		cost = 10
@@ -1675,7 +1681,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_nordic_diplomacy
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_focus_generic_nordic_territory
 		x = 2
 		y = 1
 		cost = 10
@@ -1697,7 +1703,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_abandon_italy
-		icon = GFX_goal_generic_bad_relations
+		icon = GFX_focus_ITA_peasants_rise
 		x = 0
 		y = 1
 		cost = 10
@@ -1720,7 +1726,7 @@ focus_tree = {
 	# --- Final Integration Routes ---
 	focus = {
 		id = EUN_Revolution_demagogue
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		x = 1
 		y = 1
 		cost = 10
@@ -1734,7 +1740,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_regularize_parliament
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_PRC_rebuild_28_bolshevik
 		x = 4
 		y = 1
 		cost = 10
@@ -1749,7 +1755,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_true_union
-		icon = GFX_goal_generic_allies
+		icon = GFX_focus_generic_the_council_of_europe
 		x = 3
 		y = 1
 		cost = 10
@@ -1774,7 +1780,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_allocation
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
 		x = 1
 		y = 1
 		cost = 10
@@ -1789,7 +1795,7 @@ focus_tree = {
 	}
 		focus = {
 		id = EUN_euro_division
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_generic_democratic_europe
 		x = -1
 		y = 1
 		cost = 10
@@ -1807,7 +1813,7 @@ focus_tree = {
 	# Faction Finals
 	focus = {
 		id = EUN_final_fra
-		icon = GFX_goal_generic_revolution
+		icon = GFX_focus_ger_great_red_menace
 		x = -5
 		y = 1
 		cost = 10
@@ -1832,7 +1838,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_final_ger
-		icon = GFX_goal_generic_military_deal
+		icon = GFX_focus_GER_autarky_ambitions
 		x = -1
 		y = 1
 		cost = 10
@@ -1857,7 +1863,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_final_ita
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_ITA_mare_nostrum
 		x = -3
 		y = 1
 		cost = 10
@@ -1882,7 +1888,7 @@ focus_tree = {
 
 	focus = {
 		id = EUN_final_ben
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_PRC_urbanization_two
 		x = 1
 		y = 1
 		cost = 10

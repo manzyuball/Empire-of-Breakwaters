@@ -93,33 +93,33 @@
  EUN_chemical_fertilizers:0 "化学肥料の導入"
  EUN_breadbasket_of_europe:0 "欧州のパン籠"
  
- EUN_soldiers_bill_of_rights:0 "兵士の権利章典"
+ EUN_soldiers_bill_of_rights:0 "兵士の権利"
  EUN_veterans_pension:0 "退役軍人年金"
- EUN_military_housing:0 "軍事住宅の建設"
- EUN_spirit_of_mass_conscription:0 "国民皆兵の精神"
+ EUN_military_housing:0 "軍事住宅"
+ EUN_spirit_of_mass_conscription:0 "国民皆兵"
  EUN_military_society:0 "軍事社会"
 
  # German Branch
  EUN_new_four_year_plan:0 "新四ヵ年計画"
- EUN_build_combinats:0 "コンビナートの建設"
+ EUN_build_combinats:0 "コンビナート"
  EUN_mines_to_factories:0 "鉱山から工場へ"
  EUN_expand_military_industry:0 "軍需産業の拡大"
- EUN_complete_four_year_plan:0 "四カ年計画の完遂"
+ EUN_complete_four_year_plan:0 "四ヵ年計画の完遂"
  
  EUN_synthetic_fuel_lab:0 "合成燃料研究所"
- EUN_rubber_oil_autarky:0 "ゴム・石油の自給"
- EUN_seize_kaiser_wilhelm_institute:0 "カイザー・ヴィルヘルム研究所の接収"
- EUN_establish_revolutionary_institute:0 "革命的研究所の設立"
+ EUN_rubber_oil_autarky:0 "ゴム・石油自給"
+ EUN_seize_kaiser_wilhelm_institute:0 "研究所の設立"
+ EUN_establish_revolutionary_institute:0 "研究への注力"
  EUN_heart_of_european_industry:0 "欧州産業の心臓部"
 
  # Italian Branch
  EUN_expand_iri:0 "IRIの拡大"
- EUN_autostrada_network:0 "アウトストラーダ網"
+ EUN_autostrada_network:0 "アウトストラーダ"
  EUN_alpine_hydroelectric:0 "アルプス水力発電"
  EUN_southern_development_plan:0 "南部開発計画"
  EUN_modern_urban_planning:0 "近代都市計画"
  
- EUN_mediterranean_shipbuilding:0 "地中海造船計画"
+ EUN_mediterranean_shipbuilding:0 "地中海の造船業"
  EUN_foster_shipbuilding_industry:0 "造船業の育成"
  EUN_invest_aviation_industry:0 "航空産業への投資"
  EUN_offshore_oil_drilling:0 "海上油田の掘削計画"
@@ -129,13 +129,13 @@
  EUN_currency_reform:0 "通貨改革の断行"
  EUN_abolish_tariffs:0 "関税障壁の撤廃"
  EUN_deregulate_banks:0 "銀行規制の緩和"
- EUN_expand_antwerp_rotterdam:0 "アントワープ・ロッテルダム港湾拡張"
+ EUN_expand_antwerp_rotterdam:0 "ゾイデル海開発計画"
  EUN_peoples_bank:0 "人民銀行"
  
  EUN_relax_labor_laws:0 "労働時間規制の緩和"
  EUN_guaranteed_minimum_wage:0 "最低賃金の保障"
  EUN_mass_consumption_society:0 "大衆消費社会"
- EUN_social_security_network:0 "社会保障ネットワーク"
+ EUN_social_security_network:0 "社会保障の拡大"
  EUN_red_marketism:0 "赤い市場主義"
 
  # Fusion Branch
@@ -312,135 +312,26 @@
  EUN_political_commissars_desc:0 "各部隊に政治委員を派遣し、思想教育を徹底することで兵士の回復力を高める。"
  EUN_mass_assault_doctrine:0 "人海戦術ドクトリン"
  EUN_mass_assault_doctrine_desc:0 "圧倒的な人的資源を背景に、波状攻撃で敵を押し潰す戦術を採用する。"
- EUN_grand_battery:0 "グラン・バッテリー"
+ EUN_grand_battery:0 "野砲集中運用"
  EUN_grand_battery_desc:0 "ナポレオン時代の砲兵運用を現代に蘇らせ、集中砲火で敵陣地を粉砕する。"
  
  EUN_stormtrooper_tactics:0 "突撃歩兵戦術"
  EUN_stormtrooper_tactics_desc:0 "精鋭歩兵による浸透戦術を確立し、敵前線の突破能力を向上させる。"
- EUN_rocket_artillery:0 "ロケット砲兵"
- EUN_rocket_artillery_desc:0 "「カチューシャ」を超える破壊力を持つ多連装ロケット砲を開発・配備する。"
+ EUN_rocket:0 "ロケット"
+ EUN_rocket_desc:0 ""
  EUN_wunderwaffe_program:0 "驚異の兵器計画"
  EUN_wunderwaffe_program_desc:0 "戦局を一変させる可能性を秘めた、極秘の兵器開発プロジェクトを推進する。"
  
  EUN_naval_bombers:0 "雷撃機の量産"
  EUN_naval_bombers_desc:0 "敵艦隊を空から殲滅するため、高性能な雷撃機を大量に配備する。"
- EUN_frogmen_units:0 "フロッグマン部隊"
+ EUN_frogmen_units:0 "上陸部隊研究"
  EUN_frogmen_units_desc:0 "水中工作部隊を編成し、敵港湾への潜入破壊工作を行う。"
- EUN_littorio_class:0 "リットリオ級戦艦"
+ EUN_littorio_class:0 "赤色弩級巨砲艦隊"
  EUN_littorio_class_desc:0 "地中海の覇権を確実にするため、超弩級戦艦の建造技術を確立する。"
  EUN_citizen_militia:0 "市民民兵"
   # Political Branch
  EUN_political_modifier:0 "欧州連合の政治"
  
- # Roots
- EUN_pol_fra_pm:0 "革命的祖国"
- EUN_pol_fra_pm_desc:0 "フランス派閥（革命委員会）が議長席に座る今、欧州連合は「革命の輸出」を最優先事項とする。"
- EUN_pol_fra_int:0 "公安委員会"
- EUN_pol_fra_int_desc:0 "内務省に公安委員会を設置し、反革命分子を徹底的に摘発する。"
- 
- EUN_pol_ger_pm:0 "鉄の意志"
- EUN_pol_ger_pm_desc:0 "ドイツ派閥（解放戦線）の指導の下、欧州連合は失われた領土の奪還へと邁進する。"
- EUN_pol_ger_int:0 "秩序警察"
- EUN_pol_ger_int_desc:0 "科学的な警察機構を整備し、社会の隅々まで監視の目を光らせる。"
- 
- EUN_pol_ita_pm:0 "未来への跳躍"
- EUN_pol_ita_pm_desc:0 "イタリア派閥（未来派）は、地中海を「我らが海」とするための大胆な行動を開始する。"
- EUN_pol_ita_int:0 "党の指導"
- EUN_pol_ita_int_desc:0 "党組織を社会のあらゆる階層に浸透させ、国民を一つの意思に統合する。"
- 
- EUN_pol_ben_pm:0 "繁栄の約束"
- EUN_pol_ben_pm_desc:0 "ベネルクス派閥（協同組合連合）は、平和と貿易による繁栄こそが欧州の道であると説く。"
- EUN_pol_ben_int:0 "議会運営"
- EUN_pol_ben_int_desc:0 "連邦議会の機能を強化し、民主的なプロセスによる合意形成を重視する。"
-
- # Cross Links
- EUN_pol_link_fra_ita:0 "ラテン姉妹共和国"
- EUN_pol_link_fra_ita_desc:0 "革命的ロマン主義を共有する仏伊両派閥が協力し、情熱的な動員体制を築く。"
- EUN_pol_link_ben_ger:0 "ラインラント協定"
- EUN_pol_link_ben_ger_desc:0 "独ベネルクス両派閥の実利的な協力により、ライン川流域の産業潜在力を最大化する。"
- EUN_pol_link_fra_ger:0 "大陸軍事同盟"
- EUN_pol_link_fra_ger_desc:0 "かつての宿敵が手を結び、世界最強の陸軍を建設するための共同戦線を張る。"
- EUN_pol_link_ita_ben:0 "交易と文化のルネサンス"
- EUN_pol_link_ita_ben_desc:0 "地中海と北海の商業網を結合し、文化と富の交流を促進する。"
- EUN_pol_link_fra_ben:0 "社会主義的連帯"
- EUN_pol_link_fra_ben_desc:0 "労働者の権利と福祉を重視する両派閥が協力し、社会の安定を図る。"
- EUN_pol_link_ger_ita:0 "鋼鉄の枢軸"
- EUN_pol_link_ger_ita_desc:0 "重工業と航空産業に強みを持つ両派閥が連携し、軍事技術の革新を進める。"
-
- # Chaos & Synergy
- EUN_pol_chaos_purge:0 "終わりのない粛清"
- EUN_pol_chaos_purge_desc:0 "革命的指導部と保守的官僚機構の対立は、血で血を洗う粛清劇へと発展した。"
- EUN_pol_chaos_compromise:0 "議会での握手"
- EUN_pol_chaos_compromise_desc:0 "対立する派閥が議会で劇的な和解を果たし、政治的安定がもたらされる。"
- EUN_pol_syn_total_control:0 "鉄と血の統制"
- EUN_pol_syn_total_control_desc:0 "権威主義的な両派閥の結合により、国家は完全な統制下に置かれる。"
- EUN_pol_syn_golden_age:0 "黄金の時代"
- EUN_pol_syn_golden_age_desc:0 "実利主義的な両派閥の協力により、欧州はかつてない繁栄の時代を迎える。"
-
- # Extended Chains - French
- EUN_pol_fra_exp_1:0 "革命的祖国の防衛"
- EUN_pol_fra_exp_1_desc:0 "「祖国は危機にあり！」全欧州を要塞化し、反革命の波を防ぐ。"
- EUN_pol_fra_exp_2:0 "革命軍の再編"
- EUN_pol_fra_exp_2_desc:0 "軍を機動力重視の攻撃型組織へと再編する。"
- EUN_pol_fra_exp_3:0 "全欧州への最後通牒"
- EUN_pol_fra_exp_3_desc:0 "欧州の全ての君主と独裁者に対し、即時退陣を要求する。"
- EUN_pol_fra_exp_4:0 "国境紛争の激化"
- EUN_pol_fra_exp_4_desc:0 "国境地帯での挑発行為を繰り返し、開戦の口実を作る。"
- EUN_pol_fra_exp_5:0 "総力戦宣言"
- EUN_pol_fra_exp_5_desc:0 "「平和か、それとも破滅か」。我々は戦うことを選ぶ。"
- EUN_pol_fra_exp_6:0 "反動勢力の処刑"
- EUN_pol_fra_exp_6_desc:0 "占領地の旧支配層を断頭台に送り、恐怖による統治を確立する。"
- EUN_pol_fra_final:0 "欧州合衆国宣言"
- EUN_pol_fra_final_desc:0 "今や欧州は一つとなった。国境線は消滅し、単一の革命国家が誕生する。"
-
- # Extended Chains - German
- EUN_pol_ger_exp_1:0 "プロイセンの遺産"
- EUN_pol_ger_exp_1_desc:0 "プロイセン軍の伝統を復活させ、軍の規律を正す。"
- EUN_pol_ger_exp_2:0 "参謀本部の復活"
- EUN_pol_ger_exp_2_desc:0 "大参謀本部を再建し、緻密な作戦計画を立案させる。"
- EUN_pol_ger_exp_3:0 "電撃戦ドクトリン"
- EUN_pol_ger_exp_3_desc:0 "戦車と航空機を集中運用し、敵を一撃で粉砕する。"
- EUN_pol_ger_exp_4:0 "オーストリア併合計画"
- EUN_pol_ger_exp_4_desc:0 "ドイツ民族の統合は歴史的必然である。"
- EUN_pol_ger_exp_5:0 "北欧への橋頭堡"
- EUN_pol_ger_exp_5_desc:0 "北方の側面を確保するため、スカンジナビアへの進出を画策する。"
- EUN_pol_ger_exp_6:0 "東方生存圏の宣言"
- EUN_pol_ger_exp_6_desc:0 "東方の広大な大地こそが、我々の生存圏である。"
- EUN_pol_ger_final:0 "ゲルマン帝国の再興"
- EUN_pol_ger_final_desc:0 "バルバロッサ作戦の発動。東方への聖戦が始まる。"
-
- # Extended Chains - Italian
- EUN_pol_ita_exp_1:0 "黒シャツ隊の動員"
- EUN_pol_ita_exp_1_desc:0 "党の私兵組織を正規軍に編入し、兵力を増強する。"
- EUN_pol_ita_exp_2:0 "地中海艦隊の増強"
- EUN_pol_ita_exp_2_desc:0 "地中海を制圧するための強力な艦隊を建設する。"
- EUN_pol_ita_exp_3:0 "空の支配者"
- EUN_pol_ita_exp_3_desc:0 "空軍力を強化し、地中海上空の制空権を確保する。"
- EUN_pol_ita_exp_4:0 "南部解放戦争"
- EUN_pol_ita_exp_4_desc:0 "南イタリアを支配する反動勢力を一掃し、半島を統一する。"
- EUN_pol_ita_exp_5:0 "バルカン半島への野心"
- EUN_pol_ita_exp_5_desc:0 "アドリア海の対岸、バルカン半島への影響力を拡大する。"
- EUN_pol_ita_exp_6:0 "スエズ・ジブラルタル奪還"
- EUN_pol_ita_exp_6_desc:0 "地中海の出入り口を封鎖し、内海化を完成させる。"
- EUN_pol_ita_final:0 "マレ・ノストラム"
- EUN_pol_ita_final_desc:0 "ローマ帝国の栄光が蘇る。地中海は我々の海だ。"
-
- # Extended Chains - Benelux
- EUN_pol_ben_exp_1:0 "金融センターの設立"
- EUN_pol_ben_exp_1_desc:0 "欧州の金融ハブを整備し、資本の流れを支配する。"
- EUN_pol_ben_exp_2:0 "外交攻勢"
- EUN_pol_ben_exp_2_desc:0 "平和的な外交手段により、周辺国との関係を強化する。"
- EUN_pol_ben_exp_3:0 "欧州経済共同体"
- EUN_pol_ben_exp_3_desc:0 "経済的な相互依存関係を深め、戦争を不可能にする。"
- EUN_pol_ben_exp_4:0 "経済的従属"
- EUN_pol_ben_exp_4_desc:0 "借款と投資を通じて、周辺国を経済的に従属させる。"
- EUN_pol_ben_exp_5:0 "汎欧州防衛軍"
- EUN_pol_ben_exp_5_desc:0 "各国の軍隊を統合し、共通の防衛機構を創設する。"
- EUN_pol_ben_exp_6:0 "連邦議会の権限強化"
- EUN_pol_ben_exp_6_desc:0 "国家主権を制限し、連邦政府の権限を強化する。"
- EUN_pol_ben_final:0 "パックス・エウロパ"
- EUN_pol_ben_final_desc:0 "欧州に恒久的な平和と繁栄がもたらされた。"
-
  # Tooltips
  EUN_pol_fra_pm_tooltip:0 "§G欧州連合の政治§!: 戦争協力度 §G+5%§!, 正当化時間 §G-10%§!"
  EUN_pol_fra_int_tooltip:0 "§G欧州連合の政治§!: 政治力獲得 §G+10%§!, 安定度 §R-5%§!"
@@ -516,25 +407,22 @@
  EUN_foreign_expedition:0 "外征"
  EUN_foreign_expedition_desc:0 "連合の革命理念を欧州全土に広めるため、対外遠征を計画する。周辺諸国への影響力拡大と領土拡張を通じて、欧州連合の勢力圏を確立する。議長が主導する外交・軍事政策の始まりである。"
  
- EUN_domestic_affairs:0 "内政"
- EUN_domestic_affairs_desc:0 "連合の内部統治を強化し、国内の安定と発展を図る。内務大臣の指導の下、社会秩序の維持、行政改革、市民生活の向上に取り組む。強固な内政基盤なくして、対外膨張は不可能である。"
-
  # 外征ルート
- EUN_swiss_route:0 "スイス統制"
+ EUN_swiss_route:0 "スイス侵攻"
  EUN_swiss_route_desc:0 "ドイツ・ベネルクス派閥の協力により、アルプスの要塞国家スイスへの圧力を強める。何世紀にもわたって維持されてきた武装中立を終わらせ、欧州連合の影響下に置く。スイスの戦略的価値と経済力は、連合に大きな利益をもたらすだろう。"
  
  EUN_swiss_gold:0 "スイスの金準備"
  EUN_swiss_gold_desc:0 "スイス銀行が保有する莫大な金準備と金融資産を接収する。これにより連合の経済基盤は飛躍的に強化され、消費財生産への圧力が緩和される。中立国の富が、革命の大義のために活用される。"
  EUN_swiss_gold_tooltip:0 "スイスの金融資産を連合経済に統合し、工業力を強化する。"
  
- EUN_algeria_route:0 "アルジェリア統制"
- EUN_algeria_route_desc:0 "フランス・イタリア派閥の主導により、地中海を越えて北アフリカへの影響力を拡大する。アルジェリアを中心とした北アフリカ植民地の統制を強化し、豊富な資源と労働力を連合の戦争遂行能力向上に活用する。地中海は我らの海となる。"
+ EUN_algeria_route:0 "アルジェリア侵攻"
+ EUN_algeria_route_desc:0 "フランス・イタリア派閥の主導により、地中海を越えて北アフリカへの影響力を拡大する。アルジェリアを中心とした北アフリカ植民地の侵攻を強化し、豊富な資源と労働力を連合の戦争遂行能力向上に活用する。地中海は我らの海となる。"
  
- EUN_african_labor:0 "アフリカの労働力"
+ EUN_african_labor:0 "労働力の輸入"
  EUN_african_labor_desc:0 "北アフリカから大量の労働力を動員し、連合の工業生産を増強する。アルジェリア、チュニジア、モロッコの人的資源が、欧州の工場と農場を支える。帝国主義的搾取ではなく、革命的連帯による協力である―少なくとも表向きは。"
  EUN_african_labor_tooltip:0 "北アフリカから100,000人の労働力を徴用し、工業生産を向上させる。"
  
- EUN_colonial_route:0 "植民地統制"
+ EUN_colonial_route:0 "植民地の統合"
  EUN_colonial_route_desc:0 "ベネルクス・イタリア派閥の協力により、散在する植民地を効率的に再編成する。オランダ領東インド、ベルギー領コンゴ、イタリア領東アフリカなど、広大な植民地帝国を統合管理し、資源採掘と工業化を推進する。植民地は連合の生命線である。"
  
  EUN_spain_french:0 "スペインへの平和的浸透"
@@ -547,7 +435,7 @@
  EUN_secret_police_route:0 "秘密警察の創設"
  EUN_secret_police_route_desc:0 "ドイツ・フランス派閥が主導し、連合全土に張り巡らされた強力な秘密警察機構を創設する。反革命分子の監視、思想統制、政治的粛清を通じて、体制の安定を確保する。自由の代償として、秩序と安全が保証される。"
  
- EUN_secret_intelligence:0 "諜報網の拡大"
+ EUN_secret_intelligence:0 "諜報部門の創設"
  EUN_secret_intelligence_desc:0 "秘密警察の情報収集能力を強化し、国内外の敵対勢力を徹底的に監視する。スパイ網を各国に展開し、外国政府の動向を把握する。情報こそが現代戦の鍵である。"
  
  EUN_purge:0 "大粛清"
@@ -556,14 +444,12 @@
  EUN_freedom_route:0 "自由の保証"
  EUN_freedom_route_desc:0 "ベネルクス・イタリア派閥の理念に基づき、市民の自由と基本的人権を憲法で保証する。言論の自由、集会の自由、法の下の平等を確立し、より民主的な連合を築く。革命は圧政からの解放でなければならない。"
  
- EUN_self_defense:0 "市民自衛権の確立"
- EUN_self_defense_desc:0 "市民の自衛権を法的に認め、民兵制度を整備する。武装した市民こそが自由の守護者であり、外敵と内部の圧政に対する最後の防波堤となる。スイス式の市民武装モデルを連合全体に適用する。"
  
- EUN_risorgimento:0 "第二のリソルジメント"
+ EUN_risorgimento:0 "第二次リソルジメント"
  EUN_risorgimento_desc:0 "19世紀のイタリア統一運動「リソルジメント」の理念を蘇らせ、欧州統合の精神的支柱とする。分断された欧州諸国を一つの国家へと統合する―それは新たなローマ帝国の建設に他ならない。イタリアの夢が欧州全土に広がる。"
  
- EUN_german_friendship:0 "独伊協調"
- EUN_german_friendship_desc:0 "イタリアとドイツの伝統的な友好関係を深化させる。両国の協力こそが欧州連合の中核であり、この絆を強化することで連合全体の結束を固める。アルプスを挟んで手を取り合う二つの大国。"
+ EUN_german_friendship:0 "東部の解放"
+ EUN_german_friendship_desc:0 "ドイツを解放する。"
  
  EUN_bureaucracy_route:0 "官僚機構改革"
  EUN_bureaucracy_route_desc:0 "ベネルクス派閥の得意とする効率的な行政システムを連合全体に導入する。煩雑な手続きを簡素化し、腐敗を排除し、能力主義に基づく公務員制度を確立する。小国オランダ・ベルギーの統治ノウハウが、大帝国の運営に活かされる。"
@@ -604,17 +490,17 @@
  EUN_euro_division_desc:0 "選挙区を既存の支配派閥に有利に設定し、権力構造を固定化する。ゲリマンダリングの手法で新参者の政治的影響力を抑制し、創設国の優位性を永続化させる。民主主義の外見を保ちつつ、実質的支配を維持する。"
 
  # 陣営最終勝利
- EUN_final_fra:0 "フランスの覇権"
- EUN_final_fra_desc:0 "革命の発祥地フランスが欧州連合の唯一無二の指導者となる。自由・平等・博愛の理念の下、フランス文化とフランス語が欧州全土を覆う。ナポレオンの夢が、ついに実現する。"
+ EUN_final_fra:0 "全世界革命戦争"
+ EUN_final_fra_desc:0 "全世界革命戦争。"
  
- EUN_final_ger:0 "ドイツの覇権"
- EUN_final_ger_desc:0 "ドイツの規律、効率性、組織力が欧州を秩序づける。プロイセン的軍国主義と技術革新の精神が連合を支配し、ドイツ語圏の文化が大陸全体に広がる。第一次大戦の敗北を、革命によって雪ぐ。"
+ EUN_final_ger:0 "自給自足の為の統制"
+ EUN_final_ger_desc:0 "自給自足の為の統制。"
  
- EUN_final_ita:0 "イタリアの覇権"
- EUN_final_ita_desc:0 "ローマの栄光が現代に蘇る。地中海世界の盟主イタリアが、古代ローマ帝国の後継者として欧州を統治する。カエサルとアウグストゥスの継承者たちが、再び世界の中心に立つ。"
+ EUN_final_ita:0 "赤きローマ"
+ EUN_final_ita_desc:0 ""
  
- EUN_final_ben:0 "ベネルクスの覇権"
- EUN_final_ben_desc:0 "小国ベネルクスの商才、外交手腕、民主的叡智が欧州に繁栄をもたらす。大国の軍事力ではなく、小国の知恵と経済力が世界を動かす。オランダ黄金時代の再来である。"
+ EUN_final_ben:0 "平和と発展の赤い楽園"
+ EUN_final_ben_desc:0 "平和と発展の赤い楽園。"
 
  # Tooltips (Checks)
  EUN_pm_faction_check:0 "§Y議長派閥が存在する§!"
