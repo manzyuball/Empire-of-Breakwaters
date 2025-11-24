@@ -59,3 +59,27 @@ EUN_factionalism_modifier = {
 	stability_factor = var:EUN_factionalism_stability_penalty
 	war_support_factor = var:EUN_factionalism_ws_penalty
 }
+
+EUN_political_modifier = {
+	icon = GFX_idea_generic_political_pressure
+	enable = { always = yes }
+	
+	political_power_gain = var:EUN_pol_pp_gain
+	stability_factor = var:EUN_pol_stability
+	war_support_factor = var:EUN_pol_war_support
+	justify_war_goal_time = var:EUN_pol_justify_war_goal_time
+	research_speed_factor = var:EUN_pol_research_speed
+	trade_opinion_factor = var:EUN_pol_trade_opinion
+	
+	# French Faction Specifics
+	army_core_attack_factor = var:EUN_pol_core_attack
+	
+	# German Faction Specifics
+	planning_speed = var:EUN_pol_planning_speed
+	
+	# Italian Faction Specifics
+	navy_max_range_factor = var:EUN_pol_navy_range
+	
+	# Benelux Faction Specifics
+	political_power_cost = var:EUN_pol_pp_cost
+}

@@ -15,22 +15,6 @@ focus_tree = {
 		y = 1350
 	}
 	# -------------------------------------------------------------------------
-	# Root: First Party CongressEUN_eco_weekly_stability
-	# -------------------------------------------------------------------------
-	focus = {
-		id = EUN_first_party_congress
-		icon = GFX_goal_generic_political_pressure
-		x = 15
-		y = 0
-		cost = 1.0 # Very fast (7 days)
-		
-		completion_reward = {
-			country_event = EUN_politics.1
-			add_political_power = 50
-		}
-	}
-
-	# -------------------------------------------------------------------------
 	# Economic Branch (Depends on Economy Minister Faction)
 	# -------------------------------------------------------------------------
 
@@ -793,8 +777,8 @@ focus_tree = {
 	focus = {
 		id = EUN_levee_en_masse
 		icon = GFX_goal_generic_major_war
-		x = 3
-		y = 14
+		x = 14
+		y = 9
 		cost = 10
 		available = {
 			custom_trigger_tooltip = {
@@ -905,8 +889,8 @@ focus_tree = {
 	focus = {
 		id = EUN_panzer_korps
 		icon = GFX_goal_generic_army_tanks
-		x = 7
-		y = 14
+		x = 18
+		y = 9
 		cost = 10
 		available = {
 			custom_trigger_tooltip = {
@@ -1021,8 +1005,8 @@ focus_tree = {
 	focus = {
 		id = EUN_mare_nostrum
 		icon = GFX_goal_generic_navy_battleship
-		x = 15
-		y = 14
+		x = 26
+		y = 9
 		cost = 10
 		available = {
 			custom_trigger_tooltip = {
@@ -1147,8 +1131,8 @@ focus_tree = {
 	focus = {
 		id = EUN_defensive_posture
 		icon = GFX_goal_generic_defence
-		x = 11
-		y = 14
+		x = 22
+		y = 9
 		cost = 10
 		available = {
 			custom_trigger_tooltip = {
@@ -1237,5 +1221,671 @@ focus_tree = {
 		}
 	}
 
+	# -------------------------------------------------------------------------
+	# Political Branch (Party Congress System)
+	# -------------------------------------------------------------------------
+
+	# --- Root: Three Party Congresses + Total Mobilization ---
+	
+	focus = {
+		id = EUN_first_congress
+		icon = GFX_goal_generic_political_pressure
+		x = 21
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = EUN_second_congress
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 3
+		cost = 10
+		relative_position_id = EUN_first_congress
+		prerequisite = { focus = EUN_first_congress }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = EUN_third_congress
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = EUN_second_congress
+		prerequisite = { focus = EUN_second_congress }
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = EUN_total_mobilization
+		icon = GFX_goal_generic_national_unity
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = EUN_third_congress
+		prerequisite = { focus = EUN_third_congress }
+		completion_reward = {
+			add_political_power = 200
+			add_war_support = 0.1
+		}
+	}
+
+	# --- Tier 1: Foreign vs Domestic ---
+
+	focus = {
+		id = EUN_foreign_expedition
+		icon = GFX_goal_generic_major_war
+		x = -3
+		y = 1
+		cost = 10
+		relative_position_id = EUN_first_congress
+		prerequisite = { focus = EUN_first_congress }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_pm_faction_check
+				has_variable = EUN_PM_faction
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+
+	# --- Foreign Expedition Routes ---
+
+	# Swiss Route (German/Benelux PM)
+	focus = {
+		id = EUN_swiss_route
+		icon = GFX_goal_generic_demand_territory
+		x = -2
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_algeria_route
+		}
+		relative_position_id = EUN_foreign_expedition
+		prerequisite = { focus = EUN_foreign_expedition }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ger_ben_pm_check
+				OR = { 
+					check_variable = { EUN_PM_faction = 2 }
+					check_variable = { EUN_PM_faction = 4 }
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = EUN_swiss_gold
+		icon = GFX_goal_generic_consumer_goods
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_swiss_route
+		prerequisite = { focus = EUN_swiss_route }
+		completion_reward = {
+			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.05 }
+		}
+	}
+
+	# Algeria Route (French/Italian PM)
+	focus = {
+		id = EUN_algeria_route
+		icon = GFX_goal_generic_amphibious_assault
+		x = 0
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_swiss_route
+		}
+		relative_position_id = EUN_foreign_expedition
+		prerequisite = { focus = EUN_foreign_expedition }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_fra_ita_pm_check
+				OR = { 
+					check_variable = { EUN_PM_faction = 1 }
+					check_variable = { EUN_PM_faction = 3 }
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = EUN_african_labor
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_algeria_route
+		prerequisite = { focus = EUN_algeria_route }
+		completion_reward = {
+			add_to_variable = { EUN_eco_ic_bonus = 0.05 }
+		}
+	}
+
+	# Colonial Route (Benelux/Italian PM)
+	focus = {
+		id = EUN_colonial_route
+		icon = GFX_goal_generic_colonialism
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_algeria_route
+		prerequisite = { focus = EUN_algeria_route }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ben_ita_pm_check
+				OR = { 
+					check_variable = { EUN_PM_faction = 4 }
+					check_variable = { EUN_PM_faction = 3 }
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	# Spain Routes (Split: French vs Others)
+	focus = {
+		id = EUN_spain_french
+		icon = GFX_goal_generic_diplomacy
+		x = -1
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_spain_other
+		}
+		relative_position_id = EUN_second_congress
+		prerequisite = { focus = EUN_second_congress }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_fra_pm_check
+				check_variable = { EUN_PM_faction = 1 }
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = EUN_spain_other
+		icon = GFX_goal_generic_major_war
+		x = -3
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_spain_french
+		}
+		relative_position_id = EUN_second_congress
+		prerequisite = { focus = EUN_second_congress }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ger_ben_ita_pm_check
+				OR = { 
+					check_variable = { EUN_PM_faction = 2 }
+					check_variable = { EUN_PM_faction = 4 }
+					check_variable = { EUN_PM_faction = 3 }
+				}
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	# --- Domestic Affairs Routes ---
+
+	# Secret Police Route (German/French Interior)
+	focus = {
+		id = EUN_secret_police_route
+		icon = GFX_goal_generic_secret_weapon
+		x = 1
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_freedom_route
+		}
+		relative_position_id = EUN_first_congress
+		prerequisite = { focus = EUN_first_congress }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ger_fra_int_check
+				OR = { 
+					check_variable = { EUN_Interior_faction = 2 }
+					check_variable = { EUN_Interior_faction = 1 }
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = EUN_secret_intelligence
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = EUN_secret_police_route
+		prerequisite = { focus = EUN_secret_police_route }
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = EUN_purge
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_election_system
+		}
+		relative_position_id = EUN_second_congress
+		prerequisite = { focus = EUN_second_congress }
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.1
+		}
+	}
+
+	# Freedom Route (Benelux/Italian Interior)
+	focus = {
+		id = EUN_freedom_route
+		icon = GFX_goal_generic_national_unity
+		x = 3
+		y = 1
+		cost = 10		
+		mutually_exclusive = {
+			focus = EUN_secret_police_route
+		}
+		relative_position_id = EUN_first_congress
+		prerequisite = { focus = EUN_first_congress }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ben_ita_int_check
+				OR = { 
+					check_variable = { EUN_Interior_faction = 4 }
+					check_variable = { EUN_Interior_faction = 3 }
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = EUN_risorgimento
+		icon = GFX_goal_generic_major_war
+		x = -7
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_iron_blood_route
+		}
+		relative_position_id = EUN_second_congress
+		prerequisite = { focus = EUN_second_congress }
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = EUN_german_friendship
+		icon = GFX_goal_generic_diplomacy
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = EUN_risorgimento
+		prerequisite = { focus = EUN_risorgimento }
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	# Bureaucracy Route (Benelux Interior)
+	focus = {
+		id = EUN_bureaucracy_route
+		icon = GFX_goal_generic_small_army
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_first_congress
+		prerequisite = { focus = EUN_first_congress }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ben_int_check
+				check_variable = { EUN_Interior_faction = 4 }
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = EUN_election_system
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_purge
+		}
+		relative_position_id = EUN_second_congress
+		prerequisite = { focus = EUN_second_congress }
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = EUN_consensus_formation
+		icon = GFX_goal_generic_trade
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_election_system
+		prerequisite = { focus = EUN_election_system }
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = EUN_reconciliation
+		icon = GFX_goal_generic_alliance
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_election_system
+		prerequisite = { focus = EUN_election_system }
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	# Iron and Blood Route (German/Benelux)
+	focus = {
+		id = EUN_iron_blood_route
+		icon = GFX_goal_generic_military_deal
+		x = -5
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_risorgimento
+		}
+		relative_position_id = EUN_second_congress
+		prerequisite = { focus = EUN_second_congress }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ger_ben_int_check
+				OR = { 
+					check_variable = { EUN_Interior_faction = 2 }
+					check_variable = { EUN_Interior_faction = 4 }
+				}
+			}
+		}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = EUN_nordic_diplomacy
+		icon = GFX_goal_generic_diplomacy
+		x = 2
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_abandon_italy
+		}
+		relative_position_id = EUN_iron_blood_route
+		prerequisite = { focus = EUN_iron_blood_route }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ger_int_check
+				check_variable = { EUN_Interior_faction = 2 }
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = EUN_abandon_italy
+		icon = GFX_goal_generic_bad_relations
+		x = 0
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_nordic_diplomacy
+		}
+		relative_position_id = EUN_iron_blood_route
+		prerequisite = { focus = EUN_iron_blood_route }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ben_int_check
+				check_variable = { EUN_Interior_faction = 4 }
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	# --- Final Integration Routes ---
+	focus = {
+		id = EUN_Revolution_demagogue
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = EUN_third_congress
+		prerequisite = { focus = EUN_third_congress }
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = EUN_regularize_parliament
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 1
+		cost = 10
+		relative_position_id = EUN_third_congress
+		prerequisite = { focus = EUN_third_congress }
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+
+
+	focus = {
+		id = EUN_true_union
+		icon = GFX_goal_generic_allies
+		x = 3
+		y = 1
+		cost = 10
+				mutually_exclusive = {
+			focus = EUN_final_ger
+			focus = EUN_final_ita
+			focus = EUN_final_ben
+			focus = EUN_final_fra
+		}
+		relative_position_id = EUN_total_mobilization
+		prerequisite = { focus = EUN_total_mobilization }
+		completion_reward = {
+			add_political_power = 200
+			add_stability = 0.15
+		}
+	}
+
+	# --- Final Victory Paths ---
+
+	focus = {
+		id = EUN_allocation
+		icon = GFX_goal_generic_trade
+		x = 1
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_euro_division
+		}
+		relative_position_id = EUN_regularize_parliament
+		prerequisite = { focus = EUN_regularize_parliament }
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+		focus = {
+		id = EUN_euro_division
+		icon = GFX_goal_generic_trade
+		x = -1
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_allocation
+		}
+		relative_position_id = EUN_regularize_parliament
+		prerequisite = { focus = EUN_regularize_parliament }
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+
+	# Faction Finals
+	focus = {
+		id = EUN_final_fra
+		icon = GFX_goal_generic_revolution
+		x = -5
+		y = 1
+		cost = 10
+		mutually_exclusive = {
+			focus = EUN_final_ger
+			focus = EUN_final_ita
+			focus = EUN_final_ben
+			focus = EUN_true_union
+		}
+		relative_position_id = EUN_total_mobilization
+		prerequisite = { focus = EUN_total_mobilization }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_fra_pm_check
+				check_variable = { EUN_PM_faction = 1 }
+			}
+		}
+		completion_reward = {
+			add_political_power = 500
+		}
+	}
+
+	focus = {
+		id = EUN_final_ger
+		icon = GFX_goal_generic_military_deal
+		x = -1
+		y = 1
+		cost = 10
+				mutually_exclusive = {
+			focus = EUN_final_fra
+			focus = EUN_final_ita
+			focus = EUN_final_ben
+			focus = EUN_true_union
+		}
+		relative_position_id = EUN_total_mobilization
+		prerequisite = { focus = EUN_total_mobilization }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ger_pm_check
+				check_variable = { EUN_PM_faction = 2 }
+			}
+		}
+		completion_reward = {
+			add_political_power = 500
+		}
+	}
+
+	focus = {
+		id = EUN_final_ita
+		icon = GFX_goal_generic_major_war
+		x = -3
+		y = 1
+		cost = 10
+				mutually_exclusive = {
+			focus = EUN_final_ger
+			focus = EUN_final_fra
+			focus = EUN_final_ben
+			focus = EUN_true_union
+		}
+		relative_position_id = EUN_total_mobilization
+		prerequisite = { focus = EUN_total_mobilization }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ita_pm_check
+				check_variable = { EUN_PM_faction = 3 }
+			}
+		}
+		completion_reward = {
+			add_political_power = 500
+		}
+	}
+
+	focus = {
+		id = EUN_final_ben
+		icon = GFX_goal_generic_consumer_goods
+		x = 1
+		y = 1
+		cost = 10
+				mutually_exclusive = {
+			focus = EUN_final_ger
+			focus = EUN_final_ita
+			focus = EUN_final_fra
+			focus = EUN_true_union
+		}
+		relative_position_id = EUN_total_mobilization
+		prerequisite = { focus = EUN_total_mobilization }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ben_pm_check
+				check_variable = { EUN_PM_faction = 4 }
+			}
+		}
+		completion_reward = {
+			add_political_power = 500
+		}
+	}
+
 }
+
 

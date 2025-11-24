@@ -2,91 +2,151 @@ EUN_political_struggle = {
 	icon = generic_political_actions
 
 	# -------------------------------------------------------------------------
-	# Influence Management
+	# Influence Management (Flavorful Actions)
 	# -------------------------------------------------------------------------
 
-	EUN_support_french_faction = {
+	EUN_organize_general_strike = {
 		icon = generic_communism
 		allowed = { tag = EUN }
 		available = {
-			political_power > 25
+			has_political_power > 49
 		}
-		cost = 25
-		days_remove = 30
+		cost = 50
+		days_remove = 60
 		modifier = {
-			political_power_gain = -0.1
+			political_power_gain = -0.2
+			stability_factor = -0.05
 		}
 		remove_effect = {
-			add_to_variable = { EUN_french_influence = 5 }
-			add_to_variable = { EUN_german_influence = -1 }
-			add_to_variable = { EUN_italian_influence = -1 }
-			add_to_variable = { EUN_benelux_influence = -1 }
+			add_to_variable = { EUN_french_influence = 10 }
+			add_to_variable = { EUN_german_influence = -2 }
+			add_to_variable = { EUN_italian_influence = -2 }
+			add_to_variable = { EUN_benelux_influence = -2 }
 		}
 		ai_will_do = { factor = 1 }
 	}
 
-	EUN_support_german_faction = {
-		icon = generic_research_bonus
+	EUN_military_parade = {
+		icon = generic_land_bonus
 		allowed = { tag = EUN }
 		available = {
-			political_power > 25
+			command_power > 20
 		}
-		cost = 25
-		days_remove = 30
-		modifier = {
-			industrial_capacity_factory = 0.05
+		cost = 0 # Uses Command Power
+		days_remove = 60
+		fire_only_once = no
+		complete_effect = {
+			add_command_power = -20
 		}
-		remove_effect = {
-			add_to_variable = { EUN_french_influence = -1 }
-			add_to_variable = { EUN_german_influence = 5 }
-			add_to_variable = { EUN_italian_influence = -1 }
-			add_to_variable = { EUN_benelux_influence = -1 }
-		}
-		ai_will_do = { factor = 1 }
-	}
-
-	EUN_support_italian_faction = {
-		icon = generic_air_bonus
-		allowed = { tag = EUN }
-		available = {
-			political_power > 25
-		}
-		cost = 25
-		days_remove = 30
 		modifier = {
 			war_support_factor = 0.05
 		}
 		remove_effect = {
-			add_to_variable = { EUN_french_influence = -1 }
-			add_to_variable = { EUN_german_influence = -1 }
-			add_to_variable = { EUN_italian_influence = 5 }
-			add_to_variable = { EUN_benelux_influence = -1 }
+			add_to_variable = { EUN_french_influence = -2 }
+			add_to_variable = { EUN_german_influence = 10 }
+			add_to_variable = { EUN_italian_influence = -2 }
+			add_to_variable = { EUN_benelux_influence = -2 }
 		}
 		ai_will_do = { factor = 1 }
 	}
 
-	EUN_support_benelux_faction = {
-		icon = generic_construction_bonus
+	EUN_futurist_exhibition = {
+		icon = generic_air_bonus
 		allowed = { tag = EUN }
 		available = {
-			political_power > 25
+			has_political_power > 49
 		}
-		cost = 25
-		days_remove = 30
+		cost = 50
+		days_remove = 60
 		modifier = {
-			consumer_goods_factor = -0.05
+			research_speed_factor = 0.05
 		}
 		remove_effect = {
-			add_to_variable = { EUN_french_influence = -1 }
-			add_to_variable = { EUN_german_influence = -1 }
-			add_to_variable = { EUN_italian_influence = -1 }
-			add_to_variable = { EUN_benelux_influence = 5 }
+			add_to_variable = { EUN_french_influence = -2 }
+			add_to_variable = { EUN_german_influence = -2 }
+			add_to_variable = { EUN_italian_influence = 10 }
+			add_to_variable = { EUN_benelux_influence = -2 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	EUN_international_trade_fair = {
+		icon = generic_trade
+		allowed = { tag = EUN }
+		available = {
+			has_political_power > 49
+		}
+		cost = 50
+		days_remove = 60
+		modifier = {
+			trade_opinion_factor = 0.2
+		}
+		remove_effect = {
+			add_to_variable = { EUN_french_influence = -2 }
+			add_to_variable = { EUN_german_influence = -2 }
+			add_to_variable = { EUN_italian_influence = -2 }
+			add_to_variable = { EUN_benelux_influence = 10 }
 		}
 		ai_will_do = { factor = 1 }
 	}
 
 	# -------------------------------------------------------------------------
-	# Minister Appointments (Available during Party Congress or High Influence)
+	# Crisis Management
+	# -------------------------------------------------------------------------
+
+	EUN_purge_opposition = {
+		icon = generic_spy_coup
+		allowed = { tag = EUN }
+		available = {
+			has_completed_focus = EUN_pol_chaos_purge
+			has_manpower > 4999
+		}
+		cost = 100
+		fire_only_once = no
+		complete_effect = {
+			add_manpower = -5000
+			add_political_power = -50
+			add_stability = 0.05
+			# Reduce influence of non-ruling factions
+			if = {
+				limit = { NOT = { check_variable = { EUN_PM_faction = 1 } } }
+				add_to_variable = { EUN_french_influence = -10 }
+			}
+			if = {
+				limit = { NOT = { check_variable = { EUN_PM_faction = 2 } } }
+				add_to_variable = { EUN_german_influence = -10 }
+			}
+			if = {
+				limit = { NOT = { check_variable = { EUN_PM_faction = 3 } } }
+				add_to_variable = { EUN_italian_influence = -10 }
+			}
+			if = {
+				limit = { NOT = { check_variable = { EUN_PM_faction = 4 } } }
+				add_to_variable = { EUN_benelux_influence = -10 }
+			}
+		}
+	}
+
+	EUN_form_grand_coalition = {
+		icon = generic_diplomacy
+		allowed = { tag = EUN }
+		available = {
+			has_completed_focus = EUN_pol_chaos_compromise
+			has_political_power > 100
+		}
+		cost = 100
+		days_remove = 180
+		modifier = {
+			political_power_gain = -0.5 # Hard to govern
+			stability_factor = 0.2 # But stable
+		}
+		remove_effect = {
+			add_political_power = 50
+		}
+	}
+
+	# -------------------------------------------------------------------------
+	# Minister Appointments (With Cooldowns)
 	# -------------------------------------------------------------------------
 
 	# --- Prime Minister ---
@@ -95,14 +155,15 @@ EUN_political_struggle = {
 		icon = generic_communism
 		allowed = { tag = EUN }
 		available = {
-			check_variable = { EUN_french_influence > 10 }
+			check_variable = { EUN_french_influence > 20 }
 			NOT = { has_country_leader = { character = EUN_lev_trotsky } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 100
 		complete_effect = {
-			EUN_set_PM_french
-			add_to_variable = { EUN_french_influence = -10 }
-			EUN_check_political_state
+			EUN_set_PM_french = yes
+			add_to_variable = { EUN_french_influence = -20 }
+			EUN_check_political_state = yes
 		}
 	}
 
@@ -110,14 +171,15 @@ EUN_political_struggle = {
 		icon = generic_research_bonus
 		allowed = { tag = EUN }
 		available = {
-			check_variable = { EUN_german_influence > 10 }
+			check_variable = { EUN_german_influence > 20 }
 			NOT = { has_country_leader = { character = EUN_otto_strasser } }
 		}
-		cost = 0
-		complete_effect = {
-			EUN_set_PM_german
-			add_to_variable = { EUN_german_influence = -10 }
-			EUN_check_political_state
+		days_re_enable = 365
+		cost = 100
+		complete_effect = { 
+			EUN_set_PM_german = yes
+			add_to_variable = { EUN_german_influence = -20 }
+			EUN_check_political_state = yes
 		}
 	}
 
@@ -125,14 +187,15 @@ EUN_political_struggle = {
 		icon = generic_air_bonus
 		allowed = { tag = EUN }
 		available = {
-			check_variable = { EUN_italian_influence > 10 }
+			check_variable = { EUN_italian_influence > 20 }
 			NOT = { has_country_leader = { character = EUN_benito_mussolini } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 100
 		complete_effect = {
-			EUN_set_PM_italian
-			add_to_variable = { EUN_italian_influence = -10 }
-			EUN_check_political_state
+			EUN_set_PM_italian = yes
+			add_to_variable = { EUN_italian_influence = -20 }
+			EUN_check_political_state = yes
 		}
 	}
 
@@ -140,14 +203,15 @@ EUN_political_struggle = {
 		icon = generic_construction_bonus
 		allowed = { tag = EUN }
 		available = {
-			check_variable = { EUN_benelux_influence > 10 }
+			check_variable = { EUN_benelux_influence > 20 }
 			NOT = { has_country_leader = { character = EUN_paul_henri_spaak } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 100
 		complete_effect = {
-			EUN_set_PM_benelux
-			add_to_variable = { EUN_benelux_influence = -10 }
-			EUN_check_political_state
+			EUN_set_PM_benelux = yes
+			add_to_variable = { EUN_benelux_influence = -20 }
+			EUN_check_political_state = yes
 		}
 	}
 
@@ -158,11 +222,12 @@ EUN_political_struggle = {
 			check_variable = { EUN_french_influence > 10 }
 			NOT = { check_variable = { EUN_Interior_faction = 1 } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 50
 		complete_effect = {
-			EUN_set_interior_french
+			EUN_set_interior_french = yes
 			add_to_variable = { EUN_french_influence = -10 }
-			EUN_check_political_state
+			EUN_check_political_state = yes
 		}
 	}
 	EUN_appoint_german_interior = {
@@ -171,11 +236,12 @@ EUN_political_struggle = {
 			check_variable = { EUN_german_influence > 10 }
 			NOT = { check_variable = { EUN_Interior_faction = 2 } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 50
 		complete_effect = {
-			EUN_set_interior_german
+			EUN_set_interior_german = yes
 			add_to_variable = { EUN_german_influence = -10 }
-			EUN_check_political_state
+			EUN_check_political_state = yes
 		}
 	}
 	EUN_appoint_italian_interior = {
@@ -184,11 +250,12 @@ EUN_political_struggle = {
 			check_variable = { EUN_italian_influence > 10 }
 			NOT = { check_variable = { EUN_Interior_faction = 3 } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 50
 		complete_effect = {
-			EUN_set_interior_italian
+			EUN_set_interior_italian = yes
 			add_to_variable = { EUN_italian_influence = -10 }
-			EUN_check_political_state
+			EUN_check_political_state = yes
 		}
 	}
 	EUN_appoint_benelux_interior = {
@@ -197,11 +264,12 @@ EUN_political_struggle = {
 			check_variable = { EUN_benelux_influence > 10 }
 			NOT = { check_variable = { EUN_Interior_faction = 4 } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 50
 		complete_effect = {
-			EUN_set_interior_benelux
+			EUN_set_interior_benelux = yes
 			add_to_variable = { EUN_benelux_influence = -10 }
-			EUN_check_political_state
+			EUN_check_political_state = yes
 		}
 	}
 
@@ -212,11 +280,12 @@ EUN_political_struggle = {
 			check_variable = { EUN_french_influence > 10 }
 			NOT = { check_variable = { EUN_Economy_faction = 1 } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 50
 		complete_effect = {
-			EUN_set_economy_french
+			EUN_set_economy_french = yes
 			add_to_variable = { EUN_french_influence = -10 }
-			EUN_check_political_state
+			EUN_check_political_state = yes
 		}
 	}
 	EUN_appoint_german_economy = {
@@ -225,11 +294,12 @@ EUN_political_struggle = {
 			check_variable = { EUN_german_influence > 10 }
 			NOT = { check_variable = { EUN_Economy_faction = 2 } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 50
 		complete_effect = {
-			EUN_set_economy_german
+			EUN_set_economy_german = yes
 			add_to_variable = { EUN_german_influence = -10 }
-			EUN_check_political_state
+			EUN_check_political_state = yes
 		}
 	}
 	EUN_appoint_italian_economy = {
@@ -238,11 +308,12 @@ EUN_political_struggle = {
 			check_variable = { EUN_italian_influence > 10 }
 			NOT = { check_variable = { EUN_Economy_faction = 3 } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 50
 		complete_effect = {
-			EUN_set_economy_italian
+			EUN_set_economy_italian = yes
 			add_to_variable = { EUN_italian_influence = -10 }
-			EUN_check_political_state
+			EUN_check_political_state = yes
 		}
 	}
 	EUN_appoint_benelux_economy = {
@@ -251,11 +322,12 @@ EUN_political_struggle = {
 			check_variable = { EUN_benelux_influence > 10 }
 			NOT = { check_variable = { EUN_Economy_faction = 4 } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 50
 		complete_effect = {
-			EUN_set_economy_benelux
+			EUN_set_economy_benelux = yes
 			add_to_variable = { EUN_benelux_influence = -10 }
-			EUN_check_political_state
+			EUN_check_political_state = yes
 		}
 	}
 
@@ -266,11 +338,12 @@ EUN_political_struggle = {
 			check_variable = { EUN_french_influence > 10 }
 			NOT = { check_variable = { EUN_Military_faction = 1 } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 50
 		complete_effect = {
-			EUN_set_military_french
+			EUN_set_military_french = yes
 			add_to_variable = { EUN_french_influence = -10 }
-			EUN_check_political_state
+			EUN_check_political_state = yes
 		}
 	}
 	EUN_appoint_german_military = {
@@ -279,11 +352,12 @@ EUN_political_struggle = {
 			check_variable = { EUN_german_influence > 10 }
 			NOT = { check_variable = { EUN_Military_faction = 2 } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 50
 		complete_effect = {
-			EUN_set_military_german
+			EUN_set_military_german = yes
 			add_to_variable = { EUN_german_influence = -10 }
-			EUN_check_political_state
+			EUN_check_political_state = yes
 		}
 	}
 	EUN_appoint_italian_military = {
@@ -292,11 +366,12 @@ EUN_political_struggle = {
 			check_variable = { EUN_italian_influence > 10 }
 			NOT = { check_variable = { EUN_Military_faction = 3 } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 50
 		complete_effect = {
-			EUN_set_military_italian
+			EUN_set_military_italian = yes
 			add_to_variable = { EUN_italian_influence = -10 }
-			EUN_check_political_state
+			EUN_check_political_state = yes
 		}
 	}
 	EUN_appoint_benelux_military = {
@@ -305,11 +380,12 @@ EUN_political_struggle = {
 			check_variable = { EUN_benelux_influence > 10 }
 			NOT = { check_variable = { EUN_Military_faction = 4 } }
 		}
-		cost = 0
+		days_re_enable = 365
+		cost = 50
 		complete_effect = {
-			EUN_set_military_benelux
+			EUN_set_military_benelux = yes
 			add_to_variable = { EUN_benelux_influence = -10 }
-			EUN_check_political_state
+			EUN_check_political_state = yes
 		}
 	}
 }
