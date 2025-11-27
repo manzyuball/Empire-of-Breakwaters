@@ -1,7 +1,6 @@
-
 state = {
 	id = 874
-	name = "STATE_874" # Magadan
+	name = "STATE_874"	# Magadan
 	manpower = 63481
 	state_category = pastoral
 	impassable = yes
@@ -9,20 +8,20 @@ state = {
 		coal = 4
 	}
 	history = {
-		victory_points = { 
-			12683 1 
+		victory_points = {
+			12683
+			1
 		}
-		owner = VLA
+		owner = RUS
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = SOV
-		add_core_of = VLA
+		add_core_of = RUS
 	}
-
 	provinces = {
-		1865 10540 12683
+		1865
+		10540
+		12683
 	}
-
-	local_supplies = 0.0 
+	local_supplies = 0
 }

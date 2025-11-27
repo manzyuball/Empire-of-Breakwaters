@@ -1,25 +1,18 @@
-
-state={
-	id=460
-	name="STATE_460" # Constantine
+state = {
+	id = 460
+	name = "STATE_460"	# Constantine
 	manpower = 2343837
-	
 	state_category = large_city
-
-	history={
+	history = {
 		owner = ALG
 		add_core_of = ALG
-		FRA = {
-			set_province_controller = 7081
-			set_province_controller = 11953
-			set_province_controller = 1160
-			set_province_controller = 1058
-			}
 		victory_points = {
-			7081 3 
+			7081
+			3
 		}
 		victory_points = {
-			12051 3
+			12051
+			3
 		}
 		buildings = {
 			infrastructure = 3
@@ -30,10 +23,18 @@ state={
 			}
 		}
 	}
-
-	provinces={
-		1058 1160 4046 7065 7081 7166 9976 10078 11953 12051 13077 
+	provinces = {
+		1058
+		1160
+		4046
+		7065
+		7081
+		7166
+		9976
+		10078
+		11953
+		12051
+		13077
 	}
-
-	local_supplies=0.0 
+	local_supplies = 0
 }

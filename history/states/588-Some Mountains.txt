@@ -6,8 +6,7 @@ state = {
 		chromium = 16		# was: 22.000
 	}
 	history = {
-		owner = VLA
-		add_core_of = VLA
+		owner = SOV
 		buildings = {
 			infrastructure = 2
 		}

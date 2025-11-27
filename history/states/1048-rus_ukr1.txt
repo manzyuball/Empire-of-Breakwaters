@@ -1,24 +1,30 @@
-
-state={
-	id=1048
-	name="STATE_1048"
-	provinces={
-		523 547 570 3409 3491 6519 6554 9476 9531 11487 11513 11541 
+state = {
+	id = 1048
+	name = "STATE_1048"
+	provinces = {
+		523
+		547
+		570
+		3409
+		3491
+		6519
+		6554
+		9476
+		9531
+		11487
+		11513
+		11541
 	}
-
-	history={
+	history = {
 		owner = SOV
-		add_core_of = VLA
 		buildings = {
 			infrastructure = 3
-
 		}
 		add_core_of = SOV
 		add_core_of = UKR
-
 	}
-	manpower=1167411
-	buildings_max_level_factor=1.000
-	state_category=town
-	local_supplies=0.000
+	manpower = 1167411
+	buildings_max_level_factor = 1
+	state_category = town
+	local_supplies = 0
 }

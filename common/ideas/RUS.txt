@@ -1,28 +1,36 @@
 ideas = {
-
 	country = {
-		VLA_KORITU = { #孤立した大帝国
-	    allowed = {	always = no }
-	    picture = FRA_army_of_aggression_focus
-	    removal_cost = -1
-		rule = {
-			can_join_factions = no
-			
+		RUS_KORITU = {
+			#孤立した大帝国
+			allowed = {
+				always = no
+			}
+			picture = FRA_army_of_aggression_focus
+			removal_cost = -1
+			rule = {
+				can_join_factions = no
+			}
 		}
-        }
-		VLA_KORITU = { #極東戦争
-	    allowed = {	always = no }
-	    picture = tur_sub_zero_survival_training
-	    removal_cost = -1
-		modifier = {
-			ai_focus_aggressive_factor = 0.5
-			terrain_penalty_reduction = 0.25
-			winter_attrition_factor = -0.25
-			supply_consumption_factor = -0.25
+		RUS_KORITU = {
+			#極東戦争
+			allowed = {
+				always = no
+			}
+			picture = tur_sub_zero_survival_training
+			removal_cost = -1
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+				terrain_penalty_reduction = 0.25
+				winter_attrition_factor = -0.25
+				supply_consumption_factor = -0.25
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
 		}
-		targeted_modifier = { tag = SOV attack_bonus_against = 0.25  defense_bonus_against = 0.25 }
-        }
-		VLA_GokkannnoGUN = {
+		RUS_GokkannnoGUN = {
 			removal_cost = -1
 			picture = SOV_the_road_of_life
 			modifier = {
@@ -31,29 +39,29 @@ ideas = {
 				attrition = -0.1
 			}
 		}
-		VLA_syuukyou1 = {
+		RUS_syuukyou1 = {
 			removal_cost = -1
 			picture = SOV_new_old_church
 			modifier = {
 				political_power_factor = 0.15
 			}
 		}
-		VLA_syuukyou2 = {
+		RUS_syuukyou2 = {
 			removal_cost = -1
 			picture = SOV_new_old_church
 			modifier = {
-				stability_factor = 0.10
+				stability_factor = 0.1
 				political_power_factor = -0.15
 			}
 		}
-		VLA_syuukyou3 = {
+		RUS_syuukyou3 = {
 			removal_cost = -1
 			picture = SOV_new_old_church
 			modifier = {
 				stability_factor = 0.05
 			}
 		}
-		VLA_touti1 = {
+		RUS_touti1 = {
 			removal_cost = -1
 			picture = hol_aloof_neutrality
 			modifier = {
@@ -61,7 +69,7 @@ ideas = {
 				Resistance_decay_on_our_occupied_states = 0.1
 			}
 		}
-		VLA_touti2 = {
+		RUS_touti2 = {
 			removal_cost = -1
 			picture = hol_aloof_neutrality
 			modifier = {
@@ -69,55 +77,64 @@ ideas = {
 				Resistance_decay_on_our_occupied_states = 0.25
 			}
 		}
-		VLA_touti3 = {
+		RUS_touti3 = {
 			removal_cost = -1
 			picture = hol_aloof_neutrality
 			modifier = {
 				political_power_factor = 0.05
-				stability_factor = -0.10
+				stability_factor = -0.1
 				required_garrison_factor = -0.25
 			}
 		}
-		VLA_zaibatu = {
+		RUS_zaibatu = {
 			removal_cost = -1
 			picture = jap_zaibatsu_ally
 			modifier = {
-			production_factory_max_efficiency_factor = 0.15
-			production_speed_buildings_factor = 0.15
-			industrial_capacity_factory = 0.15
-			targeted_modifier = { tag = JAP cic_to_target_factor = 0.10 }
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+			}
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.1
 			}
 		}
-		VLA_T_SAN = {
+		RUS_T_SAN = {
 			removal_cost = -1
 			picture = GFX_idea_usa_desegregation_2
 			modifier = {
-			production_factory_max_efficiency_factor = 0.15
-			production_speed_buildings_factor = 0.15
-			industrial_capacity_factory = 0.15
-			targeted_modifier = { tag = JAP cic_to_target_factor = 0.10 }
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+			}
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.1
 			}
 		}
-		VLA_T_SAN1 = {
+		RUS_T_SAN1 = {
 			removal_cost = -1
 			picture = GFX_idea_usa_desegregation_2
 			modifier = {
-			production_factory_max_efficiency_factor = 0.2
-			production_speed_buildings_factor = 0.2
-			industrial_capacity_factory = 0.2
-			targeted_modifier = { tag = JAP cic_to_target_factor = 0.05 }
+				production_factory_max_efficiency_factor = 0.2
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.2
+			}
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.05
 			}
 		}
-		VLA_T_SAN2 = {
+		RUS_T_SAN2 = {
 			removal_cost = -1
 			picture = GFX_idea_usa_desegregation_2
 			modifier = {
-			production_factory_max_efficiency_factor = 0.25
-			production_speed_buildings_factor = 0.25
-			industrial_capacity_factory = 0.25
+				production_factory_max_efficiency_factor = 0.25
+				production_speed_buildings_factor = 0.25
+				industrial_capacity_factory = 0.25
 			}
 		}
-		VLA_USA_S = {
+		RUS_USA_S = {
 			removal_cost = -1
 			picture = jap_supremacy_of_technology
 			modifier = {
@@ -126,7 +143,7 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.1
 			}
 		}
-		VLA_USA_S2 = {
+		RUS_USA_S2 = {
 			removal_cost = -1
 			picture = jap_supremacy_of_technology
 			modifier = {
@@ -136,7 +153,7 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.1
 			}
 		}
-		VLA_seizpu = {
+		RUS_seizpu = {
 			removal_cost = -1
 			picture = generic_exploit_mines
 			modifier = {
@@ -144,7 +161,7 @@ ideas = {
 				production_factory_start_efficiency_factor = 0.15
 			}
 		}
-		VLA_seizpu2 = {
+		RUS_seizpu2 = {
 			removal_cost = -1
 			picture = generic_exploit_mines
 			modifier = {
@@ -153,7 +170,7 @@ ideas = {
 				production_factory_start_efficiency_factor = 0.15
 			}
 		}
-		VLA_seizpu3 = {
+		RUS_seizpu3 = {
 			removal_cost = -1
 			picture = generic_exploit_mines
 			modifier = {
@@ -163,22 +180,22 @@ ideas = {
 				industrial_capacity_dockyard = 0.2
 			}
 		}
-		VLA_T_T_T = {
+		RUS_T_T_T = {
 			removal_cost = -1
 			picture = generic_build_infrastructure
 			modifier = {
-				production_speed_supply_node_factor = 0.50
+				production_speed_supply_node_factor = 0.5
 				production_speed_rail_way_factor = 0.45
 			}
 		}
-		VLA_KOKUEIKA = {
+		RUS_KOKUEIKA = {
 			removal_cost = -1
 			picture = generic_central_management
 			modifier = {
 				consumer_goods_factor = 0.05
 			}
 		}
-		VLA_KOKUEIKA1 = {
+		RUS_KOKUEIKA1 = {
 			removal_cost = -1
 			picture = generic_central_management
 			modifier = {
@@ -186,7 +203,7 @@ ideas = {
 				production_speed_buildings_factor = 0.15
 			}
 		}
-		VLA_KOKUEIKA2 = {
+		RUS_KOKUEIKA2 = {
 			removal_cost = -1
 			picture = generic_central_management
 			modifier = {
@@ -195,7 +212,7 @@ ideas = {
 				industrial_capacity_factory = 0.15
 			}
 		}
-		VLA_GUNKOKU = {
+		RUS_GUNKOKU = {
 			removal_cost = -1
 			picture = FRA_national_mobilization_focus
 			modifier = {
@@ -205,13 +222,13 @@ ideas = {
 				production_speed_industrial_complex_factor = -0.1
 			}
 		}
-		VLA_GUNKOKU1 = {
+		RUS_GUNKOKU1 = {
 			removal_cost = -1
 			picture = FRA_national_mobilization_focus
 			modifier = {
 				political_power_factor = 0.05
 				conscription = 0.02
-				production_speed_arms_factory_factor = 0.50
+				production_speed_arms_factory_factor = 0.5
 				industrial_capacity_factory = 0.15
 				economy_cost_factor = -0.25
 				mobilization_laws_cost_factor = -0.25
@@ -219,117 +236,117 @@ ideas = {
 				research_time_factor = 0.05
 			}
 		}
-		VLA_Roudouhou = {
+		RUS_Roudouhou = {
 			removal_cost = -1
 			picture = generic_production_bonus
 			modifier = {
-				stability_factor = -0.10
-				local_resources_factor = 0.10
+				stability_factor = -0.1
+				local_resources_factor = 0.1
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.1
 			}
 		}
-		VLA_Roudouhou1 = {
+		RUS_Roudouhou1 = {
 			removal_cost = -1
 			picture = generic_production_bonus
 			modifier = {
-				stability_factor = -0.10
+				stability_factor = -0.1
 				local_resources_factor = 0.15
 				production_factory_max_efficiency_factor = 0.15
 				production_factory_efficiency_gain_factor = 0.15
 			}
 		}
-		VLA_Roudouhou2 = {
+		RUS_Roudouhou2 = {
 			removal_cost = -1
 			picture = generic_production_bonus
 			modifier = {
-				stability_factor = -0.10
+				stability_factor = -0.1
 				local_resources_factor = 0.15
 				production_speed_buildings_factor = 0.15
 				production_factory_max_efficiency_factor = 0.15
 				production_factory_efficiency_gain_factor = 0.15
 			}
 		}
-		VLA_ROZYAEF_BAD = {
+		RUS_ROZYAEF_BAD = {
 			removal_cost = -1
 			picture = FRA_scw_intervention_republicans_focus
 			modifier = {
-				stability_factor = -0.10
+				stability_factor = -0.1
 				political_power_factor = -0.25
 				surrender_limit = -0.1
 			}
 		}
-		VLA_ROZYAEF_BAD1 = {
+		RUS_ROZYAEF_BAD1 = {
 			removal_cost = -1
 			picture = FRA_scw_intervention_republicans_focus
 			modifier = {
-				stability_factor = -0.10
+				stability_factor = -0.1
 				political_power_factor = -0.25
 			}
 		}
-		VLA_ROZYAEF_BAD2 = {
+		RUS_ROZYAEF_BAD2 = {
 			removal_cost = -1
 			picture = FRA_scw_intervention_republicans_focus
 			modifier = {
-				stability_factor = -0.10
+				stability_factor = -0.1
 			}
 		}
-		VLA_TEISE_BAD = {
+		RUS_TEISE_BAD = {
 			removal_cost = -1
 			picture = FRA_scw_intervention_republicans_focus
 			modifier = {
-				stability_factor = -0.10
-				political_power_factor = -0.25
-				surrender_limit = -0.1
-			}
-		}
-		VLA_TEISE_BAD1 = {
-			removal_cost = -1
-			picture = FRA_scw_intervention_republicans_focus
-			modifier = {
-				stability_factor = -0.10
-				political_power_factor = -0.25
-			}
-		}
-		VLA_TEISE_BAD2 = {
-			removal_cost = -1
-			picture = FRA_scw_intervention_republicans_focus
-			modifier = {
-				political_power_factor = -0.25
-			}
-		}
-		VLA_GUNKOKU_BAD = {
-			removal_cost = -1
-			picture = FRA_scw_intervention_republicans_focus
-			modifier = {
-				stability_factor = -0.10
+				stability_factor = -0.1
 				political_power_factor = -0.25
 				surrender_limit = -0.1
 			}
 		}
-		VLA_GUNKOKU_BAD1 = {
+		RUS_TEISE_BAD1 = {
 			removal_cost = -1
 			picture = FRA_scw_intervention_republicans_focus
 			modifier = {
-				stability_factor = -0.10
+				stability_factor = -0.1
 				political_power_factor = -0.25
 			}
 		}
-		VLA_GUNKOKU_BAD2 = {
+		RUS_TEISE_BAD2 = {
 			removal_cost = -1
 			picture = FRA_scw_intervention_republicans_focus
 			modifier = {
 				political_power_factor = -0.25
 			}
 		}
-		VLA_ROZYAEF_GAI1 = {
+		RUS_GUNKOKU_BAD = {
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.25
+				surrender_limit = -0.1
+			}
+		}
+		RUS_GUNKOKU_BAD1 = {
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.25
+			}
+		}
+		RUS_GUNKOKU_BAD2 = {
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_factor = -0.25
+			}
+		}
+		RUS_ROZYAEF_GAI1 = {
 			removal_cost = -1
 			picture = SOV_fascist_womens_movement
 			modifier = {
 				war_support_factor = 0.15
 			}
 		}
-		VLA_ROZYAEF_GAI2 = {
+		RUS_ROZYAEF_GAI2 = {
 			removal_cost = -1
 			picture = SOV_fascist_womens_movement
 			modifier = {
@@ -338,17 +355,23 @@ ideas = {
 				mobilization_speed = 0.15
 			}
 		}
-		VLA_TYUUKA_KOUTEI = {
+		RUS_TYUUKA_KOUTEI = {
 			removal_cost = -1
 			picture = jap_intervene_in_china
 			modifier = {
-			targeted_modifier = { tag = MAN attack_bonus_against = 0.25 }
-			targeted_modifier = { tag = CHI attack_bonus_against = 0.25 }
-			terrain_penalty_reduction = 0.15
-			out_of_supply_factor = 0.25
+				terrain_penalty_reduction = 0.15
+				out_of_supply_factor = 0.25
+			}
+			targeted_modifier = {
+				tag = MAN
+				attack_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = CHI
+				attack_bonus_against = 0.25
 			}
 		}
-		VLA_OctPus = {
+		RUS_OctPus = {
 			removal_cost = -1
 			picture = tur_golden_age_of_the_wolf
 			modifier = {
@@ -358,17 +381,17 @@ ideas = {
 				spotting_chance = 0.15
 			}
 		}
-		VLA_SekaiSeihuku = { 
+		RUS_SekaiSeihuku = {
 			removal_cost = -1
 			picture = SOV_the_true_tsars
 			modifier = {
 				subjects_autonomy_gain = -20
 				non_core_manpower = 0.15
-                resistance_activity = -0.5				
-                Resistance_decay_on_our_occupied_states = -0.5
+				resistance_activity = -0.5
+				Resistance_decay_on_our_occupied_states = -0.5
 			}
 		}
-		VLA_Tomo = { 
+		RUS_Tomo = {
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
@@ -377,7 +400,7 @@ ideas = {
 				democratic_acceptance = 120
 			}
 		}
-		VLA_Tomo1 = { 
+		RUS_Tomo1 = {
 			removal_cost = -1
 			picture = SOV_the_true_tsars
 			modifier = {
@@ -388,45 +411,33 @@ ideas = {
 				opinion_gain_monthly_factor = 0.25
 				improve_relations_maintain_cost_factor = -0.8
 				democratic_acceptance = 120
-				send_volunteers_desire = ENG
-				send_volunteers_desire = JAP
-				send_volunteers_desire = POL
-				send_volunteers_desire = MAN
 			}
 		}
 	}
 	# TECHNOLOGY
-	
 	materiel_manufacturer = {
-		
 		designer = yes
-		
 		sibelia = {
-			
 			allowed = {
-				original_tag = VLA
-				has_country_flag = VLA_sibelia
+				original_tag = RUS
+				has_country_flag = RUS_sibelia
 			}
-
 			picture = SOV_the_true_tsars
-
 			research_bonus = {
 				infantry_weapons = 0.15
 			}
-
 			equipment_bonus = {
 				infantry_equipment = {
 					instant = yes
-					build_cost_ic = -0.20
+					build_cost_ic = -0.2
 				}
 			}
-
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
 			}
-
-			traits = { infantry_equipment_manufacturer }
-
+			traits = {
+				infantry_equipment_manufacturer
+			}
 			ai_will_do = {
 				factor = 5
 			}

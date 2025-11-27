@@ -1,29 +1,25 @@
 state = {
 	id = 875
-	name = "STATE_875" #Chukchi Peninsula
-
+	name = "STATE_875"	#Chukchi Peninsula
 	history = {
-		owner = VLA
+		owner = RUS
 		victory_points = {
-			13204 1 
+			13204
+			1
 		}
 		buildings = {
 			infrastructure = 1
-			13204 ={
+			13204 = {
 				naval_base = 1
 			}
 		}
-		add_core_of = SOV
-		add_core_of = VLA
-
+		add_core_of = RUS
 	}
-
 	provinces = {
 		13204
 	}
 	manpower = 30000
 	buildings_max_level_factor = 1
 	state_category = "pastoral"
-
-	local_supplies = 0.0 
+	local_supplies = 0
 }

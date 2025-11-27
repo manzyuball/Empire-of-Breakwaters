@@ -14,14 +14,14 @@ country_event = {
 		name = wtt_china.1.a
         ai_chance = { factor = 10 }
         hidden_effect = {
-            set_global_flag = MON_VLA_KOUSYOU_A
+            set_global_flag = MON_RUS_KOUSYOU_A
         }
 	}
     option = {
 		name = wtt_china.1.b
         ai_chance = { factor = 2 }
         hidden_effect = {
-            set_global_flag = MON_VLA_KOUSYOU_B
+            set_global_flag = MON_RUS_KOUSYOU_B
         }
 	}
 }

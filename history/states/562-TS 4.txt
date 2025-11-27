@@ -1,22 +1,28 @@
-
 state = {
 	id = 562
-	name = "STATE_562" # Okhotsk
+	name = "STATE_562"	# Okhotsk
 	manpower = 126961
 	state_category = pastoral
-
-	history={
-		owner = VLA
+	history = {
+		owner = RUS
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = SOV
-		add_core_of = VLA
+		add_core_of = RUS
 	}
 	impassable = yes
 	provinces = {
-		1714 1805 4810 4881 7772 10572 10598 11607 12518 12551 12650  
+		1714
+		1805
+		4810
+		4881
+		7772
+		10572
+		10598
+		11607
+		12518
+		12551
+		12650
 	}
-
-	local_supplies = 0.0 
+	local_supplies = 0
 }

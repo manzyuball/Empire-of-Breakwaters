@@ -1,1 +1,0 @@
-EUN = "countries/EuropeanUnion.txt"

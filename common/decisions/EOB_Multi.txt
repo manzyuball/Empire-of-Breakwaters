@@ -761,7 +761,7 @@ generic_Syoutyou = {
                                  transfer_troops = no
                                 }  
                                 annex_country = {
-                                    target = VLA
+                                    target = RUS
                                      transfer_troops = no
                                     }  
                                     annex_country = {

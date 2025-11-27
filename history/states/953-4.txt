@@ -21,7 +21,7 @@ state = {
 		12487
 	}
 	history = {
-		owner = VLA
+		owner = SOV
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2

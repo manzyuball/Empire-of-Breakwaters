@@ -46,8 +46,8 @@ bookmarks = {
 			focuses = {
 			}
 		}
-		"VLA" = {
-			history = "VLA_GATHERING_STORM_DESC"
+		"RUS" = {
+			history = "RUS_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
 			}

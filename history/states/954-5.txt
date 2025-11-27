@@ -12,7 +12,7 @@ state = {
 		12397
 	}
 	history = {
-		owner = VLA
+		owner = SOV
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2

@@ -6,7 +6,7 @@ JAP_bouhatei = {
 			MAN = { has_government = democratic }
 			PHI = { has_government = democratic }
 			INS = { has_government = democratic }
-			VLA = { has_government = democratic }
+			RUS = { has_government = democratic }
 			AST = { has_government = democratic }
 		}
 		visible = {
@@ -21,7 +21,7 @@ JAP_bouhatei = {
 			PHI = { add_ideas = ENblo }
 			INS = { add_ideas = ENblo }
 			MAN = { add_ideas = ENblo }
-			VLA = { add_ideas = ENblo }
+			RUS = { add_ideas = ENblo }
 			AST = { add_ideas = ENblo }
 		}
 	}

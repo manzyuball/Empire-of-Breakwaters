@@ -1,12 +1,11 @@
-
-state={
-	id=247
-	name="STATE_247"
-
-	history={
+state = {
+	id = 247
+	name = "STATE_247"
+	history = {
 		owner = SOV
 		victory_points = {
-			6245 10 
+			6245
+			10
 		}
 		buildings = {
 			infrastructure = 3
@@ -14,15 +13,32 @@ state={
 			industrial_complex = 3
 		}
 		add_core_of = SOV
-		add_core_of = VLA
-
 	}
-
-	provinces={
-		85 150 344 366 3143 3176 3323 3358 6022 6122 6203 6245 6346 9046 9144 9256 9302 11084 11154 11236 11250 
+	provinces = {
+		85
+		150
+		344
+		366
+		3143
+		3176
+		3323
+		3358
+		6022
+		6122
+		6203
+		6245
+		6346
+		9046
+		9144
+		9256
+		9302
+		11084
+		11154
+		11236
+		11250
 	}
-	manpower=1331211
-	buildings_max_level_factor=1.000
-	state_category=town
-	local_supplies=0.000
+	manpower = 1331211
+	buildings_max_level_factor = 1
+	state_category = town
+	local_supplies = 0
 }

@@ -1,15 +1,15 @@
-
-state={
-	id=137
-	name="STATE_137"
-
-	history={
+state = {
+	id = 137
+	name = "STATE_137"
+	history = {
 		owner = UKR
 		victory_points = {
-			9680 1 
+			9680
+			1
 		}
 		victory_points = {
-			6704 1 
+			6704
+			1
 		}
 		buildings = {
 			infrastructure = 3
@@ -18,22 +18,24 @@ state={
 			9680 = {
 				naval_base = 1
 				coastal_bunker = 1
-
 			}
-
 		}
 		add_core_of = UKR
 		add_core_of = SOV
 		add_core_of = CRI
-		add_core_of = VLA
-
 	}
-
-	provinces={
-		705 3722 6704 6724 9677 9680 9718 11649 
+	provinces = {
+		705
+		3722
+		6704
+		6724
+		9677
+		9680
+		9718
+		11649
 	}
-	manpower=1061607
-	buildings_max_level_factor=1.000
-	state_category=city
-	local_supplies=10.000
+	manpower = 1061607
+	buildings_max_level_factor = 1
+	state_category = city
+	local_supplies = 10
 }

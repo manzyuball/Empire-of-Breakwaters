@@ -755,7 +755,7 @@ AUS_balance_of_the_balkan_decisions = {
 	}
 	AUS_preemptive_attack_to_soviet = {
 		available = {
-		VLA = {
+		RUS = {
 			exists = no
 		}
 		}

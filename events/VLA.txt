@@ -1,47 +1,47 @@
-﻿add_namespace = VLA
+﻿add_namespace = RUS
 
 # Tizard mission event for USA
 country_event = {
-	id = VLA.1
-	title = VLA.1.t
-	desc = VLA.1.d
+	id = RUS.1
+	title = RUS.1.t
+	desc = RUS.1.d
 	picture = GFX_report_event_journalists_speech
 		fire_only_once = yes
 	
 	trigger = {
 		focus_progress = {
-			focus = VLA_se1
+			focus = RUS_se1
 			progress > 0.1
 			}
-		tag = VLA
+		tag = RUS
 	}
 	
 	option = {
-		name = VLA.1.a
+		name = RUS.1.a
 		ai_chance = { factor = 50 }
-		custom_effect_tooltip = VLA_teise
+		custom_effect_tooltip = RUS_teise
 		add_to_variable = {
-			var = VLA.VLA_teise_h
+			var = RUS.RUS_teise_h
 			value = 1
 		}
 	}
 	
 	option = {
-		name = VLA.1.b
+		name = RUS.1.b
 		ai_chance = { factor = 5 }
-		custom_effect_tooltip = VLA_gunk
+		custom_effect_tooltip = RUS_gunk
 		add_to_variable = {
-			var = VLA.VLA_gunk_h
+			var = RUS.RUS_gunk_h
 			value = 1
 		}
 	}
 
 	option = {
-		name = VLA.1.c
+		name = RUS.1.c
 		ai_chance = { factor = 5 }
-		custom_effect_tooltip = VLA_roz
+		custom_effect_tooltip = RUS_roz
 		add_to_variable = {
-			var = VLA.VLA_roz_h
+			var = RUS.RUS_roz_h
 			value = 1
 		}
 	}
@@ -49,46 +49,46 @@ country_event = {
 
 # USA helps
 country_event = {
-	id = VLA.2
-	title = VLA.2.t
-	desc = VLA.2.d
+	id = RUS.2
+	title = RUS.2.t
+	desc = RUS.2.d
 	picture = GFX_report_event_journalists_speech
 		fire_only_once = yes
 
 	trigger = {
 		focus_progress = {
-			focus = VLA_se1
+			focus = RUS_se1
 			progress > 0.3
 			}
-		tag = VLA
+		tag = RUS
 	}
 	
 	option = {
-		name = VLA.2.a
+		name = RUS.2.a
 		ai_chance = { factor = 50 }
-		custom_effect_tooltip = VLA_teise
+		custom_effect_tooltip = RUS_teise
 		add_to_variable = {
-			var = VLA.VLA_teise_h
+			var = RUS.RUS_teise_h
 			value = 1
 		}
 	}
 	
 	option = {
-		name = VLA.2.b
+		name = RUS.2.b
 		ai_chance = { factor = 5 }
-		custom_effect_tooltip = VLA_gunk
+		custom_effect_tooltip = RUS_gunk
 		add_to_variable = {
-			var = VLA.VLA_gunk_h
+			var = RUS.RUS_gunk_h
 			value = 1
 		}
 	}
 
 	option = {
-		name = VLA.2.c
+		name = RUS.2.c
 		ai_chance = { factor = 5 }
-		custom_effect_tooltip = VLA_roz
+		custom_effect_tooltip = RUS_roz
 		add_to_variable = {
-			var = VLA.VLA_roz_h
+			var = RUS.RUS_roz_h
 			value = 1
 		}
 	}
@@ -96,215 +96,215 @@ country_event = {
 
 # USA says no
 country_event = {
-	id = VLA.3
-	title = VLA.3.t
-	desc = VLA.3.d
+	id = RUS.3
+	title = RUS.3.t
+	desc = RUS.3.d
 	picture = GFX_report_event_journalists_speech
 		fire_only_once = yes
 
 	trigger = {
 		focus_progress = {
-			focus = VLA_se1
+			focus = RUS_se1
 			progress > 0.5
 			}
-		tag = VLA
+		tag = RUS
 	}
 	
 	option = {
-		name = VLA.3.a
+		name = RUS.3.a
 		ai_chance = { factor = 50 }
-		custom_effect_tooltip = VLA_teise
+		custom_effect_tooltip = RUS_teise
 		add_to_variable = {
-			var = VLA.VLA_teise_h
+			var = RUS.RUS_teise_h
 			value = 1
 		}
 	}
 	
 	option = {
-		name = VLA.3.b
+		name = RUS.3.b
 		ai_chance = { factor = 5 }
-		custom_effect_tooltip = VLA_gunk
+		custom_effect_tooltip = RUS_gunk
 		add_to_variable = {
-			var = VLA.VLA_gunk_h
+			var = RUS.RUS_gunk_h
 			value = 1
 		}
 	}
 
 	option = {
-		name = VLA.3.c
+		name = RUS.3.c
 		ai_chance = { factor = 5 }
-		custom_effect_tooltip = VLA_roz
+		custom_effect_tooltip = RUS_roz
 		add_to_variable = {
-			var = VLA.VLA_roz_h
+			var = RUS.RUS_roz_h
 			value = 1
 		}
 	}
 }
 
 country_event = {
-	id = VLA.4
-	title = VLA.4.t
-	desc = VLA.4.d
+	id = RUS.4
+	title = RUS.4.t
+	desc = RUS.4.d
 	picture = GFX_report_event_journalists_speech
 		fire_only_once = yes
 
 	trigger = {
 		focus_progress = {
-			focus = VLA_se1
+			focus = RUS_se1
 			progress > 0.6
 			}
-		tag = VLA
+		tag = RUS
 	}
 	
 	option = {
-		name = VLA.4.a
+		name = RUS.4.a
 		ai_chance = { factor = 50 }
-		custom_effect_tooltip = VLA_teise
-		add_ideas = VLA_touti1
+		custom_effect_tooltip = RUS_teise
+		add_ideas = RUS_touti1
 		add_to_variable = {
-			var = VLA.VLA_teise_h
+			var = RUS.RUS_teise_h
 			value = 1
 		}
 	}
 	
 	option = {
-		name = VLA.4.b
+		name = RUS.4.b
 		ai_chance = { factor = 5 }
-		custom_effect_tooltip = VLA_gunk
-		add_ideas = VLA_touti2
+		custom_effect_tooltip = RUS_gunk
+		add_ideas = RUS_touti2
 		add_to_variable = {
-			var = VLA.VLA_gunk_h
+			var = RUS.RUS_gunk_h
 			value = 1
 		}
 	}
 
 	option = {
-		name = VLA.4.c
+		name = RUS.4.c
 		ai_chance = { factor = 5 }
-		custom_effect_tooltip = VLA_roz
-		add_ideas = VLA_touti3
+		custom_effect_tooltip = RUS_roz
+		add_ideas = RUS_touti3
 		add_to_variable = {
-			var = VLA.VLA_roz_h
+			var = RUS.RUS_roz_h
 			value = 1
 		}
 	}
 }
 
 country_event = {
-	id = VLA.5
-	title = VLA.5.t
-	desc = VLA.5.d
+	id = RUS.5
+	title = RUS.5.t
+	desc = RUS.5.d
 	picture = GFX_report_event_journalists_speech
 		fire_only_once = yes
 
 	trigger = {
 		focus_progress = {
-			focus = VLA_se1
+			focus = RUS_se1
 			progress > 0.8
 			}
-		tag = VLA
+		tag = RUS
 	}
 	
 	option = {
-		name = VLA.5.a
+		name = RUS.5.a
 		ai_chance = { factor = 50 }
-		custom_effect_tooltip = VLA_teise
-		add_ideas = VLA_syuukyou1
+		custom_effect_tooltip = RUS_teise
+		add_ideas = RUS_syuukyou1
 		add_to_variable = {
-			var = VLA.VLA_teise_h
+			var = RUS.RUS_teise_h
 			value = 1
 		}
 	}
 	
 	option = {
-		name = VLA.5.b
+		name = RUS.5.b
 		ai_chance = { factor = 5 }
-		custom_effect_tooltip = VLA_gunk
-		add_ideas = VLA_syuukyou2
+		custom_effect_tooltip = RUS_gunk
+		add_ideas = RUS_syuukyou2
 		add_to_variable = {
-			var = VLA.VLA_gunk_h
+			var = RUS.RUS_gunk_h
 			value = 1
 		}
 	}
 
 	option = {
-		name = VLA.5.c
+		name = RUS.5.c
 		ai_chance = { factor = 5 }
-		custom_effect_tooltip = VLA_roz
-		add_ideas = VLA_syuukyou3
+		custom_effect_tooltip = RUS_roz
+		add_ideas = RUS_syuukyou3
 		add_to_variable = {
-			var = VLA.VLA_roz_h
+			var = RUS.RUS_roz_h
 			value = 1
 		}
 	}
 }
 
 country_event = {
-	id = VLA.6
-	title = VLA.6.t
-	desc = VLA.6.d
+	id = RUS.6
+	title = RUS.6.t
+	desc = RUS.6.d
 	picture = GFX_report_event_journalists_speech
 		fire_only_once = yes
 
 	trigger = {
-		has_country_flag = VLA_G_WIN
+		has_country_flag = RUS_G_WIN
 	}
 	
 	option = {
-		name = VLA.6.a
-		set_country_flag = VLA_G_WIN2
+		name = RUS.6.a
+		set_country_flag = RUS_G_WIN2
 	}
 }
 
 country_event = {
-	id = VLA.7
-	title = VLA.7.t
-	desc = VLA.7.d
+	id = RUS.7
+	title = RUS.7.t
+	desc = RUS.7.d
 	picture = GFX_report_event_journalists_speech
 		fire_only_once = yes
 
 	trigger = {
-		has_country_flag = VLA_T_WIN
+		has_country_flag = RUS_T_WIN
 	}
 	
 	option = {
-		name = VLA.7.a
-		set_country_flag = VLA_T_WIN2
+		name = RUS.7.a
+		set_country_flag = RUS_T_WIN2
 	}
 }
 
 country_event = {
-	id = VLA.8
-	title = VLA.8.t
-	desc = VLA.8.d
+	id = RUS.8
+	title = RUS.8.t
+	desc = RUS.8.d
 	picture = GFX_report_event_journalists_speech
 		fire_only_once = yes
 
 	trigger = {
-		has_country_flag = VLA_R_WIN
+		has_country_flag = RUS_R_WIN
 	}
 	
 	option = {
-		name = VLA.8.a
-		set_country_flag = VLA_R_WIN2
+		name = RUS.8.a
+		set_country_flag = RUS_R_WIN2
 	}
 }
 
 country_event = {
-	id = VLA.9
-	title = VLA.9.t
-	desc = VLA.9.d
+	id = RUS.9
+	title = RUS.9.t
+	desc = RUS.9.d
 	picture = GFX_report_event_generic_sign_treaty2
 		fire_only_once = yes
 
 	trigger = {
-		tag = VLA
-		has_global_flag = MON_VLA_KOUSYOU_A
+		tag = RUS
+		has_global_flag = MON_RUS_KOUSYOU_A
 	}
 	
 	option = {
-		name = VLA.9.a
-		VLA = {
+		name = RUS.9.a
+		RUS = {
 			add_state_core = 1023
 			add_state_core = 329
 			transfer_state = 1023
@@ -312,25 +312,25 @@ country_event = {
 			give_guarantee = MON
 		
 		}
-		MON = { give_guarantee = VLA }
+		MON = { give_guarantee = RUS }
 
 	}
 }
 country_event = {
-	id = VLA.10
-	title = VLA.10.t
-	desc = VLA.10.d
+	id = RUS.10
+	title = RUS.10.t
+	desc = RUS.10.d
 	picture = GFX_report_event_SOV_military_offensive
 		fire_only_once = yes
 
 	trigger = {
-		tag = VLA
-		has_global_flag = MON_VLA_KOUSYOU_B
+		tag = RUS
+		has_global_flag = MON_RUS_KOUSYOU_B
 	}
 	
 	option = {
-		name = VLA.10.a
-		VLA = {
+		name = RUS.10.a
+		RUS = {
 			create_wargoal = {
 				type = puppet_wargoal_focus
 				target = MON
@@ -343,9 +343,9 @@ country_event = {
 	}
 }
 country_event = {
-	id = VLA.11
-	title = VLA.11.t
-	desc = VLA.11.d
+	id = RUS.11
+	title = RUS.11.t
+	desc = RUS.11.d
 	picture = GFX_report_event_generic_sign_treaty1
 		fire_only_once = yes
 
@@ -354,9 +354,9 @@ country_event = {
 	}
 	
 	option = {
-		name = VLA.11.a
+		name = RUS.11.a
 		give_guarantee = POL
-		POL = { give_guarantee = VLA }
+		POL = { give_guarantee = RUS }
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
 			amount = 2500
@@ -366,19 +366,19 @@ country_event = {
 }
 
 country_event = {
-	id = VLA.12
-	title = VLA.12.t
-	desc = VLA.12.d
+	id = RUS.12
+	title = RUS.12.t
+	desc = RUS.12.d
 	picture = GFX_news_event_005
 
 	trigger = {
-		tag = VLA
+		tag = RUS
 		has_war_with = SOV
 	}
 	mean_time_to_happen = { days = 1 }
 	fire_only_once = yes
 	option = {
-		name = VLA.12.a
+		name = RUS.12.a
 		ai_chance = {
 			base = 9
 			modifier = {
@@ -386,6 +386,6 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-        add_ideas = VLA_KORITU
+        add_ideas = RUS_KORITU
 	}
 }

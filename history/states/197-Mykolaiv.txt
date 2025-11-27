@@ -7,7 +7,7 @@ state={
 		victory_points = {
 			11683 3 
 		}
-		add_claim_by = VLA
+		add_claim_by = RUS
 		owner = UKR
 		buildings = {
 			infrastructure = 3
