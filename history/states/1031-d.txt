@@ -1,23 +1,22 @@
-
-state={
-	id=1031
-	name="STATE_1031"
-
-	history={
-		owner = BRA
+state = {
+	id = 1031
+	name = "STATE_1031"
+	history = {
+		owner = PRU
 		buildings = {
 			infrastructure = 2
-
 		}
-		add_core_of = BRA
-
+		add_core_of = PRU
 	}
-
-	provinces={
-		2160 12902 12916 12973 13870 
+	provinces = {
+		2160
+		12902
+		12916
+		12973
+		13870
 	}
-	manpower=42011
-	buildings_max_level_factor=1.000
-	state_category=pastoral
-	local_supplies=15.000
+	manpower = 42011
+	buildings_max_level_factor = 1
+	state_category = pastoral
+	local_supplies = 15
 }

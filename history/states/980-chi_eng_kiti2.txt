@@ -1,23 +1,26 @@
-state={
-	id=980
-	name="STATE_980"
+state = {
+	id = 980
+	name = "STATE_980"
 	state_category = town
 	history = {
-	owner = ENG
-	add_core_of = CHI
-	add_core_of = MAN
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 3
+			4205 = {
+				naval_base = 2
+				coastal_bunker = 1
+				bunker = 1
+			}
+		}
 	}
-	air_base = 3
-	4205 = {
-		naval_base = 2
-		coastal_bunker = 1
-		bunker = 1
-
+	provinces = {
+		4205
 	}
-	provinces={
-		4205 
-	}
-	manpower=23100
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	manpower = 23100
+	buildings_max_level_factor = 1
+	local_supplies = 0
 }

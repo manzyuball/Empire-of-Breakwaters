@@ -1,23 +1,22 @@
-
-state={
-	id=895
-	name="STATE_895"
-
-	history={
-		owner = TZN
-		add_core_of = TZN
+state = {
+	id = 895
+	name = "STATE_895"
+	history = {
+		owner = ENG
 		buildings = {
 			infrastructure = 2
-
 		}
-
 	}
-
-	provinces={
-		8136 10957 12519 7770 13736 13217
+	provinces = {
+		8136
+		10957
+		12519
+		7770
+		13736
+		13217
 	}
-	manpower=92400
-	buildings_max_level_factor=1.000
-	state_category=pastoral
-	local_supplies=0.000
+	manpower = 92400
+	buildings_max_level_factor = 1
+	state_category = pastoral
+	local_supplies = 0
 }

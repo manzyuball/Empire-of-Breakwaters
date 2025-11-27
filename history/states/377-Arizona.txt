@@ -1,36 +1,41 @@
-
-state={
-	id=377
-	name="STATE_377"
+state = {
+	id = 377
+	name = "STATE_377"
 	manpower = 435572
-	
 	state_category = city
-	
-	resources={
-		steel=20 # was: 40
-		oil=50 # was: 10
-		aluminium=80 
+	resources = {
+		steel = 20		# was: 40
+		oil = 50		# was: 10
+		aluminium = 80
 	}
-
-	history={
-		owner = USN
-		add_core_of = USN
+	history = {
+		owner = CSA
 		buildings = {
 			infrastructure = 2
 			air_base = 2
 		}
 		add_core_of = USA
-		add_core_of = USB
 		add_core_of = CSA
 		victory_points = {
-			853 3 
+			853
+			3
 		}
-
 	}
-
-	provinces={
-		850 853 1793 3834 4796 6897 7747 7821 7920 8115 10573 10783 11814 12765 
+	provinces = {
+		850
+		853
+		1793
+		3834
+		4796
+		6897
+		7747
+		7821
+		7920
+		8115
+		10573
+		10783
+		11814
+		12765
 	}
-
-	local_supplies=8.0 
+	local_supplies = 8
 }

@@ -1,27 +1,38 @@
-
-state={
-	id=432
-	name="STATE_432"
-	resources={
-		oil=12.000
+state = {
+	id = 432
+	name = "STATE_432"
+	resources = {
+		oil = 12
 	}
-
-	history={
-		owner = IVO
-		add_core_of = IVO
+	history = {
+		owner = RAJ
+		add_core_of = RAJ
 		buildings = {
 			infrastructure = 2
 			arms_factory = 2
-
 		}
-
 	}
-
-	provinces={
-		997 1075 1497 1525 1553 1581 7179 7634 9991 10090 10416 10514 12010 12366 12395 12423 13208 
+	provinces = {
+		997
+		1075
+		1497
+		1525
+		1553
+		1581
+		7179
+		7634
+		9991
+		10090
+		10416
+		10514
+		12010
+		12366
+		12395
+		12423
+		13208
 	}
-	manpower=8977100
-	buildings_max_level_factor=1.000
-	state_category=town
-	local_supplies=0.000
+	manpower = 8977100
+	buildings_max_level_factor = 1
+	state_category = town
+	local_supplies = 0
 }

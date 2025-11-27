@@ -1,31 +1,37 @@
-
-state={
-	id=450
-	name="STATE_450"
-
-	history={
-		owner = ENG
+state = {
+	id = 450
+	name = "STATE_450"
+	history = {
+		owner = EGY
+		add_core_of = EGY
 		victory_points = {
-			11954 3 
+			11954
+			3
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			air_base = 1
 			industrial_complex = 2
 			11954 = {
 				naval_base = 1
-
 			}
-
 		}
-
 	}
-
-	provinces={
-		1062 1127 1198 4057 4120 7063 7139 10123 11954 12079 13743 
+	provinces = {
+		1062
+		1127
+		1198
+		4057
+		4120
+		7063
+		7139
+		10123
+		11954
+		12079
+		13743
 	}
-	manpower=82535
-	buildings_max_level_factor=1.000
-	state_category=large_town
-	local_supplies=0.000
+	manpower = 82535
+	buildings_max_level_factor = 1
+	state_category = large_town
+	local_supplies = 0
 }

@@ -1,17 +1,12 @@
-
-state={
-	id=372
-	name="STATE_372"
+state = {
+	id = 372
+	name = "STATE_372"
 	manpower = 1854481
-	
 	state_category = city
-	
-	resources={
-		aluminium=140 # was: 20
+	resources = {
+		aluminium = 140		# was: 20
 	}
-
-
-	history={
+	history = {
 		owner = CSA
 		buildings = {
 			infrastructure = 2
@@ -19,17 +14,26 @@ state={
 		}
 		add_core_of = USA
 		add_core_of = CSA
-		add_core_of = USB
-		add_core_of = USN
 		victory_points = {
-			12489 5
+			12489
+			5
 		}
-
 	}
-
-	provinces={
-		1503 1646 4444 4567 4597 4625 7485 7543 7586 10355 10477 12458 12489 12778 
+	provinces = {
+		1503
+		1646
+		4444
+		4567
+		4597
+		4625
+		7485
+		7543
+		7586
+		10355
+		10477
+		12458
+		12489
+		12778
 	}
-
-	local_supplies=9.0 
+	local_supplies = 9
 }

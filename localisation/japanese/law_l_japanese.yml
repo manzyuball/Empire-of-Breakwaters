@@ -1,0 +1,33 @@
+﻿l_japanese:
+ EOB_normal_economy:0 "通常の経済"
+ # --- 経済法 (民主) ---
+ EOB_eco_dem_laissez_faire:0 "自由放任主義"
+ EOB_eco_dem_laissez_faire_desc:0 "「神の見えざる手」\n\n市場は自律的に調整される。政府が介入して歪めるべきではない。この段階では軍需産業への投資は制限されるが、民間経済は力強く成長するだろう。"
+ EOB_eco_dem_keynesian:0 "ケインズ的介入"
+ EOB_eco_dem_keynesian_desc:0 "「不況の特効薬は公共事業だ」\n\n市場の失敗を認める時が来た。政府主導でダムを作り、道路を敷き、雇用を生み出す。この刺激策によって、社会は安定を取り戻す。"
+ EOB_eco_dem_arsenal:0 "民主的兵器廠"
+ EOB_eco_dem_arsenal_desc:0 "「バターを食べながら大砲を作れ」\n\n自由を守るためには、圧倒的な物量が必要だ。我々の強みは、市民の生活水準を維持しながら、独裁国家を凌駕する兵器を量産できる点にある。"
+
+ # --- 経済法 (共産) ---
+ EOB_eco_com_syndicalism:0 "サンディカリズム自主管理"
+ EOB_eco_com_syndicalism_desc:0 "「工場を労働者の手に」\n\n経営者は追放され、現場の委員会が生産を管理している。労働者の士気は高いが、延々と続く会議によって生産効率は低下している。"
+ EOB_eco_com_five_year_plan:0 "五カ年計画"
+ EOB_eco_com_five_year_plan_desc:0 "「数字は絶対である」\n\n中央計画局が目標を定めた。達成できない工場長はシベリア送りだ。人間性や安全性は無視され、ただグラフの数値だけが上昇していく。"
+ EOB_eco_com_war_communism:0 "戦時共産主義"
+ EOB_eco_com_war_communism_desc:0 "「革命防衛のために全てを」\n\n農民から種籾の一粒まで徴発せよ。都市の労働者はパンのみで生きよ。もはや経済ではない、これは国家規模の兵站活動だ。"
+
+ # --- 経済法 (専制) ---
+ EOB_eco_neu_aristocratic:0 "貴族領経済"
+ EOB_eco_neu_aristocratic_desc:0 "「伝統と秩序」\n\n経済の主導権は、古き良き地主貴族たちが握っている。彼らは変化を嫌い、効率よりも伝統を重んじる。政治的には安定しているが、技術革新は遅々として進まない。"
+ EOB_eco_neu_mercantilism:0 "帝国重商主義"
+ EOB_eco_neu_mercantilism_desc:0 "「富を囲い込め」\n\n帝国の資源を他国に売り渡すなど言語道断。関税障壁を高く積み上げ、全ての利益を本国へと還流させる。"
+ EOB_eco_neu_mobilization:0 "王室総動員令"
+ EOB_eco_neu_mobilization_desc:0 "「陛下の御名において」\n\n全ての鍬を剣に打ち直せ。国民の財産は、すなわち皇帝陛下の財産である。異論を唱える者は非国民として処断される。"
+
+ # --- 経済法 (大衆/ファシズム) ---
+ EOB_eco_fas_corporatism:0 "コーポラティズム"
+ EOB_eco_fas_corporatism_desc:0 "「国家という有機体」\n\n資本家と労働者は対立しない。国家の指導の下、手を取り合って生産に励むのだ。ストライキは禁止され、利益は保証される。"
+ EOB_eco_fas_autarky:0 "アウタルキー"
+ EOB_eco_fas_autarky_desc:0 "「パンからガソリンを作れ」\n\n輸入に頼るから弱くなるのだ。ゴムがないならタンポポから作れ。石油がないなら石炭を液化せよ。完全なる自給自足こそが勝利への道だ。"
+ EOB_eco_fas_total_war:0 "国家総力戦"
+ EOB_eco_fas_total_war_desc:0 "「明日なき戦い」\n\n国が滅ぶまで戦車を作れ。少年兵を訓練し、老人を工場へ送れ。我々が勝利しなければ、明日など来る必要はないのだから。"

@@ -1,14 +1,11 @@
-
-state={
-	id=605
-	name="STATE_605"
-	resources={
-		steel=34.000
+state = {
+	id = 605
+	name = "STATE_605"
+	resources = {
+		steel = 34
 	}
-
-	history={
-		owner = GXC
-		add_core_of = GXC
+	history = {
+		owner = CHI
 		add_core_of = CHI
 		add_core_of = MAN
 		buildings = {
@@ -16,13 +13,14 @@ state={
 			arms_factory = 2
 			industrial_complex = 6
 			air_base = 2
-
 		}
 		victory_points = {
-			4925 5 
+			4925
+			5
 		}
 		victory_points = {
-			6999 20 
+			6999
+			20
 		}
 		1939.1.1 = {
 			buildings = {
@@ -30,18 +28,38 @@ state={
 				infrastructure = 3
 				air_base = 3
 				arms_factory = 2
-
 			}
-
 		}
-
 	}
-
-	provinces={
-		1367 1395 1893 2030 2091 4167 4925 5048 6999 7240 7256 7418 8026 10132 10144 11865 12274 12705 12767 13392 13393 13394 13395 13396 13397 
+	provinces = {
+		1367
+		1395
+		1893
+		2030
+		2091
+		4167
+		4925
+		5048
+		6999
+		7240
+		7256
+		7418
+		8026
+		10132
+		10144
+		11865
+		12274
+		12705
+		12767
+		13392
+		13393
+		13394
+		13395
+		13396
+		13397
 	}
-	manpower=52963300
-	buildings_max_level_factor=1.000
-	state_category=megalopolis
-	local_supplies=0.000
+	manpower = 52963300
+	buildings_max_level_factor = 1
+	state_category = megalopolis
+	local_supplies = 0
 }

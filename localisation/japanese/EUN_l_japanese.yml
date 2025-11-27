@@ -26,21 +26,15 @@
  EUN_paul_henri_spaak_desc:0 "「パンと平和、そして繁栄を」。革命を建前にした現実主義的な商人・銀行家たちであるベネルクス派閥を代表する。戦争はせず、選挙及び民主主義の積極的導入、そして経済の発展と工業化を場合によっては市場経済をも一部導入し推進していこうとする。"
 
  # Ministers
- EUN_jacques_doriot:0 "ジャック・ドリオ"
- EUN_alphonse_juin:0 "アルフォンス・ジュアン"
- EUN_pierre_monatte:0 "ピエール・モナット"
- 
- EUN_wilhelm_pieck:0 "ヴィルヘルム・ピーク"
- EUN_ernst_thalmann:0 "エルンスト・テールマン"
- EUN_heinz_guderian:0 "ハインツ・グデーリアン"
- 
- EUN_antonio_gramsci:0 "アントニオ・グラムシ"
+ EUN_andre_marty:0 "アンドレ・マルティ"
+ EUN_ernst_rohm:0 "エルンスト・レーム"
  EUN_nicola_bombacci:0 "ニコラ・ボンバッチ"
- EUN_italo_balbo:0 "イタロ・バルボ"
+ EUN_willem_drees:0 "ウィレム・ドリース"
  
- EUN_civil_control_committee:0 "市民選挙管理委員会"
- EUN_supreme_economic_council:0 "経済計画最高評議会"
- EUN_henri_winkelman:0 "アンリ・ウィンケルマン"
+ EUN_waldeck_rochet:0 "ワルデック・ロシェ"
+ EUN_fritz_todt:0 "フリッツ・トイント"
+ EUN_alberto_beneduce:0 "アルベルト・ベネドゥーチェ"
+ EUN_camille_gutt:0 "カミーユ・ギュット"
 
  # Traits
  EUN_permanent_revolutionary:0 "永続革命論"
@@ -548,17 +542,57 @@
  EUN_PM_ITA:0 "ムッソリーニ政権"
  EUN_PM_BEN:0 "スパーク政権"
 
- EUN_INT_FRA:0 "内務人民委員：ジャック・ドリオ"
- EUN_INT_GER:0 "内務人民委員：革命警察"
- EUN_INT_ITA:0 "内務人民委員：アントニオ・グラムシ"
- EUN_INT_BEN:0 "内務人民委員：市民選挙管理委員会"
+ EUN_INT_FRA:0 "内務人民委員：アンドレ・マルティ"
+ EUN_INT_GER:0 "内務人民委員：エルンスト・レーム"
+ EUN_INT_ITA:0 "内務人民委員：ニコラ・ボンバッチ"
+ EUN_INT_BEN:0 "内務人民委員：ウィレム・ドリース"
 
- EUN_ECO_FRA:0 "経済人民委員：軍需計画局"
- EUN_ECO_GER:0 "経済人民委員：エルンスト・テールマン"
- EUN_ECO_ITA:0 "経済人民委員：産業復興機構(IRI)"
- EUN_ECO_BEN:0 "経済人民委員：経済計画最高評議会"
+ EUN_ECO_FRA:0 "経済人民委員：ワルデック・ロシェ"
+ EUN_ECO_GER:0 "経済人民委員：フリッツ・トイント"
+ EUN_ECO_ITA:0 "経済人民委員：アルベルト・ベネドゥーチェ"
+ EUN_ECO_BEN:0 "経済人民委員：カミーユ・ギュット"
 
  EUN_MIL_FRA:0 "軍事人民委員：アルフォンス・ジュアン"
  EUN_MIL_GER:0 "軍事人民委員：ハインツ・グデーリアン"
  EUN_MIL_ITA:0 "軍事人民委員：イタロ・バルボ"
  EUN_MIL_BEN:0 "軍事人民委員：ベネルクス防衛軍"
+
+ # New Faction Leader Traits
+ EUN_trotsky_trait:0 "永続革命論"
+ EUN_strasser_trait:0 "赤いプロイセン主義"
+ EUN_mussolini_trait:0 "プロレタリアートのドゥーチェ"
+ EUN_spaak_trait:0 "社会主義の商人"
+
+ # Minister Traits - French
+ EUN_French_Interior_trait:0 "革命的粛清"
+ EUN_French_Economic_trait:0 "革命的集産主義"
+ EUN_French_Military_trait:0 "革命的エラン"
+
+ # Minister Traits - German
+ EUN_German_Interior_trait:0 "官僚的統制"
+ EUN_German_Economic_trait:0 "軍産複合体"
+ EUN_German_Military_trait:0 "装甲電撃戦"
+
+ # Minister Traits - Italian
+ EUN_Italian_Interior_trait:0 "国家サンディカリズム"
+ EUN_Italian_Economic_trait:0 "コーポラティズム経済"
+ EUN_Italian_Military_trait:0 "空の騎士"
+
+ # Minister Traits - Benelux
+ EUN_Benelux_Interior_trait:0 "合意形成政治"
+ EUN_Benelux_Economic_trait:0 "市場社会主義"
+ EUN_Benelux_Military_trait:0 "防衛的統合"
+
+ # Minister Names (Generic)
+ EUN_French_Interior:0 "フランス派閥（内務）"
+ EUN_French_Economic:0 "フランス派閥（経済）"
+ EUN_French_Military:0 "フランス派閥（軍事）"
+ EUN_German_Interior:0 "ドイツ派閥（内務）"
+ EUN_German_Economic:0 "ドイツ派閥（経済）"
+ EUN_German_Military:0 "ドイツ派閥（軍事）"
+ EUN_Italian_Interior:0 "イタリア派閥（内務）"
+ EUN_Italian_Economic:0 "イタリア派閥（経済）"
+ EUN_Italian_Military:0 "イタリア派閥（軍事）"
+ EUN_Benelux_Interior:0 "ベネルクス派閥（内務）"
+ EUN_Benelux_Economic:0 "ベネルクス派閥（経済）"
+ EUN_Benelux_Military:0 "ベネルクス派閥（軍事）"

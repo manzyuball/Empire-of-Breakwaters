@@ -1,28 +1,25 @@
-
-state={
-	id=541
-	name="STATE_541"
-
-	history={
-		owner = TZN
-		add_core_of = TZN
+state = {
+	id = 541
+	name = "STATE_541"
+	history = {
+		owner = ENG
 		buildings = {
 			infrastructure = 2
 			2207 = {
 				naval_base = 4
-
 			}
 		}
 		victory_points = {
-			4879 1 
+			4879
+			1
 		}
 	}
-
-	provinces={
-		2207 4879 
+	provinces = {
+		2207
+		4879
 	}
-	manpower=462000
-	buildings_max_level_factor=1.000
-	state_category=wasteland
-	local_supplies=0.000
+	manpower = 462000
+	buildings_max_level_factor = 1
+	state_category = wasteland
+	local_supplies = 0
 }

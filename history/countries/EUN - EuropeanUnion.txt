@@ -1,13 +1,10 @@
-capital = 1
-
+capital = 965
 oob = "EUN_1936"
-
 set_research_slots = 4
-
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_recon = 1
 	tech_engineers = 1
 	tech_trucks = 1
@@ -29,62 +26,106 @@ set_politics = {
 }
 
 set_popularities = {
-	democratic = 10
-	communism = 60
-	fascism = 10
-	neutrality = 20
+	democratic = 5
+	communism = 90
+	fascism = 5
+	neutrality = 0
 }
 
 recruit_character = EUN_lev_trotsky
 recruit_character = EUN_otto_strasser
 recruit_character = EUN_benito_mussolini
 recruit_character = EUN_paul_henri_spaak
+recruit_character = EUN_German_Interior
+recruit_character = EUN_German_Economic
+recruit_character = EUN_German_Military
+recruit_character = EUN_French_Interior
+recruit_character = EUN_French_Economic
+recruit_character = EUN_French_Military
+recruit_character = EUN_Italian_Interior
+recruit_character = EUN_Italian_Economic
+recruit_character = EUN_Italian_Military
+recruit_character = EUN_Benelux_Interior
+recruit_character = EUN_Benelux_Economic
+recruit_character = EUN_Benelux_Military
+set_variable = {
+	EUN_french_influence = 45
+}
 
-recruit_character = EUN_jacques_doriot
-recruit_character = EUN_alphonse_juin
-recruit_character = EUN_pierre_monatte
+set_variable = {
+	EUN_german_influence = 20
+}
 
-recruit_character = EUN_ernst_thalmann
-recruit_character = EUN_heinz_guderian
-recruit_character = EUN_wilhelm_pieck
+set_variable = {
+	EUN_italian_influence = 15
+}
 
-recruit_character = EUN_antonio_gramsci
-recruit_character = EUN_italo_balbo
-recruit_character = EUN_nicola_bombacci
+set_variable = {
+	EUN_benelux_influence = 35
+}
 
-recruit_character = EUN_supreme_economic_council
-recruit_character = EUN_civil_control_committee
-recruit_character = EUN_henri_winkelman
+set_variable = {
+	EUN_PM_faction = 1
+}
 
-set_variable = { EUN_french_influence = 45 }
-set_variable = { EUN_german_influence = 20 }
-set_variable = { EUN_italian_influence = 15 }
-set_variable = { EUN_benelux_influence = 35 }
-
-# Initial Faction Control (Trotsky is PM, others are mixed/unset or set via effect)
-# We should set initial ministers via effect or just assume they are empty/default.
-# Let's set initial variables to match the starting leader (Trotsky = French PM)
-set_variable = { EUN_PM_faction = 1 }
 # Others are 0 (None) initially until appointed
-set_variable = { EUN_Interior_faction = 0 }
-set_variable = { EUN_Economy_faction = 0 }
-set_variable = { EUN_Military_faction = 0 }
+set_variable = {
+	EUN_Interior_faction = 0
+}
 
-# Dynamic Modifier Variables Initialization
-set_variable = { EUN_eco_ic_bonus = 0 }
-set_variable = { EUN_eco_construction_bonus = 0 }
-set_variable = { EUN_eco_consumer_goods_penalty = 0 }
+set_variable = {
+	EUN_Economy_faction = 0
+}
 
-set_variable = { EUN_army_attack_bonus = 0 }
-set_variable = { EUN_army_defence_bonus = 0 }
-set_variable = { EUN_army_training_speed_bonus = 0 }
+set_variable = {
+	EUN_Military_faction = 0
+}
 
-set_variable = { EUN_factionalism_pp_penalty = 0 }
-set_variable = { EUN_factionalism_stability_penalty = 0 }
-set_variable = { EUN_factionalism_ws_penalty = 0 }
+set_variable = {
+	EUN_eco_ic_bonus = 0
+}
+
+set_variable = {
+	EUN_eco_construction_bonus = 0
+}
+
+set_variable = {
+	EUN_eco_consumer_goods_penalty = 0
+}
+
+set_variable = {
+	EUN_army_attack_bonus = 0
+}
+
+set_variable = {
+	EUN_army_defence_bonus = 0
+}
+
+set_variable = {
+	EUN_army_training_speed_bonus = 0
+}
+
+set_variable = {
+	EUN_factionalism_pp_penalty = 0
+}
+
+set_variable = {
+	EUN_factionalism_stability_penalty = 0
+}
+
+set_variable = {
+	EUN_factionalism_ws_penalty = 0
+}
 
 # Apply Dynamic Modifiers
-add_dynamic_modifier = { modifier = EUN_economy_modifier }
-add_dynamic_modifier = { modifier = EUN_revolutionary_army_modifier }
-add_dynamic_modifier = { modifier = EUN_factionalism_modifier }
+add_dynamic_modifier = {
+	modifier = EUN_economy_modifier
+}
 
+add_dynamic_modifier = {
+	modifier = EUN_revolutionary_army_modifier
+}
+
+add_dynamic_modifier = {
+	modifier = EUN_factionalism_modifier
+}

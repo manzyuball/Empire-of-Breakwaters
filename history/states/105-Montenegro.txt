@@ -1,37 +1,35 @@
-
-state={
-	id=105
-	name="STATE_105"
-	resources={
-		chromium=30.000
-		aluminium=70.000
+state = {
+	id = 105
+	name = "STATE_105"
+	resources = {
+		chromium = 30
+		aluminium = 70
 	}
-
-	history={
+	history = {
 		victory_points = {
-			9809 3 
+			9809
+			3
 		}
-		owner = YUG
+		owner = BUL
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
 			arms_factory = 2
 			9809 = {
 				naval_base = 4
-
 			}
-
 		}
-		add_core_of = YUG
-
+		add_core_of = BUL
 	}
-
-	provinces={
-		937 6913 9809 9821 11858 
+	provinces = {
+		937
+		6913
+		9809
+		9821
+		11858
 	}
-	manpower=895500
-	buildings_max_level_factor=1.000
-	state_category=rural
-
-	local_supplies=3.0 
+	manpower = 895500
+	buildings_max_level_factor = 1
+	state_category = rural
+	local_supplies = 3
 }

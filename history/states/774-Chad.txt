@@ -1,25 +1,25 @@
-
-state={
-	id=774
-	name="STATE_774"
-
-	history={
-		owner = GNA
-		add_core_of = GNA
+state = {
+	id = 774
+	name = "STATE_774"
+	history = {
+		owner = TZN
+		add_core_of = TZN
 		buildings = {
 			infrastructure = 1
-
 		}
 		victory_points = {
-			2081 1 
+			2081
+			1
 		}
 	}
-
-	provinces={
-		1883 2081 9152 13740 
+	provinces = {
+		1883
+		2081
+		9152
+		13740
 	}
-	manpower=1032456
-	buildings_max_level_factor=1.000
-	state_category=pastoral
-	local_supplies=3.000
+	manpower = 1032456
+	buildings_max_level_factor = 1
+	state_category = pastoral
+	local_supplies = 3
 }
