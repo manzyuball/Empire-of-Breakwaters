@@ -10,18 +10,18 @@ state={
 		add_core_of = CHI
 		add_core_of = MAN
 		victory_points = {
-			4189 1 
+			13399 1 
 		}
 		buildings = {
 			infrastructure = 2
-			4189 = {
+			13399 = {
 				naval_base = 1
 			}
 		}
 	}
 	
 	provinces={
-		4189 
+		13399
 	}
 
 	local_supplies=0.0 
