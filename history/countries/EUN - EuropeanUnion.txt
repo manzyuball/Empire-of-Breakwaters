@@ -179,163 +179,168 @@ set_technology = {
 }
 
 create_equipment_variant = {
-	name = "1936年型軽戦軁E
-	type = light_tank_chassis_2
-	parent_version = 1
-	modules = {
-		main_armament_slot = tank_auto_cannon
-		turret_type_slot = tank_light_two_man_tank_turret
-		suspension_type_slot = tank_christie_suspension
-		armor_type_slot = tank_riveted_armor
-		engine_type_slot = tank_gasoline_engine
+		name = "1936?????"
+		type = light_tank_chassis_2
+		parent_version = 1
+		modules = {
+			main_armament_slot = tank_auto_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 3
+			tank_nsb_armor_upgrade = 0
+		}
+		icon = "GFX_basic_light_tank_medium"
 	}
-	upgrades = {
-		tank_nsb_engine_upgrade = 3
-		tank_nsb_armor_upgrade = 0
+	create_equipment_variant = {
+		name = "1936??????"
+		type = ship_hull_carrier_1
+		parent_version = 1
+		modules = {
+			    fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = carrier_ship_engine_2
+				front_1_custom_slot = ship_deck_space
+				mid_1_custom_slot = ship_armor_carrier_deck
+		}
 	}
-	icon = "GFX_basic_light_tank_medium"
-}
+	create_equipment_variant = {
+		name = "1936????"
+		type = ship_hull_heavy_2
+		parent_version = 1
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_3
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_bb_1
+				front_1_custom_slot = ship_anti_air_2
+				mid_1_custom_slot = ship_airplane_launcher_2
+				mid_2_custom_slot = ship_anti_air_2
+				rear_1_custom_slot = ship_anti_air_2
+		}
+	}
+	create_equipment_variant = {
+		name = "1936??????"
+		type = ship_hull_heavy_2
+		parent_version = 1
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_3
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = empty
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_bb_1
+				front_1_custom_slot =  ship_heavy_battery_3
+				mid_1_custom_slot = ship_airplane_launcher_2
+				mid_2_custom_slot = ship_airplane_launcher_2
+				rear_1_custom_slot = ship_airplane_launcher_2
+		}
+	}
+	create_equipment_variant = {
+		name = "1936??????"
+		type = ship_hull_cruiser_2
+		parent_version = 1
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			front_1_custom_slot = ship_light_medium_battery_2
+			mid_1_custom_slot = ship_light_medium_battery_2
+			mid_2_custom_slot = ship_light_medium_battery_2
+			rear_1_custom_slot = ship_airplane_launcher_2
+		}
+	}
+	create_equipment_variant = {
+		name = "1936??????"
+		type = ship_hull_cruiser_2
+		parent_version = 1
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_3
+			front_1_custom_slot = ship_medium_battery_2
+			mid_1_custom_slot = ship_anti_air_2
+			mid_2_custom_slot = ship_medium_battery_2
+			rear_1_custom_slot = ship_anti_air_2
+		}
+	}
+	create_equipment_variant = {
+		name = "1936?????"
+		type = ship_hull_light_2
+		parent_version = 1
+		modules = {
+				fixed_ship_battery_slot = dp_light_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_radar_slot = ship_sonar_1
+				fixed_ship_engine_slot = light_ship_engine_2
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = ship_depth_charge_2
+		}
+	}
+	create_equipment_variant = {
+			name = "1936?????"
+			type = ship_hull_submarine_2
+			name_group = ENG_SS_HISTORICAL
+			parent_version = 1
+			modules = {
+				fixed_ship_torpedo_slot = ship_torpedo_sub_2
+				fixed_ship_engine_slot = sub_ship_engine_2
+				rear_1_custom_slot = ship_torpedo_sub_2
+			}
+	}
 
+	create_equipment_variant = {
+			name = "1936?????" 
+			type = small_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x
+				fixed_auxiliary_weapon_slot_1 = light_mg_4x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = drop_tanks
+			}
+		}
 
-create_equipment_variant = {
-	name = "1936年型戦艦"
-	type = ship_hull_heavy_2
-	parent_version = 1
-	modules = {
-		fixed_ship_battery_slot = ship_heavy_battery_3
-		fixed_ship_anti_air_slot = ship_anti_air_2
-		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-		fixed_ship_radar_slot = empty
-		fixed_ship_engine_slot = heavy_ship_engine_2
-		fixed_ship_armor_slot = ship_armor_bb_1
-		front_1_custom_slot = ship_anti_air_2
-		mid_1_custom_slot = ship_airplane_launcher_2
-		mid_2_custom_slot = ship_anti_air_2
-		rear_1_custom_slot = ship_anti_air_2
-	}
-}
-
-create_equipment_variant = {
-	name = "1936年型巡洋戦艦"
-	type = ship_hull_heavy_2
-	parent_version = 1
-	modules = {
-		fixed_ship_battery_slot = ship_heavy_battery_3
-		fixed_ship_anti_air_slot = ship_anti_air_2
-		fixed_ship_fire_control_system_slot = empty
-		fixed_ship_radar_slot = empty
-		fixed_ship_engine_slot = heavy_ship_engine_2
-		fixed_ship_armor_slot = ship_armor_c_1
-		front_1_custom_slot = ship_heavy_battery_3
-		mid_1_custom_slot = ship_airplane_launcher_2
-		mid_2_custom_slot = ship_airplane_launcher_2
-		rear_1_custom_slot = ship_airplane_launcher_2
-	}
-}
-
-create_equipment_variant = {
-	name = "1936年型軽巡洋艦"
-	type = ship_hull_cruiser_2
-	parent_version = 1
-	modules = {
-		fixed_ship_battery_slot = ship_light_medium_battery_2
-		fixed_ship_anti_air_slot = ship_anti_air_2
-		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-		fixed_ship_radar_slot = empty
-		fixed_ship_engine_slot = cruiser_ship_engine_2
-		fixed_ship_armor_slot = ship_armor_cruiser_2
-		front_1_custom_slot = ship_light_medium_battery_2
-		mid_1_custom_slot = ship_light_medium_battery_2
-		mid_2_custom_slot = ship_light_medium_battery_2
-		rear_1_custom_slot = ship_airplane_launcher_2
-	}
-}
-
-create_equipment_variant = {
-	name = "1936年型重巡洋艦"
-	type = ship_hull_cruiser_2
-	parent_version = 1
-	modules = {
-		fixed_ship_battery_slot = ship_medium_battery_2
-		fixed_ship_anti_air_slot = ship_anti_air_2
-		fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-		fixed_ship_radar_slot = empty
-		fixed_ship_engine_slot = cruiser_ship_engine_2
-		fixed_ship_armor_slot = ship_armor_cruiser_3
-		front_1_custom_slot = ship_medium_battery_2
-		mid_1_custom_slot = ship_anti_air_2
-		mid_2_custom_slot = ship_medium_battery_2
-		rear_1_custom_slot = ship_anti_air_2
-	}
-}
-
-create_equipment_variant = {
-	name = "1936年型駁E��艦"
-	type = ship_hull_light_2
-	parent_version = 1
-	modules = {
-		fixed_ship_battery_slot = dp_light_battery_2
-		fixed_ship_anti_air_slot = ship_anti_air_1
-		fixed_ship_radar_slot = ship_sonar_1
-		fixed_ship_engine_slot = light_ship_engine_2
-		fixed_ship_torpedo_slot = ship_torpedo_1
-		mid_1_custom_slot = ship_depth_charge_2
-	}
-}
-
-create_equipment_variant = {
-	name = "1936年型潜水艦"
-	type = ship_hull_submarine_2
-	name_group = ENG_SS_HISTORICAL
-	parent_version = 1
-	modules = {
-		fixed_ship_torpedo_slot = ship_torpedo_sub_2
-		fixed_ship_engine_slot = sub_ship_engine_2
-		rear_1_custom_slot = ship_torpedo_sub_2
-	}
-}
-
-create_equipment_variant = {
-	name = "1936年型戦闘橁E
-	type = small_plane_airframe_1
-	modules = {
-		fixed_main_weapon_slot = light_mg_4x
-		fixed_auxiliary_weapon_slot_1 = light_mg_4x
-		engine_type_slot = engine_2_1x
-		special_type_slot_1 = drop_tanks
-	}
-}
-
-create_equipment_variant = {
-	name = "1936年型近接航空支援橁E
-	type = small_plane_cas_airframe_1
-	modules = {
-		fixed_main_weapon_slot = small_bomb_bay
-		fixed_auxiliary_weapon_slot_1 = empty
-		engine_type_slot = engine_2_1x
-		special_type_slot_1 = drop_tanks
-		special_type_slot_2 = dive_brakes_small
-	}
-}
-
-create_equipment_variant = {
-	name = "1936年型艦上攻撁E��E
-	type = cv_small_plane_naval_bomber_airframe_1
-	modules = {
-		fixed_main_weapon_slot = torpedo_mounting
-		engine_type_slot = engine_2_1x
-		special_type_slot_1 = drop_tanks
-		special_type_slot_2 = fuel_tanks_small
-	}
-}
-
-create_equipment_variant = {
-	name = "1936年型艦載戦闘橁E
-	type = cv_small_plane_airframe_1
-	modules = {
-		fixed_main_weapon_slot = light_mg_4x
-		engine_type_slot = engine_2_1x
-		special_type_slot_1 = drop_tanks
-		special_type_slot_2 = fuel_tanks_small
-	}
-}
+		create_equipment_variant = {
+			name = "1936?????????" 
+			type = small_plane_cas_airframe_1
+			modules = {
+				fixed_main_weapon_slot = small_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = empty
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = drop_tanks
+				special_type_slot_2 = dive_brakes_small
+			}
+		}
+		create_equipment_variant = {
+			name = "1936???????" 
+			type = cv_small_plane_naval_bomber_airframe_1
+			modules = {
+				fixed_main_weapon_slot = torpedo_mounting
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = drop_tanks
+				special_type_slot_2 = fuel_tanks_small
+			}
+		}
+		create_equipment_variant = {
+			name = "1936???????" 
+			type = cv_small_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = drop_tanks
+				special_type_slot_2 = fuel_tanks_small
+			}
+		}

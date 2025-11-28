@@ -25,26 +25,6 @@
  EUN_paul_henri_spaak:0 "ポール＝アンリ・スパーク"
  EUN_paul_henri_spaak_desc:0 "「パンと平和、そして繁栄を」。革命を建前にした現実主義的な商人・銀行家たちであるベネルクス派閥を代表する。戦争はせず、選挙及び民主主義の積極的導入、そして経済の発展と工業化を場合によっては市場経済をも一部導入し推進していこうとする。"
 
- # Ministers
- EUN_andre_marty:0 "アンドレ・マルティ"
- EUN_ernst_rohm:0 "エルンスト・レーム"
- EUN_nicola_bombacci:0 "ニコラ・ボンバッチ"
- EUN_willem_drees:0 "ウィレム・ドリース"
- 
- EUN_waldeck_rochet:0 "ワルデック・ロシェ"
- EUN_fritz_todt:0 "フリッツ・トイント"
- EUN_alberto_beneduce:0 "アルベルト・ベネドゥーチェ"
- EUN_camille_gutt:0 "カミーユ・ギュット"
-
- # Traits
- EUN_permanent_revolutionary:0 "永続革命論"
- EUN_red_prussianism:0 "赤いプロイセン主義"
- EUN_proletarian_duce:0 "プロレタリアートのドゥーチェ"
- EUN_socialist_merchant:0 "社会主義の商人"
-
- EUN_violent_agitation:0 "暴力的扇動"
- EUN_aggressive_doctrine:0 "攻撃的ドクトリン"
- EUN_workers_self_management:0 "労働者自主管理"
 
  EUN_stasi_precursor:0 "秘密警察の先駆者"
  EUN_planned_economy_expert:0 "計画経済の専門家"
@@ -53,26 +33,10 @@
  EUN_cultural_hegemony:0 "文化的ヘゲモニー"
  EUN_autarky_socialization:0 "アウタルキーと社会化"
  EUN_knights_of_the_air:0 "空の騎士"
- # Events
- EUN_politics.1.t:0 "年次党大会"
- EUN_politics.1.d:0 "2年に一度の党大会が開催された。各派閥は自らの影響力を拡大し、欧州連合の主導権を握ろうと躍起になっている。"
- EUN_politics.1.a:0 "フランス派閥（革命委員会）を支持する"
- EUN_politics.1.b:0 "ドイツ派閥（全ドイツ解放戦線）を支持する"
- EUN_politics.1.c:0 "イタリア派閥（地中海未来派）を支持する"
- EUN_politics.1.d:0 "ベネルクス派閥（欧州協同組合連合）を支持する"
-
- EUN_politics.2.t:0 "派閥の暴走"
- EUN_politics.2.d:0 "一つの派閥が全ての権力を掌握した結果、彼らの過激な思想が歯止めなく実行され始めている！他国はこれを脅威と見なし、包囲網を形成しつつある..."
- EUN_politics.2.a:0 "我々はやりすぎたのか？"
-
- EUN_politics.3.t:0 "政治的麻痺"
- EUN_politics.3.d:0 "議長、内務、経済、軍事...全てのポストが異なる派閥によって占められている。意見の対立により、政府は完全に機能不全に陥っている。"
- EUN_politics.3.a:0 "何も決められない..."
 
  # Dynamic Modifiers
  EUN_economy_modifier:0 "欧州連合の経済"
  EUN_revolutionary_army_modifier:0 "連合革命軍"
- EUN_factionalism_modifier:0 "派閥主義"
 
  # National Focus
  EUN_first_party_congress:0 "第一回党大会"
@@ -282,7 +246,6 @@
  EUN_mil_prussian_discipline_tooltip:0 "§Y連合革命軍§!\n£army_experience 師団防御: §G+5%§!\n£army_experience 指揮統制率: §G+5%§!"
  EUN_mil_armor_defence_10_tooltip:0 "§Y連合革命軍§!\n£army_experience 機甲部隊防御: §G+10%§!"
  
- EUN_mil_battleship_cost_10_tooltip:0 "§Y連合革命軍§!\n£navy_experience 戦艦生産コスト: §G-10%§!"
  EUN_mil_air_superiority_10_tooltip:0 "§Y連合革命軍§!\n£air_experience 航空優勢: §G+10%§!"
  EUN_mil_carrier_cost_15_tooltip:0 "§Y連合革命軍§!\n£navy_experience 空母生産コスト: §G-15%§!"
  EUN_mil_naval_strike_10_tooltip:0 "§Y連合革命軍§!\n£navy_experience 対艦攻撃: §G+10%§!"
@@ -451,12 +414,6 @@
  EUN_election_system:0 "選挙制度の整備"
  EUN_election_system_desc:0 "民主的な選挙制度と公開討論の文化を連合に定着させる。派閥間の権力闘争を、暴力ではなく議論と投票によって解決する制度的枠組みを構築する。真の民主主義は、異なる意見の平和的共存から始まる。"
  
- EUN_consensus_formation:0 "派閥間合意形成"
- EUN_consensus_formation_desc:0 "対立する派閥間で建設的な対話を促進し、政策的合意を形成する。妥協と協調の文化を育むことで、連合の政治的安定性が向上する。分裂ではなく、統合への道を選ぶ。"
- 
- EUN_reconciliation:0 "歴史的和解"
- EUN_reconciliation_desc:0 "フランスとドイツ、イタリアとオーストリアなど、長年の敵対関係にあった国々の間で歴史的和解を実現する。過去の戦争と憎しみを乗り越え、共通の未来に向かって歩み出す。欧州の悲劇的な歴史に終止符を打つ。"
-
  # 鉄と血系統
  EUN_iron_blood_route:0 "鉄と血"
  EUN_iron_blood_route_desc:0 "ドイツ・ベネルクス派閥がビスマルクの有名な言葉「鉄と血」の精神を体現する。理想主義的な演説ではなく、軍事力と現実政治によって欧州を統合する。強者が弱者を従える―それが歴史の法則である。"
@@ -464,8 +421,8 @@
  EUN_nordic_diplomacy:0 "北欧侵攻"
  EUN_nordic_diplomacy_desc:0 "スカンディナビア諸国への軍事的圧力を強化する。デンマーク、ノルウェー、スウェーデンの中立を許さず、連合の勢力圏に組み込む。バルト海は内海となり、北欧の資源が連合の戦争遂行を支える。"
  
- EUN_abandon_italy:0 "イタリアの後回し"
- EUN_abandon_italy_desc:0 "ドイツ・ベネルクス主導による北欧重視路線。地中海のイタリアよりも北海・バルト海の戦略的価値を優先し、イタリア派閥の影響力を相対的に低下させる。地政学的現実が、理念的連帯に優先する。"
+ EUN_delayed_recovery:0 "遅れた回収"
+ EUN_delayed_recovery_desc:0 "19世紀のイタリア統一運動「リソルジメント」の理念を蘇らせ、欧州統合の精神的支柱とする。分断された欧州諸国を一つの国家へと統合する―それは新たなローマ帝国の建設に他ならない。イタリアの夢が欧州全土に広がる。"
 
  # 最終統合ルート
  EUN_Revolution_demagogue:0 "革命の扇動"
@@ -528,71 +485,101 @@
  EUN_paul_henri_spaak:0 "ポール＝アンリ・スパーク"
  EUN_paul_henri_spaak_desc:0 "「パンと自由を人々に！」。ベネルクスの穏健派リーダーであり、過激化する欧州連合の中で理性を保とうと奮闘している。"
 
- # --- Characters / Ministers ---
- EUN_jacques_doriot:0 "ジャック・ドリオ"
- EUN_alphonse_juin:0 "アルフォンス・ジュアン"
- EUN_ernst_thalmann:0 "エルンスト・テールマン"
- EUN_heinz_guderian:0 "ハインツ・グデーリアン"
- EUN_antonio_gramsci:0 "アントニオ・グラムシ"
- EUN_italo_balbo:0 "イタロ・バルボ"
-
  # --- Minister Ideas ---
  EUN_PM_FRA:0 "トロツキー政権"
  EUN_PM_GER:0 "シュトラッサー政権"
  EUN_PM_ITA:0 "ムッソリーニ政権"
  EUN_PM_BEN:0 "スパーク政権"
+ EUN_trotsky_trait:0 "フランス派閥の議長"
+ EUN_strasser_trait:0 "ドイツ派閥の議長"
+ EUN_mussolini_trait:0 "イタリア派閥の議長"
+ EUN_spaak_trait:0 "ベネルクス派閥の議長"
+ # --- National Focus Tooltips ---
+ EUN_first_congress_tooltip:0 "第一回連合議会を開催し、初期の閣僚を選出します。"
+ EUN_second_congress_tooltip:0 "第二回連合議会を開催し、閣僚を再選出または交代させます。"
+ EUN_third_congress_tooltip:0 "第三回連合議会を開催し、最終的な閣僚体制を決定します。"
 
- EUN_INT_FRA:0 "内務人民委員：アンドレ・マルティ"
- EUN_INT_GER:0 "内務人民委員：エルンスト・レーム"
- EUN_INT_ITA:0 "内務人民委員：ニコラ・ボンバッチ"
- EUN_INT_BEN:0 "内務人民委員：ウィレム・ドリース"
+ # European Union Election Events
+ EuropeanUnion_Election.1.t:0 "第一回連合議会：議長の選出"
+ EuropeanUnion_Election.1.desc:0 "第一回連合議会の最初の議題は、欧州連合を率いる議長の選出である。各派閥は自らの候補者を推しており、激しい議論が交わされている。"
+ EuropeanUnion_Election.1.a:0 "フランス派閥（トロツキー）を支持する"
+ EuropeanUnion_Election.1.b:0 "ドイツ派閥（シュトラッサー）を支持する"
+ EuropeanUnion_Election.1.c:0 "イタリア派閥（ムッソリーニ）を支持する"
+ EuropeanUnion_Election.1.d:0 "ベネルクス派閥（スパーク）を支持する"
 
- EUN_ECO_FRA:0 "経済人民委員：ワルデック・ロシェ"
- EUN_ECO_GER:0 "経済人民委員：フリッツ・トイント"
- EUN_ECO_ITA:0 "経済人民委員：アルベルト・ベネドゥーチェ"
- EUN_ECO_BEN:0 "経済人民委員：カミーユ・ギュット"
+ EuropeanUnion_Election.2.t:0 "第一回連合議会：経済人民委員の選出"
+ EuropeanUnion_Election.2.desc:0 "続いて、連合の経済政策を担う経済人民委員を選出する。計画経済か、市場社会主義か、それともコーポラティズムか。経済の舵取りは重大な責任を伴う。"
+ EuropeanUnion_Election.2.a:0 "フランス派閥（集産主義）を支持する"
+ EuropeanUnion_Election.2.b:0 "ドイツ派閥（軍産複合体）を支持する"
+ EuropeanUnion_Election.2.c:0 "イタリア派閥（コーポラティズム）を支持する"
+ EuropeanUnion_Election.2.d:0 "ベネルクス派閥（市場社会主義）を支持する"
 
- EUN_MIL_FRA:0 "軍事人民委員：アルフォンス・ジュアン"
- EUN_MIL_GER:0 "軍事人民委員：ハインツ・グデーリアン"
- EUN_MIL_ITA:0 "軍事人民委員：イタロ・バルボ"
- EUN_MIL_BEN:0 "軍事人民委員：ベネルクス防衛軍"
+ EuropeanUnion_Election.3.t:0 "第一回連合議会：軍事人民委員の選出"
+ EuropeanUnion_Election.3.desc:0 "革命の防衛と拡大を担う軍事人民委員の選出に移る。ドクトリンの違いは軍の編成に大きな影響を与えるだろう。"
+ EuropeanUnion_Election.3.a:0 "フランス派閥（革命的エラン）を支持する"
+ EuropeanUnion_Election.3.b:0 "ドイツ派閥（機動戦）を支持する"
+ EuropeanUnion_Election.3.c:0 "イタリア派閥（空軍優先）を支持する"
+ EuropeanUnion_Election.3.d:0 "ベネルクス派閥（防衛重視）を支持する"
 
- # New Faction Leader Traits
- EUN_trotsky_trait:0 "永続革命論"
- EUN_strasser_trait:0 "赤いプロイセン主義"
- EUN_mussolini_trait:0 "プロレタリアートのドゥーチェ"
- EUN_spaak_trait:0 "社会主義の商人"
+ EuropeanUnion_Election.4.t:0 "第一回連合議会：内務人民委員の選出"
+ EuropeanUnion_Election.4.desc:0 "最後に、国内の治安と秩序を維持する内務人民委員を選出する。粛清か、監視か、それとも融和か。"
+ EuropeanUnion_Election.4.a:0 "フランス派閥（革命的粛清）を支持する"
+ EuropeanUnion_Election.4.b:0 "ドイツ派閥（秘密警察）を支持する"
+ EuropeanUnion_Election.4.c:0 "イタリア派閥（国家サンディカリズム）を支持する"
+ EuropeanUnion_Election.4.d:0 "ベネルクス派閥（合意形成）を支持する"
 
- # Minister Traits - French
- EUN_French_Interior_trait:0 "革命的粛清"
- EUN_French_Economic_trait:0 "革命的集産主義"
- EUN_French_Military_trait:0 "革命的エラン"
+ EuropeanUnion_Election.5.t:0 "第二回連合議会：議長の再選出"
+ EuropeanUnion_Election.5.desc:0 "第二回連合議会が開催された。これまでの実績を評価し、新たな議長を選出する時が来た。"
+ EuropeanUnion_Election.5.a:0 "フランス派閥（トロツキー）を支持する"
+ EuropeanUnion_Election.5.b:0 "ドイツ派閥（シュトラッサー）を支持する"
+ EuropeanUnion_Election.5.c:0 "イタリア派閥（ムッソリーニ）を支持する"
+ EuropeanUnion_Election.5.d:0 "ベネルクス派閥（スパーク）を支持する"
 
- # Minister Traits - German
- EUN_German_Interior_trait:0 "官僚的統制"
- EUN_German_Economic_trait:0 "軍産複合体"
- EUN_German_Military_trait:0 "装甲電撃戦"
+ EuropeanUnion_Election.6.t:0 "第二回連合議会：経済人民委員の再選出"
+ EuropeanUnion_Election.6.desc:0 "経済政策の見直しが行われる。現状を維持するか、新たな方針を採用するか。"
+ EuropeanUnion_Election.6.a:0 "フランス派閥（集産主義）を支持する"
+ EuropeanUnion_Election.6.b:0 "ドイツ派閥（軍産複合体）を支持する"
+ EuropeanUnion_Election.6.c:0 "イタリア派閥（コーポラティズム）を支持する"
+ EuropeanUnion_Election.6.d:0 "ベネルクス派閥（市場社会主義）を支持する"
 
- # Minister Traits - Italian
- EUN_Italian_Interior_trait:0 "国家サンディカリズム"
- EUN_Italian_Economic_trait:0 "コーポラティズム経済"
- EUN_Italian_Military_trait:0 "空の騎士"
+ EuropeanUnion_Election.7.t:0 "第二回連合議会：軍事人民委員の再選出"
+ EuropeanUnion_Election.7.desc:0 "軍事ドクトリンの再評価が行われる。迫りくる脅威に対抗するため、最適な指導者を選ばねばならない。"
+ EuropeanUnion_Election.7.a:0 "フランス派閥（革命的エラン）を支持する"
+ EuropeanUnion_Election.7.b:0 "ドイツ派閥（機動戦）を支持する"
+ EuropeanUnion_Election.7.c:0 "イタリア派閥（空軍優先）を支持する"
+ EuropeanUnion_Election.7.d:0 "ベネルクス派閥（防衛重視）を支持する"
 
- # Minister Traits - Benelux
- EUN_Benelux_Interior_trait:0 "合意形成政治"
- EUN_Benelux_Economic_trait:0 "市場社会主義"
- EUN_Benelux_Military_trait:0 "防衛的統合"
+ EuropeanUnion_Election.8.t:0 "第二回連合議会：内務人民委員の再選出"
+ EuropeanUnion_Election.8.desc:0 "内務政策の再考が行われる。社会の安定を保つために誰が適任か。"
+ EuropeanUnion_Election.8.a:0 "フランス派閥（革命的粛清）を支持する"
+ EuropeanUnion_Election.8.b:0 "ドイツ派閥（秘密警察）を支持する"
+ EuropeanUnion_Election.8.c:0 "イタリア派閥（国家サンディカリズム）を支持する"
+ EuropeanUnion_Election.8.d:0 "ベネルクス派閥（合意形成）を支持する"
 
- # Minister Names (Generic)
- EUN_French_Interior:0 "フランス派閥（内務）"
- EUN_French_Economic:0 "フランス派閥（経済）"
- EUN_French_Military:0 "フランス派閥（軍事）"
- EUN_German_Interior:0 "ドイツ派閥（内務）"
- EUN_German_Economic:0 "ドイツ派閥（経済）"
- EUN_German_Military:0 "ドイツ派閥（軍事）"
- EUN_Italian_Interior:0 "イタリア派閥（内務）"
- EUN_Italian_Economic:0 "イタリア派閥（経済）"
- EUN_Italian_Military:0 "イタリア派閥（軍事）"
- EUN_Benelux_Interior:0 "ベネルクス派閥（内務）"
- EUN_Benelux_Economic:0 "ベネルクス派閥（経済）"
- EUN_Benelux_Military:0 "ベネルクス派閥（軍事）"
+ EuropeanUnion_Election.9.t:0 "第三回連合議会：議長の最終選出"
+ EuropeanUnion_Election.9.desc:0 "第三回連合議会。これが最後の大規模な改選となるかもしれない。連合の運命を託す指導者を慎重に選ぶ必要がある。"
+ EuropeanUnion_Election.9.a:0 "フランス派閥（トロツキー）を支持する"
+ EuropeanUnion_Election.9.b:0 "ドイツ派閥（シュトラッサー）を支持する"
+ EuropeanUnion_Election.9.c:0 "イタリア派閥（ムッソリーニ）を支持する"
+ EuropeanUnion_Election.9.d:0 "ベネルクス派閥（スパーク）を支持する"
+
+ EuropeanUnion_Election.10.t:0 "第三回連合議会：経済人民委員の最終選出"
+ EuropeanUnion_Election.10.desc:0 "総力戦に耐えうる経済体制を確立するため、最後の経済人民委員を選出する。"
+ EuropeanUnion_Election.10.a:0 "フランス派閥（集産主義）を支持する"
+ EuropeanUnion_Election.10.b:0 "ドイツ派閥（軍産複合体）を支持する"
+ EuropeanUnion_Election.10.c:0 "イタリア派閥（コーポラティズム）を支持する"
+ EuropeanUnion_Election.10.d:0 "ベネルクス派閥（市場社会主義）を支持する"
+
+ EuropeanUnion_Election.11.t:0 "第三回連合議会：軍事人民委員の最終選出"
+ EuropeanUnion_Election.11.desc:0 "最終決戦に向けた軍事指導部の確立。勝利への道を切り開くのは誰か。"
+ EuropeanUnion_Election.11.a:0 "フランス派閥（革命的エラン）を支持する"
+ EuropeanUnion_Election.11.b:0 "ドイツ派閥（機動戦）を支持する"
+ EuropeanUnion_Election.11.c:0 "イタリア派閥（空軍優先）を支持する"
+ EuropeanUnion_Election.11.d:0 "ベネルクス派閥（防衛重視）を支持する"
+
+ EuropeanUnion_Election.12.t:0 "第三回連合議会：内務人民委員の最終選出"
+ EuropeanUnion_Election.12.desc:0 "後方の安全を確保し、国家の結束を固めるための最後の内務人民委員選出。"
+ EuropeanUnion_Election.12.a:0 "フランス派閥（革命的粛清）を支持する"
+ EuropeanUnion_Election.12.b:0 "ドイツ派閥（秘密警察）を支持する"
+ EuropeanUnion_Election.12.c:0 "イタリア派閥（国家サンディカリズム）を支持する"
+ EuropeanUnion_Election.12.d:0 "ベネルクス派閥（合意形成）を支持する"

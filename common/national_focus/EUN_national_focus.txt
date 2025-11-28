@@ -686,7 +686,7 @@ focus_tree = {
 		cost = 10
 		relative_position_id = EUN_expand_iri
 		available = {
-			has_completed_focus = EUN_red_marketism
+			has_completed_focus = EUN_peoples_bank
 			has_completed_focus = EUN_national_corporatism
 		}
 		completion_reward = {
@@ -706,7 +706,7 @@ focus_tree = {
 		relative_position_id = EUN_revolutionary_agriculture
 		available = {
 			has_completed_focus = EUN_veterans_pension
-			has_completed_focus = EUN_social_security_network
+			has_completed_focus = EUN_guaranteed_minimum_wage
 		}
 		completion_reward = {
 			add_to_variable = { EUN_eco_weekly_stability = 0.001 } 
@@ -843,6 +843,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = artillery_bonus
 				bonus = 1.0
+				ahead_reduction = 1	
 				uses = 2
 				category = artillery
 			}
@@ -897,6 +898,7 @@ focus_tree = {
 				bonus = 1.0
 				uses = 2
 				category = armor
+				category = infantry_tech
 			}
 		}
 	}
@@ -941,6 +943,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = rocket_bonus
 				bonus = 1.0
+				ahead_reduction = 1	
 				uses = 2
 				category = rocketry
 			}
@@ -959,6 +962,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = electronics_bonus
 				bonus = 1.0
+				ahead_reduction = 1	
 				uses = 2
 				category = electronics
 			}
@@ -1066,9 +1070,10 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = special_forces_bonus
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
+				bonus = 2.0
+				ahead_reduction = 1
+				uses = 2
+				category = marine_tech
 			}
 		}
 	}
@@ -1084,9 +1089,10 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = capital_ship_bonus
-				bonus = 1.0
+				bonus = 2.0
+				ahead_reduction = 1
 				uses = 2
-				category = naval
+				category = naval_equipment
 			}
 		}
 	}
@@ -1148,13 +1154,8 @@ focus_tree = {
 		prerequisite = { focus = EUN_defensive_posture }
 		available = { check_variable = { EUN_Military_faction = 4 } }
 		completion_reward = {
-			7 = {
-				add_building_construction = {
-					type = bunker
-					level = 2
-					instant_build = yes
-				}
-			}
+			add_to_variable = { EUN_mil_bunker = 2 }
+			custom_effect_tooltip = EUN_mil_bunker_2_tooltip
 		}
 	}
 	focus = {
@@ -1167,7 +1168,8 @@ focus_tree = {
 		prerequisite = { focus = EUN_defensive_posture }
 		available = { check_variable = { EUN_Military_faction = 4 } }
 		completion_reward = {
-			add_political_power = 50
+			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.05 }
+			custom_effect_tooltip = EUN_eco_consumer_goods_bonus_05_tooltip
 		}
 	}
 	focus = {
@@ -1199,7 +1201,13 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			add_political_power = 100
-			add_stability = 0.05
+
+		}
+		select_effect = {
+			country_event = { id = EuropeanUnion_Election.1 days = 10 }
+			country_event = { id = EuropeanUnion_Election.2 days = 20 }
+			country_event = { id = EuropeanUnion_Election.3 days = 30 }
+			country_event = { id = EuropeanUnion_Election.4 days = 40 }
 		}
 	}
 
@@ -1216,8 +1224,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 150
-			add_stability = 0.05
-			add_war_support = 0.03
+
+		}
+		select_effect = {
+			retire_country_leader = yes
+			country_event = { id = EuropeanUnion_Election.5 days = 10 }
+			country_event = { id = EuropeanUnion_Election.6 days = 20 }
+			country_event = { id = EuropeanUnion_Election.7 days = 30 }
+			country_event = { id = EuropeanUnion_Election.8 days = 40 }
 		}
 	}
 
@@ -1234,8 +1248,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 200
-			add_stability = 0.08
-			add_war_support = 0.05
+
+		}
+		select_effect = {
+			retire_country_leader = yes
+			country_event = { id = EuropeanUnion_Election.9 days = 10 }
+			country_event = { id = EuropeanUnion_Election.10 days = 20 }
+			country_event = { id = EuropeanUnion_Election.11 days = 30 }
+			country_event = { id = EuropeanUnion_Election.12 days = 40 }
 		}
 	}
 
@@ -1248,10 +1268,9 @@ focus_tree = {
 		relative_position_id = EUN_third_congress
 		prerequisite = { focus = EUN_third_congress }
 		completion_reward = {
-			add_political_power = 250
-			add_war_support = 0.12
-			add_stability = 0.05
-			add_manpower = 50000
+			add_to_variable = { EUN_pol_war_support = 0.10 }
+			add_to_variable = { EUN_mil_pop_factor = 0.10 }
+			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.10 }
 		}
 	}
 
@@ -1272,8 +1291,6 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 75
-			add_war_support = 0.05
 			add_command_power = 25
 		}
 	}
@@ -1302,9 +1319,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.03
-			add_ideas = EUN_swiss_integration
+			create_wargoal = {
+				type = annex_everything
+				target = SWI
+			}
 		}
 	}
 
@@ -1317,8 +1335,7 @@ focus_tree = {
 		relative_position_id = EUN_swiss_route
 		prerequisite = { focus = EUN_swiss_route }
 		completion_reward = {
-			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.05 }
-			add_offsite_building = { type = industrial_complex level = 2 }
+			add_to_variable = { EUN_eco_factory_donations = 2 }
 			custom_effect_tooltip = EUN_swiss_gold_tooltip
 		}
 	}
@@ -1345,9 +1362,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.03
-			add_war_support = 0.05
+			create_wargoal = {
+				type = annex_everything
+				target = ALG
+			}
 		}
 	}
 
@@ -1363,8 +1381,8 @@ focus_tree = {
 		relative_position_id = EUN_algeria_route
 		prerequisite = { focus = EUN_algeria_route }
 		completion_reward = {
+			add_to_variable = { EUN_mil_pop_factor = 0.10 }
 			add_to_variable = { EUN_eco_ic_bonus = 0.05 }
-			add_manpower = 100000
 			custom_effect_tooltip = EUN_african_labor_tooltip
 		}
 	}
@@ -1391,12 +1409,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 150
-			add_offsite_building = { type = industrial_complex level = 1 }
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = industry
+			every_state = {
+				limit = {
+					is_core_of = ALG
+				}
+				add_core_of = EUN
 			}
 		}
 	}
@@ -1420,9 +1437,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 120
-			add_stability = 0.05
-			add_opinion_modifier = { target = SPR modifier = EUN_spanish_cooperation }
+			country_event = { id = EuropeanUnion.100 }
 		}
 	}
 
@@ -1448,8 +1463,6 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_war_support = 0.1
-			add_political_power = 80
 			create_wargoal = {
 				type = annex_everything
 				target = SPR
@@ -1480,8 +1493,6 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.08
 			add_ideas = EUN_secret_police
 		}
 	}
@@ -1495,11 +1506,7 @@ focus_tree = {
 		relative_position_id = EUN_secret_police_route
 		prerequisite = { focus = EUN_secret_police_route }
 		completion_reward = {
-			add_political_power = 75
-			UNADDED_intel_network_gain = {
-				target = SOV
-				value = 20
-			}
+			add_to_variable = { EUN_pol_pp_gain = 0.10 }
 		}
 	}
 
@@ -1515,9 +1522,7 @@ focus_tree = {
 		relative_position_id = EUN_second_congress
 		prerequisite = { focus = EUN_second_congress }
 		completion_reward = {
-			add_political_power = -50
-			add_stability = 0.12
-			add_war_support = 0.05
+			add_to_variable = { EUN_pol_stability = 0.15 }
 		}
 	}
 
@@ -1543,9 +1548,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.12
-			add_ideas = EUN_freedom_guarantee
+			add_to_variable = { EUN_pol_stability = 0.15 }
 		}
 	}
 
@@ -1558,12 +1561,22 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = EUN_iron_blood_route
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ger_ben_int_check
+				OR = { 
+					check_variable = { EUN_Interior_faction = 1 }
+					check_variable = { EUN_Interior_faction = 3 }
+				}
+			}
+		}
 		relative_position_id = EUN_second_congress
 		prerequisite = { focus = EUN_second_congress }
 		completion_reward = {
-			add_political_power = 150
-			add_war_support = 0.08
-			add_ideas = EUN_risorgimento_spirit
+			create_wargoal = {
+				type = annex_everything
+				target = ITA
+			}
 		}
 	}
 
@@ -1573,12 +1586,22 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EUN_ger_ben_int_check
+				OR = { 
+					check_variable = { EUN_Interior_faction = 1 }
+					check_variable = { EUN_Interior_faction = 3 }
+				}
+			}
+		}
 		relative_position_id = EUN_risorgimento
 		prerequisite = { focus = EUN_risorgimento }
 		completion_reward = {
-			add_political_power = 120
-			add_opinion_modifier = { target = GER modifier = EUN_german_friendship_modifier }
-			GER = { add_opinion_modifier = { target = ROOT modifier = EUN_german_friendship_modifier } }
+			create_wargoal = {
+				type = annex_everything
+				target = GER
+			}
 		}
 	}
 
@@ -1598,9 +1621,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 120
-			add_stability = 0.05
-			add_ideas = EUN_efficient_bureaucracy
+			add_to_variable = { EUN_pol_pp_gain = 0.10 }
 		}
 	}
 
@@ -1616,38 +1637,7 @@ focus_tree = {
 		relative_position_id = EUN_second_congress
 		prerequisite = { focus = EUN_second_congress }
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.05
-			add_political_power = 50
-		}
-	}
-
-	focus = {
-		id = EUN_consensus_formation
-		icon = GFX_focus_generic_military_academy
-		x = -1
-		y = 1
-		cost = 10
-		relative_position_id = EUN_election_system
-		prerequisite = { focus = EUN_election_system }
-		completion_reward = {
-			add_stability = 0.08
-			add_political_power = 80
-		}
-	}
-
-	focus = {
-		id = EUN_reconciliation
-		icon = GFX_goal_generic_improve_relations
-		x = 1
-		y = 1
-		cost = 10
-		relative_position_id = EUN_election_system
-		prerequisite = { focus = EUN_election_system }
-		completion_reward = {
-			add_stability = 0.08
-			add_political_power = 100
-			add_war_support = 0.03
+			add_to_variable = { EUN_pol_stability = 0.05 }
 		}
 	}
 
@@ -1673,9 +1663,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_war_support = 0.12
-			add_political_power = 100
-			add_ideas = EUN_iron_blood
+			create_wargoal = {
+				type = annex_everything
+				target = GER
+			}
 		}
 	}
 
@@ -1686,7 +1677,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		mutually_exclusive = {
-			focus = EUN_abandon_italy
+			focus = EUN_delayed_recovery
 		}
 		relative_position_id = EUN_iron_blood_route
 		prerequisite = { focus = EUN_iron_blood_route }
@@ -1697,12 +1688,27 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 50
+			create_wargoal = {
+				type = annex_everything
+				target = SWE
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = NOR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = DEN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FIN
+			}
 		}
 	}
 
 	focus = {
-		id = EUN_abandon_italy
+		id = EUN_delayed_recovery
 		icon = GFX_focus_ITA_peasants_rise
 		x = 0
 		y = 1
@@ -1719,7 +1725,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 50
+			create_wargoal = {
+				type = annex_everything
+				target = ITA
+			}
 		}
 	}
 
@@ -1733,8 +1742,7 @@ focus_tree = {
 		relative_position_id = EUN_third_congress
 		prerequisite = { focus = EUN_third_congress }
 		completion_reward = {
-			add_political_power = 150
-			add_stability = 0.1
+			add_to_variable = { EUN_pol_weekly_war_support = 0.001 }
 		}
 	}
 
@@ -1748,7 +1756,6 @@ focus_tree = {
 		prerequisite = { focus = EUN_third_congress }
 		completion_reward = {
 			add_political_power = 150
-			add_stability = 0.1
 		}
 	}
 
@@ -1768,11 +1775,28 @@ focus_tree = {
 		relative_position_id = EUN_total_mobilization
 		prerequisite = { focus = EUN_total_mobilization }
 		available = {
-			always = no
+			has_completed_focus = EUN_freedom_route
+			has_completed_focus = EUN_allocation
+			all_state = { AND = { is_core_of = GER is_owned_by = ROOT } }
+			all_state = { AND = { is_core_of = ITA is_owned_by = ROOT } }
+			all_state = { AND = { is_core_of = SWI is_owned_by = ROOT } }
+			all_state = { AND = { is_core_of = SPR is_owned_by = ROOT } }
 		}
 		completion_reward = {
 			add_political_power = 200
 			add_stability = 0.15
+			set_cosmetic_tag = EUN_true_union
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = GER
+						is_core_of = ITA
+						is_core_of = SWI
+						is_core_of = SPR
+					}
+				}
+				add_core_of = EUN
+			}
 		}
 	}
 
@@ -1832,7 +1856,16 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 500
+			add_to_variable = { EUN_mil_army_attack = 0.15 }
+			every_country = {
+				limit = {
+					NOT = { has_government = communism }
+				}
+				declare_war_on = {
+					target = ROOT
+					type = annex_everything
+				}
+			}
 		}
 	}
 
@@ -1857,7 +1890,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 500
+			add_to_variable = { EUN_eco_resource_factor = 0.20 }
+			add_to_variable = { EUN_mil_armor_attack = 0.15 }
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
 		}
 	}
 
@@ -1882,7 +1920,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 500
+			add_to_variable = { EUN_mil_capital_ship_attack = 0.15 }
+			add_to_variable = { EUN_mil_air_agility = 0.15 }
+			create_wargoal = {
+				type = annex_everything
+				target = ENG
+			}
 		}
 	}
 
@@ -1907,7 +1950,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 500
+			add_to_variable = { EUN_eco_construction_bonus = 0.20 }
+			add_to_variable = { EUN_eco_consumer_goods_penalty = -0.10 }
 		}
 	}
 
