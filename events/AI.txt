@@ -16,7 +16,6 @@ country_event = {
 			is_owned_and_controlled_by = ROOT
 		}
 	}
-	fire_only_once = yes
 	immediate = {
 		set_country_flag = AI_help_1_flag
 		division_template = {
