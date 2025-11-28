@@ -19,7 +19,7 @@ focus = {
 	x = 10
 	y = 0
 	#relative_position_id = 
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -43,7 +43,7 @@ focus = {
 	x = 10
 	y = 1
 	#relative_position_id = 
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -63,7 +63,7 @@ focus = {
 	x = 10
 	y = 2
 	#relative_position_id = 
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -83,7 +83,7 @@ focus = {
 	x = -2
 	y = 1
 	relative_position_id = POL_S3
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -112,7 +112,7 @@ focus = {
 	x = 0
 	y = 2
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -136,7 +136,7 @@ focus = {
 	x = 0
 	y = 3
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -165,7 +165,7 @@ focus = {
 	x = 1
 	y = 5
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -185,7 +185,7 @@ focus = {
 	x = -1
 	y = 4
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -208,7 +208,7 @@ focus = {
 	x = 0
 	y = 6
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -228,7 +228,7 @@ focus = {
 	x = 0
 	y = 7
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -249,7 +249,7 @@ focus = {
 	x = 0
 	y = 8
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -280,7 +280,7 @@ focus = {
 	x = 0
 	y = 9
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -301,7 +301,7 @@ focus = {
 	x = -1
 	y = 1
 	relative_position_id = POL_S9
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -324,7 +324,7 @@ focus = {
 	x = -1
 	y = 2
 	relative_position_id = POL_S9
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -345,7 +345,7 @@ focus = {
 	x = -3
 	y = 2
 	relative_position_id = POL_S9
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -365,7 +365,7 @@ focus = {
 	x = -4
 	y = 1
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -385,7 +385,7 @@ focus = {
 	x = -4
 	y = 2
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -432,7 +432,7 @@ focus = {
 	x = -4
 	y = 3
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -467,7 +467,7 @@ focus = {
 	x = -6
 	y = 2
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -517,7 +517,7 @@ focus = {
 	x = -6
 	y = 3
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -581,7 +581,7 @@ focus = {
 	x = -2
 	y = 2
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -604,7 +604,7 @@ focus = {
 	x = -5
 	y = 4
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -653,7 +653,7 @@ focus = {
 	x = -5
 	y = 5
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -702,7 +702,7 @@ focus = {
 	x = -7
 	y = 5
 	relative_position_id = POL_S4
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -723,7 +723,7 @@ focus = {
 	x = 2
 	y = 1
 	relative_position_id = POL_S3
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -751,7 +751,7 @@ focus = {
 	x = 0
 	y = 1
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -770,7 +770,7 @@ focus = {
 	x = 0
 	y = 2
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -788,7 +788,7 @@ focus = {
 	x = 0
 	y = 3
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -809,7 +809,7 @@ focus = {
 	x = 0
 	y = 4
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -828,7 +828,7 @@ focus = {
 	x = 0
 	y = 5
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -854,7 +854,7 @@ focus = {
 	x = 0
 	y = 6
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -876,7 +876,7 @@ focus = {
 	x = -1
 	y = 7
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -894,7 +894,7 @@ focus = {
 	x = -1
 	y = 8
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -940,7 +940,7 @@ focus = {
 	x = -1
 	y = 9
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -972,7 +972,7 @@ focus = {
 	x = 1
 	y = 7
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -990,7 +990,7 @@ focus = {
 	x = 1
 	y = 8
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1012,7 +1012,7 @@ focus = {
 	x = 1
 	y = 9
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1030,7 +1030,7 @@ focus = {
 	x = 2
 	y = 1
 	relative_position_id = POL_PI5
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1054,7 +1054,7 @@ focus = {
 	x = 2
 	y = 2
 	relative_position_id = POL_PI5
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1072,7 +1072,7 @@ focus = {
 	x = 4
 	y = 2
 	relative_position_id = POL_PI5
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1106,7 +1106,7 @@ focus = {
 	x = 2
 	y = 1
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1125,7 +1125,7 @@ focus = {
 	x = 2
 	y = 2
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1147,7 +1147,7 @@ focus = {
 	x = 2
 	y = 3
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1169,7 +1169,7 @@ focus = {
 	x = 2
 	y = 4
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1188,7 +1188,7 @@ focus = {
 	x = 4
 	y = 2
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1222,7 +1222,7 @@ focus = {
 	x = 4
 	y = 3
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1243,7 +1243,7 @@ focus = {
 	x = 4
 	y = 4
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1309,7 +1309,7 @@ focus = {
 	x = 6
 	y = 3
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1331,7 +1331,7 @@ focus = {
 	x = 6
 	y = 4
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1353,7 +1353,7 @@ focus = {
 	x = 4
 	y = 5
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }
@@ -1375,7 +1375,7 @@ focus = {
 	x = 6
 	y = 5
 	relative_position_id = POL_PI1
-	cost = 10
+	cost = 60
 	ai_will_do = { factor = 1 }
 	available = { }
 	bypass = { }

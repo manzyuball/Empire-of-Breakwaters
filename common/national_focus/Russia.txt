@@ -37,7 +37,7 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 		#prerequisite = { focus =  }
 		#relative_position_id = RUS_sanB1
-		cost = 15
+		cost = 100
 		ai_will_do = {
 			factor = 100
 		}
@@ -102,7 +102,7 @@ focus_tree = {
 			focus = RUS_se1
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -128,7 +128,7 @@ focus_tree = {
 			focus = RUS_seA1
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -153,7 +153,7 @@ focus_tree = {
 			focus = RUS_seA2
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -178,7 +178,7 @@ focus_tree = {
 			focus = RUS_seA3
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -200,7 +200,7 @@ focus_tree = {
 			focus = RUS_seA1
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -225,7 +225,7 @@ focus_tree = {
 			focus = RUS_seA5
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -250,7 +250,7 @@ focus_tree = {
 			focus = RUS_seA6
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -273,7 +273,7 @@ focus_tree = {
 			focus = RUS_se1
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		available = {
 			has_country_flag = RUS_G_WIN2
 		}
@@ -302,7 +302,7 @@ focus_tree = {
 			focus = RUS_seB1
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -327,7 +327,7 @@ focus_tree = {
 			focus = RUS_seB2
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -352,7 +352,7 @@ focus_tree = {
 			focus = RUS_seB3
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -374,7 +374,7 @@ focus_tree = {
 			focus = RUS_seB1
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -399,7 +399,7 @@ focus_tree = {
 			focus = RUS_seB5
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -424,7 +424,7 @@ focus_tree = {
 			focus = RUS_seB6
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -447,7 +447,7 @@ focus_tree = {
 			focus = RUS_se1
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		available = {
 			has_country_flag = RUS_R_WIN2
 		}
@@ -476,7 +476,7 @@ focus_tree = {
 			focus = RUS_seC1
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -501,7 +501,7 @@ focus_tree = {
 			focus = RUS_seC2
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -526,7 +526,7 @@ focus_tree = {
 			focus = RUS_seC3
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -548,7 +548,7 @@ focus_tree = {
 			focus = RUS_seC1
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -573,7 +573,7 @@ focus_tree = {
 			focus = RUS_seC5
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -598,7 +598,7 @@ focus_tree = {
 			focus = RUS_seC6
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -628,7 +628,7 @@ focus_tree = {
 			focus = RUS_seC7
 		}
 		relative_position_id = RUS_se1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -656,7 +656,7 @@ focus_tree = {
 			has_country_flag = RUS_R_WIN2
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -678,7 +678,7 @@ focus_tree = {
 			focus = RUS_sanA1
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -714,7 +714,7 @@ focus_tree = {
 			focus = RUS_sanA2
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -737,7 +737,7 @@ focus_tree = {
 			focus = RUS_sanB2
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -782,7 +782,7 @@ focus_tree = {
 			focus = RUS_sanA3
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -807,7 +807,7 @@ focus_tree = {
 			focus = RUS_sanA5
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -832,7 +832,7 @@ focus_tree = {
 			focus = RUS_sanA5
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -863,7 +863,7 @@ focus_tree = {
 			focus = RUS_sanA6
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -888,7 +888,7 @@ focus_tree = {
 			focus = RUS_sanA3
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -916,7 +916,7 @@ focus_tree = {
 			focus = RUS_sanA10
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -943,7 +943,7 @@ focus_tree = {
 			focus = RUS_sanA4
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -970,7 +970,7 @@ focus_tree = {
 			focus = RUS_sanA12
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1007,7 +1007,7 @@ focus_tree = {
 			focus = RUS_sanA12
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1033,7 +1033,7 @@ focus_tree = {
 			focus = RUS_sanA14
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1056,7 +1056,7 @@ focus_tree = {
 			focus = RUS_sanA3
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1081,7 +1081,7 @@ focus_tree = {
 			focus = RUS_sanA13
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1103,7 +1103,7 @@ focus_tree = {
 		}
 		#mutually_exclusive = { focus =  }
 		#prerequisite = { focus =  }
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1125,7 +1125,7 @@ focus_tree = {
 			focus = RUS_sanB1
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1147,7 +1147,7 @@ focus_tree = {
 			focus = RUS_sanB1
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1175,7 +1175,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_sanB5
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1200,7 +1200,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_sanB1
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1222,7 +1222,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_sanB1
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1247,7 +1247,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_sanB6
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1269,7 +1269,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_sanB2
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1294,7 +1294,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_sanB8
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1317,7 +1317,7 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 		#prerequisite = { focus =  }
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		available = {
 			has_country_flag = RUS_G_WIN2
 		}
@@ -1342,7 +1342,7 @@ focus_tree = {
 			focus = RUS_sanC1
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1378,7 +1378,7 @@ focus_tree = {
 			focus = RUS_sanC2
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1404,7 +1404,7 @@ focus_tree = {
 			focus = RUS_sanB2
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1449,7 +1449,7 @@ focus_tree = {
 			focus = RUS_sanC4
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1471,7 +1471,7 @@ focus_tree = {
 			focus = RUS_sanC5
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1508,7 +1508,7 @@ focus_tree = {
 			focus = RUS_sanC6
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1553,7 +1553,7 @@ focus_tree = {
 			focus = RUS_sanC5
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1578,7 +1578,7 @@ focus_tree = {
 			focus = RUS_sanC8
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1603,7 +1603,7 @@ focus_tree = {
 			focus = RUS_sanC3
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1635,7 +1635,7 @@ focus_tree = {
 			focus = RUS_sanC3
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1657,7 +1657,7 @@ focus_tree = {
 			focus = RUS_sanC11
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1684,7 +1684,7 @@ focus_tree = {
 			focus = RUS_sanC10
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1729,7 +1729,7 @@ focus_tree = {
 			focus = RUS_sanC10
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1751,7 +1751,7 @@ focus_tree = {
 			focus = RUS_sanC14
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1776,7 +1776,7 @@ focus_tree = {
 			focus = RUS_sanC15
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1798,7 +1798,7 @@ focus_tree = {
 			focus = RUS_sanC15
 		}
 		relative_position_id = RUS_sanB1
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1818,7 +1818,7 @@ focus_tree = {
 		icon = "GFX_focus_SOV_transcaucasian_republic"
 		x = 40
 		y = 0
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1845,7 +1845,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gai
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1870,7 +1870,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia1
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1896,7 +1896,7 @@ focus_tree = {
 			focus = RUS_gaia1
 			focus = RUS_gaia8
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -1934,7 +1934,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia3
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2013,7 +2013,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia2
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2041,7 +2041,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia4
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2066,7 +2066,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia6
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 1
 		}
@@ -2090,7 +2090,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gai
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2113,7 +2113,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia8
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2134,7 +2134,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia9
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2155,7 +2155,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia9
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2176,7 +2176,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia11
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2197,7 +2197,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia10
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2221,7 +2221,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia11
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2242,7 +2242,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia13
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2263,7 +2263,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia10
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2284,7 +2284,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia16
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2308,7 +2308,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gai
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2333,7 +2333,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia18
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2359,7 +2359,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia19
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2401,7 +2401,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia20
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2436,7 +2436,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia21
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2461,7 +2461,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia20
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2486,7 +2486,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia23
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2511,7 +2511,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia19
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2576,7 +2576,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia25
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2647,7 +2647,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia26
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2684,7 +2684,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia29
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2708,7 +2708,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia27
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2733,7 +2733,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia22
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2770,7 +2770,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia30
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2813,7 +2813,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia29
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}
@@ -2845,7 +2845,7 @@ focus_tree = {
 		prerequisite = {
 			focus = RUS_gaia31
 		}
-		cost = 5
+		cost = 30
 		ai_will_do = {
 			factor = 100
 		}

@@ -43,17 +43,7 @@ NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 10			-- how many divisions a fi
 NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = -1				-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.GARRISON_ORDER_ARMY_CAP_FACTOR = 10.0		-- armies gets increased cap when they are garrisoned
 
-NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.75
 NDefines.NBuildings.MAX_BUILDING_LEVELS = 50
 NDefines.NBuildings.MAX_SHARED_SLOTS = 50
-NDefines.NGame.GAME_SPEED_SECONDS = { 0.5, 0.25, 0.15, 0.1, 0.05 }
-NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 1000
-NDefines.NGame.LAG_DAYS_FOR_PAUSE = 2500
-NDefines.NDiplomacy.TENSION_TIME_SCALE_MONTHLY_FACTOR = 0.0
 NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.0
-
-NDefines.NCountry.WAR_SUPPORT_OFFNSIVE_WAR = 0
-NDefines.NCountry.NUCLEAR_BOMB_DROP_WAR_SUPPORT_EFFECT_MAX_INFRA = 0
-
-NDefines.NAI.EQUIPMENT_MARKET_UPDATE_FREQUENCY_DAYS = 15                   -- How often the AI runs its market logic        -- Ratio of available civilian factories to max use for equipment purchases (0.2 = 20 %, so 50 available civs would mean max ca 10 civs to spend on purchases at any one time). Gets modified by equipment_market_spend_factories AI strategy.
-NDefines.NAI.EQUIPMENT_MARKET_BASE_MARKET_RATIO = 0.0                       -- The AI tries to keep ca this ratio of equipment surplus for sale on the market. Gets modified by equipment_market_for_sale_factor AI strategy.
+NDefines.NFocus.FOCUS_POINT_DAYS = 1

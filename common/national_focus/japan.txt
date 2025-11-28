@@ -17,7 +17,7 @@
 	focus = {
 		id = JAP_ARMY_Reform_of_the_Japanese_Army
 		icon = GFX_goal_generic_army_doctrines
-		cost = 5
+		cost = 30
 		x = 18
 		y = 0
 		ai_will_do = {
@@ -35,7 +35,7 @@
 	focus = {
 		id = JAP_ARMY_Centralisation_of_structures
 		icon = GFX_focus_generic_full_social_mobilization
-		cost = 5
+		cost = 30
 		x = 1
 		y = 1
 		ai_will_do = {
@@ -56,7 +56,7 @@
 	focus = {
 		id = JAP_ARMY_tactical_research
 		icon = GFX_goal_generic_territory_or_war
-		cost = 5
+		cost = 30
 		x = 0
 		y = 1
 		ai_will_do = {
@@ -80,7 +80,7 @@
 	focus = {
 		id = JAP_ARMY_Manualisation_of_combatant_command
 		icon = GFX_goal_generic_position_armies
-		cost = 5
+		cost = 30
 		x = 0
 		y = 2
 		ai_will_do = {
@@ -104,7 +104,7 @@
 	focus = {
 		id = JAP_ARMY_Strengthening_command_centres
 		icon = GFX_goal_generic_radar
-		cost = 5
+		cost = 30
 		x = 1
 		y = 3
 		ai_will_do = {
@@ -131,7 +131,7 @@
 	focus = {
 		id = JAP_ARMY_Improved_logistics_organisation
 		icon =  GFX_focus_generic_truck
-		cost = 5
+		cost = 30
 		x = 2
 		y = 1
 		ai_will_do = {
@@ -152,7 +152,7 @@
 	focus = {
 		id = JAP_ARMY_Supply_Tracks
 		icon = GFX_focus_generic_supply_line
-		cost = 5
+		cost = 30
 		x = 2
 		y = 2
 		ai_will_do = {
@@ -176,7 +176,7 @@
 	focus = {
 		id = JAP_ARMY_Armoured_forces_research
 		icon = GFX_focus_FIN_foreign_anti_air
-		cost = 5
+		cost = 30
 		x = 4
 		y = 1
 		ai_will_do = {
@@ -202,7 +202,7 @@
 	focus = {
 		id = JAP_ARMY_Armoured_Support_Unit
 		icon = GFX_focus_generic_tankette
-		cost = 5
+		cost = 30
 		x = 4
 		y = 2
 		ai_will_do = {
@@ -235,7 +235,7 @@
 	focus = {
 		id = JAP_ARMY_Operation_with_full_logistics_systems
 		icon = GFX_focus_generic_stockpile_fuel
-		cost = 5
+		cost = 30
 		x = 3
 		y = 3
 		ai_will_do = {
@@ -262,7 +262,7 @@
 	focus = {
 		id = JAP_ARMY_National_Spiritual_Mobilization
 		icon = GFX_focus_generic_limited_social_mobilization
-		cost = 5
+		cost = 30
 		x = -1
 		y = 1
 		ai_will_do = {
@@ -283,7 +283,7 @@
 	focus = {
 		id = JAP_ARMY_labour_service
 		icon = GFX_focus_generic_full_employment
-		cost = 5
+		cost = 30
 		x = -1
 		y = 2
 		ai_will_do = {
@@ -308,7 +308,7 @@
 	focus = {
 		id = JAP_ARMY_Why_we_fight
 		icon = GFX_focus_SWE_refuge_from_war
-		cost = 5
+		cost = 30
 		x = -1
 		y = 3
 		ai_will_do = {
@@ -332,7 +332,7 @@
 	focus = {
 		id = JAP_NAVY_shipbuilding_project
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 5
+		cost = 30
 		x = 26
 		y = 0
 		ai_will_do = {
@@ -353,7 +353,7 @@
 	focus = {
 		id = JAP_NAVY_near_sea_emphasis
 		icon = GFX_focus_usa_focus_on_asia
-		cost = 5
+		cost = 30
 		x = 1
 		y = 1
 		ai_will_do = {
@@ -403,7 +403,7 @@
 	focus = {
 		id = JAP_NAVY_expeditionary_focus
 		icon = GFX_focus_usa_focus_on_europe
-		cost = 5
+		cost = 30
 		x = -1
 		y = 1
 		ai_will_do = {
@@ -427,7 +427,7 @@
 	focus = {
 		id = JAP_NAVY_Focus_on_smaller_vessels
 		icon = GFX_focus_generic_midget_submarines
-		cost = 5
+		cost = 30
 		x = -1
 		y = 2
 		ai_will_do = {
@@ -465,7 +465,7 @@
 	focus = {
 		id = JAP_NAVY_Focus_on_larger_vessels
 		icon = GFX_focus_generic_destroyer
-		cost = 5
+		cost = 30
 		x = 1
 		y = 2
 		ai_will_do = {
@@ -497,7 +497,7 @@
 	focus = {
 		id = JAP_NAVY_focus_on_aircraft_carriers
 		icon = GFX_goal_generic_navy_carrier
-		cost = 5
+		cost = 30
 		x = 1
 		y = 4
 		ai_will_do = {
@@ -523,7 +523,7 @@
 	focus = {
 		id = JAP_NAVY_Focus_on_battleships
 		icon = GFX_goal_generic_navy_battleship
-		cost = 5
+		cost = 30
 		x = -1
 		y = 4
 		ai_will_do = {
@@ -549,7 +549,7 @@
 	focus = {
 		id = JAP_NAVY_Battleship_and_carrier_focus
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		cost = 5
+		cost = 30
 		x = 0
 		y = 3
 		ai_will_do = {
@@ -579,7 +579,7 @@
 	focus = {
 		id = JAP_NITIEI1
 		icon = "GFX_goal_support_democracy"
-		cost = 5
+		cost = 30
 		x = 10
 		y = 0
 		ai_will_do = {
@@ -595,7 +595,7 @@
 	focus = {
 		id = JAP_NITIEI2
 		icon = "GFX_goal_generic_neutrality_focus"
-		cost = 10
+		cost = 60
 		x = 1
 		y = 1
 		ai_will_do = {
@@ -619,7 +619,7 @@
 	focus = {
 		id = JAP_NITIEI3
 		icon = "GFX_focus_jap_newdeal1"
-		cost = 10
+		cost = 60
 		x = 1
 		y = 2
 		ai_will_do = {
@@ -637,7 +637,7 @@
 	focus = {
 		id = JAP_NITIEI4
 		icon = "GFX_goal_generic_construction2"
-		cost = 10
+		cost = 60
 		x = 1
 		y = 3
 		ai_will_do = {
@@ -655,7 +655,7 @@
 	focus = {
 		id = JAP_NITIEI5
 		icon = "GFX_goal_generic_production"
-		cost = 10
+		cost = 60
 		x = 1
 		y = 4
 		ai_will_do = {
@@ -679,7 +679,7 @@
 	focus = {
 		id = JAP_NITIEI6
 		icon = "GFX_focus_jap_newdeal2"
-		cost = 10
+		cost = 60
 		x = 3
 		y = 2
 		ai_will_do = {
@@ -700,7 +700,7 @@
 	focus = {
 		id = JAP_NITIEI7
 		icon = "GFX_goal_generic_neutrality_focus"
-		cost = 10
+		cost = 60
 		x = 3
 		y = 3
 		ai_will_do = {
@@ -718,7 +718,7 @@
 	focus = {
 		id = JAP_NITIEI8
 		icon = "GFX_focus_generic_the_giant_wakes"
-		cost = 10
+		cost = 60
 		x = 3
 		y = 4
 		ai_will_do = {
@@ -731,7 +731,7 @@
 	focus = {
 		id = JAP_NITIEI9
 		icon = "GFX_goal_generic_fortify_city"
-		cost = 10
+		cost = 60
 		x = -4
 		y = 1
 		ai_will_do = {
@@ -749,7 +749,7 @@
 	focus = {
 		id = JAP_NITIEI10
 		icon = "GFX_focus_chi_british_cooperation"
-		cost = 10
+		cost = 60
 		x = -4
 		y = 2
 		ai_will_do = {
@@ -774,7 +774,7 @@
 	focus = {
 		id = JAP_NITIEI11
 		icon = "GFX_focus_jap_manchurian_project"
-		cost = 10
+		cost = 60
 		x = -1
 		y = 3
 		ai_will_do = {
@@ -792,7 +792,7 @@
 	focus = {
 		id = JAP_NITIEI12
 		icon = "GFX_focus_SOV_panslavic_nationalism"
-		cost = 10
+		cost = 60
 		x = -1
 		y = 4
 		ai_will_do = {
@@ -814,7 +814,7 @@
 	focus = {
 		id = JAP_NITIEI13
 		icon = "GFX_focus_hol_the_foundations_of_defense"
-		cost = 10
+		cost = 60
 		x = -1
 		y = 5
 		ai_will_do = {
@@ -857,7 +857,7 @@
 	focus = {
 		id = JAP_NITIEI14
 		icon = "GFX_focus_SOV_south_manchuria_railway"
-		cost = 10
+		cost = 60
 		x = 1
 		y = 5
 		ai_will_do = {
@@ -872,7 +872,7 @@
 	focus = {
 		id = JAP_NITIEI15
 		icon = "GFX_focus_generic_japanese_imperial_glory"
-		cost = 10
+		cost = 60
 		x = -6
 		y = 3
 		ai_will_do = {
@@ -885,7 +885,7 @@
 	focus = {
 		id = JAP_NITIEI16
 		icon = "GFX_focus_spr_masters_of_our_own_fate"
-		cost = 10
+		cost = 60
 		x = -6
 		y = 4
 		ai_will_do = {
@@ -905,7 +905,7 @@
 	focus = {
 		id = JAP_NITIEI17
 		icon = "GFX_focus_chi_one_china_policy"
-		cost = 10
+		cost = 60
 		x = -6
 		y = 5
 		ai_will_do = {
@@ -925,7 +925,7 @@
 	focus = {
 		id = JAP_NITIEI18
 		icon = "GFX_focus_jap_pacific_guardian"
-		cost = 10
+		cost = 60
 		x = -6
 		y = 6
 		ai_will_do = {
@@ -944,7 +944,7 @@
 	focus = {
 		id = JAP_NITIEI19
 		icon = "GFX_focus_focus_fra_maquis"
-		cost = 10
+		cost = 60
 		x = -4
 		y = 7
 		ai_will_do = {
@@ -983,7 +983,7 @@
 	focus = {
 		id = JAP_NITIEI20
 		icon = "GFX_goal_generic_positive_trade_relations"
-		cost = 10
+		cost = 60
 		x = -6
 		y = 7
 		ai_will_do = {
@@ -1004,7 +1004,7 @@
 	focus = {
 		id = JAP_NITIEI21
 		icon = "GFX_focus_eng_imperial_federation"
-		cost = 10
+		cost = 60
 		x = -8
 		y = 7
 		ai_will_do = {
@@ -1019,7 +1019,7 @@
 	focus = {
 		id = JAP_NITIEI22
 		icon = "GFX_focus_jap_spiritual_mobilization"
-		cost = 10
+		cost = 60
 		x = -8
 		y = 4
 		ai_will_do = {
@@ -1037,7 +1037,7 @@
 	focus = {
 		id = JAP_NITIEI23
 		icon = "GFX_focus_SOV_organize_wreckers"
-		cost = 10
+		cost = 60
 		x = -4
 		y = 4
 		ai_will_do = {
@@ -1055,7 +1055,7 @@
 	focus = {
 		id = JAP_NITIEI24
 		icon = "GFX_focus_jap_zero"
-		cost = 10
+		cost = 60
 		x = -4
 		y = 5
 		ai_will_do = {
@@ -1073,7 +1073,7 @@
 	focus = {
 		id = JAP_NITIEI25
 		icon = "GFX_goal_generic_position_armies"
-		cost = 10
+		cost = 60
 		x = -8
 		y = 5
 		ai_will_do = {
@@ -1091,7 +1091,7 @@
 	focus = {
 		id = JAP_NITIEI26
 		icon = "GFX_focus_usa_escort_fighters"
-		cost = 10
+		cost = 60
 		x = -8
 		y = 6
 		ai_will_do = {
@@ -1104,7 +1104,7 @@
 	focus = {
 		id = JAP_NITIEI27
 		icon = "GFX_focus_prc_infiltration"
-		cost = 10
+		cost = 60
 		x = -10
 		y = 6
 		ai_will_do = {
@@ -1120,7 +1120,7 @@
 	focus = {
 		id = JAP_NITIEI28
 		icon = "GFX_focus_eng_special_air_service"
-		cost = 10
+		cost = 60
 		x = -4
 		y = 6
 		ai_will_do = {
@@ -1145,7 +1145,7 @@
 	focus = {
 		id = JAP_NITIEI29
 		icon = "GFX_focus_wonderweapons"
-		cost = 10
+		cost = 60
 		x = -2
 		y = 6
 		ai_will_do = {
@@ -1164,7 +1164,7 @@
 	focus = {
 		id = JAP_NITIEI30
 		icon = "GFX_focus_research"
-		cost = 10
+		cost = 60
 		x = -2
 		y = 1
 		ai_will_do = {
@@ -1177,7 +1177,7 @@
 	focus = {
 		id = JAP_NITIEI31
 		icon = "GFX_focus_jap_newdeal3"
-		cost = 10
+		cost = 60
 		x = 5
 		y = 2
 		ai_will_do = {
@@ -1204,7 +1204,7 @@
 	focus = {
 		id = JAP_NITIEI32
 		icon = "GFX_goal_generic_production2"
-		cost = 10
+		cost = 60
 		x = 5
 		y = 3
 		ai_will_do = {
@@ -1234,7 +1234,7 @@
 	focus = {
 		id = JAP_NITIEI33
 		icon = "GFX_focus_POL_develop_polish_shipbuilding"
-		cost = 10
+		cost = 60
 		x = 5
 		y = 4
 		ai_will_do = {
@@ -1259,7 +1259,7 @@
 		x = 19
 		y = 2
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 0.000000005
@@ -1303,7 +1303,7 @@
 		x = 19
 		y = 3
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1323,7 +1323,7 @@
 		x = 17
 		y = 4
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1343,7 +1343,7 @@
 		x = 16
 		y = 5
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1363,7 +1363,7 @@
 		x = 18
 		y = 5
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1383,7 +1383,7 @@
 		x = 16
 		y = 7
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1403,7 +1403,7 @@
 		x = 18
 		y = 7
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1424,7 +1424,7 @@
 		x = 17
 		y = 8
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1444,7 +1444,7 @@
 		x = 16
 		y = 9
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1464,7 +1464,7 @@
 		x = 14
 		y = 9
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1484,7 +1484,7 @@
 		x = 18
 		y = 9
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1504,7 +1504,7 @@
 		x = 18
 		y = 10
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1525,7 +1525,7 @@
 		x = 17
 		y = 11
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1545,7 +1545,7 @@
 		x = 17
 		y = 12
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1566,7 +1566,7 @@
 		x = 21
 		y = 4
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1586,7 +1586,7 @@
 		x = 21
 		y = 5
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1606,7 +1606,7 @@
 		x = 22
 		y = 6
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1626,7 +1626,7 @@
 		x = 20
 		y = 6
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1646,7 +1646,7 @@
 		x = 22
 		y = 7
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1666,7 +1666,7 @@
 		x = 20
 		y = 7
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1687,7 +1687,7 @@
 		x = 21
 		y = 8
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1707,7 +1707,7 @@
 		x = 21
 		y = 9
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1727,7 +1727,7 @@
 		x = 20
 		y = 10
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1747,7 +1747,7 @@
 		x = 20
 		y = 11
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1767,7 +1767,7 @@
 		x = 20
 		y = 12
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1787,7 +1787,7 @@
 		x = 22
 		y = 12
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1807,7 +1807,7 @@
 		x = 22
 		y = 10
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1827,7 +1827,7 @@
 		x = 22
 		y = 11
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1848,7 +1848,7 @@
 		x = 21
 		y = 13
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1868,7 +1868,7 @@
 		x = 21
 		y = 14
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1888,7 +1888,7 @@
 		x = 21
 		y = 15
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1908,7 +1908,7 @@
 		x = 21
 		y = 16
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1928,7 +1928,7 @@
 		x = 25
 		y = 5
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1948,7 +1948,7 @@
 		x = 25
 		y = 6
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1968,7 +1968,7 @@
 		x = 27
 		y = 6
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1988,7 +1988,7 @@
 		x = 27
 		y = 7
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -2008,7 +2008,7 @@
 		x = 25
 		y = 7
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -2028,7 +2028,7 @@
 		x = 25
 		y = 8
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -2048,7 +2048,7 @@
 		x = 27
 		y = 8
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -2068,7 +2068,7 @@
 		x = 23
 		y = 8
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -2087,7 +2087,7 @@
 		x = 34
 		y = 0
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2117,7 +2117,7 @@
 		x = 31
 		y = 1
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2148,7 +2148,7 @@
 		x = 36
 		y = 1
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2192,7 +2192,7 @@
 		x = 36.5
 		y = 2
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2227,7 +2227,7 @@
 		x = 37.5
 		y = 3
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2265,7 +2265,7 @@
 		x = 35.5
 		y = 3
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2302,7 +2302,7 @@
 		x = 35.5
 		y = 4
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2339,7 +2339,7 @@
 		x = 37.5
 		y = 4
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2374,7 +2374,7 @@
 		x = 35.5
 		y = 5
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2408,7 +2408,7 @@
 		x = 37.5
 		y = 5
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2458,7 +2458,7 @@
 		x = 35.5
 		y = 6
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2494,7 +2494,7 @@
 		x = 37.5
 		y = 6
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2531,7 +2531,7 @@
 		x = 36.5
 		y = 7
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2561,7 +2561,7 @@
 		x = 32.5
 		y = 2
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2595,7 +2595,7 @@
 		x = 30
 		y = 2
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2625,7 +2625,7 @@
 		x = 33
 		y = 3
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2655,7 +2655,7 @@
 		x = 33
 		y = 4
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2686,7 +2686,7 @@
 		x = 33
 		y = 5
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2733,7 +2733,7 @@
 		x = 33
 		y = 6
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2777,7 +2777,7 @@
 		x = 33
 		y = 7
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2809,7 +2809,7 @@
 		x = 31
 		y = 3
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2843,7 +2843,7 @@
 		x = 29
 		y = 3
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2880,7 +2880,7 @@
 		x = 31
 		y = 4
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2937,7 +2937,7 @@
 		x = 29
 		y = 4
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -2982,7 +2982,7 @@
 		x = 31
 		y = 5
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -3013,7 +3013,7 @@
 		x = 29
 		y = 5
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -3049,7 +3049,7 @@
 		x = 31
 		y = 6
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -3099,7 +3099,7 @@
 		x = 29
 		y = 6
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -3130,7 +3130,7 @@
 		x = 30
 		y = 7
 
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 5
@@ -3157,7 +3157,7 @@
 	focus = {
 		id = JAP_com1
 		icon = GFX_focus_prc_agrarian_socialism
-		cost = 10
+		cost = 60
 		x = 0
 		y = 0
 		ai_will_do = {
@@ -3180,7 +3180,7 @@
 	focus = {
 		id = JAP_com2
 		icon = GFX_focus_generic_join_comintern
-		cost = 10
+		cost = 60
 		x = 0
 		y = 1
 		prerequisite = {
@@ -3192,7 +3192,7 @@
 	focus = {
 		id = JAP_com3
 		icon = GFX_focus_SOV_proclaim_soviet_hegemony
-		cost = 10
+		cost = 60
 		x = 5
 		y = 1
 		prerequisite = {
@@ -3205,7 +3205,7 @@
 	focus = {
 		id = JAP_com4
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10
+		cost = 60
 		x = -8
 		y = 1
 		prerequisite = {
@@ -3217,7 +3217,7 @@
 	focus = {
 		id = JAP_com5
 		icon = GFX_focus_SOV_builder_of_the_red_army
-		cost = 10
+		cost = 60
 		x = 2
 		y = 2
 		prerequisite = {
@@ -3229,7 +3229,7 @@
 	focus = {
 		id = JAP_com6
 		icon = GFX_focus_generic_women_in_military
-		cost = 10
+		cost = 60
 		x = 0
 		y = 2
 		prerequisite = {
@@ -3241,7 +3241,7 @@
 	focus = {
 		id = JAP_com7
 		icon = GFX_focus_focus_fra_revolution_utmost
-		cost = 10
+		cost = 60
 		x = 2
 		y = 3
 		prerequisite = {
@@ -3253,7 +3253,7 @@
 	focus = {
 		id = JAP_com8
 		icon = GFX_focus_jap_cast_the_die
-		cost = 10
+		cost = 60
 		x = 0
 		y = 3
 		prerequisite = {
@@ -3264,7 +3264,7 @@
 	focus = {
 		id = JAP_com9
 		icon = GFX_focus_hol_legacy_of_the_de_zeven_provincien_mutiny
-		cost = 10
+		cost = 60
 		x = 5
 		y = 2
 		prerequisite = {
@@ -3276,7 +3276,7 @@
 	focus = {
 		id = JAP_com10
 		icon = GFX_goal_generic_navy_battleship
-		cost = 10
+		cost = 60
 		x = 5
 		y = 3
 		prerequisite = {
@@ -3288,7 +3288,7 @@
 	focus = {
 		id = JAP_com11
 		icon = GFX_focus_SOV_the_last_purge
-		cost = 10
+		cost = 60
 		x = 9
 		y = 2
 		prerequisite = {
@@ -3300,7 +3300,7 @@
 	focus = {
 		id = JAP_com12
 		icon = GFX_focus_chi_one_china_policy
-		cost = 10
+		cost = 60
 		x = 9
 		y = 3
 		prerequisite = {
@@ -3312,7 +3312,7 @@
 	focus = {
 		id = JAP_com13
 		icon = GFX_focus_prc_infiltration
-		cost = 10
+		cost = 60
 		x = 10
 		y = 4
 		prerequisite = {
@@ -3327,7 +3327,7 @@
 	focus = {
 		id = JAP_com14
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 10
+		cost = 60
 		x = 8
 		y = 4
 		prerequisite = {
@@ -3342,7 +3342,7 @@
 	focus = {
 		id = JAP_com15
 		icon = GFX_goal_generic_position_armies
-		cost = 10
+		cost = 60
 		x = 9
 		y = 5
 
@@ -3356,7 +3356,7 @@
 	focus = {
 		id = JAP_com16
 		icon = GFX_goal_generic_construct_civilian
-		cost = 10
+		cost = 60
 		x = 9
 		y = 6
 		prerequisite = {
@@ -3368,7 +3368,7 @@
 	focus = {
 		id = JAP_com17
 		icon = GFX_focus_hol_the_foundations_of_defense
-		cost = 10
+		cost = 60
 		x = 9
 		y = 7
 		prerequisite = {
@@ -3380,7 +3380,7 @@
 	focus = {
 		id = JAP_com18
 		icon = GFX_focus_jap_showa_restoration
-		cost = 10
+		cost = 60
 		x = 0
 		y = 4
 		prerequisite = {
@@ -3396,7 +3396,7 @@
 	focus = {
 		id = JAP_com19
 		icon = GFX_focus_ger_great_red_menace
-		cost = 10
+		cost = 60
 		x = 4
 		y = 4
 		prerequisite = {
@@ -3412,7 +3412,7 @@
 	focus = {
 		id = JAP_com20
 		icon = GFX_goal_support_fourth_int
-		cost = 10
+		cost = 60
 		x = -4
 		y = 4
 		prerequisite = {
@@ -3428,7 +3428,7 @@
 	focus = {
 		id = JAP_com21
 		icon = GFX_focus_por_workers_of_iberia
-		cost = 10
+		cost = 60
 		x = -2
 		y = 5
 		prerequisite = {
@@ -3441,7 +3441,7 @@
 	focus = {
 		id = JAP_com22
 		icon = GFX_focus_SOV_the_supreme_soviet
-		cost = 10
+		cost = 60
 		x = -2
 		y = 6
 		prerequisite = {
@@ -3453,7 +3453,7 @@
 	focus = {
 		id = JAP_com23
 		icon = GFX_focus_generic_socialist_science
-		cost = 10
+		cost = 60
 		x = -2
 		y = 7
 		prerequisite = {
@@ -3467,7 +3467,7 @@
 	focus = {
 		id = JAP_com24
 		icon = GFX_focus_jap_pacific_guardian
-		cost = 10
+		cost = 60
 		x = -2
 		y = 8
 		prerequisite = {
@@ -3479,7 +3479,7 @@
 	focus = {
 		id = JAP_com25
 		icon = GFX_focus_jap_cast_the_die
-		cost = 10
+		cost = 60
 		x = 1
 		y = 5
 		prerequisite = {
@@ -3491,7 +3491,7 @@
 	focus = {
 		id = JAP_com26
 		icon = GFX_focus_POL_complete_april_constitution
-		cost = 10
+		cost = 60
 		x = 1
 		y = 6
 		prerequisite = {
@@ -3506,7 +3506,7 @@
 	focus = {
 		id = JAP_com27
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
-		cost = 10
+		cost = 60
 		x = 1
 		y = 7
 		prerequisite = {
@@ -3518,7 +3518,7 @@
 	focus = {
 		id = JAP_com28
 		icon = GFX_goal_generic_construction2
-		cost = 10
+		cost = 60
 		x = 1
 		y = 9
 		prerequisite = {
@@ -3533,7 +3533,7 @@
 	focus = {
 		id = JAP_com29
 		icon = GFX_focus_POL_riot_of_37
-		cost = 10
+		cost = 60
 		x = -5
 		y = 6
 		prerequisite = {
@@ -3548,7 +3548,7 @@
 	focus = {
 		id = JAP_com30
 		icon = GFX_focus_generic_socialist_science
-		cost = 10
+		cost = 60
 		x = -5
 		y = 8
 		prerequisite = {
@@ -3566,7 +3566,7 @@
 	focus = {
 		id = JAP_com31
 		icon = GFX_goal_generic_soviet_construction
-		cost = 10
+		cost = 60
 		x = -5
 		y = 9
 		prerequisite = {
@@ -3581,7 +3581,7 @@
 	focus = {
 		id = JAP_com32
 		icon = GFX_focus_POL_warsaw_main_station
-		cost = 10
+		cost = 60
 		x = -5
 		y = 2
 		prerequisite = {
@@ -3594,7 +3594,7 @@
 	focus = {
 		id = JAP_com33
 		icon = GFX_focus_SOV_the_road_of_life
-		cost = 10
+		cost = 60
 		x = -5
 		y = 3
 		prerequisite = {
@@ -3607,7 +3607,7 @@
 	focus = {
 		id = JAP_com34
 		icon = GFX_focus_usa_guarantee_the_american_dream
-		cost = 10
+		cost = 60
 		x = -7
 		y = 2
 		prerequisite = {
@@ -3621,7 +3621,7 @@
 	focus = {
 		id = JAP_com35
 		icon = GFX_focus_spa_save_the_alcazar
-		cost = 10
+		cost = 60
 		x = -7
 		y = 3
 		prerequisite = {
@@ -3634,7 +3634,7 @@
 	focus = {
 		id = JAP_com36
 		icon = GFX_focus_spa_the_spanish_miracle
-		cost = 10
+		cost = 60
 		x = -7
 		y = 4
 		prerequisite = {
@@ -3648,7 +3648,7 @@
 	focus = {
 		id = JAP_com37
 		icon = GFX_focus_SOV_organize_wreckers
-		cost = 10
+		cost = 60
 		x = -7
 		y = 6
 		prerequisite = {
@@ -3660,7 +3660,7 @@
 	focus = {
 		id = JAP_com38
 		icon = GFX_focus_SOV_breadbasket_of_the_union
-		cost = 10
+		cost = 60
 		x = -9
 		y = 2
 		prerequisite = {
@@ -3677,7 +3677,7 @@
 	focus = {
 		id = JAP_com39
 		icon = GFX_focus_YUG_pan_slavic_congress
-		cost = 10
+		cost = 60
 		x = -9
 		y = 3
 		prerequisite = {
@@ -3712,7 +3712,7 @@
 	focus = {
 		id = JAP_com40
 		icon = GFX_focus_generic_industry_3
-		cost = 10
+		cost = 60
 		x = -9
 		y = 4
 		prerequisite = {
@@ -3727,7 +3727,7 @@
 	focus = {
 		id = JAP_com41
 		icon = GFX_focus_SOV_merge_plants
-		cost = 10
+		cost = 60
 		x = -9
 		y = 5
 		prerequisite = {
@@ -3742,7 +3742,7 @@
 	focus = {
 		id = JAP_com42
 		icon = GFX_goal_generic_position_armies
-		cost = 10
+		cost = 60
 		x = -11
 		y = 2
 		prerequisite = {
@@ -3761,7 +3761,7 @@
 	focus = {
 		id = JAP_com43
 		icon = GFX_focus_generic_steel
-		cost = 10
+		cost = 60
 		x = -11
 		y = 3
 		prerequisite = {
@@ -3779,7 +3779,7 @@
 	focus = {
 		id = JAP_com44
 		icon = GFX_focus_SOV_father_of_nations
-		cost = 10
+		cost = 60
 		x = -2
 		y = 10
 		prerequisite = {
@@ -3792,7 +3792,7 @@
 	focus = {
 		id = JAP_com45
 		icon = GFX_goal_generic_national_unity
-		cost = 10
+		cost = 60
 		x = 4
 		y = 5
 		prerequisite = {
@@ -3804,7 +3804,7 @@
 	focus = {
 		id = JAP_com46
 		icon = GFX_focus_eng_imperial_federation
-		cost = 10
+		cost = 60
 		x = 4
 		y = 6
 		prerequisite = {
@@ -3816,7 +3816,7 @@
 	focus = {
 		id = JAP_com47
 		icon = GFX_focus_SOV_south_manchuria_railway
-		cost = 10
+		cost = 60
 		x = 6
 		y = 7
 		prerequisite = {
@@ -3828,7 +3828,7 @@
 	focus = {
 		id = JAP_com48
 		icon = GFX_focus_jap_strike_south
-		cost = 10
+		cost = 60
 		x = 4
 		y = 8
 		prerequisite = {
@@ -3840,7 +3840,7 @@
 	focus = {
 		id = JAP_com49
 		icon = GFX_focus_generic_industry_3
-		cost = 10
+		cost = 60
 		x = 4
 		y = 9
 		prerequisite = {

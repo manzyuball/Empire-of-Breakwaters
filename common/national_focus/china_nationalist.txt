@@ -23,7 +23,7 @@
 #		y = 0
 #		relative_position_id = 
 #
-#		cost = 10
+#		cost = 60
 #
 #		ai_will_do = {
 #			factor = 1
@@ -52,10 +52,10 @@
 	focus = {
 		id = CHI_H1
 		icon = "GFX_focus_generic_military_academy"
-		x = 15
-		y = 8
+		x = 4
+		y = 0
 
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -79,7 +79,7 @@
 		y = 2
 		prerequisite = { focus = CHI_H1 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -110,7 +110,7 @@
 		prerequisite = { focus = CHI_H1 }
 		mutually_exclusive = { focus = CHI_H4 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -143,7 +143,7 @@
 		prerequisite = { focus = CHI_H1 }
 		mutually_exclusive = { focus = CHI_H3 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -179,7 +179,7 @@
 		prerequisite = { focus = CHI_H2 }
 		mutually_exclusive = { focus = CHI_H7 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -203,7 +203,7 @@
 		y = 4
 		prerequisite = { focus = CHI_H5 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -231,7 +231,7 @@
 		prerequisite = { focus = CHI_H2 }
 		mutually_exclusive = { focus = CHI_H5 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -255,7 +255,7 @@
 		y = 4
 		prerequisite = { focus = CHI_H7 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -282,7 +282,7 @@
 		y = 5
 		prerequisite = { focus = CHI_H8 focus = CHI_H6 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -305,7 +305,7 @@
 		y = 6
 		prerequisite = { focus = CHI_H9 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -328,7 +328,7 @@
 		y = 2
 		prerequisite = { focus = CHI_H4 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -352,7 +352,7 @@
 		y = 3
 		prerequisite = { focus = CHI_H11 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -380,7 +380,7 @@
 		y = 2
 		prerequisite = { focus = CHI_H3 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -404,7 +404,7 @@
 		y = 3
 		prerequisite = { focus = CHI_H14 }
 		relative_position_id = CHI_H1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -437,10 +437,10 @@
 	focus = {
 		id = CHI_d1
 		icon = "GFX_goal_generic_construction2"
-		x = 24
-		y = 8
+		x = 12
+		y = 0
 
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -464,7 +464,7 @@
 		y = 1
 		prerequisite = { focus = CHI_d1 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -519,7 +519,7 @@
 		y = 1
 		prerequisite = { focus = CHI_d1 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -570,7 +570,7 @@
 		y = 1
 		prerequisite = { focus = CHI_d1 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -594,7 +594,7 @@
 		y = 2
 		prerequisite = { focus = CHI_d2 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -638,7 +638,7 @@
 		y = 3
 		prerequisite = { focus = CHI_d5 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -714,7 +714,7 @@
 		y = 2
 		prerequisite = { focus = CHI_d2 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -736,7 +736,7 @@
 		y = 3
 		prerequisite = { focus = CHI_d7 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -787,7 +787,7 @@
 		prerequisite = { focus = CHI_d8 }
 		prerequisite = { focus = CHI_d6 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -820,7 +820,7 @@
 		y = 5
 		prerequisite = { focus = CHI_d9 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -840,7 +840,7 @@
 		y = 2
 		prerequisite = { focus = CHI_d4 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -878,7 +878,7 @@
 		y = 3
 		prerequisite = { focus = CHI_d11 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -902,7 +902,7 @@
 		y = 2
 		prerequisite = { focus = CHI_d3 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -969,7 +969,7 @@
 		y = 3
 		prerequisite = { focus = CHI_d14 }
 		relative_position_id = CHI_d1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -1061,7 +1061,7 @@
 		x = 25
 		y = 0
 		mutually_exclusive = { focus = PRC_na2 }
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 50
@@ -1083,7 +1083,7 @@
 		y = 1
 		prerequisite = { focus = CHI_S1 }
 		relative_position_id = CHI_S1
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 50
@@ -1104,7 +1104,7 @@
 		y = 1
 		prerequisite = { focus = CHI_S1 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 15
@@ -1163,7 +1163,7 @@
 		y = 1
 		prerequisite = { focus = CHI_S1 }
 		relative_position_id = CHI_S1
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 50
@@ -1183,7 +1183,7 @@
 		y = 2
 		prerequisite = { focus = CHI_S2 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 50
@@ -1220,7 +1220,7 @@
 		y = 3
 		prerequisite = { focus = CHI_S5 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1253,7 +1253,7 @@
 		y = 3
 		prerequisite = { focus = CHI_S5 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1277,7 +1277,7 @@
 		y = 3
 		prerequisite = { focus = CHI_S5 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1301,7 +1301,7 @@
 		y = 3
 		prerequisite = { focus = CHI_S5 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1328,7 +1328,7 @@
 		y = 4
 		prerequisite = { focus = CHI_S9 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1356,7 +1356,7 @@
 		y = 4
 		prerequisite = { focus = CHI_S7 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1384,7 +1384,7 @@
 		y = 4
 		prerequisite = { focus = CHI_S5 }
 		relative_position_id = CHI_S1
-		cost = 15
+		cost = 600
 
 		ai_will_do = {
 			factor = 10
@@ -1439,7 +1439,7 @@
 		mutually_exclusive = { focus = CHI_S14 }
 		prerequisite = { focus = CHI_S12 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1460,7 +1460,7 @@
 		y = 5
 		prerequisite = { focus = CHI_S12 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1480,7 +1480,7 @@
 		y = 6
 		prerequisite = { focus = CHI_S14 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1503,7 +1503,7 @@
 		y = 6
 		prerequisite = { focus = CHI_S14 }
 		relative_position_id = CHI_S1
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1524,7 +1524,7 @@
 		y = 7
 		prerequisite = { focus = CHI_S16 }
 		relative_position_id = CHI_S1
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1544,7 +1544,7 @@
 		y = 6
 		prerequisite = { focus = CHI_S13 }
 		relative_position_id = CHI_S1
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1567,7 +1567,7 @@
 		y = 6
 		prerequisite = { focus = CHI_S13 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1591,7 +1591,7 @@
 		y = 7
 		prerequisite = { focus = CHI_S18 }
 		relative_position_id = CHI_S1
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1614,7 +1614,7 @@
 		y = 6
 		prerequisite = { focus = CHI_S14 focus = CHI_S13 }
 		relative_position_id = CHI_S1
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1635,7 +1635,7 @@
 		y = 7
 		prerequisite = { focus = CHI_S21 }
 		relative_position_id = CHI_S1
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -1701,7 +1701,7 @@
 		y = 1
 		prerequisite = { focus = CHI_S3 }
 		relative_position_id = CHI_S3
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1738,7 +1738,7 @@
 		mutually_exclusive = { focus = CHI_S26 }
 		prerequisite = { focus = CHI_S23 }
 		relative_position_id = CHI_S3
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1758,7 +1758,7 @@
 		y = 4
 		prerequisite = { focus = CHI_S24 }
 		relative_position_id = CHI_S3
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1789,7 +1789,7 @@
 		mutually_exclusive = { focus = CHI_S24 }
 		prerequisite = { focus = CHI_S23 }
 		relative_position_id = CHI_S3
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1842,7 +1842,7 @@
 		y = 3
 		prerequisite = { focus = CHI_S26 }
 		relative_position_id = CHI_S3
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1868,7 +1868,7 @@
 		y = 4
 		prerequisite = { focus = CHI_S27 }
 		relative_position_id = CHI_S3
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1891,7 +1891,7 @@
 		y = 5
 		prerequisite = { focus = CHI_S25 }
 		relative_position_id = CHI_S3
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1917,7 +1917,7 @@
 		y = 5
 		prerequisite = { focus = CHI_S25 }
 		relative_position_id = CHI_S3
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1942,7 +1942,7 @@
 		y = 6
 		prerequisite = { focus = CHI_S30 }
 		relative_position_id = CHI_S3
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -1965,7 +1965,7 @@
 		y = 1
 		prerequisite = { focus = CHI_S4 }
 		relative_position_id = CHI_S4
-		cost = 15
+		cost = 100
 
 		ai_will_do = {
 			factor = 100
@@ -1999,7 +1999,7 @@
 		y = 1
 		prerequisite = { focus = CHI_S4 }
 		relative_position_id = CHI_S4
-		cost = 15
+		cost = 100
 
 		ai_will_do = {
 			factor = 100
@@ -2031,7 +2031,7 @@
 		y = 1
 		prerequisite = { focus = CHI_S4 }
 		relative_position_id = CHI_S4
-		cost = 15
+		cost = 100
 
 		ai_will_do = {
 			factor = 500
@@ -2140,7 +2140,7 @@ will_lead_to_war_with = JAP
 		y = 3
 		prerequisite = { focus = CHI_S35 }
 		relative_position_id = CHI_S4
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -2163,7 +2163,7 @@ will_lead_to_war_with = JAP
 		y = 4
 		prerequisite = { focus = CHI_S37 }
 		relative_position_id = CHI_S4
-		cost = 5
+		cost = 30
 
 		ai_will_do = {
 			factor = 10
@@ -2190,7 +2190,7 @@ will_lead_to_war_with = JAP
 		y = 5
 		prerequisite = { focus = CHI_S38 }
 		relative_position_id = CHI_S4
-		cost = 10
+		cost = 60
 
 		ai_will_do = {
 			factor = 10
@@ -2222,7 +2222,7 @@ will_lead_to_war_with = JAP
 		y = 5
 		prerequisite = { focus = CHI_S38 }
 		relative_position_id = CHI_S4
-		cost = 15
+		cost = 600
 
 		ai_will_do = {
 			factor = 10
@@ -2239,1178 +2239,5 @@ will_lead_to_war_with = JAP
 			add_ideas = CHI_koutei
 		}
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#"#"#"#"#"#"#"#""""""""""""""""""""""""######
-
-focus = {
-	id = PRC_na_2
-	icon = "GFX_focus_prc_agrarian_socialism"
-	mutually_exclusive = { focus = CHI_S1 }
-	x = 9
-	y = 0
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_3
-	icon = "GFX_focus_prc_maoism"
-	prerequisite = { focus = PRC_na_2 }
-	x = 15
-	y = 1
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_4
-	icon = "GFX_focus_SOV_breadbasket_of_the_union"
-	prerequisite = { focus = PRC_na_3 }
-	x = 15
-	y = 2
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_5
-	icon = "GFX_focus_SOV_bukharan_republic"
-	prerequisite = { focus = PRC_na_4 }
-	x = 15
-	y = 3
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_6
-	icon = "GFX_focus_generic_industry_3"
-	prerequisite = { focus = PRC_na_5 }
-	x = 15
-	y = 4
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_7
-	icon = "GFX_focus_focus_fra_liberte_egalite_solidarite"
-	prerequisite = { focus = PRC_na_6 }
-	x = 15
-	y = 5
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_8
-	icon = "GFX_focus_spr_masters_of_our_own_fate"
-	prerequisite = { focus = PRC_na_2 }
-	x = 9
-	y = 1
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_9
-	icon = "GFX_focus_hol_the_fourth_ally"
-	prerequisite = { focus = PRC_na_8 }
-	x = 11
-	y = 2
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_10
-	icon = "GFX_focus_attack_china"
-	prerequisite = { focus = PRC_na_8 }
-	x = 13
-	y = 2
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_11
-	icon = "GFX_focus_LIT_restore_the_grand_duchy"
-	prerequisite = { focus = PRC_na_8 }
-	x = 5
-	y = 2
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_12
-	icon = "GFX_goal_generic_military_sphere"
-	prerequisite = { focus = PRC_na_8 }
-	x = 7
-	y = 2
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_13
-	icon = "GFX_focus_eng_move_to_secure_the_dominions"
-	prerequisite = { focus = PRC_na_12 }
-	x = 7
-	y = 3
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_14
-	icon = "GFX_focus_focus_fra_revolution_utmost"
-	prerequisite = { focus = PRC_na_13 }
-	x = 7
-	y = 4
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_15
-	icon = "GFX_focus_ger_great_red_menace"
-	prerequisite = { focus = PRC_na_14 }
-	x = 7
-	y = 5
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-focus = {
-	id = PRC_na_16
-	icon = "GFX_focus_focus_fra_maquis"
-	prerequisite = { focus = PRC_na_11 }
-	x = 5
-	y = 3
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-focus = {
-	id = PRC_na_17
-	icon = "GFX_focus_mex_soldaderas"
-	prerequisite = { focus = PRC_na_16 }
-	x = 5
-	y = 5
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-focus = {
-	id = PRC_na_18
-	icon = "GFX_focus_chi_whampoa_military_academy"
-	prerequisite = { focus = PRC_na_17 }
-	x = 5
-	y = 4
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_19
-	icon = "GFX_goal_tfv_saf_anti_colonialist_crusade"
-	prerequisite = { focus = PRC_na_10 }
-	x = 13
-	y = 3 
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_20
-	icon = "GFX_focus_generic_provoke_border_clashes"
-	prerequisite = { focus = PRC_na_19 }
-	x = 13
-	y = 5
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_21
-	icon = "GFX_goal_generic_propaganda"
-	prerequisite = { focus = PRC_na_20 }
-	x = 13
-	y = 4
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_22
-	icon = "GFX_focus_jap_pacific_guardian"
-	prerequisite = { focus = PRC_na_9 }
-	x = 11
-	y = 3
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_23
-	icon = "GFX_focus_jap_zaibatsu"
-	prerequisite = { focus = PRC_na_22 }
-	x = 11
-	y = 5
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_24
-	icon = "GFX_focus_usa_reestablish_the_gold_standard"
-	prerequisite = { focus = PRC_na_23 }
-	x = 11
-	y = 4
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_25
-	icon = "GFX_focus_prc_infiltration"
-	prerequisite = { focus = PRC_na_2 }
-	x = 3
-	y = 1
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_26
-	icon = "GFX_focus_generic_manpower"
-	prerequisite = { focus = PRC_na_25 }
-	x = 3
-	y = 2
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_27
-	icon = "GFX_focus_generic_socialist_science"
-	prerequisite = { focus = PRC_na_26 }
-	x = 3
-	y = 3
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_28
-	icon = "GFX_focus_eng_expose_the_belly_of_the_bear"
-	prerequisite = { focus = PRC_na_27 }
-	x = 3
-	y = 4
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_29
-	icon = "GFX_focus_SOV_builder_of_the_red_army"
-	prerequisite = { focus = PRC_na_28 }
-	x = 3
-	y = 5
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_30
-	icon = "GFX_focus_chi_one_china_policy"
-	prerequisite = { focus = PRC_na_8 }
-	prerequisite = { focus = PRC_na_7 }
-	prerequisite = { focus = PRC_na_29 }
-	x = 9
-	y = 6
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_31
-	icon = "GFX_focus_prc_proclaim_the_peoples_republic"
-	prerequisite = { focus = PRC_na_30 }
-	x = 9
-	y = 7
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_32
-	icon = "GFX_focus_por_workers_of_iberia"
-	prerequisite = { focus = PRC_na_31 }
-	x = 9
-	y = 8
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_33
-	icon = "GFX_focus_generic_the_giant_wakes"
-	prerequisite = { focus = PRC_na_32 }
-	x = 7
-	y = 9
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_34
-	icon = "GFX_focus_hol_the_foundations_of_defense"
-	prerequisite = { focus = PRC_na_32 }
-	x = 11
-	y = 9
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-
-focus = {
-	id = PRC_na_35
-	icon = "GFX_goal_generic_soviet_construction"
-	prerequisite = { focus = PRC_na_30 }
-	x = 12
-	y = 8
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
-focus = {
-	id = PRC_na_36
-	icon = "GFX_goal_support_communism"
-	prerequisite = { focus = PRC_na_30 }
-	x = 6
-	y = 8
-	cost = 10
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	available = {
-
-	}
-	
-	bypass = {
-
-	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-
-	complete_tooltip = {
-
-	}
-
-	completion_reward = {
-
-	}
-}
 
 }

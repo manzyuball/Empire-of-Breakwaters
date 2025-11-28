@@ -2,7 +2,10 @@
 state={
 	id=989
 	name="STATE_989"
-
+    resources = {
+		chromium = 31
+		coal = 42
+	}
 	history={
 		owner = JAP
 		add_core_of = JAP

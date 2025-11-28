@@ -1,4 +1,5 @@
 add_namespace = EuropeanUnion_Election
+add_namespace = EuropeanUnion
 country_event = {
 	id = EuropeanUnion_Election.1
 	title = EuropeanUnion_Election.1.t
@@ -703,4 +704,102 @@ country_event = {
 				
 			}
 		}
+	}
+	option = {
+		name = EuropeanUnion_Election.11.d #ベネルクス派閥
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = EuropeanUnion_Election.12
+	title = EuropeanUnion_Election.12.t
+	desc = EuropeanUnion_Election.12.desc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.12.a #フランス派閥
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 1
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.12.b #ドイツ派閥
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 2
+			}
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.12.c #イタリア派閥
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 3
+				
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.12.d #ベネルクス派閥
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = EuropeanUnion.1
+	title = EuropeanUnion.1.t
+	desc = EuropeanUnion.1.desc
+	picture = GFX_report_event_generic_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EuropeanUnion.1.a
+		if = {
+			limit = { country_exists = SPR }
+			annex_country = { target = SPR }
+		}
+		if = {
+			limit = { country_exists = SPA }
+			annex_country = { target = SPA }
+		}
+	}
 }

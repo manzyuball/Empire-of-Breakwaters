@@ -2,6 +2,9 @@ state = {
 	id = 618
 	name = "STATE_618"	# Dzungaria
 	manpower = 670800
+	resources = {
+		oil = 56
+	}
 	state_category = pastoral
 	history = {
 		owner = CHI

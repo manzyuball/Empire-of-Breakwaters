@@ -7,6 +7,7 @@ state={
 	resources={
 		steel=8.000
 		aluminium=16.000
+		coal = 51
 	}
 	history={
 		owner = EUN

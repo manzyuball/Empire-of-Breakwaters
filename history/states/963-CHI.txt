@@ -2,7 +2,10 @@
 state={
 	id=963
 	name="STATE_963"
-
+   resources = {
+	coal = 15
+	steel = 21
+   }
 	history={
 		owner = CHI
 		add_core_of = CHI

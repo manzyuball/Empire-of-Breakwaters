@@ -8,6 +8,7 @@ state = {
 		aluminium = 15
 		chromium = 12
 		oil = 21
+		coal = 32
 	}
 	history = {
 		owner = ENG

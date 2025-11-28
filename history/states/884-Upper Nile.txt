@@ -2,7 +2,10 @@
 state={
 	id=884
 	name="STATE_884"
-
+    resources = {
+		steel = 31
+		coal = 23
+	}
 	history={
 		owner = EGY
 		add_core_of = SUD
