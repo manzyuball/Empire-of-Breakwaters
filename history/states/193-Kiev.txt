@@ -2,13 +2,12 @@ state = {
 	id = 193
 	name = "STATE_193"
 	history = {
-		owner = UKR
+		owner = SOV
 		buildings = {
 			infrastructure = 3
 			air_base = 8
 		}
 		add_core_of = SOV
-		add_core_of = UKR
 	}
 	provinces = {
 		582

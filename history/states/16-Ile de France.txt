@@ -6,7 +6,7 @@ state={
 	history={
 		owner = EUN
 		victory_points = {
-			9523 40
+			9523 50
 		}
 		buildings = {
 			infrastructure = 4
@@ -17,14 +17,6 @@ state={
 
 		}
 		add_core_of = EUN
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 2
-				industrial_complex = 2
-
-			}
-
-		}
 
 	}
 

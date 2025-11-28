@@ -2,21 +2,12 @@ state = {
 	id = 146
 	name = "STATE_146"
 	history = {
-		owner = FIN
-		add_core_of = FIN
-		add_claim_by = RUS
+		owner = SOV
+		add_core_of = SOV
+		
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
-			9100 = {
-				bunker = 2
-			}
-			9105 = {
-				bunker = 2
-			}
-			9206 = {
-				coastal_bunker = 1
-			}
 		}
 		victory_points = {
 			9206

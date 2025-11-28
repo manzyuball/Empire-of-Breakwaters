@@ -2,7 +2,7 @@ state = {
 	id = 231
 	name = "STATE_231"
 	history = {
-		owner = TUR
+		owner = SOV
 		victory_points = {
 			1599
 			5
@@ -21,8 +21,6 @@ state = {
 			}
 		}
 		add_core_of = SOV
-		add_core_of = GEO
-		add_core_of = TUR
 	}
 	provinces = {
 		654

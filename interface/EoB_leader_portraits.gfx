@@ -24,4 +24,12 @@ spriteTypes = {
 		name = "GFX_Portrait_Mussolini"
 		texturefile = "gfx/leaders/_EOB/musso.dds"
 	}
+	spriteType = {
+		name = "GFX_Portrait_Paul-Henri_Spaak"
+		texturefile = "gfx/leaders/_EOB/Paul-Henri_Spaak.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_otto_strasser"
+		texturefile = "gfx/leaders/_EOB/otto_strasser.dds"
+	}
 }

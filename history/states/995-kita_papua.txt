@@ -2,7 +2,7 @@ state = {
 	id = 995
 	name = "STATE_995"
 	history = {
-		owner = JAP
+		owner = AST
 		buildings = {
 			infrastructure = 2
 			12237 = {
@@ -14,10 +14,10 @@ state = {
 			12240 = {
 				naval_base = 1
 			}
-			victory_points = {
-				12237
-				1
-			}
+
+		}
+		victory_points = {
+			12237 1
 		}
 	}
 	provinces = {

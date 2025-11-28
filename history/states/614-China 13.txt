@@ -40,7 +40,7 @@ state = {
 		13380
 		13381
 	}
-	manpower = 18434900
+	manpower = 7434900
 	buildings_max_level_factor = 1
 	state_category = city
 	local_supplies = 0

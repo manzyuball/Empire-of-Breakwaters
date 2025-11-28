@@ -19,17 +19,7 @@ state={
 			air_base = 8
 
 		}
-		add_core_of = SOV
 		add_core_of = UKR
-		add_claim_by = RUS
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 2
-				industrial_complex = 2
-
-			}
-
-		}
 
 	}
 

@@ -1,0 +1,26 @@
+state={
+	id=1053
+	name="STATE_1053"
+	provinces={
+		7091 10073 11964 
+	}
+	history={
+		owner = EGY
+		add_core_of = EGY
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 3
+			dockyard = 3
+
+		}
+		victory_points = {
+			10073 10 
+		}
+		add_core_of = EGY
+
+	}
+	manpower=12586596
+	buildings_max_level_factor=1
+	state_category=large_city
+}

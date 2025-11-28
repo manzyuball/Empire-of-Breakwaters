@@ -19,11 +19,7 @@ state = {
 			infrastructure = 3
 			
 		}
-		add_core_of = SOV
-		add_claim_by = RUS
-		add_core_of = MOL
 		add_core_of = UKR
-		add_core_of = ROM
 	}
 
 	provinces = {

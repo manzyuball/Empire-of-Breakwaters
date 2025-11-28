@@ -1,10 +1,13 @@
-state = {
-	id = 593
-	name = "STATE_593"
-	resources = {
-		tungsten = 15
-		steel = 15
-		chromium = 3
+state={
+	id=593
+	name="STATE_593"
+	resources={
+		tungsten=15
+		steel=15
+		chromium=3
+	}
+	provinces={
+		1202 4050 4092 7108 7128 7210 9997 10080 10121 11941 12014 12095 13404 13405 13406 13407 
 	}
 	history = {
 		owner = CHI
@@ -12,33 +15,11 @@ state = {
 		add_core_of = MAN
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 2
-			air_base = 2
-			9938 = {
-				naval_base = 2
-				coastal_bunker = 1
-				bunker = 1
-			}
+			industrial_complex = 1
 		}
 	}
-	provinces = {
-		1202
-		4050
-		7108
-		7128
-		7210
-		9997
-		10080
-		10121
-		12014
-		12095
-		13401
-		13404
-		13405
-		13406
-		13407
-	}
-	manpower = 10000000
-	buildings_max_level_factor = 1
-	state_category = city
+	manpower=10000000
+	buildings_max_level_factor=1
+	state_category=city
+	local_supplies=0
 }

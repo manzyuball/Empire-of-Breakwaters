@@ -10,7 +10,7 @@ state = {
 		12428
 	}
 	history = {
-		owner = JAP
+		owner = AST
 		buildings = {
 			infrastructure = 0
 		}

@@ -95,4 +95,344 @@ every_possible_country = {
 		}
 		picture = ast_all_in
 	}
+	generate_character = {
+		token_base = generic_army_chief_old_guard #陸軍政治
+		advisor = {
+			slot = army_chief
+			traits = { 	army_chief_old_guard }
+			cost = 25
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_political_support }
+		}
+	}
+	
+	generate_character = {
+		token_base = generic_army_chief_reform #陸軍改革
+		advisor = {
+			slot = army_chief
+			traits = { 	army_chief_reform_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_NORDIC_army_communist }
+		}
+	}
+
+
+	generate_character = {
+		token_base = generic_army_chief_offensive_2 # 師団攻撃
+		advisor = {
+			slot = army_chief
+			traits = { 	army_chief_offensive_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_acquire_tanks }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_chief_drill_2 # 訓練
+		advisor = {
+			slot = army_chief
+			traits = { 	army_chief_drill_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_SWE_wargames }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_chief_defensive_2 # 師団防衛
+		advisor = {
+			slot = army_chief
+			traits = { 	army_chief_defensive_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_YUG_federal_defense_council }
+		}
+	}
+
+	# generic navy chiefs
+	generate_character = {
+		token_base = generic_navy_chief_decisive_battle_2 # 艦隊決戦
+		advisor = {
+			slot = navy_chief
+			traits = { navy_chief_decisive_battle_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_AUS_naval_efficiency_idea }
+		}
+		picture = francois_darlan
+	}
+		generate_character = {
+		token_base = generic_navy_chief_reform_2 # 海軍改革
+		advisor = {
+			slot = navy_chief
+			traits = { navy_chief_reform_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_NORDIC_navy_communist }
+		}
+		picture = Chester_Nimitz
+	}
+	generate_character = {
+		token_base = generic_navy_chief_commerce_raiding_2 # 通商破壊
+		advisor = {
+			slot = navy_chief
+			traits = { navy_chief_commerce_raiding_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_navy_submarines }
+		}
+		picture = raeder
+	}
+	generate_character = {
+		token_base = generic_navy_chief_old_guard # 政治
+		advisor = {
+			slot = navy_chief
+			traits = { navy_chief_old_guard }
+			cost = 25
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_political_support }
+		}
+	}
+	generate_character = {
+		token_base = generic_navy_chief_naval_aviation_2 # 空母
+		advisor = {
+			slot = navy_chief
+			traits = { navy_chief_naval_aviation_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_navy_carrier_bonus }
+		}
+		picture = isoroku_yamamoto
+	}
+	generate_character = {
+		token_base = generic_navy_chief_maneuver_2 # 海軍速度
+		advisor = {
+			slot = navy_chief
+			traits = { navy_chief_maneuver_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_SWE_coastal_support }
+		}
+		picture = andrew_cunningham
+	}
+
+
+
+	# generic air chiefs
+	generate_character = {
+		token_base = generic_air_chief_reform_2 # 空軍改革
+		advisor = {
+			slot = air_chief
+			traits = { air_chief_reform_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_NORDIC_airforce_communist }
+		}
+	}
+	generate_character = {
+		token_base = generic_air_chief_old_guard
+		advisor = {
+			slot = air_chief
+			traits = { air_chief_old_guard }
+			cost = 25
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_political_support }
+		}
+	}
+	generate_character = {
+		token_base = generic_air_chief_ground_support_2 #航空優勢
+		advisor = {
+			slot = air_chief
+			traits = { air_chief_ground_support_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_air_payment }
+		}
+	}
+	generate_character = {
+		token_base = generic_air_chief_night_operations_3 #夜間作戦
+		advisor = {
+			slot = air_chief
+			traits = { air_chief_night_operations_2 }
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_FIN_maan_turva }
+		}
+	}
+	# 最高司令部
+	generate_character = {
+		token_base = generic_army_infantry_2 # 歩兵指揮官
+		advisor = {
+			slot = high_command
+			traits = { army_infantry_2 }
+			ledger = army
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_infantry_bonus }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_commando_2 # コマンドー
+		advisor = {
+			slot = high_command
+			traits = { army_commando_2 }
+			ledger = army
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_PER_special_units_division_idea }
+		}
+		picture = harold_alexander
+	}
+	generate_character = {
+		token_base = generic_army_armored_2 #機甲部隊
+		advisor = {
+			slot = high_command
+			traits = { army_armored_2 }
+			ledger = army
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_acquire_tanks }
+		}
+		picture = manstein
+	}
+	generate_character = {
+		token_base = generic_army_cavalry_2 #騎兵科
+		advisor = {
+			slot = high_command
+			traits = { army_cavalry_2 }
+			ledger = army
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_FRA_motorized_focus }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_artillery_2 #野砲
+		advisor = {
+			slot = high_command
+			traits = { army_artillery_2 }
+			ledger = army
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_SWE_let_fly_all_guns }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_logistics_2 #師団消耗
+		advisor = {
+			slot = high_command
+			traits = { army_logistics_2 }
+			ledger = army
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_supply_line }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_regrouping_2 #師団回復率
+		advisor = {
+			slot = high_command
+			traits = { army_regrouping_2 }
+			ledger = army
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_morale_bonus }
+		}
+	}
+	generate_character = {
+		token_base = generic_army_chief_organizational_2 # 陸軍編制
+		advisor = {
+			slot = high_command
+			traits = { 	army_chief_organizational_2 }
+			cost = 100
+			ledger = army
+		}
+		portraits = { 
+			army = { small = GFX_idea_SOV_organize_wreckers }
+		}
+	}
+
+	generate_character = {
+		token_base = generic_air_tactical_bombing_2 # 支援攻撃
+		advisor = {
+			slot = high_command
+			traits = { air_tactical_bombing_2 }
+			ledger = air
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_SWE_land_air_warfare }
+		}
+	}
+	generate_character = {
+		token_base = generic_navy_amphibious_assault_2 # 上陸作戦の進度
+		advisor = {
+			slot = high_command
+			traits = { navy_amphibious_assault_2 }
+			ledger = navy
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_naval_invasion }
+		}
+	}
+	generate_character = {
+		token_base = generic_navy_naval_air_defense_2 # 対空
+		advisor = {
+			slot = high_command
+			traits = { navy_naval_air_defense_2 }
+			ledger = navy
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_anti_air }
+		}
+	}
+	generate_character = {
+		token_base = generic_navy_screen_2 # screen
+		advisor = {
+			slot = high_command
+			traits = { navy_screen_2 }
+			ledger = navy
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_PHI_island_nation }
+		}
+	}
+	generate_character = {
+		token_base = generic_navy_capital_ship_2 # capital_ship
+		advisor = {
+			slot = high_command
+			traits = { navy_capital_ship_2 }
+			ledger = navy
+			cost = 100
+		}
+		portraits = { 
+			army = { small = GFX_idea_liberty_ships_focus }
+		}
+	}
+
 }

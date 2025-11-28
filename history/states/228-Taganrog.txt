@@ -2,7 +2,7 @@ state = {
 	id = 228
 	name = "STATE_228"
 	history = {
-		owner = UKR
+		owner = SOV
 		victory_points = {
 			9461
 			1
@@ -11,7 +11,6 @@ state = {
 			infrastructure = 3
 		}
 		add_core_of = SOV
-		add_core_of = UKR
 	}
 	provinces = {
 		6505

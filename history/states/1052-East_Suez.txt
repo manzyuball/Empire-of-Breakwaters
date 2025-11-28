@@ -1,0 +1,20 @@
+state={
+	id=1052
+	name="STATE_1052"
+	provinces={
+		1155 9947 
+	}
+	history={
+		owner = EGY
+		add_core_of = EGY
+		buildings = {
+			infrastructure = 4
+
+		}
+
+	}
+	manpower=153251
+	state_category = large_town
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

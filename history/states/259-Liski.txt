@@ -6,12 +6,11 @@ state = {
 			11504
 			3
 		}
-		owner = UKR
+		owner = SOV
 		buildings = {
 			infrastructure = 3
 		}
 		add_core_of = SOV
-		add_core_of = UKR
 	}
 	provinces = {
 		511

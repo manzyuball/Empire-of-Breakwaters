@@ -4,12 +4,12 @@ state = {
 	manpower = 4630
 	state_category = enclave
 	history = {
-		owner = FIN
+		owner = SOV
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = FIN
-		add_claim_by = RUS
+		add_core_of = SOV
+		
 		victory_points = {
 			197
 			1

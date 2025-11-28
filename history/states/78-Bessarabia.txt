@@ -7,8 +7,7 @@ state=
 	state_category = city
 	
 	history= {
-		add_core_of = MOL
-		owner = ROM
+		owner = UKR
 		victory_points = {
 			3707 3
 		}
@@ -16,9 +15,7 @@ state=
 			infrastructure = 3
 			air_base = 2
 		}
-		add_core_of = ROM
 		add_core_of = UKR
-		add_claim_by =  WAL
 	}
 	provinces=
 	{
