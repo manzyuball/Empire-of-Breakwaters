@@ -19,6 +19,7 @@ state={
 			1047 35
 		}
 	}
+	state_category = metropolis
 	manpower=41289800
 	buildings_max_level_factor=1
 	local_supplies=0

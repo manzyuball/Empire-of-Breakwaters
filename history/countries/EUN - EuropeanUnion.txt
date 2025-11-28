@@ -179,7 +179,7 @@ set_technology = {
 }
 
 create_equipment_variant = {
-		name = "1936?????"
+		name = "1936年型"
 		type = light_tank_chassis_2
 		parent_version = 1
 		modules = {
@@ -196,7 +196,7 @@ create_equipment_variant = {
 		icon = "GFX_basic_light_tank_medium"
 	}
 	create_equipment_variant = {
-		name = "1936??????"
+		name = "1936年型"
 		type = ship_hull_carrier_1
 		parent_version = 1
 		modules = {
@@ -210,7 +210,7 @@ create_equipment_variant = {
 		}
 	}
 	create_equipment_variant = {
-		name = "1936????"
+		name = "1936"
 		type = ship_hull_heavy_2
 		parent_version = 1
 		modules = {
@@ -227,7 +227,7 @@ create_equipment_variant = {
 		}
 	}
 	create_equipment_variant = {
-		name = "1936??????"
+		name = "1936年型"
 		type = ship_hull_heavy_2
 		parent_version = 1
 		modules = {
@@ -244,7 +244,7 @@ create_equipment_variant = {
 		}
 	}
 	create_equipment_variant = {
-		name = "1936??????"
+		name = "1936年型"
 		type = ship_hull_cruiser_2
 		parent_version = 1
 		modules = {
@@ -261,7 +261,7 @@ create_equipment_variant = {
 		}
 	}
 	create_equipment_variant = {
-		name = "1936??????"
+		name = "1936年型"
 		type = ship_hull_cruiser_2
 		parent_version = 1
 		modules = {
@@ -278,7 +278,7 @@ create_equipment_variant = {
 		}
 	}
 	create_equipment_variant = {
-		name = "1936?????"
+		name = "1936年型"
 		type = ship_hull_light_2
 		parent_version = 1
 		modules = {
@@ -291,7 +291,7 @@ create_equipment_variant = {
 		}
 	}
 	create_equipment_variant = {
-			name = "1936?????"
+			name = "1936年型"
 			type = ship_hull_submarine_2
 			name_group = ENG_SS_HISTORICAL
 			parent_version = 1
@@ -303,7 +303,7 @@ create_equipment_variant = {
 	}
 
 	create_equipment_variant = {
-			name = "1936?????" 
+			name = "1936年型" 
 			type = small_plane_airframe_1
 			modules = {
 				fixed_main_weapon_slot = light_mg_4x
@@ -314,7 +314,7 @@ create_equipment_variant = {
 		}
 
 		create_equipment_variant = {
-			name = "1936?????????" 
+			name = "1936年型" 
 			type = small_plane_cas_airframe_1
 			modules = {
 				fixed_main_weapon_slot = small_bomb_bay
@@ -325,7 +325,7 @@ create_equipment_variant = {
 			}
 		}
 		create_equipment_variant = {
-			name = "1936???????" 
+			name = "1936年型" 
 			type = cv_small_plane_naval_bomber_airframe_1
 			modules = {
 				fixed_main_weapon_slot = torpedo_mounting
@@ -335,7 +335,7 @@ create_equipment_variant = {
 			}
 		}
 		create_equipment_variant = {
-			name = "1936???????" 
+			name = "1936年型" 
 			type = cv_small_plane_airframe_1
 			modules = {
 				fixed_main_weapon_slot = light_mg_4x

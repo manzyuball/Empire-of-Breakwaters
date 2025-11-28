@@ -1,7 +1,6 @@
 state = {
 	id = 516
 	name = "STATE_516"
-	impassable = yes
 	history = {
 		victory_points = {
 			4859

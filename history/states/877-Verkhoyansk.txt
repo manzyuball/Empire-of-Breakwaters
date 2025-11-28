@@ -1,7 +1,6 @@
 state = {
 	id = 877
 	name = "STATE_877"	# Verkhoyansk
-	impassable = yes
 	history = {
 		owner = RUS
 		victory_points = {

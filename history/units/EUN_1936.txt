@@ -1,5 +1,5 @@
 division_template = {
-	name = "EUN_Infantry_Division"
+	name = "歩兵師団編成"
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -17,7 +17,7 @@ division_template = {
 }
 
 division_template = {
-	name = "EUN_Cavalry_Division"
+	name = "騎馬師団編成"
 	regiments = {
 		cavalry = { x = 0 y = 0 }
 		cavalry = { x = 0 y = 1 }
@@ -32,7 +32,7 @@ division_template = {
 }
 
 division_template = {
-	name = "EUN_Marine_Division"
+	name = "海兵隊師団編成"
 	regiments = {
 		marine = { x = 0 y = 0 }
 		marine = { x = 0 y = 1 }
@@ -47,7 +47,7 @@ division_template = {
 }
 
 division_template = {
-	name = "EUN_Mountaineer_Division"
+	name = "山岳師団編成"
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
 		mountaineers = { x = 0 y = 1 }
@@ -64,7 +64,7 @@ division_template = {
 }
 
 division_template = {
-	name = "EUN_Artillery_Division"
+	name = "砲兵師団編成"
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -84,7 +84,7 @@ division_template = {
 }
 
 division_template = {
-	name = "EUN_Motorized_Division"
+	name = "自動車化師団編成"
 	regiments = {
 		motorized = { x = 0 y = 0 }
 		motorized = { x = 0 y = 1 }
@@ -104,7 +104,7 @@ division_template = {
 }
 
 division_template = {
-	name = "EUN_Light_Tank_Division"
+	name = "軽機甲師団編成"
 	regiments = {
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }
@@ -123,118 +123,118 @@ division_template = {
 
 units = {
 	# 30 Infantry Divisions
-	division = { name = "1. Infantry Division" location = 11506 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "2. Infantry Division" location = 11506 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "3. Infantry Division" location = 11506 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "4. Infantry Division" location = 11506 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "5. Infantry Division" location = 11506 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "6. Infantry Division" location = 11506 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "7. Infantry Division" location = 11506 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "8. Infantry Division" location = 11506 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "9. Infantry Division" location = 11506 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "10. Infantry Division" location = 3522 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "11. Infantry Division" location = 3522 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "12. Infantry Division" location = 3522 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "13. Infantry Division" location = 3522 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "14. Infantry Division" location = 3522 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "15. Infantry Division" location = 3522 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "16. Infantry Division" location = 9517 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "17. Infantry Division" location = 9517 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "18. Infantry Division" location = 9517 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "19. Infantry Division" location = 9517 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "20. Infantry Division" location = 516 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "21. Infantry Division" location = 516 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "22. Infantry Division" location = 516 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "23. Infantry Division" location = 516 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "24. Infantry Division" location = 516 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "25. Infantry Division" location = 6613 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "26. Infantry Division" location = 6613 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "27. Infantry Division" location = 6613 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "28. Infantry Division" location = 6613 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "29. Infantry Division" location = 6613 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
-	division = { name = "30. Infantry Division" location = 6613 division_template = "EUN_Infantry_Division" start_experience_factor = 0.3 }
+	division = { name = "1. Infantry Division" location = 11506 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "2. Infantry Division" location = 11506 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "3. Infantry Division" location = 11506 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "4. Infantry Division" location = 11506 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "5. Infantry Division" location = 11506 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "6. Infantry Division" location = 11506 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "7. Infantry Division" location = 11506 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "8. Infantry Division" location = 11506 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "9. Infantry Division" location = 11506 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "10. Infantry Division" location = 3522 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "11. Infantry Division" location = 3522 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "12. Infantry Division" location = 3522 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "13. Infantry Division" location = 3522 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "14. Infantry Division" location = 3522 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "15. Infantry Division" location = 3522 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "16. Infantry Division" location = 9517 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "17. Infantry Division" location = 9517 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "18. Infantry Division" location = 9517 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "19. Infantry Division" location = 9517 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "20. Infantry Division" location = 516 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "21. Infantry Division" location = 516 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "22. Infantry Division" location = 516 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "23. Infantry Division" location = 516 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "24. Infantry Division" location = 516 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "25. Infantry Division" location = 6613 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "26. Infantry Division" location = 6613 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "27. Infantry Division" location = 6613 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "28. Infantry Division" location = 6613 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "29. Infantry Division" location = 6613 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "30. Infantry Division" location = 6613 division_template = "歩兵師団編成" start_experience_factor = 0.3 }
 
 	# 12 Cavalry Divisions
-	division = { name = "1. Cavalry Division" location = 512 division_template = "EUN_Cavalry_Division" start_experience_factor = 0.3 }
-	division = { name = "2. Cavalry Division" location = 512 division_template = "EUN_Cavalry_Division" start_experience_factor = 0.3 }
-	division = { name = "3. Cavalry Division" location = 512 division_template = "EUN_Cavalry_Division" start_experience_factor = 0.3 }
-	division = { name = "4. Cavalry Division" location = 512 division_template = "EUN_Cavalry_Division" start_experience_factor = 0.3 }
-	division = { name = "5. Cavalry Division" location = 512 division_template = "EUN_Cavalry_Division" start_experience_factor = 0.3 }
-	division = { name = "6. Cavalry Division" location = 512 division_template = "EUN_Cavalry_Division" start_experience_factor = 0.3 }
-	division = { name = "7. Cavalry Division" location = 6613 division_template = "EUN_Cavalry_Division" start_experience_factor = 0.3 }
-	division = { name = "8. Cavalry Division" location = 6613 division_template = "EUN_Cavalry_Division" start_experience_factor = 0.3 }
-	division = { name = "9. Cavalry Division" location = 6613 division_template = "EUN_Cavalry_Division" start_experience_factor = 0.3 }
-	division = { name = "10. Cavalry Division" location = 516 division_template = "EUN_Cavalry_Division" start_experience_factor = 0.3 }
-	division = { name = "11. Cavalry Division" location = 516 division_template = "EUN_Cavalry_Division" start_experience_factor = 0.3 }
-	division = { name = "12. Cavalry Division" location = 516 division_template = "EUN_Cavalry_Division" start_experience_factor = 0.3 }
+	division = { name = "1. Cavalry Division" location = 512 division_template = "騎馬師団編成" start_experience_factor = 0.3 }
+	division = { name = "2. Cavalry Division" location = 512 division_template = "騎馬師団編成" start_experience_factor = 0.3 }
+	division = { name = "3. Cavalry Division" location = 512 division_template = "騎馬師団編成" start_experience_factor = 0.3 }
+	division = { name = "4. Cavalry Division" location = 512 division_template = "騎馬師団編成" start_experience_factor = 0.3 }
+	division = { name = "5. Cavalry Division" location = 512 division_template = "騎馬師団編成" start_experience_factor = 0.3 }
+	division = { name = "6. Cavalry Division" location = 512 division_template = "騎馬師団編成" start_experience_factor = 0.3 }
+	division = { name = "7. Cavalry Division" location = 6613 division_template = "騎馬師団編成" start_experience_factor = 0.3 }
+	division = { name = "8. Cavalry Division" location = 6613 division_template = "騎馬師団編成" start_experience_factor = 0.3 }
+	division = { name = "9. Cavalry Division" location = 6613 division_template = "騎馬師団編成" start_experience_factor = 0.3 }
+	division = { name = "10. Cavalry Division" location = 516 division_template = "騎馬師団編成" start_experience_factor = 0.3 }
+	division = { name = "11. Cavalry Division" location = 516 division_template = "騎馬師団編成" start_experience_factor = 0.3 }
+	division = { name = "12. Cavalry Division" location = 516 division_template = "騎馬師団編成" start_experience_factor = 0.3 }
 
 	# 8 Marine Divisions
-	division = { name = "1. Marine Division" location = 3552 division_template = "EUN_Marine_Division" start_experience_factor = 0.3 }
-	division = { name = "2. Marine Division" location = 3552 division_template = "EUN_Marine_Division" start_experience_factor = 0.3 }
-	division = { name = "3. Marine Division" location = 3552 division_template = "EUN_Marine_Division" start_experience_factor = 0.3 }
-	division = { name = "4. Marine Division" location = 3552 division_template = "EUN_Marine_Division" start_experience_factor = 0.3 }
-	division = { name = "5. Marine Division" location = 391 division_template = "EUN_Marine_Division" start_experience_factor = 0.3 }
-	division = { name = "6. Marine Division" location = 391 division_template = "EUN_Marine_Division" start_experience_factor = 0.3 }
-	division = { name = "7. Marine Division" location = 391 division_template = "EUN_Marine_Division" start_experience_factor = 0.3 }
-	division = { name = "8. Marine Division" location = 391 division_template = "EUN_Marine_Division" start_experience_factor = 0.3 }
+	division = { name = "1. Marine Division" location = 3552 division_template = "海兵隊師団編成" start_experience_factor = 0.3 }
+	division = { name = "2. Marine Division" location = 3552 division_template = "海兵隊師団編成" start_experience_factor = 0.3 }
+	division = { name = "3. Marine Division" location = 3552 division_template = "海兵隊師団編成" start_experience_factor = 0.3 }
+	division = { name = "4. Marine Division" location = 3552 division_template = "海兵隊師団編成" start_experience_factor = 0.3 }
+	division = { name = "5. Marine Division" location = 391 division_template = "海兵隊師団編成" start_experience_factor = 0.3 }
+	division = { name = "6. Marine Division" location = 391 division_template = "海兵隊師団編成" start_experience_factor = 0.3 }
+	division = { name = "7. Marine Division" location = 391 division_template = "海兵隊師団編成" start_experience_factor = 0.3 }
+	division = { name = "8. Marine Division" location = 391 division_template = "海兵隊師団編成" start_experience_factor = 0.3 }
 
 	# 10 Mountaineer Divisions
-	division = { name = "1. Mountaineer Division" location = 776 division_template = "EUN_Mountaineer_Division" start_experience_factor = 0.3 }
-	division = { name = "2. Mountaineer Division" location = 776 division_template = "EUN_Mountaineer_Division" start_experience_factor = 0.3 }
-	division = { name = "3. Mountaineer Division" location = 776 division_template = "EUN_Mountaineer_Division" start_experience_factor = 0.3 }
-	division = { name = "4. Mountaineer Division" location = 776 division_template = "EUN_Mountaineer_Division" start_experience_factor = 0.3 }
-	division = { name = "5. Mountaineer Division" location = 776 division_template = "EUN_Mountaineer_Division" start_experience_factor = 0.3 }
-	division = { name = "6. Mountaineer Division" location = 678 division_template = "EUN_Mountaineer_Division" start_experience_factor = 0.3 }
-	division = { name = "7. Mountaineer Division" location = 678 division_template = "EUN_Mountaineer_Division" start_experience_factor = 0.3 }
-	division = { name = "8. Mountaineer Division" location = 678 division_template = "EUN_Mountaineer_Division" start_experience_factor = 0.3 }
-	division = { name = "9. Mountaineer Division" location = 678 division_template = "EUN_Mountaineer_Division" start_experience_factor = 0.3 }
-	division = { name = "10. Mountaineer Division" location = 678 division_template = "EUN_Mountaineer_Division" start_experience_factor = 0.3 }
+	division = { name = "1. Mountaineer Division" location = 776 division_template = "山岳師団編成" start_experience_factor = 0.3 }
+	division = { name = "2. Mountaineer Division" location = 776 division_template = "山岳師団編成" start_experience_factor = 0.3 }
+	division = { name = "3. Mountaineer Division" location = 776 division_template = "山岳師団編成" start_experience_factor = 0.3 }
+	division = { name = "4. Mountaineer Division" location = 776 division_template = "山岳師団編成" start_experience_factor = 0.3 }
+	division = { name = "5. Mountaineer Division" location = 776 division_template = "山岳師団編成" start_experience_factor = 0.3 }
+	division = { name = "6. Mountaineer Division" location = 678 division_template = "山岳師団編成" start_experience_factor = 0.3 }
+	division = { name = "7. Mountaineer Division" location = 678 division_template = "山岳師団編成" start_experience_factor = 0.3 }
+	division = { name = "8. Mountaineer Division" location = 678 division_template = "山岳師団編成" start_experience_factor = 0.3 }
+	division = { name = "9. Mountaineer Division" location = 678 division_template = "山岳師団編成" start_experience_factor = 0.3 }
+	division = { name = "10. Mountaineer Division" location = 678 division_template = "山岳師団編成" start_experience_factor = 0.3 }
 
 	# 32 Artillery Divisions
-	division = { name = "1. Artillery Division" location = 11506 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "2. Artillery Division" location = 11506 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "3. Artillery Division" location = 11506 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "4. Artillery Division" location = 11506 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "5. Artillery Division" location = 11506 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "6. Artillery Division" location = 11506 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "7. Artillery Division" location = 11506 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "8. Artillery Division" location = 11506 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "9. Artillery Division" location = 11506 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "10. Artillery Division" location = 3326 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "11. Artillery Division" location = 3326 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "12. Artillery Division" location = 3326 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "13. Artillery Division" location = 3326 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "14. Artillery Division" location = 3326 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "15. Artillery Division" location = 3326 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "16. Artillery Division" location = 3326 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "17. Artillery Division" location = 11560 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "18. Artillery Division" location = 11560 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "19. Artillery Division" location = 11560 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "20. Artillery Division" location = 11560 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "21. Artillery Division" location = 11560 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "22. Artillery Division" location = 11560 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "23. Artillery Division" location = 3780 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "24. Artillery Division" location = 3780 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "25. Artillery Division" location = 3780 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "26. Artillery Division" location = 3780 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "27. Artillery Division" location = 3780 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "28. Artillery Division" location = 9853 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "29. Artillery Division" location = 9853 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "30. Artillery Division" location = 9853 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "31. Artillery Division" location = 9853 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
-	division = { name = "32. Artillery Division" location = 9853 division_template = "EUN_Artillery_Division" start_experience_factor = 0.3 }
+	division = { name = "1. Artillery Division" location = 11506 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "2. Artillery Division" location = 11506 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "3. Artillery Division" location = 11506 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "4. Artillery Division" location = 11506 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "5. Artillery Division" location = 11506 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "6. Artillery Division" location = 11506 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "7. Artillery Division" location = 11506 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "8. Artillery Division" location = 11506 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "9. Artillery Division" location = 11506 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "10. Artillery Division" location = 3326 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "11. Artillery Division" location = 3326 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "12. Artillery Division" location = 3326 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "13. Artillery Division" location = 3326 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "14. Artillery Division" location = 3326 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "15. Artillery Division" location = 3326 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "16. Artillery Division" location = 3326 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "17. Artillery Division" location = 11560 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "18. Artillery Division" location = 11560 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "19. Artillery Division" location = 11560 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "20. Artillery Division" location = 11560 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "21. Artillery Division" location = 11560 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "22. Artillery Division" location = 11560 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "23. Artillery Division" location = 3780 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "24. Artillery Division" location = 3780 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "25. Artillery Division" location = 3780 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "26. Artillery Division" location = 3780 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "27. Artillery Division" location = 3780 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "28. Artillery Division" location = 9853 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "29. Artillery Division" location = 9853 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "30. Artillery Division" location = 9853 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "31. Artillery Division" location = 9853 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
+	division = { name = "32. Artillery Division" location = 9853 division_template = "砲兵師団編成" start_experience_factor = 0.3 }
 
 	# 7 Motorized Divisions
-	division = { name = "1. Motorized Division" location = 11506 division_template = "EUN_Motorized_Division" start_experience_factor = 0.3 }
-	division = { name = "2. Motorized Division" location = 11506 division_template = "EUN_Motorized_Division" start_experience_factor = 0.3 }
-	division = { name = "3. Motorized Division" location = 11506 division_template = "EUN_Motorized_Division" start_experience_factor = 0.3 }
-	division = { name = "4. Motorized Division" location = 587 division_template = "EUN_Motorized_Division" start_experience_factor = 0.3 }
-	division = { name = "5. Motorized Division" location = 587 division_template = "EUN_Motorized_Division" start_experience_factor = 0.3 }
-	division = { name = "6. Motorized Division" location = 587 division_template = "EUN_Motorized_Division" start_experience_factor = 0.3 }
-	division = { name = "7. Motorized Division" location = 587 division_template = "EUN_Motorized_Division" start_experience_factor = 0.3 }
+	division = { name = "1. Motorized Division" location = 11506 division_template = "自動車化師団編成" start_experience_factor = 0.3 }
+	division = { name = "2. Motorized Division" location = 11506 division_template = "自動車化師団編成" start_experience_factor = 0.3 }
+	division = { name = "3. Motorized Division" location = 11506 division_template = "自動車化師団編成" start_experience_factor = 0.3 }
+	division = { name = "4. Motorized Division" location = 587 division_template = "自動車化師団編成" start_experience_factor = 0.3 }
+	division = { name = "5. Motorized Division" location = 587 division_template = "自動車化師団編成" start_experience_factor = 0.3 }
+	division = { name = "6. Motorized Division" location = 587 division_template = "自動車化師団編成" start_experience_factor = 0.3 }
+	division = { name = "7. Motorized Division" location = 587 division_template = "自動車化師団編成" start_experience_factor = 0.3 }
 
 	# 3 Light Tank Divisions
-	division = { name = "1. Light Tank Division" location = 11506 division_template = "EUN_Light_Tank_Division" start_experience_factor = 0.3 }
-	division = { name = "2. Light Tank Division" location = 587 division_template = "EUN_Light_Tank_Division" start_experience_factor = 0.3 }
-	division = { name = "3. Light Tank Division" location = 587 division_template = "EUN_Light_Tank_Division" start_experience_factor = 0.3 }
+	division = { name = "1. Light Tank Division" location = 11506 division_template = "軽機甲師団編成" start_experience_factor = 0.3 }
+	division = { name = "2. Light Tank Division" location = 587 division_template = "軽機甲師団編成" start_experience_factor = 0.3 }
+	division = { name = "3. Light Tank Division" location = 587 division_template = "軽機甲師団編成" start_experience_factor = 0.3 }
 }

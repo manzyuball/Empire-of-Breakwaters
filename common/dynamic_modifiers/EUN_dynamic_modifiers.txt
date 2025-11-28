@@ -64,8 +64,6 @@ EUN_political_modifier = {
 	research_speed_factor = var:EUN_pol_research_speed
 	trade_opinion_factor = var:EUN_pol_trade_opinion
 	war_support_weekly = var:EUN_pol_weekly_war_support
-	
-		
 		# Benelux Faction Specifics
 	political_power_cost = var:EUN_pol_pp_cost
 }
