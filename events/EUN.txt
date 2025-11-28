@@ -1,0 +1,805 @@
+add_namespace = EuropeanUnion_Election
+add_namespace = EuropeanUnion
+country_event = {
+	id = EuropeanUnion_Election.1
+	title = EuropeanUnion_Election.1.t
+	desc = EuropeanUnion_Election.1.desc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.1.a #??????
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_PM_tooltip
+			set_variable = {
+				EUN_PM_faction = 1
+			}
+			promote_character = EUN_lev_trotsky
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.1.b #?????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_PM_tooltip
+			set_variable = {
+				EUN_PM_faction = 2
+			}
+			promote_character = EUN_otto_strasser
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.1.c #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_PM_tooltip
+			set_variable = {
+				EUN_PM_faction = 3
+			}
+			promote_character = EUN_benito_mussolini
+		}
+	}
+		option = {
+		name = EuropeanUnion_Election.1.d #???????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_PM_tooltip
+			set_variable = {
+				EUN_PM_faction = 4
+			}
+			promote_character = EUN_paul_henri_spaak
+		}
+	}
+}
+country_event = {
+	id = EuropeanUnion_Election.2
+	title = EuropeanUnion_Election.2.t
+	desc = EuropeanUnion_Election.2.ddesc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+	
+
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.2.a #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_Economy_tooltip
+			set_variable = {
+				EUN_Economy_faction = 1
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.2.b #?????
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_Economy_tooltip
+			set_variable = {
+				EUN_Economy_faction = 2
+			}
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.2.c #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_Economy_tooltip
+			set_variable = {
+				EUN_Economy_faction = 3
+			}
+		}
+	}
+		option = {
+		name = EuropeanUnion_Election.2.d #???????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_Economy_tooltip
+			set_variable = {
+				EUN_Economy_faction = 4
+			}
+		}
+	}
+}
+country_event = {
+	id = EuropeanUnion_Election.3
+	title = EuropeanUnion_Election.3.t
+	desc = EuropeanUnion_Election.3.desc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+	
+
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.3.a #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 1
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.3.b #?????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 2
+			}
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.3.c #??????
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 3
+				
+			}
+		}
+	}
+		option = {
+		name = EuropeanUnion_Election.3.d #???????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 4
+			}
+		}
+	}
+}
+country_event = {
+	id = EuropeanUnion_Election.4
+	title = EuropeanUnion_Election.4.t
+	desc = EuropeanUnion_Election.4.ddesc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.4.a #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 1
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.4.b #?????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 2
+			}
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.4.c #??????
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 3
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.4.d #???????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 4
+			}
+		}
+	}
+}
+country_event = {
+	id = EuropeanUnion_Election.5
+	title = EuropeanUnion_Election.5.t
+	desc = EuropeanUnion_Election.5.ddesc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+	
+
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.5.a #??????
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_PM_tooltip
+			set_variable = {
+				EUN_PM_faction = 1
+			}
+			promote_character = EUN_lev_trotsky
+		}
+		
+	}
+	option = {
+		name = EuropeanUnion_Election.5.b #?????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_PM_tooltip
+			set_variable = {
+				EUN_PM_faction = 2
+			}
+			promote_character = EUN_otto_strasser
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.5.c #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_PM_tooltip
+			set_variable = {
+				EUN_PM_faction = 3
+			}
+			promote_character = EUN_benito_mussolini
+		}
+	}
+		option = {
+		name = EuropeanUnion_Election.5.d #???????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_PM_tooltip
+			set_variable = {
+				EUN_PM_faction = 4
+			}
+			promote_character = EUN_paul_henri_spaak
+		}
+	}
+}
+country_event = {
+	id = EuropeanUnion_Election.6
+	title = EuropeanUnion_Election.6.t
+	desc = EuropeanUnion_Election.6.ddesc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+	
+
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.6.a #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_Economy_tooltip
+			set_variable = {
+				EUN_Economy_faction = 1
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.6.b #?????
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_Economy_tooltip
+			set_variable = {
+				EUN_Economy_faction = 2
+			}
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.6.c #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_Economy_tooltip
+			set_variable = {
+				EUN_Economy_faction = 3
+			}
+		}
+	}
+		option = {
+		name = EuropeanUnion_Election.6.d #???????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_Economy_tooltip
+			set_variable = {
+				EUN_Economy_faction = 4
+			}
+		}
+	}
+}
+country_event = {
+	id = EuropeanUnion_Election.7
+	title = EuropeanUnion_Election.7.t
+	desc = EuropeanUnion_Election.7.ddesc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+	
+
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.7.a #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 1
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.7.b #?????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 2
+			}
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.7.c #??????
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 3
+				
+			}
+		}
+	}
+		option = {
+		name = EuropeanUnion_Election.7.d #???????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 4
+			}
+		}
+	}
+}
+country_event = {
+	id = EuropeanUnion_Election.8
+	title = EuropeanUnion_Election.8.t
+	desc = EuropeanUnion_Election.8.ddesc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+	
+
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.8.a #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 1
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.8.b #?????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 2
+			}
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.8.c #??????
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 3
+				
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.8.d #???????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 4
+			}
+		}
+	}
+}
+country_event = {
+	id = EuropeanUnion_Election.9
+	title = EuropeanUnion_Election.9.t
+	desc = EuropeanUnion_Election.9.ddesc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+	
+
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.9.a #??????
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_PM_tooltip
+			set_variable = {
+				EUN_PM_faction = 1
+			}
+			promote_character = EUN_lev_trotsky
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.9.b #?????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_PM_tooltip
+			set_variable = {
+				EUN_PM_faction = 2
+			}
+			promote_character = EUN_otto_strasser
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.9.c #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_PM_tooltip
+			set_variable = {
+				EUN_PM_faction = 3
+			}
+			promote_character = EUN_benito_mussolini
+		}
+	}
+		option = {
+		name = EuropeanUnion_Election.9.d #???????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_PM_tooltip
+			set_variable = {
+				EUN_PM_faction = 4
+			}
+			promote_character = EUN_paul_henri_spaak
+		}
+	}
+}
+country_event = {
+	id = EuropeanUnion_Election.10
+	title = EuropeanUnion_Election.10.t
+	desc = EuropeanUnion_Election.10.desc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+	
+
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.10.a #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_Economy_tooltip
+			set_variable = {
+				EUN_Economy_faction = 1
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.10.b #?????
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_Economy_tooltip
+			set_variable = {
+				EUN_Economy_faction = 2
+			}
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.10.c #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_Economy_tooltip
+			set_variable = {
+				EUN_Economy_faction = 3
+			}
+		}
+	}
+		option = {
+		name = EuropeanUnion_Election.10.d #???????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_Economy_tooltip
+			set_variable = {
+				EUN_Economy_faction = 4
+			}
+		}
+	}
+}
+country_event = {
+	id = EuropeanUnion_Election.11
+	title = EuropeanUnion_Election.11.t
+	desc = EuropeanUnion_Election.11.desc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+	
+
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.11.a #??????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 1
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.11.b #?????
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 2
+			}
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.11.c #??????
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 3
+				
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.11.d #ベネルクス派閥
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_Military_tooltip
+			set_variable = {
+				EUN_Military_faction = 4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = EuropeanUnion_Election.12
+	title = EuropeanUnion_Election.12.t
+	desc = EuropeanUnion_Election.12.desc
+	picture = GFX_report_event_communists_cheer
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = EuropeanUnion_Election.12.a #フランス派閥
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_french_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 1
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.12.b #ドイツ派閥
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_german_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 2
+			}
+		}
+	}
+		option = { 
+		name = EuropeanUnion_Election.12.c #イタリア派閥
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_italian_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 3
+				
+			}
+		}
+	}
+	option = {
+		name = EuropeanUnion_Election.12.d #ベネルクス派閥
+		ai_chance = {
+			base = 10
+		}
+		EUN = { 
+			custom_effect_tooltip = EUN_benelux_Interior_tooltip
+			set_variable = {
+				EUN_Interior_faction = 4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = EuropeanUnion.1
+	title = EuropeanUnion.1.t
+	desc = EuropeanUnion.1.desc
+	picture = GFX_report_event_generic_treaty
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EuropeanUnion.1.a
+		if = {
+			limit = { country_exists = SPR }
+			annex_country = { target = SPR }
+		}
+		if = {
+			limit = { country_exists = SPA }
+			annex_country = { target = SPA }
+		}
+	}
+}

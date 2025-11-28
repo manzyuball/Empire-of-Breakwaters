@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_charles_de_gaulle"
+		texturefile = "gfx/leaders/_EOB_idea/idea_fra_charles_de_gaulle.dds"
+	}
+}

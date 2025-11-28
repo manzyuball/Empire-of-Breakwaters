@@ -1,27 +1,37 @@
-
-state={
-	id=385
-	name="STATE_385"
-	history={
-		owner = USN
-		add_core_of = USN
+state = {
+	id = 385
+	name = "STATE_385"
+	history = {
+		owner = USA
 		buildings = {
 			infrastructure = 3
 		}
 		add_core_of = USA
-		add_core_of = USB
 		add_core_of = CSA
 		victory_points = {
-			3513 1 
+			3513
+			1
 		}
-
 	}
-
-	provinces={
-		1414 3471 3513 4274 4328 4347 4826 7398 7721 7865 10151 10305 10625 12183 12553 
+	provinces = {
+		1414
+		3471
+		3513
+		4274
+		4328
+		4347
+		4826
+		7398
+		7721
+		7865
+		10151
+		10305
+		10625
+		12183
+		12553
 	}
-	manpower=353785
-	buildings_max_level_factor=1.000
-	state_category=town
-	local_supplies=0.000
+	manpower = 353785
+	buildings_max_level_factor = 1
+	state_category = town
+	local_supplies = 0
 }

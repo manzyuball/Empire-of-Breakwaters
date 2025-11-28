@@ -1,26 +1,22 @@
-
-state={
-	id=768
-	name="STATE_768"
-
-	history={
-		owner = TZN
+state = {
+	id = 768
+	name = "STATE_768"
+	history = {
+		owner = ENG
 		victory_points = {
-			9962 1 
+			9962
+			1
 		}
 		buildings = {
 			infrastructure = 1
-
 		}
-		add_core_of = TZN
-
 	}
-
-	provinces={
-		4201 9962 
+	provinces = {
+		4201
+		9962
 	}
-	manpower=1716564
-	buildings_max_level_factor=1.000
-	state_category=pastoral
-	local_supplies=1.000
+	manpower = 1716564
+	buildings_max_level_factor = 1
+	state_category = pastoral
+	local_supplies = 1
 }

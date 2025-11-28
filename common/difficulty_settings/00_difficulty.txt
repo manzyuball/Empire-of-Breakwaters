@@ -78,9 +78,9 @@ difficulty_settings = {
 		multiplier = 1.0
 	}
 	difficulty_setting = {
-		key = "custom_diff_strong_VLA"
+		key = "custom_diff_strong_RUS"
 		modifier = diff_strong_ai_generic
-		countries = { VLA }
+		countries = { RUS }
 		multiplier = 1.0
 	}
 	difficulty_setting = {

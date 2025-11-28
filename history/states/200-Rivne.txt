@@ -1,31 +1,44 @@
-
-state={
-	id=200
-	name="STATE_200"
+state = {
+	id = 200
+	name = "STATE_200"
 	resources = {
 		coal = 15
 	}
-	history={
-		owner = UKR
-		add_core_of = VLA
+	history = {
+		owner = SOV
 		victory_points = {
-			11405 1 
+			11405
+			1
 		}
 		buildings = {
 			infrastructure = 3
 			air_base = 3
-
 		}
 		add_core_of = SOV
-		add_core_of = UKR
-
 	}
-
-	provinces={
-		429 453 472 486 588 3399 3508 3531 3767 6530 6596 9463 9479 9571 9729 11405 11452 11461 11700 
+	provinces = {
+		429
+		453
+		472
+		486
+		588
+		3399
+		3508
+		3531
+		3767
+		6530
+		6596
+		9463
+		9479
+		9571
+		9729
+		11405
+		11452
+		11461
+		11700
 	}
-	manpower=1294082
-	buildings_max_level_factor=1.000
-	state_category=town
-	local_supplies=0.000
+	manpower = 1294082
+	buildings_max_level_factor = 1
+	state_category = town
+	local_supplies = 0
 }

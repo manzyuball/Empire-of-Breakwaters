@@ -1,7 +1,0 @@
-EUN_political_struggle = {
-	icon = generic_political_actions
-	allowed = {
-		tag = EUN
-	}
-	priority = 100
-}

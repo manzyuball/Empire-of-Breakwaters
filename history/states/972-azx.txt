@@ -1,19 +1,23 @@
-state={
-	id=972
-	name="STATE_972"
-	provinces={
-		2129 5135 10954 11004 11018 12428 
+state = {
+	id = 972
+	name = "STATE_972"
+	provinces = {
+		2129
+		5135
+		10954
+		11004
+		11018
+		12428
 	}
-	history={
-		owner = GER
-        add_core_of = GER
+	history = {
+		owner = AST
 		buildings = {
 			infrastructure = 0
 		}
 	}
 	impassable = yes
-	manpower=114300
-	buildings_max_level_factor=1.000
-	state_category=pastoral
-	local_supplies=0.000
+	manpower = 114300
+	buildings_max_level_factor = 1
+	state_category = pastoral
+	local_supplies = 0
 }

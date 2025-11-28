@@ -1,8 +1,8 @@
-VLA_habatu = {
-    VLA_1suw = {
+RUS_habatu = {
+    RUS_1suw = {
 
 		allowed = {
-		original_tag = VLA
+		original_tag = RUS
 		}
 
 		cost = 50

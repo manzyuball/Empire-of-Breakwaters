@@ -1,6 +1,6 @@
-VLA_habatu = {
+RUS_habatu = {
 	icon = power_struggle
 	allowed = {
-		original_tag = VLA
+		original_tag = RUS
 	}
 }

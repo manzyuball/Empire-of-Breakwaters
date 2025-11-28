@@ -1,39 +1,44 @@
-
-state={
-	id=752
-	name="STATE_752"
-
-	history={
-		owner = GXC
-		add_core_of = GXC
+state = {
+	id = 752
+	name = "STATE_752"
+	history = {
+		owner = CHI
 		add_core_of = CHI
 		add_core_of = MAN
 		victory_points = {
-			4999 1 
+			4999
+			1
 		}
 		victory_points = {
-			10856 1 
+			10856
+			1
 		}
 		buildings = {
 			infrastructure = 2
-
 		}
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 1
 				infrastructure = 1
-
 			}
-
 		}
-
 	}
-
-	provinces={
-		1918 1999 4407 4999 5102 7988 8104 10817 10856 12724 12837 13450 
+	provinces = {
+		1918
+		1999
+		4407
+		4999
+		5102
+		7988
+		8104
+		10817
+		10856
+		12724
+		12837
+		13450
 	}
-	manpower=300000
-	buildings_max_level_factor=1.000
-	state_category=pastoral
-	local_supplies=1.000
+	manpower = 300000
+	buildings_max_level_factor = 1
+	state_category = pastoral
+	local_supplies = 1
 }

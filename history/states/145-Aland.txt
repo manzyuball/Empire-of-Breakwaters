@@ -1,29 +1,22 @@
-state=
-{
-	id=145
-	name="STATE_145"
+state = {
+	id = 145
+	name = "STATE_145"
 	manpower = 27400
-	
 	state_category = small_island
-	
-	history=
-	{
-		owner = FIN
+	history = {
+		owner = SWE
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 3			#was: 5
 			9228 = {
-				naval_base = 1
+				naval_base = 5
+				coastal_bunker = 5
 			}
 		}
-		set_demilitarized_zone = yes
-		add_core_of = FIN
-		add_claim_by = VLA
 		add_core_of = SWE
+		
 	}
-	
-	provinces=	{
+	provinces = {
 		9228
 	}
-
-	local_supplies=0.0 
+	local_supplies = 0
 }

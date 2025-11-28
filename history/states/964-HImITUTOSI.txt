@@ -3,7 +3,8 @@ state={
 	id=964
 	name="STATE_964"
     resources = {
-		steel=26
+		steel=51
+		coal = 81
 		aluminium = 31
 	}
 	history={
@@ -30,7 +31,7 @@ state={
 	provinces={
 		1036 4130 4619 4631 9999 12467 
 	}
-	manpower=24289800
+	manpower=44289800
 	buildings_max_level_factor=1.000
 	state_category=metropolis
 	local_supplies=0.000

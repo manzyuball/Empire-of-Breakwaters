@@ -17,6 +17,7 @@ EUN_economy_modifier = {
 	production_speed_air_base_factor = var:EUN_eco_airbase_speed
 	country_resource_oil = var:EUN_eco_oil_gain
 	stability_weekly = var:EUN_eco_weekly_stability
+	industrial_factory_donations = var:EUN_eco_factory_donations
 }
 
 EUN_revolutionary_army_modifier = {
@@ -51,11 +52,18 @@ EUN_revolutionary_army_modifier = {
 	max_dig_in = var:EUN_mil_max_dig_in
 }
 
-EUN_factionalism_modifier = {
-	icon = GFX_idea_generic_political_advisor
+
+EUN_political_modifier = {
+	icon = GFX_idea_generic_pp_unity_bonus
 	enable = { always = yes }
 	
-	political_power_gain = var:EUN_factionalism_pp_penalty
-	stability_factor = var:EUN_factionalism_stability_penalty
-	war_support_factor = var:EUN_factionalism_ws_penalty
+	political_power_gain = var:EUN_pol_pp_gain
+	stability_factor = var:EUN_pol_stability
+	war_support_factor = var:EUN_pol_war_support
+	justify_war_goal_time = var:EUN_pol_justify_war_goal_time
+	research_speed_factor = var:EUN_pol_research_speed
+	trade_opinion_factor = var:EUN_pol_trade_opinion
+	war_support_weekly = var:EUN_pol_weekly_war_support
+		# Benelux Faction Specifics
+	political_power_cost = var:EUN_pol_pp_cost
 }

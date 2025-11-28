@@ -1,22 +1,26 @@
-
-state={
-	id=775
-	name="STATE_775"
-
-	history={
-		owner = GNA
+state = {
+	id = 775
+	name = "STATE_775"
+	history = {
+		owner = EGY
+		add_core_of = EGY
 		buildings = {
 			infrastructure = 0
-
 		}
-
 	}
 	impassable = yes
-	provinces={
-		4191 4902 5136 10104 10893 13719 13735 13746 
+	provinces = {
+		4191
+		4902
+		5136
+		10104
+		10893
+		13719
+		13735
+		13746
 	}
-	manpower=18744
-	buildings_max_level_factor=1.000
-	state_category=wasteland
-	local_supplies=1.000
+	manpower = 18744
+	buildings_max_level_factor = 1
+	state_category = wasteland
+	local_supplies = 1
 }

@@ -1,15 +1,13 @@
-
-state={
-	id=370
-	name="STATE_370"
+state = {
+	id = 370
+	name = "STATE_370"
 	manpower = 2009820
-	
 	state_category = metropolis
-
-	history={
+	history = {
 		owner = CSA
 		victory_points = {
-			4464 1 
+			4464
+			1
 		}
 		buildings = {
 			infrastructure = 2
@@ -21,14 +19,22 @@ state={
 		}
 		add_core_of = USA
 		add_core_of = CSA
-		add_core_of = USN
-		add_core_of = USB
 	}
-
-	provinces={
-		1615 4464 4510 4565 4650 7464 7668 8110 10410 10449 10753 11717 12328 12429 
+	provinces = {
+		1615
+		4464
+		4510
+		4565
+		4650
+		7464
+		7668
+		8110
+		10410
+		10449
+		10753
+		11717
+		12328
+		12429
 	}
-	
-
-	local_supplies=0.0 
+	local_supplies = 0
 }

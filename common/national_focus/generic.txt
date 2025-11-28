@@ -37,7 +37,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 1
 		y = 0
-		cost = 10
+		cost = 70
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
@@ -60,7 +60,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = army_effort
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -85,7 +85,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = army_effort
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -107,7 +107,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = army_effort
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -131,7 +131,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = equipment_effort
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -155,7 +155,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = motorization_effort
-		cost = 10
+		cost = 70
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
@@ -178,7 +178,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = doctrine_effort
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -202,7 +202,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = equipment_effort_2
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -226,7 +226,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = mechanization_effort
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -251,7 +251,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = equipment_effort_3
-		cost = 10
+		cost = 70
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		
@@ -278,7 +278,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_airforce
 		x = 5
 		y = 0
-		cost = 10
+		cost = 70
 		
 		search_filters = {   FOCUS_FILTER_RESEARCH }
 
@@ -366,7 +366,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = aviation_effort
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -396,7 +396,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = aviation_effort
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -422,7 +422,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = bomber_focus
-		cost = 10
+		cost = 70
 
 		search_filters = {   FOCUS_FILTER_RESEARCH }
 		
@@ -512,7 +512,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = aviation_effort_2
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -536,7 +536,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = aviation_effort_2
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -569,7 +569,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = aviation_effort_2
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -591,7 +591,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 9
 		y = 0
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 		
@@ -722,7 +722,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = naval_effort
-		cost = 10
+		cost = 70
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
@@ -764,7 +764,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = naval_effort
-		cost = 10
+		cost = 70
 		
 		search_filters = {   FOCUS_FILTER_RESEARCH }
 
@@ -801,7 +801,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = flexible_navy
-		cost = 10
+		cost = 70
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -839,7 +839,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = large_navy
-		cost = 10
+		cost = 70
 		
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 
@@ -878,7 +878,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = submarine_effort
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -916,7 +916,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = cruiser_effort
-		cost = 10
+		cost = 70
 
 		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
@@ -955,7 +955,7 @@ focus_tree = {
 		icon = "GFX_goal_generic_production"
 		x = 15
 		y = 0
-		cost = 10
+		cost = 70
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 1.0
@@ -977,7 +977,7 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
-		cost = 10
+		cost = 70
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -1018,7 +1018,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = 3
 		y = 1
-		cost = 10
+		cost = 70
 		completion_reward = {
 			random_owned_controlled_state = {
 				add_resource = {
@@ -1035,7 +1035,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = 3
 		y = 2
-		cost = 10
+		cost = 70
 		completion_reward = {
 			modify_building_resources = {
 				building = synthetic_refinery
@@ -1051,7 +1051,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = 1
 		y = 2
-		cost = 10
+		cost = 70
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -1107,7 +1107,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = 1
 		y = 3
-		cost = 10
+		cost = 70
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -1148,7 +1148,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = 3
 		y = 3
-		cost = 10
+		cost = 70
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -1161,7 +1161,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = 2
 		y = 4
-		cost = 10
+		cost = 70
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -1208,7 +1208,7 @@ focus_tree = {
 		}
 		x = -1
 		y = 1
-		cost = 10
+		cost = 70
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -1264,7 +1264,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = -3
 		y = 1
-		cost = 10
+		cost = 70
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -1303,7 +1303,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = -3
 		y = 2
-		cost = 10
+		cost = 70
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -1356,7 +1356,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = -1
 		y = 2
-		cost = 10
+		cost = 70
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -1397,7 +1397,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = -1
 		y = 3
-		cost = 10
+		cost = 70
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -1438,7 +1438,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = -3
 		y = 3
-		cost = 10
+		cost = 70
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -1451,7 +1451,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = -2
 		y = 4
-		cost = 10
+		cost = 70
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -1493,7 +1493,7 @@ focus_tree = {
 		relative_position_id = san1
 		x = 0
 		y = 5
-		cost = 10
+		cost = 70
 		completion_reward = {
 			add_research_slot = 1
 		}

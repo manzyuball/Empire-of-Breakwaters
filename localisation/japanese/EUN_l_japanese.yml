@@ -25,32 +25,6 @@
  EUN_paul_henri_spaak:0 "ポール＝アンリ・スパーク"
  EUN_paul_henri_spaak_desc:0 "「パンと平和、そして繁栄を」。革命を建前にした現実主義的な商人・銀行家たちであるベネルクス派閥を代表する。戦争はせず、選挙及び民主主義の積極的導入、そして経済の発展と工業化を場合によっては市場経済をも一部導入し推進していこうとする。"
 
- # Ministers
- EUN_jacques_doriot:0 "ジャック・ドリオ"
- EUN_alphonse_juin:0 "アルフォンス・ジュアン"
- EUN_pierre_monatte:0 "ピエール・モナット"
- 
- EUN_wilhelm_pieck:0 "ヴィルヘルム・ピーク"
- EUN_ernst_thalmann:0 "エルンスト・テールマン"
- EUN_heinz_guderian:0 "ハインツ・グデーリアン"
- 
- EUN_antonio_gramsci:0 "アントニオ・グラムシ"
- EUN_nicola_bombacci:0 "ニコラ・ボンバッチ"
- EUN_italo_balbo:0 "イタロ・バルボ"
- 
- EUN_civil_control_committee:0 "市民選挙管理委員会"
- EUN_supreme_economic_council:0 "経済計画最高評議会"
- EUN_henri_winkelman:0 "アンリ・ウィンケルマン"
-
- # Traits
- EUN_permanent_revolutionary:0 "永続革命論"
- EUN_red_prussianism:0 "赤いプロイセン主義"
- EUN_proletarian_duce:0 "プロレタリアートのドゥーチェ"
- EUN_socialist_merchant:0 "社会主義の商人"
-
- EUN_violent_agitation:0 "暴力的扇動"
- EUN_aggressive_doctrine:0 "攻撃的ドクトリン"
- EUN_workers_self_management:0 "労働者自主管理"
 
  EUN_stasi_precursor:0 "秘密警察の先駆者"
  EUN_planned_economy_expert:0 "計画経済の専門家"
@@ -60,57 +34,9 @@
  EUN_autarky_socialization:0 "アウタルキーと社会化"
  EUN_knights_of_the_air:0 "空の騎士"
 
- EUN_bureaucratic_efficiency:0 "官僚的効率性"
- EUN_market_socialism:0 "市場社会主義"
- EUN_neutrality_defender:0 "中立の守護者"
-
- # Decisions
- EUN_political_struggle:0 "欧州連合内部政治闘争"
- EUN_support_french_faction:0 "フランス派閥への支援"
- EUN_support_german_faction:0 "ドイツ派閥への支援"
- EUN_support_italian_faction:0 "イタリア派閥への支援"
- EUN_support_benelux_faction:0 "ベネルクス派閥への支援"
-
- EUN_install_french_PM:0 "フランス派閥議長の選出"
- EUN_install_german_PM:0 "ドイツ派閥議長の選出"
- EUN_install_italian_PM:0 "イタリア派閥議長の選出"
- EUN_install_benelux_PM:0 "ベネルクス派閥議長の選出"
-
- EUN_appoint_french_interior:0 "フランス派閥内務大臣の任命"
- EUN_appoint_german_interior:0 "ドイツ派閥内務大臣の任命"
- EUN_appoint_italian_interior:0 "イタリア派閥内務大臣の任命"
- EUN_appoint_benelux_interior:0 "ベネルクス派閥内務大臣の任命"
-
- EUN_appoint_french_economy:0 "フランス派閥経済大臣の任命"
- EUN_appoint_german_economy:0 "ドイツ派閥経済大臣の任命"
- EUN_appoint_italian_economy:0 "イタリア派閥経済大臣の任命"
- EUN_appoint_benelux_economy:0 "ベネルクス派閥経済大臣の任命"
-
- EUN_appoint_french_military:0 "フランス派閥軍事大臣の任命"
- EUN_appoint_german_military:0 "ドイツ派閥軍事大臣の任命"
- EUN_appoint_italian_military:0 "イタリア派閥軍事大臣の任命"
- EUN_appoint_benelux_military:0 "ベネルクス派閥軍事大臣の任命"
-
- # Events
- EUN_politics.1.t:0 "年次党大会"
- EUN_politics.1.d:0 "2年に一度の党大会が開催された。各派閥は自らの影響力を拡大し、欧州連合の主導権を握ろうと躍起になっている。"
- EUN_politics.1.a:0 "フランス派閥（革命委員会）を支持する"
- EUN_politics.1.b:0 "ドイツ派閥（全ドイツ解放戦線）を支持する"
- EUN_politics.1.c:0 "イタリア派閥（地中海未来派）を支持する"
- EUN_politics.1.d:0 "ベネルクス派閥（欧州協同組合連合）を支持する"
-
- EUN_politics.2.t:0 "派閥の暴走"
- EUN_politics.2.d:0 "一つの派閥が全ての権力を掌握した結果、彼らの過激な思想が歯止めなく実行され始めている！他国はこれを脅威と見なし、包囲網を形成しつつある..."
- EUN_politics.2.a:0 "我々はやりすぎたのか？"
-
- EUN_politics.3.t:0 "政治的麻痺"
- EUN_politics.3.d:0 "議長、内務、経済、軍事...全てのポストが異なる派閥によって占められている。意見の対立により、政府は完全に機能不全に陥っている。"
- EUN_politics.3.a:0 "何も決められない..."
-
  # Dynamic Modifiers
  EUN_economy_modifier:0 "欧州連合の経済"
  EUN_revolutionary_army_modifier:0 "連合革命軍"
- EUN_factionalism_modifier:0 "派閥主義"
 
  # National Focus
  EUN_first_party_congress:0 "第一回党大会"
@@ -125,33 +51,33 @@
  EUN_chemical_fertilizers:0 "化学肥料の導入"
  EUN_breadbasket_of_europe:0 "欧州のパン籠"
  
- EUN_soldiers_bill_of_rights:0 "兵士の権利章典"
+ EUN_soldiers_bill_of_rights:0 "兵士の権利"
  EUN_veterans_pension:0 "退役軍人年金"
- EUN_military_housing:0 "軍事住宅の建設"
- EUN_spirit_of_mass_conscription:0 "国民皆兵の精神"
+ EUN_military_housing:0 "軍事住宅"
+ EUN_spirit_of_mass_conscription:0 "国民皆兵"
  EUN_military_society:0 "軍事社会"
 
  # German Branch
  EUN_new_four_year_plan:0 "新四ヵ年計画"
- EUN_build_combinats:0 "コンビナートの建設"
+ EUN_build_combinats:0 "コンビナート"
  EUN_mines_to_factories:0 "鉱山から工場へ"
  EUN_expand_military_industry:0 "軍需産業の拡大"
- EUN_complete_four_year_plan:0 "四カ年計画の完遂"
+ EUN_complete_four_year_plan:0 "四ヵ年計画の完遂"
  
  EUN_synthetic_fuel_lab:0 "合成燃料研究所"
- EUN_rubber_oil_autarky:0 "ゴム・石油の自給"
- EUN_seize_kaiser_wilhelm_institute:0 "カイザー・ヴィルヘルム研究所の接収"
- EUN_establish_revolutionary_institute:0 "革命的研究所の設立"
+ EUN_rubber_oil_autarky:0 "ゴム・石油自給"
+ EUN_seize_kaiser_wilhelm_institute:0 "研究所の設立"
+ EUN_establish_revolutionary_institute:0 "研究への注力"
  EUN_heart_of_european_industry:0 "欧州産業の心臓部"
 
  # Italian Branch
  EUN_expand_iri:0 "IRIの拡大"
- EUN_autostrada_network:0 "アウトストラーダ網"
+ EUN_autostrada_network:0 "アウトストラーダ"
  EUN_alpine_hydroelectric:0 "アルプス水力発電"
  EUN_southern_development_plan:0 "南部開発計画"
  EUN_modern_urban_planning:0 "近代都市計画"
  
- EUN_mediterranean_shipbuilding:0 "地中海造船計画"
+ EUN_mediterranean_shipbuilding:0 "地中海の造船業"
  EUN_foster_shipbuilding_industry:0 "造船業の育成"
  EUN_invest_aviation_industry:0 "航空産業への投資"
  EUN_offshore_oil_drilling:0 "海上油田の掘削計画"
@@ -161,13 +87,13 @@
  EUN_currency_reform:0 "通貨改革の断行"
  EUN_abolish_tariffs:0 "関税障壁の撤廃"
  EUN_deregulate_banks:0 "銀行規制の緩和"
- EUN_expand_antwerp_rotterdam:0 "アントワープ・ロッテルダム港湾拡張"
+ EUN_expand_antwerp_rotterdam:0 "ゾイデル海開発計画"
  EUN_peoples_bank:0 "人民銀行"
  
  EUN_relax_labor_laws:0 "労働時間規制の緩和"
  EUN_guaranteed_minimum_wage:0 "最低賃金の保障"
  EUN_mass_consumption_society:0 "大衆消費社会"
- EUN_social_security_network:0 "社会保障ネットワーク"
+ EUN_social_security_network:0 "社会保障の拡大"
  EUN_red_marketism:0 "赤い市場主義"
 
  # Fusion Branch
@@ -177,35 +103,44 @@
  EUN_total_war_industrial_complex:0 "総力戦産業複合体"
  EUN_technocratic_consortium:0 "テクノクラート・コンソーシアム"
 
- EUN_eco_ic_bonus_05_tooltip:0 "§G欧州連合の経済§!: 工場出力 §G+5%§!"
- EUN_eco_ic_bonus_10_tooltip:0 "§G欧州連合の経済§!: 工場出力 §G+10%§!"
- EUN_eco_ic_bonus_15_tooltip:0 "§G欧州連合の経済§!: 工場出力 §G+15%§!"
- EUN_eco_consumer_goods_bonus_05_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G-5%§!"
- EUN_eco_consumer_goods_bonus_03_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G-3%§!"
- EUN_eco_construction_bonus_05_tooltip:0 "§G欧州連合の経済§!: 建設速度 §G+5%§!"
- EUN_eco_construction_bonus_10_tooltip:0 "§G欧州連合の経済§!: 建設速度 §G+10%§!"
- EUN_eco_corporatism_bonus_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G-5%§!, 建設速度 §G+10%§!"
- EUN_eco_state_capitalism_bonus_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G10%§!, 建設速度 §G+20%§!"
+ EUN_eco_ic_bonus_05_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£industry_texticon 工場出力: §G+5%§!"  
+ EUN_eco_ic_bonus_10_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£industry_texticon 工場出力: §G+10%§!"
+ EUN_eco_ic_bonus_15_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£industry_texticon 工場出力: §G+15%§!"
+ EUN_eco_consumer_goods_bonus_05_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£consumer_goods_texticon 消費財工場: §Y-5%§!"
+ EUN_eco_consumer_goods_bonus_03_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£consumer_goods_texticon 消費財工場: §Y-3%§!"
+ EUN_eco_construction_bonus_05_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£industry_texticon 建設速度: §G+5%§!"
+ EUN_eco_construction_bonus_10_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£industry_texticon 建設速度: §G+10%§!"
+ EUN_eco_corporatism_bonus_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£consumer_goods_texticon 消費財工場: §Y-5%§!\n£industry_texticon 建設速度: §G+10%§!"
+ EUN_eco_state_capitalism_bonus_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£consumer_goods_texticon 消費財工場: §R-10%§!\n£industry_texticon 建設速度: §G+20%§!"
 
- EUN_eco_breadbasket_tooltip:0 "§G欧州連合の経済§!: 安定度 §G+10%§!, 政治力獲得 §G+10%§!"
- EUN_eco_currency_reform_tooltip:0 "§G欧州連合の経済§!: 安定度 §G+5%§!, 政治力獲得 §G+5%§!"
- EUN_eco_research_speed_05_tooltip:0 "§G欧州連合の経済§!: 研究速度 §G+5%§!"
- EUN_eco_research_speed_10_consumer_goods_bonus_05_tooltip:0 "§G欧州連合の経済§!: 研究速度 §G+10%§!, 消費財工場 §G-5%§!"
- EUN_eco_corporatism_new_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §G10%§!, 建設速度 §G+10%§!"
- EUN_eco_consumer_goods_penalty_05_tooltip:0 "§G欧州連合の経済§!: 消費財工場 §R+5%§!"
- EUN_eco_resource_factor_15_tooltip:0 "§G欧州連合の経済§!: 資源産出量 §G+15%§!"
- EUN_eco_prod_eff_cap_05_tooltip:0 "§G欧州連合の経済§!: 生産効率上限 §G+5%§!"
- EUN_eco_oil_gain_24_tooltip:0 "§G欧州連合の経済§!: 石油 §G+24§!"
- EUN_eco_aviation_tooltip:0 "§G欧州連合の経済§!: 航空基地建設速度 §G+20%§!"
- EUN_eco_arms_factory_speed_10_tooltip:0 "§G欧州連合の経済§!: 軍需工場建設速度 §G+10%§!"
- EUN_eco_infra_speed_15_tooltip:0 "§G欧州連合の経済§!: インフラ建設速度 §G+15%§!"
- EUN_eco_infra_speed_20_tooltip:0 "§G欧州連合の経済§!: インフラ建設速度 §G+20%§!"
- EUN_eco_dockyard_output_10_tooltip:0 "§G欧州連合の経済§!: 造船所出力 §G+10%§!"
- EUN_eco_oil_gain_10_tooltip:0 "§G欧州連合の経済§!: 石油 §G+10§!"
- EUN_eco_weekly_stability_10_tooltip:0 "§G欧州連合の経済§!: 週毎の安定度 §G+0.1%§!"
- EUN_eco_pp_gain_factor_10_tooltip:0 "§G欧州連合の経済§!: 政治力 §G+10%§!"
- EUN_eco_social_security_tooltip:0 "§G欧州連合の経済§!: 週毎の安定度 §G+0.1%§!, 政治力 §G+10%§!"
- EUN_eco_universal_socialist_welfare_tooltip:0 "§G欧州連合の経済§!: 週毎の安定度 §G+0.1%§!, 政治力 §G+10%§!"
+ EUN_eco_breadbasket_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£stability_texticon 安定度: §G+10%§!\n£pol_power 政治力: §G+10%§!"
+ EUN_eco_currency_reform_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£stability_texticon 安定度: §G+5%§!\n£pol_power 政治力: §G+5%§!"
+ EUN_eco_research_speed_05_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£research_icon 研究速度: §G+5%§!"
+ EUN_eco_research_speed_10_consumer_goods_bonus_05_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£research_icon 研究速度: §G+10%§!\n£consumer_goods_texticon 消費財工場: §Y-5%§!"
+ EUN_eco_corporatism_new_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£consumer_goods_texticon 消費財工場: §R-10%§!\n£industry_texticon 建設速度: §G+10%§!"
+ EUN_eco_consumer_goods_penalty_05_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£consumer_goods_texticon 消費財工場: §R+5%§!"
+ EUN_eco_resource_factor_15_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£resources_to_market_icon 資源産出量: §G+15%§!"
+ EUN_eco_prod_eff_cap_05_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£prod_eff_cap 生産効率上限: §G+5%§!"
+ EUN_eco_oil_gain_24_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£fuel_texticon 石油: §G+24§!"
+ EUN_eco_aviation_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£air_experience 航空基地建設速度: §G+20%§!"
+ EUN_eco_arms_factory_speed_10_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£mil_factory 軍需工場建設速度: §G+10%§!"
+ EUN_eco_infra_speed_15_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£infrastructure_texticon インフラ建設速度: §G+15%§!"
+ EUN_eco_infra_speed_20_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£infrastructure_texticon インフラ建設速度: §G+20%§!"
+ EUN_eco_dockyard_output_10_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£nav_dockyard_texticon 造船所出力: §G+10%§!"
+ EUN_eco_oil_gain_10_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£fuel_texticon 石油: §G+10§!"
+ EUN_eco_weekly_stability_10_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£stability_texticon 週毎の安定度: §G+0.1%§!"
+ EUN_eco_pp_gain_factor_10_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£pol_power 政治力: §G+10%§!"
+ EUN_eco_social_security_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£stability_texticon 週毎の安定度: §G+0.1%§!\n£pol_power 政治力: §G+10%§!"
+ EUN_eco_universal_socialist_welfare_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£stability_texticon 週毎の安定度: §G+0.1%§!\n£pol_power 政治力: §G+10%§!"
+ EUN_pol_pp_gain_10_tooltip:0 "§Y欧州連合の政治§!に以下の修正\n£pol_power 政治力獲得: §G+10%§!"
+ EUN_pol_stability_15_tooltip:0 "§Y欧州連合の政治§!に以下の修正\n£stability_texticon 安定度: §G+15%§!"
+ EUN_pol_stability_5_tooltip:0 "§Y欧州連合の政治§!に以下の修正\n£stability_texticon 安定度: §G+5%§!"
+ EUN_pol_weekly_war_support_001_tooltip:0 "§Y欧州連合の政治§!に以下の修正\n£war_support_texticon 週毎の戦争協力度: §G+0.1%§!"
+ EUN_mil_army_attack_15_tooltip:0 "§Y連合革命軍§!に以下の修正\n£army_experience 師団攻撃: §G+15%§!"
+ EUN_eco_resource_factor_20_mil_armor_attack_15_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£resources_to_market_icon 資源産出量: §G+20%§!\n§Y連合革命軍§!に以下の修正\n£army_experience 機甲師団攻撃: §G+15%§!"
+ EUN_mil_capital_ship_attack_15_air_agility_15_tooltip:0 "§Y連合革命軍§!に以下の修正\n£navy_experience 主力艦攻撃: §G+15%§!\n£air_experience 機動性: §G+15%§!"
+ EUN_eco_construction_bonus_20_consumer_goods_bonus_10_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n£industry_texticon 建設速度: §G+20%§!\n£consumer_goods_texticon 消費財工場: §Y-10%§!"
+ EUN_total_mobilization_tooltip:0 "§Y欧州連合の政治§!に以下の修正\n£war_support_texticon 戦争協力度: §G+10%§!\n£manpower_texticon 徴兵可能人口補正: §G+10%§!\n£consumer_goods_texticon 消費財工場: §Y-10%§!"
  # Trigger Tooltips
  EUN_french_economy_minister_check:0 "§Yフランス派閥§!が§Y経済大臣§!に選出されている"
  EUN_german_economy_minister_check:0 "§Yドイツ派閥§!が§Y経済大臣§!に選出されている"
@@ -311,54 +246,353 @@
  EUN_italian_military_minister_check:0 "§Yイタリア派閥§!が§Y軍事大臣§!に選出されている"
  EUN_benelux_military_minister_check:0 "§Yベネルクス派閥§!が§Y軍事大臣§!に選出されている"
 
- EUN_mil_pop_factor_05_tooltip:0 "§G連合革命軍§!: 徴兵可能人口補正 §G+5%§!"
- EUN_mil_army_attack_10_tooltip:0 "§G連合革命軍§!: 陸軍攻撃 §G+10%§!"
- EUN_mil_justify_time_25_tooltip:0 "§G連合革命軍§!: 正当化時間 §G-25%§!"
- EUN_mil_training_time_10_tooltip:0 "§G連合革命軍§!: 訓練時間 §G-10%§!"
+ EUN_mil_pop_factor_05_tooltip:0 "§Y連合革命軍§!に以下の修正\n£manpower_texticon 徴兵可能人口: §G+5%§!"
+ EUN_mil_army_attack_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£army_experience 陸軍攻撃: §G+10%§!"
+ EUN_mil_justify_time_25_tooltip:0 "§Y連合革命軍§!に以下の修正\n£pol_power 正当化時間: §G-25%§!"
+ EUN_mil_training_time_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£army_experience 訓練時間: §G-10%§!"
  
- EUN_mil_armor_attack_10_tooltip:0 "§G連合革命軍§!: 機甲部隊攻撃 §G+10%§!"
- EUN_mil_prussian_discipline_tooltip:0 "§G連合革命軍§!: 師団防御 §G+5%§!, 師団指揮統制率 §G+5%§!"
- EUN_mil_armor_defence_10_tooltip:0 "§G連合革命軍§!: 機甲部隊防御 §G+10%§!"
+ EUN_mil_armor_attack_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£army_experience 機甲部隊攻撃: §G+10%§!"
+ EUN_mil_prussian_discipline_tooltip:0 "§Y連合革命軍§!に以下の修正\n£army_experience 師団防御: §G+5%§!\n£army_experience 指揮統制率: §G+5%§!"
+ EUN_mil_armor_defence_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£army_experience 機甲部隊防御: §G+10%§!"
  
- EUN_mil_battleship_cost_10_tooltip:0 "§G連合革命軍§!: 戦艦生産コスト §G-10%§!"
- EUN_mil_air_superiority_10_tooltip:0 "§G連合革命軍§!: 航空優勢作戦効率 §G+10%§!"
- EUN_mil_carrier_cost_15_tooltip:0 "§G連合革命軍§!: 空母生産コスト §G-15%§!"
- EUN_mil_naval_strike_10_tooltip:0 "§G連合革命軍§!: 対艦攻撃 §G+10%§!"
+ EUN_mil_air_superiority_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£air_experience 航空優勢: §G+10%§!"
+ EUN_mil_carrier_cost_15_tooltip:0 "§Y連合革命軍§!に以下の修正\n£navy_experience 空母生産コスト: §G-15%§!"
+ EUN_mil_naval_strike_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£navy_experience 対艦攻撃: §G+10%§!"
  
- EUN_mil_capital_ship_attack_10_tooltip:0 "§G連合革命軍§!: 主力艦攻撃 §G+10%§!"
- EUN_mil_air_agility_10_tooltip:0 "§G連合革命軍§!: 機動性 §G+10%§!"
- EUN_mil_screen_attack_10_tooltip:0 "§G連合革命軍§!: 直衛艦攻撃 §G+10%§!"
+ EUN_mil_capital_ship_attack_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£navy_experience 主力艦攻撃: §G+10%§!"
+ EUN_mil_air_agility_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£air_experience 機動性: §G+10%§!"
+ EUN_mil_screen_attack_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£navy_experience 直衛艦攻撃: §G+10%§!"
  
- EUN_mil_army_defence_10_tooltip:0 "§G連合革命軍§!: 陸軍防御 §G+10%§!"
- EUN_mil_supply_consumption_10_tooltip:0 "§G連合革命軍§!: 物資消費量 §G-10%§!"
- EUN_mil_army_org_10_tooltip:0 "§G連合革命軍§!: 陸軍指揮統制率 §G+10%§!"
+ EUN_mil_army_defence_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£army_experience 陸軍防御: §G+10%§!"
+ EUN_mil_supply_consumption_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£supply_texticon 物資消費量: §G-10%§!"
+ EUN_mil_army_org_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£army_experience 陸軍指揮統制率: §G+10%§!"
  
- EUN_mil_recovery_rate_10_tooltip:0 "§G連合革命軍§!: 陸軍指揮統制率の回復率 §G+10%§!"
- EUN_mil_breakthrough_10_tooltip:0 "§G連合革命軍§!: 突破 §G+10%§!"
- EUN_mil_naval_strike_efficiency_15_tooltip:0 "§G連合革命軍§!: 対艦攻撃任務効率 §G+15%§!"
- EUN_mil_entrenchment_speed_20_tooltip:0 "§G連合革命軍§!: 塹壕構築速度 §G+20%§!"
- EUN_mil_max_dig_in_5_tooltip:0 "§G連合革命軍§!: 最大塹壕陣地強度 §G+5.0§!"
+ EUN_mil_recovery_rate_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£army_experience 指揮統制率回復: §G+10%§!"
+ EUN_mil_breakthrough_10_tooltip:0 "§Y連合革命軍§!に以下の修正\n£army_experience 突破: §G+10%§!"
+ EUN_mil_naval_strike_efficiency_15_tooltip:0 "§Y連合革命軍§!に以下の修正\n£navy_experience 対艦攻撃効率: §G+15%§!"
+ EUN_mil_entrenchment_speed_20_tooltip:0 "§Y連合革命軍§!に以下の修正\n£army_experience 塹壕構築速度: §G+20%§!"
+ EUN_mil_max_dig_in_5_tooltip:0 "§Y連合革命軍§!に以下の修正\n£army_experience 最大塹壕陣地強度: §G+5.0§!"
 
  # New Focuses
  EUN_political_commissars:0 "政治委員の派遣"
  EUN_political_commissars_desc:0 "各部隊に政治委員を派遣し、思想教育を徹底することで兵士の回復力を高める。"
  EUN_mass_assault_doctrine:0 "人海戦術ドクトリン"
  EUN_mass_assault_doctrine_desc:0 "圧倒的な人的資源を背景に、波状攻撃で敵を押し潰す戦術を採用する。"
- EUN_grand_battery:0 "グラン・バッテリー"
+ EUN_grand_battery:0 "野砲集中運用"
  EUN_grand_battery_desc:0 "ナポレオン時代の砲兵運用を現代に蘇らせ、集中砲火で敵陣地を粉砕する。"
  
  EUN_stormtrooper_tactics:0 "突撃歩兵戦術"
  EUN_stormtrooper_tactics_desc:0 "精鋭歩兵による浸透戦術を確立し、敵前線の突破能力を向上させる。"
- EUN_rocket_artillery:0 "ロケット砲兵"
- EUN_rocket_artillery_desc:0 "「カチューシャ」を超える破壊力を持つ多連装ロケット砲を開発・配備する。"
+ EUN_rocket:0 "ロケット"
+ EUN_rocket_desc:0 ""
  EUN_wunderwaffe_program:0 "驚異の兵器計画"
  EUN_wunderwaffe_program_desc:0 "戦局を一変させる可能性を秘めた、極秘の兵器開発プロジェクトを推進する。"
  
  EUN_naval_bombers:0 "雷撃機の量産"
  EUN_naval_bombers_desc:0 "敵艦隊を空から殲滅するため、高性能な雷撃機を大量に配備する。"
- EUN_frogmen_units:0 "フロッグマン部隊"
+ EUN_frogmen_units:0 "上陸部隊研究"
  EUN_frogmen_units_desc:0 "水中工作部隊を編成し、敵港湾への潜入破壊工作を行う。"
- EUN_littorio_class:0 "リットリオ級戦艦"
+ EUN_littorio_class:0 "赤色弩級巨砲艦隊"
  EUN_littorio_class_desc:0 "地中海の覇権を確実にするため、超弩級戦艦の建造技術を確立する。"
  EUN_citizen_militia:0 "市民民兵"
- EUN_citizen_militia_desc:0 "市民による自警団を組織し、徹底した抗戦体制を敷く。"
+  # Political Branch
+ EUN_political_modifier:0 "欧州連合の政治"
+ 
+ # Tooltips
+ EUN_pol_fra_pm_tooltip:0 "§G欧州連合の政治§!に以下の修正\n戦争協力度§G+5%§!, 正当化時間 §G-10%§!"
+ EUN_pol_fra_int_tooltip:0 "§G欧州連合の政治§!に以下の修正\n政治力獲得§G+10%§!, 安定度 §R-5%§!"
+ EUN_pol_ita_pm_tooltip:0 "§G欧州連合の政治§!に以下の修正\n航続距離§G+20%§!"
+ EUN_pol_ita_int_tooltip:0 "§G欧州連合の政治§!に以下の修正\n安定度§G+5%§!"
+ EUN_pol_ben_pm_tooltip:0 "§G欧州連合の政治§!に以下の修正\n貿易評価§G+20%§!"
+ EUN_pol_ben_int_tooltip:0 "§G欧州連合の政治§!に以下の修正\n政治力コスト§G-5%§!"
+ EUN_pol_ger_pm_tooltip:0 "§G欧州連合の政治§!に以下の修正\n計画立案速度 §G+10%§!"
+ EUN_pol_ger_int_tooltip:0 "§G欧州連合の政治§!に以下の修正\n研究速度 §G+5%§!"
+ 
+ EUN_pol_link_fra_ita_tooltip:0 "§G欧州連合の政治§!に以下の修正\n中核州攻撃 §G+5%§!"
+ EUN_pol_link_ben_ger_tooltip:0 "§G欧州連合の政治§!に以下の修正\n研究速度 §G+5%§!, 政治力コスト §G-5%§!"
+ EUN_pol_link_fra_ger_tooltip:0 "§G欧州連合の政治§!に以下の修正\n戦争協力度 §G+10%§!"
+ EUN_pol_link_ita_ben_tooltip:0 "§G欧州連合の政治§!に以下の修正\n安定度 §G+5%§!"
+ EUN_pol_link_fra_ben_tooltip:0 "§G欧州連合の政治§!に以下の修正\n安定度 §G+5%§!, 政治力獲得 §G+5%§!"
+ EUN_pol_link_ger_ita_tooltip:0 "§G欧州連合の政治§!に以下の修正\n計画立案速度 §G+5%§!"
+ 
+ EUN_pol_chaos_purge_tooltip:0 "§G欧州連合の政治§!に以下の修正\n安定度 §G+10%§!, 戦争協力度 §G+10%§!"
+ EUN_pol_chaos_compromise_tooltip:0 "§G欧州連合の政治§!に以下の修正\n安定度 §G+10%§!"
+ EUN_pol_syn_total_control_tooltip:0 "§G欧州連合の政治§!に以下の修正\n中核州攻撃 §G+10%§!, 計画立案速度 §G+10%§!"
+ EUN_pol_syn_golden_age_tooltip:0 "§G欧州連合の政治§!に以下の修正\n政治力獲得 §G+10%§!, 貿易評価 §G+10%§!"
+ 
+ EUN_pol_fra_final_tooltip:0 "§Y制御下の全ての欧州ステートを中核州化する§!"
+ EUN_pol_ger_final_tooltip:0 "§Yソビエト連邦に対し宣戦布告する§!"
+ EUN_pol_ita_final_tooltip:0 "§Y地中海沿岸諸国への請求権を得る§!"
+ EUN_pol_ben_final_tooltip:0 "§Y欧州の平和と繁栄を宣言する§!"
+
+ EUN_fra_pm_check:0 "フランス派閥が議長である"
+ EUN_fra_int_check:0 "フランス派閥が内務大臣である"
+ EUN_ger_pm_check:0 "ドイツ派閥が議長である"
+ EUN_ger_int_check:0 "ドイツ派閥が内務大臣である"
+ EUN_ita_pm_check:0 "イタリア派閥が議長である"
+ EUN_ita_int_check:0 "イタリア派閥が内務大臣である"
+ EUN_ben_pm_check:0 "ベネルクス派閥が議長である"
+ EUN_ben_int_check:0 "ベネルクス派閥が内務大臣である"
+ EUN_fra_ita_int_check:0 "フランス派閥かイタリア派閥が議長である"
+ EUN_fra_ita_link_check:0 "フランス・イタリア派閥の協力"
+ EUN_fra_ger_link_check:0 "フランス・ドイツ派閥の協力"
+ EUN_fra_ben_link_check:0 "フランス・ベネルクス派閥の協力"
+ EUN_ger_ita_link_check:0 "ドイツ・イタリア派閥の協力"
+ EUN_ger_ben_link_check:0 "ドイツ・ベネルクス派閥の協力"
+ EUN_ita_ben_link_check:0 "イタリア・ベネルクス派閥の協力"
+ 
+ EUN_chaos_purge_check:0 "カオス：粛清の発生（革命的議長 vs 保守的内務）"
+ EUN_chaos_compromise_check:0 "カオス：妥協の発生（改革派議長 vs 急進的内務）"
+ EUN_syn_total_control_check:0 "シナジー：完全なる支配（権威主義的ペア）"
+ EUN_syn_golden_age_check:0 "シナジー：黄金時代（実務的ペア）"
+ 
+ EUN_fra_eco_check:0 "フランス派閥が経済大臣である"
+ EUN_ger_eco_check:0 "ドイツ派閥が経済大臣である"
+ EUN_ita_eco_check:0 "イタリア派閥が経済大臣である"
+ EUN_ben_eco_check:0 "ベネルクス派閥が経済大臣である"
+ 
+ EUN_fra_mil_check:0 "フランス派閥が軍需大臣である"
+ EUN_ger_mil_check:0 "ドイツ派閥が軍需大臣である"
+ EUN_ita_mil_check:0 "イタリア派閥が軍需大臣である"
+ EUN_ben_mil_check:0 "ベネルクス派閥が軍需大臣である"
+
+ # 党会議系統 (4段階)
+ EUN_first_congress:0 "第一回連合議会"
+ EUN_first_congress_desc:0 "欧州連合の未来を決定する歴史的な第一回連合議会を開催する。各派閥の代表が集い、統一欧州の理念を確認すると同時に、今後の方針を巡って激しい議論が交わされるだろう。この議会での決定が、連合の行く末を左右する。"
+ 
+ EUN_second_congress:0 "第二回連合議会"
+ EUN_second_congress_desc:0 "第一回議会から時を経て、欧州情勢は大きく変化した。第二回連合議会では、実際の統治経験を踏まえた上で、各派閥間の力関係を再調整する。新たな現実に即した政策決定が求められている。"
+ 
+ EUN_third_congress:0 "第三回連合議会"
+ EUN_third_congress_desc:0 "欧州連合の将来を決定づける第三回連合議会。世界大戦の足音が近づく中、連合は最終的な方向性を確定させなければならない。この議会での決断が、欧州の運命を決する。"
+ 
+ EUN_total_mobilization:0 "総力戦"
+ EUN_total_mobilization_desc:0 "全ての派閥を統合し、欧州連合の総力を結集する時が来た。政治的対立を超え、外敵に対抗するため、翼賛体制による国家総動員を実施する。連合の存続をかけた決戦の準備が整う。"
+
+ # Tier 1: 外征・内政
+ EUN_foreign_expedition:0 "外征"
+ EUN_foreign_expedition_desc:0 "連合の革命理念を欧州全土に広めるため、対外遠征を計画する。周辺諸国への影響力拡大と領土拡張を通じて、欧州連合の勢力圏を確立する。議長が主導する外交・軍事政策の始まりである。"
+ 
+ # 外征ルート
+ EUN_swiss_route:0 "スイス侵攻"
+ EUN_swiss_route_desc:0 "ドイツ・ベネルクス派閥の協力により、アルプスの要塞国家スイスへの圧力を強める。何世紀にもわたって維持されてきた武装中立を終わらせ、欧州連合の影響下に置く。スイスの戦略的価値と経済力は、連合に大きな利益をもたらすだろう。"
+ 
+ EUN_swiss_gold:0 "スイスの金準備"
+ EUN_swiss_gold_desc:0 "スイス銀行が保有する莫大な金準備と金融資産を接収する。これにより連合の経済基盤は飛躍的に強化され、消費財生産への圧力が緩和される。中立国の富が、革命の大義のために活用される。"
+ EUN_swiss_gold_tooltip:0 "§Y欧州連合の経済§!に以下の修正\n 民需工場の寄付: §G+2§!"
+ 
+ EUN_algeria_route:0 "アルジェリア侵攻"
+ EUN_algeria_route_desc:0 "フランス・イタリア派閥の主導により、地中海を越えて北アフリカへの影響力を拡大する。アルジェリアを中心とした北アフリカ植民地の侵攻を強化し、豊富な資源と労働力を連合の戦争遂行能力向上に活用する。地中海は我らの海となる。"
+ 
+ EUN_african_labor:0 "労働力の輸入"
+ EUN_african_labor_desc:0 "北アフリカから大量の労働力を動員し、連合の工業生産を増強する。アルジェリア、チュニジア、モロッコの人的資源が、欧州の工場と農場を支える。帝国主義的搾取ではなく、革命的連帯による協力である―少なくとも表向きは。"
+ EUN_african_labor_tooltip:0 "§Y欧州連合の軍事§!に以下の修正\n徴兵可能人口: §G+10%§!\n§Y欧州連合の経済§!に以下の修正\n£industry_texticon 工場出力: §G+5%§!"
+ 
+ EUN_colonial_route:0 "植民地の統合"
+ EUN_colonial_route_desc:0 "ベネルクス・イタリア派閥の協力により、散在する植民地を効率的に再編成する。オランダ領東インド、ベルギー領コンゴ、イタリア領東アフリカなど、広大な植民地帝国を統合管理し、資源採掘と工業化を推進する。植民地は連合の生命線である。"
+ 
+ EUN_spain_french:0 "スペインへの平和的浸透"
+ EUN_spain_french_desc:0 "フランス派閥の外交的手腕により、スペインへの影響力を平和的に拡大する。イデオロギー的・文化的な親和性を活用し、スペイン政府との協力関係を構築する。ピレネー山脈を越えた革命の輸出が、暴力ではなく説得によって実現する。"
+ 
+ EUN_spain_other:0 "スペインへの武力介入"
+ EUN_spain_other_desc:0 "ドイツ・ベネルクス・イタリア派閥による強硬路線。スペインに対する直接的な軍事介入を準備する。内戦に乗じて革命勢力を支援するか、あるいは政権そのものを転覆させるか。いずれにせよ、イベリア半島は連合の勢力圏に組み込まれる。"
+
+ # 内政ルート
+ EUN_secret_police_route:0 "秘密警察の創設"
+ EUN_secret_police_route_desc:0 "ドイツ・フランス派閥が主導し、連合全土に張り巡らされた強力な秘密警察機構を創設する。反革命分子の監視、思想統制、政治的粛清を通じて、体制の安定を確保する。自由の代償として、秩序と安全が保証される。"
+ 
+ EUN_secret_intelligence:0 "諜報部門の創設"
+ EUN_secret_intelligence_desc:0 "秘密警察の情報収集能力を強化し、国内外の敵対勢力を徹底的に監視する。スパイ網を各国に展開し、外国政府の動向を把握する。情報こそが現代戦の鍵である。"
+ 
+ EUN_purge:0 "大粛清"
+ EUN_purge_desc:0 "反対派閥、反革命分子、疑わしき者たちを徹底的に排除する。政治的粛清は一時的な混乱をもたらすが、最終的には体制の純化と強化につながる。恐怖は支配の最も効率的な道具である。"
+ 
+ EUN_freedom_route:0 "自由の保証"
+ EUN_freedom_route_desc:0 "ベネルクス・イタリア派閥の理念に基づき、市民の自由と基本的人権を憲法で保証する。言論の自由、集会の自由、法の下の平等を確立し、より民主的な連合を築く。革命は圧政からの解放でなければならない。"
+ 
+ 
+ EUN_risorgimento:0 "第二次リソルジメント"
+ EUN_risorgimento_desc:0 "19世紀のイタリア統一運動「リソルジメント」の理念を蘇らせ、欧州統合の精神的支柱とする。分断された欧州諸国を一つの国家へと統合する―それは新たなローマ帝国の建設に他ならない。イタリアの夢が欧州全土に広がる。"
+ 
+ EUN_german_friendship:0 "東部の解放"
+ EUN_german_friendship_desc:0 "ドイツを解放する。"
+ 
+ EUN_bureaucracy_route:0 "官僚機構改革"
+ EUN_bureaucracy_route_desc:0 "ベネルクス派閥の得意とする効率的な行政システムを連合全体に導入する。煩雑な手続きを簡素化し、腐敗を排除し、能力主義に基づく公務員制度を確立する。小国オランダ・ベルギーの統治ノウハウが、大帝国の運営に活かされる。"
+ 
+ EUN_election_system:0 "選挙制度の整備"
+ EUN_election_system_desc:0 "民主的な選挙制度と公開討論の文化を連合に定着させる。派閥間の権力闘争を、暴力ではなく議論と投票によって解決する制度的枠組みを構築する。真の民主主義は、異なる意見の平和的共存から始まる。"
+ 
+ # 鉄と血系統
+ EUN_iron_blood_route:0 "鉄と血"
+ EUN_iron_blood_route_desc:0 "ドイツ・ベネルクス派閥がビスマルクの有名な言葉「鉄と血」の精神を体現する。理想主義的な演説ではなく、軍事力と現実政治によって欧州を統合する。強者が弱者を従える―それが歴史の法則である。"
+ 
+ EUN_nordic_diplomacy:0 "北欧侵攻"
+ EUN_nordic_diplomacy_desc:0 "スカンディナビア諸国への軍事的圧力を強化する。デンマーク、ノルウェー、スウェーデンの中立を許さず、連合の勢力圏に組み込む。バルト海は内海となり、北欧の資源が連合の戦争遂行を支える。"
+ 
+ EUN_delayed_recovery:0 "遅れた回収"
+ EUN_delayed_recovery_desc:0 "19世紀のイタリア統一運動「リソルジメント」の理念を蘇らせ、欧州統合の精神的支柱とする。分断された欧州諸国を一つの国家へと統合する―それは新たなローマ帝国の建設に他ならない。イタリアの夢が欧州全土に広がる。"
+
+ # 最終統合ルート
+ EUN_Revolution_demagogue:0 "革命の扇動"
+ EUN_Revolution_demagogue_desc:0 "カリスマ的指導者による大衆扇動で革命の理念を民衆に浸透させる。大規模な集会、ラジオ放送、プロパガンダ映画を通じて、欧州連合への忠誠心を高める。革命は理性ではなく、情熱によって推進される。"
+ 
+ EUN_regularize_parliament:0 "議会定員の拡大"
+ EUN_regularize_parliament_desc:0 "新たに連合に加わった領土から議員を選出し、議会の代表性を高める。征服地の住民にも参政権を与えることで、帝国主義的支配ではなく民主的統合を演出する。拡大する連合に相応しい統治機構の整備。"
+ 
+ EUN_true_union:0 "真の欧州連合"
+ EUN_true_union_desc:0 "全ての派閥が対立を超越し、真の欧州統合を達成する理想的シナリオ。だが現実の政治は理想通りには進まない。この道は現時点では閉ざされている―おそらく永遠に。"
+ 
+ EUN_allocation:0 "平等な選挙区割り"
+ EUN_allocation_desc:0 "新たに獲得した領土にも公平に議席を配分し、人口比例に基づく真の民主的代表制を確立する。征服者と被征服者の区別なく、全ての市民に平等な政治参加の機会を与える―少なくとも形式上は。"
+ 
+ EUN_euro_division:0 "欧州優位の区割り"
+ EUN_euro_division_desc:0 "選挙区を既存の支配派閥に有利に設定し、権力構造を固定化する。ゲリマンダリングの手法で新参者の政治的影響力を抑制し、創設国の優位性を永続化させる。民主主義の外見を保ちつつ、実質的支配を維持する。"
+
+ # 陣営最終勝利
+ EUN_final_fra:0 "全世界革命戦争"
+ EUN_final_fra_desc:0 "全世界革命戦争。"
+ 
+ EUN_final_ger:0 "自給自足の為の統制"
+ EUN_final_ger_desc:0 "自給自足の為の統制。"
+ 
+ EUN_final_ita:0 "赤きローマ"
+ EUN_final_ita_desc:0 ""
+ 
+ EUN_final_ben:0 "平和と発展の赤い楽園"
+ EUN_final_ben_desc:0 "平和と発展の赤い楽園。"
+
+ # Tooltips (Checks)
+ EUN_pm_faction_check:0 "§Y議長派閥が存在する§!"
+ EUN_interior_faction_check:0 "§Y内務派閥が存在する§!"
+ EUN_fra_pm_check:0 "§Yフランス派閥§!が議長を務めている"
+ EUN_ger_pm_check:0 "§Yドイツ派閥§!が議長を務めている"
+ EUN_ita_pm_check:0 "§Yイタリア派閥§!が議長を務めている"
+ EUN_ben_pm_check:0 "§Yベネルクス派閥§!が議長を務めている"
+ EUN_ger_ben_pm_check:0 "§Yドイツ§!または§Yベネルクス§!派閥が議長を務めている"
+ EUN_fra_ita_pm_check:0 "§Yフランス§!または§Yイタリア§!派閥が議長を務めている"
+ EUN_ben_ita_pm_check:0 "§Yベネルクス§!または§Yイタリア§!派閥が議長を務めている"
+ EUN_ger_ben_ita_pm_check:0 "§Yドイツ§!、§Yベネルクス§!、または§Yイタリア§!派閥が議長を務めている"
+ EUN_ger_fra_pm_check:0 "§Yドイツ§!または§Yフランス§!派閥が議長を務めている"
+ 
+ EUN_ger_fra_int_check:0 "§Yドイツ§!または§Yフランス§!派閥が内務大臣を務めている"
+ EUN_ben_ita_int_check:0 "§Yベネルクス§!または§Yイタリア§!派閥が内務大臣を務めている"
+ EUN_ben_int_check:0 "§Yベネルクス派閥§!が内務大臣を務めている"
+ EUN_ger_ben_int_check:0 "§Yドイツ§!または§Yベネルクス§!派閥が内務大臣を務めている"
+ EUN_ger_int_check:0 "§Yドイツ派閥§!が内務大臣を務めている"
+
+ # --- Leaders ---
+ EUN_lev_trotsky:0 "レフ・トロツキー"
+ EUN_lev_trotsky_desc:0 "「世界革命の精神的指導者」。彼は躊躇わない。欧州、そして世界に革命をもたらし、一国社会主義者共の巣、モスクワに凱旋するのだ。彼の望みは「全世界革命を実現する事」のみ。外交などという生ぬるい手段はフランス派閥には存在しない。"
+ 
+ EUN_otto_strasser:0 "オットー・シュトラッサー"
+ EUN_otto_strasser_desc:0 "「鋼鉄の意志、コンクリートの要塞」。ナショナル・ボルシェビズムの旗手であり、ドイツの再興と社会主義の融合を目指す。"
+ 
+ EUN_benito_mussolini:0 "ベニト・ムッソリーニ"
+ EUN_benito_mussolini_desc:0 "「プロレタリアートのドゥーチェ」。社会党を追放されず、党内の過激派を掌握して「国家サンディカリズム」を確立した。「ファシズム？ なんだそれは？」彼は赤いシャツを着てローマへ進軍した。彼にとって革命とは、イタリア民族が世界を支配するための手段に過ぎない。"
+ 
+ EUN_paul_henri_spaak:0 "ポール＝アンリ・スパーク"
+ EUN_paul_henri_spaak_desc:0 "「パンと自由を人々に！」。ベネルクスの穏健派リーダーであり、過激化する欧州連合の中で理性を保とうと奮闘している。"
+
+ # --- Minister Ideas ---
+ EUN_PM_FRA:0 "トロツキー政権"
+ EUN_PM_GER:0 "シュトラッサー政権"
+ EUN_PM_ITA:0 "ムッソリーニ政権"
+ EUN_PM_BEN:0 "スパーク政権"
+ EUN_trotsky_trait:0 "フランス派閥の議長"
+ EUN_strasser_trait:0 "ドイツ派閥の議長"
+ EUN_mussolini_trait:0 "イタリア派閥の議長"
+ EUN_spaak_trait:0 "ベネルクス派閥の議長"
+ # --- National Focus Tooltips ---
+ EUN_first_congress_tooltip:0 "第一回連合議会を開催し、初期の閣僚を選出します。"
+ EUN_second_congress_tooltip:0 "第二回連合議会を開催し、閣僚を再選出または交代させます。"
+ EUN_third_congress_tooltip:0 "第三回連合議会を開催し、最終的な閣僚体制を決定します。"
+
+ # European Union Election Events
+ EuropeanUnion_Election.1.t:0 "第一回連合議会：議長の選出"
+ EuropeanUnion_Election.1.desc:0 "第一回連合議会の最初の議題は、欧州連合を率いる議長の選出である。各派閥は自らの候補者を推しており、激しい議論が交わされている。"
+ EuropeanUnion_Election.1.a:0 "フランス派閥（トロツキー）を支持する"
+ EuropeanUnion_Election.1.b:0 "ドイツ派閥（シュトラッサー）を支持する"
+ EuropeanUnion_Election.1.c:0 "イタリア派閥（ムッソリーニ）を支持する"
+ EuropeanUnion_Election.1.d:0 "ベネルクス派閥（スパーク）を支持する"
+
+ EuropeanUnion_Election.2.t:0 "第一回連合議会：経済人民委員の選出"
+ EuropeanUnion_Election.2.desc:0 "続いて、連合の経済政策を担う経済人民委員を選出する。計画経済か、市場社会主義か、それともコーポラティズムか。経済の舵取りは重大な責任を伴う。"
+ EuropeanUnion_Election.2.a:0 "フランス派閥（集産主義）を支持する"
+ EuropeanUnion_Election.2.b:0 "ドイツ派閥（軍産複合体）を支持する"
+ EuropeanUnion_Election.2.c:0 "イタリア派閥（コーポラティズム）を支持する"
+ EuropeanUnion_Election.2.d:0 "ベネルクス派閥（市場社会主義）を支持する"
+
+ EuropeanUnion_Election.3.t:0 "第一回連合議会：軍事人民委員の選出"
+ EuropeanUnion_Election.3.desc:0 "革命の防衛と拡大を担う軍事人民委員の選出に移る。ドクトリンの違いは軍の編成に大きな影響を与えるだろう。"
+ EuropeanUnion_Election.3.a:0 "フランス派閥（革命的エラン）を支持する"
+ EuropeanUnion_Election.3.b:0 "ドイツ派閥（機動戦）を支持する"
+ EuropeanUnion_Election.3.c:0 "イタリア派閥（空軍優先）を支持する"
+ EuropeanUnion_Election.3.d:0 "ベネルクス派閥（防衛重視）を支持する"
+
+ EuropeanUnion_Election.4.t:0 "第一回連合議会：内務人民委員の選出"
+ EuropeanUnion_Election.4.desc:0 "最後に、国内の治安と秩序を維持する内務人民委員を選出する。粛清か、監視か、それとも融和か。"
+ EuropeanUnion_Election.4.a:0 "フランス派閥（革命的粛清）を支持する"
+ EuropeanUnion_Election.4.b:0 "ドイツ派閥（秘密警察）を支持する"
+ EuropeanUnion_Election.4.c:0 "イタリア派閥（国家サンディカリズム）を支持する"
+ EuropeanUnion_Election.4.d:0 "ベネルクス派閥（合意形成）を支持する"
+
+ EuropeanUnion_Election.5.t:0 "第二回連合議会：議長の再選出"
+ EuropeanUnion_Election.5.desc:0 "第二回連合議会が開催された。これまでの実績を評価し、新たな議長を選出する時が来た。"
+ EuropeanUnion_Election.5.a:0 "フランス派閥（トロツキー）を支持する"
+ EuropeanUnion_Election.5.b:0 "ドイツ派閥（シュトラッサー）を支持する"
+ EuropeanUnion_Election.5.c:0 "イタリア派閥（ムッソリーニ）を支持する"
+ EuropeanUnion_Election.5.d:0 "ベネルクス派閥（スパーク）を支持する"
+
+ EuropeanUnion_Election.6.t:0 "第二回連合議会：経済人民委員の再選出"
+ EuropeanUnion_Election.6.desc:0 "経済政策の見直しが行われる。現状を維持するか、新たな方針を採用するか。"
+ EuropeanUnion_Election.6.a:0 "フランス派閥（集産主義）を支持する"
+ EuropeanUnion_Election.6.b:0 "ドイツ派閥（軍産複合体）を支持する"
+ EuropeanUnion_Election.6.c:0 "イタリア派閥（コーポラティズム）を支持する"
+ EuropeanUnion_Election.6.d:0 "ベネルクス派閥（市場社会主義）を支持する"
+
+ EuropeanUnion_Election.7.t:0 "第二回連合議会：軍事人民委員の再選出"
+ EuropeanUnion_Election.7.desc:0 "軍事ドクトリンの再評価が行われる。迫りくる脅威に対抗するため、最適な指導者を選ばねばならない。"
+ EuropeanUnion_Election.7.a:0 "フランス派閥（革命的エラン）を支持する"
+ EuropeanUnion_Election.7.b:0 "ドイツ派閥（機動戦）を支持する"
+ EuropeanUnion_Election.7.c:0 "イタリア派閥（空軍優先）を支持する"
+ EuropeanUnion_Election.7.d:0 "ベネルクス派閥（防衛重視）を支持する"
+
+ EuropeanUnion_Election.8.t:0 "第二回連合議会：内務人民委員の再選出"
+ EuropeanUnion_Election.8.desc:0 "内務政策の再考が行われる。社会の安定を保つために誰が適任か。"
+ EuropeanUnion_Election.8.a:0 "フランス派閥（革命的粛清）を支持する"
+ EuropeanUnion_Election.8.b:0 "ドイツ派閥（秘密警察）を支持する"
+ EuropeanUnion_Election.8.c:0 "イタリア派閥（国家サンディカリズム）を支持する"
+ EuropeanUnion_Election.8.d:0 "ベネルクス派閥（合意形成）を支持する"
+
+ EuropeanUnion_Election.9.t:0 "第三回連合議会：議長の最終選出"
+ EuropeanUnion_Election.9.desc:0 "第三回連合議会。これが最後の大規模な改選となるかもしれない。連合の運命を託す指導者を慎重に選ぶ必要がある。"
+ EuropeanUnion_Election.9.a:0 "フランス派閥（トロツキー）を支持する"
+ EuropeanUnion_Election.9.b:0 "ドイツ派閥（シュトラッサー）を支持する"
+ EuropeanUnion_Election.9.c:0 "イタリア派閥（ムッソリーニ）を支持する"
+ EuropeanUnion_Election.9.d:0 "ベネルクス派閥（スパーク）を支持する"
+
+ EuropeanUnion_Election.10.t:0 "第三回連合議会：経済人民委員の最終選出"
+ EuropeanUnion_Election.10.desc:0 "総力戦に耐えうる経済体制を確立するため、最後の経済人民委員を選出する。"
+ EuropeanUnion_Election.10.a:0 "フランス派閥（集産主義）を支持する"
+ EuropeanUnion_Election.10.b:0 "ドイツ派閥（軍産複合体）を支持する"
+ EuropeanUnion_Election.10.c:0 "イタリア派閥（コーポラティズム）を支持する"
+ EuropeanUnion_Election.10.d:0 "ベネルクス派閥（市場社会主義）を支持する"
+
+ EuropeanUnion_Election.11.t:0 "第三回連合議会：軍事人民委員の最終選出"
+ EuropeanUnion_Election.11.desc:0 "最終決戦に向けた軍事指導部の確立。勝利への道を切り開くのは誰か。"
+ EuropeanUnion_Election.11.a:0 "フランス派閥（革命的エラン）を支持する"
+ EuropeanUnion_Election.11.b:0 "ドイツ派閥（機動戦）を支持する"
+ EuropeanUnion_Election.11.c:0 "イタリア派閥（空軍優先）を支持する"
+ EuropeanUnion_Election.11.d:0 "ベネルクス派閥（防衛重視）を支持する"
+
+ EuropeanUnion_Election.12.t:0 "第三回連合議会：内務人民委員の最終選出"
+ EuropeanUnion_Election.12.desc:0 "後方の安全を確保し、国家の結束を固めるための最後の内務人民委員選出。"
+ EuropeanUnion_Election.12.a:0 "フランス派閥（革命的粛清）を支持する"
+ EuropeanUnion_Election.12.b:0 "ドイツ派閥（秘密警察）を支持する"
+ EuropeanUnion_Election.12.c:0 "イタリア派閥（国家サンディカリズム）を支持する"
+ EuropeanUnion_Election.12.d:0 "ベネルクス派閥（合意形成）を支持する"
+ #events
+ EuropeanUnion.1.t:0 "スペインへの要求"
+ EuropeanUnion.1.desc:0 "スペイン政府が欧州連合への統合の要請を見事受諾した！彼らは我々と一丸となりより一層働くことになるだろう！ただし、多くのスペイン国民はこれに不満を持っているようだ..."
+ EuropeanUnion.1.a:0 "さっそく現地入りだ"

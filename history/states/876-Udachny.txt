@@ -1,25 +1,26 @@
 state = {
-	id = 876 
-	name = "STATE_876" #Udachny
-
+	id = 876
+	name = "STATE_876"	#Udachny
 	history = {
-		owner = VLA
+		owner = RUS
 		victory_points = {
-			6085 1 
+			6085
+			1
 		}
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = SOV
-		add_core_of = VLA
-
+		add_core_of = RUS
 	}
 	provinces = {
-		1722 2853 3184 6085 13060 
+		1722
+		2853
+		3184
+		6085
+		13060
 	}
 	manpower = 12182
 	buildings_max_level_factor = 1
 	state_category = "wasteland"
-
-	local_supplies = 0.0 
+	local_supplies = 0
 }

@@ -20,8 +20,8 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = KUR
-		add_core_of = IRQ
+		
+		
 		add_core_of = TUR
 	}
 

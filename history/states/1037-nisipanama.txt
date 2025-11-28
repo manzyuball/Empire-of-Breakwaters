@@ -1,29 +1,26 @@
-
-state={
-	id=1037
-	name="STATE_1037"
-
-	history={
-		owner = PAN
+state = {
+	id = 1037
+	name = "STATE_1037"
+	history = {
+		owner = COL
 		buildings = {
 			infrastructure = 2
 			dockyard = 1
 			industrial_complex = 2
 			4611 = {
 				naval_base = 1
-
 			}
-
 		}
-		add_core_of = PAN
-
+		add_core_of = COL
 	}
-
-	provinces={
-		1633 4611 4624 14167 
+	provinces = {
+		1633
+		4611
+		4624
+		14167
 	}
-	manpower=214323
-	buildings_max_level_factor=1.000
-	state_category=city
-	local_supplies=0.000
+	manpower = 214323
+	buildings_max_level_factor = 1
+	state_category = city
+	local_supplies = 0
 }

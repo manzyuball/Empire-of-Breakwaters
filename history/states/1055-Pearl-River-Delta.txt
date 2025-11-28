@@ -1,0 +1,26 @@
+state={
+	id=1055
+	name="STATE_1055"
+	provinces={
+		1047 4189 13400 13401 
+	}
+	history = {
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 8
+			arms_factory = 2
+			dockyard = 5
+			air_base = 5
+		}
+		victory_points = {
+			1047 35
+		}
+	}
+	state_category = metropolis
+	manpower=41289800
+	buildings_max_level_factor=1
+	local_supplies=0
+}

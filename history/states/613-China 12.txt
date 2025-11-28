@@ -39,7 +39,7 @@ state={
 	provinces={
 		996 4042 7014 7120 10034 10076 11913 11982 12052 12076 13142 13382 13383 13384 13385 13386 13387 13388 13389 13391 
 	}
-	manpower=17305100
+	manpower=47305100
 	buildings_max_level_factor=1.000
 	state_category=megalopolis
 	local_supplies=0.000

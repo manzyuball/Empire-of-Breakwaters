@@ -1,21 +1,20 @@
-
-state={
-	id=162
-	name="STATE_162"
+state = {
+	id = 162
+	name = "STATE_162"
 	manpower = 3084933
-	
 	state_category = large_city
-
-	history={
-		owner = TOS
+	history = {
+		owner = ITA
 		victory_points = {
-			9907 3 
+			9907
+			3
 		}
 		victory_points = {
-			11833 1 
+			11833
+			1
 		}
 		buildings = {
-			infrastructure = 4 #was: 8
+			infrastructure = 4			#was: 8
 			arms_factory = 2
 			industrial_complex = 4
 			dockyard = 3
@@ -27,13 +26,18 @@ state={
 				naval_base = 4
 			}
 		}
-		add_core_of = TOS
-		
+		add_core_of = ITA
 	}
-
-	provinces={
-		910 1616 6875 6946 9750 9879 9907 11833 11889 
+	provinces = {
+		910
+		1616
+		6875
+		6946
+		9750
+		9879
+		9907
+		11833
+		11889
 	}
-
-	local_supplies=0.0 
+	local_supplies = 0
 }

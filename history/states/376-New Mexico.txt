@@ -1,31 +1,28 @@
-
-state={
-	id=376
-	name="STATE_376"
-	resources={
-		oil=14.000
-		aluminium=30.000
+state = {
+	id = 376
+	name = "STATE_376"
+	resources = {
+		oil = 14
+		aluminium = 30
 	}
-
-	history={
-		owner = USN
-		add_core_of = USN
+	history = {
+		owner = CSA
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-
 		}
 		add_core_of = USA
-		add_core_of = USB
 		add_core_of = CSA
-
 	}
-
-	provinces={
-		1972 5044 10645 10914 12552 
+	provinces = {
+		1972
+		5044
+		10645
+		10914
+		12552
 	}
-	manpower=423316
-	buildings_max_level_factor=1.000
-	state_category=rural
-	local_supplies=0.000
+	manpower = 423316
+	buildings_max_level_factor = 1
+	state_category = rural
+	local_supplies = 0
 }

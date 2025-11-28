@@ -1,27 +1,24 @@
-
-state={
-	id=823
-	name="STATE_823"
-	resources={
+state = {
+	id = 823
+	name = "STATE_823"
+	resources = {
 	}
-
-	history={
-		owner = KAZ
+	history = {
+		owner = SOV
 		buildings = {
 			infrastructure = 2
-
 		}
 		add_core_of = SOV
-		add_core_of = KAZ
-		add_core_of = UZB
-
 	}
-
-	provinces={
-		7541 10348 12233 12474 13207 
+	provinces = {
+		7541
+		10348
+		12233
+		12474
+		13207
 	}
-	manpower=258430
-	buildings_max_level_factor=1.000
-	state_category=rural
-	local_supplies=0.000
+	manpower = 258430
+	buildings_max_level_factor = 1
+	state_category = rural
+	local_supplies = 0
 }

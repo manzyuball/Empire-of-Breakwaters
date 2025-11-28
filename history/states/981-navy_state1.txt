@@ -1,11 +1,11 @@
-state={
-	id=981
-	name="STATE_981"
-	provinces={
-		9814 
+state = {
+	id = 981
+	name = "STATE_981"
+	provinces = {
+		9814
 	}
-	history={
-		owner = USN
+	history = {
+		owner = USA
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1
@@ -14,21 +14,17 @@ state={
 			air_base = 3
 			9814 = {
 				naval_base = 5
-
 			}
-
 		}
 		add_core_of = USA
-		add_core_of = USB
 		add_core_of = CSA
-		add_core_of = USN
 		victory_points = {
-			9814 30 
+			9814
+			30
 		}
-
 	}
-	manpower=42001
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
-	state_category= large_city
+	manpower = 42001
+	buildings_max_level_factor = 1
+	local_supplies = 0
+	state_category = large_city
 }

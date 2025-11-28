@@ -1,26 +1,26 @@
-state={
-	id=978
-	name="STATE_978"
-	provinces={
-		10074 
+state = {
+	id = 978
+	name = "STATE_978"
+	provinces = {
+		10074
 	}
-	history={
-		owner = TUN
+	history = {
+		owner = ENG
 		victory_points = {
-			10074 20 
+			10074
+			20
 		}
 		buildings = {
 			air_base = 5
 			dockyard = 5
 			10074 = {
 				naval_base = 8
+			}
 		}
-		}
-		add_core_of = TUN
-
+		add_core_of = ENG
 	}
-	manpower=982635
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
-	state_category= town
+	manpower = 982635
+	buildings_max_level_factor = 1
+	local_supplies = 0
+	state_category = town
 }

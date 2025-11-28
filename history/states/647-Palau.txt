@@ -1,30 +1,26 @@
-state=
-{
-	id=647
-	name="STATE_647"
+state = {
+	id = 647
+	name = "STATE_647"
 	state_category = town
 	manpower = 12100
-	history=
-	{
-		owner = GER
-        add_core_of = GER
+	history = {
+		owner = JAP
 		buildings = {
 			infrastructure = 3
 			air_base = 1
 			industrial_complex = 1
 			4357 = {
 				naval_base = 1
-
 			}
 		}
-		
 		victory_points = {
-			4357 1 
+			4357
+			1
 		}
 	}
-	provinces={
-		4357 12103
+	provinces = {
+		4357
+		12103
 	}
-
-	local_supplies=0.0 
+	local_supplies = 0
 }

@@ -5,73 +5,76 @@
 leader_traits = {
 	
 	BOUEISYOU = {
-		sprite = 1
+		sprite = 9
 		random = no
 		production_speed_bunker_factor = 0.2
 		production_speed_coastal_bunker_factor = 0.2
 		production_speed_air_base_factor = 0.2
 		production_speed_anti_air_building_factor = 0.2
 		production_speed_radar_station_factor = 0.2
-		production_speed_rail_way_factor = 0.35
-		production_speed_supply_node_factor = 1.5
+		production_speed_rail_way_factor = 0.2
+		production_speed_supply_node_factor = 0.2
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	GAIMUSYOU = {
-		sprite = 2
+		sprite = 12
 		random = no
 
-		operative_slot = 2
+		justify_war_goal_time = -0.25
+		annex_cost_factor = -0.25
+		puppet_cost_factor = -0.25
+		send_volunteer_factor = 0.25
 
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	Factory_syou = {
-		sprite = 2
+		sprite = 10
 		random = no
 
-		industrial_capacity_factory = 0.1
-		industrial_capacity_dockyard = 0.1
+		industrial_capacity_factory = 0.15
+		industrial_capacity_dockyard = 0.15
 
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	RIKUGUNSYOU = {
-		sprite = 3
+		sprite = 5
 		random = no
 
 		production_speed_arms_factory_factor = 0.15
 		production_speed_dockyard_factor = 0.15
-		conscription = 0.01
-		training_time_army_factor = -0.2
+		conscription = 0.005
+		training_time_army_factor = -0.15
 
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	SOUMUTYOU = {
-		sprite = 4
+		sprite = 12
 		random = no
-		political_power_factor = 0.20
+		political_power_factor = 0.15
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	KYOUIKUTYOU = {
-		sprite = 5
+		sprite = 12
 		random = no
-		research_speed_factor = 0.14
+		research_speed_factor = 0.08
 		ai_will_do = {
 			factor = 1
 		}
 	}
 	Sangyo = {
-		sprite = 9
+		sprite = 10
 		random = no
-		production_speed_industrial_complex_factor = 0.10
+		production_speed_industrial_complex_factor = 0.15
 		production_speed_infrastructure_factor = 0.15
 		production_speed_naval_base_factor = 0.15
 		ai_will_do = {
@@ -79,9 +82,9 @@ leader_traits = {
 		}
 	}
 	Zaimu = {
-		sprite = 11
+		sprite = 12
 		random = no
-		consumer_goods_factor = -0.2
+		consumer_goods_factor = -0.15
 		ai_will_do = {
 			factor = 1
 		}

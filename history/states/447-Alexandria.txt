@@ -1,38 +1,32 @@
-
 state={
 	id=447
 	name="STATE_447"
-
+	provinces={
+		4076 4145 7164 
+	}
 	history={
 		owner = EGY
-		victory_points = {
-			4076 15 
-		}
-		victory_points = {
-			3996 5 
-		}
-		victory_points = {
-			1071 5 
-		}
+		add_core_of = EGY
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 4
-			air_base = 6
+			infrastructure = 5
+			arms_factory = 1
+			dockyard = 3
+			air_base = 4
+			industrial_complex = 6
 			4076 = {
-				naval_base = 8
-
+				naval_base = 10
+				coastal_bunker = 6
 			}
-
+		}
+		victory_points = {
+			4076 30
 		}
 		add_core_of = EGY
 
 	}
-
-	provinces={
-		992 1071 3996 4076 4145 7117 7164 10127 13653 13654 13655 13723 
-	}
-	manpower=3859239
-	buildings_max_level_factor=1.000
-	state_category=large_city
-	local_supplies=0.000
+	
+	manpower=43859239
+	buildings_max_level_factor=1
+	state_category=metropolis
+	local_supplies=0
 }

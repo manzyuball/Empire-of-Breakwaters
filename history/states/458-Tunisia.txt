@@ -1,25 +1,25 @@
-
-state={
-	id=458
-	name="STATE_458"
+state = {
+	id = 458
+	name = "STATE_458"
 	manpower = 1982940
 	state_category = city
-	resources={
-		steel=6 # was: 8
+	resources = {
+		steel = 6		# was: 8
 	}
-
-	history={
+	history = {
 		owner = ALG
 		add_core_of = ALG
-		controller = FRA
 		victory_points = {
-			11969 5
+			11969
+			5
 		}
 		victory_points = {
-			9994 1 
+			9994
+			1
 		}
 		victory_points = {
-			11921 1 
+			11921
+			1
 		}
 		buildings = {
 			infrastructure = 2
@@ -30,10 +30,19 @@ state={
 			}
 		}
 	}
-
-	provinces={
-		1037 1046 4061 4129 4163 7077 7162 7180 9994 10091 11921 11969 
+	provinces = {
+		1037
+		1046
+		4061
+		4129
+		4163
+		7077
+		7162
+		7180
+		9994
+		10091
+		11921
+		11969
 	}
-
-	local_supplies=25.0 
+	local_supplies = 25
 }

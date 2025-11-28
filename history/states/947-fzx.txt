@@ -1,23 +1,27 @@
-state={
-	id=947
-	name="STATE_947"
-	provinces={
-		733 3712 3715 4445 7629 9675 10481 13158 
+state = {
+	id = 947
+	name = "STATE_947"
+	provinces = {
+		733
+		3712
+		3715
+		4445
+		7629
+		9675
+		10481
+		13158
 	}
-	history={
+	history = {
 		owner = USA
-		add_core_of = USN
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
 		}
 		add_core_of = USA
-		add_core_of = USB
 		add_core_of = CSA
-
 	}
-	manpower=3404713
+	manpower = 3404713
 	state_category = city
-	buildings_max_level_factor=1.000
-	local_supplies=0.000
+	buildings_max_level_factor = 1
+	local_supplies = 0
 }

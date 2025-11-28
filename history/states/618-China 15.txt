@@ -1,14 +1,13 @@
-
-state={
-	id=618
-	name="STATE_618" # Dzungaria
+state = {
+	id = 618
+	name = "STATE_618"	# Dzungaria
 	manpower = 670800
-
+	resources = {
+		oil = 56
+	}
 	state_category = pastoral
-
-	history={
-		owner = MON
-		add_core_of = MON
+	history = {
+		owner = CHI
 		add_core_of = CHI
 		add_core_of = MAN
 		buildings = {
@@ -16,13 +15,25 @@ state={
 			industrial_complex = 1
 		}
 		victory_points = {
-			4823 2
+			4823
+			2
 		}
 	}
-
-	provinces={
-		1708 1783 1844 4714 4788 4823 4849 7693 7737 7866 10674 10691 12590 12737 
+	provinces = {
+		1708
+		1783
+		1844
+		4714
+		4788
+		4823
+		4849
+		7693
+		7737
+		7866
+		10674
+		10691
+		12590
+		12737
 	}
-
-	local_supplies=0.0 
+	local_supplies = 0
 }

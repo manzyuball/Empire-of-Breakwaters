@@ -1,31 +1,44 @@
-
-state={
-	id=323
-	name="STATE_323"
-	resources={
-		chromium=5.000
+state = {
+	id = 323
+	name = "STATE_323"
+	resources = {
+		chromium = 5
 	}
-
-	history={
-		owner = IVO
-		add_core_of = IVO
+	history = {
+		owner = NEP
+		add_core_of = NEP
 		buildings = {
 			infrastructure = 4
 			arms_factory = 2
 			industrial_complex = 2
-
 		}
 		victory_points = {
-			4987 3 
+			4987
+			3
 		}
-
 	}
-
-	provinces={
-		4386 4435 4987 5310 7374 10825 10910 12338 12892 13415 13416 13417 13418 13424 13430 13431 13432 13439 
+	provinces = {
+		4386
+		4435
+		4987
+		5310
+		7374
+		10825
+		10910
+		12338
+		12892
+		13415
+		13416
+		13417
+		13418
+		13424
+		13430
+		13431
+		13432
+		13439
 	}
-	manpower=5573791
-	buildings_max_level_factor=1.000
-	state_category=city
-	local_supplies=0.000
+	manpower = 5573791
+	buildings_max_level_factor = 1
+	state_category = city
+	local_supplies = 0
 }

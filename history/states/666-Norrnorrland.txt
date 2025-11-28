@@ -6,6 +6,7 @@ state={
 		tungsten=40.000
 		steel=50.000
 		chromium=25.000
+		coal = 31
 	}
 
 	history={
