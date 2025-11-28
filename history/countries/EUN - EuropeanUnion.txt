@@ -1,5 +1,6 @@
 capital = 965
 oob = "EUN_1936"
+load_oob = "FRA_naval"
 set_research_slots = 4
 
 set_politics = {
