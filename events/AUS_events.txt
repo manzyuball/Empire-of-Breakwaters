@@ -1,0 +1,216 @@
+add_namespace = AUS
+
+# 帝国の岐路
+country_event = {
+    id = AUS.1
+    title = AUS.1.t
+    desc = AUS.1.d
+    picture = GFX_report_event_generic_parliament
+
+    is_triggered_only = yes
+
+    option = {
+        name = AUS.1.a
+        add_political_power = 50
+        add_stability = 0.05
+    }
+}
+
+# 自治法案の提出
+country_event = {
+    id = AUS.10
+    title = AUS.10.t
+    desc = AUS.10.d
+    picture = GFX_report_event_generic_parliament
+
+    is_triggered_only = yes
+
+    option = {
+        name = AUS.10.a
+        add_political_power = 25
+        # Start mission or set flag if needed
+        set_country_flag = AUS_autonomy_bill_submitted
+    }
+}
+
+# 新たな指導者
+country_event = {
+    id = AUS.20
+    title = AUS.20.t
+    desc = AUS.20.d
+    picture = GFX_report_event_generic_leader
+
+    is_triggered_only = yes
+
+    option = { # Czech Representative
+        name = AUS.20.a
+        create_country_leader = {
+            name = "Czech Representative"
+            desc = "POLITICS_CZECH_REPRESENTATIVE_DESC"
+            picture = "GFX_portrait_cze_eduard_benes" # Placeholder
+            expire = "1965.1.1"
+            ideology = despotism
+            traits = { old_guard }
+        }
+    }
+    option = { # Slovak Representative
+        name = AUS.20.b
+        create_country_leader = {
+            name = "Slovak Representative"
+            desc = "POLITICS_SLOVAK_REPRESENTATIVE_DESC"
+            picture = "GFX_portrait_slo_jozef_tiso" # Placeholder
+            expire = "1965.1.1"
+            ideology = despotism
+            traits = { old_guard }
+        }
+    }
+}
+
+# 未回収のイタリア問題
+country_event = {
+    id = AUS.30
+    title = AUS.30.t
+    desc = AUS.30.d
+    picture = GFX_report_event_generic_diplomacy
+
+    is_triggered_only = yes
+
+    option = { # Cede South Tyrol
+        name = AUS.30.a
+        add_political_power = -50
+        add_stability = -0.05
+        ITA = {
+            add_opinion_modifier = { target = ROOT modifier = improved_relation }
+        }
+    }
+    option = { # Cede Istria
+        name = AUS.30.b
+        add_political_power = -50
+        add_stability = -0.05
+        ITA = {
+            add_opinion_modifier = { target = ROOT modifier = improved_relation }
+        }
+        # Transfer state effect would go here
+    }
+    option = { # Abandon Claims
+        name = AUS.30.c
+        add_political_power = 50
+        add_stability = 0.10
+    }
+}
+
+# 徴兵法改正案
+country_event = {
+    id = AUS.40
+    title = AUS.40.t
+    desc = AUS.40.d
+    picture = GFX_report_event_generic_soldiers
+
+    is_triggered_only = yes
+
+    option = {
+        name = AUS.40.a
+        add_political_power = 25
+        add_manpower = 5000
+    }
+}
+
+# 産業補助金法案
+country_event = {
+    id = AUS.41
+    title = AUS.41.t
+    desc = AUS.41.d
+    picture = GFX_report_event_generic_factory
+
+    is_triggered_only = yes
+
+    option = {
+        name = AUS.41.a
+        add_political_power = 25
+        add_to_variable = { AUS_eco_civ_build_speed = 0.05 }
+    }
+}
+
+# 報道規制法案
+country_event = {
+    id = AUS.42
+    title = AUS.42.t
+    desc = AUS.42.d
+    picture = GFX_report_event_generic_read_write
+
+    is_triggered_only = yes
+
+    option = {
+        name = AUS.42.a
+        add_political_power = 25
+        add_stability = 0.05
+    }
+}
+
+# 地方税制改革
+country_event = {
+    id = AUS.43
+    title = AUS.43.t
+    desc = AUS.43.d
+    picture = GFX_report_event_generic_parliament
+
+    is_triggered_only = yes
+
+    option = {
+        name = AUS.43.a
+        add_political_power = 25
+        add_to_variable = { AUS_eco_consumer_goods = -0.02 }
+    }
+}
+
+# ウィーン銀行法
+country_event = {
+    id = AUS_wien_bank_law
+    title = AUS_wien_bank_law
+    desc = AUS_wien_bank_law_desc
+    picture = GFX_report_event_generic_gold
+
+    is_triggered_only = yes
+
+    option = { # Stability (Consumer Goods)
+        name = "AUS_wien_bank_law_opt_a" # Need localization
+        add_stability = 0.05
+        add_to_variable = { AUS_eco_consumer_goods = -0.05 }
+    }
+    option = { # Growth (Construction Speed)
+        name = "AUS_wien_bank_law_opt_b" # Need localization
+        add_to_variable = { AUS_eco_civ_build_speed = 0.10 }
+    }
+}
+
+# 地中海貿易
+country_event = {
+    id = AUS_mediterranean_trade
+    title = AUS_mediterranean_trade
+    desc = AUS_mediterranean_trade_desc
+    picture = GFX_report_event_generic_ship
+
+    is_triggered_only = yes
+
+    option = { # Italy
+        name = "AUS_mediterranean_trade_opt_a" # Need localization
+        ITA = {
+            add_opinion_modifier = { target = ROOT modifier = improved_relation }
+        }
+        add_to_variable = { AUS_eco_dockyard_output = 0.05 }
+    }
+    option = { # UK
+        name = "AUS_mediterranean_trade_opt_b" # Need localization
+        ENG = {
+            add_opinion_modifier = { target = ROOT modifier = improved_relation }
+        }
+        add_to_variable = { AUS_eco_dockyard_output = 0.05 }
+    }
+    option = { # Turkey
+        name = "AUS_mediterranean_trade_opt_c" # Need localization
+        TUR = {
+            add_opinion_modifier = { target = ROOT modifier = improved_relation }
+        }
+        add_to_variable = { AUS_eco_dockyard_output = 0.05 }
+    }
+}

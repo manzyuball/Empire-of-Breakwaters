@@ -25,6 +25,7 @@ AUS_imperial_economy_modifier = {
     production_speed_industrial_complex_factor = var:AUS_eco_civ_build_speed
     production_speed_infrastructure_factor = var:AUS_eco_infra_build_speed
     production_speed_bunker_factor = var:AUS_eco_bunker_build_speed
+    industrial_factory_donations = var:AUS_eco_factory_donations
 }
 
 AUS_emperors_army_modifier = {
@@ -39,4 +40,16 @@ AUS_emperors_army_modifier = {
     conscription_factor = var:AUS_mil_conscription
     experience_loss_factor = var:AUS_mil_exp_loss
     land_bunker_effectiveness_factor = var:AUS_mil_bunker_effect
+    
+    # New Variables
+    supply_consumption_factor = var:AUS_mil_supply_consumption
+    air_cas_efficiency = var:AUS_air_cas_efficiency
+    air_superiority_efficiency = var:AUS_air_superiority_efficiency
+    air_ace_generation_chance_factor = var:AUS_air_ace_generation
+    planning_speed = var:AUS_mil_planning_speed
+    max_planning = var:AUS_mil_max_planning
+    coordination_bonus = var:AUS_mil_coordination
+    army_attack_factor = var:AUS_mil_army_attack
+    special_forces_cap = var:AUS_mil_special_forces_cap
+    dig_in_speed_factor = var:AUS_mil_entrenchment
 }
