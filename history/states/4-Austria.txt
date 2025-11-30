@@ -8,6 +8,7 @@ state={
 
 	history={
 		owner = AUS
+		set_state_flag = Austrian_state
 		victory_points = {
 			9648 5 
 		}
@@ -19,20 +20,6 @@ state={
 
 		}
 		add_core_of = AUS
-		1938.3.12 = {
-			owner = EUN
-			controller = GER
-			
-
-		}
-		1939.1.1 = {
-			buildings = {
-				anti_air_building = 5
-
-			}
-
-		}
-
 	}
 
 	provinces={

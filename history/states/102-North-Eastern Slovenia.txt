@@ -9,8 +9,7 @@ state={
 			infrastructure = 3
 
 		}
-		add_core_of = YUG
-		add_core_of = SLV
+		set_state_flag = Austrian_state
 		add_core_of = AUS
 
 	}

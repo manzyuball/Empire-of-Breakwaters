@@ -16,10 +16,7 @@ state={
 			arms_factory = 1
 		}
 		add_core_of = AUS
-		add_core_of = UKR
-		add_core_of = CZE
-		add_core_of = ROM
-		add_core_of = POL
+		set_state_flag = Polish_state
 	}
 	provinces={
 		577 9548

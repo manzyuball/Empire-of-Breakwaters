@@ -14,6 +14,7 @@ state = {
 			15
 		}
 		add_core_of = AUS
+		set_state_flag = Slave_state
 	}
 	provinces = {
 		797
