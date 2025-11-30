@@ -1,0 +1,1114 @@
+focus_tree = {
+    id = AUS_focus
+    
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = AUS
+        }
+    }
+    
+    default = no
+    
+    # --- Root ---
+    focus = {
+        id = AUS_imperial_politics
+        icon = GFX_goal_generic_major_alliance
+        x = 18
+        y = 0
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 100
+            add_stability = 0.10
+            # Trigger initial event
+            country_event = { id = AUS.1 }
+        }
+    }
+
+    # --- First Tier Branches ---
+
+    # Left: Minority (Autonomy)
+    focus = {
+        id = AUS_expansion_of_autonomy
+        icon = GFX_goal_generic_small_arms
+        mutually_exclusive = { focus = AUS_strengthen_habsburg_legitimacy focus = AUS_strengthen_magyar_influence }
+        prerequisite = { focus = AUS_imperial_politics }
+        relative_position_id = AUS_imperial_politics
+        x = -3
+        y = 1
+        cost = 10
+        
+        available = {
+            check_variable = { AUS_minority_influence > 40 }
+        }
+        
+        completion_reward = {
+            add_political_power = 50
+            add_to_variable = { AUS_minority_influence = 10 }
+        }
+    }
+
+    # Center: Hungary (Magyar)
+    focus = {
+        id = AUS_strengthen_magyar_influence
+        icon = GFX_goal_generic_political_pressure
+        mutually_exclusive = { focus = AUS_expansion_of_autonomy focus = AUS_strengthen_habsburg_legitimacy }
+        prerequisite = { focus = AUS_imperial_politics }
+        relative_position_id = AUS_imperial_politics
+        x = 0
+        y = 1
+        cost = 10
+        
+        available = {
+            check_variable = { AUS_hungary_influence > 40 }
+        }
+        
+        completion_reward = {
+            add_political_power = 50
+            add_to_variable = { AUS_hungary_influence = 10 }
+        }
+    }
+
+    # Right: Austria (Habsburg)
+    focus = {
+        id = AUS_strengthen_habsburg_legitimacy
+        icon = GFX_goal_generic_monarchy
+        mutually_exclusive = { focus = AUS_expansion_of_autonomy focus = AUS_strengthen_magyar_influence }
+        prerequisite = { focus = AUS_imperial_politics }
+        relative_position_id = AUS_imperial_politics
+        x = 3
+        y = 1
+        cost = 10
+        
+        available = {
+            check_variable = { AUS_austria_influence > 40 }
+        }
+        
+        completion_reward = {
+            add_political_power = 50
+            add_to_variable = { AUS_austria_influence = 10 }
+        }
+    }
+
+    # --- Second Tier Gates ---
+
+    # Anti-Austrian Parliament (Left Side)
+    focus = {
+        id = AUS_anti_austrian_parliament
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = AUS_expansion_of_autonomy focus = AUS_strengthen_magyar_influence }
+        relative_position_id = AUS_expansion_of_autonomy
+        mutually_exclusive = { focus = AUS_convocation_of_imperial_parliament }
+        x = 2
+        y = 1 # Relative to expansion_of_autonomy (-5, 1) -> (-5, 3)
+        cost = 10
+        
+        available = {
+            OR = {
+                check_variable = { AUS_minority_influence > AUS_austria_influence }
+                check_variable = { AUS_hungary_influence > AUS_austria_influence }
+            }
+        }
+        
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+
+    # Convocation of Imperial Parliament (Right Side)
+    focus = {
+        id = AUS_convocation_of_imperial_parliament
+        icon = GFX_goal_generic_more_territories
+        prerequisite = { focus = AUS_strengthen_magyar_influence focus = AUS_strengthen_habsburg_legitimacy }
+        relative_position_id = AUS_strengthen_habsburg_legitimacy
+        mutually_exclusive = { focus = AUS_anti_austrian_parliament }
+        x = -2
+        y = 1 # Relative to strengthen_habsburg_legitimacy (5, 1) -> (5, 3)
+        cost = 10
+        
+        available = {
+            OR = {
+                check_variable = { AUS_austria_influence > AUS_hungary_influence }
+                # Balanced condition could be added here
+            }
+        }
+        
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+
+    # --- Anti-Austrian Branch ---
+    focus = {
+        id = AUS_Hungary_Unity
+        icon = GFX_goal_generic_national_unity
+        prerequisite = { focus = AUS_anti_austrian_parliament focus = AUS_convocation_of_imperial_parliament }
+        relative_position_id = AUS_anti_austrian_parliament
+        mutually_exclusive = { focus = AUS_autonomy_bill focus = AUS_true_royal_authority }
+        x = 1
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 25
+            # Start Mission
+            country_event = { id = AUS.10 }
+        }
+    }
+    focus = {
+        id = AUS_autonomy_bill
+        icon = GFX_goal_generic_national_unity
+        prerequisite = { focus = AUS_anti_austrian_parliament }
+        relative_position_id = AUS_anti_austrian_parliament
+        mutually_exclusive = { focus = AUS_Hungary_Unity focus = AUS_true_royal_authority }
+        x = -4
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 25
+            # Start Mission
+            country_event = { id = AUS.10 }
+        }
+    }
+    focus = {
+        id = AUS_germany_unity
+        icon = GFX_goal_generic_dangerous_deal
+        prerequisite = { focus = AUS_autonomy_bill focus = AUS_true_royal_authority focus = AUS_Hungary_Unity }
+        relative_position_id = AUS_autonomy_bill
+        x = 4
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 50
+            # Effect to break relations/guarantee
+        }
+    }
+    focus = {
+        id = AUS_abandon_germany
+        icon = GFX_goal_generic_dangerous_deal
+        prerequisite = { focus = AUS_germany_unity }
+        relative_position_id = AUS_germany_unity
+        x = -1
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 50
+            # Effect to break relations/guarantee
+        }
+    }
+
+    focus = {
+        id = AUS_abandon_italy
+        icon = GFX_goal_generic_dangerous_deal
+        prerequisite = { focus = AUS_unrecovered_italian_question }
+        relative_position_id = AUS_unrecovered_italian_question
+        x = -1
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 50
+            # Effect to break relations/guarantee
+        }
+    }
+
+    focus = {
+        id = AUS_coup_detat
+        icon = GFX_goal_generic_military_sphere
+        prerequisite = { focus = AUS_autonomy_bill }
+        relative_position_id = AUS_autonomy_bill
+        x = -2
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_stability = -0.2
+            # Trigger Coup Event
+        }
+    }
+
+    focus = {
+        id = AUS_imperial_regency
+        icon = GFX_goal_generic_monarchy
+        prerequisite = { focus = AUS_coup_detat }
+        relative_position_id = AUS_coup_detat
+        x = 0
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            # Logic for Horthy vs Minority Leader
+            if = {
+                limit = { has_completed_focus = AUS_strengthen_magyar_influence }
+                # Become Horthy
+                set_country_leader_ideology = despotism
+                # create_country_leader = ... (Horthy)
+            }
+            else = {
+                # Event to choose minority leader
+                country_event = { id = AUS.20 }
+            }
+        }
+    }
+
+    # --- Imperial Parliament Branch ---
+
+    focus = {
+        id = AUS_true_royal_authority
+        icon = GFX_goal_generic_monarchy
+        prerequisite = { focus = AUS_convocation_of_imperial_parliament }
+        relative_position_id = AUS_convocation_of_imperial_parliament
+        mutually_exclusive = { focus = AUS_autonomy_bill focus = AUS_Hungary_Unity }
+        x = 4
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.05
+        }
+    }
+
+    # German Policy (Left of Imperial Parliament)
+    focus = {
+        id = AUS_continuous_support_germany
+        icon = GFX_goal_generic_major_alliance
+        prerequisite = { focus = AUS_germany_unity }
+        mutually_exclusive = { focus = AUS_abandon_germany }
+        relative_position_id = AUS_germany_unity
+        x = 1
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+
+    focus = {
+        id = AUS_factories_for_weapons
+        icon = GFX_goal_generic_production
+        prerequisite = { focus = AUS_continuous_support_germany }
+        relative_position_id = AUS_continuous_support_germany
+        x = -1
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_ideas = industrial_concern_generic
+        }
+    }
+
+    focus = {
+        id = AUS_tech_for_weapons
+        icon = GFX_goal_generic_scientific_exchange
+        prerequisite = { focus = AUS_continuous_support_germany }
+        relative_position_id = AUS_continuous_support_germany
+        x = 1
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_tech_bonus = {
+                name = german_tech_support
+                bonus = 1.0
+                uses = 2
+                category = infantry_weapons
+            }
+        }
+    }
+
+    # Italian Policy (Right of Imperial Parliament)
+    focus = {
+        id = AUS_industrial_support_italy
+        icon = GFX_goal_generic_production
+        prerequisite = { focus = AUS_true_royal_authority }
+        relative_position_id = AUS_true_royal_authority
+        x = 3
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            # Add offmap factory or similar
+        }
+    }
+
+    focus = {
+        id = AUS_military_support_italy
+        icon = GFX_goal_generic_military_deal
+        prerequisite = { focus = AUS_industrial_support_italy }
+        relative_position_id = AUS_industrial_support_italy
+        x = 0
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            # Send equipment or volunteers
+        }
+    }
+
+    focus = {
+        id = AUS_unrecovered_italian_question
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = AUS_true_royal_authority focus = AUS_autonomy_bill focus = AUS_Hungary_Unity }
+        relative_position_id = AUS_true_royal_authority
+        x = 0
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            # Event/Decision to cede land
+            country_event = { id = AUS.30 }
+        }
+    }
+
+    focus = {
+        id = AUS_strong_alliance
+        icon = GFX_goal_generic_alliance
+        prerequisite = { focus = AUS_unrecovered_italian_question }
+        mutually_exclusive = { focus = AUS_abandon_italy }
+        relative_position_id = AUS_unrecovered_italian_question
+        x = 1
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            create_faction_from_template = "Pact of Steel" # Or join existing
+            add_to_faction = ITA
+        }
+    }
+
+    focus = {
+        id = AUS_expand_intervention
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = AUS_strong_alliance }
+        relative_position_id = AUS_strong_alliance
+        x = 0
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 100
+        }
+    }
+
+    # --- Parliament Control & Bills (Far Right) ---
+
+    focus = {
+        id = AUS_conscription_reform_bill
+        icon = GFX_goal_generic_military_sphere
+        prerequisite = { focus = AUS_autonomy_bill focus = AUS_true_royal_authority focus = AUS_Hungary_Unity }
+        relative_position_id = AUS_Hungary_Unity
+        x = -5
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 25
+            country_event = { id = AUS.40 }
+        }
+    }
+
+    focus = {
+        id = AUS_industrial_subsidy_bill
+        icon = GFX_goal_generic_production
+        prerequisite = { focus = AUS_autonomy_bill focus = AUS_true_royal_authority focus = AUS_Hungary_Unity }
+        relative_position_id = AUS_conscription_reform_bill
+        x = 2
+        y = 0
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 25
+            country_event = { id = AUS.41 }
+        }
+    }
+
+    focus = {
+        id = AUS_press_regulation_bill
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = AUS_autonomy_bill focus = AUS_true_royal_authority focus = AUS_Hungary_Unity }
+        relative_position_id = AUS_industrial_subsidy_bill
+        x = 4
+        y = 0
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 25
+            country_event = { id = AUS.42 }
+        }
+    }
+
+    focus = {
+        id = AUS_regional_tax_reform
+        icon = GFX_goal_generic_trade
+        prerequisite = { focus = AUS_autonomy_bill focus = AUS_true_royal_authority focus = AUS_Hungary_Unity }
+        relative_position_id = AUS_press_regulation_bill
+        x = 2
+        y = 0
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 25
+            country_event = { id = AUS.43 }
+        }
+    }
+
+    focus = {
+        id = AUS_political_bribery
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = AUS_conscription_reform_bill focus = AUS_industrial_subsidy_bill }
+        relative_position_id = AUS_conscription_reform_bill
+        x = 1
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+
+    focus = {
+        id = AUS_mass_propaganda
+        icon = GFX_goal_generic_propaganda
+        prerequisite = { focus = AUS_press_regulation_bill focus = AUS_regional_tax_reform }
+        relative_position_id = AUS_press_regulation_bill
+        x = 1
+        y = 1
+        cost = 10
+        
+        completion_reward = {
+            add_political_power = 50
+        }
+    }
+
+    # ============================================================
+    # 経済ツリー（全ルート共通・単独ツリー）
+    # ============================================================
+
+    # 入口：ウィーン近代化
+    focus = {
+        id = AUS_wien_modernization
+        icon = GFX_goal_generic_construct_civ_factory
+        x = 0
+        y = 0
+        cost = 10
+
+        completion_reward = {
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+                state = 4 # ウィーン（仮、要調整）
+            }
+            add_to_variable = { AUS_eco_civ_build_speed = 0.05 }
+            add_to_variable = { AUS_pol_pp_gain = 0.02 }
+        }
+    }
+    
+    focus = {
+        id = AUS_imperial_development_company
+        icon = GFX_goal_generic_construct_civ_factory
+        x = 0
+        y = 1
+        cost = 10
+        prerequisite = {
+            focus = AUS_wien_modernization
+        }
+        completion_reward = {
+        }
+    }
+
+    # オーストリア本土近代化枝
+    focus = {
+        id = AUS_tyrol_power_grid
+        icon = GFX_goal_generic_construct_infrastructure
+        relative_position_id = AUS_wien_modernization
+        x = -2
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_wien_modernization }
+
+        completion_reward = {
+            add_building_construction = {
+                type = infrastructure
+                level = 2
+                instant_build = yes
+                state = 6 # チロル（仮）
+            }
+            add_to_variable = { AUS_eco_infra_build_speed = 0.05 }
+            add_to_variable = { AUS_pol_stability = 0.03 }
+        }
+    }
+    focus = {
+        id = AUS_graz_steel
+        icon = GFX_goal_generic_construct_infrastructure
+        relative_position_id = AUS_tyrol_power_grid
+        x = -1
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_tyrol_power_grid }
+
+        completion_reward = {
+            add_building_construction = {
+                type = infrastructure
+                level = 2
+                instant_build = yes
+                state = 6 # チロル（仮）
+            }
+            add_to_variable = { AUS_eco_infra_build_speed = 0.05 }
+            add_to_variable = { AUS_pol_stability = 0.03 }
+        }
+    }
+    focus = {
+        id = AUS_wien_capital_bank
+        icon = GFX_goal_generic_construct_infrastructure
+        relative_position_id = AUS_tyrol_power_grid
+        x = 1
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_tyrol_power_grid }
+
+        completion_reward = {
+            add_building_construction = {
+                type = infrastructure
+                level = 2
+                instant_build = yes
+                state = 6 # チロル（仮）
+            }
+            add_to_variable = { AUS_eco_infra_build_speed = 0.05 }
+            add_to_variable = { AUS_pol_stability = 0.03 }
+        }
+    }
+    focus = {
+        id = AUS_develop_empire_teritory
+        icon = GFX_goal_generic_construct_infrastructure
+        relative_position_id = AUS_tyrol_power_grid
+        x = 2
+        y = 2
+        cost = 10
+
+        prerequisite = { focus = AUS_wien_capital_bank focus = AUS_danube_arsenals focus = AUS_graz_steel focus = AUS_hungarian_aluminum }
+
+        completion_reward = {
+            add_to_variable = { AUS_eco_infra_build_speed = 0.05 }
+            add_to_variable = { AUS_eco_infra_build_speed = 0.05 }
+            add_to_variable = { AUS_pol_stability = 0.03 }
+        }
+    }
+    focus = {
+        id = AUS_wien_bank_law
+        icon = GFX_goal_generic_construct_infrastructure
+        relative_position_id = AUS_wien_capital_bank
+        x = -1
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_wien_capital_bank }
+
+        completion_reward = {
+            country_event = {
+                id = AUS_wien_bank_law #銀行で消費財工場補正を犠牲に強化するバフを決める事が出来る。
+                days = 1
+            }
+        }
+    }
+    # ハンガリー軍需枝
+    focus = {
+        id = AUS_hungarian_military_zone
+        icon = GFX_goal_generic_construct_mil_factory2
+        relative_position_id = AUS_wien_modernization
+        x = 2
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_wien_modernization }
+
+        available = {
+            check_variable = { AUS_hungary_influence > 29 }
+        }
+
+        completion_reward = {
+            add_building_construction = {
+                type = arms_factory
+                level = 3
+                instant_build = yes
+                state = 7 # 中央ハンガリー（仮）
+            }
+            add_to_variable = { AUS_eco_factory_output = 0.08 }
+            add_to_variable = { AUS_hungary_influence = 10 }
+            add_to_variable = { AUS_pol_war_support = 0.03 }
+        }
+    }
+
+    focus = {
+        id = AUS_danube_arsenals
+        icon = GFX_goal_generic_military_sphere
+        relative_position_id = AUS_hungarian_military_zone
+        x = 1
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_hungarian_military_zone }
+
+        completion_reward = {
+            add_to_variable = { AUS_eco_prod_eff_gain = 0.05 }
+            add_to_variable = { AUS_mil_armor_attack = 0.03 }
+        }
+    }
+
+    focus = {
+        id = AUS_hungarian_aluminum
+        icon = GFX_goal_generic_military_sphere
+        relative_position_id = AUS_hungarian_military_zone
+        x = -1
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_hungarian_military_zone }
+
+        completion_reward = {
+            add_to_variable = { AUS_eco_prod_eff_gain = 0.02 }
+            add_to_variable = { AUS_mil_armor_attack = 0.03 }
+        }
+    }    
+    focus = {
+        id = AUS_hungarian_airplane_factory
+        icon = GFX_goal_generic_military_sphere
+        relative_position_id = AUS_danube_arsenals
+        x = 0
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_danube_arsenals }
+
+        completion_reward = {
+            add_to_variable = { AUS_eco_prod_eff_gain = 0.05 }
+            add_to_variable = { AUS_mil_armor_attack = 0.03 }
+        }
+    }
+    # 多民族開発枝
+    focus = {
+        id = AUS_state_development
+        icon = GFX_goal_generic_construct_mil_factory
+        relative_position_id = AUS_wien_modernization
+        x = 7
+        y = 0
+        cost = 10
+
+
+        completion_reward = {
+        }
+    }
+    focus = {
+        id = AUS_bohemia_infrastructure
+        icon = GFX_goal_generic_construct_mil_factory
+        relative_position_id = AUS_state_development
+        x = -2
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_state_development }
+
+        completion_reward = {
+            add_building_construction = {
+                type = arms_factory
+                level = 2
+                instant_build = yes
+                state = 5 # ボヘミア（仮）
+            }
+            add_to_variable = { AUS_eco_factory_output = 0.06 }
+            add_to_variable = { AUS_austria_influence = 5 }
+        }
+    }
+    focus = {
+        id = AUS_bohemian_industrial_trust
+        icon = GFX_goal_generic_construct_mil_factory
+        relative_position_id = AUS_bohemia_infrastructure
+        x = 0
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_bohemia_infrastructure }
+
+        completion_reward = {
+            add_building_construction = {
+                type = arms_factory
+                level = 2
+                instant_build = yes
+                state = 5 # ボヘミア（仮）
+            }
+            add_to_variable = { AUS_eco_factory_output = 0.06 }
+            add_to_variable = { AUS_austria_influence = 5 }
+        }
+    }
+    focus = {
+        id = AUS_croatian_infrastructure
+        icon = GFX_goal_generic_construct_mil_factory
+        relative_position_id = AUS_state_development
+        x = 0
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_state_development }
+
+        completion_reward = {
+            add_building_construction = {
+                type = arms_factory
+                level = 2
+                instant_build = yes
+                state = 5 # ボヘミア（仮）
+            }
+            add_to_variable = { AUS_eco_factory_output = 0.06 }
+            add_to_variable = { AUS_austria_influence = 5 }
+        }
+    }
+    focus = {
+        id = AUS_croatian_adriatic_ports
+        icon = GFX_goal_generic_construct_dockyard
+        relative_position_id = AUS_croatian_infrastructure
+        x = 0
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_croatian_infrastructure }
+
+        completion_reward = {
+            add_building_construction = {
+                type = dockyard
+                level = 2
+                instant_build = yes
+                state = 8 # クロアチア沿岸（仮）
+            }
+            add_to_variable = { AUS_eco_dockyard_output = 0.04 }
+            add_to_variable = { AUS_minority_influence = 5 }
+            add_to_variable = { AUS_pol_research_speed = 0.02 }
+        }
+    }
+    focus = {
+        id = AUS_mediterranean_trade
+        icon = GFX_goal_generic_construct_dockyard
+        relative_position_id = AUS_croatian_adriatic_ports
+        x = 0
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_croatian_adriatic_ports }
+
+        completion_reward = {
+            country_event = {
+                id = AUS_mediterranean_trade #イタリア・イギリス・オスマン・エジプトの中から選択し、その国との交易コストを下げるバフを得られるイベント。
+                days = 1
+            }
+        }
+    }
+    focus = {
+        id = AUS_transylvania_infrastructure
+        icon = GFX_goal_generic_construct_mil_factory
+        relative_position_id = AUS_state_development
+        x = 2
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_state_development }
+
+        completion_reward = {
+            add_building_construction = {
+                type = arms_factory
+                level = 2
+                instant_build = yes
+                state = 5 # ボヘミア（仮）
+            }
+            add_to_variable = { AUS_eco_factory_output = 0.06 }
+            add_to_variable = { AUS_austria_influence = 5 }
+        }
+    }
+    focus = {
+        id = AUS_transylvanian_mines
+        icon = GFX_goal_generic_resource
+        relative_position_id = AUS_transylvania_infrastructure
+        x = 0
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_transylvania_infrastructure }
+
+        completion_reward = {
+            add_resource = { type = steel amount = 8 state = 9 } # トランシルヴァニア（仮）
+            add_to_variable = { AUS_eco_factory_output = 0.04 }
+            add_to_variable = { AUS_minority_influence = 5 }
+        }
+    }
+    focus = {
+        id = AUS_Galicia_Lodomeria_infrastructure
+        icon = GFX_goal_generic_construct_dockyard
+        relative_position_id = AUS_state_development
+        x = 4
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_state_development }
+
+        completion_reward = {
+            add_to_variable = { AUS_eco_dockyard_output = 0.04 }
+            add_to_variable = { AUS_minority_influence = 5 }
+            add_to_variable = { AUS_pol_research_speed = 0.02 }
+        }
+    }
+    focus = {
+        id = AUS_Galicia_Lodomeria_mines
+        icon = GFX_goal_generic_construct_dockyard
+        relative_position_id = AUS_Galicia_Lodomeria_infrastructure
+        x = 0
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_Galicia_Lodomeria_infrastructure }
+
+        completion_reward = {
+            add_to_variable = { AUS_eco_dockyard_output = 0.04 }
+            add_to_variable = { AUS_minority_influence = 5 }
+            add_to_variable = { AUS_pol_research_speed = 0.02 }
+        }
+    }
+    # 経済フィナーレ
+    focus = {
+        id = AUS_empire_economic_conference
+        icon = GFX_goal_generic_strengthen_government
+        relative_position_id = AUS_bohemian_industrial_trust
+        x = 4
+        y = 1
+        cost = 10
+
+        prerequisite = {
+            focus = AUS_bohemian_industrial_trust
+            focus = AUS_danube_arsenals
+            focus = AUS_transylvanian_mines
+            focus = AUS_Galicia_Lodomeria_mines
+            focus = AUS_danube_arsenals
+            focus = AUS_croatian_adriatic_ports
+            focus = AUS_hungarian_aluminum
+        }
+        
+
+        completion_reward = {
+            add_to_variable = { AUS_eco_factory_output = 0.10 }
+            add_to_variable = { AUS_eco_civ_build_speed = 0.10 }
+            add_to_variable = { AUS_eco_consumer_goods = -0.03 }
+            add_to_variable = { AUS_pol_pp_gain = 0.05 }
+        }
+    }
+
+    # ============================================================
+    # 軍事ツリー（全ルート共通・単独ツリー）
+    # ============================================================
+
+    # 入口：ウィーン軍事アカデミー
+    focus = {
+        id = AUS_vienna_military_academy_focus
+        icon = GFX_goal_generic_military_academy
+        x = 10
+        y = 7
+        cost = 10
+
+        completion_reward = {
+            add_ideas = AUS_Vienna_Military_Academy
+            add_to_variable = { AUS_mil_org = 0.04 }
+            add_to_variable = { AUS_pol_research_speed = 0.02 }
+        }
+    }
+
+    # 防衛線枝
+    focus = {
+        id = AUS_imperial_line_defense
+        icon = GFX_goal_generic_fortify_city
+        relative_position_id = AUS_vienna_military_academy_focus
+        x = -3
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_vienna_military_academy_focus }
+
+        completion_reward = {
+            add_building_construction = {
+                type = bunker
+                level = 2
+                instant_build = yes
+                state = 4
+            }
+            add_to_variable = { AUS_mil_bunker_effect = 0.05 }
+            add_to_variable = { AUS_mil_dig_in = 0.05 }
+        }
+    }
+
+    focus = {
+        id = AUS_tyrol_redoubts
+        icon = GFX_goal_generic_forts
+        relative_position_id = AUS_imperial_line_defense
+        x = -1
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_imperial_line_defense }
+
+        completion_reward = {
+            add_building_construction = {
+                type = bunker
+                level = 3
+                instant_build = yes
+                state = 6
+            }
+            add_to_variable = { AUS_mil_defence = 0.05 }
+        }
+    }
+
+    focus = {
+        id = AUS_carpathian_shield
+        icon = GFX_goal_generic_forts2
+        relative_position_id = AUS_imperial_line_defense
+        x = 1
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_imperial_line_defense }
+
+        completion_reward = {
+            add_building_construction = {
+                type = bunker
+                level = 3
+                instant_build = yes
+                state = 9
+            }
+            add_to_variable = { AUS_mil_defence = 0.05 }
+            add_to_variable = { AUS_minority_influence = 5 }
+        }
+    }
+
+    # 機甲枝
+    focus = {
+        id = AUS_panzerkorps_budapest
+        icon = GFX_goal_generic_army_tanks
+        relative_position_id = AUS_vienna_military_academy_focus
+        x = 2
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_vienna_military_academy_focus }
+
+        available = {
+            check_variable = { AUS_hungary_influence > 29 }
+        }
+
+        completion_reward = {
+            add_tech_bonus = {
+                name = AUS_panzer_bonus
+                bonus = 0.5
+                uses = 1
+                category = armor
+            }
+            add_to_variable = { AUS_mil_armor_attack = 0.10 }
+            add_to_variable = { AUS_eco_factory_output = 0.03 }
+        }
+    }
+
+    focus = {
+        id = AUS_danube_mechanization
+        icon = GFX_goal_generic_mechanized
+        relative_position_id = AUS_panzerkorps_budapest
+        x = 0
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_panzerkorps_budapest }
+
+        completion_reward = {
+            add_tech_bonus = {
+                name = AUS_mech_bonus
+                bonus = 0.5
+                uses = 1
+                category = motorized_equipment
+            }
+            add_to_variable = { AUS_mil_org = 0.05 }
+            add_to_variable = { AUS_mil_conscription = 0.03 }
+        }
+    }
+
+    # 空軍・特殊部隊枝
+    focus = {
+        id = AUS_imperial_airfleet
+        icon = GFX_goal_generic_air_fighter
+        relative_position_id = AUS_vienna_military_academy_focus
+        x = 4
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_vienna_military_academy_focus }
+
+        completion_reward = {
+            add_tech_bonus = {
+                name = AUS_air_bonus
+                bonus = 0.5
+                uses = 1
+                category = fighter
+            }
+            add_to_variable = { AUS_pol_war_support = 0.03 }
+        }
+    }
+
+    focus = {
+        id = AUS_black_eagle_paratroops
+        icon = GFX_goal_generic_special_forces
+        relative_position_id = AUS_imperial_airfleet
+        x = 0
+        y = 1
+        cost = 10
+
+        prerequisite = { focus = AUS_imperial_airfleet }
+
+        available = {
+            check_variable = { AUS_minority_influence > 29 }
+        }
+
+        completion_reward = {
+            add_tech_bonus = {
+                name = AUS_sf_bonus
+                bonus = 0.5
+                uses = 1
+                category = paratrooper_tech
+            }
+            add_to_variable = { AUS_mil_mountaineers_cap = 0.10 }
+            add_to_variable = { AUS_pol_research_bonus = 0.03 }
+        }
+    }
+
+    # 軍事フィナーレ
+    focus = {
+        id = AUS_emperors_war_cabinet
+        icon = GFX_goal_generic_military_sphere
+        relative_position_id = AUS_imperial_line_defense
+        x = 1
+        y = 2
+        cost = 10
+
+        prerequisite = {
+            focus = AUS_imperial_line_defense
+            focus = AUS_danube_mechanization
+            focus = AUS_black_eagle_paratroops
+        }
+
+        completion_reward = {
+            add_to_variable = { AUS_mil_defence = 0.10 }
+            add_to_variable = { AUS_mil_armor_attack = 0.05 }
+            add_to_variable = { AUS_pol_war_support = 0.10 }
+        }
+    }
+
+}
