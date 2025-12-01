@@ -433,7 +433,6 @@ AUS_Vienna_Military_Academy_decision = {
 		}
 	}
 }
-
 # Faction Influence Management
 AUS_influence_category = {
 	AUS_increase_austria_influence = {
@@ -443,6 +442,7 @@ AUS_influence_category = {
 		days_re_enable = 30
 		
 		complete_effect = {
+			custom_effect_tooltip = AUS_increase_austria_influence_tt
 			add_to_variable = { AUS_austria_influence = 10 }
 		}
 	}
@@ -458,6 +458,7 @@ AUS_influence_category = {
 		}
 		
 		complete_effect = {
+			custom_effect_tooltip = AUS_decrease_austria_influence_tt
 			add_to_variable = { AUS_austria_influence = -10 }
 		}
 	}
@@ -469,6 +470,7 @@ AUS_influence_category = {
 		days_re_enable = 30
 		
 		complete_effect = {
+			custom_effect_tooltip = AUS_increase_hungary_influence_tt
 			add_to_variable = { AUS_hungary_influence = 10 }
 		}
 	}
@@ -484,6 +486,7 @@ AUS_influence_category = {
 		}
 		
 		complete_effect = {
+			custom_effect_tooltip = AUS_decrease_hungary_influence_tt
 			add_to_variable = { AUS_hungary_influence = -10 }
 		}
 	}
@@ -495,6 +498,89 @@ AUS_influence_category = {
 		days_re_enable = 30
 		
 		complete_effect = {
+			custom_effect_tooltip = AUS_increase_minority_influence_tt
+			add_to_variable = { AUS_minority_influence = 10 }
+		}
+	}
+	
+	AUS_decrease_minority_influence = {
+		icon = generic_political_discourse
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+		complete_effect = {
+			custom_effect_tooltip = AUS_decrease_minority_influence_tt
+			add_to_variable = { AUS_minority_influence = -10 }
+		}
+	}
+}
+
+# Faction Influence Management
+AUS_influence_category = {
+	AUS_increase_austria_influence = {
+		icon = generic_political_discourse
+		cost = 75
+		fire_only_once = no
+		days_re_enable = 30
+		
+		complete_effect = {
+			custom_effect_tooltip = AUS_increase_austria_influence_tt
+			add_to_variable = { AUS_austria_influence = 10 }
+		}
+	}
+	
+	AUS_decrease_austria_influence = {
+		icon = generic_political_discourse
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+		
+		available = {
+			check_variable = { AUS_austria_influence > 9 }
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = AUS_decrease_austria_influence_tt
+			add_to_variable = { AUS_austria_influence = -10 }
+		}
+	}
+	
+	AUS_increase_hungary_influence = {
+		icon = generic_political_discourse
+		cost = 75
+		fire_only_once = no
+		days_re_enable = 30
+		
+		complete_effect = {
+			custom_effect_tooltip = AUS_increase_hungary_influence_tt
+			add_to_variable = { AUS_hungary_influence = 10 }
+		}
+	}
+	
+	AUS_decrease_hungary_influence = {
+		icon = generic_political_discourse
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+		
+		available = {
+			check_variable = { AUS_hungary_influence > 9 }
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = AUS_decrease_hungary_influence_tt
+			add_to_variable = { AUS_hungary_influence = -10 }
+		}
+	}
+	
+	AUS_increase_minority_influence = {
+		icon = generic_political_discourse
+		cost = 75
+		fire_only_once = no
+		days_re_enable = 30
+		
+		complete_effect = {
+			custom_effect_tooltip = AUS_increase_minority_influence_tt
 			add_to_variable = { AUS_minority_influence = 10 }
 		}
 	}
@@ -510,6 +596,7 @@ AUS_influence_category = {
 		}
 		
 		complete_effect = {
+			custom_effect_tooltip = AUS_decrease_minority_influence_tt
 			add_to_variable = { AUS_minority_influence = -10 }
 		}
 	}

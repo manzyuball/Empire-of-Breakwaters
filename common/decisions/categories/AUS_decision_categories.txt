@@ -3,4 +3,16 @@ AUS_influence_category = {
 	visible = {
 		tag = AUS
 	}
+	allowed = {
+		tag = AUS
+	}
+}
+AUS_Vienna_Military_Academy_decision = {
+	icon = GFX_decision_category_generic_political_actions
+	visible = {
+		has_completed_focus = AUS_vienna_military_academy_focus
+	}
+	allowed = {
+		tag = AUS
+	}
 }

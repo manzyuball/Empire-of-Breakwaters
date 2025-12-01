@@ -305,3 +305,10 @@
  AUS_influence_austria_gain_10_tt:0 "§Yオーストリア§!の影響力が増加"
  AUS_influence_hungary_gain_10_tt:0 "§Yマジャール§!の影響力が増加"
 
+ AUS_increase_austria_influence_tt:0 "§Yオーストリア人の影響力§!が §Y+10§! 増加します"
+ AUS_decrease_austria_influence_tt:0 "§Yオーストリア人の影響力§!が §Y-10§! 減少します"
+ AUS_increase_hungary_influence_tt:0 "§Yマジャール人の影響力§!が §Y+10§! 増加します"
+ AUS_decrease_hungary_influence_tt:0 "§Yマジャール人の影響力§!が §Y-10§! 減少します"
+ AUS_increase_minority_influence_tt:0 "§Y各民族の影響力§!が §Y+10§! 増加します"
+ AUS_decrease_minority_influence_tt:0 "§Y各民族の影響力§!が §Y-10§! 減少します"
+
