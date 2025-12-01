@@ -1,0 +1,6 @@
+AUS_influence_category = {
+	icon = GFX_decision_category_generic_political_actions
+	visible = {
+		tag = AUS
+	}
+}

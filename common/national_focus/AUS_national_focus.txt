@@ -1208,13 +1208,13 @@ focus_tree = {
         available = {
             any_owned_state = {
                 is_owned_and_controlled_by = ROOT
-                has_state_flag = Galicia_Lodomeria_state
+                has_state_flag = Polish_state
             }
         }   
         completion_reward = {
             random_owned_controlled_state = {
                 limit = {
-                    has_state_flag = Galicia_Lodomeria_state
+                    has_state_flag = Polish_state
                     infrastructure < 5
                 }
                 add_building_construction = {
@@ -1225,7 +1225,7 @@ focus_tree = {
             }
             random_owned_controlled_state = {
                 limit = {
-                    has_state_flag = Galicia_Lodomeria_state
+                    has_state_flag = Polish_state
                     infrastructure < 5
                 }
                 add_building_construction = {

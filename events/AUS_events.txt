@@ -9,10 +9,24 @@ country_event = {
 
     is_triggered_only = yes
 
-    option = {
+    option = { # Embrace Pluralism
         name = AUS.1.a
         add_political_power = 50
         add_stability = 0.05
+        custom_effect_tooltip = AUS_influence_minority_gain_10_tt
+        add_to_variable = { AUS_minority_influence = 10 }
+    }
+    option = { # Maintain Status Quo
+        name = AUS.1.b
+        add_political_power = 100
+        custom_effect_tooltip = AUS_influence_austria_gain_10_tt
+        add_to_variable = { AUS_austria_influence = 10 }
+    }
+    option = { # Empower Hungary
+        name = AUS.1.c
+        add_manpower = 5000
+        custom_effect_tooltip = AUS_influence_hungary_gain_10_tt
+        add_to_variable = { AUS_hungary_influence = 10 }
     }
 }
 
@@ -25,11 +39,29 @@ country_event = {
 
     is_triggered_only = yes
 
-    option = {
+    option = { # Full Autonomy
         name = AUS.10.a
-        add_political_power = 25
-        # Start mission or set flag if needed
+        add_political_power = -50
+        add_stability = -0.10
+        custom_effect_tooltip = AUS_influence_minority_gain_20_tt
+        add_to_variable = { AUS_minority_influence = 20 }
         set_country_flag = AUS_autonomy_bill_submitted
+    }
+    option = { # Limited Autonomy
+        name = AUS.10.b
+        add_political_power = 25
+        custom_effect_tooltip = AUS_influence_minority_gain_10_tt
+        add_to_variable = { AUS_minority_influence = 10 }
+        set_country_flag = AUS_autonomy_bill_submitted
+    }
+    option = { # Reject Bill
+        name = AUS.10.c
+        add_political_power = 50
+        add_stability = 0.05
+        custom_effect_tooltip = AUS_influence_minority_loss_10_tt
+        add_to_variable = { AUS_minority_influence = -10 }
+        custom_effect_tooltip = AUS_influence_austria_gain_5_tt
+        add_to_variable = { AUS_austria_influence = 5 }
     }
 }
 
@@ -80,7 +112,7 @@ country_event = {
         add_political_power = -50
         add_stability = -0.05
         ITA = {
-            add_opinion_modifier = { target = ROOT modifier = improved_relation }
+            add_opinion_modifier = { target = ROOT modifier = offered_support }
         }
     }
     option = { # Cede Istria
@@ -88,7 +120,7 @@ country_event = {
         add_political_power = -50
         add_stability = -0.05
         ITA = {
-            add_opinion_modifier = { target = ROOT modifier = improved_relation }
+            add_opinion_modifier = { target = ROOT modifier = offered_support }
         }
         # Transfer state effect would go here
     }
@@ -108,10 +140,27 @@ country_event = {
 
     is_triggered_only = yes
 
-    option = {
+    option = { # Mass Conscription
         name = AUS.40.a
         add_political_power = 25
-        add_manpower = 5000
+        add_manpower = 10000
+        custom_effect_tooltip = AUS_mil_conscription_005_tt
+        add_to_variable = { AUS_mil_conscription = 0.05 }
+        add_war_support = -0.05
+    }
+    option = { # Professional Army
+        name = AUS.40.b
+        add_political_power = 25
+        add_manpower = -2000
+        custom_effect_tooltip = AUS_mil_org_005_tt
+        add_to_variable = { AUS_mil_org = 0.05 }
+    }
+    option = { # Balanced Approach
+        name = AUS.40.c
+        add_political_power = 25
+        add_manpower = 3000
+        custom_effect_tooltip = AUS_mil_org_002_tt
+        add_to_variable = { AUS_mil_org = 0.02 }
     }
 }
 
@@ -124,10 +173,27 @@ country_event = {
 
     is_triggered_only = yes
 
-    option = {
+    option = { # Heavy Industry Focus
         name = AUS.41.a
         add_political_power = 25
+        custom_effect_tooltip = AUS_eco_factory_output_005_tt
+        add_to_variable = { AUS_eco_factory_output = 0.05 }
+        custom_effect_tooltip = AUS_eco_consumer_goods_002_tt
+        add_to_variable = { AUS_eco_consumer_goods = 0.02 }
+    }
+    option = { # Infrastructure Focus
+        name = AUS.41.b
+        add_political_power = 25
+        custom_effect_tooltip = AUS_eco_infra_build_speed_010_tt
+        add_to_variable = { AUS_eco_infra_build_speed = 0.10 }
+        custom_effect_tooltip = AUS_eco_civ_build_speed_005_tt
         add_to_variable = { AUS_eco_civ_build_speed = 0.05 }
+    }
+    option = { # Military Industry Focus
+        name = AUS.41.c
+        add_political_power = 25
+        custom_effect_tooltip = AUS_eco_prod_eff_gain_005_tt
+        add_to_variable = { AUS_eco_prod_eff_gain = 0.05 }
     }
 }
 
@@ -140,10 +206,29 @@ country_event = {
 
     is_triggered_only = yes
 
-    option = {
+    option = { # Strict Censorship
         name = AUS.42.a
         add_political_power = 25
         add_stability = 0.05
+        custom_effect_tooltip = AUS_pol_stability_005_tt
+        add_to_variable = { AUS_pol_stability = 0.05 }
+        add_war_support = 0.05
+        custom_effect_tooltip = AUS_influence_minority_loss_5_tt
+        add_to_variable = { AUS_minority_influence = -5 }
+    }
+    option = { # Free Press
+        name = AUS.42.b
+        add_political_power = 25
+        add_stability = -0.05
+        custom_effect_tooltip = AUS_pol_research_speed_005_tt
+        add_to_variable = { AUS_pol_research_speed = 0.05 }
+    }
+    option = { # State Propaganda
+        name = AUS.42.c
+        add_political_power = 50
+        custom_effect_tooltip = AUS_pol_pp_gain_005_tt
+        add_to_variable = { AUS_pol_pp_gain = 0.05 }
+        add_war_support = 0.05
     }
 }
 
@@ -156,10 +241,31 @@ country_event = {
 
     is_triggered_only = yes
 
-    option = {
+    option = { # Centralized Tax
         name = AUS.43.a
         add_political_power = 25
-        add_to_variable = { AUS_eco_consumer_goods = -0.02 }
+        custom_effect_tooltip = AUS_eco_civ_build_speed_005_tt
+        add_to_variable = { AUS_eco_civ_build_speed = 0.05 }
+        custom_effect_tooltip = AUS_influence_austria_gain_5_tt
+        add_to_variable = { AUS_austria_influence = 5 }
+        custom_effect_tooltip = AUS_influence_minority_loss_5_tt
+        add_to_variable = { AUS_minority_influence = -5 }
+    }
+    option = { # Decentralized Tax
+        name = AUS.43.b
+        add_political_power = 25
+        add_stability = 0.05
+        custom_effect_tooltip = AUS_influence_minority_gain_5_tt
+        add_to_variable = { AUS_minority_influence = 5 }
+        custom_effect_tooltip = AUS_eco_civ_build_speed_neg_002_tt
+        add_to_variable = { AUS_eco_civ_build_speed = -0.02 }
+    }
+    option = { # War Tax
+        name = AUS.43.c
+        add_political_power = 50
+        add_war_support = -0.05
+        custom_effect_tooltip = AUS_eco_consumer_goods_neg_005_tt
+        add_to_variable = { AUS_eco_consumer_goods = -0.05 }
     }
 }
 
@@ -173,13 +279,22 @@ country_event = {
     is_triggered_only = yes
 
     option = { # Stability (Consumer Goods)
-        name = "AUS_wien_bank_law_opt_a" # Need localization
+        name = AUS_wien_bank_law_opt_a
         add_stability = 0.05
+        custom_effect_tooltip = AUS_eco_consumer_goods_neg_005_tt
         add_to_variable = { AUS_eco_consumer_goods = -0.05 }
     }
     option = { # Growth (Construction Speed)
-        name = "AUS_wien_bank_law_opt_b" # Need localization
+        name = AUS_wien_bank_law_opt_b
+        custom_effect_tooltip = AUS_eco_civ_build_speed_010_tt
         add_to_variable = { AUS_eco_civ_build_speed = 0.10 }
+    }
+    option = { # Foreign Investment
+        name = AUS_wien_bank_law_opt_c
+        custom_effect_tooltip = AUS_pol_research_speed_005_tt
+        add_to_variable = { AUS_pol_research_speed = 0.05 }
+        custom_effect_tooltip = AUS_eco_consumer_goods_002_tt
+        add_to_variable = { AUS_eco_consumer_goods = 0.02 }
     }
 }
 
@@ -195,22 +310,25 @@ country_event = {
     option = { # Italy
         name = "AUS_mediterranean_trade_opt_a" # Need localization
         ITA = {
-            add_opinion_modifier = { target = ROOT modifier = improved_relation }
+            add_opinion_modifier = { target = ROOT modifier = offered_support }
         }
-        add_to_variable = { AUS_eco_dockyard_output = 0.05 }
+        custom_effect_tooltip = AUS_eco_dockyard_output_010_tt
+        add_to_variable = { AUS_eco_dockyard_output = 0.1 }
     }
     option = { # UK
         name = "AUS_mediterranean_trade_opt_b" # Need localization
         ENG = {
-            add_opinion_modifier = { target = ROOT modifier = improved_relation }
+            add_opinion_modifier = { target = ROOT modifier = offered_support }
         }
-        add_to_variable = { AUS_eco_dockyard_output = 0.05 }
+        custom_effect_tooltip = AUS_eco_dockyard_output_010_tt
+        add_to_variable = { AUS_eco_dockyard_output = 0.1 }
     }
     option = { # Turkey
         name = "AUS_mediterranean_trade_opt_c" # Need localization
         TUR = {
-            add_opinion_modifier = { target = ROOT modifier = improved_relation }
+            add_opinion_modifier = { target = ROOT modifier = offered_support }
         }
-        add_to_variable = { AUS_eco_dockyard_output = 0.05 }
+        custom_effect_tooltip = AUS_eco_dockyard_output_010_tt
+        add_to_variable = { AUS_eco_dockyard_output = 0.1 }
     }
 }
