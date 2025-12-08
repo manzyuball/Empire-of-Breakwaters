@@ -1,6 +1,6 @@
 capital = 965
 oob = "EUN_1936"
-load_oob = "FRA_naval"
+set_naval_oob = "FRA_naval"
 set_research_slots = 4
 
 set_politics = {
@@ -180,7 +180,7 @@ set_technology = {
 }
 
 create_equipment_variant = {
-		name = "1936年型"
+		name = "1936年型軽戦車"
 		type = light_tank_chassis_2
 		parent_version = 1
 		modules = {
@@ -197,7 +197,7 @@ create_equipment_variant = {
 		icon = "GFX_basic_light_tank_medium"
 	}
 	create_equipment_variant = {
-		name = "1936年型"
+		name = "1936年型航空母艦"
 		type = ship_hull_carrier_1
 		parent_version = 1
 		modules = {
@@ -211,7 +211,7 @@ create_equipment_variant = {
 		}
 	}
 	create_equipment_variant = {
-		name = "1936"
+		name = "1936年型戦艦"
 		type = ship_hull_heavy_2
 		parent_version = 1
 		modules = {
@@ -228,7 +228,7 @@ create_equipment_variant = {
 		}
 	}
 	create_equipment_variant = {
-		name = "1936年型"
+		name = "1936年型巡洋戦艦"
 		type = ship_hull_heavy_2
 		parent_version = 1
 		modules = {
@@ -237,7 +237,7 @@ create_equipment_variant = {
 				fixed_ship_fire_control_system_slot = empty
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = heavy_ship_engine_2
-				fixed_ship_armor_slot = ship_armor_bb_1
+				fixed_ship_armor_slot = ship_armor_c_1
 				front_1_custom_slot =  ship_heavy_battery_3
 				mid_1_custom_slot = ship_airplane_launcher_2
 				mid_2_custom_slot = ship_airplane_launcher_2
@@ -245,7 +245,7 @@ create_equipment_variant = {
 		}
 	}
 	create_equipment_variant = {
-		name = "1936年型"
+		name = "1936年型軽巡洋艦"
 		type = ship_hull_cruiser_2
 		parent_version = 1
 		modules = {
@@ -262,7 +262,7 @@ create_equipment_variant = {
 		}
 	}
 	create_equipment_variant = {
-		name = "1936年型"
+		name = "1936年型重巡洋艦"
 		type = ship_hull_cruiser_2
 		parent_version = 1
 		modules = {
@@ -279,7 +279,7 @@ create_equipment_variant = {
 		}
 	}
 	create_equipment_variant = {
-		name = "1936年型"
+		name = "1936年型駆逐艦"
 		type = ship_hull_light_2
 		parent_version = 1
 		modules = {
@@ -292,7 +292,7 @@ create_equipment_variant = {
 		}
 	}
 	create_equipment_variant = {
-			name = "1936年型"
+			name = "1936年型潜水艦"
 			type = ship_hull_submarine_2
 			name_group = ENG_SS_HISTORICAL
 			parent_version = 1
@@ -304,7 +304,7 @@ create_equipment_variant = {
 	}
 
 	create_equipment_variant = {
-			name = "1936年型" 
+			name = "1936年型戦闘機" 
 			type = small_plane_airframe_1
 			modules = {
 				fixed_main_weapon_slot = light_mg_4x
@@ -315,7 +315,7 @@ create_equipment_variant = {
 		}
 
 		create_equipment_variant = {
-			name = "1936年型" 
+			name = "1936年型近接航空支援機" 
 			type = small_plane_cas_airframe_1
 			modules = {
 				fixed_main_weapon_slot = small_bomb_bay
@@ -326,7 +326,7 @@ create_equipment_variant = {
 			}
 		}
 		create_equipment_variant = {
-			name = "1936年型" 
+			name = "1936年型艦上攻撃機" 
 			type = cv_small_plane_naval_bomber_airframe_1
 			modules = {
 				fixed_main_weapon_slot = torpedo_mounting
@@ -336,7 +336,7 @@ create_equipment_variant = {
 			}
 		}
 		create_equipment_variant = {
-			name = "1936年型" 
+			name = "1936年型艦載戦闘機" 
 			type = cv_small_plane_airframe_1
 			modules = {
 				fixed_main_weapon_slot = light_mg_4x

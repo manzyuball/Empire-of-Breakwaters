@@ -20,8 +20,7 @@ add_core_of = AUS
 			arms_factory = 2
 			air_base = 3
 		}
-		add_core_of = HUN
-		add_core_of = HUN
+		set_state_flag = Hungarian_state
 	}
 
 	provinces={

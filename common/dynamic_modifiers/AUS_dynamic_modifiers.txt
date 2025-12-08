@@ -1,0 +1,55 @@
+AUS_imperial_politics_modifier = {
+    icon = GFX_idea_generic_pp_unity_bonus
+    enable = { always = yes }
+    
+    political_power_factor = var:AUS_pol_pp_gain
+    stability_factor = var:AUS_pol_stability
+    war_support_factor = var:AUS_pol_war_support
+    research_speed_factor = var:AUS_pol_research_speed
+    scientist_research_bonus_factor = var:AUS_pol_research_bonus
+    scientist_breakthrough_bonus_factor = var:AUS_pol_breakthrough_bonus
+    forced_surrender_limit = var:AUS_pol_surrender_limit
+    resistance_decay = var:AUS_pol_resistance_decay
+}
+
+AUS_imperial_economy_modifier = {
+    icon = GFX_idea_generic_production_bonus
+    enable = { always = yes }
+    
+    consumer_goods_factor = var:AUS_eco_consumer_goods
+    industrial_capacity_factory = var:AUS_eco_factory_output
+    industrial_capacity_dockyard = var:AUS_eco_dockyard_output
+    production_factory_max_efficiency_factor = var:AUS_eco_prod_eff_cap
+    production_factory_efficiency_gain_factor = var:AUS_eco_prod_eff_gain
+    industrial_factory_donations = var:AUS_eco_factory_donations
+    production_speed_industrial_complex_factor = var:AUS_eco_civ_build_speed
+    production_speed_infrastructure_factor = var:AUS_eco_infra_build_speed
+    production_speed_bunker_factor = var:AUS_eco_bunker_build_speed
+    industrial_factory_donations = var:AUS_eco_factory_donations
+}
+
+AUS_emperors_army_modifier = {
+    icon = GFX_idea_generic_army_war_college
+    enable = { always = yes }
+    
+    army_armor_attack_factor = var:AUS_mil_armor_attack
+    army_org_factor = var:AUS_mil_org
+    army_defence_factor = var:AUS_mil_defence
+    max_dig_in_factor = var:AUS_mil_dig_in
+    mountaineers_special_forces_contribution_factor = var:AUS_mil_mountaineers_cap
+    conscription_factor = var:AUS_mil_conscription
+    experience_loss_factor = var:AUS_mil_exp_loss
+    land_bunker_effectiveness_factor = var:AUS_mil_bunker_effect
+    
+    # New Variables
+    supply_consumption_factor = var:AUS_mil_supply_consumption
+    air_cas_efficiency = var:AUS_air_cas_efficiency
+    air_superiority_efficiency = var:AUS_air_superiority_efficiency
+    air_ace_generation_chance_factor = var:AUS_air_ace_generation
+    planning_speed = var:AUS_mil_planning_speed
+    max_planning = var:AUS_mil_max_planning
+    coordination_bonus = var:AUS_mil_coordination
+    army_attack_factor = var:AUS_mil_army_attack
+    special_forces_cap = var:AUS_mil_special_forces_cap
+    dig_in_speed_factor = var:AUS_mil_entrenchment
+}

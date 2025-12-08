@@ -19,13 +19,8 @@ state = {
 				naval_base = 2
 			}
 		}
-		
-		add_core_of = YUG
-		add_core_of = VNI
-		add_core_of = CRO
-
-		#CONTROLLED BY ITALY AT GAME START -> ITALIAN NAMES
-		set_province_name = { id = 11564 name = VICTORY_POINTS_11564_ITA }
+		add_core_of = AUS
+		set_state_flag = Austrian_state
 	}
 
 	provinces = {

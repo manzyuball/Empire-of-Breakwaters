@@ -2,75 +2,83 @@
 
 oob = "AUS_1936"
 set_naval_oob = "AUS_naval"
+set_stability = 0.5
+set_war_support = 0.3
+set_research_slots = 3
 
-set_research_slots = 5
-if = {
-	limit = {
-		OR = {
-			has_dlc = "Together for Victory"
-			has_dlc = "Man the Guns"
-		}
-	}
-	set_autonomy = {
-		target = LBV
-		autonomous_state = autonomy_integrated_puppet
-	}
-	else = {
-		puppet = LBV
-	}
-}
+# Influence Variables
+set_variable = { AUS_austria_influence = 50 }
+set_variable = { AUS_hungary_influence = 30 }
+set_variable = { AUS_minority_influence = 20 }
+
+# Initialize Political Variables
+set_variable = { AUS_pol_pp_gain = 0.1 }
+set_variable = { AUS_pol_stability = 0.1 }
+set_variable = { AUS_pol_war_support = 0 }
+set_variable = { AUS_pol_research_speed = 0 }
+set_variable = { AUS_pol_research_bonus = 0 }
+set_variable = { AUS_pol_breakthrough_bonus = 0 }
+set_variable = { AUS_pol_surrender_limit = 0 }
+set_variable = { AUS_pol_resistance_decay = -0.15 }
+set_variable = { AUS_pol_trade_opinion = 0 }
+set_variable = { AUS_pol_weekly_war_support = 0 }
+set_variable = { AUS_pol_pp_cost = 0 }
+set_variable = { AUS_pol_justify_war_goal_time = 0 }
+
+# Initialize Economic Variables
+set_variable = { AUS_eco_consumer_goods = -0.15 }
+set_variable = { AUS_eco_factory_output = -0.2 }
+set_variable = { AUS_eco_dockyard_output = -0.14 }
+set_variable = { AUS_eco_prod_eff_cap = -0.1 }
+set_variable = { AUS_eco_prod_eff_gain = -0.05 }
+set_variable = { AUS_eco_factory_donations = 0 }
+set_variable = { AUS_eco_civ_build_speed = 0 }
+set_variable = { AUS_eco_infra_build_speed = 0 }
+set_variable = { AUS_eco_bunker_build_speed = 0 }
+set_variable = { AUS_eco_factory_donations = 0 }
+# Initialize Military Variables
+set_variable = { AUS_mil_armor_attack = 0 }
+set_variable = { AUS_mil_org = -0.09 }
+set_variable = { AUS_mil_defence = 0.08 }
+set_variable = { AUS_mil_dig_in = 0 }
+set_variable = { AUS_mil_mountaineers_cap = -0.25 }
+set_variable = { AUS_mil_conscription = 0 }
+set_variable = { AUS_mil_exp_loss = -0.15 }
+set_variable = { AUS_mil_bunker_effect = 0 }
+
+# Add initial dynamic modifiers
+add_dynamic_modifier = { modifier = AUS_imperial_politics_modifier }
+add_dynamic_modifier = { modifier = AUS_emperors_army_modifier }
+add_dynamic_modifier = { modifier = AUS_imperial_economy_modifier }
+
 set_air_oob = "AUS_1936_air_bba"
 
 add_manpower = 1464210
-create_faction = "プラハ協定"
+create_faction_from_template = faction_template_AUS_Habsburg_Faction
 add_to_faction = AUS
 add_to_faction = BUL
-add_to_faction = TUR
-add_to_faction = LAT
-add_to_faction = GER
-add_to_faction = ITA
 add_to_faction = POL
 add_to_faction = UKR
-recruit_character = AUS_Wilhelm
-recruit_character = AUS_Karl_Renner
-recruit_character = AUS_karl_renner
-recruit_character = AUS_Adolf_Hitler
-recruit_character = AUS_alfred_klahr
-recruit_character = AUS_karl_eglseer
-recruit_character = AUS_odilo_globocnik
-recruit_character = AUS_alexander_lohr
-recruit_character = AUS_paul_von_hegedus
-recruit_character = AUS_julius_yllam
-recruit_character = AUS_otto_meixner_von_zweienstamm
-recruit_character = AUS_wilhelm_zehner
-recruit_character = AUS_josef_teufl
-recruit_character = AUS_otto_schobel
-recruit_character = AUS_viktor_seebauer
-recruit_character = AUS_lothar_rendulic
-recruit_character = AUS_ernst_kaltenbrunner
-recruit_character = AUS_eduard_freiherr
-recruit_character = AUS_franz_bohme
-recruit_character = AUS_eugen_beyer
-recruit_character = AUS_julius_raab
-recruit_character = AUS_leopold_figl
-
+recruit_character = AUS_otto_von_habsburg
+puppet = UKR
+give_guarantee = ITA
 
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = neutrality
 	last_election = "1930.11.9"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	neutrality = 5
-	fascism = 25
-	democratic = 55
-	communism = 15
+	neutrality = 75
+	fascism = 10
+	democratic = 10
+	communism = 5
 }
 
-set_stability = 0.5
+
 
 
 # Starting tech

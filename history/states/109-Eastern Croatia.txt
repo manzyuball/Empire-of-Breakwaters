@@ -14,9 +14,7 @@ add_core_of = AUS
 		victory_points = {
 			11581 3 
 		}
-		add_core_of = YUG
-		add_core_of = CRO
-		add_core_of = HUN
+		set_state_flag = Croatian_state
 
 	}
 

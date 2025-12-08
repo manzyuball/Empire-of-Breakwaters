@@ -20,7 +20,21 @@ set_popularities = {
 	fascism = 20
 	neutrality = 40
 }
-
+set_autonomy = {
+	target = LIT
+	autonomous_state = autonomy_collaboration_government
+	freedom_level = 0.1
+}
+set_autonomy = {
+	target = LAT
+	autonomous_state = autonomy_collaboration_government
+	freedom_level = 0.1
+}
+set_autonomy = {
+	target = TZN
+	autonomous_state = autonomy_collaboration_government
+	freedom_level = 0.1
+}
 add_ideas = {
 	general_staff
 }

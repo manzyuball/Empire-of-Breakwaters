@@ -10,9 +10,7 @@ state={
 		}
 		owner = AUS
 		add_core_of = AUS
-		add_core_of = YUG
-		
-		add_core_of = VNI
+		set_state_flag = Austrian_state
 		buildings = {
 			infrastructure = 1
 			6626 = {

@@ -10,6 +10,7 @@ state={
 			infrastructure = 5
 			arms_factory = 1
 		}
+		set_state_flag = Austrian_state
 		add_core_of = AUS
 	}
 	manpower=595373

@@ -14,10 +14,8 @@ state=
 				naval_base = 1
 			}
 		}
-		add_core_of = YUG
-		add_core_of = CRO
+		set_state_flag = Croatian_state
 		add_core_of = AUS
-		start_resistance = CRO #Yugoslavia shouldn't resist occupation
 	} 
 	provinces={	
 		3943 

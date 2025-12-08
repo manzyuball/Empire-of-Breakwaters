@@ -1,0 +1,302 @@
+add_namespace = AUS
+
+# 帝国の岐路
+country_event = {
+    id = AUS.1
+    title = AUS.1.t
+    desc = AUS.1.d
+    picture = GFX_report_event_generic_parliament
+
+    is_triggered_only = yes
+
+    option = { # Embrace Pluralism
+        name = AUS.1.a
+        add_political_power = 50
+        add_stability = 0.05
+        custom_effect_tooltip = AUS_increase_minority_influence_tt
+        add_to_variable = { AUS_minority_influence = 10 }
+    }
+    option = { # Maintain Status Quo
+        name = AUS.1.b
+        add_political_power = 100
+        custom_effect_tooltip = AUS_increase_austria_influence_tt
+        add_to_variable = { AUS_austria_influence = 10 }
+    }
+    option = { # Empower Hungary
+        name = AUS.1.c
+        add_manpower = 5000
+        custom_effect_tooltip = AUS_increase_hungary_influence_tt
+        add_to_variable = { AUS_hungary_influence = 10 }
+    }
+}
+
+# 自治法案の提出
+country_event = {
+    id = AUS.10
+    title = AUS.10.t
+    desc = AUS.10.d
+    picture = GFX_report_event_generic_parliament
+
+    is_triggered_only = yes
+
+    option = { # Full Autonomy
+        name = AUS.10.a
+        add_political_power = -50
+        add_stability = -0.10
+        custom_effect_tooltip = AUS_influence_minority_gain_20_tt
+        add_to_variable = { AUS_minority_influence = 20 }
+        set_country_flag = AUS_autonomy_bill_submitted
+    }
+    option = { # Limited Autonomy
+        name = AUS.10.b
+        add_political_power = 25
+        custom_effect_tooltip = AUS_influence_minority_gain_10_tt
+        add_to_variable = { AUS_minority_influence = 10 }
+        set_country_flag = AUS_autonomy_bill_submitted
+    }
+    option = { # Reject Bill
+        name = AUS.10.c
+        add_political_power = 50
+        add_stability = 0.05
+        custom_effect_tooltip = AUS_influence_minority_loss_10_tt
+        add_to_variable = { AUS_minority_influence = -10 }
+        custom_effect_tooltip = AUS_influence_austria_gain_5_tt
+        add_to_variable = { AUS_austria_influence = 5 }
+    }
+}
+
+
+# 未回収のイタリア問題
+country_event = {
+    id = AUS.30
+    title = AUS.30.t
+    desc = AUS.30.d
+    picture = GFX_report_event_generic_diplomacy
+
+    is_triggered_only = yes
+
+    option = {
+        name = AUS.30.a
+        add_political_power = -150
+        add_stability = -0.1
+        ITA = {
+            transfer_state = 850
+            add_opinion_modifier = { target = ROOT modifier = offered_support }
+        }
+    }
+    option = {
+        name = AUS.30.b
+        add_stability = -0.15
+        ITA = {
+            transfer_state = 850
+            transfer_state = 39
+            add_opinion_modifier = { target = ROOT modifier = offered_support }
+        }
+    }
+    option = {
+        name = AUS.30.c
+        add_political_power = -250
+        add_war_support = 0.05
+    }
+}
+
+# 徴兵法改正案
+country_event = {
+    id = AUS.40
+    title = AUS.40.t
+    desc = AUS.40.d
+    picture = GFX_report_event_generic_soldiers
+
+    is_triggered_only = yes
+
+    option = { # Mass Conscription
+        name = AUS.40.a
+        add_political_power = 25
+        add_manpower = 10000
+        custom_effect_tooltip = AUS_mil_conscription_005_tt
+        add_to_variable = { AUS_mil_conscription = 0.05 }
+        add_war_support = -0.05
+    }
+    option = { # Professional Army
+        name = AUS.40.b
+        add_political_power = -25
+        add_manpower = -2000
+        custom_effect_tooltip = AUS_mil_org_005_tt
+        add_to_variable = { AUS_mil_org = 0.05 }
+    }
+    option = { # Balanced Approach
+        name = AUS.40.c
+        add_political_power = 150
+        add_manpower = 30000
+        custom_effect_tooltip = AUS_mil_org_002_tt
+        add_to_variable = { AUS_mil_org = 0.02 }
+    }
+}
+
+# 産業補助金法案
+country_event = {
+    id = AUS.41
+    title = AUS.41.t
+    desc = AUS.41.d
+    picture = GFX_report_event_generic_factory
+
+    is_triggered_only = yes
+
+    option = { # Heavy Industry Focus
+        name = AUS.41.a
+        custom_effect_tooltip = AUS_eco_factory_output_005_tt
+        add_to_variable = { AUS_eco_factory_output = 0.05 }
+        custom_effect_tooltip = AUS_eco_consumer_goods_002_tt
+        add_to_variable = { AUS_eco_consumer_goods = 0.02 }
+    }
+    option = { # Infrastructure Focus
+        name = AUS.41.b
+        add_political_power = -50
+        custom_effect_tooltip = AUS_eco_infra_build_speed_010_tt
+        add_to_variable = { AUS_eco_infra_build_speed = 0.10 }
+        custom_effect_tooltip = AUS_eco_civ_build_speed_005_tt
+        add_to_variable = { AUS_eco_civ_build_speed = 0.05 }
+    }
+    option = { # Military Industry Focus
+        name = AUS.41.c
+        add_political_power = -25
+        custom_effect_tooltip = AUS_eco_prod_eff_gain_005_tt
+        add_to_variable = { AUS_eco_prod_eff_gain = 0.05 }
+    }
+}
+
+# 報道規制法案
+country_event = {
+    id = AUS.42
+    title = AUS.42.t
+    desc = AUS.42.d
+    picture = GFX_report_event_generic_read_write
+
+    is_triggered_only = yes
+
+    option = { # Strict Censorship
+        name = AUS.42.a
+        add_political_power = 25
+        add_stability = 0.05
+        custom_effect_tooltip = AUS_pol_stability_005_tt
+        add_to_variable = { AUS_pol_stability = 0.05 }
+        add_war_support = 0.05
+        custom_effect_tooltip = AUS_influence_minority_loss_5_tt
+        add_to_variable = { AUS_minority_influence = -5 }
+    }
+    option = { # Free Press
+        name = AUS.42.b
+        add_political_power = 25
+        add_stability = -0.05
+        custom_effect_tooltip = AUS_pol_research_speed_005_tt
+        add_to_variable = { AUS_pol_research_speed = 0.05 }
+    }
+    option = { # State Propaganda
+        name = AUS.42.c
+        add_political_power = 50
+        custom_effect_tooltip = AUS_pol_pp_gain_005_tt
+        add_to_variable = { AUS_pol_pp_gain = 0.05 }
+        add_war_support = 0.05
+    }
+}
+
+# 地方税制改革
+country_event = {
+    id = AUS.43
+    title = AUS.43.t
+    desc = AUS.43.d
+    picture = GFX_report_event_generic_parliament
+
+    is_triggered_only = yes
+
+    option = { # Centralized Tax
+        name = AUS.43.a
+        add_political_power = 25
+        custom_effect_tooltip = AUS_eco_civ_build_speed_005_tt
+        add_to_variable = { AUS_eco_civ_build_speed = 0.05 }
+        custom_effect_tooltip = AUS_influence_austria_gain_5_tt
+        add_to_variable = { AUS_austria_influence = 5 }
+        custom_effect_tooltip = AUS_influence_minority_loss_5_tt
+        add_to_variable = { AUS_minority_influence = -5 }
+    }
+    option = { # Decentralized Tax
+        name = AUS.43.b
+        add_political_power = 25
+        add_stability = 0.05
+        custom_effect_tooltip = AUS_influence_minority_gain_5_tt
+        add_to_variable = { AUS_minority_influence = 5 }
+        custom_effect_tooltip = AUS_eco_civ_build_speed_neg_002_tt
+        add_to_variable = { AUS_eco_civ_build_speed = -0.02 }
+    }
+    option = { # War Tax
+        name = AUS.43.c
+        add_political_power = 50
+        add_war_support = -0.05
+        custom_effect_tooltip = AUS_eco_consumer_goods_neg_005_tt
+        add_to_variable = { AUS_eco_consumer_goods = -0.05 }
+    }
+}
+
+# ウィーン銀行法
+country_event = {
+    id = AUS.44
+    title = AUS.44
+    desc = AUS.44_desc
+    picture = GFX_report_event_generic_gold
+
+    is_triggered_only = yes
+
+    option = { # Stability (Consumer Goods)
+        name = AUS.44_opt_a
+        add_stability = 0.05
+        custom_effect_tooltip = AUS_eco_consumer_goods_neg_005_tt
+        add_to_variable = { AUS_eco_consumer_goods = -0.05 }
+    }
+    option = { # Growth (Construction Speed)
+        name = AUS.44_opt_b
+        custom_effect_tooltip = AUS_eco_civ_build_speed_010_tt
+        add_to_variable = { AUS_eco_civ_build_speed = 0.10 }
+    }
+    option = { # Foreign Investment
+        name = AUS.44_opt_c
+        custom_effect_tooltip = AUS_pol_research_speed_005_tt
+        add_to_variable = { AUS_pol_research_speed = 0.05 }
+        custom_effect_tooltip = AUS_eco_consumer_goods_002_tt
+        add_to_variable = { AUS_eco_consumer_goods = 0.02 }
+    }
+}
+
+# 地中海貿易
+country_event = {
+    id = AUS.45
+    title = AUS.45
+    desc = AUS.45_desc
+    picture = GFX_report_event_generic_ship
+
+    is_triggered_only = yes
+
+    option = { # Italy
+        name = AUS.45.a # Need localization
+        ITA = {
+            add_opinion_modifier = { target = ROOT modifier = offered_support }
+        }
+        custom_effect_tooltip = AUS_eco_dockyard_output_010_tt
+        add_to_variable = { AUS_eco_dockyard_output = 0.1 }
+    }
+    option = { # UK
+        name = AUS.45.b # Need localization
+        ENG = {
+            add_opinion_modifier = { target = ROOT modifier = offered_support }
+        }
+        custom_effect_tooltip = AUS_eco_dockyard_output_010_tt
+        add_to_variable = { AUS_eco_dockyard_output = 0.1 }
+    }
+    option = { # Turkey
+        name = AUS.45.c # Need localization
+        TUR = {
+            add_opinion_modifier = { target = ROOT modifier = offered_support }
+        }
+        custom_effect_tooltip = AUS_eco_dockyard_output_010_tt
+        add_to_variable = { AUS_eco_dockyard_output = 0.1 }
+    }
+}

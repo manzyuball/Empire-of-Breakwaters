@@ -14,7 +14,7 @@ state = {
 		buildings = {
 			infrastructure = 2 #was 3 before split
 		}
-		
+		set_state_flag = Austrian_state
 		add_core_of = AUS
 	}
 

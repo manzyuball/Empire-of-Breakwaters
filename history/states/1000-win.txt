@@ -9,6 +9,7 @@ state={
 		victory_points = {
 			11666 50
 		}
+		set_state_flag = Austrian_state
 		buildings = {
 			infrastructure = 5
 			arms_factory = 2

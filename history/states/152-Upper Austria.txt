@@ -14,6 +14,7 @@ state={
 
 	history={
 		owner = AUS
+		set_state_flag = Austrian_state
 		buildings = {
 			infrastructure = 3 #was: 6
 			industrial_complex = 2
