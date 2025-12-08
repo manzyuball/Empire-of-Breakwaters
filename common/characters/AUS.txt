@@ -1,63 +1,17 @@
 characters={
-	AUS_Wilhelm={
-		name= AUS_Wilhelm
+	AUS_otto_von_habsburg = {
+		name= AUS_otto_von_habsburg
 		portraits={
 			civilian={
-				large="gfx/leaders/AUS/Wilhelm.dds"
+				large="gfx/leaders/_EOB/Otto-von-Habsburg.dds"
 			}
 		}
 		country_leader={
-			ideology=socialism
+			ideology=despotism
 			expire="1965.1.1.1"
 			id=-1
-			traits  = {
-				kat
-				}
-		}
-	}
-	AUS_Karl_Renner={
-		name= AUS_Karl_Renner
-		portraits={
-			civilian={
-				large= GFX_portrait_Karl_Renner
+			traits = {
 			}
-		}
-		country_leader={
-			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
-			traits  = {
-				headstrong
-			}
-		}
-	}
-	AUS_doruhusu = {
-		name=AUS_doruhusu
-		portraits={
-			civilian={
-				large="gfx/leaders/_EOB/AUS_husu.dds"
-				small="GFX_idea_gre_xenophon_giosmas"
-			}
-		}
-		country_leader={
-			ideology=rexism
-			expire="1965.1.1.1"
-			id=-1
-			traits  = {
-				socialite_connections
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = AUS_doruhusu
-			allowed  = {
-				has_country_flag = AUS_nazi
-				original_tag  = AUS
-			}
-			traits  = {
-				imperial_connections
-			}
-
 		}
 	}
 	HUN_miklos_horthy={

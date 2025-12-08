@@ -54,13 +54,14 @@ add_dynamic_modifier = { modifier = AUS_imperial_economy_modifier }
 set_air_oob = "AUS_1936_air_bba"
 
 add_manpower = 1464210
-create_faction = "プラハ協定"
+create_faction_from_template = faction_template_AUS_Habsburg_Faction
 add_to_faction = AUS
 add_to_faction = BUL
 add_to_faction = POL
 add_to_faction = UKR
-recruit_character = AUS_Wilhelm
-
+recruit_character = AUS_otto_von_habsburg
+puppet = UKR
+give_guarantee = ITA
 
 
 set_politics = {
