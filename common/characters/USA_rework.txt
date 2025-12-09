@@ -1,0 +1,16 @@
+characters = {
+	USA_herbert_hoover = {
+		name = "Herbert Hoover"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_USA_Herbert_Hoover.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = { USA_hoover_trait }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+}

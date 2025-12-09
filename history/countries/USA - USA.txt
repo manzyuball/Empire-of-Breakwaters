@@ -10,21 +10,32 @@ set_research_slots = 4
 set_stability = 0.75
 set_war_support = 0
 add_command_power = 20
-set_variable = { var = senators_support value = 48 }
-set_variable = { var = senators_total value = 96 }
-set_variable = { var = representatives_support value = 218 }
-set_variable = { var = representatives_total value = 435 }
-set_variable = { var = quorum_low value = 39 }
-set_variable = { var = quorum_medium value = 49 }
-set_variable = { var = quorum_high value = 58 }
-USA_recalc_congress_icon_frames = yes
-USA = {
-	country_event = { id = usa.50 days = 2 }
-	country_event = { id = usa.51 days = 2 }
-}
 set_convoys = 500
 
+set_variable = { var = USA_hollowed_ic_factory value = -0.30 }
+set_variable = { var = USA_hollowed_ic_dockyard value = -0.30 }
+set_variable = { var = USA_hollowed_prod_eff_cap value = -0.30 }
+set_variable = { var = USA_hollowed_line_change_eff value = -0.30 }
+set_variable = { var = USA_corpse_pp_factor value = -0.40 }
+set_variable = { var = USA_corpse_stab_factor value = -0.25 }
 
+# Influence Variables
+set_variable = { var = usa_long_support value = 0 }
+set_variable = { var = usa_macarthur_support value = 0 }
+
+# Influence Effect Variables (Start at 0)
+set_variable = { var = USA_long_pp value = 0 }
+set_variable = { var = USA_long_cg value = 0 }
+set_variable = { var = USA_long_stab value = 0 }
+set_variable = { var = USA_macarthur_org value = 0 }
+set_variable = { var = USA_macarthur_plan value = 0 }
+set_variable = { var = USA_macarthur_stab value = 0 }
+
+
+add_dynamic_modifier = { modifier = USA_hollowed_industry }
+add_dynamic_modifier = { modifier = USA_corpse_of_democracy }
+add_dynamic_modifier = { modifier = USA_long_influence }
+add_dynamic_modifier = { modifier = USA_macarthur_influence }
 set_politics = {
 	ruling_party = democratic
 	last_election = "1932.11.8"
@@ -32,18 +43,19 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 99
-	communism = 1
+	democratic = 70
+	fascism = 15
+	neutrality = 15
 }
 
 add_ideas = {
-	disarmed_nation
-	free_trade
+	USA_londons_servant
+	USA_zaibatsu_backyard
+	USA_strike_breakers
+	USA_ghost_of_monroe
 }
 
-
-
-
+recruit_character = USA_herbert_hoover
 recruit_character = USA_earl_browder
 recruit_character = USA_william_dudley_pelley
 recruit_character = USA_als

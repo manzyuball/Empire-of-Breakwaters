@@ -1,0 +1,32 @@
+# 産業の空洞化
+USA_hollowed_industry = {
+    icon = GFX_idea_generic_production_bonus
+    industrial_capacity_factory = var:USA_hollowed_ic_factory
+    industrial_capacity_dockyard = var:USA_hollowed_ic_dockyard
+    production_factory_max_efficiency_factor = var:USA_hollowed_prod_eff_cap
+    line_change_production_efficiency_factor = var:USA_hollowed_line_change_eff
+}
+
+# 民主主義の死体
+USA_corpse_of_democracy = {
+    icon = GFX_idea_generic_political_power_bonus
+    political_power_factor = var:USA_corpse_pp_factor
+    stability_factor = var:USA_corpse_stab_factor
+}
+
+# -----------------------------------------------
+# 派閥影響力 (Faction Influence)
+# -----------------------------------------------
+USA_long_influence = {
+    icon = GFX_idea_generic_populism_drift_bonus # Placeholder
+    political_power_factor = var:USA_long_pp
+    consumer_goods_factor = var:USA_long_cg
+    stability_factor = var:USA_long_stab
+}
+
+USA_macarthur_influence = {
+    icon = GFX_idea_generic_army_war_college # Placeholder
+    army_org_factor = var:USA_macarthur_org
+    planning_speed = var:USA_macarthur_plan
+    stability_factor = var:USA_macarthur_stab
+}

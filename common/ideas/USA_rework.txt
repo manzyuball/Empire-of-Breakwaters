@@ -1,0 +1,77 @@
+ideas = {
+	country = {
+		# ロンドンの下僕
+		USA_londons_servant = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.20
+				trade_laws_cost_factor = 2.0
+			}
+		}
+
+		# 財閥の裏庭
+		USA_zaibatsu_backyard = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.20
+				economy_cost_factor = 2.0
+			}
+		}
+
+		# ストライキ・ブレイカー
+		USA_strike_breakers = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.15
+				planning_speed = -0.25
+			}
+		}
+
+		# モンローの亡霊
+		USA_ghost_of_monroe = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.50
+			}
+			rule = {
+				can_send_volunteers = no
+			}
+		}
+
+		# ロンドンの下僕 (緩和)
+		USA_londons_servant_alleviated = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				trade_laws_cost_factor = 1.0
+			}
+		}
+
+		# ストライキ・ブレイカー (緩和)
+		USA_strike_breakers_alleviated = {
+			allowed = { always = no }
+			allowed_civil_war = { always = no }
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.05
+				planning_speed = -0.10
+			}
+		}
+	}
+}

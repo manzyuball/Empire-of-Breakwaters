@@ -1,0 +1,9 @@
+leader_traits = {
+	# 尻拭いの苦労人
+	USA_hoover_trait = {
+		random = no
+		political_power_gain_factor = 0.05
+		stability_factor = -0.05
+		consumer_goods_factor = -0.10
+	}
+}

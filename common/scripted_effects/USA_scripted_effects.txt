@@ -1,0 +1,31 @@
+USA_update_faction_support_effects = {
+    # -----------------------------------------------
+    # Huey Long Faction Effects
+    # -----------------------------------------------
+    # PP Gain: +1.5% per support point
+    set_variable = { var = USA_long_pp value = var:usa_long_support }
+    multiply_variable = { var = USA_long_pp value = 0.015 }
+
+    # Consumer Goods: -1.0% per support point (Good)
+    set_variable = { var = USA_long_cg value = var:usa_long_support }
+    multiply_variable = { var = USA_long_cg value = -0.01 }
+
+    # Stability: -1.5% per support point (Bad)
+    set_variable = { var = USA_long_stab value = var:usa_long_support }
+    multiply_variable = { var = USA_long_stab value = -0.015 }
+
+    # -----------------------------------------------
+    # MacArthur Faction Effects
+    # -----------------------------------------------
+    # Organization: +1.0% per support point
+    set_variable = { var = USA_macarthur_org value = var:usa_macarthur_support }
+    multiply_variable = { var = USA_macarthur_org value = 0.010 }
+
+    # Planning Speed: +2.0% per support point
+    set_variable = { var = USA_macarthur_plan value = var:usa_macarthur_support }
+    multiply_variable = { var = USA_macarthur_plan value = 0.02 }
+
+    # Stability: +0.5% per support point (Good)
+    set_variable = { var = USA_macarthur_stab value = var:usa_macarthur_support }
+    multiply_variable = { var = USA_macarthur_stab value = 0.005 }
+}

@@ -1,0 +1,316 @@
+focus_tree = {
+	id = USA_rework_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = USA
+		}
+	}
+	
+	default = no
+	continuous_focus_position = {
+		x = 50
+		y = 1350
+	}
+	
+	# -------------------------------------------------------------------------
+	# 政治ツリー: 「分断される国家」 (1936年選挙前)
+	# -------------------------------------------------------------------------
+	
+	# 1. 危機の時 (共通起点)
+	focus = {
+		id = USA_crisis_time
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 5
+		y = 0
+		cost = 5
+		completion_reward = {
+			add_political_power = 50
+			country_event = { id = usa.1 days = 1 }
+		}
+	}
+	
+	# 2. 富の再分配論 (ロング派)
+	focus = {
+		id = USA_share_wealth_rhetoric
+		icon = GFX_focus_usa_union_representation_act
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_crisis_time }
+		mutually_exclusive = { focus = USA_call_for_order }
+		completion_reward = {
+			add_to_variable = { var = usa_long_support value = 5 }
+			USA_update_faction_support_effects = yes
+			add_stability = -0.02
+		}
+	}
+	
+	# 3. 秩序の呼びかけ (マッカーサー派)
+	focus = {
+		id = USA_call_for_order
+		icon = GFX_focus_usa_war_support
+		x = 7
+		y = 1
+		cost = 5
+		prerequisite = { focus = USA_crisis_time }
+		mutually_exclusive = { focus = USA_share_wealth_rhetoric }
+		completion_reward = {
+			add_to_variable = { var = usa_macarthur_support value = 5 }
+			USA_update_faction_support_effects = yes
+			add_stability = 0.02
+		}
+	}
+	
+	# 4. ウォール街への抗議 (ロング派 -> ロング派)
+	focus = {
+		id = USA_protest_wall_st
+		icon = GFX_focus_usa_worker_committees
+		x = 3
+		y = 2
+		cost = 5
+		prerequisite = { focus = USA_share_wealth_rhetoric }
+		completion_reward = {
+			add_to_variable = { var = usa_long_support value = 5 }
+			USA_update_faction_support_effects = yes
+			add_political_power = 30
+		}
+	}
+	
+	# 5. 産業界の保護 (マッカーサー派 -> マッカーサー派)
+	focus = {
+		id = USA_protect_industry_pol
+		icon = GFX_focus_usa_build_the_pentagon
+		x = 7
+		y = 2
+		cost = 5
+		prerequisite = { focus = USA_call_for_order }
+		completion_reward = {
+			add_to_variable = { var = usa_macarthur_support value = 5 }
+			USA_update_faction_support_effects = yes
+			add_to_variable = { var = USA_hollowed_ic_factory value = 0.05 }
+		}
+	}
+	
+	# 6. 民兵の組織化 (ロング派)
+	focus = {
+		id = USA_organize_minutemen
+		icon = GFX_focus_usa_selective_service_act
+		x = 3
+		y = 3
+		cost = 5
+		prerequisite = { focus = USA_protest_wall_st }
+		completion_reward = {
+			add_to_variable = { var = usa_long_support value = 5 }
+			USA_update_faction_support_effects = yes
+			add_manpower = 10000
+		}
+	}
+	
+	# 7. 州兵の連邦化 (マッカーサー派)
+	focus = {
+		id = USA_federalize_national_guard
+		icon = GFX_focus_usa_national_guard
+		x = 7
+		y = 3
+		cost = 5
+		prerequisite = { focus = USA_protect_industry_pol }
+		completion_reward = {
+			add_to_variable = { var = usa_macarthur_support value = 5 }
+			USA_update_faction_support_effects = yes
+			army_experience = 20
+		}
+	}
+	
+	# 8. 審判の日 (選挙イベント発生)
+	focus = {
+		id = USA_election_day_1936
+		icon = GFX_focus_usa_voter_registration_act
+		x = 5
+		y = 4
+		cost = 5
+		prerequisite = { focus = USA_organize_minutemen focus = USA_federalize_national_guard }
+		available = {
+			date > 1936.11.1
+		}
+		completion_reward = {
+			country_event = { id = usa.11 days = 1 }
+		}
+	}
+	
+	# -------------------------------------------------------------------------
+	# 経済ツリー: 「フーバーの市場刺激策」
+	# -------------------------------------------------------------------------
+	
+	# 経済起点
+	focus = {
+		id = USA_stimulate_private_sector
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 15
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	# 復興金融公社 (RFC) の拡充
+	focus = {
+		id = USA_expand_rfc
+		icon = GFX_focus_usa_build_the_pentagon
+		x = 13
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_stimulate_private_sector }
+		completion_reward = {
+			add_to_variable = { var = USA_hollowed_ic_factory value = 0.10 }
+			custom_effect_tooltip = USA_hollowed_industry_alleviated_lv1_tt
+		}
+	}
+	
+	# 自発的協力の呼びかけ
+	focus = {
+		id = USA_voluntary_cooperation
+		icon = GFX_focus_usa_union_representation_act
+		x = 17
+		y = 1
+		cost = 10
+		prerequisite = { focus = USA_stimulate_private_sector }
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+	# 産業界への緊急融資
+	focus = {
+		id = USA_emergency_loans
+		icon = GFX_focus_generic_stockpile_currency
+		x = 12
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_expand_rfc }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { is_core_of = USA }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	# 銀行救済法の制定
+	focus = {
+		id = USA_save_banks
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 14
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_expand_rfc }
+		completion_reward = {
+			add_to_variable = { var = USA_corpse_pp_factor value = 0.10 }
+			custom_effect_tooltip = USA_corpse_of_democracy_alleviated_lv1_tt
+		}
+	}
+	
+	# 慈善事業の奨励
+	focus = {
+		id = USA_encourage_charity
+		icon = GFX_focus_generic_humanitarian_aid
+		x = 16
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_voluntary_cooperation }
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	# 賃金維持の要請
+	focus = {
+		id = USA_maintain_wages
+		icon = GFX_focus_usa_worker_committees
+		x = 18
+		y = 2
+		cost = 10
+		prerequisite = { focus = USA_voluntary_cooperation }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_strike_breakers
+				add_idea = USA_strike_breakers_alleviated
+			}
+		}
+	}
+	
+	# トリクルダウン理論
+	focus = {
+		id = USA_trickle_down_theory
+		icon = GFX_focus_generic_wealthy_diplomats
+		x = 13
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_emergency_loans }
+		prerequisite = { focus = USA_save_banks }
+		completion_reward = {
+			add_to_variable = { var = USA_hollowed_ic_factory value = 0.10 }
+			add_to_variable = { var = USA_hollowed_ic_dockyard value = 0.10 }
+			custom_effect_tooltip = USA_hollowed_industry_alleviated_lv2_tt
+		}
+	}
+	
+	# 金本位制の堅持
+	focus = {
+		id = USA_maintain_gold_standard
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 17
+		y = 3
+		cost = 10
+		prerequisite = { focus = USA_encourage_charity }
+		prerequisite = { focus = USA_maintain_wages }
+		completion_reward = {
+			add_to_variable = { var = USA_corpse_pp_factor value = 0.10 }
+			custom_effect_tooltip = USA_corpse_of_democracy_alleviated_lv2_tt
+		}
+	}
+	
+	# スムート・ホーリー関税の強化
+	focus = {
+		id = USA_smoot_hawley_tariff
+		icon = GFX_focus_generic_treaty
+		x = 15
+		y = 4
+		cost = 10
+		prerequisite = { focus = USA_trickle_down_theory }
+		prerequisite = { focus = USA_maintain_gold_standard }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_londons_servant
+				add_idea = USA_londons_servant_alleviated
+			}
+			add_opinion_modifier = { target = ENG modifier = negative_50 }
+			add_opinion_modifier = { target = JAP modifier = negative_50 }
+		}
+	}
+	
+	# 市場の自律的回復
+	focus = {
+		id = USA_market_recovery
+		icon = GFX_focus_generic_industry_3
+		x = 15
+		y = 5
+		cost = 10
+		prerequisite = { focus = USA_smoot_hawley_tariff }
+		completion_reward = {
+			set_variable = { var = USA_hollowed_ic_factory value = 0 }
+			set_variable = { var = USA_hollowed_ic_dockyard value = 0 }
+			set_variable = { var = USA_hollowed_prod_eff_cap value = 0 }
+			set_variable = { var = USA_hollowed_line_change_eff value = 0 }
+			custom_effect_tooltip = USA_hollowed_industry_removed_tt
+		}
+	}
+}

@@ -1,0 +1,344 @@
+add_namespace = usa
+
+# 1月: 最後の幻想、最初の亀裂
+country_event = {
+	id = usa.1
+	title = usa.1.t
+	desc = usa.1.d
+	picture = GFX_report_event_usa_congress_house # Placeholder
+	
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		date > 1936.1.15
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	# ロング派
+	option = {
+		name = usa.1.a
+		add_political_power = 10
+		add_to_variable = { var = usa_long_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+	# マッカーサー派
+	option = {
+		name = usa.1.b
+		add_political_power = 10
+		add_to_variable = { var = usa_macarthur_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+}
+
+# 2月: ピッツバーグの落日
+country_event = {
+	id = usa.2
+	title = usa.2.t
+	desc = usa.2.d
+	picture = GFX_report_event_usa_depression
+	
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		date > 1936.2.10
+	}
+	mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = usa.2.a
+		add_to_variable = { var = usa_long_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+	option = {
+		name = usa.2.b
+		add_to_variable = { var = usa_macarthur_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+}
+
+# 3月: 豊かなる大地の飢えた子供たち
+country_event = {
+	id = usa.3
+	title = usa.3.t
+	desc = usa.3.d
+	picture = GFX_report_event_usa_depression
+	
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		date > 1936.3.10
+	}
+	mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = usa.3.a
+		add_to_variable = { var = usa_long_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+	option = {
+		name = usa.3.b
+		add_to_variable = { var = usa_macarthur_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+}
+
+# 4月: 桜の下の分断
+country_event = {
+	id = usa.4
+	title = usa.4.t
+	desc = usa.4.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		date > 1936.4.5
+	}
+	mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = usa.4.a
+		add_to_variable = { var = usa_long_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+	option = {
+		name = usa.4.b
+		add_to_variable = { var = usa_macarthur_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+}
+
+# 5月: 沈黙する工場、囁く革命
+country_event = {
+	id = usa.5
+	title = usa.5.t
+	desc = usa.5.d
+	picture = GFX_report_event_worker_protests
+	
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		date > 1936.5.1
+	}
+	mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = usa.5.a
+		add_to_variable = { var = usa_long_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+	option = {
+		name = usa.5.b
+		add_to_variable = { var = usa_macarthur_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+}
+
+# 6月: 屈辱の外交公電
+country_event = {
+	id = usa.6
+	title = usa.6.t
+	desc = usa.6.d
+	picture = GFX_report_event_british_politics
+	
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		date > 1936.6.15
+	}
+	mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = usa.6.a
+		add_to_variable = { var = usa_long_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+	option = {
+		name = usa.6.b
+		add_to_variable = { var = usa_macarthur_support value = 1 }
+		USA_update_faction_support_effects = yes
+		add_political_power = -50
+	}
+}
+
+# 7月: 泥にまみれた星条旗
+country_event = {
+	id = usa.7
+	title = usa.7.t
+	desc = usa.7.d
+	picture = GFX_report_event_usa_depression
+	
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		date > 1936.7.4
+	}
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = usa.7.a
+		add_to_variable = { var = usa_long_support value = 1 }
+		USA_update_faction_support_effects = yes
+		add_stability = -0.05
+	}
+	option = {
+		name = usa.7.b
+		add_to_variable = { var = usa_macarthur_support value = 1 }
+		USA_update_faction_support_effects = yes
+		add_stability = 0.05
+	}
+}
+
+# 8月: 黒い夏とダストボウル
+country_event = {
+	id = usa.8
+	title = usa.8.t
+	desc = usa.8.d
+	picture = GFX_report_event_usa_dust_bowl
+	
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		date > 1936.8.10
+	}
+	mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = usa.8.a
+		add_to_variable = { var = usa_long_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+	option = {
+		name = usa.8.b
+		add_to_variable = { var = usa_macarthur_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+}
+
+# 9月: 吠える男、沈黙する将軍
+country_event = {
+	id = usa.9
+	title = usa.9.t
+	desc = usa.9.d
+	picture = GFX_report_event_usa_election_generic
+	
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		date > 1936.9.15
+	}
+	mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = usa.9.a
+		add_to_variable = { var = usa_long_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+	option = {
+		name = usa.9.b
+		add_to_variable = { var = usa_macarthur_support value = 1 }
+		USA_update_faction_support_effects = yes
+	}
+}
+
+# 10月: 投票用紙よりも弾丸を
+country_event = {
+	id = usa.10
+	title = usa.10.t
+	desc = usa.10.d
+	picture = GFX_report_event_usa_election_generic # Placeholder for riot/debate
+	
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		date > 1936.10.20
+	}
+	mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = usa.10.a
+		add_to_variable = { var = usa_long_support value = 1 }
+		USA_update_faction_support_effects = yes
+		add_stability = -0.10
+	}
+	option = {
+		name = usa.10.b
+		add_to_variable = { var = usa_macarthur_support value = 1 }
+		USA_update_faction_support_effects = yes
+		add_stability = -0.05
+	}
+}
+
+# 11月: 審判の日 (ルート分岐)
+country_event = {
+	id = usa.11
+	title = usa.11.t
+	desc = usa.11.d
+	picture = GFX_report_event_usa_election_1936
+	
+	fire_only_once = yes
+	trigger = {
+		tag = USA
+		date > 1936.11.3
+	}
+	mean_time_to_happen = { days = 1 }
+
+	# A. 「民衆の声を聞け！」 (ロング)
+	option = {
+		name = usa.11.a
+		trigger = {
+			# Could add check for variable support, but user didn't specify strict requirement,
+			# just branching.
+		}
+		
+		# Set Huey Long as leader
+		# Note: Huey Long must be defined in characters. Assuming he exists or vanilla.
+		# Vanilla tag for Huey Long is often USA_huey_long.
+		retire_country_leader = yes
+		set_rule = { can_create_collaboration_government = yes } # Unlock plunder mechanics? (flavor)
+		
+		# Remove Hoover trait/ideas if needed, or they persist until focus tree removes them?
+		# User said "economic reconstruction: forced seizure" etc. which sounds like focus tree.
+		# For now, just change leader.
+		
+		create_country_leader = {
+			name = "Huey Long"
+			desc = "POLITICS_HUEY_LONG_DESC"
+			picture = "GFX_portrait_USA_huey_long"
+			expire = "1965.1.1"
+			ideology = fascism_ideology # Or authoritarian/populist? User said 'Plunder'. Fascism fits 'Revanchist'.
+			traits = {
+				# dictator?
+			}
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+	}
+
+	# B. 「秩序が必要だ。」 (マッカーサー)
+	option = {
+		name = usa.11.b
+		
+		# Set MacArthur as leader
+		retire_country_leader = yes
+		
+		create_country_leader = {
+			name = "Douglas MacArthur"
+			desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"
+			picture = "GFX_portrait_USA_douglas_macarthur"
+			expire = "1965.1.1"
+			ideology = neutrality # Junta/Despotism
+			traits = {
+				# military_junta?
+			}
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+	}
+}
