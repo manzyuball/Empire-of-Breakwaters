@@ -10,12 +10,12 @@ state = {
 		12676
 	}
 	history = {
-		owner = CSA
+		owner = USA
 		buildings = {
 			infrastructure = 2
 		}
 		add_core_of = USA
-		add_core_of = CSA
+		
 	}
 	manpower = 934157
 	state_category = rural

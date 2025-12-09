@@ -17,7 +17,7 @@ state = {
 			industrial_complex = 4
 		}
 		add_core_of = USA
-		add_core_of = CSA
+		
 	}
 	manpower = 3121458
 	state_category = city

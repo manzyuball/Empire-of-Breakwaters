@@ -30,7 +30,7 @@ state = {
 			industrial_complex = 2
 		}
 		add_core_of = USA
-		add_core_of = CSA
+		
 		victory_points = {
 			1562
 			15

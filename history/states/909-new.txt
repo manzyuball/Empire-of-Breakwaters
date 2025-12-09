@@ -18,13 +18,13 @@ state = {
 		aluminium = 20
 	}
 	history = {
-		owner = CSA
+		owner = USA
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 		}
 		add_core_of = USA
-		add_core_of = CSA
+		
 		victory_points = {
 			4975
 			1

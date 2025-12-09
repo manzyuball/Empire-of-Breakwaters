@@ -4,13 +4,13 @@ state = {
 	manpower = 692849
 	state_category = rural
 	history = {
-		owner = CSA
+		owner = USA
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 		}
 		add_core_of = USA
-		add_core_of = CSA
+		
 		victory_points = {
 			1747
 			1

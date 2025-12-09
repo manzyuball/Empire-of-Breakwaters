@@ -8,12 +8,12 @@ state = {
 		oil = 7		# was: 10
 	}
 	history = {
-		owner = CSA
+		owner = USA
 		buildings = {
 			infrastructure = 2
 		}
 		add_core_of = USA
-		add_core_of = CSA
+		
 		victory_points = {
 			1836
 			1

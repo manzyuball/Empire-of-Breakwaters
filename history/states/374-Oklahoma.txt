@@ -8,14 +8,14 @@ state = {
 		aluminium = 120		# was: 32
 	}
 	history = {
-		owner = CSA
+		owner = USA
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2
 			air_base = 2
 		}
 		add_core_of = USA
-		add_core_of = CSA
+		
 		victory_points = {
 			1806
 			1

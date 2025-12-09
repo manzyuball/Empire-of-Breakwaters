@@ -27,7 +27,7 @@ state = {
 			}
 		}
 		add_core_of = USA
-		add_core_of = CSA
+		
 	}
 	state_category = large_city
 	manpower = 2131456

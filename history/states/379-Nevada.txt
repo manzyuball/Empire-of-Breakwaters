@@ -10,12 +10,12 @@ state = {
 		coal = 42
 	}
 	history = {
-		owner = CSA
+		owner = USA
 		buildings = {
 			infrastructure = 2
 		}
 		add_core_of = USA
-		add_core_of = CSA
+		
 	}
 	provinces = {
 		1862

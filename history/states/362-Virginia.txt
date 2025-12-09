@@ -2,7 +2,7 @@ state = {
 	id = 362
 	name = "STATE_362"
 	history = {
-		owner = CSA
+		owner = USA
 		buildings = {
 			infrastructure = 3			#was: 6
 			industrial_complex = 2
@@ -14,7 +14,7 @@ state = {
 			}
 		}
 		add_core_of = USA
-		add_core_of = CSA
+		
 		victory_points = {
 			788
 			10
