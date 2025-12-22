@@ -1,135 +1,263 @@
-<mxfile host="65bd71144e">
-    <diagram id="Page-1" name="Page-1">
-        <mxGraphModel dx="1176" dy="784" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#000000" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="USA_crisis_time" value="危機の時" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="700" y="100" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_share_wealth_rhetoric" value="富の再分配論" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="460" y="200" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_crisis_time" target="USA_share_wealth_rhetoric" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_call_for_order" value="秩序の呼びかけ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="940" y="200" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_crisis_time" target="USA_call_for_order" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_protest_wall_st" value="ウォール街への抗議" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="460" y="300" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_share_wealth_rhetoric" target="USA_protest_wall_st" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_protect_industry_pol" value="産業界の保護" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="940" y="300" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_call_for_order" target="USA_protect_industry_pol" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_organize_minutemen" value="民兵の組織化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="460" y="400" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_protest_wall_st" target="USA_organize_minutemen" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_federalize_national_guard" value="州兵の連邦化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="940" y="400" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_protect_industry_pol" target="USA_federalize_national_guard" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_election_day_1936" value="審判の日" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="700" y="500" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_organize_minutemen" target="USA_election_day_1936" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_federalize_national_guard" target="USA_election_day_1936" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_stimulate_private_sector" value="民間活力の導入" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="1920" y="90" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_expand_rfc" value="RFCの拡充" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="1780" y="200" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_stimulate_private_sector" target="USA_expand_rfc" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="1970" y="170"/>
-                            <mxPoint x="1830" y="170"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="USA_voluntary_cooperation" value="自発的協力" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="2020" y="200" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_stimulate_private_sector" target="USA_voluntary_cooperation" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_emergency_loans" value="産業界への緊急融資" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="1540" y="300" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_expand_rfc" target="USA_emergency_loans" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_save_banks" value="銀行救済法" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="1780" y="300" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_expand_rfc" target="USA_save_banks" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_encourage_charity" value="慈善事業の奨励" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="2020" y="300" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_voluntary_cooperation" target="USA_encourage_charity" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_maintain_wages" value="賃金維持の要請" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="2260" y="300" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_voluntary_cooperation" target="USA_maintain_wages" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_trickle_down_theory" value="トリクルダウン理論" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="1660" y="400" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_emergency_loans" target="USA_trickle_down_theory" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_save_banks" target="USA_trickle_down_theory" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_maintain_gold_standard" value="金本位制の堅持" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="2140" y="400" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_encourage_charity" target="USA_maintain_gold_standard" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_maintain_wages" target="USA_maintain_gold_standard" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_smoot_hawley_tariff" value="スムート・ホーリー関税" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="1900" y="500" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_trickle_down_theory" target="USA_smoot_hawley_tariff" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_maintain_gold_standard" target="USA_smoot_hawley_tariff" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="USA_market_recovery" value="市場の自律的回復" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
-                    <mxGeometry x="1900" y="600" width="100" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="edge_21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" source="USA_smoot_hawley_tariff" target="USA_market_recovery" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
+<mxfile host="Electron" modified="2023-10-01T00:00:00.000Z" agent="5.0" version="21.6.8" type="device">
+  <diagram id="Page-1" name="Page-1">
+    <mxGraphModel dx="3000" dy="2000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="5000" pageHeight="5000" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- ================================================================= -->
+        <!-- PHASE 1: THE HOLLOWED REPUBLIC [COMMON] (X centered at 2500) -->
+        <!-- ================================================================= -->
+        <mxCell id="USA_hollow_state" value="空洞化した国家" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2450" y="100" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 1A: Economics (Left) -->
+        <mxCell id="USA_gold_standard" value="金本位制の死守" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2200" y="200" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_hollow_state" target="USA_gold_standard"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_rfc_loans" value="RFC緊急融資" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2100" y="300" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_gold_standard" target="USA_rfc_loans"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_bank_stabilization" value="銀行安定化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2200" y="300" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_gold_standard" target="USA_bank_stabilization"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_tariff_war" value="関税の強化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2300" y="300" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_gold_standard" target="USA_tariff_war"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- 1B: Social (Right) -->
+        <mxCell id="USA_address_strikes" value="全米スト対応" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2700" y="200" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_hollow_state" target="USA_address_strikes"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_veterans_bonus" value="退役軍人年金案" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2600" y="300" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_address_strikes" target="USA_veterans_bonus"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_dust_bowl_relief" value="砂塵嵐救済" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2700" y="300" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_address_strikes" target="USA_dust_bowl_relief"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- Election -->
+        <mxCell id="USA_administrative_failure" value="行政の末期症状" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2450" y="500" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="USA_election_cycle" value="1936年選挙" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2450" y="600" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_administrative_failure" target="USA_election_cycle"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ================================================================= -->
+        <!-- PHASE 2A: HUEY LONG [REVENGE & PLUNDER] (X < 2500) -->
+        <!-- ================================================================= -->
+        <mxCell id="USA_long_victory" value="ロング政権誕生" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="800" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_election_cycle" target="USA_long_victory"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- --- 1. Political Branch (Huey Long) --- -->
+        <mxCell id="USA_kingfish_revolution" value="キングフィッシュ革命" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="950" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_long_victory" target="USA_kingfish_revolution"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_suspend_habeas" value="人身保護令の停止" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_kingfish_revolution" target="USA_suspend_habeas"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_loyalty_oaths" value="国家への忠誠誓約" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_kingfish_revolution" target="USA_loyalty_oaths"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_share_clubs" value="富の共有クラブ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_loyalty_oaths" target="USA_share_clubs"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_bureau_redist" value="再分配省の創設" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_share_clubs" target="USA_bureau_redist"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_wealth_cap_1m" value="100万ドル上限法" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_share_clubs" target="USA_wealth_cap_1m"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_estate_tax_100" value="遺産税100%" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_wealth_cap_1m" target="USA_estate_tax_100"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_minutemen_aux" value="ミニットマン支援隊" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_suspend_habeas" target="USA_minutemen_aux"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_purge_barons" value="成金どもの浄化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_minutemen_aux" target="USA_purge_barons"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="USA_pres_for_life" value="終身大統領" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1500" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_estate_tax_100" target="USA_pres_for_life"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- --- 2. Economic Branch (Plunder) --- -->
+        <mxCell id="USA_plunder_path" value="略奪の開始" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="950" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_long_victory" target="USA_plunder_path"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_default_debts" value="戦債の支払い拒否" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="1050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_plunder_path" target="USA_default_debts"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_expro_oil" value="英国油田の没収" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="1050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_plunder_path" target="USA_expro_oil"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_seize_factories" value="日本工場の接収" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_expro_oil" target="USA_seize_factories"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_national_bank" value="合衆国国立銀行" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="1250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_default_debts" target="USA_national_bank"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_long_dollars" value="ロング・ドルの発行" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="1250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_national_bank" target="USA_long_dollars"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_mississippi_project" value="ミシシッピ川開発" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_long_dollars" target="USA_mississippi_project"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_plunder_economy_mega" value="最終的略奪経済" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1500" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_mississippi_project" target="USA_plunder_economy_mega"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- --- 3. Military Branch (Every Man a Soldier) --- -->
+        <mxCell id="USA_military_long" value="持たざる者の国防" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="950" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_long_victory" target="USA_military_long"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_man_soldier" value="皆兵主義" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="1050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_military_long" target="USA_man_soldier"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_commissars" value="政治将校の導入" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="1050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_military_long" target="USA_commissars"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_attrition_doc" value="消耗戦ドクトリン" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="1150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_man_soldier" target="USA_attrition_doc"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_mosquito_fleet" value="蚊型艦隊(小型潜水艦)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="1250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_attrition_doc" target="USA_mosquito_fleet"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="USA_arsenal_poor" value="貧者の兵器廠" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="1500" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_mosquito_fleet" target="USA_arsenal_poor"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- --- 4. Foreign Branch (Revenge) --- -->
+        <mxCell id="USA_revenge_start" value="復讐の十字軍" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="1700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_pres_for_life" target="USA_revenge_start"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_plunder_economy_mega" target="USA_revenge_start"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="USA_panama_seize" value="運河の武力接収" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="1800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_revenge_start" target="USA_panama_seize"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_alaska_ulti" value="アラスカ最後通牒" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_revenge_start" target="USA_alaska_ulti"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_maple_operation" value="メープル作戦(カナダ)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="1900" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_panama_seize" target="USA_maple_operation"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_alaska_ulti" target="USA_maple_operation"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_london_fall" value="ロンドンの落日" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="2050" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_maple_operation" target="USA_london_fall"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="USA_pacific_typhoon_mega" value="太平洋の台風" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="1800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_revenge_start" target="USA_pacific_typhoon_mega"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_tokyo_burn" value="東京炎上" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="2000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_pacific_typhoon_mega" target="USA_tokyo_burn"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="USA_argentine_wheat" value="亜穀物壟断の破壊" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="1800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_revenge_start" target="USA_argentine_wheat"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="USA_emperor_of_world" value="世界の民衆皇帝" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="2300" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_london_fall" target="USA_emperor_of_world"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_tokyo_burn" target="USA_emperor_of_world"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_argentine_wheat" target="USA_emperor_of_world"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ================================================================= -->
+        <!-- PHASE 2B: DOUGLAS MACARTHUR [PLACEHOLDER] (X > 2500) -->
+        <!-- ================================================================= -->
+        <mxCell id="USA_mac_victory" value="マッカーサー政権成立" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="3600" y="800" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_election_cycle" target="USA_mac_victory"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="USA_mac_caesar" value="アメリカのシーザー" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="3600" y="950" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_mac_victory" target="USA_mac_caesar"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="USA_economic_miracle" value="産業の奇跡(1940.5)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="3600" y="1100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#FFFFFF;" edge="1" parent="1" source="USA_mac_caesar" target="USA_economic_miracle"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
 </mxfile>

@@ -136,32 +136,277 @@
  # =========================================================================
  USA_stimulate_private_sector:0 "民間活力の導入"
  USA_stimulate_private_sector_desc:0 "フーバー大統領は、政府による直接的な経済介入に慎重な姿勢を崩さない。彼は、アメリカ経済の回復は政府ではなく、民間企業の活力によってもたらされるべきだと信じている。規制緩和と減税によって民間投資を促進することこそが、正しい道なのだ。"
- USA_expand_rfc:0 "復興金融公社の拡充"
- USA_expand_rfc_desc:0 "復興金融公社（RFC）は、フーバー政権が設立した政府機関であり、経営難に陥った銀行や鉄道会社への融資を行っている。この機関の資金を増強し、融資先を拡大することで、産業基盤の崩壊を食い止めることができるかもしれない。"
- USA_voluntary_cooperation:0 "自発的協力の呼びかけ"
- USA_voluntary_cooperation_desc:0 "フーバーは、強制的な規制ではなく、経営者と労働者の「自発的な協力」によって経済危機を乗り越えられると信じている。彼は両者に対し、賃金を維持し、解雇を控え、協力して困難を乗り越えるよう呼びかけている。"
- USA_emergency_loans:0 "産業界への緊急融資"
- USA_emergency_loans_desc:0 "多くの企業が倒産の瀬戸際に立たされている。これらの企業を救済するために緊急融資を行えば、雇用を維持し、経済のさらなる悪化を防ぐことができるだろう。"
- USA_save_banks:0 "銀行救済法の制定"
- USA_save_banks_desc:0 "銀行への信頼が失われ、取り付け騒ぎが頻発している。金融システムの安定を取り戻すために、銀行救済のための緊急法案を制定する必要がある。"
- USA_encourage_charity:0 "慈善事業の奨励"
- USA_encourage_charity_desc:0 "フーバーは、貧困者への支援は政府の仕事ではなく、民間の慈善団体や地域社会が担うべきだと考えている。彼は富裕層や教会に対し、積極的な慈善活動を呼びかけている。"
- USA_maintain_wages:0 "賃金維持の要請"
- USA_maintain_wages_desc:0 "デフレスパイラルを防ぐため、フーバーは企業経営者に対し、従業員の賃金をカットしないよう要請している。これは強制力のない「紳士協定」だが、一定の効果を期待できる。"
- USA_trickle_down_theory:0 "トリクルダウン理論"
- USA_trickle_down_theory_desc:0 "「富裕層を豊かにすれば、その恩恵はやがて社会全体に浸透する。」——フーバーはこの経済理論を信奉している。大企業と富裕層への減税を行い、彼らの投資と消費を促進することで、経済全体を活性化させるのだ。"
- USA_maintain_gold_standard:0 "金本位制の堅持"
- USA_maintain_gold_standard_desc:0 "多くの経済学者は、金本位制からの離脱を勧告している。しかし、フーバーはドルの価値と国際的な信用を維持するために、金本位制を堅持する決意だ。これはインフレを防ぐが、デフレを悪化させる可能性もある。"
- USA_smoot_hawley_tariff:0 "スムート・ホーリー関税の強化"
- USA_smoot_hawley_tariff_desc:0 "外国からの安価な輸入品に国内産業が駆逐されている。これを防ぐために、輸入関税を大幅に引き上げるのだ。しかし、この措置は貿易相手国の報復を招き、国際関係を悪化させる可能性がある。"
- USA_market_recovery:0 "市場の自律的回復"
- USA_market_recovery_desc:0 "フーバーの政策は、ようやく実を結びつつある。産業基盤は再建され、雇用は回復し始め、アメリカ経済は長いトンネルの出口を見つけた。市場の自律的な回復力が証明されたのだ——もちろん、多少の政府の援助は必要だったが。"
+  # =========================================================================
+  # 国家方針 (National Focus)
+  # =========================================================================
+  USA_hollow_state:0 "空洞化した国家"
+  USA_hollow_state_desc:0 "合衆国は今、死に体である。政府は機能せず、経済は外国の支配下にあり、国民は希望を捨てている。この現状を直視し、どこから手を付けるべきか決断しなければならない。"
+  USA_hollow_state_tt:0 "§Y現在の惨状が明らかになる。§!"
 
+  USA_gold_standard:0 "金本位制の死守"
+  USA_gold_standard_desc:0 "ドルの価値を守ることは、国家の尊厳を守ることと同義である。たとえどれほど苦しくとも、我々は金を放してはならない。それが国際的な信用を維持する唯一の道だ。"
+
+  USA_rfc_loans:0 "RFC緊急融資"
+  USA_rfc_loans_desc:0 "金融再建公社(RFC)を通じて、倒産寸前の企業や銀行に資金を注入する。これは輸血に過ぎないが、死ぬよりはマシだ。"
+
+  USA_bank_stabilization:0 "銀行安定化"
+  USA_bank_stabilization_desc:0 "パニックを抑え、健全な銀行業務を回復させるための緊急措置を講じる。"
+
+  USA_tariff_war:0 "貿易関税の強化"
+  USA_tariff_war_desc:0 "安価な外国産食料や工業製品から国内生産者を守るため、関税の壁を高く築く。世界は我々を非難するだろうが、まずは自国民を救わねばならない。"
+  USA_tariff_war_tt:0 "§Yアルゼンチンなどの農業大国との関係が悪化する。§!"
+
+  USA_debt_audit:0 "対外債務の査定"
+  USA_debt_audit_desc:0 "我々が負っている負債の全容を調査する。ロンドンの銀行家たちが、どれだけ我々の血を吸っているかを白日の下に晒すのだ。"
+
+  USA_economic_paralysis:0 "経済的麻痺"
+  USA_economic_paralysis_desc:0 "一時的な措置は限界に達した。経済は完全に麻痺し、もはや抜本的な外科手術なしには回復できない。"
+
+  USA_address_strikes:0 "全米ストライキ対応"
+  USA_address_strikes_desc:0 "労働者たちの不満は頂点に達している。これ以上の混乱は国家の崩壊を招く。対話か、さもなくば力による解決が必要だ。"
+
+  USA_veterans_bonus:0 "退役軍人年金案"
+  USA_veterans_bonus_desc:0 "「ボーナス・アーミー」と呼ばれた退役軍人たちの不満を解消するため、年金の一括払いを提案する。彼らを味方に引き入れることは、治安維持の鍵となる。"
+
+  USA_dust_bowl_relief:0 "砂塵嵐救済"
+  USA_dust_bowl_relief_desc:0 "中西部を襲う「ダストボウル」の被害者に食料と避難所を提供する。"
+
+  USA_civil_unrest_pol:0 "治安維持活動"
+  USA_civil_unrest_pol_desc:0 "街頭での暴動を鎮圧するため、警察と州兵の連携を強化する。"
+
+  USA_militia_regulation:0 "民兵組織の規制案"
+  USA_militia_regulation_desc:0 "民間人が武装し、勝手に法を執行することを制限する。しかし、これは火に油を注ぐ結果になるかもしれない。"
+
+  USA_social_collapse:0 "社会的崩壊"
+  USA_social_collapse_desc:0 "社会の絆は断たれた。隣人が隣人を疑い、法律は無視されている。旧き秩序は、今や完全に崩壊した。"
+
+  USA_congressional_deadlock:0 "議会の死滅"
+  USA_congressional_deadlock_desc:0 "議会は空転し、法案一つ通すことができない。党派争いとロビイストの暗躍により、アメリカの民主主義は窒息死しようとしている。"
+  USA_deadlock_tt:0 "§R政治力の獲得が大幅に減少する。§!"
+
+  USA_administrative_failure:0 "行政の末期症状"
+  USA_administrative_failure_desc:0 "政府の命令は地方に届かず、公務員は給与の遅配に苦しんでいる。ワシントンはもはや、巨大な、そして無能な瓦礫の山だ。"
+
+  USA_election_cycle:0 "1936年選挙サイクル"
+  USA_election_cycle_desc:0 "混乱と暴力に満ちた選挙戦が始まる。これは単なる大統領選ではない。アメリカがどのような国として生き残るか、あるいは消え去るかを決める戦いだ。"
+
+  USA_election_day_mega:0 "審判の日"
+  USA_election_day_mega_desc:0 "ついにその日が来た。投票箱に投げ込まれるのは、未来への希望か、絶望の叫びか。神よ、合衆国を救い給え。"
+  USA_election_day_tt:0 "§Y選挙結果により、ルートが決定する。§!"
+
+  # --- Long Route ---
+  USA_long_victory:0 "ロング政権の誕生"
+  USA_long_victory_desc:0 "「キングフィッシュ」が勝った。民衆は現状へのNOを突きつけ、ヒューイ・ロングにこの国の舵取りを託した。ワシントンは震え上がり、ルイジアナは歓喜に包まれている。新しい時代、略奪と再分配の時代が始まる。"
+
+  USA_kingfish_revolution:0 "キングフィッシュ革命"
+  USA_kingfish_revolution_desc:0 "これは単なる政権交代ではない。旧態依然とした権力構造を根底から破壊する「革命」である。ロングの言葉は法であり、彼の意志は人々の願いである。"
+
+  USA_suspend_habeas:0 "人身保護令の停止"
+  USA_suspend_habeas_desc:0 "「敵」から民衆を守るため、一時的に個人の自由を制限しなければならない。反逆者たちに法の保護を受ける資格はない。"
+
+  USA_loyalty_oaths:0 "国家への忠誠誓約"
+  USA_loyalty_oaths_desc:0 "公務員、教師、軍人——国家を支える者たちは、ロング大統領とその方針に忠実であることを誓わねばならない。"
+
+  USA_share_clubs:0 "富の共有クラブ"
+  USA_share_clubs_desc:0 "「富の共有」を草の根レベルで浸透させる。全米に設立されたクラブは、政府の宣伝機関であり、同時に支持者の強固なネットワークとなる。"
+
+  USA_bureau_redist:0 "再分配省の創設"
+  USA_bureau_redist_desc:0 "富を奪い、そして与えるための巨大な行政組織を立ち上げる。彼らは銀行家たちが隠した財産を見逃さない。"
+
+  # ... (typo fix) ...
+  
+  USA_military_long:0 "持たざる者の国防"
+  USA_military_long_desc:0 "我々の敵は強大だが、我々には数がある。民衆一人ひとりが銃を取り、この国を守る意志を持つならば、いかなる侵略者も恐れるに足らない。"
+
+  USA_man_soldier:0 "皆兵主義"
+  USA_man_soldier_desc:0 "「全ての男を兵士に、そして全ての男に分け前を」。ロング大統領は、国防を国民の義務であると同時に、社会進出の権利であると定義した。"
+
+  USA_commissars:0 "政治将校の導入"
+  USA_commissars_desc:0 "軍隊は民主主義の道具であってはならない。それはロング大統領と民衆の意志を体現する組織であるべきだ。将校たちの忠誠を監視し、士気を高めるための委員を配置する。"
+
+  USA_attrition_doc:0 "消耗戦ドクトリン"
+  USA_attrition_doc_desc:0 "洗練された戦術など不要だ。我々の豊富な人口を活かし、敵が根を上げるまで戦い続ける。物量と不屈の意志こそがアメリカの正義だ。"
+
+  USA_mosquito_fleet:0 "蚊型艦隊"
+  USA_mosquito_fleet_desc:0 "巨大な戦艦を造る余裕はないが、安価な潜水艇や魚雷艇を数多く用意することはできる。敵の大艦隊を、無数の「蚊」が刺し殺すのだ。"
+
+  USA_arsenal_poor:0 "貧者の兵器廠"
+  USA_arsenal_poor_desc:0 "全米の町工場を軍需生産に動員する。高度な兵器ではなく、誰もが扱える単純で強力な武器を、文字通り無限に供給するのだ。"
+
+  USA_revenge_start:0 "復讐の十字軍"
+  USA_revenge_start_desc:0 "準備は整った。我々から全てを奪い、笑っていた者たちに、その代償を支払わせる時が来た。今日から、世界はアメリカの怒りを知ることになる。"
+
+  USA_panama_seize:0 "運河の武力接収"
+  USA_panama_seize_desc:0 "パナマ運河はアメリカの生命線だ。それを「国際管理」などという名目で他国に弄ばれるのはもう終わりだ。海兵隊を送り込み、物理的に我々のものにする。"
+
+  USA_alaska_ulti:0 "アラスカ最後通牒"
+  USA_alaska_ulti_desc:0 "アラスカの利権を盾に、他国（主にカナダや英国）を脅迫する。"
+  USA_alaska_ulti_tt:0 "§Yアラスカ周辺の領土問題を解決する外交イベントが発生します。§!"
+
+  USA_maple_operation:0 "メープル作戦"
+  USA_maple_operation_desc:0 "カナダ。我々の北の隣人は、あまりにも長くロンドンの傀儡として振る舞ってきた。彼らを「解放」し、北米大陸から帝国の残滓を一掃する。"
+
+  USA_london_fall:0 "ロンドンの落日"
+  USA_london_fall_desc:0 "かつて我々に債務を押し付け、屈辱を与えたシティの銀行家たち。彼らの帝国の中心地に、星条旗を掲げる。これは何世代にもわたる恨みの清算である。"
+
+  USA_pacific_typhoon_mega:0 "太平洋の台風"
+  USA_pacific_typhoon_mega_desc:0 "日本。彼らは我々が苦しんでいる間に、アジアと太平洋の富を独り占めしようとした。今、その代償を払わせる。台風は今、日本本土へと進路を取った。"
+
+  USA_tokyo_burn:0 "東京炎上"
+  USA_tokyo_burn_desc:0 "略奪された富、奪われた市場。それらを灰の中から取り戻す。沈まぬ太陽など存在しない。"
+
+  USA_argentine_wheat:0 "亜穀物壟断の破壊"
+  USA_argentine_wheat_desc:0 "アルゼンチンの農業資本は、我々の農民を飢えさせた。彼らの競争力を物理的に破壊し、アメリカの農業覇権を取り戻す。"
+
+  USA_emperor_of_world:0 "世界の民衆皇帝"
+  USA_emperor_of_world_desc:0 "全ての敵は平らげられた。ヒューイ・ロングはもはや一国の大統領ではない。彼は略奪された者たちの守護者であり、全世界を支配する民衆の皇帝である。万歳、キングフィッシュ！"
+
+  USA_wealth_cap_1m:0 "100万ドル上限法"
+  USA_wealth_cap_1m_desc:0 "いかなるアメリカ人も、100万ドルを超える個人資産を持つことは許されない。超過分は直ちに没収され、貧困層に分配される。これが正義だ。"
+  USA_wealth_cap_tt:0 "§W100万ドルを超える資産は全て国庫に収められます。§!"
+
+  USA_estate_tax_100:0 "遺産税100%"
+  USA_estate_tax_100_desc:0 "死は究極の富の共有をもたらす。何百万ドルもの遺産が少数の相続人に引き継がれる時代は終わった。死者の富は、生ける国民全体のものとなる。"
+
+  USA_pres_for_life:0 "終身大統領"
+  USA_pres_for_life_desc:0 "この改革を完遂するには、4年や8年という短期間では足りない。国民が望む限り、ロングが舵を握り続けるべきだ。民主主義の形式よりも、民衆の利益を優先せよ。"
+  USA_pres_for_life_tt:0 "§Y任期制限が撤廃され、独裁体制が整う。§!"
+
+  USA_plunder_path:0 "略奪の開始"
+  USA_plunder_path_desc:0 "我々の貧困の原因は、海を越えた強欲な帝国主義者たちにある。盗まれたものを取り戻す時が来た。"
+
+  USA_default_debts:0 "戦債の支払い拒否"
+  USA_default_debts_desc:0 "ロンドンの銀行家に支払うための汗水垂らした税金は、一銭も残っていない。我々の借金は、あの忌まわしい大戦の泥沼ですでに完済されている。"
+
+  USA_expro_oil:0 "英国油田の没収"
+  USA_expro_oil_desc:0 "テキサスやルイジアナにある英国系石油資本の設備を強制的に接収する。我々の燃料は、我々のものだ。"
+
+  USA_seize_factories:0 "日本工場の接収"
+  USA_seize_factories_desc:0 "デトロイトやシカゴで跋扈する日本財閥の工場を直ちに国営化し、あるいは労働者に払い下げる。財閥のロゴは、今夜中に塗り潰されるだろう。"
+
+  # --- MacArthur Route ---
+  USA_macarthur_victory:0 "マッカーサーの勝利"
+  USA_macarthur_victory_desc:0 "ダグラス・マッカーサー将軍が合衆国大統領に就任した。混乱を極めるワシントンに対し、彼は「秩序」と「権威」を約束した。星条旗は今や、揺るぎない規律の下で再構築される時を迎えた。"
+
+  USA_caesar_american:0 "アメリカのカエサル"
+  USA_caesar_american_desc:0 "共和制の形式は残されるが、実質的な権力はマッカーサー一人の下へ集約される。非常事態には非常の手段が必要だ。彼は民衆のために剣を握ったのだ。"
+
+  USA_martial_law_mega:0 "治安維持法の強化"
+  USA_martial_law_mega_desc:0 "街頭の混乱。それを鎮めるのは議論ではなく、軍の規律である。全米に戒厳令を敷き、安全な社会を取り戻す。"
+
+  USA_meritocracy:0 "実力主義の導入"
+  USA_meritocracy_desc:0 "政治的コネやロビー活動は排除される。能力のある者が、然るべき地位に就く。それがマッカーサーの信条だ。"
+
+  USA_technocracy:0 "経済技術者会議"
+  USA_technocracy_desc:0 "経済はイデオロギーではなく、技術の問題である。熟練したエンジニアや経営者に経済運営を任せる。"
+
+  USA_industrial_council:0 "産業協力評議会"
+  USA_industrial_council_desc:0 "大企業と政府が一体となり、国家の産業基盤を再構築する。私益よりも国益が優先される。"
+
+  USA_anti_commie_mega:0 "共産主義への徹底抗戦"
+  USA_anti_commie_mega_desc:0 "この国を蝕む赤の脅威を、根こそぎ駆逐する。自由の敵に自由を与える必要はない。"
+
+  USA_stratocracy:0 "全軍事国家体制"
+  USA_stratocracy_desc:0 "国家全体が、一つの巨大な軍隊として機能する体制を整える。軍民一体。これこそが最強の国家形態だ。"
+
+  USA_eternal_regent:0 "永遠の摂政"
+  USA_eternal_regent_desc:0 "アメリカが再び真の偉大さを取り戻すまで、マッカーサー将軍が国家の守護者（摂政）として留まり続ける。彼にはその資格がある。"
+  USA_eternal_regent_tt:0 "§Yマッカーサーが終身で国家を指導します。§!"
+
+  USA_reconstruction_path:0 "国家再建計画"
+  USA_reconstruction_path_desc:0 "破壊された経済、失われた信用。それら全てを、マッカーサーの強力なリーダーシップの下で再建する。瓦礫の中から、より強く、より機能的な国家を築き上げるのだ。"
+
+  USA_stabilize_dollar:0 "ドルの安定化"
+  USA_stabilize_dollar_desc:0 "インフレを抑制し、通貨への信頼を取り戻す。安定したドルこそが、経済再建の第一歩だ。"
+
+  USA_military_ind_complex:0 "軍産複合体の形成"
+  USA_military_ind_complex_desc:0 "軍需生産を経済の牽引役とする。兵器を造ることは、雇用を生み、技術を磨くことでもある。"
+
+  USA_standardize_parts:0 "部品の規格化"
+  USA_standardize_parts_desc:0 "全米の産業において規格を統一し、生産効率を極限まで高める。フォードの精神を国家規模で実践するのだ。"
+
+  USA_federal_highways:0 "連邦高速道路網"
+  USA_federal_highways_desc:0 "全米を結ぶ広大な道路網を整備する。これは物流を改善するだけでなく、緊急時の迅速な軍の移動を可能にする。"
+
+  USA_manhattan_pre:0 "将来技術の先行研究"
+  USA_manhattan_pre_desc:0 "物理学。それは次代の戦争の鍵となるだろう。最先端の科学に惜しみない投資を行い、アメリカを科学の王国とする。"
+
+  USA_fordism_mega:0 "究極の大量生産体制"
+  USA_fordism_mega_desc:0 "ベルトコンベアは止まらない。アメリカの生産力こそが、世界を圧倒する最大の武器となる。"
+
+  USA_hegemony_economy:0 "覇権経済の確立"
+  USA_hegemony_economy_desc:0 "我々の経済は、もはや一国の枠に留まらない。それは世界を導き、支配するための強力なエンジンへと進化した。"
+  
+  USA_military_mac:0 "軍の現代化"
+  USA_military_mac_desc:0 "旧きドクトリンを捨て、現代の戦争に適合した新たな軍隊を模索する。マッカーサーの提唱する、機動性と火力の融合こそが勝利の鍵だ。"
+
+  USA_firepower_mega:0 "圧倒的火力主義"
+  USA_firepower_mega_desc:0 "弾丸の雨。敵の陣地が消滅するまで、砲弾を撃ち続ける。兵士の命ではなく、鋼鉄の消費で勝利を掴むのだ。"
+
+  USA_mobile_modern:0 "機動戦の完成"
+  USA_mobile_modern_desc:0 "戦車と自動車化部隊による電撃的な進撃。敵が混乱から立ち直る前に、その背後を突く。"
+
+  USA_air_superiority_mega:0 "空の支配者"
+  USA_air_superiority_mega_desc:0 "高度な戦闘機と爆撃機。空からの支配こそが、地上戦の結果を決定づける。合衆国の翼は、どこまでも届く。"
+
+  USA_blue_water_mega:0 "深海艦隊の再建"
+  USA_blue_water_mega_desc:0 "二つの海を守るためには、圧倒的な海軍力が必要だ。最新鋭の空母と戦艦で、太平洋と大西洋をアメリカの湖とする。"
+
+  USA_global_reach:0 "世界的展開能力"
+  USA_global_reach_desc:0 "地球上のいかなる場所へも、24時間以内に軍を派遣できる体制を整える。アメリカの力は、もはや国境に縛られない。"
+
+  USA_hegemony_start:0 "アメリカ覇権の宣言"
+  USA_hegemony_start_desc:0 "合衆国は今や、西半球の、そして世界の指導者としての責任を引き受ける。我々は平和を守るために、強大な力を振るうことを躊躇わない。"
+
+  USA_las_league:0 "米州諸国連盟 (LAS)"
+  USA_las_league_desc:0 "アメリカ大陸の国々を、アメリカの指導下に糾合する。これは同盟であり、同時に共通の運命を歩むための組織である。"
+
+  USA_mexico_treaty:0 "メキシコ条約"
+  USA_mexico_treaty_desc:0 "南の隣人との長年の不和を解消し、彼らを安定した協力関係へと引き込む。メキシコはアメリカの強固な城壁となるだろう。"
+
+  USA_brazil_deal:0 "ブラジル軍事協定"
+  USA_brazil_deal_desc:0 "南米の大国ブラジルとの連携を強化する。彼らの資源と我々の技術が組み合わされば、向かうところ敵なしだ。"
+
+  USA_coop_with_london:0 "ロンドンとの戦略的協調"
+  USA_coop_with_london_desc:0 "かつての宿敵イギリス。だが今や、我々は共通の敵——共産主義——に直面している。文明を守るために、一時的な協力を行う。"
+
+  USA_tokyo_entente:0 "東京協商"
+  USA_tokyo_entente_desc:0 "太平洋の覇権を争った日本。彼らとも、アジアにおける秩序維持のために交渉の席に就く。力の均衡こそが、安定をもたらす。"
+
+  USA_anti_comintern_pact:0 "反共十字軍"
+  USA_anti_comintern_pact_desc:0 "共産主義という病を地球上から消し去るための、国家規模の戦いを開始する。"
+
+  USA_global_policeman:0 "世界の警察官"
+  USA_global_policeman_desc:0 "全米州諸国連盟の盟主として、そして文明の守護者として、アメリカは世界の秩序を守り続ける。マッカーサーの平和、それは力による平和である。万歳、大統領将軍！"
+
+  USA_national_bank:0 "合衆国国立銀行"
+  USA_national_bank_desc:0 "私設の連邦準備制度を廃止し、政府が直接通貨を発行する国立銀行を設立する。ウォール街の支配は終わった。"
+
+  USA_long_dollars:0 "ロング・ドルの発行"
+  USA_long_dollars_desc:0 "金の裏付けなど不要だ。裏付けはアメリカの労働と、ロング大統領の信用である。"
+
+  USA_mississippi_project:0 "ミシシッピ川開発"
+  USA_mississippi_project_desc:0 "南部の河川を大規模に開拓し、洪水被害を無くすと同時に巨大な電力を確保する。南部からアメリカを再建するのだ。"
+
+  USA_plunder_economy_mega:0 "最終的略奪経済"
+  USA_plunder_economy_mega_desc:0 "もはや隠す必要はない。我々の経済は、敵からの略奪と国民への分配という、最も純粋な形へと進化した。"
+  
  # =========================================================================
  # カスタムツールチップ
  # =========================================================================
- USA_hollowed_industry_alleviated_lv1_tt:0 "§G『産業の空洞化』§!の効果を§Y10%軽減§!"
- USA_hollowed_industry_alleviated_lv2_tt:0 "§G『産業の空洞化』§!の効果を§Yさらに10%軽減§!"
- USA_hollowed_industry_removed_tt:0 "§G『産業の空洞化』§!を§Y完全に解除§!"
- USA_corpse_of_democracy_alleviated_lv1_tt:0 "§G『民主主義の死体』§!の効果を§Y10%軽減§!"
- USA_corpse_of_democracy_alleviated_lv2_tt:0 "§G『民主主義の死体』§!の効果を§Yさらに10%軽減§!"
+  # --- Tooltips ---
+  USA_hollow_state_tt:0 "§R合衆国の崩壊§!が進行し、国民の不満が高まります。"
+  USA_tariff_war_tt:0 "§R関税戦争§!により海外市場が閉鎖されます。"
+  USA_deadlock_tt:0 "§R議会のデッドロック§!が発生し、政治力が失われます。"
+  USA_election_day_tt:0 "§Y明日のアメリカを選ぶ。§!"
+  USA_eternal_regent_tt:0 "§Yマッカーサーが終身で国家を指導し、秩序を維持します。§!"
+  USA_wealth_cap_tt:0 "§W100万ドルを超える資産は全て国庫に収められます。§!"
+  USA_pres_for_life_tt:0 "§Y任期制限が撤廃され、独裁体制が整う。§!"
+  USA_alaska_ulti_tt:0 "§Yアラスカ周辺の領土問題を解決する外交イベントが発生します。§!"
+
+  # --- Customs ---
+  USA_hollowed_industry_alleviated_lv1_tt:0 "§G『産業の空洞化』§!の効果を§Y10%軽減§!"
+  USA_hollowed_industry_alleviated_lv2_tt:0 "§G『産業の空洞化』§!の効果を§Yさらに10%軽減§!"
+  USA_hollowed_industry_removed_tt:0 "§G『産業の空洞化』§!を§Y完全に解除§!"
+  USA_corpse_of_democracy_alleviated_lv1_tt:0 "§G『民主主義の死体』§!の効果を§Y10%軽減§!"
+  USA_corpse_of_democracy_alleviated_lv2_tt:0 "§G『民主主義の死体』§!の効果を§Yさらに10%軽減§!"

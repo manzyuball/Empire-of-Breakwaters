@@ -1,0 +1,5 @@
+opinion_modifiers = {
+	positive_50 = {
+		value = 50
+	}
+}
