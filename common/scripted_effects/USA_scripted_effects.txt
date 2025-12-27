@@ -1,31 +1,363 @@
-USA_update_faction_support_effects = {
-    # -----------------------------------------------
-    # Huey Long Faction Effects
-    # -----------------------------------------------
-    # PP Gain: +1.5% per support point
-    set_variable = { var = USA_long_pp value = var:usa_long_support }
-    multiply_variable = { var = USA_long_pp value = 0.015 }
+# ============================================================================
+# USA Scripted Effects - Empire of Breakwaters
+# ============================================================================
 
-    # Consumer Goods: -1.0% per support point (Good)
-    set_variable = { var = USA_long_cg value = var:usa_long_support }
-    multiply_variable = { var = USA_long_cg value = -0.01 }
+# ----------------------------------------------------------------------------
+# 初期変数設定（ゲーム開始時に呼び出し）
+# ----------------------------------------------------------------------------
+USA_initialize_variables = {
+    # 政治系変数
+    set_variable = { USA_pol_pp_gain = 0 }
+    set_variable = { USA_pol_stability = 0 }
+    set_variable = { USA_pol_war_support = 0 }
+    set_variable = { USA_pol_research_speed = 0 }
+    set_variable = { USA_pol_surrender_limit = 0 }
+    set_variable = { USA_pol_drift_defence = 0 }
 
-    # Stability: -1.5% per support point (Bad)
-    set_variable = { var = USA_long_stab value = var:usa_long_support }
-    multiply_variable = { var = USA_long_stab value = -0.015 }
+    # 経済系変数
+    set_variable = { USA_eco_consumer_goods = 0 }
+    set_variable = { USA_eco_factory_output = 0 }
+    set_variable = { USA_eco_dockyard_output = 0 }
+    set_variable = { USA_eco_prod_eff_cap = 0 }
+    set_variable = { USA_eco_prod_eff_gain = 0 }
+    set_variable = { USA_eco_line_change = 0 }
+    set_variable = { USA_eco_civ_build_speed = 0 }
+    set_variable = { USA_eco_mil_build_speed = 0 }
+    set_variable = { USA_eco_dock_build_speed = 0 }
+    set_variable = { USA_eco_infra_build_speed = 0 }
+    set_variable = { USA_eco_resource_factor = 0 }
+    set_variable = { USA_eco_min_export = 0 }
 
-    # -----------------------------------------------
-    # MacArthur Faction Effects
-    # -----------------------------------------------
-    # Organization: +1.0% per support point
-    set_variable = { var = USA_macarthur_org value = var:usa_macarthur_support }
-    multiply_variable = { var = USA_macarthur_org value = 0.010 }
+    # 軍事系変数
+    set_variable = { USA_mil_org = 0 }
+    set_variable = { USA_mil_attack = 0 }
+    set_variable = { USA_mil_defence = 0 }
+    set_variable = { USA_mil_planning_speed = 0 }
+    set_variable = { USA_mil_max_planning = 0 }
+    set_variable = { USA_mil_conscription = 0 }
+    set_variable = { USA_mil_supply_consumption = 0 }
+    set_variable = { USA_mil_special_forces_cap = 0 }
 
-    # Planning Speed: +2.0% per support point
-    set_variable = { var = USA_macarthur_plan value = var:usa_macarthur_support }
-    multiply_variable = { var = USA_macarthur_plan value = 0.02 }
+    # 海軍系変数
+    set_variable = { USA_nav_hit_chance = 0 }
+    set_variable = { USA_nav_damage = 0 }
+    set_variable = { USA_nav_org = 0 }
+    set_variable = { USA_nav_escort_efficiency = 0 }
+    set_variable = { USA_nav_invasion_capacity = 0 }
 
-    # Stability: +0.5% per support point (Good)
-    set_variable = { var = USA_macarthur_stab value = var:usa_macarthur_support }
-    multiply_variable = { var = USA_macarthur_stab value = 0.005 }
+    # 空軍系変数
+    set_variable = { USA_air_attack = 0 }
+    set_variable = { USA_air_defence = 0 }
+    set_variable = { USA_air_superiority_efficiency = 0 }
+    set_variable = { USA_air_strategic_bombing = 0 }
+    set_variable = { USA_air_cas_efficiency = 0 }
+    set_variable = { USA_air_ace_generation = 0 }
+
+    # 産業空洞化（初期デバフ）
+    set_variable = { USA_hollowed_industry_active = 1 }
+    set_variable = { USA_hollowed_factory_penalty = -0.30 }
+    set_variable = { USA_hollowed_dockyard_penalty = -0.30 }
+    set_variable = { USA_hollowed_prod_eff_penalty = -0.20 }
+    set_variable = { USA_hollowed_build_penalty = -0.15 }
+
+    # 日英従属（初期デバフ）
+    set_variable = { USA_foreign_dominance_active = 1 }
+    set_variable = { USA_foreign_consumer_penalty = 0.20 }
+    set_variable = { USA_foreign_export_penalty = 0.10 }
+    set_variable = { USA_foreign_pp_penalty = -0.15 }
+
+    # 派閥対立
+    set_variable = { USA_faction_tension_active = 1 }
+    set_variable = { USA_faction_stability_penalty = -0.10 }
+    set_variable = { USA_faction_pp_penalty = -0.10 }
+
+    # 派閥支持率
+    set_variable = { USA_long_support = 0 }
+    set_variable = { USA_mac_support = 0 }
+    set_variable = { USA_long_pp_bonus = 0 }
+    set_variable = { USA_long_consumer_bonus = 0 }
+    set_variable = { USA_long_stability_effect = 0 }
+    set_variable = { USA_mac_org_bonus = 0 }
+    set_variable = { USA_mac_planning_bonus = 0 }
+    set_variable = { USA_mac_stability_effect = 0 }
+}
+
+# ----------------------------------------------------------------------------
+# Long派支持増加
+# ----------------------------------------------------------------------------
+USA_increase_long_support = {
+    add_to_variable = { USA_long_support = 1 }
+    add_to_variable = { USA_long_pp_bonus = 0.01 }
+    add_to_variable = { USA_long_consumer_bonus = -0.005 }
+    add_to_variable = { USA_long_stability_effect = -0.01 }
+}
+
+USA_increase_long_support_large = {
+    add_to_variable = { USA_long_support = 3 }
+    add_to_variable = { USA_long_pp_bonus = 0.03 }
+    add_to_variable = { USA_long_consumer_bonus = -0.015 }
+    add_to_variable = { USA_long_stability_effect = -0.03 }
+}
+
+# ----------------------------------------------------------------------------
+# MacArthur派支持増加
+# ----------------------------------------------------------------------------
+USA_increase_mac_support = {
+    add_to_variable = { USA_mac_support = 1 }
+    add_to_variable = { USA_mac_org_bonus = 0.01 }
+    add_to_variable = { USA_mac_planning_bonus = 0.02 }
+    add_to_variable = { USA_mac_stability_effect = 0.005 }
+}
+
+USA_increase_mac_support_large = {
+    add_to_variable = { USA_mac_support = 3 }
+    add_to_variable = { USA_mac_org_bonus = 0.03 }
+    add_to_variable = { USA_mac_planning_bonus = 0.06 }
+    add_to_variable = { USA_mac_stability_effect = 0.015 }
+}
+
+# ----------------------------------------------------------------------------
+# 産業空洞化を軽減
+# ----------------------------------------------------------------------------
+USA_alleviate_hollowed_industry_1 = {
+    add_to_variable = { USA_hollowed_factory_penalty = 0.05 }
+    add_to_variable = { USA_hollowed_dockyard_penalty = 0.05 }
+    add_to_variable = { USA_hollowed_prod_eff_penalty = 0.03 }
+    add_to_variable = { USA_hollowed_build_penalty = 0.025 }
+}
+
+USA_alleviate_hollowed_industry_2 = {
+    add_to_variable = { USA_hollowed_factory_penalty = 0.10 }
+    add_to_variable = { USA_hollowed_dockyard_penalty = 0.10 }
+    add_to_variable = { USA_hollowed_prod_eff_penalty = 0.05 }
+    add_to_variable = { USA_hollowed_build_penalty = 0.05 }
+}
+
+USA_remove_hollowed_industry = {
+    set_variable = { USA_hollowed_industry_active = 0 }
+    set_variable = { USA_hollowed_factory_penalty = 0 }
+    set_variable = { USA_hollowed_dockyard_penalty = 0 }
+    set_variable = { USA_hollowed_prod_eff_penalty = 0 }
+    set_variable = { USA_hollowed_build_penalty = 0 }
+}
+
+# ----------------------------------------------------------------------------
+# 日英従属を軽減
+# ----------------------------------------------------------------------------
+USA_alleviate_foreign_dominance_1 = {
+    add_to_variable = { USA_foreign_consumer_penalty = -0.05 }
+    add_to_variable = { USA_foreign_export_penalty = -0.02 }
+    add_to_variable = { USA_foreign_pp_penalty = 0.05 }
+}
+
+USA_remove_foreign_dominance = {
+    set_variable = { USA_foreign_dominance_active = 0 }
+    set_variable = { USA_foreign_consumer_penalty = 0 }
+    set_variable = { USA_foreign_export_penalty = 0 }
+    set_variable = { USA_foreign_pp_penalty = 0 }
+}
+
+# ----------------------------------------------------------------------------
+# 派閥対立を解消
+# ----------------------------------------------------------------------------
+USA_remove_faction_tension = {
+    set_variable = { USA_faction_tension_active = 0 }
+    set_variable = { USA_faction_stability_penalty = 0 }
+    set_variable = { USA_faction_pp_penalty = 0 }
+}
+
+# ----------------------------------------------------------------------------
+# Longルート開始
+# ----------------------------------------------------------------------------
+USA_start_long_route = {
+    # 派閥対立を解消
+    set_variable = { USA_faction_tension_active = 0 }
+    set_variable = { USA_faction_stability_penalty = 0 }
+    set_variable = { USA_faction_pp_penalty = 0 }
+
+    # Long派ボーナスを固定化
+    add_to_variable = { USA_pol_pp_gain = 0.10 }
+    add_to_variable = { USA_eco_consumer_goods = -0.05 }
+
+    # 安定性ペナルティ継続
+    add_to_variable = { USA_pol_stability = -0.05 }
+
+    # MacArthur派支持をリセット
+    set_variable = { USA_mac_support = 0 }
+    set_variable = { USA_mac_org_bonus = 0 }
+    set_variable = { USA_mac_planning_bonus = 0 }
+    set_variable = { USA_mac_stability_effect = 0 }
+}
+
+# ----------------------------------------------------------------------------
+# MacArthurルート開始
+# ----------------------------------------------------------------------------
+USA_start_mac_route = {
+    # 派閥対立を解消
+    set_variable = { USA_faction_tension_active = 0 }
+    set_variable = { USA_faction_stability_penalty = 0 }
+    set_variable = { USA_faction_pp_penalty = 0 }
+
+    # MacArthur派ボーナスを固定化
+    add_to_variable = { USA_mil_org = 0.10 }
+    add_to_variable = { USA_mil_planning_speed = 0.10 }
+
+    # 安定性ボーナス
+    add_to_variable = { USA_pol_stability = 0.05 }
+
+    # Long派支持をリセット
+    set_variable = { USA_long_support = 0 }
+    set_variable = { USA_long_pp_bonus = 0 }
+    set_variable = { USA_long_consumer_bonus = 0 }
+    set_variable = { USA_long_stability_effect = 0 }
+}
+
+# ----------------------------------------------------------------------------
+# 経済ボーナス追加
+# ----------------------------------------------------------------------------
+USA_add_factory_output_small = {
+    add_to_variable = { USA_eco_factory_output = 0.05 }
+}
+
+USA_add_factory_output_medium = {
+    add_to_variable = { USA_eco_factory_output = 0.10 }
+}
+
+USA_add_factory_output_large = {
+    add_to_variable = { USA_eco_factory_output = 0.15 }
+}
+
+USA_add_production_efficiency_small = {
+    add_to_variable = { USA_eco_prod_eff_cap = 0.05 }
+    add_to_variable = { USA_eco_prod_eff_gain = 0.05 }
+}
+
+USA_add_production_efficiency_medium = {
+    add_to_variable = { USA_eco_prod_eff_cap = 0.10 }
+    add_to_variable = { USA_eco_prod_eff_gain = 0.10 }
+}
+
+USA_reduce_consumer_goods_small = {
+    add_to_variable = { USA_eco_consumer_goods = -0.05 }
+}
+
+USA_reduce_consumer_goods_medium = {
+    add_to_variable = { USA_eco_consumer_goods = -0.10 }
+}
+
+USA_add_build_speed_small = {
+    add_to_variable = { USA_eco_civ_build_speed = 0.10 }
+    add_to_variable = { USA_eco_mil_build_speed = 0.10 }
+}
+
+USA_add_build_speed_medium = {
+    add_to_variable = { USA_eco_civ_build_speed = 0.15 }
+    add_to_variable = { USA_eco_mil_build_speed = 0.15 }
+}
+
+# ----------------------------------------------------------------------------
+# 軍事ボーナス追加
+# ----------------------------------------------------------------------------
+USA_add_army_org_small = {
+    add_to_variable = { USA_mil_org = 0.05 }
+}
+
+USA_add_army_org_medium = {
+    add_to_variable = { USA_mil_org = 0.10 }
+}
+
+USA_add_army_attack_small = {
+    add_to_variable = { USA_mil_attack = 0.05 }
+}
+
+USA_add_army_attack_medium = {
+    add_to_variable = { USA_mil_attack = 0.10 }
+}
+
+USA_add_army_defence_small = {
+    add_to_variable = { USA_mil_defence = 0.05 }
+}
+
+USA_add_planning_small = {
+    add_to_variable = { USA_mil_planning_speed = 0.10 }
+    add_to_variable = { USA_mil_max_planning = 0.10 }
+}
+
+USA_add_conscription_small = {
+    add_to_variable = { USA_mil_conscription = 0.02 }
+}
+
+USA_add_conscription_medium = {
+    add_to_variable = { USA_mil_conscription = 0.05 }
+}
+
+# ----------------------------------------------------------------------------
+# 海軍ボーナス追加
+# ----------------------------------------------------------------------------
+USA_add_naval_power_small = {
+    add_to_variable = { USA_nav_hit_chance = 0.05 }
+    add_to_variable = { USA_nav_damage = 0.05 }
+}
+
+USA_add_naval_power_medium = {
+    add_to_variable = { USA_nav_hit_chance = 0.10 }
+    add_to_variable = { USA_nav_damage = 0.10 }
+    add_to_variable = { USA_nav_org = 0.10 }
+}
+
+USA_add_invasion_capacity = {
+    add_to_variable = { USA_nav_invasion_capacity = 10 }
+}
+
+# ----------------------------------------------------------------------------
+# 空軍ボーナス追加
+# ----------------------------------------------------------------------------
+USA_add_air_power_small = {
+    add_to_variable = { USA_air_attack = 0.05 }
+    add_to_variable = { USA_air_defence = 0.05 }
+}
+
+USA_add_air_power_medium = {
+    add_to_variable = { USA_air_attack = 0.10 }
+    add_to_variable = { USA_air_defence = 0.10 }
+    add_to_variable = { USA_air_superiority_efficiency = 0.05 }
+}
+
+USA_add_strategic_bombing = {
+    add_to_variable = { USA_air_strategic_bombing = 0.15 }
+}
+
+# ----------------------------------------------------------------------------
+# 政治ボーナス追加
+# ----------------------------------------------------------------------------
+USA_add_political_power_small = {
+    add_to_variable = { USA_pol_pp_gain = 0.05 }
+}
+
+USA_add_political_power_medium = {
+    add_to_variable = { USA_pol_pp_gain = 0.10 }
+}
+
+USA_add_stability_small = {
+    add_to_variable = { USA_pol_stability = 0.05 }
+}
+
+USA_add_stability_medium = {
+    add_to_variable = { USA_pol_stability = 0.10 }
+}
+
+USA_add_war_support_small = {
+    add_to_variable = { USA_pol_war_support = 0.05 }
+}
+
+USA_add_war_support_medium = {
+    add_to_variable = { USA_pol_war_support = 0.10 }
+}
+
+USA_add_research_speed_small = {
+    add_to_variable = { USA_pol_research_speed = 0.03 }
+}
+
+USA_add_research_speed_medium = {
+    add_to_variable = { USA_pol_research_speed = 0.05 }
 }

@@ -1,32 +1,213 @@
-# 産業の空洞化
-USA_hollowed_industry = {
+# ============================================================================
+# USA Dynamic Modifiers - Empire of Breakwaters
+# ============================================================================
+# 動的修正：変数ベースで国民精神の効果を柔軟に調整
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# 政治系動的修正
+# ----------------------------------------------------------------------------
+USA_political_modifier = {
+    icon = GFX_idea_generic_pp_unity_bonus
+    enable = { always = yes }
+
+    # 政治力
+    political_power_factor = var:USA_pol_pp_gain
+
+    # 安定性・戦争支持
+    stability_factor = var:USA_pol_stability
+    war_support_factor = var:USA_pol_war_support
+
+    # 研究
+    research_speed_factor = var:USA_pol_research_speed
+
+    # 降伏限界
+    surrender_limit = var:USA_pol_surrender_limit
+
+    # イデオロギードリフト
+    drift_defence_factor = var:USA_pol_drift_defence
+}
+
+# ----------------------------------------------------------------------------
+# 経済系動的修正
+# ----------------------------------------------------------------------------
+USA_economic_modifier = {
     icon = GFX_idea_generic_production_bonus
-    industrial_capacity_factory = var:USA_hollowed_ic_factory
-    industrial_capacity_dockyard = var:USA_hollowed_ic_dockyard
-    production_factory_max_efficiency_factor = var:USA_hollowed_prod_eff_cap
-    line_change_production_efficiency_factor = var:USA_hollowed_line_change_eff
+    enable = { always = yes }
+
+    # 消費財
+    consumer_goods_factor = var:USA_eco_consumer_goods
+
+    # 工場出力
+    industrial_capacity_factory = var:USA_eco_factory_output
+    industrial_capacity_dockyard = var:USA_eco_dockyard_output
+
+    # 生産効率
+    production_factory_max_efficiency_factor = var:USA_eco_prod_eff_cap
+    production_factory_efficiency_gain_factor = var:USA_eco_prod_eff_gain
+    line_change_production_efficiency_factor = var:USA_eco_line_change
+
+    # 建設速度
+    production_speed_industrial_complex_factor = var:USA_eco_civ_build_speed
+    production_speed_arms_factory_factor = var:USA_eco_mil_build_speed
+    production_speed_dockyard_factor = var:USA_eco_dock_build_speed
+    production_speed_infrastructure_factor = var:USA_eco_infra_build_speed
+
+    # 資源
+    local_resources_factor = var:USA_eco_resource_factor
+    min_export = var:USA_eco_min_export
 }
 
-# 民主主義の死体
-USA_corpse_of_democracy = {
-    icon = GFX_idea_generic_political_power_bonus
-    political_power_factor = var:USA_corpse_pp_factor
-    stability_factor = var:USA_corpse_stab_factor
+# ----------------------------------------------------------------------------
+# 軍事系動的修正
+# ----------------------------------------------------------------------------
+USA_military_modifier = {
+    icon = GFX_idea_generic_army_war_college
+    enable = { always = yes }
+
+    # 陸軍基本
+    army_org_factor = var:USA_mil_org
+    army_attack_factor = var:USA_mil_attack
+    army_defence_factor = var:USA_mil_defence
+
+    # 計画
+    planning_speed = var:USA_mil_planning_speed
+    max_planning = var:USA_mil_max_planning
+
+    # 徴兵
+    conscription_factor = var:USA_mil_conscription
+
+    # 補給
+    supply_consumption_factor = var:USA_mil_supply_consumption
+
+    # 特殊部隊
+    special_forces_cap = var:USA_mil_special_forces_cap
 }
 
-# -----------------------------------------------
-# 派閥影響力 (Faction Influence)
-# -----------------------------------------------
-USA_long_influence = {
-    icon = GFX_idea_generic_populism_drift_bonus # Placeholder
-    political_power_factor = var:USA_long_pp
-    consumer_goods_factor = var:USA_long_cg
-    stability_factor = var:USA_long_stab
+# ----------------------------------------------------------------------------
+# 海軍系動的修正
+# ----------------------------------------------------------------------------
+USA_naval_modifier = {
+    icon = GFX_idea_generic_navy_bonus
+    enable = { always = yes }
+
+    # 海軍戦闘
+    naval_hit_chance = var:USA_nav_hit_chance
+    naval_damage_factor = var:USA_nav_damage
+    navy_org_factor = var:USA_nav_org
+
+    # 艦艇生産
+    convoy_escort_efficiency = var:USA_nav_escort_efficiency
+    naval_invasion_capacity = var:USA_nav_invasion_capacity
 }
 
-USA_macarthur_influence = {
-    icon = GFX_idea_generic_army_war_college # Placeholder
-    army_org_factor = var:USA_macarthur_org
-    planning_speed = var:USA_macarthur_plan
-    stability_factor = var:USA_macarthur_stab
+# ----------------------------------------------------------------------------
+# 空軍系動的修正
+# ----------------------------------------------------------------------------
+USA_air_modifier = {
+    icon = GFX_idea_generic_air_bonus
+    enable = { always = yes }
+
+    # 空軍戦闘
+    air_attack_factor = var:USA_air_attack
+    air_defence_factor = var:USA_air_defence
+    air_superiority_efficiency = var:USA_air_superiority_efficiency
+
+    # 爆撃
+    air_strategic_bomber_bombing_factor = var:USA_air_strategic_bombing
+    air_cas_efficiency = var:USA_air_cas_efficiency
+
+    # エース
+    air_ace_generation_chance_factor = var:USA_air_ace_generation
+}
+
+# ----------------------------------------------------------------------------
+# 産業空洞化修正（初期デバフ）
+# ----------------------------------------------------------------------------
+USA_hollowed_industry_modifier = {
+    icon = GFX_idea_generic_production_bonus
+    enable = {
+        has_variable = USA_hollowed_industry_active
+        check_variable = { USA_hollowed_industry_active = 1 }
+    }
+
+    # 工場効率低下
+    industrial_capacity_factory = var:USA_hollowed_factory_penalty
+    industrial_capacity_dockyard = var:USA_hollowed_dockyard_penalty
+
+    # 生産効率低下
+    production_factory_max_efficiency_factor = var:USA_hollowed_prod_eff_penalty
+
+    # 建設速度低下
+    production_speed_industrial_complex_factor = var:USA_hollowed_build_penalty
+    production_speed_arms_factory_factor = var:USA_hollowed_build_penalty
+}
+
+# ----------------------------------------------------------------------------
+# 日英従属修正（初期デバフ）
+# ----------------------------------------------------------------------------
+USA_foreign_dominance_modifier = {
+    icon = GFX_idea_generic_political_pressure
+    enable = {
+        has_variable = USA_foreign_dominance_active
+        check_variable = { USA_foreign_dominance_active = 1 }
+    }
+
+    # 消費財増加
+    consumer_goods_factor = var:USA_foreign_consumer_penalty
+
+    # 貿易制限
+    min_export = var:USA_foreign_export_penalty
+
+    # 政治力低下
+    political_power_factor = var:USA_foreign_pp_penalty
+}
+
+# ----------------------------------------------------------------------------
+# 派閥対立修正
+# ----------------------------------------------------------------------------
+USA_faction_tension_modifier = {
+    icon = GFX_idea_generic_pp_unity_bonus
+    enable = {
+        has_variable = USA_faction_tension_active
+        check_variable = { USA_faction_tension_active = 1 }
+    }
+
+    # 安定性低下
+    stability_factor = var:USA_faction_stability_penalty
+
+    # 政治力低下
+    political_power_factor = var:USA_faction_pp_penalty
+}
+
+# ----------------------------------------------------------------------------
+# Long派支持修正
+# ----------------------------------------------------------------------------
+USA_long_support_modifier = {
+    icon = GFX_idea_generic_pp_unity_bonus
+    enable = {
+        has_variable = USA_long_support
+        check_variable = { USA_long_support > 0 }
+    }
+
+    # Long派支持による効果
+    political_power_factor = var:USA_long_pp_bonus
+    consumer_goods_factor = var:USA_long_consumer_bonus
+    stability_factor = var:USA_long_stability_effect
+}
+
+# ----------------------------------------------------------------------------
+# MacArthur派支持修正
+# ----------------------------------------------------------------------------
+USA_mac_support_modifier = {
+    icon = GFX_idea_generic_army_war_college
+    enable = {
+        has_variable = USA_mac_support
+        check_variable = { USA_mac_support > 0 }
+    }
+
+    # MacArthur派支持による効果
+    army_org_factor = var:USA_mac_org_bonus
+    planning_speed = var:USA_mac_planning_bonus
+    stability_factor = var:USA_mac_stability_effect
 }

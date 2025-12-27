@@ -1,9 +1,80 @@
 leader_traits = {
-	# 尻拭いの苦労人
-	USA_hoover_trait = {
-		random = no
-		political_power_gain_factor = 0.05
-		stability_factor = -0.05
-		consumer_goods_factor = -0.10
-	}
+    # ========================================================================
+    # 国家指導者特性
+    # ========================================================================
+
+    # Herbert Hoover - 無能な指導者
+    USA_ineffective_leader = {
+        random = no
+        political_power_factor = -0.10
+        stability_factor = -0.10
+    }
+
+    # Huey Long - キングフィッシュ
+    USA_kingfish = {
+        random = no
+        political_power_factor = 0.15
+        stability_factor = -0.05
+        war_support_factor = 0.10
+    }
+
+    # Huey Long - 扇動家
+    USA_demagogue = {
+        random = no
+        drift_defence_factor = 0.50
+        trade_opinion_factor = -0.25
+    }
+
+    # Douglas MacArthur - アメリカのカエサル
+    USA_american_caesar = {
+        random = no
+        political_power_factor = 0.10
+        stability_factor = 0.05
+        army_org_factor = 0.10
+    }
+
+    # Douglas MacArthur - 軍事的天才
+    USA_military_genius = {
+        random = no
+        planning_speed = 0.10
+        max_planning = 0.10
+    }
+}
+
+# ========================================================================
+# アドバイザー特性
+# ========================================================================
+
+country_leader_traits = {
+    # Long派アドバイザー
+    USA_political_agitator = {
+        political_power_factor = 0.10
+        war_support_factor = 0.05
+    }
+
+    USA_long_loyalist = {
+        stability_factor = 0.05
+        political_power_factor = 0.05
+    }
+
+    USA_radio_priest = {
+        drift_defence_factor = 0.25
+        fascism_drift = 0.05
+    }
+
+    # 共通アドバイザー
+    USA_captain_of_industry = {
+        industrial_capacity_factory = 0.10
+        production_speed_buildings_factor = 0.10
+    }
+
+    USA_economic_reformer = {
+        consumer_goods_factor = -0.05
+        political_power_factor = 0.10
+    }
+
+    USA_secret_police_chief = {
+        stability_factor = 0.05
+        enemy_operative_intel_extraction_rate = 0.15
+    }
 }

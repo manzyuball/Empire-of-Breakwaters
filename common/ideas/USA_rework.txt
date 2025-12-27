@@ -1,77 +1,379 @@
+# ============================================================================
+# USA Ideas - Empire of Breakwaters
+# ============================================================================
+# 動的修正で表現できない特殊効果のための固定アイデア
+# ============================================================================
+
 ideas = {
-	country = {
-		# ロンドンの下僕
-		USA_londons_servant = {
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = 0.20
-				trade_laws_cost_factor = 2.0
-			}
-		}
+    country = {
+        # ====================================================================
+        # 初期状態アイデア
+        # ====================================================================
 
-		# 財閥の裏庭
-		USA_zaibatsu_backyard = {
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = 0.20
-				economy_cost_factor = 2.0
-			}
-		}
+        # 日英の経済支配
+        USA_anglo_japanese_dominance = {
+            picture = generic_foreign_capital
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = 0.15
+                political_power_factor = -0.20
+                min_export = 0.10
+            }
+        }
 
-		# ストライキ・ブレイカー
-		USA_strike_breakers = {
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			removal_cost = -1
-			
-			modifier = {
-				army_org_factor = -0.15
-				planning_speed = -0.25
-			}
-		}
+        # 産業の空洞化
+        USA_industrial_hollowing = {
+            picture = generic_production_bonus
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_factory = -0.25
+                industrial_capacity_dockyard = -0.25
+                production_factory_max_efficiency_factor = -0.15
+            }
+        }
 
-		# モンローの亡霊
-		USA_ghost_of_monroe = {
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			removal_cost = -1
-			
-			modifier = {
-				war_support_factor = -0.50
-			}
-			rule = {
-				can_send_volunteers = no
-			}
-		}
+        # 派閥対立
+        USA_faction_rivalry = {
+            picture = generic_disjointed_gov
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                stability_factor = -0.10
+                political_power_factor = -0.10
+            }
+        }
 
-		# ロンドンの下僕 (緩和)
-		USA_londons_servant_alleviated = {
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = 0.10
-				trade_laws_cost_factor = 1.0
-			}
-		}
+        # ====================================================================
+        # Longルートアイデア
+        # ====================================================================
 
-		# ストライキ・ブレイカー (緩和)
-		USA_strike_breakers_alleviated = {
-			allowed = { always = no }
-			allowed_civil_war = { always = no }
-			removal_cost = -1
-			
-			modifier = {
-				army_org_factor = -0.05
-				planning_speed = -0.10
-			}
-		}
-	}
+        # キングフィッシュ政権
+        USA_kingfish_regime = {
+            picture = generic_pp_unity_bonus
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                political_power_factor = 0.15
+                consumer_goods_factor = -0.05
+                stability_factor = -0.05
+            }
+        }
+
+        # 終身大統領
+        USA_president_for_life = {
+            picture = generic_political_support
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                political_power_factor = 0.25
+                stability_factor = 0.10
+                war_support_factor = 0.10
+                drift_defence_factor = 0.50
+            }
+            rule = {
+                can_not_declare_war = no
+            }
+        }
+
+        # 略奪経済
+        USA_plunder_economy = {
+            picture = generic_goods_red_bonus
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = -0.10
+                lend_lease_tension = -1.00
+            }
+            rule = {
+                can_puppet = no
+            }
+        }
+
+        # 戦債拒否
+        USA_war_debt_repudiation = {
+            picture = generic_foreign_capital
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = -0.05
+                trade_opinion_factor = -0.50
+            }
+        }
+
+        # 皆兵主義
+        USA_mass_conscription = {
+            picture = generic_manpower_bonus
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                conscription = 0.03
+                training_time_army_factor = -0.20
+                army_morale_factor = 0.10
+            }
+        }
+
+        # 復讐の十字軍
+        USA_crusade_of_vengeance = {
+            picture = generic_war_preparation
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                war_support_factor = 0.15
+                justify_war_goal_time = -0.50
+                generate_wargoal_tension = -0.50
+            }
+        }
+
+        # 民衆皇帝
+        USA_peoples_emperor = {
+            picture = generic_victors_of_ww1
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                political_power_factor = 0.30
+                stability_factor = 0.15
+                war_support_factor = 0.15
+                surrender_limit = 0.10
+                resistance_decay_on_our_occupied_states = 0.25
+            }
+        }
+
+        # ====================================================================
+        # MacArthurルートアイデア
+        # ====================================================================
+
+        # アメリカのカエサル
+        USA_american_caesar = {
+            picture = generic_army_war_college
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                political_power_factor = 0.10
+                stability_factor = 0.05
+                army_org_factor = 0.10
+                planning_speed = 0.15
+            }
+        }
+
+        # 軍政確立
+        USA_military_government = {
+            picture = generic_military_government
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                political_power_factor = 0.15
+                stability_factor = 0.10
+                army_org_factor = 0.05
+                conscription_factor = 0.10
+            }
+        }
+
+        # 産業の奇跡
+        USA_industrial_miracle = {
+            picture = generic_production_bonus
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_factory = 0.15
+                industrial_capacity_dockyard = 0.15
+                production_factory_efficiency_gain_factor = 0.10
+            }
+        }
+
+        # フォーディズム・メガ
+        USA_fordism_mega = {
+            picture = generic_production_bonus
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_factory = 0.20
+                production_factory_max_efficiency_factor = 0.15
+                line_change_production_efficiency_factor = 0.15
+            }
+        }
+
+        # 軍産複合体
+        USA_military_industrial_complex = {
+            picture = generic_air_payment
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_factory = 0.10
+                production_speed_arms_factory_factor = 0.20
+                military_industrial_organization_funds_gain = 0.25
+            }
+        }
+
+        # 大艦隊建設
+        USA_grand_fleet_program = {
+            picture = generic_navy_bonus
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                industrial_capacity_dockyard = 0.20
+                production_speed_dockyard_factor = 0.15
+                naval_hit_chance = 0.05
+            }
+        }
+
+        # 世界の警察官
+        USA_world_police = {
+            picture = generic_volunteer_expedition_bonus
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                political_power_factor = 0.20
+                stability_factor = 0.10
+                war_support_factor = 0.10
+                justify_war_goal_time = -0.25
+                send_volunteers_tension = -0.50
+            }
+        }
+
+        # ロンドン協調
+        USA_london_cooperation = {
+            picture = generic_intel_bonus
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                democratic_acceptance = 50
+                join_faction_tension = -0.30
+            }
+        }
+
+        # 東京協商
+        USA_tokyo_entente = {
+            picture = generic_intel_bonus
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                trade_opinion_factor = 0.25
+            }
+        }
+
+        # ====================================================================
+        # 共通アイデア
+        # ====================================================================
+
+        # 大恐慌
+        USA_great_depression = {
+            picture = great_depression
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = 0.20
+                industrial_capacity_factory = -0.20
+                stability_factor = -0.10
+            }
+        }
+
+        # 大恐慌（軽減1）
+        USA_great_depression_1 = {
+            picture = great_depression
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = 0.15
+                industrial_capacity_factory = -0.15
+                stability_factor = -0.05
+            }
+        }
+
+        # 大恐慌（軽減2）
+        USA_great_depression_2 = {
+            picture = great_depression
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                consumer_goods_factor = 0.10
+                industrial_capacity_factory = -0.10
+            }
+        }
+
+        # ダストボウル
+        USA_dust_bowl = {
+            picture = generic_agrarian_society
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                stability_factor = -0.05
+                monthly_population = -0.10
+            }
+        }
+
+        # 軍備拡張
+        USA_rearmament = {
+            picture = generic_war_preparation
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                production_speed_arms_factory_factor = 0.15
+                conscription_factor = 0.10
+            }
+        }
+
+        # 国防法
+        USA_national_defense_act = {
+            picture = generic_war_preparation
+            allowed = {
+                always = no
+            }
+            removal_cost = -1
+            modifier = {
+                conscription = 0.02
+                army_org_factor = 0.05
+                training_time_army_factor = -0.10
+            }
+        }
+    }
 }

@@ -1,344 +1,403 @@
+###########################################################
+# USA Events - Empire of Breakwaters
+###########################################################
+
 add_namespace = usa
 
-# 1月: 最後の幻想、最初の亀裂
-country_event = {
-	id = usa.1
-	title = usa.1.t
-	desc = usa.1.d
-	picture = GFX_report_event_usa_congress_house # Placeholder
-	
-	fire_only_once = yes
-	trigger = {
-		tag = USA
-		date > 1936.1.15
-	}
-	mean_time_to_happen = {
-		days = 2
-	}
+# =========================================================
+# 派閥対立イベント
+# =========================================================
 
-	# ロング派
-	option = {
-		name = usa.1.a
-		add_political_power = 10
-		add_to_variable = { var = usa_long_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
-	# マッカーサー派
-	option = {
-		name = usa.1.b
-		add_political_power = 10
-		add_to_variable = { var = usa_macarthur_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
+# 派閥対立の始まり
+country_event = {
+    id = usa.1
+    title = usa.1.t
+    desc = usa.1.desc
+    picture = GFX_report_event_usa_congress
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.1.a
+        # Long派を支持
+        USA_increase_long_support = yes
+        custom_effect_tooltip = USA_long_support_increase_tt
+    }
+
+    option = {
+        name = usa.1.b
+        # MacArthur派を支持
+        USA_increase_mac_support = yes
+        custom_effect_tooltip = USA_mac_support_increase_tt
+    }
+
+    option = {
+        name = usa.1.c
+        # 中立を保つ
+        add_political_power = 25
+    }
 }
 
-# 2月: ピッツバーグの落日
-country_event = {
-	id = usa.2
-	title = usa.2.t
-	desc = usa.2.d
-	picture = GFX_report_event_usa_depression
-	
-	fire_only_once = yes
-	trigger = {
-		tag = USA
-		date > 1936.2.10
-	}
-	mean_time_to_happen = { days = 2 }
+# =========================================================
+# 1936年選挙イベント
+# =========================================================
 
-	option = {
-		name = usa.2.a
-		add_to_variable = { var = usa_long_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
-	option = {
-		name = usa.2.b
-		add_to_variable = { var = usa_macarthur_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
+# 選挙結果
+country_event = {
+    id = usa.10
+    title = usa.10.t
+    desc = usa.10.desc
+    picture = GFX_report_event_usa_election
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.10.a
+        # Huey Longの勝利
+        trigger = {
+            OR = {
+                check_variable = { USA_long_support > USA_mac_support }
+                NOT = { has_variable = USA_mac_support }
+            }
+        }
+        set_country_flag = USA_long_route
+        custom_effect_tooltip = USA_long_route_tt
+    }
+
+    option = {
+        name = usa.10.b
+        # Douglas MacArthurの勝利
+        trigger = {
+            OR = {
+                check_variable = { USA_mac_support > USA_long_support }
+                NOT = { has_variable = USA_long_support }
+            }
+        }
+        set_country_flag = USA_mac_route
+        custom_effect_tooltip = USA_mac_route_tt
+    }
+
+    option = {
+        name = usa.10.c
+        # プレイヤー選択（同点の場合）
+        trigger = {
+            check_variable = { USA_long_support = USA_mac_support }
+        }
+        hidden_effect = {
+            country_event = { id = usa.11 days = 1 }
+        }
+    }
 }
 
-# 3月: 豊かなる大地の飢えた子供たち
+# 選挙結果（プレイヤー選択）
 country_event = {
-	id = usa.3
-	title = usa.3.t
-	desc = usa.3.d
-	picture = GFX_report_event_usa_depression
-	
-	fire_only_once = yes
-	trigger = {
-		tag = USA
-		date > 1936.3.10
-	}
-	mean_time_to_happen = { days = 2 }
+    id = usa.11
+    title = usa.11.t
+    desc = usa.11.desc
+    picture = GFX_report_event_usa_election
 
-	option = {
-		name = usa.3.a
-		add_to_variable = { var = usa_long_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
-	option = {
-		name = usa.3.b
-		add_to_variable = { var = usa_macarthur_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
+    is_triggered_only = yes
+
+    option = {
+        name = usa.11.a
+        # Huey Longを選択
+        set_country_flag = USA_long_route
+        custom_effect_tooltip = USA_long_route_tt
+    }
+
+    option = {
+        name = usa.11.b
+        # Douglas MacArthurを選択
+        set_country_flag = USA_mac_route
+        custom_effect_tooltip = USA_mac_route_tt
+    }
 }
 
-# 4月: 桜の下の分断
-country_event = {
-	id = usa.4
-	title = usa.4.t
-	desc = usa.4.d
-	picture = GFX_report_event_usa_election_generic
-	
-	fire_only_once = yes
-	trigger = {
-		tag = USA
-		date > 1936.4.5
-	}
-	mean_time_to_happen = { days = 2 }
+# =========================================================
+# Long Route Events
+# =========================================================
 
-	option = {
-		name = usa.4.a
-		add_to_variable = { var = usa_long_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
-	option = {
-		name = usa.4.b
-		add_to_variable = { var = usa_macarthur_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
+# キングフィッシュ革命
+country_event = {
+    id = usa.20
+    title = usa.20.t
+    desc = usa.20.desc
+    picture = GFX_report_event_usa_congress
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_kingfish_revolution
+    }
+
+    mean_time_to_happen = { days = 5 }
+
+    option = {
+        name = usa.20.a
+        add_political_power = 50
+        add_stability = 0.05
+    }
 }
 
-# 5月: 沈黙する工場、囁く革命
+# 資産没収の影響
 country_event = {
-	id = usa.5
-	title = usa.5.t
-	desc = usa.5.d
-	picture = GFX_report_event_worker_protests
-	
-	fire_only_once = yes
-	trigger = {
-		tag = USA
-		date > 1936.5.1
-	}
-	mean_time_to_happen = { days = 2 }
+    id = usa.21
+    title = usa.21.t
+    desc = usa.21.desc
+    picture = GFX_report_event_generic_riot
 
-	option = {
-		name = usa.5.a
-		add_to_variable = { var = usa_long_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
-	option = {
-		name = usa.5.b
-		add_to_variable = { var = usa_macarthur_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_purge_barons
+    }
+
+    mean_time_to_happen = { days = 10 }
+
+    option = {
+        name = usa.21.a
+        add_stability = -0.03
+        add_political_power = 75
+    }
+
+    option = {
+        name = usa.21.b
+        add_stability = 0.03
+        add_political_power = -25
+    }
 }
 
-# 6月: 屈辱の外交公電
-country_event = {
-	id = usa.6
-	title = usa.6.t
-	desc = usa.6.d
-	picture = GFX_report_event_british_politics
-	
-	fire_only_once = yes
-	trigger = {
-		tag = USA
-		date > 1936.6.15
-	}
-	mean_time_to_happen = { days = 2 }
+# =========================================================
+# MacArthur Route Events
+# =========================================================
 
-	option = {
-		name = usa.6.a
-		add_to_variable = { var = usa_long_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
-	option = {
-		name = usa.6.b
-		add_to_variable = { var = usa_macarthur_support value = 1 }
-		USA_update_faction_support_effects = yes
-		add_political_power = -50
-	}
+# 軍政の確立
+country_event = {
+    id = usa.30
+    title = usa.30.t
+    desc = usa.30.desc
+    picture = GFX_report_event_usa_military
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_mac_caesar
+    }
+
+    mean_time_to_happen = { days = 5 }
+
+    option = {
+        name = usa.30.a
+        add_political_power = 50
+        army_experience = 25
+    }
 }
 
-# 7月: 泥にまみれた星条旗
+# 産業復興
 country_event = {
-	id = usa.7
-	title = usa.7.t
-	desc = usa.7.d
-	picture = GFX_report_event_usa_depression
-	
-	fire_only_once = yes
-	trigger = {
-		tag = USA
-		date > 1936.7.4
-	}
-	mean_time_to_happen = { days = 1 }
+    id = usa.31
+    title = usa.31.t
+    desc = usa.31.desc
+    picture = GFX_report_event_generic_factory
 
-	option = {
-		name = usa.7.a
-		add_to_variable = { var = usa_long_support value = 1 }
-		USA_update_faction_support_effects = yes
-		add_stability = -0.05
-	}
-	option = {
-		name = usa.7.b
-		add_to_variable = { var = usa_macarthur_support value = 1 }
-		USA_update_faction_support_effects = yes
-		add_stability = 0.05
-	}
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_fordism_mega
+    }
+
+    mean_time_to_happen = { days = 10 }
+
+    option = {
+        name = usa.31.a
+        add_stability = 0.05
+        random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+            }
+        }
+    }
 }
 
-# 8月: 黒い夏とダストボウル
-country_event = {
-	id = usa.8
-	title = usa.8.t
-	desc = usa.8.d
-	picture = GFX_report_event_usa_dust_bowl
-	
-	fire_only_once = yes
-	trigger = {
-		tag = USA
-		date > 1936.8.10
-	}
-	mean_time_to_happen = { days = 2 }
+# =========================================================
+# 日英関係イベント（MacArthur Route）
+# =========================================================
 
-	option = {
-		name = usa.8.a
-		add_to_variable = { var = usa_long_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
-	option = {
-		name = usa.8.b
-		add_to_variable = { var = usa_macarthur_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
+# ロンドンとの協調
+country_event = {
+    id = usa.40
+    title = usa.40.t
+    desc = usa.40.desc
+    picture = GFX_report_event_generic_diplomacy
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_coop_with_london
+    }
+
+    mean_time_to_happen = { days = 5 }
+
+    option = {
+        name = usa.40.a
+        ENG = {
+            country_event = { id = usa.41 days = 1 }
+        }
+    }
 }
 
-# 9月: 吠える男、沈黙する将軍
+# 英国への通知
 country_event = {
-	id = usa.9
-	title = usa.9.t
-	desc = usa.9.d
-	picture = GFX_report_event_usa_election_generic
-	
-	fire_only_once = yes
-	trigger = {
-		tag = USA
-		date > 1936.9.15
-	}
-	mean_time_to_happen = { days = 2 }
+    id = usa.41
+    title = usa.41.t
+    desc = usa.41.desc
+    picture = GFX_report_event_generic_diplomacy
 
-	option = {
-		name = usa.9.a
-		add_to_variable = { var = usa_long_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
-	option = {
-		name = usa.9.b
-		add_to_variable = { var = usa_macarthur_support value = 1 }
-		USA_update_faction_support_effects = yes
-	}
+    is_triggered_only = yes
+
+    option = {
+        name = usa.41.a
+        add_opinion_modifier = {
+            target = FROM
+            modifier = USA_coop_accepted
+        }
+        FROM = {
+            add_opinion_modifier = {
+                target = ROOT
+                modifier = USA_coop_accepted
+            }
+        }
+    }
+
+    option = {
+        name = usa.41.b
+        add_opinion_modifier = {
+            target = FROM
+            modifier = USA_coop_rejected
+        }
+    }
 }
 
-# 10月: 投票用紙よりも弾丸を
+# 東京協商
 country_event = {
-	id = usa.10
-	title = usa.10.t
-	desc = usa.10.d
-	picture = GFX_report_event_usa_election_generic # Placeholder for riot/debate
-	
-	fire_only_once = yes
-	trigger = {
-		tag = USA
-		date > 1936.10.20
-	}
-	mean_time_to_happen = { days = 2 }
+    id = usa.42
+    title = usa.42.t
+    desc = usa.42.desc
+    picture = GFX_report_event_generic_diplomacy
 
-	option = {
-		name = usa.10.a
-		add_to_variable = { var = usa_long_support value = 1 }
-		USA_update_faction_support_effects = yes
-		add_stability = -0.10
-	}
-	option = {
-		name = usa.10.b
-		add_to_variable = { var = usa_macarthur_support value = 1 }
-		USA_update_faction_support_effects = yes
-		add_stability = -0.05
-	}
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_tokyo_entente
+    }
+
+    mean_time_to_happen = { days = 5 }
+
+    option = {
+        name = usa.42.a
+        JAP = {
+            country_event = { id = usa.43 days = 1 }
+        }
+    }
 }
 
-# 11月: 審判の日 (ルート分岐)
+# 日本への通知
 country_event = {
-	id = usa.11
-	title = usa.11.t
-	desc = usa.11.d
-	picture = GFX_report_event_usa_election_1936
-	
-	fire_only_once = yes
-	trigger = {
-		tag = USA
-		date > 1936.11.3
-	}
-	mean_time_to_happen = { days = 1 }
+    id = usa.43
+    title = usa.43.t
+    desc = usa.43.desc
+    picture = GFX_report_event_generic_diplomacy
 
-	# A. 「民衆の声を聞け！」 (ロング)
-	option = {
-		name = usa.11.a
-		trigger = {
-			# Could add check for variable support, but user didn't specify strict requirement,
-			# just branching.
-		}
-		
-		# Set Huey Long as leader
-		# Note: Huey Long must be defined in characters. Assuming he exists or vanilla.
-		# Vanilla tag for Huey Long is often USA_huey_long.
-		retire_country_leader = yes
-		set_rule = { can_create_collaboration_government = yes } # Unlock plunder mechanics? (flavor)
-		
-		# Remove Hoover trait/ideas if needed, or they persist until focus tree removes them?
-		# User said "economic reconstruction: forced seizure" etc. which sounds like focus tree.
-		# For now, just change leader.
-		
-		create_country_leader = {
-			name = "Huey Long"
-			desc = "POLITICS_HUEY_LONG_DESC"
-			picture = "GFX_portrait_USA_huey_long"
-			expire = "1965.1.1"
-			ideology = fascism_ideology # Or authoritarian/populist? User said 'Plunder'. Fascism fits 'Revanchist'.
-			traits = {
-				# dictator?
-			}
-		}
-		set_politics = {
-			ruling_party = fascism
-			elections_allowed = no
-		}
-	}
+    is_triggered_only = yes
 
-	# B. 「秩序が必要だ。」 (マッカーサー)
-	option = {
-		name = usa.11.b
-		
-		# Set MacArthur as leader
-		retire_country_leader = yes
-		
-		create_country_leader = {
-			name = "Douglas MacArthur"
-			desc = "POLITICS_DOUGLAS_MACARTHUR_DESC"
-			picture = "GFX_portrait_USA_douglas_macarthur"
-			expire = "1965.1.1"
-			ideology = neutrality # Junta/Despotism
-			traits = {
-				# military_junta?
-			}
-		}
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
-		}
-	}
+    option = {
+        name = usa.43.a
+        add_opinion_modifier = {
+            target = FROM
+            modifier = USA_entente_accepted
+        }
+        FROM = {
+            add_opinion_modifier = {
+                target = ROOT
+                modifier = USA_entente_accepted
+            }
+        }
+    }
+
+    option = {
+        name = usa.43.b
+        add_opinion_modifier = {
+            target = FROM
+            modifier = USA_entente_rejected
+        }
+    }
+}
+
+# =========================================================
+# 復讐イベント（Long Route）
+# =========================================================
+
+# 復讐の宣言
+country_event = {
+    id = usa.50
+    title = usa.50.t
+    desc = usa.50.desc
+    picture = GFX_report_event_generic_rally
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_revenge_start
+    }
+
+    mean_time_to_happen = { days = 5 }
+
+    option = {
+        name = usa.50.a
+        add_war_support = 0.05
+        every_country = {
+            limit = {
+                OR = {
+                    tag = ENG
+                    tag = JAP
+                }
+            }
+            add_opinion_modifier = {
+                target = ROOT
+                modifier = USA_revenge_declaration
+            }
+        }
+    }
+}
+
+# パナマ接収
+country_event = {
+    id = usa.51
+    title = usa.51.t
+    desc = usa.51.desc
+    picture = GFX_report_event_generic_military
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_panama_seize
+    }
+
+    mean_time_to_happen = { days = 5 }
+
+    option = {
+        name = usa.51.a
+        add_war_support = 0.03
+    }
 }
