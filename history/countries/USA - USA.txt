@@ -12,30 +12,22 @@ set_war_support = 0
 add_command_power = 20
 set_convoys = 500
 
-set_variable = { var = USA_hollowed_ic_factory value = -0.30 }
-set_variable = { var = USA_hollowed_ic_dockyard value = -0.30 }
-set_variable = { var = USA_hollowed_prod_eff_cap value = -0.30 }
-set_variable = { var = USA_hollowed_line_change_eff value = -0.30 }
-set_variable = { var = USA_corpse_pp_factor value = -0.40 }
-set_variable = { var = USA_corpse_stab_factor value = -0.25 }
+# ============================================================================
+# USA Variables - Empire of Breakwaters
+# ============================================================================
+# 5つの動的修正に統合：政治・経済・軍事産業・陸軍・海軍
+# 初期デバフは変数のマイナス値で表現
+# ============================================================================
 
-# Influence Variables
-set_variable = { var = usa_long_support value = 0 }
-set_variable = { var = usa_macarthur_support value = 0 }
-
-# Influence Effect Variables (Start at 0)
-set_variable = { var = USA_long_pp value = 0 }
-set_variable = { var = USA_long_cg value = 0 }
-set_variable = { var = USA_long_stab value = 0 }
-set_variable = { var = USA_macarthur_org value = 0 }
-set_variable = { var = USA_macarthur_plan value = 0 }
-set_variable = { var = USA_macarthur_stab value = 0 }
-
-
-add_dynamic_modifier = { modifier = USA_hollowed_industry }
-add_dynamic_modifier = { modifier = USA_corpse_of_democracy }
-add_dynamic_modifier = { modifier = USA_long_influence }
-add_dynamic_modifier = { modifier = USA_macarthur_influence }
+USA_initialize_variables = yes
+# ============================================================================
+# 動的修正の適用（5つのみ）
+# ============================================================================
+add_dynamic_modifier = { modifier = USA_political_modifier }
+add_dynamic_modifier = { modifier = USA_economic_modifier }
+add_dynamic_modifier = { modifier = USA_military_industry_modifier }
+add_dynamic_modifier = { modifier = USA_army_modifier }
+add_dynamic_modifier = { modifier = USA_navy_modifier }
 set_politics = {
 	ruling_party = democratic
 	last_election = "1932.11.8"
@@ -48,63 +40,12 @@ set_popularities = {
 	neutrality = 15
 }
 
-add_ideas = {
-	USA_londons_servant
-	USA_zaibatsu_backyard
-	USA_strike_breakers
-	USA_ghost_of_monroe
-}
-
+# ============================================================================
+# USA Rework キャラクター（派閥指導者・アドバイザー）
+# ============================================================================
+recruit_character = USA_huey_long
+recruit_character = USA_douglas_macarthur
 recruit_character = USA_herbert_hoover
-recruit_character = USA_earl_browder
-recruit_character = USA_william_dudley_pelley
-recruit_character = USA_als
-recruit_character = USA_j_lawton_collins
-recruit_character = USA_courtney_hodges
-recruit_character = USA_joseph_stilwell
-recruit_character = USA_oscar_griswold
-recruit_character = USA_maurice_rose
-recruit_character = USA_alexander_vandegrift
-recruit_character = USA_ernest_king
-recruit_character = USA_chester_w_nimitz
-recruit_character = USA_william_halsey_jr
-recruit_character = USA_frank_jack_fletcher
-recruit_character = USA_raymond_a_spruance
-recruit_character = USA_harold_rainsford_stark
-recruit_character = USA_arleigh_burke
-recruit_character = USA_charles_m_cooke_jr
-recruit_character = USA_carnot_wheeler
-recruit_character = USA_robert_goddard
-recruit_character = USA_robert_oppenheimer
-recruit_character = USA_curtis_lemay
-recruit_character = USA_thomas_kinkaid
-recruit_character = USA_henry_arnold
-recruit_character = USA_dewitt_clinton_ramsey
-recruit_character = USA_harold_mcclelland
-recruit_character = USA_charles_lindbergh
-recruit_character = USA_george_kenney
-recruit_character = USA_john_cannon
-recruit_character = USA_george_marshall
-recruit_character = USA_carl_spaatz
-recruit_character = USA_marc_mitscher
-recruit_character = USA_jimmy_doolittle
-recruit_character = USA_claire_lee_chennault
-recruit_character = USA_john_winant
-recruit_character = USA_henry_morgenthau
-recruit_character = USA_william_donovan
-recruit_character = USA_whittaker_chambers
-recruit_character = USA_robert_taft
-recruit_character = USA_donald_nelson
-recruit_character = USA_joseph_mccarthy
-recruit_character = USA_cordell_hull
-recruit_character = USA_harold_ickes
-recruit_character = USA_william_regnery
-recruit_character = USA_joseph_patterson
-recruit_character = USA_henry_stimson
-recruit_character = USA_victor_perlo
-recruit_character = USA_charles_coughlin
-recruit_character = USA_harry_white
-
 # Starting tech
 set_technology = {
 	infantry_weapons = 1

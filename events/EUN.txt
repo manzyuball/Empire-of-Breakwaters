@@ -13,10 +13,6 @@ country_event = {
 		name = EuropeanUnion_Election.1.a #??????
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
 		}
 		EUN = { 
 			custom_effect_tooltip = EUN_french_PM_tooltip
@@ -93,10 +89,6 @@ country_event = {
 		name = EuropeanUnion_Election.2.b #?????
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
 		}
 		EUN = { 
 			custom_effect_tooltip = EUN_german_Economy_tooltip
@@ -169,10 +161,6 @@ country_event = {
 		name = EuropeanUnion_Election.3.c #??????
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
 		}
 		EUN = { 
 			custom_effect_tooltip = EUN_italian_Military_tooltip
@@ -233,10 +221,6 @@ country_event = {
 		name = EuropeanUnion_Election.4.c #??????
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
 		}
 		EUN = { 
 			custom_effect_tooltip = EUN_italian_Interior_tooltip
@@ -273,10 +257,6 @@ country_event = {
 		name = EuropeanUnion_Election.5.a #??????
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
 		}
 		EUN = { 
 			custom_effect_tooltip = EUN_french_PM_tooltip
@@ -354,10 +334,6 @@ country_event = {
 		name = EuropeanUnion_Election.6.b #?????
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
 		}
 		EUN = { 
 			custom_effect_tooltip = EUN_german_Economy_tooltip
@@ -430,10 +406,6 @@ country_event = {
 		name = EuropeanUnion_Election.7.c #??????
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
 		}
 		EUN = { 
 			custom_effect_tooltip = EUN_italian_Military_tooltip
@@ -495,10 +467,6 @@ country_event = {
 		name = EuropeanUnion_Election.8.c #??????
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
 		}
 		EUN = { 
 			custom_effect_tooltip = EUN_italian_Interior_tooltip
@@ -536,10 +504,6 @@ country_event = {
 		name = EuropeanUnion_Election.9.a #??????
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
 		}
 		EUN = { 
 			custom_effect_tooltip = EUN_french_PM_tooltip
@@ -616,10 +580,6 @@ country_event = {
 		name = EuropeanUnion_Election.10.b #?????
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
 		}
 		EUN = { 
 			custom_effect_tooltip = EUN_german_Economy_tooltip
@@ -692,10 +652,6 @@ country_event = {
 		name = EuropeanUnion_Election.11.c #??????
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
 		}
 		EUN = { 
 			custom_effect_tooltip = EUN_italian_Military_tooltip
@@ -756,10 +712,6 @@ country_event = {
 		name = EuropeanUnion_Election.12.c #イタリア派閥
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 100
-				is_historical_focus_on = yes
-			}
 		}
 		EUN = { 
 			custom_effect_tooltip = EUN_italian_Interior_tooltip
