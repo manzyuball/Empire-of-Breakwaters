@@ -1,0 +1,152 @@
+# ============================================================================
+# USA Opinion Modifiers - Empire of Breakwaters
+# ============================================================================
+
+opinion_modifiers = {
+
+    # ========================================================================
+    # MacArthurルート - 外交関係
+    # ========================================================================
+
+    # ロンドン協調 - 受諾
+    USA_coop_accepted = {
+        value = 50
+        decay = 0.5
+    }
+
+    # ロンドン協調 - 拒否
+    USA_coop_rejected = {
+        value = -25
+        decay = 0.5
+    }
+
+    # 東京協商 - 受諾
+    USA_entente_accepted = {
+        value = 50
+        decay = 0.5
+    }
+
+    # 東京協商 - 拒否
+    USA_entente_rejected = {
+        value = -25
+        decay = 0.5
+    }
+
+    # 連合国加盟
+    USA_joined_allies = {
+        value = 25
+        decay = 0.25
+    }
+
+    # ========================================================================
+    # Longルート - 外交関係
+    # ========================================================================
+
+    # 復讐の宣言
+    USA_revenge_declaration = {
+        value = -100
+        decay = 0.1
+    }
+
+    # 戦債拒否
+    USA_debt_repudiation = {
+        value = -50
+        decay = 0.25
+    }
+
+    # 外国資産没収
+    USA_asset_seizure = {
+        value = -75
+        decay = 0.2
+    }
+
+    # パナマ接収
+    USA_panama_seized = {
+        value = -100
+        decay = 0.1
+    }
+
+    # カナダ侵攻
+    USA_invaded_canada = {
+        value = -200
+        decay = 0
+    }
+
+    # ========================================================================
+    # 共通 - 外交関係
+    # ========================================================================
+
+    # 経済協力
+    USA_economic_cooperation = {
+        value = 25
+        decay = 0.5
+    }
+
+    # 軍事同盟
+    USA_military_alliance = {
+        value = 50
+        decay = 0.25
+    }
+
+    # 貿易協定
+    USA_trade_agreement = {
+        value = 15
+        decay = 0.5
+    }
+
+    # 一般的なプラス修正
+    positive_50 = {
+        value = 50
+    }
+
+    # 一般的なマイナス修正
+    negative_50 = {
+        value = -50
+    }
+
+    # ========================================================================
+    # NFからの意見修正
+    # ========================================================================
+
+    # 関税戦争（南米への影響）
+    USA_tariff_war_opinion = {
+        value = -25
+        decay = 0.5
+    }
+
+    # 債務不履行
+    USA_default_debts_opinion = {
+        value = -75
+        decay = 0.2
+    }
+
+    # 石油産業接収
+    USA_expro_oil_opinion = {
+        value = -50
+        decay = 0.25
+    }
+
+    # 工場接収
+    USA_seize_factories_opinion = {
+        value = -75
+        decay = 0.2
+    }
+
+    # ロンドン協調提案
+    USA_coop_with_london_opinion = {
+        value = 25
+        decay = 0.5
+    }
+
+    # 東京協商提案
+    USA_tokyo_entente_opinion = {
+        value = 25
+        decay = 0.5
+    }
+
+    # 全米諸国連盟
+    USA_las_league_opinion = {
+        value = 35
+        decay = 0.25
+    }
+}

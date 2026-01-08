@@ -1,0 +1,28 @@
+# ============================================================================
+# USA Decision Categories - Empire of Breakwaters
+# ============================================================================
+# ディシジョン実装用カテゴリ定義
+# ============================================================================
+
+USA_economic_recovery = {
+	icon = GFX_decision_generic_industry
+	allowed = {
+		tag = USA
+	}
+}
+
+USA_long_policies = {
+	icon = GFX_decision_generic_nationalism
+	allowed = {
+		tag = USA
+		has_country_flag = USA_long_active
+	}
+}
+
+USA_mac_policies = {
+	icon = GFX_decision_generic_military
+	allowed = {
+		tag = USA
+		has_country_flag = USA_mac_active
+	}
+}

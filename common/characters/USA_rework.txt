@@ -1,0 +1,444 @@
+characters = {
+    # ========================================================================
+    # 国家指導者
+    # ========================================================================
+
+    USA_huey_long = {
+        name = USA_huey_long
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/USA/Portrait_USA_Huey_Long.dds"
+            }
+        }
+        country_leader = {
+            ideology = fascism_ideology
+            traits = { USA_kingfish USA_demagogue }
+            expire = "1965.1.1"
+            id = 1001
+        }
+    }
+
+    USA_douglas_macarthur = {
+        name = USA_douglas_macarthur
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/USA/Portrait_USA_Douglas_MacArthur.dds"
+            }
+            army = {
+                large = "gfx/leaders/USA/Portrait_USA_Douglas_MacArthur.dds"
+                small = "GFX_idea_USA_douglas_macarthur"
+            }
+        }
+        country_leader = {
+            ideology = oligarchism
+            traits = { USA_american_caesar USA_military_genius }
+            expire = "1965.1.1"
+            id = 1002
+        }
+        field_marshal = {
+            traits = { offensive_doctrine brilliant_strategist war_hero }
+            skill = 5
+            attack_skill = 5
+            defense_skill = 4
+            planning_skill = 5
+            logistics_skill = 4
+            legacy_id = 1001
+        }
+    }
+
+    # デフォルト大統領（初期状態）
+    USA_herbert_hoover = {
+        name = USA_herbert_hoover
+        portraits = {
+            civilian = {
+                large = "gfx/leaders/USA/Portrait_USA_Herbert_Hoover.dds"
+            }
+        }
+        country_leader = {
+            ideology = conservatism
+            traits = { USA_ineffective_leader }
+            expire = "1936.11.1"
+            id = 1000
+        }
+    }
+
+    # ========================================================================
+    # Long派閣僚・アドバイザー
+    # ========================================================================
+
+    USA_gerald_l_k_smith = {
+        name = USA_gerald_l_k_smith
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_gerald_smith"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = USA_gerald_smith
+            allowed = {
+                original_tag = USA
+            }
+            available = {
+                has_country_flag = USA_long_route
+            }
+            traits = { USA_political_agitator }
+            cost = 150
+        }
+    }
+
+    USA_earl_k_long = {
+        name = USA_earl_k_long
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_earl_long"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = USA_earl_long
+            allowed = {
+                original_tag = USA
+            }
+            available = {
+                has_country_flag = USA_long_route
+            }
+            traits = { USA_long_loyalist }
+            cost = 100
+        }
+    }
+
+    USA_charles_coughlin = {
+        name = USA_charles_coughlin
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_charles_coughlin"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = USA_charles_coughlin
+            allowed = {
+                original_tag = USA
+            }
+            available = {
+                has_country_flag = USA_long_route
+            }
+            traits = { USA_radio_priest }
+            cost = 150
+        }
+    }
+
+    # ========================================================================
+    # マッカーサー派閣僚・アドバイザー
+    # ========================================================================
+
+    USA_george_marshall = {
+        name = USA_george_marshall
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_george_marshall"
+            }
+            army = {
+                small = "GFX_idea_USA_george_marshall"
+                large = "gfx/leaders/USA/Portrait_USA_George_Marshall.dds"
+            }
+        }
+        advisor = {
+            slot = army_chief
+            idea_token = USA_george_marshall
+            allowed = {
+                original_tag = USA
+            }
+            available = {
+                has_country_flag = USA_mac_route
+            }
+            traits = { army_chief_organizational_2 }
+            cost = 100
+        }
+        corps_commander = {
+            traits = { organizer brilliant_strategist }
+            skill = 4
+            attack_skill = 4
+            defense_skill = 4
+            planning_skill = 5
+            logistics_skill = 5
+            legacy_id = 1002
+        }
+    }
+
+    USA_dwight_eisenhower = {
+        name = USA_dwight_eisenhower
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_dwight_eisenhower"
+                large = "gfx/leaders/USA/Portrait_USA_Dwight_Eisenhower.dds"
+            }
+        }
+        advisor = {
+            slot = theorist
+            idea_token = USA_dwight_eisenhower
+            ledger = army
+            allowed = {
+                original_tag = USA
+            }
+            available = {
+                has_country_flag = USA_mac_route
+            }
+            traits = { grand_battle_plan_expert }
+            cost = 150
+        }
+        field_marshal = {
+            traits = { offensive_doctrine organizer brilliant_strategist }
+            skill = 5
+            attack_skill = 4
+            defense_skill = 4
+            planning_skill = 5
+            logistics_skill = 5
+            legacy_id = 1003
+        }
+    }
+
+    USA_george_patton = {
+        name = USA_george_patton
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_george_patton"
+                large = "gfx/leaders/USA/Portrait_USA_George_Patton.dds"
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = USA_george_patton
+            ledger = army
+            allowed = {
+                original_tag = USA
+            }
+            available = {
+                has_country_flag = USA_mac_route
+            }
+            traits = { army_armored_2 }
+            cost = 100
+        }
+        corps_commander = {
+            traits = { panzer_leader brilliant_strategist trickster }
+            skill = 5
+            attack_skill = 5
+            defense_skill = 3
+            planning_skill = 4
+            logistics_skill = 4
+            legacy_id = 1004
+        }
+    }
+
+    # ========================================================================
+    # 海軍指揮官
+    # ========================================================================
+
+    USA_chester_nimitz = {
+        name = USA_chester_nimitz
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_chester_nimitz"
+                large = "gfx/leaders/USA/Portrait_USA_Chester_Nimitz.dds"
+            }
+        }
+        advisor = {
+            slot = navy_chief
+            idea_token = USA_chester_nimitz
+            allowed = {
+                original_tag = USA
+            }
+            traits = { navy_chief_decisive_battle_2 }
+            cost = 100
+        }
+        navy_leader = {
+            traits = { superior_tactician spotter }
+            skill = 5
+            attack_skill = 5
+            defense_skill = 4
+            maneuvering_skill = 5
+            coordination_skill = 4
+            legacy_id = 1005
+        }
+    }
+
+    USA_william_halsey = {
+        name = USA_william_halsey
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_william_halsey"
+                large = "gfx/leaders/USA/Portrait_USA_William_Halsey.dds"
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = USA_william_halsey
+            ledger = navy
+            allowed = {
+                original_tag = USA
+            }
+            traits = { navy_carrier_2 }
+            cost = 100
+        }
+        navy_leader = {
+            traits = { bold superior_tactician }
+            skill = 4
+            attack_skill = 5
+            defense_skill = 3
+            maneuvering_skill = 4
+            coordination_skill = 4
+            legacy_id = 1006
+        }
+    }
+
+    USA_ernest_king = {
+        name = USA_ernest_king
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_ernest_king"
+                large = "gfx/leaders/USA/Portrait_USA_Ernest_King.dds"
+            }
+        }
+        advisor = {
+            slot = theorist
+            idea_token = USA_ernest_king
+            ledger = navy
+            allowed = {
+                original_tag = USA
+            }
+            traits = { naval_theorist }
+            cost = 100
+        }
+        navy_leader = {
+            traits = { superior_tactician }
+            skill = 4
+            attack_skill = 4
+            defense_skill = 4
+            maneuvering_skill = 4
+            coordination_skill = 5
+            legacy_id = 1007
+        }
+    }
+
+    # ========================================================================
+    # 空軍指揮官
+    # ========================================================================
+
+    USA_curtis_lemay = {
+        name = USA_curtis_lemay
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_curtis_lemay"
+                large = "gfx/leaders/USA/Portrait_USA_Curtis_LeMay.dds"
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = USA_curtis_lemay
+            ledger = air
+            allowed = {
+                original_tag = USA
+            }
+            traits = { air_strategic_bombing_2 }
+            cost = 100
+        }
+    }
+
+    USA_henry_arnold = {
+        name = USA_henry_arnold
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_henry_arnold"
+                large = "gfx/leaders/USA/Portrait_USA_Henry_Arnold.dds"
+            }
+        }
+        advisor = {
+            slot = air_chief
+            idea_token = USA_henry_arnold
+            allowed = {
+                original_tag = USA
+            }
+            traits = { air_chief_ground_support_2 }
+            cost = 100
+        }
+    }
+
+    USA_jimmy_doolittle = {
+        name = USA_jimmy_doolittle
+        portraits = {
+            army = {
+                small = "GFX_idea_USA_jimmy_doolittle"
+                large = "gfx/leaders/USA/Portrait_USA_Jimmy_Doolittle.dds"
+            }
+        }
+        advisor = {
+            slot = theorist
+            idea_token = USA_jimmy_doolittle
+            ledger = air
+            allowed = {
+                original_tag = USA
+            }
+            traits = { air_warfare_theorist }
+            cost = 150
+        }
+    }
+
+    # ========================================================================
+    # 共通アドバイザー
+    # ========================================================================
+
+    USA_henry_ford = {
+        name = USA_henry_ford
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_henry_ford"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = USA_henry_ford
+            allowed = {
+                original_tag = USA
+            }
+            traits = { USA_captain_of_industry }
+            cost = 150
+        }
+    }
+
+    USA_john_maynard_keynes = {
+        name = USA_john_maynard_keynes
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_keynes"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = USA_keynes
+            allowed = {
+                original_tag = USA
+            }
+            traits = { USA_economic_reformer }
+            cost = 150
+        }
+    }
+
+    USA_j_edgar_hoover = {
+        name = USA_j_edgar_hoover
+        portraits = {
+            civilian = {
+                small = "GFX_idea_USA_j_edgar_hoover"
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = USA_j_edgar_hoover
+            allowed = {
+                original_tag = USA
+            }
+            traits = { USA_secret_police_chief }
+            cost = 150
+        }
+    }
+}

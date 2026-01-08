@@ -1,0 +1,2497 @@
+# ============================================================================
+# USA National Focus Tree - Empire of Breakwaters
+# ============================================================================
+# 完全リワーク版：EUNスタイルのミニツリー構造
+# ============================================================================
+
+focus_tree = {
+    id = USA_rework_focus
+
+    country = {
+        factor = 0
+        modifier = {
+            add = 100
+            tag = USA
+        }
+    }
+
+    default = no
+    continuous_focus_position = { x = 250 y = 500 }
+
+    # ========================================================================
+    # PHASE 1: 空洞化した共和国（共通ツリー）Y = 0-7
+    # ========================================================================
+
+    # --- 開始点 ---
+    focus = {
+        id = USA_hollow_state
+        icon = GFX_focus_usa_reestablish_the_gold_standard
+        x = 15
+        y = 0
+        cost = 30
+        ai_will_do = { factor = 100 }
+        completion_reward = {
+          add_political_power = 50
+        }
+    }
+
+
+    # ========================================================================
+    # PHASE 1.1: 産業復興ブランチ（8 NF）X = 8-12, Y = 1-4
+    # ========================================================================
+
+    focus = {
+        id = USA_industrial_recovery_start
+        icon = GFX_goal_generic_consumer_goods
+        prerequisite = { focus = USA_hollow_state }
+        x = 10
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_ind_factory_output = 0.02 }
+            add_to_variable = { USA_ind_dockyard_output = 0.02 }
+            custom_effect_tooltip = USA_industrial_recovery_start_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_rfc_reconstruction
+        icon = GFX_focus_usa_new_deal
+        prerequisite = { focus = USA_industrial_recovery_start }
+        relative_position_id = USA_industrial_recovery_start
+        x = -3
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_offsite_building = { type = industrial_complex level = 2 }
+            add_to_variable = { USA_ind_factory_output = 0.02 }
+            custom_effect_tooltip = USA_rfc_reconstruction_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_banking_reform
+        icon = GFX_focus_generic_stockpile_currency
+        prerequisite = { focus = USA_industrial_recovery_start }
+        relative_position_id = USA_industrial_recovery_start
+        x = -1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.05
+            add_to_variable = { USA_eco_consumer_goods = -0.02 }
+            custom_effect_tooltip = USA_banking_reform_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_industrial_codes
+        icon = GFX_focus_generic_currency_reforms
+        prerequisite = { focus = USA_rfc_reconstruction }
+        prerequisite = { focus = USA_banking_reform }
+        relative_position_id = USA_industrial_recovery_start
+        x = -2
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_political_power = 50
+            add_to_variable = { USA_ind_factory_output = 0.02 }
+            add_to_variable = { USA_ind_prod_eff_cap = 0.02 }
+            custom_effect_tooltip = USA_industrial_codes_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_factory_standardization
+        icon = GFX_focus_generic_military_equipment
+        prerequisite = { focus = USA_industrial_codes }
+        relative_position_id = USA_industrial_recovery_start
+        x = -4
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_ind_line_change = 0.03 }
+            add_to_variable = { USA_ind_factory_output = 0.01 }
+            custom_effect_tooltip = USA_factory_standardization_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_dockyard_expansion
+        icon = GFX_focus_generic_shipbuilding
+        prerequisite = { focus = USA_industrial_codes }
+        relative_position_id = USA_industrial_recovery_start
+        x = -2
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_ind_dockyard_output = 0.03 }
+            random_owned_controlled_state = {
+                limit = { is_coastal = yes }
+                add_building_construction = { type = dockyard level = 1 instant_build = yes }
+            }
+            custom_effect_tooltip = USA_dockyard_expansion_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_production_efficiency
+        icon = GFX_goal_generic_production
+        prerequisite = { focus = USA_factory_standardization }
+        prerequisite = { focus = USA_dockyard_expansion }
+        relative_position_id = USA_industrial_recovery_start
+        x = -2
+        y = 4
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_ind_factory_output = 0.03 }
+            add_to_variable = { USA_ind_prod_eff_cap = 0.03 }
+            add_to_variable = { USA_ind_dockyard_output = 0.03 }
+            custom_effect_tooltip = USA_production_efficiency_tooltip
+        }
+    }
+
+    # ========================================================================
+    # PHASE 1.2: 貿易・資源ブランチ（8 NF）X = 13-17, Y = 1-4
+    # ========================================================================
+
+    focus = {
+        id = USA_trade_stabilization
+        icon = GFX_goal_generic_positive_trade_relations
+        prerequisite = { focus = USA_hollow_state }
+        x = 15
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_consumer_goods = -0.02 }
+            add_to_variable = { USA_eco_min_export = -0.01 }
+            custom_effect_tooltip = USA_trade_stabilization_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_tariff_policy
+        icon = GFX_focus_generic_trade_route
+        prerequisite = { focus = USA_trade_stabilization }
+        relative_position_id = USA_trade_stabilization
+        x = -2
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_consumer_goods = -0.02 }
+            add_to_variable = { USA_eco_min_export = -0.02 }
+            custom_effect_tooltip = USA_tariff_policy_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_resource_stockpile
+        icon = GFX_focus_generic_raw_materials
+        prerequisite = { focus = USA_trade_stabilization }
+        relative_position_id = USA_trade_stabilization
+        x = 2
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_resource_factor = 0.05 }
+            custom_effect_tooltip = USA_resource_stockpile_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_market_regulation
+        icon = GFX_focus_generic_currency_reforms
+        prerequisite = { focus = USA_tariff_policy }
+        prerequisite = { focus = USA_resource_stockpile }
+        relative_position_id = USA_trade_stabilization
+        x = 0
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.03
+            add_to_variable = { USA_ind_prod_eff_cap = 0.02 }
+            custom_effect_tooltip = USA_market_regulation_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_export_drives
+        icon = GFX_goal_generic_trade_agreement
+        prerequisite = { focus = USA_market_regulation }
+        relative_position_id = USA_trade_stabilization
+        x = -1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_consumer_goods = -0.02 }
+            add_to_variable = { USA_eco_min_export = -0.02 }
+            custom_effect_tooltip = USA_export_drives_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_resource_independence
+        icon = GFX_focus_generic_minerals
+        prerequisite = { focus = USA_market_regulation }
+        relative_position_id = USA_trade_stabilization
+        x = 1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_resource_factor = 0.05 }
+            add_to_variable = { USA_eco_min_export = -0.02 }
+            custom_effect_tooltip = USA_resource_independence_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_economic_coordination
+        icon = GFX_focus_generic_economic_planning
+        prerequisite = { focus = USA_export_drives }
+        prerequisite = { focus = USA_resource_independence }
+        relative_position_id = USA_trade_stabilization
+        x = 0
+        y = 4
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_consumer_goods = -0.04 }
+            add_to_variable = { USA_eco_resource_factor = 0.05 }
+            custom_effect_tooltip = USA_economic_coordination_tooltip
+        }
+    }
+
+    # ========================================================================
+    # PHASE 1.3: 社会・労働ブランチ（8 NF）X = 18-22, Y = 1-4
+    # ========================================================================
+
+    focus = {
+        id = USA_social_stabilization
+        icon = GFX_goal_generic_national_unity
+        prerequisite = { focus = USA_hollow_state }
+        x = 19
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.03
+            add_to_variable = { USA_pol_stability = 0.02 }
+            custom_effect_tooltip = USA_social_stabilization_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_veterans_welfare
+        icon = GFX_focus_generic_military_academy
+        prerequisite = { focus = USA_social_stabilization }
+        relative_position_id = USA_social_stabilization
+        x = 1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_war_support = 0.05
+            add_stability = 0.03
+            army_experience = 25
+        }
+    }
+
+    focus = {
+        id = USA_agricultural_relief
+        icon = GFX_focus_generic_modernizing_agriculture
+        prerequisite = { focus = USA_social_stabilization }
+        relative_position_id = USA_social_stabilization
+        x = 3
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.05
+            add_to_variable = { USA_pol_stability = 0.03 }
+            custom_effect_tooltip = USA_agricultural_relief_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_labor_cooperation
+        icon = GFX_focus_generic_full_social_mobilization
+        prerequisite = { focus = USA_veterans_welfare }
+        prerequisite = { focus = USA_agricultural_relief }
+        relative_position_id = USA_social_stabilization
+        x = 3
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.05
+            add_political_power = 50
+            add_to_variable = { USA_ind_factory_output = 0.02 }
+            custom_effect_tooltip = USA_labor_cooperation_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_welfare_programs
+        icon = GFX_focus_generic_low_cost_housing
+        prerequisite = { focus = USA_labor_cooperation }
+        relative_position_id = USA_social_stabilization
+        x = 3
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.03
+            add_to_variable = { USA_eco_civ_build_speed = 0.05 }
+            custom_effect_tooltip = USA_welfare_programs_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_infrastructure_projects
+        icon = GFX_goal_generic_construct_infrastructure
+        prerequisite = { focus = USA_labor_cooperation }
+        relative_position_id = USA_social_stabilization
+        x = 5
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            add_to_variable = { USA_eco_infra_build_speed = 0.10 }
+            custom_effect_tooltip = USA_infrastructure_projects_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_social_security
+        icon = GFX_focus_generic_safety_net
+        prerequisite = { focus = USA_welfare_programs }
+        prerequisite = { focus = USA_infrastructure_projects }
+        relative_position_id = USA_social_stabilization
+        x = 3
+        y = 4
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.10
+            add_to_variable = { USA_pol_stability = 0.10 }
+            add_to_variable = { USA_eco_civ_build_speed = 0.10 }
+            custom_effect_tooltip = USA_social_security_tooltip
+        }
+    }
+
+    # ========================================================================
+    # 派閥闘争ツリー（中央）X = 13-17
+    # ========================================================================
+
+    focus = {
+        id = USA_faction_struggle
+        icon = GFX_goal_generic_dangerous_deal
+        prerequisite = { focus = USA_hollow_state }
+        x = 15
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 100 }
+        completion_reward = {
+            add_political_power = -25
+            set_variable = { USA_faction_tension_active = 1 }
+            set_variable = { USA_faction_stability_penalty = -0.05 }
+            set_variable = { USA_faction_pp_penalty = -0.05 }
+            country_event = { id = usa.1 days = 1 }
+            custom_effect_tooltip = USA_faction_struggle_tooltip
+        }
+    }
+
+    # Long派支持ブランチ
+    focus = {
+        id = USA_share_our_wealth
+        icon = GFX_goal_generic_propaganda
+        prerequisite = { focus = USA_faction_struggle }
+        relative_position_id = USA_faction_struggle
+        x = -3
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { usa_long_support = 10 }
+            add_to_variable = { USA_long_pp_bonus = 0.03 }
+            country_event = { id = usa.101 days = 3 }
+            custom_effect_tooltip = USA_long_support_10_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_radio_campaign_long
+        icon = GFX_focus_generic_intelligence_exchange
+        prerequisite = { focus = USA_share_our_wealth }
+        relative_position_id = USA_share_our_wealth
+        x = -2
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { usa_long_support = 15 }
+            add_to_variable = { USA_long_pp_bonus = 0.02 }
+            country_event = { id = usa.102 days = 5 }
+            custom_effect_tooltip = USA_long_support_15_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_populist_rallies
+        icon = GFX_focus_generic_rally_fascists
+        prerequisite = { focus = USA_share_our_wealth }
+        relative_position_id = USA_share_our_wealth
+        x = 0
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { usa_long_support = 10 }
+            add_to_variable = { USA_long_stability_effect = -0.02 }
+            add_to_variable = { USA_long_consumer_bonus = -0.02 }
+            country_event = { id = usa.103 days = 7 }
+            custom_effect_tooltip = USA_long_support_10_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_long_machine
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = USA_radio_campaign_long }
+        prerequisite = { focus = USA_populist_rallies }
+        relative_position_id = USA_share_our_wealth
+        x = -1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { usa_long_support = 20 }
+            add_to_variable = { USA_long_pp_bonus = 0.05 }
+            country_event = { id = usa.104 days = 10 }
+            custom_effect_tooltip = USA_long_support_20_tooltip
+        }
+    }
+
+    # マッカーサー派支持ブランチ
+    focus = {
+        id = USA_military_reform
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = USA_faction_struggle }
+        relative_position_id = USA_faction_struggle
+        x = 3
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { usa_macarthur_support = 10 }
+            add_to_variable = { USA_mac_org_bonus = 0.03 }
+            army_experience = 25
+            country_event = { id = usa.110 days = 3 }
+            custom_effect_tooltip = USA_mac_support_10_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_officer_corps
+        icon = GFX_focus_generic_military_academy
+        prerequisite = { focus = USA_military_reform }
+        relative_position_id = USA_military_reform
+        x = 0
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { usa_macarthur_support = 15 }
+            add_to_variable = { USA_mac_planning_bonus = 0.05 }
+            country_event = { id = usa.111 days = 5 }
+            custom_effect_tooltip = USA_mac_support_15_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_order_discipline
+        icon = GFX_focus_generic_military_cooperation
+        prerequisite = { focus = USA_military_reform }
+        relative_position_id = USA_military_reform
+        x = 2
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { usa_macarthur_support = 10 }
+            add_to_variable = { USA_mac_stability_effect = 0.03 }
+            add_stability = 0.03
+            country_event = { id = usa.112 days = 7 }
+            custom_effect_tooltip = USA_mac_support_10_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_mac_coalition
+        icon = GFX_focus_generic_military_dictatorship
+        prerequisite = { focus = USA_officer_corps }
+        prerequisite = { focus = USA_order_discipline }
+        relative_position_id = USA_military_reform
+        x = 1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { usa_macarthur_support = 20 }
+            add_to_variable = { USA_mac_org_bonus = 0.05 }
+            country_event = { id = usa.113 days = 10 }
+            custom_effect_tooltip = USA_mac_support_20_tooltip
+        }
+    }
+
+    # 選挙前収束
+    focus = {
+        id = USA_election_crisis
+        icon = GFX_goal_generic_territory_or_war
+        prerequisite = { focus = USA_economic_coordination }
+        prerequisite = { focus = USA_long_machine focus = USA_mac_coalition }
+        x = 15
+        y = 7
+        cost = 30
+        ai_will_do = { factor = 100 }
+        completion_reward = {
+            add_political_power = -100
+            add_stability = -0.10
+            country_event = { id = usa.5 days = 1 }
+            custom_effect_tooltip = USA_election_crisis_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_election_1936
+        icon = GFX_focus_generic_parliament
+        prerequisite = { focus = USA_election_crisis }
+        relative_position_id = USA_election_crisis
+        x = 0
+        y = 1
+        cost = 60
+        ai_will_do = { factor = 100 }
+        completion_reward = {
+            set_variable = { USA_faction_tension_active = 0 }
+            country_event = { id = usa.10 days = 1 }
+            custom_effect_tooltip = USA_election_1936_tooltip
+        }
+    }
+
+    # ========================================================================
+    # PHASE 2A: ヒューイ・ロング ルート（Y = 7-17）
+    # ========================================================================
+
+    # --- ルート開始 ---
+    focus = {
+        id = USA_long_victory
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = USA_election_1936 }
+        x = -11
+        y = 9
+        cost = 30
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = USA_long_route_available_tt
+                has_country_flag = USA_long_route
+            }
+        }
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            set_politics = { ruling_party = fascism elections_allowed = no }
+            add_popularity = { ideology = fascism popularity = 0.30 }
+            set_country_flag = USA_long_active
+            # Long派ボーナス適用
+            add_to_variable = { USA_pol_pp_gain = 0.10 }
+            add_to_variable = { USA_eco_consumer_goods = -0.10 }
+            add_to_variable = { USA_pol_stability = -0.05 }
+            # マッカーサー派支持リセット
+            set_variable = { usa_macarthur_support = 0 }
+            custom_effect_tooltip = USA_long_victory_tooltip
+        }
+    }
+
+
+    # ========================================================================
+    # Long政治ツリー（左側）X = 2-6
+    # ========================================================================
+
+    focus = {
+        id = USA_kingfish_consolidation
+        icon = GFX_goal_generic_propaganda
+        prerequisite = { focus = USA_long_victory }
+        relative_position_id = USA_long_victory
+        x = -4
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_political_power = 100
+            add_to_variable = { USA_pol_pp_gain = 0.05 }
+            custom_effect_tooltip = USA_kingfish_consolidation_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_suspend_constitution
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = USA_kingfish_consolidation }
+        relative_position_id = USA_kingfish_consolidation
+        x = -2
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = -0.05
+            add_to_variable = { USA_pol_pp_gain = 0.10 }
+            add_to_variable = { USA_pol_drift_defence = 0.25 }
+            custom_effect_tooltip = USA_suspend_constitution_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_minutemen_militia
+        icon = GFX_focus_generic_limited_social_mobilization
+        prerequisite = { focus = USA_kingfish_consolidation }
+        relative_position_id = USA_kingfish_consolidation
+        x = 0
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_manpower = 50000
+            add_to_variable = { USA_mil_conscription = 0.01 }
+            custom_effect_tooltip = USA_minutemen_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_share_wealth_clubs
+        icon = GFX_goal_generic_national_unity
+        prerequisite = { focus = USA_suspend_constitution }
+        relative_position_id = USA_kingfish_consolidation
+        x = -3
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.05
+            add_to_variable = { USA_eco_consumer_goods = -0.03 }
+            custom_effect_tooltip = USA_share_clubs_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_purge_opponents
+        icon = GFX_focus_generic_military_dictatorship
+        prerequisite = { focus = USA_suspend_constitution }
+        prerequisite = { focus = USA_minutemen_militia }
+        relative_position_id = USA_kingfish_consolidation
+        x = -1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_political_power = 150
+            add_stability = -0.03
+            add_to_variable = { USA_pol_stability = 0.05 }
+            country_event = { id = usa.200 days = 3 }
+            custom_effect_tooltip = USA_purge_opponents_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_loyalty_oath
+        icon = GFX_focus_generic_all_seeing_eye
+        prerequisite = { focus = USA_minutemen_militia }
+        relative_position_id = USA_kingfish_consolidation
+        x = 1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_pol_drift_defence = 0.25 }
+            add_to_variable = { USA_mil_org = 0.05 }
+            custom_effect_tooltip = USA_loyalty_oath_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_president_for_life
+        icon = GFX_focus_generic_king
+        prerequisite = { focus = USA_share_wealth_clubs }
+        prerequisite = { focus = USA_purge_opponents }
+        prerequisite = { focus = USA_loyalty_oath }
+        relative_position_id = USA_kingfish_consolidation
+        x = -1
+        y = 3
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_political_power = 200
+            add_stability = 0.10
+            add_to_variable = { USA_pol_pp_gain = 0.15 }
+            add_to_variable = { USA_pol_surrender_limit = 0.10 }
+            custom_effect_tooltip = USA_president_for_life_tooltip
+        }
+    }
+
+    # ========================================================================
+    # Long経済ツリー（中央）X = 5-9
+    # ========================================================================
+
+    focus = {
+        id = USA_plunder_economy
+        icon = GFX_goal_generic_production
+        prerequisite = { focus = USA_long_victory }
+        relative_position_id = USA_long_victory
+        x = 0
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_consumer_goods = -0.03 }
+            add_to_variable = { USA_ind_factory_output = 0.05 }
+            custom_effect_tooltip = USA_plunder_economy_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_nationalize_banks
+        icon = GFX_focus_generic_stockpile_currency
+        prerequisite = { focus = USA_plunder_economy }
+        relative_position_id = USA_plunder_economy
+        x = -2
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_pol_pp_gain = 0.10 }
+            add_to_variable = { USA_eco_civ_build_speed = 0.05 }
+            custom_effect_tooltip = USA_nationalize_banks_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_seize_foreign_assets
+        icon = GFX_goal_generic_consumer_goods
+        prerequisite = { focus = USA_plunder_economy }
+        relative_position_id = USA_plunder_economy
+        x = 0
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_consumer_goods = -0.10 }
+            add_to_variable = { USA_ind_factory_output = 0.05 }
+            ENG = { add_opinion_modifier = { target = ROOT modifier = USA_asset_seizure } }
+            JAP = { add_opinion_modifier = { target = ROOT modifier = USA_asset_seizure } }
+            custom_effect_tooltip = USA_seize_assets_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_expropriate_industries
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = USA_nationalize_banks }
+        prerequisite = { focus = USA_seize_foreign_assets }
+        relative_position_id = USA_plunder_economy
+        x = -1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = { type = arms_factory level = 3 instant_build = yes }
+            }
+            add_to_variable = { USA_eco_mil_build_speed = 0.10 }
+            custom_effect_tooltip = USA_expropriate_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_peoples_factories
+        icon = GFX_goal_generic_construct_civilian
+        prerequisite = { focus = USA_expropriate_industries }
+        relative_position_id = USA_plunder_economy
+        x = -1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+            }
+            add_to_variable = { USA_ind_prod_eff_cap = 0.05 }
+            custom_effect_tooltip = USA_peoples_factories_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_redistribute_wealth
+        icon = GFX_focus_generic_currency_reforms
+        prerequisite = { focus = USA_expropriate_industries }
+        relative_position_id = USA_plunder_economy
+        x = 1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.05
+            add_to_variable = { USA_eco_consumer_goods = -0.05 }
+            custom_effect_tooltip = USA_redistribute_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_autarky_achieved
+        icon = GFX_focus_GER_autarky_achieved
+        prerequisite = { focus = USA_peoples_factories }
+        prerequisite = { focus = USA_redistribute_wealth }
+        relative_position_id = USA_plunder_economy
+        x = 0
+        y = 4
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_ind_factory_output = 0.10 }
+            add_to_variable = { USA_ind_prod_eff_cap = 0.20 }
+            add_to_variable = { USA_eco_resource_factor = 0.15 }
+            custom_effect_tooltip = USA_autarky_tooltip
+        }
+    }
+
+    # --- Long専用経済NF追加（+6 NF）---
+
+    focus = {
+        id = USA_long_nationalization
+        icon = GFX_goal_generic_consumer_goods
+        prerequisite = { focus = USA_autarky_achieved }
+        relative_position_id = USA_plunder_economy
+        x = 0
+        y = 5
+        cost = 30
+        available = {
+            has_country_flag = USA_long_active
+        }
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_consumer_goods = -0.05 }
+            add_to_variable = { USA_ind_factory_output = 0.08 }
+            custom_effect_tooltip = USA_long_nationalization_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_long_wealth_tax
+        icon = GFX_focus_generic_currency_reforms
+        prerequisite = { focus = USA_long_nationalization }
+        relative_position_id = USA_long_nationalization
+        x = -1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_political_power = 75
+            add_to_variable = { USA_pol_pp_gain = 0.08 }
+            custom_effect_tooltip = USA_long_wealth_tax_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_long_peoples_bank
+        icon = GFX_focus_generic_stockpile_currency
+        prerequisite = { focus = USA_long_nationalization }
+        relative_position_id = USA_long_nationalization
+        x = 1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_consumer_goods = -0.03 }
+            add_to_variable = { USA_ind_factory_output = 0.05 }
+            custom_effect_tooltip = USA_long_peoples_bank_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_long_share_wealth
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = USA_long_wealth_tax }
+        prerequisite = { focus = USA_long_peoples_bank }
+        relative_position_id = USA_long_nationalization
+        x = 0
+        y = 2
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.10
+            add_to_variable = { USA_pol_stability = 0.10 }
+            add_to_variable = { USA_eco_consumer_goods = -0.08 }
+            add_to_variable = { USA_ind_factory_output = 0.15 }
+            custom_effect_tooltip = USA_long_share_wealth_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_long_guaranteed_income
+        icon = GFX_focus_generic_welfare
+        prerequisite = { focus = USA_long_share_wealth }
+        relative_position_id = USA_long_nationalization
+        x = -1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.05
+            add_to_variable = { USA_pol_stability = 0.05 }
+            add_to_variable = { USA_eco_consumer_goods = -0.03 }
+            custom_effect_tooltip = USA_long_guaranteed_income_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_long_free_education
+        icon = GFX_focus_generic_research
+        prerequisite = { focus = USA_long_share_wealth }
+        relative_position_id = USA_long_nationalization
+        x = 1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_research_slot = 1
+            add_to_variable = { USA_eco_research_speed = 0.05 }
+            custom_effect_tooltip = USA_long_free_education_tooltip
+        }
+    }
+
+    # ========================================================================
+    # Long軍事ツリー（右側）X = 8-12
+    # ========================================================================
+
+    focus = {
+        id = USA_peoples_army
+        icon = GFX_focus_generic_army_soldiers
+        prerequisite = { focus = USA_long_victory }
+        relative_position_id = USA_long_victory
+        x = 2
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            army_experience = 50
+            add_to_variable = { USA_army_org = 0.05 }
+            custom_effect_tooltip = USA_peoples_army_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_mass_conscription
+        icon = GFX_focus_generic_full_social_mobilization
+        prerequisite = { focus = USA_peoples_army }
+        relative_position_id = USA_peoples_army
+        x = 0
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_army_conscription = 0.03 }
+            add_ideas = extensive_conscription
+            custom_effect_tooltip = USA_mass_conscription_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_political_commissars
+        icon = GFX_focus_SOV_builder_of_the_red_army
+        prerequisite = { focus = USA_peoples_army }
+        relative_position_id = USA_peoples_army
+        x = 2
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_army_org = 0.05 }
+            add_to_variable = { USA_army_attack = 0.05 }
+            custom_effect_tooltip = USA_commissars_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_attrition_doctrine
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        prerequisite = { focus = USA_mass_conscription }
+        relative_position_id = USA_peoples_army
+        x = 0
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = USA_attrition
+                cost_reduction = 0.5
+                uses = 2
+                category = land_doctrine
+            }
+            add_to_variable = { USA_army_defence = 0.05 }
+            custom_effect_tooltip = USA_attrition_doctrine_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_mosquito_fleet
+        icon = GFX_goal_generic_navy_cruiser
+        prerequisite = { focus = USA_political_commissars }
+        relative_position_id = USA_peoples_army
+        x = 2
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = USA_mosquito
+                cost_reduction = 0.5
+                uses = 2
+                category = submarine_doctrine
+            }
+            add_to_variable = { USA_navy_damage = 0.05 }
+            custom_effect_tooltip = USA_mosquito_fleet_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_arsenal_of_people
+        icon = GFX_focus_generic_military_equipment
+        prerequisite = { focus = USA_attrition_doctrine }
+        prerequisite = { focus = USA_mosquito_fleet }
+        relative_position_id = USA_peoples_army
+        x = 1
+        y = 3
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 4
+                add_building_construction = { type = arms_factory level = 4 instant_build = yes }
+            }
+            add_to_variable = { USA_army_attack = 0.10 }
+            add_to_variable = { USA_army_defence = 0.05 }
+            custom_effect_tooltip = USA_arsenal_people_tooltip
+        }
+    }
+
+    # ========================================================================
+    # Long外交・戦争ツリー（Y = 12-17）
+    # ========================================================================
+
+    focus = {
+        id = USA_revenge_declaration
+        icon = GFX_goal_generic_territory_or_war
+        prerequisite = { focus = USA_election_1936 }
+        x = 12
+        y = 10
+        cost = 30
+        available = {
+            has_completed_focus = USA_long_victory
+        }
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_war_support = 0.15
+            add_to_variable = { USA_pol_war_support = 0.10 }
+            country_event = { id = usa.210 days = 1 }
+            custom_effect_tooltip = USA_revenge_declaration_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_seize_panama
+        icon = GFX_goal_generic_occupy_states_coastal
+        prerequisite = { focus = USA_revenge_declaration }
+        relative_position_id = USA_revenge_declaration
+        x = -3
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = PAN }
+            custom_effect_tooltip = USA_seize_panama_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_reclaim_alaska
+        icon = GFX_goal_generic_demand_territory
+        prerequisite = { focus = USA_revenge_declaration }
+        relative_position_id = USA_revenge_declaration
+        x = -1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            create_wargoal = { type = take_state_focus target = CAN generator = { 463 } }
+            custom_effect_tooltip = USA_reclaim_alaska_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_crush_canada
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = USA_reclaim_alaska }
+        relative_position_id = USA_revenge_declaration
+        x = -1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = CAN }
+            add_to_variable = { USA_navy_invasion_capacity = 10 }
+            custom_effect_tooltip = USA_crush_canada_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_pacific_storm
+        icon = GFX_goal_generic_navy_battleship
+        prerequisite = { focus = USA_revenge_declaration }
+        relative_position_id = USA_revenge_declaration
+        x = 1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = JAP }
+            add_to_variable = { USA_navy_damage = 0.10 }
+            custom_effect_tooltip = USA_pacific_storm_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_atlantic_fury
+        icon = GFX_goal_generic_navy_carrier
+        prerequisite = { focus = USA_revenge_declaration }
+        relative_position_id = USA_revenge_declaration
+        x = 3
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            create_wargoal = { type = annex_everything target = ENG }
+            add_to_variable = { USA_navy_hit_chance = 0.10 }
+            custom_effect_tooltip = USA_atlantic_fury_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_burn_tokyo
+        icon = GFX_goal_generic_air_bomber
+        prerequisite = { focus = USA_pacific_storm }
+        relative_position_id = USA_revenge_declaration
+        x = 1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_navy_strategic_bombing = 0.15 }
+            add_to_variable = { USA_navy_air_attack = 0.10 }
+            custom_effect_tooltip = USA_burn_tokyo_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_fall_of_london
+        icon = GFX_focus_generic_military_deal
+        prerequisite = { focus = USA_atlantic_fury }
+        relative_position_id = USA_revenge_declaration
+        x = 3
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_navy_invasion_capacity = 15 }
+            add_to_variable = { USA_army_special_forces_cap = 0.05 }
+            custom_effect_tooltip = USA_fall_london_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_world_emperor
+        icon = GFX_focus_generic_king
+        prerequisite = { focus = USA_crush_canada }
+        prerequisite = { focus = USA_burn_tokyo }
+        prerequisite = { focus = USA_fall_of_london }
+        relative_position_id = USA_revenge_declaration
+        x = 1
+        y = 3
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_political_power = 500
+            add_stability = 0.25
+            add_war_support = 0.25
+            add_to_variable = { USA_ind_factory_output = 0.15 }
+            add_to_variable = { USA_army_attack = 0.15 }
+            custom_effect_tooltip = USA_world_emperor_tooltip
+        }
+    }
+
+    # ========================================================================
+    # PHASE 2B: MACARTHUR ルート（Y = 7-17）
+    # ========================================================================
+
+    focus = {
+        id = USA_mac_victory
+        icon = GFX_goal_generic_military_deal
+        prerequisite = { focus = USA_election_1936 }
+        x = 28
+        y = 9
+        cost = 30
+        available = {
+            custom_trigger_tooltip = {
+                tooltip = USA_mac_route_available_tt
+                has_country_flag = USA_mac_route
+            }
+        }
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            set_politics = { ruling_party = neutrality elections_allowed = no }
+            add_popularity = { ideology = neutrality popularity = 0.30 }
+            set_country_flag = USA_mac_active
+            # マッカーサー派ボーナス適用
+            add_to_variable = { USA_army_org = 0.10 }
+            add_to_variable = { USA_army_planning_speed = 0.10 }
+            add_to_variable = { USA_pol_stability = 0.05 }
+            # Long派支持リセット
+            set_variable = { usa_long_support = 0 }
+            custom_effect_tooltip = USA_mac_victory_tooltip
+        }
+    }
+
+
+    # ========================================================================
+    # MacArthur政治ツリー（左側）X = 20-24
+    # ========================================================================
+
+    focus = {
+        id = USA_american_caesar
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = USA_mac_victory }
+        relative_position_id = USA_mac_victory
+        x = -4
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_political_power = 100
+            add_stability = 0.05
+            add_to_variable = { USA_pol_pp_gain = 0.05 }
+            custom_effect_tooltip = USA_american_caesar_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_martial_law
+        icon = GFX_focus_generic_military_government
+        prerequisite = { focus = USA_american_caesar }
+        relative_position_id = USA_american_caesar
+        x = -1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.05
+            add_to_variable = { USA_pol_stability = 0.05 }
+            custom_effect_tooltip = USA_martial_law_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_meritocratic_government
+        icon = GFX_focus_generic_research
+        prerequisite = { focus = USA_american_caesar }
+        relative_position_id = USA_american_caesar
+        x = 1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_research_speed = 0.03 }
+            add_research_slot = 1
+            custom_effect_tooltip = USA_meritocracy_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_anti_communist_purge
+        icon = GFX_focus_generic_all_seeing_eye
+        prerequisite = { focus = USA_martial_law }
+        relative_position_id = USA_american_caesar
+        x = -2
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_stability = 0.05
+            add_to_variable = { USA_pol_drift_defence = 0.25 }
+            add_popularity = { ideology = communism popularity = -0.10 }
+            custom_effect_tooltip = USA_anti_communist_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_military_government
+        icon = GFX_focus_generic_military_dictatorship
+        prerequisite = { focus = USA_martial_law }
+        prerequisite = { focus = USA_meritocratic_government }
+        relative_position_id = USA_american_caesar
+        x = 0
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_pol_pp_gain = 0.10 }
+            add_to_variable = { USA_army_org = 0.05 }
+            custom_effect_tooltip = USA_military_gov_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_technocratic_elite
+        icon = GFX_focus_NORDIC_com_capstone_research
+        prerequisite = { focus = USA_meritocratic_government }
+        relative_position_id = USA_american_caesar
+        x = 2
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_research_speed = 0.05 }
+            add_to_variable = { USA_ind_prod_eff_cap = 0.03 }
+            custom_effect_tooltip = USA_technocratic_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_eternal_regent
+        icon = GFX_focus_generic_king
+        prerequisite = { focus = USA_anti_communist_purge }
+        prerequisite = { focus = USA_military_government }
+        prerequisite = { focus = USA_technocratic_elite }
+        relative_position_id = USA_american_caesar
+        x = 0
+        y = 3
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_political_power = 200
+            add_stability = 0.10
+            add_to_variable = { USA_pol_pp_gain = 0.15 }
+            add_to_variable = { USA_pol_stability = 0.10 }
+            custom_effect_tooltip = USA_eternal_regent_tooltip
+        }
+    }
+
+    # ========================================================================
+    # MacArthur経済ツリー（中央）X = 23-27
+    # ========================================================================
+
+    focus = {
+        id = USA_industrial_reconstruction
+        icon = GFX_goal_generic_construction
+        prerequisite = { focus = USA_mac_victory }
+        relative_position_id = USA_mac_victory
+        x = 0
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_ind_factory_output = 0.10 }
+            add_to_variable = { USA_ind_prod_eff_cap = 0.03 }
+            custom_effect_tooltip = USA_industrial_reconstruction_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_dollar_stabilization
+        icon = GFX_focus_usa_reestablish_the_gold_standard
+        prerequisite = { focus = USA_industrial_reconstruction }
+        relative_position_id = USA_industrial_reconstruction
+        x = -1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_consumer_goods = -0.05 }
+            add_to_variable = { USA_eco_min_export = -0.05 }
+            custom_effect_tooltip = USA_dollar_stabilization_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_fordism_principles
+        icon = GFX_goal_generic_production
+        prerequisite = { focus = USA_industrial_reconstruction }
+        relative_position_id = USA_industrial_reconstruction
+        x = 1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_ind_prod_eff_cap = 0.05 }
+            add_to_variable = { USA_ind_prod_eff_gain = 0.05 }
+            custom_effect_tooltip = USA_fordism_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_standardized_production
+        icon = GFX_focus_generic_military_equipment
+        prerequisite = { focus = USA_dollar_stabilization }
+        prerequisite = { focus = USA_fordism_principles }
+        relative_position_id = USA_industrial_reconstruction
+        x = 0
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_ind_line_change = 0.10 }
+            add_to_variable = { USA_ind_factory_output = 0.05 }
+            custom_effect_tooltip = USA_standardized_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_highway_system
+        icon = GFX_focus_generic_road_investment
+        prerequisite = { focus = USA_standardized_production }
+        relative_position_id = USA_industrial_reconstruction
+        x = -1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_building_construction = { type = infrastructure level = 3 instant_build = yes }
+            }
+            add_to_variable = { USA_eco_infra_build_speed = 0.15 }
+            custom_effect_tooltip = USA_highway_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_mil_ind_complex
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = USA_standardized_production }
+        relative_position_id = USA_industrial_reconstruction
+        x = 1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = { type = arms_factory level = 3 instant_build = yes }
+            }
+            add_to_variable = { USA_eco_mil_build_speed = 0.10 }
+            custom_effect_tooltip = USA_mil_ind_complex_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_industrial_miracle
+        icon = GFX_focus_generic_production_expertise
+        prerequisite = { focus = USA_highway_system }
+        prerequisite = { focus = USA_mil_ind_complex }
+        relative_position_id = USA_industrial_reconstruction
+        x = 0
+        y = 4
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_ind_factory_output = 0.15 }
+            add_to_variable = { USA_ind_dockyard_output = 0.10 }
+            add_to_variable = { USA_eco_consumer_goods = -0.10 }
+            add_to_variable = { USA_eco_min_export = -0.20 }
+            custom_effect_tooltip = USA_industrial_miracle_tooltip
+        }
+    }
+
+    # --- MacArthur専用経済NF追加（+6 NF）---
+
+    focus = {
+        id = USA_mac_corporate_state
+        icon = GFX_goal_generic_political_pressure
+        prerequisite = { focus = USA_industrial_miracle }
+        relative_position_id = USA_industrial_reconstruction
+        x = 0
+        y = 5
+        cost = 30
+        available = {
+            has_country_flag = USA_mac_active
+        }
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_mil_build_speed = 0.10 }
+            add_to_variable = { USA_ind_factory_output = 0.08 }
+            custom_effect_tooltip = USA_mac_corporate_state_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_mac_industrial_council
+        icon = GFX_goal_generic_production
+        prerequisite = { focus = USA_mac_corporate_state }
+        relative_position_id = USA_mac_corporate_state
+        x = -1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_political_power = 50
+            add_to_variable = { USA_ind_prod_eff_cap = 0.08 }
+            custom_effect_tooltip = USA_mac_industrial_council_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_mac_military_contracts
+        icon = GFX_goal_generic_construct_mil_factory
+        prerequisite = { focus = USA_mac_corporate_state }
+        relative_position_id = USA_mac_corporate_state
+        x = 1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_mil_build_speed = 0.15 }
+            add_to_variable = { USA_ind_dockyard_output = 0.05 }
+            custom_effect_tooltip = USA_mac_military_contracts_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_mac_war_economy
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = USA_mac_industrial_council }
+        prerequisite = { focus = USA_mac_military_contracts }
+        relative_position_id = USA_mac_corporate_state
+        x = 0
+        y = 2
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_consumer_goods = -0.15 }
+            add_to_variable = { USA_eco_mil_build_speed = 0.25 }
+            add_to_variable = { USA_ind_factory_output = 0.12 }
+            custom_effect_tooltip = USA_mac_war_economy_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_mac_rationing
+        icon = GFX_focus_generic_rationing
+        prerequisite = { focus = USA_mac_war_economy }
+        relative_position_id = USA_mac_corporate_state
+        x = -1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_eco_consumer_goods = -0.10 }
+            add_to_variable = { USA_eco_mil_build_speed = 0.10 }
+            custom_effect_tooltip = USA_mac_rationing_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_mac_total_mobilization
+        icon = GFX_goal_generic_full_social_mobilization
+        prerequisite = { focus = USA_mac_war_economy }
+        relative_position_id = USA_mac_corporate_state
+        x = 1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_manpower = 100000
+            add_to_variable = { USA_army_conscription = 0.05 }
+            custom_effect_tooltip = USA_mac_total_mobilization_tooltip
+        }
+    }
+
+    # ========================================================================
+    # MacArthur軍事ツリー（右側）X = 26-30
+    # ========================================================================
+
+    focus = {
+        id = USA_military_modernization
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = USA_mac_victory }
+        relative_position_id = USA_mac_victory
+        x = 4
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            army_experience = 75
+            add_to_variable = { USA_army_org = 0.05 }
+            add_to_variable = { USA_army_planning_speed = 0.05 }
+            custom_effect_tooltip = USA_military_modernization_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_superior_firepower
+        icon = GFX_goal_generic_army_artillery
+        prerequisite = { focus = USA_military_modernization }
+        relative_position_id = USA_military_modernization
+        x = -1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = USA_firepower
+                cost_reduction = 0.5
+                uses = 2
+                category = land_doctrine
+            }
+            add_to_variable = { USA_army_attack = 0.05 }
+            custom_effect_tooltip = USA_superior_firepower_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_air_power_doctrine
+        icon = GFX_goal_generic_air_fighter
+        prerequisite = { focus = USA_military_modernization }
+        relative_position_id = USA_military_modernization
+        x = 1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = USA_air_power
+                cost_reduction = 0.5
+                uses = 2
+                category = air_doctrine
+            }
+            add_to_variable = { USA_navy_air_attack = 0.05 }
+            add_to_variable = { USA_navy_air_defence = 0.05 }
+            custom_effect_tooltip = USA_air_power_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_armored_fist
+        icon = GFX_goal_generic_army_tanks
+        prerequisite = { focus = USA_superior_firepower }
+        relative_position_id = USA_military_modernization
+        x = -1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_armor
+                bonus = 1.0
+                uses = 2
+                category = armor
+            }
+            add_to_variable = { USA_mil_attack = 0.05 }
+            custom_effect_tooltip = USA_armored_fist_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_strategic_bombing_cmd
+        icon = GFX_goal_generic_air_bomber
+        prerequisite = { focus = USA_air_power_doctrine }
+        relative_position_id = USA_military_modernization
+        x = 1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_strategic_bomber
+                bonus = 1.0
+                uses = 2
+                category = tactical_bomber
+            }
+            add_to_variable = { USA_navy_strategic_bombing = 0.10 }
+            custom_effect_tooltip = USA_strategic_bombing_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_blue_water_navy
+        icon = GFX_goal_generic_navy_battleship
+        prerequisite = { focus = USA_military_modernization }
+        relative_position_id = USA_military_modernization
+        x = 3
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = USA_navy
+                cost_reduction = 0.5
+                uses = 2
+                category = naval_doctrine
+            }
+            add_to_variable = { USA_navy_hit_chance = 0.05 }
+            add_to_variable = { USA_navy_damage = 0.05 }
+            custom_effect_tooltip = USA_blue_water_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_carrier_fleet
+        icon = GFX_goal_generic_navy_carrier
+        prerequisite = { focus = USA_blue_water_navy }
+        relative_position_id = USA_military_modernization
+        x = 3
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_carrier
+                bonus = 1.0
+                uses = 2
+                category = naval_equipment
+            }
+            add_to_variable = { USA_navy_invasion_capacity = 10 }
+            custom_effect_tooltip = USA_carrier_fleet_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_global_projection
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = USA_armored_fist }
+        prerequisite = { focus = USA_strategic_bombing_cmd }
+        prerequisite = { focus = USA_carrier_fleet }
+        relative_position_id = USA_military_modernization
+        x = 1
+        y = 4
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = { name = USA_special bonus = 1.0 uses = 1 category = paratroopers_tech }
+            add_tech_bonus = { name = USA_marines bonus = 1.0 uses = 1 category = marines_tech }
+            add_to_variable = { USA_army_attack = 0.10 }
+            add_to_variable = { USA_army_special_forces_cap = 0.05 }
+            custom_effect_tooltip = USA_global_projection_tooltip
+        }
+    }
+
+    # ========================================================================
+    # MacArthur外交・戦争ツリー（Y = 12-17）
+    # ========================================================================
+
+    focus = {
+        id = USA_hegemony_path
+        icon = GFX_goal_generic_alliance
+        prerequisite = { focus = USA_election_1936 }
+        x = 18
+         y = 10
+        cost = 30
+        available = {
+            has_completed_focus = USA_mac_victory
+        }
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_political_power = 100
+            add_war_support = 0.10
+            custom_effect_tooltip = USA_hegemony_path_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_pan_american_league
+        icon = GFX_goal_generic_major_alliance
+        prerequisite = { focus = USA_hegemony_path }
+        relative_position_id = USA_hegemony_path
+        x = -2
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            every_country = {
+                limit = { OR = { is_in_central_america = yes is_in_south_america = yes } }
+                add_opinion_modifier = { target = ROOT modifier = USA_las_league_opinion }
+            }
+            custom_effect_tooltip = USA_pan_american_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_london_cooperation
+        icon = GFX_goal_generic_alliance
+        prerequisite = { focus = USA_hegemony_path }
+        relative_position_id = USA_hegemony_path
+        x = -1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            ENG = { country_event = { id = usa.300 days = 3 } }
+            custom_effect_tooltip = USA_london_coop_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_tokyo_entente
+        icon = GFX_goal_generic_alliance
+        prerequisite = { focus = USA_hegemony_path }
+        relative_position_id = USA_hegemony_path
+        x = 1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            JAP = { country_event = { id = usa.310 days = 3 } }
+            custom_effect_tooltip = USA_tokyo_entente_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_anti_comintern
+        icon = GFX_focus_generic_anti_communism
+        prerequisite = { focus = USA_london_cooperation }
+        prerequisite = { focus = USA_tokyo_entente }
+        relative_position_id = USA_hegemony_path
+        x = 0
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_war_support = 0.10
+            create_wargoal = { type = annex_everything target = EUN }
+            custom_effect_tooltip = USA_anti_comintern_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_crusade_democracy
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = USA_hegemony_path }
+        relative_position_id = USA_hegemony_path
+        x = 2
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_pol_war_support = 0.10 }
+            add_to_variable = { USA_army_attack = 0.05 }
+            custom_effect_tooltip = USA_crusade_democracy_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_liberation_europe
+        icon = GFX_focus_usa_focus_on_europe
+        prerequisite = { focus = USA_anti_comintern }
+        prerequisite = { focus = USA_crusade_democracy }
+        relative_position_id = USA_hegemony_path
+        x = 1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_navy_invasion_capacity = 15 }
+            add_to_variable = { USA_army_special_forces_cap = 0.05 }
+            custom_effect_tooltip = USA_liberation_europe_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_world_policeman
+        icon = GFX_focus_generic_military_dictatorship
+        prerequisite = { focus = USA_pan_american_league }
+        prerequisite = { focus = USA_liberation_europe }
+        relative_position_id = USA_hegemony_path
+        x = 0
+        y = 4
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_political_power = 500
+            add_stability = 0.25
+            add_war_support = 0.25
+            add_to_variable = { USA_ind_factory_output = 0.15 }
+            add_to_variable = { USA_army_attack = 0.15 }
+            custom_effect_tooltip = USA_world_policeman_tooltip
+        }
+    }
+
+    # ========================================================================
+    # PHASE 4: 共通軍事ツリー（X = 0-30, Y = 14-20） 24 NF
+    # ========================================================================
+
+    # 4.1 陸軍ブランチ（11 NF）X = 0-4, Y = 14-18
+
+    focus = {
+        id = USA_army_reform
+        icon = GFX_goal_generic_army_doctrines
+        prerequisite = { focus = USA_election_1936 }
+        x = 6
+        y = 10
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            army_experience = 50
+            add_to_variable = { USA_army_org = 0.05 }
+            custom_effect_tooltip = USA_army_reform_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_officer_training
+        icon = GFX_focus_generic_military_academy
+        prerequisite = { focus = USA_army_reform }
+        relative_position_id = USA_army_reform
+        x = -1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_research_slot = 1
+            add_to_variable = { USA_army_org = 0.03 }
+            custom_effect_tooltip = USA_officer_training_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_nco_corps
+        icon = GFX_focus_generic_military_equipment
+        prerequisite = { focus = USA_army_reform }
+        relative_position_id = USA_army_reform
+        x = 1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_army_attack = 0.05 }
+            add_to_variable = { USA_army_defence = 0.05 }
+            custom_effect_tooltip = USA_nco_corps_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_infantry_modernization
+        icon = GFX_goal_generic_army_artillery
+        prerequisite = { focus = USA_officer_training }
+        prerequisite = { focus = USA_nco_corps }
+        relative_position_id = USA_army_reform
+        x = -1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+                name = USA_infantry
+                cost_reduction = 0.5
+                uses = 2
+                category = land_doctrine
+            }
+            add_to_variable = { USA_army_attack = 0.05 }
+            custom_effect_tooltip = USA_infantry_modernization_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_artillery_development
+        icon = GFX_goal_generic_army_artillery
+        prerequisite = { focus = USA_officer_training }
+        prerequisite = { focus = USA_nco_corps }
+        relative_position_id = USA_army_reform
+        x = 1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_artillery
+                bonus = 1.0
+                uses = 2
+                category = artillery
+            }
+            add_to_variable = { USA_army_attack = 0.08 }
+            custom_effect_tooltip = USA_artillery_development_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_armored_warfare
+        icon = GFX_goal_generic_army_tanks
+        prerequisite = { focus = USA_infantry_modernization }
+        relative_position_id = USA_army_reform
+        x = -1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_armor
+                bonus = 1.0
+                uses = 2
+                category = armor
+            }
+            add_to_variable = { USA_army_attack = 0.10 }
+            custom_effect_tooltip = USA_armored_warfare_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_motorization
+        icon = GFX_focus_generic_motorization
+        prerequisite = { focus = USA_artillery_development }
+        relative_position_id = USA_army_reform
+        x = 1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_army_supply_consumption = -0.10 }
+            add_to_variable = { USA_army_org = 0.05 }
+            custom_effect_tooltip = USA_motorization_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_airborne_forces
+        icon = GFX_focus_generic_airborne
+        prerequisite = { focus = USA_armored_warfare }
+        relative_position_id = USA_army_reform
+        x = -1
+        y = 4
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_paratroopers
+                bonus = 1.0
+                uses = 2
+                category = paratroopers_tech
+            }
+            add_to_variable = { USA_army_special_forces_cap = 0.05 }
+            custom_effect_tooltip = USA_airborne_forces_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_special_operations
+        icon = GFX_focus_generic_special_forces
+        prerequisite = { focus = USA_motorization }
+        relative_position_id = USA_army_reform
+        x = 1
+        y = 4
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_marines
+                bonus = 1.0
+                uses = 2
+                category = marines_tech
+            }
+            add_to_variable = { USA_army_special_forces_cap = 0.05 }
+            custom_effect_tooltip = USA_special_operations_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_combined_arms
+        icon = GFX_goal_generic_major_war
+        prerequisite = { focus = USA_airborne_forces }
+        prerequisite = { focus = USA_special_operations }
+        relative_position_id = USA_army_reform
+        x = 0
+        y = 5
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_army_attack = 0.10 }
+            add_to_variable = { USA_army_defence = 0.10 }
+            add_to_variable = { USA_army_planning_speed = 0.10 }
+            custom_effect_tooltip = USA_combined_arms_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_army_supremacy
+        icon = GFX_focus_generic_king
+        prerequisite = { focus = USA_combined_arms }
+        relative_position_id = USA_army_reform
+        x = 0
+        y = 6
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_army_org = 0.15 }
+            add_to_variable = { USA_army_attack = 0.15 }
+            add_to_variable = { USA_army_defence = 0.15 }
+            custom_effect_tooltip = USA_army_supremacy_tooltip
+        }
+    }
+
+    # 4.2 海軍ブランチ（11 NF）X = 12-16, Y = 14-18
+
+    focus = {
+        id = USA_navy_reform
+        icon = GFX_goal_generic_navy_doctrines
+        prerequisite = { focus = USA_election_1936 }
+        x = -4
+        y = 10
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            navy_experience = 50
+            add_to_variable = { USA_navy_org = 0.05 }
+            custom_effect_tooltip = USA_navy_reform_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_destroyer_escort
+        icon = GFX_goal_generic_navy_destroyer
+        prerequisite = { focus = USA_navy_reform }
+        relative_position_id = USA_navy_reform
+        x = -1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_destroyer
+                bonus = 1.0
+                uses = 2
+                category = destroyer
+            }
+            add_to_variable = { USA_navy_escort_efficiency = 0.10 }
+            custom_effect_tooltip = USA_destroyer_escort_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_cruiser_doctrine
+        icon = GFX_goal_generic_navy_cruiser
+        prerequisite = { focus = USA_navy_reform }
+        relative_position_id = USA_navy_reform
+        x = 1
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_cruiser
+                bonus = 1.0
+                uses = 2
+                category = cruiser
+            }
+            add_to_variable = { USA_navy_hit_chance = 0.05 }
+            custom_effect_tooltip = USA_cruiser_doctrine_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_battleship_modernization
+        icon = GFX_goal_generic_navy_battleship
+        prerequisite = { focus = USA_destroyer_escort }
+        prerequisite = { focus = USA_cruiser_doctrine }
+        relative_position_id = USA_navy_reform
+        x = -1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_battleship
+                bonus = 1.0
+                uses = 2
+                category = battleship
+            }
+            add_to_variable = { USA_navy_damage = 0.10 }
+            custom_effect_tooltip = USA_battleship_modernization_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_carrier_development
+        icon = GFX_goal_generic_navy_carrier
+        prerequisite = { focus = USA_destroyer_escort }
+        prerequisite = { focus = USA_cruiser_doctrine }
+        relative_position_id = USA_navy_reform
+        x = 1
+        y = 2
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_carrier
+                bonus = 1.0
+                uses = 2
+                category = naval_equipment
+            }
+            add_to_variable = { USA_navy_invasion_capacity = 10 }
+            custom_effect_tooltip = USA_carrier_development_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_submarine_warfare
+        icon = GFX_goal_generic_navy_submarine
+        prerequisite = { focus = USA_battleship_modernization }
+        relative_position_id = USA_navy_reform
+        x = -1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_submarine
+                bonus = 1.0
+                uses = 2
+                category = submarine
+            }
+            add_to_variable = { USA_navy_damage = 0.08 }
+            custom_effect_tooltip = USA_submarine_warfare_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_amphibious_capability
+        icon = GFX_focus_generic_amphibious_assault
+        prerequisite = { focus = USA_carrier_development }
+        relative_position_id = USA_navy_reform
+        x = 1
+        y = 3
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_navy_invasion_capacity = 15 }
+            add_to_variable = { USA_army_special_forces_cap = 0.05 }
+            custom_effect_tooltip = USA_amphibious_capability_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_naval_aviation
+        icon = GFX_goal_generic_air_naval_bomber
+        prerequisite = { focus = USA_submarine_warfare }
+        relative_position_id = USA_navy_reform
+        x = -1
+        y = 4
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_navy_air_attack = 0.08 }
+            add_to_variable = { USA_navy_air_defence = 0.08 }
+            custom_effect_tooltip = USA_naval_aviation_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_fleet_train
+        icon = GFX_focus_generic_supply_convoys
+        prerequisite = { focus = USA_amphibious_capability }
+        relative_position_id = USA_navy_reform
+        x = 1
+        y = 4
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_navy_escort_efficiency = 0.15 }
+            add_to_variable = { USA_navy_org = 0.05 }
+            custom_effect_tooltip = USA_fleet_train_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_two_ocean_navy
+        icon = GFX_goal_generic_two_ocean_navy
+        prerequisite = { focus = USA_naval_aviation }
+        prerequisite = { focus = USA_fleet_train }
+        relative_position_id = USA_navy_reform
+        x = 0
+        y = 5
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_navy_hit_chance = 0.10 }
+            add_to_variable = { USA_navy_damage = 0.10 }
+            add_to_variable = { USA_navy_org = 0.10 }
+            custom_effect_tooltip = USA_two_ocean_navy_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_navy_supremacy
+        icon = GFX_focus_generic_king
+        prerequisite = { focus = USA_two_ocean_navy }
+        relative_position_id = USA_navy_reform
+        x = 0
+        y = 6
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_to_variable = { USA_navy_hit_chance = 0.15 }
+            add_to_variable = { USA_navy_damage = 0.15 }
+            add_to_variable = { USA_navy_invasion_capacity = 20 }
+            custom_effect_tooltip = USA_navy_supremacy_tooltip
+        }
+    }
+
+    # 4.3 空軍ブランチ（2 NF）X = 22-24, Y = 14-16
+
+    focus = {
+        id = USA_air_corps
+        icon = GFX_goal_generic_air_fighter
+        prerequisite = { focus = USA_navy_reform focus = USA_army_reform }
+        relative_position_id = USA_navy_reform
+        x = 5
+        y = 1
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            air_experience = 50
+            add_research_slot = 1
+            custom_effect_tooltip = USA_air_corps_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_strategic_air_command
+        icon = GFX_goal_generic_air_bomber
+        prerequisite = { focus = USA_air_corps }
+        relative_position_id = USA_air_corps
+        x = 0
+        y = 1
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_strategic_bomber
+                bonus = 1.0
+                uses = 2
+                category = strategic_bomber
+            }
+            add_to_variable = { USA_navy_strategic_bombing = 0.20 }
+            add_to_variable = { USA_navy_air_attack = 0.10 }
+            custom_effect_tooltip = USA_strategic_air_command_tooltip
+        }
+    }
+
+    # 4.4 共通技術ツリー（3 NF）X = 27-29, Y = 14-16
+
+    focus = {
+        id = USA_manhattan_project
+        icon = GFX_focus_wonderweapons
+        prerequisite = { focus = USA_strategic_air_command }
+        relative_position_id = USA_strategic_air_command
+        x = 0
+        y = 1
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_nuclear
+                bonus = 1.0
+                uses = 2
+                category = nuclear
+            }
+            add_to_variable = { USA_eco_research_speed = 0.05 }
+            custom_effect_tooltip = USA_manhattan_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_jet_program
+        icon = GFX_goal_generic_air_fighter2
+        prerequisite = { focus = USA_air_corps }
+        relative_position_id = USA_manhattan_project
+        x = -2
+        y = 0
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_jet
+                bonus = 1.0
+                uses = 2
+                category = jet_technology
+            }
+            add_to_variable = { USA_navy_air_attack = 0.10 }
+            custom_effect_tooltip = USA_jet_program_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_rocket_program
+        icon = GFX_focus_rocketry
+        prerequisite = { focus = USA_air_corps }
+        relative_position_id = USA_manhattan_project
+        x = 2
+        y = 0
+        cost = 30
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_rocket
+                bonus = 1.0
+                uses = 2
+                category = rocketry
+            }
+            custom_effect_tooltip = USA_rocket_program_tooltip
+        }
+    }
+
+    focus = {
+        id = USA_superweapons
+        icon = GFX_focus_generic_super_weapons
+        prerequisite = { focus = USA_manhattan_project }
+        prerequisite = { focus = USA_jet_program }
+        prerequisite = { focus = USA_rocket_program }
+        relative_position_id = USA_manhattan_project
+        x = 0
+        y = 1
+        cost = 60
+        ai_will_do = { factor = 50 }
+        completion_reward = {
+            add_tech_bonus = {
+                name = USA_super
+                bonus = 2.0
+                uses = 1
+                category = nuclear
+            }
+            add_to_variable = { USA_navy_strategic_bombing = 0.20 }
+            custom_effect_tooltip = USA_superweapons_tooltip
+        }
+    }
+}

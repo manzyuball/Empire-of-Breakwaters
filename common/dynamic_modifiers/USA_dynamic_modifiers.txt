@@ -1,0 +1,126 @@
+# ============================================================================
+# USA Dynamic Modifiers - Empire of Breakwaters
+# ============================================================================
+# 動的修正：5つのカテゴリに統合
+# 初期デバフは変数のマイナス値で表現
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# 合衆国の政治
+# ----------------------------------------------------------------------------
+USA_political_modifier = {
+    icon = GFX_idea_generic_pp_unity_bonus
+    enable = { always = yes }
+
+    # 政治力
+    political_power_factor = var:USA_pol_pp_gain
+
+    # 安定性・戦争支持
+    stability_factor = var:USA_pol_stability
+    war_support_factor = var:USA_pol_war_support
+
+    # 降伏限界
+    surrender_limit = var:USA_pol_surrender_limit
+
+    # イデオロギードリフト
+    drift_defence_factor = var:USA_pol_drift_defence
+}
+
+# ----------------------------------------------------------------------------
+# 合衆国経済
+# ----------------------------------------------------------------------------
+USA_economic_modifier = {
+    icon = GFX_idea_generic_economic_policy
+    enable = { always = yes }
+
+    # 消費財
+    consumer_goods_factor = var:USA_eco_consumer_goods
+
+    # 研究速度
+    research_speed_factor = var:USA_eco_research_speed
+
+    # 建設速度
+    production_speed_industrial_complex_factor = var:USA_eco_civ_build_speed
+    production_speed_arms_factory_factor = var:USA_eco_mil_build_speed
+    production_speed_dockyard_factor = var:USA_eco_dock_build_speed
+    production_speed_infrastructure_factor = var:USA_eco_infra_build_speed
+
+    # 資源
+    local_resources_factor = var:USA_eco_resource_factor
+    min_export = var:USA_eco_min_export
+}
+
+# ----------------------------------------------------------------------------
+# 合衆国の軍事産業
+# ----------------------------------------------------------------------------
+USA_military_industry_modifier = {
+    icon = GFX_idea_generic_production_bonus
+    enable = { always = yes }
+
+    # 工場出力
+    industrial_capacity_factory = var:USA_ind_factory_output
+    industrial_capacity_dockyard = var:USA_ind_dockyard_output
+
+    # 生産効率
+    production_factory_max_efficiency_factor = var:USA_ind_prod_eff_cap
+    production_factory_efficiency_gain_factor = var:USA_ind_prod_eff_gain
+    line_change_production_efficiency_factor = var:USA_ind_line_change
+}
+
+# ----------------------------------------------------------------------------
+# 合衆国陸軍
+# ----------------------------------------------------------------------------
+USA_army_modifier = {
+    icon = GFX_idea_generic_army_war_college
+    enable = { always = yes }
+
+    # 陸軍基本
+    army_org_factor = var:USA_army_org
+    army_attack_factor = var:USA_army_attack
+    army_defence_factor = var:USA_army_defence
+
+    # 計画
+    planning_speed = var:USA_army_planning_speed
+    max_planning = var:USA_army_max_planning
+
+    # 徴兵
+    conscription_factor = var:USA_army_conscription
+
+    # 補給
+    supply_consumption_factor = var:USA_army_supply_consumption
+
+    # 特殊部隊
+    special_forces_cap = var:USA_army_special_forces_cap
+
+    # 空軍支援（陸軍航空隊）
+    air_cas_efficiency = var:USA_army_cas_efficiency
+}
+
+# ----------------------------------------------------------------------------
+# 合衆国海軍
+# ----------------------------------------------------------------------------
+USA_navy_modifier = {
+    icon = GFX_idea_generic_navy_bonus
+    enable = { always = yes }
+
+    # 海軍戦闘
+    naval_hit_chance = var:USA_navy_hit_chance
+    naval_damage_factor = var:USA_navy_damage
+    navy_org_factor = var:USA_navy_org
+
+    # 艦艇運用
+    convoy_escort_efficiency = var:USA_navy_escort_efficiency
+    naval_invasion_capacity = var:USA_navy_invasion_capacity
+
+    # 空軍戦闘（海空軍統合）
+    air_attack_factor = var:USA_navy_air_attack
+    air_defence_factor = var:USA_navy_air_defence
+    air_superiority_efficiency = var:USA_navy_air_superiority
+
+    # 爆撃
+    air_strategic_bomber_bombing_factor = var:USA_navy_strategic_bombing
+    air_cas_efficiency = var:USA_navy_cas_efficiency
+
+    # エース
+    air_ace_generation_chance_factor = var:USA_navy_ace_generation
+}

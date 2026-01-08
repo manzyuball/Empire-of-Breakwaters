@@ -1,0 +1,1409 @@
+###########################################################
+# USA Events - Empire of Breakwaters
+# 完全リワーク版：大量の派閥闘争イベント
+###########################################################
+
+add_namespace = usa
+
+# =========================================================
+# PHASE 1: 派閥闘争イベント（選挙前）
+# =========================================================
+
+# 派閥対立の始まり
+country_event = {
+    id = usa.1
+    title = usa.1.t
+    desc = usa.1.desc
+    picture = GFX_report_event_usa_congress
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.1.a
+        # Long派を支持
+        add_to_variable = { usa_long_support = 5 }
+        custom_effect_tooltip = USA_long_support_5_tooltip
+    }
+
+    option = {
+        name = usa.1.b
+        # マッカーサー派を支持
+        add_to_variable = { usa_macarthur_support = 5 }
+        custom_effect_tooltip = USA_mac_support_5_tooltip
+    }
+
+    option = {
+        name = usa.1.c
+        # 中立を保つ
+        add_political_power = 25
+    }
+}
+
+# 選挙危機
+country_event = {
+    id = usa.5
+    title = usa.5.t
+    desc = usa.5.desc
+    picture = GFX_report_event_usa_election
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.5.a
+        add_stability = -0.05
+        add_political_power = -50
+        custom_effect_tooltip = USA_election_crisis_intensifies_tt
+    }
+}
+
+# =========================================================
+# Long派支持イベント (usa.100-109)
+# =========================================================
+
+# 退役軍人行進 - 派閥反応
+country_event = {
+    id = usa.100
+    title = usa.100.t
+    desc = usa.100.desc
+    picture = GFX_report_event_generic_rally
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.100.a
+        # Longが退役軍人を支持
+        add_to_variable = { usa_long_support = 5 }
+        add_popularity = { ideology = fascism popularity = 0.02 }
+        custom_effect_tooltip = USA_long_support_5_tooltip
+    }
+
+    option = {
+        name = usa.100.b
+        # MacArthurが秩序回復を主張
+        add_to_variable = { usa_macarthur_support = 5 }
+        add_stability = 0.02
+        custom_effect_tooltip = USA_mac_support_5_tooltip
+    }
+}
+
+# 富を共有しよう運動の広がり
+country_event = {
+    id = usa.101
+    title = usa.101.t
+    desc = usa.101.desc
+    picture = GFX_report_event_generic_propaganda
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.101.a
+        # 運動を全面支援
+        add_to_variable = { usa_long_support = 10 }
+        add_stability = -0.03
+        add_popularity = { ideology = fascism popularity = 0.03 }
+        custom_effect_tooltip = USA_long_support_10_tooltip
+    }
+
+    option = {
+        name = usa.101.b
+        # 穏健な支援
+        add_to_variable = { usa_long_support = 5 }
+        add_political_power = 25
+        custom_effect_tooltip = USA_long_support_5_tooltip
+    }
+
+    option = {
+        name = usa.101.c
+        # 距離を置く
+        add_stability = 0.02
+        add_to_variable = { usa_macarthur_support = 3 }
+    }
+}
+
+# コフリン神父のラジオ放送
+country_event = {
+    id = usa.102
+    title = usa.102.t
+    desc = usa.102.desc
+    picture = GFX_report_event_generic_radio
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.102.a
+        # 全国放送を支援
+        add_to_variable = { usa_long_support = 15 }
+        add_popularity = { ideology = fascism popularity = 0.05 }
+        add_stability = -0.02
+        custom_effect_tooltip = USA_long_support_15_tooltip
+    }
+
+    option = {
+        name = usa.102.b
+        # 地方放送に留める
+        add_to_variable = { usa_long_support = 8 }
+        add_political_power = 20
+        custom_effect_tooltip = USA_long_support_8_tooltip
+    }
+}
+
+# ポピュリスト集会の成功
+country_event = {
+    id = usa.103
+    title = usa.103.t
+    desc = usa.103.desc
+    picture = GFX_report_event_generic_rally
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.103.a
+        # 大規模集会を開催
+        add_to_variable = { usa_long_support = 10 }
+        add_stability = -0.05
+        add_popularity = { ideology = fascism popularity = 0.04 }
+        custom_effect_tooltip = USA_long_support_10_tooltip
+    }
+
+    option = {
+        name = usa.103.b
+        # 秩序ある集会
+        add_to_variable = { usa_long_support = 5 }
+        add_stability = 0.02
+        custom_effect_tooltip = USA_long_support_5_tooltip
+    }
+}
+
+# ロングマシーンの完成
+country_event = {
+    id = usa.104
+    title = usa.104.t
+    desc = usa.104.desc
+    picture = GFX_report_event_generic_parliament
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.104.a
+        # 完全な支配体制
+        add_to_variable = { usa_long_support = 20 }
+        add_popularity = { ideology = fascism popularity = 0.08 }
+        add_stability = -0.05
+        custom_effect_tooltip = USA_long_support_20_tooltip
+    }
+
+    option = {
+        name = usa.104.b
+        # 穏健な組織化
+        add_to_variable = { usa_long_support = 10 }
+        add_political_power = 50
+        custom_effect_tooltip = USA_long_support_10_tooltip
+    }
+}
+
+# 労働組合への浸透
+country_event = {
+    id = usa.105
+    title = usa.105.t
+    desc = usa.105.desc
+    picture = GFX_report_event_generic_workers
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_variable = usa_long_support
+        check_variable = { usa_long_support > 20 }
+        NOT = { has_country_flag = usa_union_infiltration }
+    }
+
+    mean_time_to_happen = { days = 30 }
+
+    option = {
+        name = usa.105.a
+        # 労働組合を掌握
+        set_country_flag = usa_union_infiltration
+        add_to_variable = { usa_long_support = 8 }
+        add_to_variable = { USA_eco_factory_output = 0.02 }
+        custom_effect_tooltip = USA_long_union_control_tt
+    }
+
+    option = {
+        name = usa.105.b
+        # 穏健な協力関係
+        set_country_flag = usa_union_infiltration
+        add_to_variable = { usa_long_support = 4 }
+        add_stability = 0.03
+    }
+}
+
+# 農民の支持獲得
+country_event = {
+    id = usa.106
+    title = usa.106.t
+    desc = usa.106.desc
+    picture = GFX_report_event_generic_farm
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_variable = usa_long_support
+        check_variable = { usa_long_support > 30 }
+        NOT = { has_country_flag = usa_farmer_support }
+    }
+
+    mean_time_to_happen = { days = 45 }
+
+    option = {
+        name = usa.106.a
+        # 農業改革を約束
+        set_country_flag = usa_farmer_support
+        add_to_variable = { usa_long_support = 12 }
+        add_stability = 0.03
+        custom_effect_tooltip = USA_long_farmer_support_tt
+    }
+
+    option = {
+        name = usa.106.b
+        # 象徴的な支援のみ
+        set_country_flag = usa_farmer_support
+        add_to_variable = { usa_long_support = 5 }
+        add_political_power = 30
+    }
+}
+
+# シルバーシャツ団との連携
+country_event = {
+    id = usa.107
+    title = usa.107.t
+    desc = usa.107.desc
+    picture = GFX_report_event_generic_fascism
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_variable = usa_long_support
+        check_variable = { usa_long_support > 40 }
+        NOT = { has_country_flag = usa_silver_legion }
+    }
+
+    mean_time_to_happen = { days = 60 }
+
+    option = {
+        name = usa.107.a
+        # 公然と連携
+        set_country_flag = usa_silver_legion
+        add_to_variable = { usa_long_support = 15 }
+        add_popularity = { ideology = fascism popularity = 0.05 }
+        add_stability = -0.05
+        custom_effect_tooltip = USA_silver_legion_alliance_tt
+    }
+
+    option = {
+        name = usa.107.b
+        # 秘密裏に連携
+        set_country_flag = usa_silver_legion
+        add_to_variable = { usa_long_support = 8 }
+        add_popularity = { ideology = fascism popularity = 0.02 }
+    }
+
+    option = {
+        name = usa.107.c
+        # 距離を置く
+        set_country_flag = usa_silver_legion
+        add_stability = 0.03
+        add_to_variable = { usa_macarthur_support = 5 }
+    }
+}
+
+# 富の再分配演説
+country_event = {
+    id = usa.108
+    title = usa.108.t
+    desc = usa.108.desc
+    picture = GFX_report_event_generic_speech
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_variable = usa_long_support
+        check_variable = { usa_long_support > 25 }
+        NOT = { has_country_flag = usa_redistribution_speech }
+    }
+
+    mean_time_to_happen = { days = 35 }
+
+    option = {
+        name = usa.108.a
+        # 過激な再分配を主張
+        set_country_flag = usa_redistribution_speech
+        add_to_variable = { usa_long_support = 10 }
+        add_popularity = { ideology = fascism popularity = 0.03 }
+        add_stability = -0.03
+    }
+
+    option = {
+        name = usa.108.b
+        # 穏健な改革を主張
+        set_country_flag = usa_redistribution_speech
+        add_to_variable = { usa_long_support = 5 }
+        add_stability = 0.02
+    }
+}
+
+# 反財閥キャンペーン
+country_event = {
+    id = usa.109
+    title = usa.109.t
+    desc = usa.109.desc
+    picture = GFX_report_event_generic_newspaper
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_variable = usa_long_support
+        check_variable = { usa_long_support > 35 }
+        NOT = { has_country_flag = usa_anti_plutocrat }
+    }
+
+    mean_time_to_happen = { days = 50 }
+
+    option = {
+        name = usa.109.a
+        # 財閥を糾弾
+        set_country_flag = usa_anti_plutocrat
+        add_to_variable = { usa_long_support = 12 }
+        add_stability = -0.02
+        ENG = { add_opinion_modifier = { target = ROOT modifier = USA_anti_foreign_rhetoric } }
+        JAP = { add_opinion_modifier = { target = ROOT modifier = USA_anti_foreign_rhetoric } }
+    }
+
+    option = {
+        name = usa.109.b
+        # 穏健なレトリック
+        set_country_flag = usa_anti_plutocrat
+        add_to_variable = { usa_long_support = 6 }
+        add_political_power = 25
+    }
+}
+
+# =========================================================
+# マッカーサー派支持イベント (usa.110-119)
+# =========================================================
+
+# 軍改革への反響
+country_event = {
+    id = usa.110
+    title = usa.110.t
+    desc = usa.110.desc
+    picture = GFX_report_event_generic_military
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.110.a
+        # 軍の近代化を推進
+        add_to_variable = { usa_macarthur_support = 10 }
+        army_experience = 15
+        custom_effect_tooltip = USA_mac_support_10_tooltip
+    }
+
+    option = {
+        name = usa.110.b
+        # 慎重なアプローチ
+        add_to_variable = { usa_macarthur_support = 5 }
+        add_political_power = 25
+        custom_effect_tooltip = USA_mac_support_5_tooltip
+    }
+}
+
+# 将校団の結束
+country_event = {
+    id = usa.111
+    title = usa.111.t
+    desc = usa.111.desc
+    picture = GFX_report_event_generic_officers
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.111.a
+        # 完全な忠誠を要求
+        add_to_variable = { usa_macarthur_support = 15 }
+        army_experience = 25
+        add_stability = -0.02
+        custom_effect_tooltip = USA_mac_support_15_tooltip
+    }
+
+    option = {
+        name = usa.111.b
+        # 専門性を重視
+        add_to_variable = { usa_macarthur_support = 8 }
+        add_to_variable = { USA_mil_planning_speed = 0.02 }
+        custom_effect_tooltip = USA_mac_support_8_tooltip
+    }
+}
+
+# 秩序と規律の勝利
+country_event = {
+    id = usa.112
+    title = usa.112.t
+    desc = usa.112.desc
+    picture = GFX_report_event_generic_parade
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.112.a
+        # 厳格な秩序
+        add_to_variable = { usa_macarthur_support = 10 }
+        add_stability = 0.05
+        add_popularity = { ideology = neutrality popularity = 0.03 }
+        custom_effect_tooltip = USA_mac_support_10_tooltip
+    }
+
+    option = {
+        name = usa.112.b
+        # 穏健な規律
+        add_to_variable = { usa_macarthur_support = 5 }
+        add_political_power = 30
+        custom_effect_tooltip = USA_mac_support_5_tooltip
+    }
+}
+
+# マッカーサー連合の確立
+country_event = {
+    id = usa.113
+    title = usa.113.t
+    desc = usa.113.desc
+    picture = GFX_report_event_generic_conference
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.113.a
+        # 広範な連合
+        add_to_variable = { usa_macarthur_support = 20 }
+        add_popularity = { ideology = neutrality popularity = 0.08 }
+        add_stability = 0.03
+        custom_effect_tooltip = USA_mac_support_20_tooltip
+    }
+
+    option = {
+        name = usa.113.b
+        # 軍中心の連合
+        add_to_variable = { usa_macarthur_support = 15 }
+        army_experience = 30
+        custom_effect_tooltip = USA_mac_support_15_tooltip
+    }
+}
+
+# 産業界の支持獲得
+country_event = {
+    id = usa.114
+    title = usa.114.t
+    desc = usa.114.desc
+    picture = GFX_report_event_generic_factory
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_variable = usa_macarthur_support
+        check_variable = { usa_macarthur_support > 20 }
+        NOT = { has_country_flag = usa_industry_support }
+    }
+
+    mean_time_to_happen = { days = 30 }
+
+    option = {
+        name = usa.114.a
+        # 産業界との同盟
+        set_country_flag = usa_industry_support
+        add_to_variable = { usa_macarthur_support = 10 }
+        add_to_variable = { USA_eco_factory_output = 0.02 }
+        custom_effect_tooltip = USA_mac_industry_alliance_tt
+    }
+
+    option = {
+        name = usa.114.b
+        # 緩やかな協力
+        set_country_flag = usa_industry_support
+        add_to_variable = { usa_macarthur_support = 5 }
+        add_political_power = 40
+    }
+}
+
+# 退役軍人会の支持
+country_event = {
+    id = usa.115
+    title = usa.115.t
+    desc = usa.115.desc
+    picture = GFX_report_event_generic_veterans
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_variable = usa_macarthur_support
+        check_variable = { usa_macarthur_support > 25 }
+        NOT = { has_country_flag = usa_veterans_support }
+    }
+
+    mean_time_to_happen = { days = 40 }
+
+    option = {
+        name = usa.115.a
+        # 退役軍人を動員
+        set_country_flag = usa_veterans_support
+        add_to_variable = { usa_macarthur_support = 12 }
+        add_manpower = 25000
+        custom_effect_tooltip = USA_mac_veterans_support_tt
+    }
+
+    option = {
+        name = usa.115.b
+        # 名誉ある支持
+        set_country_flag = usa_veterans_support
+        add_to_variable = { usa_macarthur_support = 6 }
+        add_war_support = 0.03
+    }
+}
+
+# ウエストポイント派閥の支持
+country_event = {
+    id = usa.116
+    title = usa.116.t
+    desc = usa.116.desc
+    picture = GFX_report_event_generic_academy
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_variable = usa_macarthur_support
+        check_variable = { usa_macarthur_support > 30 }
+        NOT = { has_country_flag = usa_westpoint_support }
+    }
+
+    mean_time_to_happen = { days = 45 }
+
+    option = {
+        name = usa.116.a
+        # エリート将校を糾合
+        set_country_flag = usa_westpoint_support
+        add_to_variable = { usa_macarthur_support = 15 }
+        add_to_variable = { USA_mil_planning_speed = 0.03 }
+        army_experience = 25
+        custom_effect_tooltip = USA_mac_westpoint_support_tt
+    }
+
+    option = {
+        name = usa.116.b
+        # 慎重な連携
+        set_country_flag = usa_westpoint_support
+        add_to_variable = { usa_macarthur_support = 8 }
+        add_political_power = 35
+    }
+}
+
+# 治安回復の成功
+country_event = {
+    id = usa.117
+    title = usa.117.t
+    desc = usa.117.desc
+    picture = GFX_report_event_generic_police
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_variable = usa_macarthur_support
+        check_variable = { usa_macarthur_support > 35 }
+        NOT = { has_country_flag = usa_order_restored }
+    }
+
+    mean_time_to_happen = { days = 50 }
+
+    option = {
+        name = usa.117.a
+        # 秩序を全面回復
+        set_country_flag = usa_order_restored
+        add_to_variable = { usa_macarthur_support = 10 }
+        add_stability = 0.05
+        add_popularity = { ideology = neutrality popularity = 0.03 }
+    }
+
+    option = {
+        name = usa.117.b
+        # 段階的な回復
+        set_country_flag = usa_order_restored
+        add_to_variable = { usa_macarthur_support = 5 }
+        add_stability = 0.03
+        add_political_power = 25
+    }
+}
+
+# 保守派の結集
+country_event = {
+    id = usa.118
+    title = usa.118.t
+    desc = usa.118.desc
+    picture = GFX_report_event_generic_political
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_variable = usa_macarthur_support
+        check_variable = { usa_macarthur_support > 40 }
+        NOT = { has_country_flag = usa_conservative_rally }
+    }
+
+    mean_time_to_happen = { days = 55 }
+
+    option = {
+        name = usa.118.a
+        # 保守連合を形成
+        set_country_flag = usa_conservative_rally
+        add_to_variable = { usa_macarthur_support = 12 }
+        add_popularity = { ideology = neutrality popularity = 0.05 }
+        add_stability = 0.03
+    }
+
+    option = {
+        name = usa.118.b
+        # 軍優先
+        set_country_flag = usa_conservative_rally
+        add_to_variable = { usa_macarthur_support = 8 }
+        army_experience = 20
+    }
+}
+
+# 反共演説
+country_event = {
+    id = usa.119
+    title = usa.119.t
+    desc = usa.119.desc
+    picture = GFX_report_event_generic_speech
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_variable = usa_macarthur_support
+        check_variable = { usa_macarthur_support > 30 }
+        NOT = { has_country_flag = usa_anti_communist_speech }
+    }
+
+    mean_time_to_happen = { days = 40 }
+
+    option = {
+        name = usa.119.a
+        # 強硬な反共姿勢
+        set_country_flag = usa_anti_communist_speech
+        add_to_variable = { usa_macarthur_support = 10 }
+        add_popularity = { ideology = communism popularity = -0.05 }
+        add_stability = 0.02
+    }
+
+    option = {
+        name = usa.119.b
+        # 穏健な反共姿勢
+        set_country_flag = usa_anti_communist_speech
+        add_to_variable = { usa_macarthur_support = 5 }
+        add_political_power = 30
+    }
+}
+
+# =========================================================
+# 1936年選挙イベント
+# =========================================================
+
+# 選挙結果
+country_event = {
+    id = usa.10
+    title = usa.10.t
+    desc = usa.10.desc
+    picture = GFX_report_event_usa_election
+
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            if = {
+                limit = { NOT = { has_variable = usa_long_support } }
+                set_variable = { usa_long_support = 0 }
+            }
+            if = {
+                limit = { NOT = { has_variable = usa_macarthur_support } }
+                set_variable = { usa_macarthur_support = 0 }
+            }
+        }
+    }
+
+    # ヒューイ・ロングの勝利
+    option = {
+        name = usa.10.a
+        trigger = {
+            check_variable = { usa_long_support > usa_macarthur_support }
+        }
+        set_country_flag = USA_long_route
+        add_stability = -0.05
+        custom_effect_tooltip = USA_long_victory_election_tt
+    }
+
+    # Douglas MacArthurの勝利
+    option = {
+        name = usa.10.b
+        trigger = {
+            check_variable = { usa_macarthur_support > usa_long_support }
+        }
+        set_country_flag = USA_mac_route
+        add_stability = 0.03
+        custom_effect_tooltip = USA_mac_victory_election_tt
+    }
+
+    # 同点の場合
+    option = {
+        name = usa.10.c
+        trigger = {
+            check_variable = { usa_long_support = usa_macarthur_support }
+        }
+        hidden_effect = {
+            country_event = { id = usa.11 days = 1 }
+        }
+    }
+}
+
+# 選挙結果（プレイヤー選択）
+country_event = {
+    id = usa.11
+    title = usa.11.t
+    desc = usa.11.desc
+    picture = GFX_report_event_usa_election
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.11.a
+        # ヒューイ・ロングを選択
+        set_country_flag = USA_long_route
+        add_stability = -0.05
+        custom_effect_tooltip = USA_long_route_tt
+    }
+
+    option = {
+        name = usa.11.b
+        # Douglas MacArthurを選択
+        set_country_flag = USA_mac_route
+        add_stability = 0.03
+        custom_effect_tooltip = USA_mac_route_tt
+    }
+}
+
+# =========================================================
+# PHASE 2A: Long Route Events (usa.200-299)
+# =========================================================
+
+# 反対派粛清
+country_event = {
+    id = usa.200
+    title = usa.200.t
+    desc = usa.200.desc
+    picture = GFX_report_event_generic_purge
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.200.a
+        # 徹底的な粛清
+        add_stability = -0.05
+        add_political_power = 100
+        add_to_variable = { USA_pol_pp_gain = 0.05 }
+    }
+
+    option = {
+        name = usa.200.b
+        # 穏健な粛清
+        add_stability = 0.02
+        add_political_power = 50
+    }
+}
+
+# 復讐の宣言
+country_event = {
+    id = usa.210
+    title = usa.210.t
+    desc = usa.210.desc
+    picture = GFX_report_event_generic_rally
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.210.a
+        add_war_support = 0.10
+        every_country = {
+            limit = { OR = { tag = ENG tag = JAP } }
+            add_opinion_modifier = { target = ROOT modifier = USA_revenge_declaration }
+        }
+    }
+}
+
+# キングフィッシュ革命
+country_event = {
+    id = usa.20
+    title = usa.20.t
+    desc = usa.20.desc
+    picture = GFX_report_event_usa_congress
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_country_flag = USA_long_route
+        has_completed_focus = USA_long_victory
+    }
+
+    mean_time_to_happen = { days = 10 }
+
+    option = {
+        name = usa.20.a
+        add_political_power = 75
+        add_stability = 0.05
+        add_popularity = { ideology = fascism popularity = 0.05 }
+    }
+}
+
+# 資産没収の影響
+country_event = {
+    id = usa.21
+    title = usa.21.t
+    desc = usa.21.desc
+    picture = GFX_report_event_generic_riot
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_country_flag = USA_long_route
+        has_completed_focus = USA_seize_foreign_assets
+    }
+
+    mean_time_to_happen = { days = 15 }
+
+    option = {
+        name = usa.21.a
+        # 強硬に続行
+        add_stability = -0.05
+        add_political_power = 100
+        add_to_variable = { USA_eco_factory_output = 0.03 }
+    }
+
+    option = {
+        name = usa.21.b
+        # 妥協する
+        add_stability = 0.03
+        add_political_power = -25
+    }
+}
+
+# 国民統制経済
+country_event = {
+    id = usa.220
+    title = usa.220.t
+    desc = usa.220.desc
+    picture = GFX_report_event_generic_factory
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_country_flag = USA_long_route
+        has_completed_focus = USA_expropriate_industries
+    }
+
+    mean_time_to_happen = { days = 20 }
+
+    option = {
+        name = usa.220.a
+        add_to_variable = { USA_eco_factory_output = 0.05 }
+        add_to_variable = { USA_eco_prod_eff_cap = 0.03 }
+        random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+        }
+    }
+}
+
+# 人民軍の創設
+country_event = {
+    id = usa.230
+    title = usa.230.t
+    desc = usa.230.desc
+    picture = GFX_report_event_generic_soldiers
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_country_flag = USA_long_route
+        has_completed_focus = USA_peoples_army
+    }
+
+    mean_time_to_happen = { days = 15 }
+
+    option = {
+        name = usa.230.a
+        add_manpower = 100000
+        army_experience = 30
+        add_to_variable = { USA_mil_org = 0.03 }
+    }
+}
+
+# パナマ接収警告
+country_event = {
+    id = usa.240
+    title = usa.240.t
+    desc = usa.240.desc
+    picture = GFX_report_event_generic_military
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_country_flag = USA_long_route
+        has_completed_focus = USA_seize_panama
+    }
+
+    mean_time_to_happen = { days = 5 }
+
+    option = {
+        name = usa.240.a
+        add_war_support = 0.05
+        PAN = {
+            country_event = { id = usa.241 days = 1 }
+        }
+    }
+}
+
+# パナマへの最後通牒
+country_event = {
+    id = usa.241
+    title = usa.241.t
+    desc = usa.241.desc
+    picture = GFX_report_event_generic_ultimatum
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.241.a
+        # 降伏
+        FROM = {
+            annex_country = { target = ROOT transfer_troops = no }
+        }
+    }
+
+    option = {
+        name = usa.241.b
+        # 抵抗
+        FROM = {
+            declare_war_on = { target = ROOT type = annex_everything }
+        }
+    }
+}
+
+# =========================================================
+# PHASE 2B: MacArthur Route Events (usa.300-399)
+# =========================================================
+
+# ロンドン協力への招待
+country_event = {
+    id = usa.300
+    title = usa.300.t
+    desc = usa.300.desc
+    picture = GFX_report_event_generic_diplomacy
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.300.a
+        # 協力を受諾
+        add_opinion_modifier = { target = FROM modifier = USA_diplomatic_cooperation }
+        FROM = {
+            add_opinion_modifier = { target = ROOT modifier = USA_diplomatic_cooperation }
+            country_event = { id = usa.301 days = 1 }
+        }
+    }
+
+    option = {
+        name = usa.300.b
+        # 協力を拒否
+        add_opinion_modifier = { target = FROM modifier = USA_coop_rejected }
+        FROM = {
+            country_event = { id = usa.302 days = 1 }
+        }
+    }
+}
+
+# イギリスが協力を受諾
+country_event = {
+    id = usa.301
+    title = usa.301.t
+    desc = usa.301.desc
+    picture = GFX_report_event_generic_handshake
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.301.a
+        add_political_power = 50
+        add_to_variable = { USA_foreign_export_penalty = -0.05 }
+    }
+}
+
+# イギリスが協力を拒否
+country_event = {
+    id = usa.302
+    title = usa.302.t
+    desc = usa.302.desc
+    picture = GFX_report_event_generic_refuse
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.302.a
+        add_political_power = -25
+    }
+}
+
+# 東京協商への招待
+country_event = {
+    id = usa.310
+    title = usa.310.t
+    desc = usa.310.desc
+    picture = GFX_report_event_generic_diplomacy
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.310.a
+        # 協商を受諾
+        add_opinion_modifier = { target = FROM modifier = USA_entente_accepted }
+        FROM = {
+            add_opinion_modifier = { target = ROOT modifier = USA_entente_accepted }
+            country_event = { id = usa.311 days = 1 }
+        }
+    }
+
+    option = {
+        name = usa.310.b
+        # 協商を拒否
+        add_opinion_modifier = { target = FROM modifier = USA_entente_rejected }
+        FROM = {
+            country_event = { id = usa.312 days = 1 }
+        }
+    }
+}
+
+# 日本が協商を受諾
+country_event = {
+    id = usa.311
+    title = usa.311.t
+    desc = usa.311.desc
+    picture = GFX_report_event_generic_handshake
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.311.a
+        add_political_power = 50
+        add_to_variable = { USA_foreign_consumer_penalty = -0.05 }
+    }
+}
+
+# 日本が協商を拒否
+country_event = {
+    id = usa.312
+    title = usa.312.t
+    desc = usa.312.desc
+    picture = GFX_report_event_generic_refuse
+
+    is_triggered_only = yes
+
+    option = {
+        name = usa.312.a
+        add_political_power = -25
+    }
+}
+
+# 軍政の確立
+country_event = {
+    id = usa.30
+    title = usa.30.t
+    desc = usa.30.desc
+    picture = GFX_report_event_usa_military
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_country_flag = USA_mac_route
+        has_completed_focus = USA_american_caesar
+    }
+
+    mean_time_to_happen = { days = 10 }
+
+    option = {
+        name = usa.30.a
+        add_political_power = 75
+        add_stability = 0.05
+        army_experience = 25
+    }
+}
+
+# 産業復興の成功
+country_event = {
+    id = usa.31
+    title = usa.31.t
+    desc = usa.31.desc
+    picture = GFX_report_event_generic_factory
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_country_flag = USA_mac_route
+        has_completed_focus = USA_industrial_reconstruction
+    }
+
+    mean_time_to_happen = { days = 15 }
+
+    option = {
+        name = usa.31.a
+        add_stability = 0.05
+        random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+        }
+    }
+}
+
+# 技術者層の結集
+country_event = {
+    id = usa.320
+    title = usa.320.t
+    desc = usa.320.desc
+    picture = GFX_report_event_generic_research
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_country_flag = USA_mac_route
+        has_completed_focus = USA_technocratic_elite
+    }
+
+    mean_time_to_happen = { days = 20 }
+
+    option = {
+        name = usa.320.a
+        add_to_variable = { USA_pol_research_speed = 0.03 }
+        add_tech_bonus = {
+            name = USA_technocrat
+            bonus = 0.5
+            uses = 2
+            category = electronics
+        }
+    }
+}
+
+# 軍近代化の進展
+country_event = {
+    id = usa.330
+    title = usa.330.t
+    desc = usa.330.desc
+    picture = GFX_report_event_generic_tanks
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_country_flag = USA_mac_route
+        has_completed_focus = USA_military_modernization
+    }
+
+    mean_time_to_happen = { days = 15 }
+
+    option = {
+        name = usa.330.a
+        army_experience = 50
+        add_to_variable = { USA_mil_attack = 0.03 }
+        add_to_variable = { USA_mil_org = 0.03 }
+    }
+}
+
+# 汎米同盟の提案
+country_event = {
+    id = usa.340
+    title = usa.340.t
+    desc = usa.340.desc
+    picture = GFX_report_event_generic_conference
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_country_flag = USA_mac_route
+        has_completed_focus = USA_pan_american_league
+    }
+
+    mean_time_to_happen = { days = 10 }
+
+    option = {
+        name = usa.340.a
+        add_political_power = 75
+        every_country = {
+            limit = {
+                OR = {
+                    is_in_central_america = yes
+                    is_in_south_america = yes
+                }
+                NOT = { has_war_with = ROOT }
+            }
+            add_opinion_modifier = { target = ROOT modifier = USA_las_league_opinion }
+        }
+    }
+}
+
+# =========================================================
+# 共通イベント（両ルート）
+# =========================================================
+
+# 産業空洞化の克服
+country_event = {
+    id = usa.400
+    title = usa.400.t
+    desc = usa.400.desc
+    picture = GFX_report_event_generic_factory
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        OR = {
+            has_completed_focus = USA_autarky_achieved
+            has_completed_focus = USA_industrial_miracle
+        }
+    }
+
+    mean_time_to_happen = { days = 10 }
+
+    option = {
+        name = usa.400.a
+        add_stability = 0.10
+        add_political_power = 100
+        custom_effect_tooltip = USA_hollowed_overcome_tt
+    }
+}
+
+# マンハッタン計画開始
+country_event = {
+    id = usa.410
+    title = usa.410.t
+    desc = usa.410.desc
+    picture = GFX_report_event_generic_research
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_manhattan_project
+    }
+
+    mean_time_to_happen = { days = 5 }
+
+    option = {
+        name = usa.410.a
+        add_to_variable = { USA_pol_research_speed = 0.03 }
+        set_country_flag = USA_manhattan_active
+    }
+}
+
+# ジェット機計画開始
+country_event = {
+    id = usa.420
+    title = usa.420.t
+    desc = usa.420.desc
+    picture = GFX_report_event_generic_airplane
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_jet_program
+    }
+
+    mean_time_to_happen = { days = 5 }
+
+    option = {
+        name = usa.420.a
+        air_experience = 50
+        add_to_variable = { USA_air_attack = 0.05 }
+    }
+}
+
+# ロケット計画開始
+country_event = {
+    id = usa.430
+    title = usa.430.t
+    desc = usa.430.desc
+    picture = GFX_report_event_generic_rocket
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_rocket_program
+    }
+
+    mean_time_to_happen = { days = 5 }
+
+    option = {
+        name = usa.430.a
+        add_tech_bonus = {
+            name = USA_rocket_tech
+            bonus = 0.5
+            uses = 1
+            category = rocketry
+        }
+    }
+}
+
+# 超兵器開発完了
+country_event = {
+    id = usa.440
+    title = usa.440.t
+    desc = usa.440.desc
+    picture = GFX_report_event_generic_bomb
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = USA
+        has_completed_focus = USA_superweapons
+    }
+
+    mean_time_to_happen = { days = 5 }
+
+    option = {
+        name = usa.440.a
+        add_war_support = 0.15
+        add_to_variable = { USA_air_strategic_bombing = 0.10 }
+        custom_effect_tooltip = USA_superweapons_complete_tt
+    }
+}
