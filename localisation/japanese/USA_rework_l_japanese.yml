@@ -355,7 +355,7 @@
  
  USA_social_stabilization_tooltip:0 "§Y合衆国の政治§!に以下の修正\n安定度: §G+2%§!"
  
- USA_veterans_welfare_tooltip:0 "陸軍経験値 +25"
+ USA_veterans_welfare_tooltip:0 "§Y合衆国陸軍§!に以下の修正:\n陸軍経験値: §G+25§!"
  
  USA_agricultural_relief_tooltip:0 "§Y合衆国の政治§!に以下の修正\n安定度: §G+3%§!"
  
@@ -722,156 +722,156 @@
  # ------------------------------------------------------------------------
  USA_kingfish_consolidation:0 "キングフィッシュの権力確立"
  USA_kingfish_consolidation_desc:0 "ロング大統領は自らを「キングフィッシュ」と称し、大統領権を絶対化する。既存の制度的制約を撤廃し、議会を形骸化させ、完全な支配体制を構築する。民主主義の衣をまといながら、実質的な独裁者として君臨する。"
- USA_kingfish_consolidation_tooltip:0 "§Hキングフィッシュ体制§!\n政治力: §G+100§!\n政治力獲得: §G+5%§!"
+ USA_kingfish_consolidation_tooltip:0 "§Y合衆国の政治§!に以下の修正:\n政治力: §G+100§!\n政治力獲得: §G+5%§!"
 
  USA_suspend_constitution:0 "憲法停止"
  USA_suspend_constitution_desc:0 "「人民の意志が最高の法である」として、合衆国憲法の効力を停止する。三権分立は廃止され、すべての権力がキングフィッシュに集中する。これは民主主義の終焉であり、人民独裁の始まりである。"
- USA_suspend_constitution_tooltip:0 "§H憲法停止§!\n安定度: §R-5%§!\n政治力獲得: §G+10%§!\nイデオロギードリフト防御: §G+25%§!"
+ USA_suspend_constitution_tooltip:0 "§Y合衆国の政治§!に以下の修正:\n安定度: §R-5%§!\n政治力獲得: §G+10%§!\nイデオロギードリフト防御: §G+25%§!"
 
  USA_minutemen_militia:0 "ミニットメン民兵"
  USA_minutemen_militia_desc:0 "ロングの私兵組織「ミニットメン」を正式な準軍事組織として編成する。彼らは国内の反対派を監視・弾圧し、キングフィッシュ体制を護衛する。街角には彼らの姿が溢れ、反体制的な言動は即座に報告される。"
- USA_minutemen_militia_tooltip:0 "§Hミニットメン§!\n人的資源: §G+50,000§!\n徴兵率: §G+1%§!"
+ USA_minutemen_militia_tooltip:0 "§Y合衆国陸軍§!に以下の修正:\n人的資源: §G+50,000§!\n徴兵率: §G+1%§!"
 
  USA_share_wealth_clubs:0 "富の共有クラブ"
  USA_share_wealth_clubs_desc:0 "全国に「富の共有クラブ」を設立し、ロング体制の草の根組織とする。彼らは富裕層から没収した富を「公平に」再分配し、貧困層を支援する。この組織は政治的忠誠を確保する装置としても機能する。"
- USA_share_wealth_clubs_tooltip:0 "§H富の共有クラブ§!\n安定度: §G+5%§!\n消費財: §G-3%§!"
+ USA_share_wealth_clubs_tooltip:0 "§Y合衆国の政治§!に以下の修正:\n安定度: §G+5%§!\n\n§Y合衆国経済§!に以下の修正:\n消費財: §G-3%§!"
 
  USA_purge_opponents:0 "反対派の粛清"
  USA_purge_opponents_desc:0 "政治的反対派と「階級の敵」を組織的に逮捕・処刑する。旧体制の政治家、抵抗する資本家、批判的な知識人——彼らはすべて「人民の敵」として排除される。ロング体制への脅威を根絶し、全国的な支配を確立する。"
- USA_purge_opponents_tooltip:0 "§H粛清§!\n政治力: §G+150§!\n安定度: §R-3%§!\n政治的安定: §G+5%§!"
+ USA_purge_opponents_tooltip:0 "§Y合衆国の政治§!に以下の修正:\n政治力: §G+150§!\n安定度: §R-3%§!"
 
  USA_loyalty_oath:0 "忠誠の誓い"
  USA_loyalty_oath_desc:0 "すべての公務員・軍人にキングフィッシュへの絶対的忠誠を誓わせる。この誓約を拒否した者は即座に解雇され、場合によっては投獄される。軍と官僚機構はロング個人への忠誠で固められる。"
- USA_loyalty_oath_tooltip:0 "§H忠誠の誓い§!\nイデオロギードリフト防御: §G+25%§!\n軍組織率: §G+5%§!"
+ USA_loyalty_oath_tooltip:0 "§Y合衆国の政治§!に以下の修正:\nイデオロギードリフト防御: §G+25%§!\n§Y合衆国陸軍§!に以下の修正:\n軍組織率: §G+5%§!"
 
  USA_president_for_life:0 "終身大統領"
  USA_president_for_life_desc:0 "憲法を改正し、ロングを終身大統領に就任させる。選挙は廃止され、権力の継承は彼の意志によってのみ決定される。「民主主義は民衆の意志を反映している」として、永続的な独裁体制が確立される。"
- USA_president_for_life_tooltip:0 "§H終身大統領§!\n政治力: §G+200§!\n安定度: §G+10%§!\n政治力獲得: §G+15%§!\n降伏限界: §G+10%§!"
+ USA_president_for_life_tooltip:0 "§Y合衆国の政治§!に以下の修正:\n政治力: §G+200§!\n安定度: §G+10%§!\n政治力獲得: §G+15%§!\n降伏限界: §G+10%§!"
 
  # ------------------------------------------------------------------------
  # ロングルート - 経済ブランチ
  # ------------------------------------------------------------------------
  USA_expropriate_industries:0 "産業の接収"
  USA_expropriate_industries_desc:0 "日本企業・イギリス企業が支配する産業を「敵性資産」として接収する。製鉄所、石油精製所、銀行——すべてが「人民の財産」として国有化される。外国資本家たちは追放され、その資産は没収される。"
- USA_expropriate_industries_tooltip:0 "§H産業接収§!\n工場出力: §G+5%§!\n政治力: §G+50§!"
+ USA_expropriate_industries_tooltip:0 "§Y合衆国の軍事産業§!に以下の修正:\n工場出力: §G+5%§!\n§Y合衆国の政治§!に以下の修正:\n政治力: §G+50§!"
 
  USA_peoples_factories:0 "人民の工場"
  USA_peoples_factories_desc:0 "国有化された工場を「人民の工場」として再編成する。労働者が経営に参加する協同組合方式を導入し、利益は労働者に還元される。生産効率は低下するかもしれないが、労働者の士気と忠誠心は大幅に向上する。"
- USA_peoples_factories_tooltip:0 "§H人民の工場§!\n建設スロット: §G+3§!\n民需工場: §G+3§!\n生産効率上限: §G+5%§!"
+ USA_peoples_factories_tooltip:0 "§Y合衆国経済§!に以下の修正:\n建設スロット: §G+3§!\n民需工場: §G+3§!\n§Y合衆国の軍事産業§!に以下の修正:\n生産効率上限: §G+5%§!"
 
  # ------------------------------------------------------------------------
  # ロングルート - 軍事ブランチ
  # ------------------------------------------------------------------------
  USA_attrition_doctrine:0 "消耗戦ドクトリン"
  USA_attrition_doctrine_desc:0 "人的資源を最大限に活用した消耗戦を採用する。高価な装備より大量の兵士を、複雑な戦術より数の優位を重視する。「一人倒れれば十人が立ち上がる」精神で敵を圧倒する。"
- USA_attrition_doctrine_tooltip:0 "§H消耗戦ドクトリン§!\n陸軍攻撃: §G+8%§!\n補給消費: §G-10%§!"
+ USA_attrition_doctrine_tooltip:0 "§Y合衆国陸軍§!に以下の修正:\n陸軍攻撃: §G+8%§!\n補給消費: §G-10%§!"
 
  USA_mosquito_fleet:0 "蚊の艦隊"
  USA_mosquito_fleet_desc:0 "高価な大型艦艇ではなく、安価で大量生産可能な小型艦艇を重視する。潜水艦と魚雷艇を主力とし、ゲリラ的な海戦で日英の大艦隊に立ち向かう。質より量、消耗戦を海上でも展開する。"
- USA_mosquito_fleet_tooltip:0 "§H蚊の艦隊§!\n潜水艦攻撃: §G+15%§!\n魚雷艇攻撃: §G+15%§!\n造船所出力: §G+10%§!"
+ USA_mosquito_fleet_tooltip:0 "§Y合衆国海軍§!に以下の修正:\n潜水艦攻撃: §G+15%§!\n魚雷艇攻撃: §G+15%§!\n§Y合衆国の軍事産業§!に以下の修正:\n造船所出力: §G+10%§!"
 
  USA_arsenal_of_people:0 "人民の兵器廠"
  USA_arsenal_of_people_desc:0 "高級な兵器ではなく、大量生産可能な簡素な装備で軍を武装する。信頼性が高く、メンテナンスが容易で、どんな兵士でも扱える兵器を大量生産する。質より量で敵を圧倒する戦略である。"
- USA_arsenal_of_people_tooltip:0 "§H人民の兵器廠§!\n建設スロット: §G+4§!\n軍需工場: §G+4§!\n陸軍攻撃: §G+10%§!\n陸軍防御: §G+5%§!"
+ USA_arsenal_of_people_tooltip:0 "§Y合衆国経済§!に以下の修正:\n建設スロット: §G+4§!\n軍需工場: §G+4§!\n§Y合衆国陸軍§!に以下の修正:\n陸軍攻撃: §G+10%§!\n陸軍防御: §G+5%§!"
 
  # ------------------------------------------------------------------------
  # ロングルート - 外交・領土拡張
  # ------------------------------------------------------------------------
  USA_seize_panama:0 "パナマ接収"
  USA_seize_panama_desc:0 "パナマ共和国を制圧し、パナマ運河を武力で奪取する。歴史的にアメリカが建設したこの運河は、アメリカのものである。パナマ地峡を永久に併合し、両洋を結ぶ戦略的要衝を確保する。"
- USA_seize_panama_tooltip:0 "§Hパナマ接収§!\nパナマに戦争目標を獲得"
+ USA_seize_panama_tooltip:0 "パナマに戦争目標を獲得"
 
  USA_reclaim_alaska:0 "アラスカ奪還"
  USA_reclaim_alaska_desc:0 "カナダ領アラスカを奪還し、北米大陸の統一を目指す。かつてロシアから購入したこの地は、イギリスの陰謀によって奪われた。今こそカナダに最後通牒を突きつけ、武力で領土を取り戻す時である。"
- USA_reclaim_alaska_tooltip:0 "§Hアラスカ奪還§!\nカナダに戦争目標を獲得"
+ USA_reclaim_alaska_tooltip:0 "カナダに戦争目標を獲得"
 
  # ------------------------------------------------------------------------
  # マッカーサールート - 政治ブランチ
  # ------------------------------------------------------------------------
  USA_meritocratic_government:0 "能力主義政府"
  USA_meritocratic_government_desc:0 "能力と実績に基づく人事配置を徹底する。政治的コネや世襲ではなく、純粋に能力で政府要職を配置する。軍人、技術者、実業家——有能な人材が国家を運営し、効率的な統治を実現する。"
- USA_meritocratic_government_tooltip:0 "§H能力主義政府§!\n政治力獲得: §G+10%§!\n研究速度: §G+3%§!"
+ USA_meritocratic_government_tooltip:0 "§Y合衆国の政治§!に以下の修正:\n政治力獲得: §G+10%§!\n§Y合衆国経済§!に以下の修正:\n研究速度: §G+3%§!"
 
  USA_technocratic_elite:0 "技術官僚エリート"
  USA_technocratic_elite_desc:0 "科学者・技術者を国家の中枢に登用し、技術的優位性に基づく国力強化を推進する。感情ではなく理性、イデオロギーではなく科学が政策を決定する。効率と合理性が最高の価値となる。"
- USA_technocratic_elite_tooltip:0 "§H技術官僚§!\n研究速度: §G+5%§!\n工場出力: §G+5%§!"
+ USA_technocratic_elite_tooltip:0 "§Y合衆国経済§!に以下の修正:\n研究速度: §G+5%§!\n§Y合衆国の軍事産業§!に以下の修正:\n工場出力: §G+5%§!"
 
  USA_mil_ind_complex:0 "軍産複合体"
  USA_mil_ind_complex_desc:0 "軍と民間産業の深い結合により、統制的な軍産複合体を形成する。軍需に基づいた経済成長が国家発展の原動力となる。平時でも戦時経済に近い体制を維持し、常に戦争に備える。"
- USA_mil_ind_complex_tooltip:0 "§H軍産複合体§!\n軍需工場出力: §G+10%§!\n造船所出力: §G+10%§!"
+ USA_mil_ind_complex_tooltip:0 "§Y合衆国の軍事産業§!に以下の修正:\n軍需工場出力: §G+10%§!\n造船所出力: §G+10%§!"
 
  USA_highway_system:0 "ハイウェイ建設"
  USA_highway_system_desc:0 "全国的な高速道路網を構築する。物資輸送の効率化と軍隊の機動性向上により、国家の統合性を強化する。ドイツのアウトバーンに倣い、アメリカ全土を高速道路で結ぶ。"
- USA_highway_system_tooltip:0 "§Hハイウェイ§!\nインフラ建設速度: §G+25%§!\n補給効率: §G+10%§!"
+ USA_highway_system_tooltip:0 "§Y合衆国経済§!に以下の修正:\nインフラ建設速度: §G+25%§!\n補給効率: §G+10%§!"
 
  # ------------------------------------------------------------------------
  # マッカーサールート - 経済ブランチ
  # ------------------------------------------------------------------------
  USA_mac_corporate_state:0 "統制経済国家"
  USA_mac_corporate_state_desc:0 "民間企業を国家統制下に置き、政府・軍・企業の三位一体による効率的な経済運営を実現する。企業は利益追求だけでなく、国家目標の達成に貢献することが求められる。"
- USA_mac_corporate_state_tooltip:0 "§H統制経済§!\n工場出力: §G+8%§!\n消費財: §G-3%§!"
+ USA_mac_corporate_state_tooltip:0 "§Y合衆国の軍事産業§!に以下の修正:\n工場出力: §G+8%§!\n§Y合衆国経済§!に以下の修正:\n消費財: §G-3%§!"
 
  USA_mac_industrial_council:0 "産業評議会"
  USA_mac_industrial_council_desc:0 "政府・軍・企業指導者による産業評議会を設置する。軍の合理的な組織運営手法を経済全体に適用し、最大の効率を実現する。価格統制、資源配分、生産計画——すべてが評議会の決定に従う。"
- USA_mac_industrial_council_tooltip:0 "§H産業評議会§!\n生産効率上限: §G+10%§!\n資源産出量: §G+10%§!"
+ USA_mac_industrial_council_tooltip:0 "§Y合衆国の軍事産業§!に以下の修正:\n生産効率上限: §G+10%§!\n§Y合衆国経済§!に以下の修正:\n資源産出量: §G+10%§!"
 
  USA_mac_war_economy:0 "戦時経済体制"
  USA_mac_war_economy_desc:0 "平時経済から完全な戦時経済への移行を実現する。すべての生産資源が軍需に動員可能な体制を構築する。消費財生産は最小限に抑えられ、軍需生産が最優先される。"
- USA_mac_war_economy_tooltip:0 "§H戦時経済§!\n軍需工場出力: §G+15%§!\n消費財: §G-5%§!"
+ USA_mac_war_economy_tooltip:0 "§Y合衆国の軍事産業§!に以下の修正:\n軍需工場出力: §G+15%§!\n§Y合衆国経済§!に以下の修正:\n消費財: §G-5%§!"
 
  USA_mac_total_mobilization:0 "国家総動員"
  USA_mac_total_mobilization_desc:0 "国家総動員体制が完成した。すべての人的・物的資源が、国家指導部の指揮下で最大効率で運用される。これこそが現代戦を勝ち抜く唯一の体制である。"
- USA_mac_total_mobilization_tooltip:0 "§H国家総動員§!\n徴兵率: §G+3%§!\n軍需工場出力: §G+20%§!\n造船所出力: §G+20%§!"
+ USA_mac_total_mobilization_tooltip:0 "§Y合衆国陸軍§!に以下の修正:\n徴兵率: §G+3%§!\n§Y合衆国の軍事産業§!に以下の修正:\n軍需工場出力: §G+20%§!\n造船所出力: §G+20%§!"
 
  # ------------------------------------------------------------------------
  # マッカーサールート - 軍事ドクトリン
  # ------------------------------------------------------------------------
  USA_superior_firepower:0 "優勢火力ドクトリン"
  USA_superior_firepower_desc:0 "砲兵火力を中核とした火力優位戦術を展開する。圧倒的な砲撃により、敵の抵抗を粉砕してから歩兵が前進する。「弾丸で血を購う」ではなく「鋼鉄で勝利を購う」が方針である。"
- USA_superior_firepower_tooltip:0 "§H優勢火力§!\n砲兵攻撃: §G+15%§!\n砲兵防御: §G+15%§!"
+ USA_superior_firepower_tooltip:0 "§Y合衆国陸軍§!に以下の修正:\n砲兵攻撃: §G+15%§!\n砲兵防御: §G+15%§!"
 
  USA_armored_fist:0 "装甲拳"
  USA_armored_fist_desc:0 "戦車を中核とした機甲部隊による迅速な攻撃戦術を採用する。装甲化した高速機動部隊で敵の防衛線を突破し、後方に深く浸透する。電撃戦の精神をアメリカ流に昇華させる。"
- USA_armored_fist_tooltip:0 "§H装甲拳§!\n装甲師団攻撃: §G+15%§!\n装甲師団速度: §G+10%§!"
+ USA_armored_fist_tooltip:0 "§Y合衆国陸軍§!に以下の修正:\n装甲師団攻撃: §G+15%§!\n装甲師団速度: §G+10%§!"
 
  USA_air_power_doctrine:0 "航空力ドクトリン"
  USA_air_power_doctrine_desc:0 "航空戦力を戦争の決定的要素として位置付ける。制空権の獲得と戦術航空支援により、地上作戦を支援する。空を制する者が戦場を制する。"
- USA_air_power_doctrine_tooltip:0 "§H航空力ドクトリン§!\n航空攻撃: §G+10%§!\n航空防御: §G+10%§!"
+ USA_air_power_doctrine_tooltip:0 "§Y合衆国空軍§!に以下の修正:\n航空攻撃: §G+10%§!\n航空防御: §G+10%§!"
 
  USA_strategic_bombing_cmd:0 "戦略爆撃司令部"
  USA_strategic_bombing_cmd_desc:0 "長距離戦略爆撃機による敵国の産業基盤破壊戦術を開発する。工場、橋梁、鉄道——敵の戦争継続能力そのものを根本から奪う。戦略爆撃こそが近代戦の決定的兵器である。"
- USA_strategic_bombing_cmd_tooltip:0 "§H戦略爆撃§!\n戦略爆撃攻撃: §G+20%§!\n爆撃機生産速度: §G+15%§!"
+ USA_strategic_bombing_cmd_tooltip:0 "§Y合衆国空軍§!に以下の修正:\n戦略爆撃攻撃: §G+20%§!\n§Y合衆国の軍事産業§!に以下の修正:\n爆撃機生産速度: §G+15%§!"
 
  # ------------------------------------------------------------------------
  # マッカーサールート - 海軍
  # ------------------------------------------------------------------------
  USA_blue_water_navy:0 "遠洋海軍"
  USA_blue_water_navy_desc:0 "太平洋全域を支配可能な遠洋艦隊を建設する。航空母艦を中核とした現代的海軍により、海洋支配を確保する。沿岸防衛ではなく、外洋での決戦能力を追求する。"
- USA_blue_water_navy_tooltip:0 "§H遠洋海軍§!\n海軍組織率: §G+10%§!\n主力艦攻撃: §G+10%§!"
+ USA_blue_water_navy_tooltip:0 "§Y合衆国海軍§!に以下の修正:\n海軍組織率: §G+10%§!\n主力艦攻撃: §G+10%§!"
 
  USA_carrier_fleet:0 "空母機動部隊"
  USA_carrier_fleet_desc:0 "複数の航空母艦を統合した強力な空母機動部隊を編成する。制空権と制海権の獲得により、太平洋での覇権を確保する。空母は「浮かぶ飛行場」として、艦隊の中核となる。"
- USA_carrier_fleet_tooltip:0 "§H空母機動部隊§!\n空母攻撃: §G+20%§!\n艦載機攻撃: §G+15%§!"
+ USA_carrier_fleet_tooltip:0 "§Y合衆国海軍§!に以下の修正:\n空母攻撃: §G+20%§!\n艦載機攻撃: §G+15%§!"
 
  USA_cruiser_doctrine:0 "巡洋艦ドクトリン"
  USA_cruiser_doctrine_desc:0 "巡洋艦による海上優位戦術を開発する。高速で汎用性のある巡洋艦を主力として、偵察、護衛、水上戦闘など様々な海上作戦に対応する。"
- USA_cruiser_doctrine_tooltip:0 "§H巡洋艦ドクトリン§!\n巡洋艦攻撃: §G+15%§!\n巡洋艦速度: §G+10%§!"
+ USA_cruiser_doctrine_tooltip:0 "§Y合衆国海軍§!に以下の修正:\n巡洋艦攻撃: §G+15%§!\n巡洋艦速度: §G+10%§!"
 
  USA_destroyer_escort:0 "駆逐艦護衛"
  USA_destroyer_escort_desc:0 "駆逐艦を中核とした艦隊護衛体制を確立する。対潜水艦戦と船団護衛を専門とする護衛艦隊により、輸送船団と主力艦隊を保護する。"
- USA_destroyer_escort_tooltip:0 "§H駆逐艦護衛§!\n駆逐艦攻撃: §G+15%§!\n対潜攻撃: §G+20%§!"
+ USA_destroyer_escort_tooltip:0 "§Y合衆国海軍§!に以下の修正:\n駆逐艦攻撃: §G+15%§!\n対潜攻撃: §G+20%§!"
 
  USA_battleship_modernization:0 "戦艦近代化"
  USA_battleship_modernization_desc:0 "既存戦艦を近代的な装備で改修する。火器管制装置と対空兵装を強化し、新型レーダーを装備する。老朽化した戦艦を現代の海戦に適応させる。"
- USA_battleship_modernization_tooltip:0 "§H戦艦近代化§!\n戦艦攻撃: §G+15%§!\n戦艦対空: §G+20%§!"
+ USA_battleship_modernization_tooltip:0 "§Y合衆国海軍§!に以下の修正:\n戦艦攻撃: §G+15%§!\n戦艦対空: §G+20%§!"
 
  USA_carrier_development:0 "空母開発"
  USA_carrier_development_desc:0 "次世代航空母艦の設計と建造を推進する。より大型で、より多くの艦載機を搭載可能な空母により、海上航空優勢を確保する。"
- USA_carrier_development_tooltip:0 "§H空母開発§!\n空母建造速度: §G+20%§!\n空母攻撃: §G+10%§!"
+ USA_carrier_development_tooltip:0 "§Y合衆国の軍事産業§!に以下の修正:\n空母建造速度: §G+20%§!\n§Y合衆国海軍§!に以下の修正:\n空母攻撃: §G+10%§!"
 
  USA_submarine_warfare:0 "潜水艦戦"
  USA_submarine_warfare_desc:0 "潜水艦による通商破壊戦を本格化させる。敵の補給線を断ち、経済を窒息させる。見えざる脅威として、敵の艦船を海の底に沈める。"
- USA_submarine_warfare_tooltip:0 "§H潜水艦戦§!\n潜水艦攻撃: §G+20%§!\n潜水艦ステルス: §G+15%§!"
+ USA_submarine_warfare_tooltip:0 "§Y合衆国海軍§!に以下の修正:\n潜水艦攻撃: §G+20%§!\n潜水艦ステルス: §G+15%§!"
 
  # ------------------------------------------------------------------------
  # マッカーサールート - 外交
@@ -882,7 +882,7 @@
 
  USA_anti_comintern:0 "コミンテルン対抗"
  USA_anti_comintern_desc:0 "ソビエト連邦と共産主義に対抗する国際統一戦線を構築する。反共連合を指導し、共産主義の世界的拡大を阻止する。"
- USA_anti_comintern_tooltip:0 "§Hコミンテルン対抗§!\n共産主義への防御: §G+50%§!\nソ連との関係: §R-100§!"
+ USA_anti_comintern_tooltip:0 "§Y合衆国の政治§!に以下の修正:\n共産主義への防御: §G+50%§!\nソ連との関係: §R-100§!"
 
  USA_pan_american_league:0 "汎米連盟"
  USA_pan_american_league_desc:0 "アメリカ大陸全体の統一を目指し、カナダ・メキシコなど近隣国との協力を深める。モンロー主義を拡大解釈し、アメリカ大陸による統一的な防衛体制を確立する。"
@@ -890,118 +890,118 @@
 
  USA_tokyo_entente:0 "東京への遠征"
  USA_tokyo_entente_desc:0 "日本帝国を打倒するための最終作戦を準備する。太平洋を越えて日本本土に上陸し、東京を占領する。真珠湾の復讐を果たし、太平洋の覇権を奪還する。"
- USA_tokyo_entente_tooltip:0 "§H東京遠征§!\n日本に戦争目標を獲得\n上陸作戦能力: §G+25§!"
+ USA_tokyo_entente_tooltip:0 "日本に戦争目標を獲得\n§Y合衆国海軍§!に以下の修正:\n上陸作戦能力: §G+25§!"
 
  USA_hegemony_path:0 "覇権への道"
  USA_hegemony_path_desc:0 "アメリカの世界的覇権確立への道を進む。軍事力・経済力・政治的影響力をあらゆる場所に投射し、パクス・アメリカーナを実現する。アメリカが主導する世界秩序の確立である。"
- USA_hegemony_path_tooltip:0 "§H覇権への道§!\n正当化時間: §G-50%§!\n戦争目標の正当化が容易になる"
+ USA_hegemony_path_tooltip:0 "§Y合衆国の政治§!に以下の修正:\n正当化時間: §G-50%§!"
 
  # ------------------------------------------------------------------------
  # 共通軍事ツリー - 陸軍
  # ------------------------------------------------------------------------
  USA_infantry_modernization:0 "歩兵近代化"
  USA_infantry_modernization_desc:0 "歩兵装備の全面更新を実施する。M1ガーランド自動小銃、ブローニング自動小銃、M1バズーカなど——最新の小火器で歩兵の火力を飛躍的に向上させる。"
- USA_infantry_modernization_tooltip:0 "§H歩兵近代化§!\n歩兵攻撃: §G+10%§!\n歩兵防御: §G+10%§!"
+ USA_infantry_modernization_tooltip:0 "§Y合衆国陸軍§!に以下の修正:\n歩兵攻撃: §G+10%§!\n歩兵防御: §G+10%§!"
 
  USA_artillery_development:0 "砲兵発展"
  USA_artillery_development_desc:0 "砲兵部隊の装備と戦術を近代化する。より長射程、より高精度、より速い発射速度——砲兵の質的向上により、陸上戦の様相を変える。"
- USA_artillery_development_tooltip:0 "§H砲兵発展§!\n砲兵攻撃: §G+15%§!\n砲兵突破: §G+10%§!"
+ USA_artillery_development_tooltip:0 "§Y合衆国陸軍§!に以下の修正:\n砲兵攻撃: §G+15%§!\n砲兵突破: §G+10%§!"
 
  USA_armored_warfare:0 "機甲戦"
  USA_armored_warfare_desc:0 "戦車を中核とする機甲戦理論を導入する。機動力と火力を兼ね備えた機甲部隊こそが、現代戦の主役である。パットン将軍の下、世界最強の戦車部隊を育成する。"
- USA_armored_warfare_tooltip:0 "§H機甲戦§!\n装甲師団攻撃: §G+15%§!\n装甲師団組織率: §G+10%§!"
+ USA_armored_warfare_tooltip:0 "§Y合衆国陸軍§!に以下の修正:\n装甲師団攻撃: §G+15%§!\n装甲師団組織率: §G+10%§!"
 
  USA_airborne_forces:0 "空挺部隊"
  USA_airborne_forces_desc:0 "パラシュート降下部隊を編成する。敵後方への垂直包囲により、戦略的要地を電撃的に確保する。第82空挺師団、第101空挺師団——精鋭の空挺部隊が新たな戦術的可能性を開く。"
- USA_airborne_forces_tooltip:0 "§H空挺部隊§!\n空挺師団攻撃: §G+15%§!\n空挺降下成功率: §G+10%§!"
+ USA_airborne_forces_tooltip:0 "§Y合衆国陸軍§!に以下の修正:\n空挺師団攻撃: §G+15%§!\n空挺降下成功率: §G+10%§!"
 
  USA_special_operations:0 "特殊作戦"
  USA_special_operations_desc:0 "レンジャー・特殊部隊などのエリート戦闘部隊を編成する。敵中深く潜入し、戦略目標を破壊する能力は、非対称戦において決定的である。"
- USA_special_operations_tooltip:0 "§H特殊作戦§!\n特殊部隊上限: §G+10%§!\n偵察効率: §G+15%§!"
+ USA_special_operations_tooltip:0 "§Y合衆国陸軍§!に以下の修正:\n特殊部隊上限: §G+10%§!\n偵察効率: §G+15%§!"
 
  # ------------------------------------------------------------------------
  # 共通軍事ツリー - 空軍
  # ------------------------------------------------------------------------
  USA_air_corps:0 "陸軍航空隊"
  USA_air_corps_desc:0 "陸軍航空隊を大幅に拡充する。戦闘機・爆撃機の大量生産により、制空権確保能力を強化する。空を制する者が戦場を制する——この原則の下、航空戦力の飛躍的増強を図る。"
- USA_air_corps_tooltip:0 "§H陸軍航空隊§!\n航空機生産速度: §G+15%§!\n航空経験値: §G+25§!"
+ USA_air_corps_tooltip:0 "§Y合衆国の軍事産業§!に以下の修正:\n航空機生産速度: §G+15%§!\n§Y合衆国空軍§!に以下の修正:\n航空経験値: §G+25§!"
 
  USA_strategic_air_command:0 "戦略航空軍"
  USA_strategic_air_command_desc:0 "長距離戦略爆撃機部隊を創設する。B-17、B-24、そして開発中のB-29——これらの重爆撃機群が敵国の産業基盤を空から破壊し、戦争継続能力を根本から奪う。"
- USA_strategic_air_command_tooltip:0 "§H戦略航空軍§!\n戦略爆撃機攻撃: §G+20%§!\n戦略爆撃機防御: §G+15%§!"
+ USA_strategic_air_command_tooltip:0 "§Y合衆国空軍§!に以下の修正:\n戦略爆撃機攻撃: §G+20%§!\n戦略爆撃機防御: §G+15%§!"
 
  # ------------------------------------------------------------------------
  # 共通軍事ツリー - 研究・超兵器
  # ------------------------------------------------------------------------
  USA_manhattan_project:0 "マンハッタン計画"
  USA_manhattan_project_desc:0 "核兵器開発計画を極秘で推進する。世界中から科学者を結集し、ニューメキシコの砂漠で人類史上最強の兵器を完成させる。この計画の成功は、戦争の終結方法を永遠に変えることになる。"
- USA_manhattan_project_tooltip:0 "§Hマンハッタン計画§!\n核研究速度: §G+100%§!\n核爆弾の研究が可能になる"
+ USA_manhattan_project_tooltip:0 "§Y合衆国経済§!に以下の修正:\n核研究速度: §G+100%§!"
 
  USA_rocket_program:0 "ロケット計画"
  USA_rocket_program_desc:0 "長距離ロケット・ミサイルの開発を推進する。地球上のいかなる場所をも攻撃可能な兵器体系を構築する。将来的には、宇宙への扉を開く技術となる。"
- USA_rocket_program_tooltip:0 "§Hロケット計画§!\nロケット研究速度: §G+50%§!\nミサイル攻撃: §G+20%§!"
+ USA_rocket_program_tooltip:0 "§Y合衆国経済§!に以下の修正:\nロケット研究速度: §G+50%§!\n§Y合衆国空軍§!に以下の修正:\nミサイル攻撃: §G+20%§!"
 
  USA_jet_program:0 "ジェット機計画"
  USA_jet_program_desc:0 "ジェット推進航空機の開発を推進する。プロペラ機の限界を超え、音速に迫る超高速戦闘機により、空中戦の新時代を開く。"
- USA_jet_program_tooltip:0 "§Hジェット機計画§!\nジェット機研究速度: §G+50%§!\nジェット機攻撃: §G+15%§!"
+ USA_jet_program_tooltip:0 "§Y合衆国経済§!に以下の修正:\nジェット機研究速度: §G+50%§!\n§Y合衆国空軍§!に以下の修正:\nジェット機攻撃: §G+15%§!"
 
  USA_superweapons:0 "超兵器"
  USA_superweapons_desc:0 "あらゆる超兵器の開発に全力を注ぐ。核兵器・ロケット・ジェット機——これらの決定的兵器により、アメリカは戦争において絶対的な優位を確保する。科学の力が勝利を決定する時代が来た。"
- USA_superweapons_tooltip:0 "§H超兵器§!\n全研究速度: §G+10%§!\n核爆弾製造速度: §G+25%§!"
+ USA_superweapons_tooltip:0 "§Y合衆国経済§!に以下の修正:\n全研究速度: §G+10%§!\n核爆弾製造速度: §G+25%§!"
 
  # ========================================================================
  # フェーズ2追加: 不足tooltip補完 (20個)
  # ========================================================================
 
  # 共通ツリー - フェーズ1経済
- USA_hollow_state_tooltip:0 "§H空洞国家の現状§!\n日英支配下の厳しい状況:\n工場出力: §R-20%§!\n消費財割合: §R+10%§!\n政治力獲得: §R-25%§!"
+ USA_hollow_state_tooltip:0 "§Y合衆国の政治§!に以下の修正:\n政治力獲得: §R-25%§!\n§Y合衆国の軍事産業§!に以下の修正:\n工場出力: §R-20%§!\n§Y合衆国経済§!に以下の修正:\n消費財割合: §R+10%§!"
 
- USA_fordism_tooltip:0 "§Hフォード式生産§!\n大量生産方式の導入:\n工場出力: §G+5%§!\n生産効率上限: §G+10%§!"
+ USA_fordism_tooltip:0 "§Y合衆国の軍事産業§!に以下の修正:\n工場出力: §G+5%§!\n生産効率上限: §G+10%§!"
 
- USA_standardized_tooltip:0 "§H標準化生産§!\n部品の互換性確立:\n生産効率基礎: §G+5%§!\n装備転換コスト: §G-15%§!"
+ USA_standardized_tooltip:0 "§Y合衆国の軍事産業§!に以下の修正:\n生産効率基礎: §G+5%§!\n装備転換コスト: §G-15%§!"
 
  # ロングルート - 経済
- USA_expropriate_tooltip:0 "§H産業収奪§!\n資本家からの財産没収:\n工場: §G+3§!\n政治力: §G+50§!\n安定度: §R-10%§!"
+ USA_expropriate_tooltip:0 "§Y合衆国経済§!に以下の修正:\n工場: §G+3§!\n§Y合衆国の政治§!に以下の修正:\n政治力: §G+50§!\n安定度: §R-10%§!"
 
- USA_redistribute_tooltip:0 "§H富の再分配§!\n人民への富の分配:\n消費財: §G-5%§!\n戦争協力度: §G+10%§!"
+ USA_redistribute_tooltip:0 "§Y合衆国経済§!に以下の修正:\n消費財: §G-5%§!\n§Y合衆国の政治§!に以下の修正:\n戦争協力度: §G+10%§!"
 
- USA_seize_assets_tooltip:0 "§H資産接収§!\n敵対勢力の資産没収:\n工場: §G+2§!\n政治力: §G+25§!"
+ USA_seize_assets_tooltip:0 "§Y合衆国経済§!に以下の修正:\n工場: §G+2§!\n§Y合衆国の政治§!に以下の修正:\n政治力: §G+25§!"
 
- USA_arsenal_people_tooltip:0 "§H人民の兵器廠§!\n労働者主導の軍需生産:\n軍需工場出力: §G+10%§!\n造船所出力: §G+10%§!"
+ USA_arsenal_people_tooltip:0 "§Y合衆国の軍事産業§!に以下の修正:\n軍需工場出力: §G+10%§!\n造船所出力: §G+10%§!"
 
- USA_autarky_tooltip:0 "§H経済的自給自足§!\n外国依存からの脱却:\n資源効率: §G+15%§!\n貿易法の変更が可能"
+ USA_autarky_tooltip:0 "§Y合衆国経済§!に以下の修正:\n資源効率: §G+15%§!"
 
- USA_commissars_tooltip:0 "§H政治委員§!\n党への忠誠を監視:\n師団組織率回復: §G+5%§!\n訓練時間: §R+10%§!"
+ USA_commissars_tooltip:0 "§Y合衆国陸軍§!に以下の修正:\n師団組織率回復: §G+5%§!\n訓練時間: §R+10%§!"
 
  # ロングルート - 外交
- USA_fall_london_tooltip:0 "§Hロンドン陥落§!\n大英帝国への復讐:\nイギリスに戦争目標を獲得\n正当化時間: §G-75%§!"
+ USA_fall_london_tooltip:0 "イギリスに戦争目標を獲得\n§Y合衆国の政治§!に以下の修正:\n正当化時間: §G-75%§!"
 
  # マッカーサールート - 政治
- USA_military_gov_tooltip:0 "§H軍政府§!\n軍による統治体制:\n政治力獲得: §G+15%§!\n安定度: §G+5%§!\n動員速度: §G+10%§!"
+ USA_military_gov_tooltip:0 "§Y合衆国の政治§!に以下の修正:\n政治力獲得: §G+15%§!\n安定度: §G+5%§!\n動員速度: §G+10%§!"
 
- USA_meritocracy_tooltip:0 "§H能力主義§!\n実力による人材登用:\n研究速度: §G+5%§!\n政治力獲得: §G+10%§!"
+ USA_meritocracy_tooltip:0 "§Y合衆国の政治§!に以下の修正:\n政治力獲得: §G+10%§!\n§Y合衆国経済§!に以下の修正:\n研究速度: §G+5%§!"
 
- USA_technocratic_tooltip:0 "§Hテクノクラート§!\n技術官僚による統治:\n研究速度: §G+10%§!\n工場出力: §G+5%§!"
+ USA_technocratic_tooltip:0 "§Y合衆国経済§!に以下の修正:\n研究速度: §G+10%§!\n§Y合衆国の軍事産業§!に以下の修正:\n工場出力: §G+5%§!"
 
- USA_highway_tooltip:0 "§H高速道路網§!\n全国高速道路システム:\n補給効率: §G+20%§!\n師団速度: §G+10%§!"
+ USA_highway_tooltip:0 "§Y合衆国経済§!に以下の修正:\n補給効率: §G+20%§!\n§Y合衆国陸軍§!に以下の修正:\n師団速度: §G+10%§!"
 
- USA_mil_ind_complex_tooltip:0 "§H軍産複合体§!\n軍と産業の融合:\n軍需工場出力: §G+15%§!\n軍需工場建設速度: §G+10%§!"
+ USA_mil_ind_complex_tooltip:0 "§Y合衆国の軍事産業§!に以下の修正:\n軍需工場出力: §G+15%§!\n§Y合衆国経済§!に以下の修正:\n軍需工場建設速度: §G+10%§!"
 
  # マッカーサールート - 軍事
- USA_air_power_tooltip:0 "§H航空戦力ドクトリン§!\n制空権重視の戦略:\n航空機攻撃: §G+10%§!\n航空機防御: §G+10%§!"
+ USA_air_power_tooltip:0 "§Y合衆国空軍§!に以下の修正:\n航空機攻撃: §G+10%§!\n航空機防御: §G+10%§!"
 
- USA_strategic_bombing_tooltip:0 "§H戦略爆撃§!\n敵産業への空爆:\n戦略爆撃効率: §G+25%§!\n爆撃機攻撃: §G+15%§!"
+ USA_strategic_bombing_tooltip:0 "§Y合衆国空軍§!に以下の修正:\n戦略爆撃効率: §G+25%§!\n爆撃機攻撃: §G+15%§!"
 
- USA_blue_water_tooltip:0 "§H外洋海軍§!\n大洋を支配する艦隊:\n主力艦攻撃: §G+10%§!\n主力艦装甲: §G+10%§!"
+ USA_blue_water_tooltip:0 "§Y合衆国海軍§!に以下の修正:\n主力艦攻撃: §G+10%§!\n主力艦装甲: §G+10%§!"
 
  # マッカーサールート - 外交
  USA_london_coop_tooltip:0 "§Hロンドン協力§!\n英米同盟の強化:\nイギリスとの関係: §G+50§!\n連合国への参加が可能"
 
  USA_pan_american_tooltip:0 "§H汎アメリカ主義§!\n米州の統一:\n中南米諸国との関係: §G+30§!\n傀儡化コスト: §G-25%§!"
 
- USA_anti_communist_tooltip:0 "§H反共主義§!\n共産主義への対抗:\nソ連との関係: §R-50§!\n共産主義ドリフト: §G-0.05§!"
+ USA_anti_communist_tooltip:0 "§Y合衆国の政治§!に以下の修正:\nソ連との関係: §R-50§!\n共産主義ドリフト: §G-0.05§!"
 
- USA_manhattan_tooltip:0 "§Hマンハッタン計画進行§!\n核開発への道:\n核研究速度: §G+50%§!"
+ USA_manhattan_tooltip:0 "§Y合衆国経済§!に以下の修正:\n核研究速度: §G+50%§!"
 
  # ========================================================================
  # イベント: Phase 1 - 派閥闘争 (usa.1-119)
