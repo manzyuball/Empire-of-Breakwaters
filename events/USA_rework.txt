@@ -171,8 +171,8 @@ country_event = {
         name = usa.53.a
         set_country_flag = usa_navy_rebuilt
         navy_experience = 100
-        add_to_variable = { USA_nav_surface = 0.10 }
-        add_to_variable = { USA_nav_sub = 0.10 }
+        add_to_variable = { USA_navy_hit_chance = 0.10 }
+        add_to_variable = { USA_navy_damage = 0.10 }
         custom_effect_tooltip = USA_navy_rebuilt_tt
     }
 }
@@ -198,9 +198,9 @@ country_event = {
         name = usa.54.a
         set_country_flag = usa_army_modernized
         army_experience = 100
-        add_to_variable = { USA_mil_attack = 0.10 }
-        add_to_variable = { USA_mil_defense = 0.10 }
-        add_to_variable = { USA_mil_org = 0.10 }
+        add_to_variable = { USA_army_attack = 0.10 }
+        add_to_variable = { USA_army_defence = 0.10 }
+        add_to_variable = { USA_army_org = 0.10 }
         custom_effect_tooltip = USA_army_modernized_tt
     }
 }
@@ -441,7 +441,7 @@ country_event = {
         # 労働組合を掌握
         set_country_flag = usa_union_infiltration
         add_to_variable = { usa_long_support = 8 }
-        add_to_variable = { USA_eco_factory_output = 0.02 }
+        add_to_variable = { USA_ind_factory_output = 0.02 }
         custom_effect_tooltip = USA_long_union_control_tt
     }
 
@@ -660,7 +660,7 @@ country_event = {
         name = usa.111.b
         # 専門性を重視
         add_to_variable = { usa_macarthur_support = 8 }
-        add_to_variable = { USA_mil_planning_speed = 0.02 }
+        add_to_variable = { USA_army_planning_speed = 0.02 }
         custom_effect_tooltip = USA_mac_support_8_tooltip
     }
 }
@@ -742,7 +742,7 @@ country_event = {
         # 産業界との同盟
         set_country_flag = usa_industry_support
         add_to_variable = { usa_macarthur_support = 10 }
-        add_to_variable = { USA_eco_factory_output = 0.02 }
+        add_to_variable = { USA_ind_factory_output = 0.02 }
         custom_effect_tooltip = USA_mac_industry_alliance_tt
     }
 
@@ -814,7 +814,7 @@ country_event = {
         # エリート将校を糾合
         set_country_flag = usa_westpoint_support
         add_to_variable = { usa_macarthur_support = 15 }
-        add_to_variable = { USA_mil_planning_speed = 0.03 }
+        add_to_variable = { USA_army_planning_speed = 0.03 }
         army_experience = 25
         custom_effect_tooltip = USA_mac_westpoint_support_tt
     }
@@ -1118,7 +1118,7 @@ country_event = {
         # 強硬に続行
         add_stability = -0.05
         add_political_power = 100
-        add_to_variable = { USA_eco_factory_output = 0.03 }
+        add_to_variable = { USA_ind_factory_output = 0.03 }
     }
 
     option = {
@@ -1148,8 +1148,8 @@ country_event = {
 
     option = {
         name = usa.220.a
-        add_to_variable = { USA_eco_factory_output = 0.05 }
-        add_to_variable = { USA_eco_prod_eff_cap = 0.03 }
+        add_to_variable = { USA_ind_factory_output = 0.05 }
+        add_to_variable = { USA_ind_prod_eff_cap = 0.03 }
         random_owned_controlled_state = {
             add_extra_state_shared_building_slots = 2
             add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -1178,7 +1178,7 @@ country_event = {
         name = usa.230.a
         add_manpower = 100000
         army_experience = 30
-        add_to_variable = { USA_mil_org = 0.03 }
+        add_to_variable = { USA_army_org = 0.03 }
     }
 }
 
@@ -1459,8 +1459,8 @@ country_event = {
     option = {
         name = usa.330.a
         army_experience = 50
-        add_to_variable = { USA_mil_attack = 0.03 }
-        add_to_variable = { USA_mil_org = 0.03 }
+        add_to_variable = { USA_army_attack = 0.03 }
+        add_to_variable = { USA_army_org = 0.03 }
     }
 }
 

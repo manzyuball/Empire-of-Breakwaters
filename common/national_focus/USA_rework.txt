@@ -50,7 +50,7 @@ focus_tree = {
         ai_will_do = { factor = 50 }
         completion_reward = {
             add_to_variable = { USA_ind_factory_output = 0.02 }
-            add_to_variable = { USA_ind_dockyard_output = 0.02 }
+            add_to_variable = { USA_ind_dockyard_output = 0.025 }
             custom_effect_tooltip = USA_industrial_recovery_start_tooltip
         }
     }
@@ -131,7 +131,7 @@ focus_tree = {
         cost = 30
         ai_will_do = { factor = 50 }
         completion_reward = {
-            add_to_variable = { USA_ind_dockyard_output = 0.03 }
+            add_to_variable = { USA_ind_dockyard_output = 0.04 }
             random_owned_controlled_state = {
                 limit = { is_coastal = yes }
                 add_building_construction = { type = dockyard level = 1 instant_build = yes }
@@ -153,7 +153,7 @@ focus_tree = {
         completion_reward = {
             add_to_variable = { USA_ind_factory_output = 0.03 }
             add_to_variable = { USA_ind_prod_eff_cap = 0.03 }
-            add_to_variable = { USA_ind_dockyard_output = 0.03 }
+            add_to_variable = { USA_ind_dockyard_output = 0.04 }
             custom_effect_tooltip = USA_production_efficiency_tooltip
         }
     }
@@ -731,7 +731,7 @@ focus_tree = {
         ai_will_do = { factor = 50 }
         completion_reward = {
             add_to_variable = { USA_pol_drift_defence = 0.25 }
-            add_to_variable = { USA_mil_org = 0.05 }
+            add_to_variable = { USA_army_org = 0.05 }
             custom_effect_tooltip = USA_loyalty_oath_tooltip
         }
     }
@@ -1531,7 +1531,7 @@ focus_tree = {
         ai_will_do = { factor = 50 }
         completion_reward = {
             add_to_variable = { USA_ind_factory_output = 0.15 }
-            add_to_variable = { USA_ind_dockyard_output = 0.10 }
+            add_to_variable = { USA_ind_dockyard_output = 0.125 }
             add_to_variable = { USA_eco_consumer_goods = -0.10 }
             add_to_variable = { USA_eco_min_export = -0.20 }
             custom_effect_tooltip = USA_industrial_miracle_tooltip
@@ -1586,7 +1586,7 @@ focus_tree = {
         ai_will_do = { factor = 50 }
         completion_reward = {
             add_to_variable = { USA_eco_mil_build_speed = 0.15 }
-            add_to_variable = { USA_ind_dockyard_output = 0.05 }
+            add_to_variable = { USA_ind_dockyard_output = 0.06 }
             custom_effect_tooltip = USA_mac_military_contracts_tooltip
         }
     }
@@ -1721,7 +1721,7 @@ focus_tree = {
                 uses = 2
                 category = armor
             }
-            add_to_variable = { USA_mil_attack = 0.05 }
+            add_to_variable = { USA_army_attack = 0.05 }
             custom_effect_tooltip = USA_armored_fist_tooltip
         }
     }
@@ -2195,6 +2195,7 @@ focus_tree = {
                 category = destroyer
             }
             add_to_variable = { USA_navy_escort_efficiency = 0.10 }
+            add_to_variable = { USA_ind_dockyard_output = 0.02 }
             custom_effect_tooltip = USA_destroyer_escort_tooltip
         }
     }
@@ -2238,6 +2239,7 @@ focus_tree = {
                 category = battleship
             }
             add_to_variable = { USA_navy_damage = 0.10 }
+            add_to_variable = { USA_ind_dockyard_output = 0.03 }
             custom_effect_tooltip = USA_battleship_modernization_tooltip
         }
     }
@@ -2260,6 +2262,7 @@ focus_tree = {
                 category = naval_equipment
             }
             add_to_variable = { USA_navy_invasion_capacity = 10 }
+            add_to_variable = { USA_ind_dockyard_output = 0.03 }
             custom_effect_tooltip = USA_carrier_development_tooltip
         }
     }
@@ -2347,6 +2350,7 @@ focus_tree = {
             add_to_variable = { USA_navy_hit_chance = 0.10 }
             add_to_variable = { USA_navy_damage = 0.10 }
             add_to_variable = { USA_navy_org = 0.10 }
+            add_to_variable = { USA_ind_dockyard_output = 0.02 }
             custom_effect_tooltip = USA_two_ocean_navy_tooltip
         }
     }

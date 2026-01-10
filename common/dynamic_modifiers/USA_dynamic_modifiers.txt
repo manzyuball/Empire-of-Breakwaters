@@ -48,6 +48,13 @@ USA_economic_modifier = {
     # 資源
     local_resources_factor = var:USA_eco_resource_factor
     min_export = var:USA_eco_min_export
+
+    # 研究速度（政治との橋渡し）
+    research_speed_factor = var:USA_pol_research_speed
+
+    # 外国貿易ペナルティ
+    consumer_goods_factor = var:USA_foreign_consumer_penalty
+    min_export = var:USA_foreign_export_penalty
 }
 
 # ----------------------------------------------------------------------------
@@ -123,4 +130,42 @@ USA_navy_modifier = {
 
     # エース
     air_ace_generation_chance_factor = var:USA_navy_ace_generation
+
+    # 空軍変数の統合（元々USA_navy_modifierに含まれていた）
+    air_attack_factor = var:USA_air_attack
+    air_strategic_bomber_bombing_factor = var:USA_air_strategic_bombing
+}
+
+# ============================================================================
+# Long派閥ボーナス
+# ============================================================================
+USA_long_faction_modifier = {
+    icon = GFX_goal_generic_propaganda
+    enable = {
+        has_country_flag = USA_long_route_active
+    }
+
+    # Long派政治ボーナス
+    political_power_factor = var:USA_long_pp_bonus
+    stability_factor = var:USA_long_stability_effect
+
+    # Long派経済ボーナス
+    consumer_goods_factor = var:USA_long_consumer_bonus
+}
+
+# ============================================================================
+# MacArthur派閥ボーナス
+# ============================================================================
+USA_mac_faction_modifier = {
+    icon = GFX_goal_generic_army_doctrines
+    enable = {
+        has_country_flag = USA_mac_route_active
+    }
+
+    # Mac派軍事ボーナス
+    army_org_factor = var:USA_mac_org_bonus
+    planning_speed = var:USA_mac_planning_bonus
+
+    # Mac派政治ボーナス
+    stability_factor = var:USA_mac_stability_effect
 }

@@ -114,13 +114,13 @@ USA_add_factory_output_large = {
 
 
 USA_add_production_efficiency_small = {
-    add_to_variable = { USA_eco_prod_eff_cap = 0.05 }
-    add_to_variable = { USA_eco_prod_eff_gain = 0.05 }
+    add_to_variable = { USA_ind_prod_eff_cap = 0.05 }
+    add_to_variable = { USA_ind_prod_eff_gain = 0.05 }
 }
 
 USA_add_production_efficiency_medium = {
-    add_to_variable = { USA_eco_prod_eff_cap = 0.10 }
-    add_to_variable = { USA_eco_prod_eff_gain = 0.10 }
+    add_to_variable = { USA_ind_prod_eff_cap = 0.10 }
+    add_to_variable = { USA_ind_prod_eff_gain = 0.10 }
 }
 
 USA_reduce_consumer_goods_small = {
