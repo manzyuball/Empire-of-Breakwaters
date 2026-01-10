@@ -2,23 +2,23 @@
 USA_lockheed_organization = {
 	include = generic_medium_aircraft_organization
 	icon = GFX_idea_lockheed
-	
-	allowed = {	
-		tag = CSA
+
+	allowed = {
+		tag = USA
 	}
 	available = {
-		CSA ={
-			has_completed_focus = CSA_military_transcontinental_plane
-		}
+		# USAリワークの航空機フォーカス完了時に利用可能
+		# TODO: 適切なフォーカスIDに置き換える（USA_strategic_air_commandなど）
+		always = yes
 	}
-	
+
 	equipment_type = {
 		mio_cat_eq_all_small_plane
-		mio_cat_eq_all_medium_plane 
+		mio_cat_eq_all_medium_plane
 		mio_cat_eq_all_large_plane
 		transport_plane_equipment
 	}
-	
+
 	initial_trait = {
 		name = USA_mio_trait_lockeed_aircraft
 		limit_to_equipment_type = { mio_cat_eq_all_medium_plane mio_cat_eq_all_large_plane }
@@ -28,25 +28,25 @@ USA_lockheed_organization = {
 			air_attack = 0.15
 		}
 	}
-	
+
 	add_trait = {
 		token = USA_mio_trait_mechanized_production
 		name = USA_mio_trait_mechanized_production
 		icon = GFX_generic_mio_department_icon_plane_medium_technology
 		special_trait_background = yes
-		
-		position = { x=0 y=1 }  
+
+		position = { x=0 y=1 }
 		relative_position_id = generic_mio_trait_narrow_build
-		
+
 		any_parent = { generic_mio_trait_narrow_build }
-		
+
 		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
-		
+
 		production_bonus = {
 			production_efficiency_cap_factor = 0.05
-		} 
+		}
 	}
-	
+
 	override_trait = {
 		token = generic_mio_trait_heavy_fighter_specialization
 		equipment_bonus = {

@@ -26,3 +26,9 @@ USA_mac_policies = {
 		has_country_flag = USA_mac_active
 	}
 }
+USA_military_ops = {
+	icon = GFX_decision_generic_naval_decision
+	allowed = {
+		tag = USA
+	}
+}
