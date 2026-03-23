@@ -1,0 +1,296 @@
+﻿l_japanese:
+ # ============================================================================
+ # EGY National Focus Tree - Empire of Breakwaters
+ # ============================================================================
+
+ # --- 経済ツリー ---
+ EGY_economic_plan:0 "アラビア経済計画"
+ EGY_economic_plan_desc:0 "国家の繁栄は強固な経済基盤から始まる。英国との経済的絡み合いを整理しながら、エジプトの工業化と自立を目指す長期計画を策定する。"
+
+ EGY_industrial_push:0 "産業化推進"
+ EGY_industrial_push_desc:0 "カイロと主要都市の工場建設を加速し、エジプトの経済的自立の礎を築く。"
+
+ EGY_price_stabilization:0 "物価安定政策"
+ EGY_price_stabilization_desc:0 "英国式の金融規律に従い、通貨と物価を安定させる。これにより英国との貿易関係は維持されるが、経済的自立は後退する。"
+
+ EGY_cairo_state_works:0 "カイロ国営工場群"
+ EGY_cairo_state_works_desc:0 "カイロに国営の重工業施設を建設する。英国資本への依存を減らし、エジプトの産業自立を加速させる。"
+
+ EGY_nile_energy:0 "ナイル電力開発"
+ EGY_nile_energy_desc:0 "ナイル川の豊富な水資源を利用した電力開発に着手する。エジプト独自のエネルギー基盤が、工業化の新たな動力となる。"
+
+ EGY_seize_british_assets:0 "英国資産接収"
+ EGY_seize_british_assets_desc:0 "エジプト国内の英国所有企業と工場を国有化する。英国は強く反発するが、これによりエジプトの産業基盤は一気に拡大する。"
+
+ EGY_aswan_dam:0 "アスワンダム建設"
+ EGY_aswan_dam_desc:0 "上エジプトのアスワンに巨大ダムを建設する。ナイルの洪水を制御し、農業と電力の両面でエジプトの発展を支える国家的威信事業だ。"
+
+ EGY_suez_industrial_zone:0 "スエズ工業地帯"
+ EGY_suez_industrial_zone_desc:0 "スエズ運河沿いに工業地帯を建設する。世界の海洋交通の要衝に位置するこの地区は、エジプトの経済的要衝となるだろう。"
+
+ EGY_economic_miracle:0 "経済の奇跡"
+ EGY_economic_miracle_desc:0 "資産接収、ダム建設、スエズ工業化の三本柱が揃った。エジプトは独自の経済モデルを確立し、中東の経済大国としての地位を確立する。"
+
+ # --- 政治ツリー 共通部 ---
+ EGY_national_awakening:0 "アラビアの覚醒"
+ EGY_national_awakening_desc:0 "エジプトの民衆に民族意識の火が灯った。長年の英国支配から脱し、真の独立と繁栄を目指すべき時が来た。"
+
+ EGY_british_trade_ties:0 "英国貿易関係維持"
+ EGY_british_trade_ties_desc:0 "英国との経済的繋がりを維持し、安定した貿易関係から得られる利益を活かす。独立への道は段階的に歩む。"
+
+ EGY_state_economy:0 "国家経済統制"
+ EGY_state_economy_desc:0 "国家主導の計画経済により、英国への経済依存を断ち切る。短期的な摩擦はあれど、長期的な自立を目指す。"
+
+ EGY_army_modernization:0 "軍の近代化"
+ EGY_army_modernization_desc:0 "旧式化したエジプト軍を近代化する。装備の刷新と訓練の改善で、国防力を飛躍的に向上させる。"
+
+ EGY_education_reform:0 "教育改革"
+ EGY_education_reform_desc:0 "識字率を高め、技術者と官僚を育成する。エジプトの未来は教育された国民にかかっている。"
+
+ EGY_national_question:0 "国家の岐路"
+ EGY_national_question_desc:0 "エジプトは重大な選択を迫られている。英国との協調を深めるか、王家の下に独立路線を歩むか、あるいは革命で全てを塗り替えるか。"
+
+ # --- 民主ルート ---
+ EGY_suez_negotiation:0 "スエズ交渉"
+ EGY_suez_negotiation_desc:0 "スエズ運河の管理権について英国と交渉する。完全な接収ではなく、段階的な権限移譲を求めることで、平和的な解決を目指す。"
+
+ EGY_constitutional_reform:0 "憲法改革"
+ EGY_constitutional_reform_desc:0 "民主的な憲法を制定し、議会の権限を強化する。法の支配に基づく近代国家として、エジプトは新たな歩みを始める。"
+
+ EGY_free_elections:0 "自由選挙"
+ EGY_free_elections_desc:0 "真に自由で公正な選挙を実施する。国民の意志こそが国家の礎となるべきだ。"
+
+ EGY_democratic_consolidation:0 "民主主義確立"
+ EGY_democratic_consolidation_desc:0 "民主主義体制の定着により、エジプトは中東における安定した民主国家として確立する。国民の政治参加と法の支配が、長期的な繁栄をもたらす。"
+
+ # --- 親英ルート ---
+ EGY_british_cooperation:0 "英国との協調"
+ EGY_british_cooperation_desc:0 "英国との同盟関係を深め、連合国の重要な柱となる。英国の支援を受けながら、中東における影響力を拡大する。"
+
+ EGY_suez_fortress:0 "スエズ要塞化"
+ EGY_suez_fortress_desc:0 "スエズ運河地帯を強固な要塞に改造する。連合国の戦略的要衝として、いかなる侵略にも耐えられる防衛線を構築する。"
+
+ EGY_arsenal_of_east:0 "東方の兵器廠"
+ EGY_arsenal_of_east_desc:0 "英国の軍事支援を受け、エジプトを中東における連合国の兵站拠点とする。装備と技術の向上で、軍事力を飛躍的に強化する。"
+
+ EGY_shield_of_alliance:0 "同盟の盾"
+ EGY_shield_of_alliance_desc:0 "エジプトは連合国の東方における盾となった。英国との確固たる同盟のもと、中東の平和と秩序を守る守護者として君臨する。"
+
+ # --- 王政ルート ---
+ EGY_royal_restoration:0 "王政復古"
+ EGY_royal_restoration_desc:0 "ファルーク国王の権威を完全に復活させる。議会政治の混乱を排し、強力な王権のもとでエジプトの近代化を推進する。"
+
+ EGY_royal_council:0 "王立経済評議会"
+ EGY_royal_council_desc:0 "王権の下に経済諮問機関を設立する。国王直轄の強力な政策決定機構が、エジプトの急速な経済発展を後押しする。"
+
+ EGY_integrate_territories:0 "領土統合"
+ EGY_integrate_territories_desc:0 "歴史的にエジプトと関係の深い地域への主権回復を目指す。スーダンとリビアをエジプト王国に統合し、大エジプト帝国の礎を築く。"
+
+ EGY_keep_british_ties:0 "英国との関係維持"
+ EGY_keep_british_ties_desc:0 "独立路線を歩みながらも、英国との外交関係を維持する。王権の強化と対外的安定の両立を図る。"
+
+ EGY_join_central:0 "中央同盟加盟"
+ EGY_join_central_desc:0 "英国の軛を脱し、中央同盟に加わる。ドイツとオーストリアの支援を受け、独自の覇権を追求する。"
+
+ EGY_crown_of_arabia:0 "アラビアの王冠"
+ EGY_crown_of_arabia_desc:0 "ファルーク国王はアラビア半島の覇者として君臨する。東方のナポレオンの称号のもと、エジプトは中東最強の帝国として新たな時代を切り拓く。"
+
+ # --- 汎アラブ革命ルート ---
+ EGY_arab_revolution:0 "アラブ革命"
+ EGY_arab_revolution_desc:0 "帝国主義と封建制度を打倒する！エジプトの労働者と農民が立ち上がり、革命の炎が中東全土に広がる。英国の支配と王政を一掃し、人民の国家を建設する。"
+
+ EGY_peoples_committees:0 "人民委員会"
+ EGY_peoples_committees_desc:0 "全国に人民委員会を組織し、革命政府の基盤を固める。工場、農地、メディアを人民の管理下に置く。"
+
+ EGY_peoples_army:0 "人民軍の創設"
+ EGY_peoples_army_desc:0 "旧軍閥の軍隊を解体し、革命を守る人民軍を創設する。イデオロギーで固められた軍は、いかなる敵をも打ち破る。"
+
+ EGY_seize_canal:0 "スエズ運河接収"
+ EGY_seize_canal_desc:0 "スエズ運河を完全に国有化し、英国と外国資本を完全に排除する。運河の利益はエジプト人民のものだ！"
+
+ EGY_join_fourth_international:0 "第四インター加盟"
+ EGY_join_fourth_international_desc:0 "世界革命のために闘う第四インターナショナルに加盟する。国際的な革命連帯のもと、帝国主義への抵抗を続ける。"
+
+ EGY_pan_arab_expansion:0 "汎アラブ拡張"
+ EGY_pan_arab_expansion_desc:0 "革命の炎をアラビア半島全土に広げる。封建的な王政と帝国主義の傀儡政権を打倒し、アラブ人民を解放する。"
+
+ EGY_united_arab_republic:0 "統一アラブ共和国"
+ EGY_united_arab_republic_desc:0 "アラブ民族は一つの大きな家族だ。統一アラブ共和国の旗のもと、全アラブ人が団結した。帝国主義の時代は終わり、アラブ人民の新たな時代が始まる。"
+
+ # ============================================================================
+ # 国民精神
+ # ============================================================================
+
+ # 経済精神
+ EGY_economic_modernization:0 "産業近代化"
+ EGY_economic_modernization_desc:0 "経済計画の成果として、エジプトの工業生産力が飛躍的に向上した。"
+
+ EGY_suez_revenues:0 "スエズ運河収入"
+ EGY_suez_revenues_desc:0 "スエズ運河を通過する貿易から安定した収益を得ている。これはエジプト経済の重要な柱となっている。"
+
+ # 民主・親英ルート精神
+ EGY_regional_guardian:0 "地域の守護者"
+ EGY_regional_guardian_desc:0 "エジプトは中東の平和と秩序を守る守護者として認められた。"
+
+ EGY_british_military_aid:0 "英国軍事援助"
+ EGY_british_military_aid_desc:0 "英国からの軍事・技術援助により、エジプトの国防力と研究力が強化されている。"
+
+ EGY_allied_bastion:0 "同盟の盾"
+ EGY_allied_bastion_desc:0 "エジプトは連合国の東方における要塞となった。強固な防衛力と同盟への忠誠心が、国民の戦意を高めている。"
+
+ # 王政ルート精神
+ EGY_royal_modernization:0 "王立近代化計画"
+ EGY_royal_modernization_desc:0 "王権の強力なリーダーシップのもとで経済近代化が加速している。"
+
+ EGY_napoleon_spirit:0 "東方のナポレオン"
+ EGY_napoleon_spirit_desc:0 "ファルーク国王はナポレオンに比肩する英雄として讃えられている。その強力なカリスマと軍事的天才が、エジプト軍を無敵の存在に変えた。"
+
+ # 共産ルート精神
+ EGY_revolutionary_fervor:0 "革命の熱狂"
+ EGY_revolutionary_fervor_desc:0 "革命への情熱が国民を燃え上がらせている。社会は不安定だが、戦闘への意欲は最高潮に達している。"
+
+ EGY_peoples_mobilization:0 "人民動員"
+ EGY_peoples_mobilization_desc:0 "革命政府の呼びかけに応え、大量の国民が軍に志願している。"
+
+ EGY_arab_union_spirit:0 "統一アラブ共和国"
+ EGY_arab_union_spirit_desc:0 "アラブ民族の統一という夢が実現した。数百万人のアラブ人が一つの旗のもとに集結し、強大な国家が誕生した。"
+
+ # ============================================================================
+ # 軍事ツリー固有精神
+ # ============================================================================
+ EGY_desert_army:0 "砂漠の軍"
+ EGY_desert_army_desc:0 "砂漠での戦闘を極めたエジプト軍は、この過酷な地形で比類なき強さを誇る。"
+
+ EGY_desert_eagle:0 "砂漠の鷹"
+ EGY_desert_eagle_desc:0 "エジプト空軍は砂漠の空を制する精鋭部隊に成長した。その機動力と攻撃力は中東随一だ。"
+
+ EGY_mediterranean_fleet:0 "地中海艦隊"
+ EGY_mediterranean_fleet_desc:0 "地中海の制海権を握るエジプト艦隊が完成した。スエズの守りは鉄壁だ。"
+
+ # 経済ツリー固有精神
+ EGY_agricultural_surplus:0 "農業余剰"
+ EGY_agricultural_surplus_desc:0 "ナイルデルタの豊かな農地から安定した余剰食料が生まれ、農村人口の都市流入が進んでいる。"
+
+ # ============================================================================
+ # 軍事NFツリー
+ # ============================================================================
+ EGY_military_reform:0 "軍制改革"
+ EGY_military_reform_desc:0 "エジプト軍を根底から改革し、近代戦争に対応できる組織へと生まれ変わらせる。"
+
+ EGY_army_development:0 "陸軍開発"
+ EGY_army_development_desc:0 "陸軍の装備と編制を刷新する。砂漠という特殊な戦場に適応した強力な地上戦力を構築する。"
+
+ EGY_desert_warfare:0 "砂漠戦ドクトリン"
+ EGY_desert_warfare_desc:0 "広大な砂漠での機動戦に特化したドクトリンを確立する。補給線の延伸と損耗の最小化が鍵となる。"
+
+ EGY_mechanized_push:0 "機械化推進"
+ EGY_mechanized_push_desc:0 "歩兵中心の軍から、装甲車と自動車化歩兵を主軸とした機動戦力へと転換する。"
+
+ EGY_desert_fox_doctrine:0 "砂漠の狐ドクトリン"
+ EGY_desert_fox_doctrine_desc:0 "奇襲と包囲を駆使した電撃戦術をマスターする。敵は我々の動きを予測できない。"
+
+ EGY_tank_production:0 "戦車生産"
+ EGY_tank_production_desc:0 "国内の工場を整備し、戦車と装甲車の大量生産体制を構築する。"
+
+ EGY_army_supremacy:0 "陸軍覇権"
+ EGY_army_supremacy_desc:0 "エジプト陸軍は中東最強の地上戦力となった。砂漠の覇者として、いかなる敵も我々を止めることはできない。"
+
+ EGY_air_development:0 "空軍開発"
+ EGY_air_development_desc:0 "航空戦力の拡充に着手する。制空権の確保こそが近代戦争の鍵だ。"
+
+ EGY_fighter_focus:0 "戦闘機重視"
+ EGY_fighter_focus_desc:0 "優れた戦闘機と熟練パイロットの育成に集中する。空の支配者となれ。"
+
+ EGY_bomber_focus:0 "爆撃機重視"
+ EGY_bomber_focus_desc:0 "地上支援と戦略爆撃の能力を強化する。空からの打撃力で敵の意志を砕く。"
+
+ EGY_air_superiority_doctrine:0 "制空権ドクトリン"
+ EGY_air_superiority_doctrine_desc:0 "制空権の獲得と維持に特化した戦術を確立する。空を制する者が戦場を制する。"
+
+ EGY_strategic_bombing_capability:0 "戦略爆撃能力"
+ EGY_strategic_bombing_capability_desc:0 "敵の工業基盤と補給線を直接攻撃する戦略爆撃能力を獲得する。"
+
+ EGY_air_dominance:0 "制空支配"
+ EGY_air_dominance_desc:0 "エジプト空軍は中東の空を完全に支配した。地上軍への支援も万全だ。"
+
+ EGY_navy_development:0 "海軍開発"
+ EGY_navy_development_desc:0 "エジプト海軍を近代化し、地中海とスエズ運河の防衛を確立する。"
+
+ EGY_submarine_fleet:0 "潜水艦艦隊"
+ EGY_submarine_fleet_desc:0 "水中から敵の補給線を脅かす潜水艦部隊を整備する。見えざる脅威が敵を恐怖に陥れる。"
+
+ EGY_convoy_escort:0 "船団護衛"
+ EGY_convoy_escort_desc:0 "スエズを通過する貴重な貿易船団を守る護衛艦隊を充実させる。"
+
+ EGY_suez_naval_base:0 "スエズ海軍基地"
+ EGY_suez_naval_base_desc:0 "スエズ運河地帯に強固な海軍基地を建設する。地中海と紅海を繋ぐこの要衝から、全海域を制圧する。"
+
+ EGY_mediterranean_power:0 "地中海の覇者"
+ EGY_mediterranean_power_desc:0 "エジプト海軍は地中海における支配的な海軍力となった。スエズは永遠にエジプトのものだ。"
+
+ # ============================================================================
+ # 経済拡張NFツリー
+ # ============================================================================
+ EGY_agricultural_reform:0 "農地改革"
+ EGY_agricultural_reform_desc:0 "封建的な土地所有制度を解体し、農民に土地を分配する。農村の活性化が国全体の繁栄をもたらす。"
+
+ EGY_irrigation_projects:0 "灌漑事業"
+ EGY_irrigation_projects_desc:0 "ナイル川の水を上エジプト全域に届ける大規模灌漑網を整備する。不毛の砂漠が緑の農地へと変わる。"
+
+ EGY_nile_breadbasket:0 "ナイルの穀倉"
+ EGY_nile_breadbasket_desc:0 "エジプトは中東の穀倉地帯となった。豊かな農業生産が国民を養い、輸出収益が国庫を潤す。"
+
+ EGY_cotton_exports:0 "綿花輸出拡大"
+ EGY_cotton_exports_desc:0 "エジプト綿花は世界最高品質として知られている。輸出を拡大し、外貨収入を増やすことで、英国との貿易関係も強化される。"
+
+ EGY_industrial_heartland:0 "産業の心臓部"
+ EGY_industrial_heartland_desc:0 "カイロとアレクサンドリアを中心とした産業集積地が完成した。研究と生産の相乗効果がエジプトを工業国家へと押し上げる。"
+
+ # ============================================================================
+ # 政治拡張NFツリー
+ # ============================================================================
+ EGY_press_freedom:0 "報道の自由"
+ EGY_press_freedom_desc:0 "検閲を廃止し、独立した報道機関の活動を保障する。自由な情報が民主主義の礎となる。"
+
+ EGY_labor_rights:0 "労働者の権利"
+ EGY_labor_rights_desc:0 "8時間労働制、最低賃金、団体交渉権を法制化する。労働者の支持を得ることで政権基盤が強固になる。"
+
+ EGY_joint_exercises:0 "合同軍事演習"
+ EGY_joint_exercises_desc:0 "英国軍との合同演習を実施し、戦術と連携を深める。英国の先進的な戦術を吸収しながら、関係を強化する。"
+
+ EGY_intelligence_sharing:0 "情報共有"
+ EGY_intelligence_sharing_desc:0 "英国の情報機関と緊密な協力関係を築く。敵の動向を事前に把握し、研究分野でも恩恵を受ける。"
+
+ EGY_royal_guard:0 "近衛師団"
+ EGY_royal_guard_desc:0 "国王直属の精鋭部隊を創設する。最高の装備と訓練を誇る近衛師団が、王権の守護者となる。"
+
+ EGY_land_reform:0 "土地改革"
+ EGY_land_reform_desc:0 "大地主の土地を没収し、農民に再分配する。革命の理念を農村に根付かせるが、地主階級の激しい抵抗も予想される。"
+
+ EGY_revolutionary_guard:0 "革命防衛隊"
+ EGY_revolutionary_guard_desc:0 "革命へのイデオロギー的献身を軍事力に変換する。革命防衛隊は人民軍の精鋭として、内外の敵から革命を守る。"
+
+ # ============================================================================
+ # BOPシステム
+ # ============================================================================
+ EGY_british_dependency_bop:0 "対英従属度"
+ EGY_independence_side:0 "独立"
+ EGY_british_side:0 "英国従属"
+
+ EGY_bop_autonomous:0 "自主路線"
+ EGY_bop_autonomous_desc:0 "英国の支配から実質的に自立している。独自の建設と徴兵を推進できる段階だ。"
+
+ EGY_bop_independent:0 "完全独立"
+ EGY_bop_independent_desc:0 "エジプトは英国の支配から完全に脱した。国民は自由と誇りを手に入れた。"
+
+ EGY_bop_dominion:0 "自治領"
+ EGY_bop_dominion_desc:0 "英国の影響圏の中で、一定の自治を享受している。経済的な恩恵を受けながら政治的自由は制限されている。"
+
+ EGY_bop_colonial:0 "植民地的従属"
+ EGY_bop_colonial_desc:0 "エジプトは事実上の英国植民地だ。政治的自由は著しく制限されているが、英国の投資が経済を支えている。"
+
+ # ============================================================================
+ # ディシジョンカテゴリ
+ # ============================================================================
+ EGY_dependency_decisions:0 "対英従属度調整"
+ EGY_dependency_decisions_desc:0 "英国との関係を積極的に操作し、独立か従属かの均衡を自らの手で決める。"

@@ -1,0 +1,243 @@
+# ============================================================================
+# エジプト（EGY）スクリプト効果
+# ============================================================================
+
+# ============================================================
+# I. 対英従属度BOPシステム
+# ============================================================
+
+EGY_initialize_bop = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = EGY_bop_initialized }
+		}
+		set_country_flag = EGY_bop_initialized
+		set_power_balance = {
+			id = EGY_british_dependency_bop
+			left_side = EGY_independence_side
+			right_side = EGY_british_side
+			set_value = 0.4
+		}
+	}
+}
+
+EGY_shift_independence_small = {
+	add_power_balance_value = {
+		id = EGY_british_dependency_bop
+		value = -0.1
+	}
+}
+
+EGY_shift_independence_medium = {
+	add_power_balance_value = {
+		id = EGY_british_dependency_bop
+		value = -0.2
+	}
+}
+
+EGY_shift_independence_large = {
+	add_power_balance_value = {
+		id = EGY_british_dependency_bop
+		value = -0.4
+	}
+}
+
+EGY_shift_british_small = {
+	add_power_balance_value = {
+		id = EGY_british_dependency_bop
+		value = 0.1
+	}
+}
+
+EGY_shift_british_medium = {
+	add_power_balance_value = {
+		id = EGY_british_dependency_bop
+		value = 0.2
+	}
+}
+
+EGY_set_full_independence = {
+	set_power_balance = {
+		id = EGY_british_dependency_bop
+		left_side = EGY_independence_side
+		right_side = EGY_british_side
+		set_value = -1.0
+	}
+}
+
+EGY_set_balanced = {
+	set_power_balance = {
+		id = EGY_british_dependency_bop
+		left_side = EGY_independence_side
+		right_side = EGY_british_side
+		set_value = -0.1
+	}
+}
+
+# ============================================================
+# II. エジプト経済 dynamic_modifier システム
+# ============================================================
+
+# 経済システム初期化（ゲーム開始時またはNFで呼び出す）
+EGY_initialize_economy = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = EGY_economy_initialized }
+		}
+		set_country_flag = EGY_economy_initialized
+		set_variable = { var = EGY_eco_consumer_goods  value = 0 }
+		set_variable = { var = EGY_eco_stability        value = 0 }
+		set_variable = { var = EGY_eco_factory_output   value = 0 }
+		set_variable = { var = EGY_eco_dockyard_output  value = 0 }
+		set_variable = { var = EGY_eco_infra_speed      value = 0 }
+		set_variable = { var = EGY_eco_civ_speed        value = 0 }
+		set_variable = { var = EGY_eco_mil_speed        value = 0 }
+		set_variable = { var = EGY_eco_dock_speed       value = 0 }
+		add_dynamic_modifier = { modifier = EGY_economy_modifier }
+	}
+}
+
+# 変数を範囲内にクランプ
+EGY_clamp_economy_vars = {
+	clamp_variable = { var = EGY_eco_consumer_goods  min = -0.40 max = 0.75 }
+	clamp_variable = { var = EGY_eco_stability        min = -0.50 max = 0.40 }
+	clamp_variable = { var = EGY_eco_factory_output   min = -0.30 max = 0.25 }
+	clamp_variable = { var = EGY_eco_dockyard_output  min = -0.40 max = 0.40 }
+	clamp_variable = { var = EGY_eco_infra_speed      min = -0.20 max = 0.20 }
+	clamp_variable = { var = EGY_eco_civ_speed        min = -0.20 max = 0.20 }
+	clamp_variable = { var = EGY_eco_mil_speed        min = -0.20 max = 0.20 }
+	clamp_variable = { var = EGY_eco_dock_speed       min = -0.20 max = 0.20 }
+}
+
+# 民主ルート：経済の下限を固定（マイナス変数を0に切り上げ）
+EGY_democracy_economy_floor = {
+	if = {
+		limit = { check_variable = { var = EGY_eco_stability value < 0 } }
+		set_variable = { var = EGY_eco_stability value = 0 }
+	}
+	if = {
+		limit = { check_variable = { var = EGY_eco_factory_output value < 0 } }
+		set_variable = { var = EGY_eco_factory_output value = 0 }
+	}
+	if = {
+		limit = { check_variable = { var = EGY_eco_dockyard_output value < 0 } }
+		set_variable = { var = EGY_eco_dockyard_output value = 0 }
+	}
+	if = {
+		limit = { check_variable = { var = EGY_eco_infra_speed value < 0 } }
+		set_variable = { var = EGY_eco_infra_speed value = 0 }
+	}
+	if = {
+		limit = { check_variable = { var = EGY_eco_civ_speed value < 0 } }
+		set_variable = { var = EGY_eco_civ_speed value = 0 }
+	}
+	if = {
+		limit = { check_variable = { var = EGY_eco_mil_speed value < 0 } }
+		set_variable = { var = EGY_eco_mil_speed value = 0 }
+	}
+	if = {
+		limit = { check_variable = { var = EGY_eco_dock_speed value < 0 } }
+		set_variable = { var = EGY_eco_dock_speed value = 0 }
+	}
+}
+
+# ============================================================
+# III. 産業特化エフェクト（ディシジョンから呼ぶ）
+# ============================================================
+
+# 観光・サービス業（安定度↑、消費財↓）
+EGY_economy_shift_service = {
+	add_to_variable = { var = EGY_eco_consumer_goods value = -0.05 }
+	add_to_variable = { var = EGY_eco_stability       value = 0.04 }
+	EGY_clamp_economy_vars = yes
+}
+
+# 加工貿易・輸出（工場出力↑、消費財↓）
+EGY_economy_shift_trade = {
+	add_to_variable = { var = EGY_eco_factory_output  value = 0.05 }
+	add_to_variable = { var = EGY_eco_consumer_goods  value = -0.03 }
+	EGY_clamp_economy_vars = yes
+}
+
+# 造船・海事（造船所出力↑↑、速度↑）
+EGY_economy_shift_shipbuilding = {
+	add_to_variable = { var = EGY_eco_dockyard_output value = 0.06 }
+	add_to_variable = { var = EGY_eco_dock_speed       value = 0.05 }
+	EGY_clamp_economy_vars = yes
+}
+
+# 軍事産業（軍需速度↑、工場出力↑、消費財悪化）
+EGY_economy_shift_military_industry = {
+	add_to_variable = { var = EGY_eco_mil_speed        value = 0.06 }
+	add_to_variable = { var = EGY_eco_factory_output   value = 0.03 }
+	add_to_variable = { var = EGY_eco_consumer_goods   value = 0.05 }
+	EGY_clamp_economy_vars = yes
+}
+
+# 重工業（民需速度↑、インフラ速度↑、安定度↓）
+EGY_economy_shift_heavy_industry = {
+	add_to_variable = { var = EGY_eco_civ_speed        value = 0.05 }
+	add_to_variable = { var = EGY_eco_infra_speed      value = 0.05 }
+	add_to_variable = { var = EGY_eco_stability        value = -0.05 }
+	EGY_clamp_economy_vars = yes
+}
+
+# 軽工業・繊維（消費財↓、安定度↑）
+EGY_economy_shift_light_industry = {
+	add_to_variable = { var = EGY_eco_consumer_goods   value = -0.04 }
+	add_to_variable = { var = EGY_eco_stability        value = 0.03 }
+	EGY_clamp_economy_vars = yes
+}
+
+# 農業開発（消費財↓、安定度↑）
+EGY_economy_shift_agriculture = {
+	add_to_variable = { var = EGY_eco_consumer_goods   value = -0.05 }
+	add_to_variable = { var = EGY_eco_stability        value = 0.05 }
+	EGY_clamp_economy_vars = yes
+}
+
+# 緊縮財政（悪化した変数をリセット方向へ）
+EGY_economy_austerity = {
+	# 消費財が高騰している場合は削減
+	if = {
+		limit = { check_variable = { var = EGY_eco_consumer_goods value > 0.20 } }
+		add_to_variable = { var = EGY_eco_consumer_goods value = -0.15 }
+	}
+	# 安定度が低い場合は改善
+	if = {
+		limit = { check_variable = { var = EGY_eco_stability value < -0.15 } }
+		add_to_variable = { var = EGY_eco_stability value = 0.10 }
+	}
+	EGY_clamp_economy_vars = yes
+}
+
+# 英国依存による経済圧力（BOPが英国側に傾いている時に発動）
+EGY_british_economic_pressure = {
+	add_to_variable = { var = EGY_eco_factory_output  value = -0.05 }
+	add_to_variable = { var = EGY_eco_consumer_goods  value = 0.05 }
+	EGY_clamp_economy_vars = yes
+}
+
+# 独立による経済解放（BOPが独立側に傾いている時に発動）
+EGY_independence_economic_boost = {
+	add_to_variable = { var = EGY_eco_factory_output  value = 0.03 }
+	add_to_variable = { var = EGY_eco_stability        value = 0.03 }
+	EGY_clamp_economy_vars = yes
+}
+
+# ============================================================
+# IV. イデオロギー関連エフェクト（ディシジョンから呼ぶ）
+# ============================================================
+
+# 政治的不安定 → 経済にペナルティ
+EGY_ideology_instability_penalty = {
+	add_to_variable = { var = EGY_eco_stability value = -0.05 }
+	add_to_variable = { var = EGY_eco_consumer_goods value = 0.03 }
+	EGY_clamp_economy_vars = yes
+}
+
+# 政治的安定化 → 経済にボーナス
+EGY_ideology_stability_bonus = {
+	add_to_variable = { var = EGY_eco_stability value = 0.05 }
+	EGY_clamp_economy_vars = yes
+}

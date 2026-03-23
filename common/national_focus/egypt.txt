@@ -1,0 +1,1802 @@
+focus_tree = {
+	id = egypt_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EGY
+		}
+	}
+
+	default = no
+	reset_on_civilwar = yes
+
+	continuous_focus_position = { x = 50 y = 1750 }
+
+	initial_show_position = {
+		x = 5
+		y = 0
+	}
+
+	# ============================================================================
+	# 経済ツリー（バニラドイツ四カ年計画と同一形状）
+	# Root: EGY_economic_plan at x=0, y=0
+	# ============================================================================
+
+	focus = {
+		id = EGY_economic_plan
+		icon = GFX_goal_generic_construct_civilian
+		x = 0
+		y = 0
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 50
+			hidden_effect = {
+			EGY_initialize_bop = yes
+		}
+		}
+	}
+
+	# GER_autarky_efforts 相当: x=2, y=1 from root
+	focus = {
+		id = EGY_industrial_push
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = EGY_economic_plan }
+		x = 1
+		y = 1
+		relative_position_id = EGY_economic_plan
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+			hidden_effect = {
+			EGY_shift_independence_small = yes
+		}
+			add_tech_bonus = {
+				name = EGY_industrial_push_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	# GER_institute_price_controls 相当: x=0, y=1 from industrial_push
+	focus = {
+		id = EGY_price_stabilization
+		icon = GFX_focus_generic_price_controls
+		prerequisite = { focus = EGY_industrial_push }
+		x = 1
+		y = 1
+		relative_position_id = EGY_industrial_push
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_stability = 0.05
+			# 英国金融ルールに従う → 従属度+5
+			hidden_effect = {
+			EGY_shift_british_small = yes
+		}
+			add_ideas = EGY_suez_revenues
+		}
+	}
+
+	# GER_establish_the_reichswerke 相当: x=-1, y=2 from industrial_push
+	focus = {
+		id = EGY_cairo_state_works
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = EGY_industrial_push }
+		x = -1
+		y = 2
+		relative_position_id = EGY_industrial_push
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			# 国産化 → 従属度-10
+			hidden_effect = {
+			EGY_shift_independence_medium = yes
+		}
+			907 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# GER_coal_liquefaction 相当: x=1, y=2 from industrial_push
+	focus = {
+		id = EGY_nile_energy
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = EGY_industrial_push }
+		x = 3
+		y = 2
+		relative_position_id = EGY_industrial_push
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			# 自力エネルギー開発 → 従属度-5
+			hidden_effect = {
+			EGY_shift_independence_small = yes
+		}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# GER_seize_foreign_industries 相当: x=-1, y=1 from cairo_state_works
+	focus = {
+		id = EGY_seize_british_assets
+		icon = GFX_focus_DEN_heavy_regulations
+		prerequisite = { focus = EGY_cairo_state_works }
+		x = 0
+		y = 1
+		relative_position_id = EGY_cairo_state_works
+		cost = 70
+		ai_will_do = { base = 5 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			# 英国資産接収 → 従属度-20
+			hidden_effect = {
+			EGY_shift_independence_large = yes
+		}
+			446 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			447 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = EGY
+					modifier = EGY_seized_assets_opinion
+				}
+			}
+		}
+	}
+
+	# GER_subsidize_hoesch_benzin 相当: x=-1, y=1 from nile_energy
+	focus = {
+		id = EGY_aswan_dam
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = EGY_nile_energy }
+		x = -1
+		y = 1
+		relative_position_id = EGY_nile_energy
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			# 国家威信プロジェクト → 従属度-10
+			hidden_effect = {
+			EGY_shift_independence_medium = yes
+		}
+			457 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_stability = 0.05
+		}
+	}
+
+	# GER_establish_buna_werke 相当: x=1, y=1 from nile_energy
+	focus = {
+		id = EGY_suez_industrial_zone
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = EGY_nile_energy }
+		x = 1
+		y = 1
+		relative_position_id = EGY_nile_energy
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			# スエズ工業化 → 従属度-5
+			hidden_effect = {
+			EGY_shift_independence_small = yes
+		}
+			446 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# GER_autarky_achieved 相当: x=2, y=1 from seize_british_assets (prereq: seize+aswan+suez)
+	focus = {
+		id = EGY_economic_miracle
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = EGY_seize_british_assets }
+		prerequisite = { focus = EGY_aswan_dam }
+		prerequisite = { focus = EGY_suez_industrial_zone }
+		x = 2
+		y = 1
+		relative_position_id = EGY_seize_british_assets
+		cost = 70
+		ai_will_do = { base = 5 }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = EGY_economic_modernization
+			907 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# ============================================================================
+	# 政治ツリー（バニラトルコNFと同一形状）
+	# Root: EGY_national_awakening at x=13, y=0
+	# ============================================================================
+
+	# TUR_the_montreux_convention 相当
+	focus = {
+		id = EGY_national_awakening
+		icon = GFX_goal_generic_national_unity
+		x = 15
+		y = 0
+		cost = 30
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+			hidden_effect = {
+			EGY_initialize_bop = yes
+		}
+		}
+	}
+
+	# TUR_continue_the_policy_of_etatism 相当: x=3, y=1 from awakening [ME: state_economy]
+	focus = {
+		id = EGY_british_trade_ties
+		icon = GFX_goal_generic_intelligence_exchange
+		mutually_exclusive = { focus = EGY_state_economy }
+		prerequisite = { focus = EGY_national_awakening }
+		x = 3
+		y = 1
+		relative_position_id = EGY_national_awakening
+		cost = 70
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			# 英国貿易維持 → 従属度+10
+			hidden_effect = {
+			EGY_shift_british_medium = yes
+		}
+			ENG = {
+				add_opinion_modifier = {
+					target = EGY
+					modifier = EGY_trade_cooperation_opinion
+				}
+			}
+			add_political_power = 50
+		}
+	}
+
+	# TUR_fully_integrate_the_is_bank 相当: x=-3, y=1 from awakening [ME: british_trade_ties]
+	focus = {
+		id = EGY_state_economy
+		icon = GFX_goal_generic_neutrality_focus
+		mutually_exclusive = { focus = EGY_british_trade_ties }
+		prerequisite = { focus = EGY_national_awakening }
+		x = -3
+		y = 1
+		relative_position_id = EGY_national_awakening
+		cost = 70
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 3
+				NOT = { has_government = democratic }
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			# 国家経済統制 → 従属度-10
+			hidden_effect = {
+			EGY_shift_independence_medium = yes
+		}
+			add_research_slot = 1
+		}
+	}
+
+	# TUR_continue_the_sumerbank_industrialization_scheme 相当: x=-1, y=1 from british_trade_ties (prereq: BOTH)
+	focus = {
+		id = EGY_army_modernization
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = EGY_british_trade_ties focus = EGY_state_economy }
+		x = -1
+		y = 1
+		relative_position_id = EGY_british_trade_ties
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 30
+			add_tech_bonus = {
+				name = EGY_army_modernization_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	# TUR_millet_mektebi_focus 相当: x=-5, y=1 from british_trade_ties (prereq: BOTH)
+	focus = {
+		id = EGY_education_reform
+		icon = GFX_focus_AFG_education_reform
+		prerequisite = { focus = EGY_british_trade_ties focus = EGY_state_economy }
+		x = -5
+		y = 1
+		relative_position_id = EGY_british_trade_ties
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+
+	# TUR_ratify_the_six_arrows 相当: x=0, y=2 from awakening (prereq: BOTH trade AND state)
+	focus = {
+		id = EGY_national_question
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = EGY_british_trade_ties focus = EGY_state_economy }
+		x = 0
+		y = 2
+		relative_position_id = EGY_national_awakening
+		cost = 30
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	# ============================================================================
+	# 民主ルート（TUR_privatize_the_anadolu_agency → democratic path）
+	# ============================================================================
+
+	# TUR_privatize_the_anadolu_agency 相当: x=-4, y=2 from state_economy
+	focus = {
+		id = EGY_suez_negotiation
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = EGY_state_economy }
+		prerequisite = { focus = EGY_national_question }
+		x = -4
+		y = 2
+		relative_position_id = EGY_state_economy
+		cost = 70
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 3
+				has_government = democratic
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			# スエズ交渉 → 従属度-10
+			hidden_effect = {
+			EGY_shift_independence_medium = yes
+		}
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	# TUR_lift_the_ban_on_other_political_parties 相当: x=0, y=1 from suez_negotiation
+	focus = {
+		id = EGY_constitutional_reform
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = EGY_suez_negotiation }
+		x = 0
+		y = 1
+		relative_position_id = EGY_suez_negotiation
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+		}
+	}
+
+	# TUR_holding_our_first_multi_party_election 相当: x=0, y=1 from constitutional_reform
+	focus = {
+		id = EGY_free_elections
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = EGY_constitutional_reform }
+		x = 0
+		y = 1
+		relative_position_id = EGY_constitutional_reform
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.10
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+	}
+
+	# TUR_democratic_transition_focus 相当: x=2, y=1 from free_elections
+	focus = {
+		id = EGY_democratic_consolidation
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = EGY_free_elections }
+		x = 2
+		y = 1
+		relative_position_id = EGY_free_elections
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+			add_political_power = 250
+			add_ideas = EGY_regional_guardian
+		}
+	}
+
+	# ============================================================================
+	# 親英ルート（TUR_peace_at_home 相当）
+	# ============================================================================
+
+	# TUR_peace_at_home 相当: x=3, y=1 from national_question [ME: royal_restoration]
+	focus = {
+		id = EGY_british_cooperation
+		icon = GFX_goal_tripartite_pact
+		mutually_exclusive = { focus = EGY_royal_restoration }
+		prerequisite = { focus = EGY_national_question }
+		available = {
+			has_government = democratic
+		}
+		x = 3
+		y = 1
+		relative_position_id = EGY_national_question
+		cost = 70
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				has_government = democratic
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			# 英国との協調 → 従属度+15
+			hidden_effect = {
+			EGY_shift_british_medium = yes
+		}
+			add_stability = 0.10
+			ENG = {
+				add_opinion_modifier = {
+					target = EGY
+					modifier = EGY_trade_cooperation_opinion
+				}
+			}
+		}
+	}
+
+	# TUR_turkish_state_railways 相当: x=0, y=1 from british_cooperation
+	focus = {
+		id = EGY_suez_fortress
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = EGY_british_cooperation }
+		x = 0
+		y = 1
+		relative_position_id = EGY_british_cooperation
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			446 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+					province = {
+						all_provinces = yes
+					}
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EGY_arsenal_of_east
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = EGY_suez_fortress }
+		x = 0
+		y = 1
+		relative_position_id = EGY_suez_fortress
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = EGY_british_military_aid
+			army_experience = 30
+			add_tech_bonus = {
+				name = EGY_arsenal_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = EGY_shield_of_alliance
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = EGY_arsenal_of_east }
+		x = 0
+		y = 1
+		relative_position_id = EGY_arsenal_of_east
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EGY_british_military_aid
+				add_idea = EGY_allied_bastion
+			}
+			add_war_support = 0.15
+		}
+	}
+
+	# ============================================================================
+	# 王政ルート（TUR_revive_turkish_revolutionism 相当）
+	# ============================================================================
+
+	# TUR_revive_turkish_revolutionism 相当: x=7, y=2 from british_trade_ties [ME: british_cooperation]
+	focus = {
+		id = EGY_royal_restoration
+		icon = GFX_goal_generic_dangerous_deal
+		mutually_exclusive = { focus = EGY_british_cooperation }
+		prerequisite = { focus = EGY_national_question }
+		prerequisite = { focus = EGY_british_trade_ties }
+		available = {
+			has_country_flag = EGY_neutrality_majority_ready
+		}
+		x = 7
+		y = 2
+		relative_position_id = EGY_british_trade_ties
+		cost = 70
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 3
+				has_government = neutrality
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_stability = -0.10
+			add_war_support = 0.05
+			add_political_power = 100
+			# 王政復古 → 従属度-20
+			hidden_effect = {
+			EGY_shift_independence_large = yes
+		}
+		}
+	}
+
+	# TUR_reinvigorate_turkish_nationalism 相当: x=-3, y=1 from royal_restoration
+	focus = {
+		id = EGY_royal_council
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = EGY_royal_restoration }
+		x = -2
+		y = 1
+		relative_position_id = EGY_royal_restoration
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_ideas = EGY_royal_modernization
+			907 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			447 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# TUR_rehabilitate_the_kadro_movement 相当: x=3, y=1 from royal_restoration
+	focus = {
+		id = EGY_integrate_territories
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = EGY_royal_restoration }
+		x = 3
+		y = 1
+		relative_position_id = EGY_royal_restoration
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+			add_stability = 0.05
+			# リビア・スーダン統合
+			450 = { add_core_of = EGY }
+			451 = { add_core_of = EGY }
+			549 = { add_core_of = EGY }
+			551 = { add_core_of = EGY }
+			884 = { add_core_of = EGY }
+			add_manpower = 100000
+		}
+	}
+
+	# 王政サブ分岐: 英国維持 [ME: join_central]
+	focus = {
+		id = EGY_keep_british_ties
+		icon = GFX_goal_tripartite_pact
+		mutually_exclusive = { focus = EGY_join_central }
+		prerequisite = { focus = EGY_royal_council }
+		x = -1
+		y = 1
+		relative_position_id = EGY_royal_council
+		cost = 70
+		ai_will_do = {
+			base = 5
+			modifier = {
+				factor = 3
+				is_in_faction_with = ENG
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			# 英国との絆維持 → 従属度を30に固定
+			hidden_effect = {
+			EGY_set_balanced = yes
+		}
+			ENG = {
+				add_opinion_modifier = {
+					target = EGY
+					modifier = EGY_trade_cooperation_opinion
+				}
+			}
+		}
+	}
+
+	# 王政サブ分岐: 中央同盟参加 [ME: keep_british_ties]
+	focus = {
+		id = EGY_join_central
+		icon = GFX_goal_generic_military_sphere
+		mutually_exclusive = { focus = EGY_keep_british_ties }
+		prerequisite = { focus = EGY_royal_council }
+		x = 3
+		y = 1
+		relative_position_id = EGY_royal_council
+		cost = 70
+		ai_will_do = {
+			base = 3
+			modifier = {
+				factor = 5
+				NOT = { is_in_faction_with = ENG }
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			# 中央同盟参加 → 従属度を0に設定
+			hidden_effect = {
+			EGY_set_full_independence = yes
+		}
+			if = {
+				limit = { is_in_faction = yes }
+				leave_faction = yes
+			}
+			# TODO: AUS = { country_event = { id = EGY_events.1 days = 1 } }
+			add_political_power = 50
+		}
+	}
+
+	# 王政キャップストーン: x=1, y=3 from royal_council (prereq: keep_british OR join_central AND integrate_territories)
+	focus = {
+		id = EGY_crown_of_arabia
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = EGY_keep_british_ties focus = EGY_join_central }
+		prerequisite = { focus = EGY_integrate_territories }
+		x = 1
+		y = 3
+		relative_position_id = EGY_royal_council
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EGY_royal_modernization
+				add_idea = EGY_napoleon_spirit
+			}
+			add_research_slot = 1
+			army_experience = 50
+			air_experience = 30
+		}
+	}
+
+	# ============================================================================
+	# 汎アラブ革命ルート（TUR_assess_our_future 相当）
+	# ============================================================================
+
+	# TUR_assess_our_future 相当: x=0, y=3 from national_question
+	focus = {
+		id = EGY_arab_revolution
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = EGY_national_question }
+		available = {
+			has_country_flag = EGY_communism_majority_ready
+			OR = {
+				has_completed_focus = EGY_democratic_consolidation
+				has_completed_focus = EGY_british_cooperation
+				has_completed_focus = EGY_royal_restoration
+				NOT = { has_government = democratic }
+			}
+		}
+		x = 0
+		y = 3
+		relative_position_id = EGY_national_question
+		cost = 70
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 5
+				has_government = communism
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			add_stability = -0.15
+			add_war_support = 0.10
+			if = {
+				limit = { is_in_faction = yes }
+				leave_faction = yes
+			}
+			hidden_effect = {
+			EGY_set_full_independence = yes
+		}
+			add_ideas = EGY_revolutionary_fervor
+		}
+	}
+
+	# TUR_reinvigorate_turkish_nationalism 相当（革命ブランチ左）: x=-3, y=1 from arab_revolution
+	focus = {
+		id = EGY_peoples_committees
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = EGY_arab_revolution }
+		x = -3
+		y = 1
+		relative_position_id = EGY_arab_revolution
+		cost = 30
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+			add_political_power = 75
+			add_ideas = EGY_peoples_mobilization
+		}
+	}
+
+	focus = {
+		id = EGY_peoples_army
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = EGY_peoples_committees }
+		x = 0
+		y = 1
+		relative_position_id = EGY_peoples_committees
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			add_manpower = 300000
+			army_experience = 50
+			add_tech_bonus = {
+				name = EGY_peoples_army_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	# TUR_rehabilitate_the_kadro_movement 相当（革命ブランチ右）: x=5, y=1 from arab_revolution
+	focus = {
+		id = EGY_seize_canal
+		icon = GFX_focus_DEN_heavy_regulations
+		prerequisite = { focus = EGY_arab_revolution }
+		x = 5
+		y = 1
+		relative_position_id = EGY_arab_revolution
+		cost = 30
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			446 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			447 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EGY_join_fourth_international
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = EGY_seize_canal }
+		x = 0
+		y = 1
+		relative_position_id = EGY_seize_canal
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = EGY_fourth_int_bonus
+				bonus = 1.0
+				uses = 3
+				category = infantry_weapons
+			}
+			# 第四インター加盟イベント
+			# TODO: EUN = { country_event = { id = EGY_events.2 days = 1 } }
+			add_political_power = 50
+		}
+	}
+
+	# TUR_the_hatay_issue 相当: x=0, y=2 from arab_revolution
+	focus = {
+		id = EGY_pan_arab_expansion
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = EGY_arab_revolution }
+		x = 1
+		y = 1
+		relative_position_id = EGY_arab_revolution
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_manpower = 300000
+			# アラビア半島への戦争目標
+			if = {
+				limit = {
+					SAU = {
+						exists = yes
+						NOT = { is_in_faction_with = ROOT }
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SAU
+				}
+			}
+			if = {
+				limit = {
+					IRQ = {
+						exists = yes
+						NOT = { is_in_faction_with = ROOT }
+					}
+				}
+				every_state = {
+					limit = { is_owned_by = IRQ }
+					add_core_of = EGY
+				}
+			}
+		}
+	}
+
+	# TUR_peace_in_the_world 相当: x=0, y=1 from pan_arab_expansion
+	focus = {
+		id = EGY_united_arab_republic
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = EGY_pan_arab_expansion }
+		x = 0
+		y = 1
+		relative_position_id = EGY_pan_arab_expansion
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EGY_revolutionary_fervor
+				add_idea = EGY_arab_union_spirit
+			}
+			add_research_slot = 1
+			set_cosmetic_tag = EGY_communism
+		}
+	}
+
+	# ============================================================================
+	# 軍事ツリー（バニラドイツ式3分岐: 陸軍・空軍・海軍）
+	# Root: EGY_military_reform at x=30, y=0
+	# 各ブランチ内で二択分岐→合流パターン
+	# ============================================================================
+
+	# ルート: 軍制改革
+	focus = {
+		id = EGY_military_reform
+		icon = GFX_goal_generic_defence
+		x = 35
+		y = 5
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = EGY_military_reform_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	# ============================================================
+	# 陸軍ブランチ（x=-6, y=1 from military_reform）
+	# ============================================================
+
+	focus = {
+		id = EGY_army_development
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = EGY_military_reform }
+		x = -6
+		y = 1
+		relative_position_id = EGY_military_reform
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				name = EGY_army_dev_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	# 砂漠戦ドクトリン [ME: mechanized_push]
+	focus = {
+		id = EGY_desert_warfare
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = EGY_army_development }
+		mutually_exclusive = { focus = EGY_mechanized_push }
+		x = -1
+		y = 1
+		relative_position_id = EGY_army_development
+		cost = 70
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 0.5
+				has_tech = motorized
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_desert_war_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+			custom_effect_tooltip = EGY_desert_war_tt
+		}
+	}
+
+	# 機械化推進 [ME: desert_warfare]
+	focus = {
+		id = EGY_mechanized_push
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = EGY_army_development }
+		mutually_exclusive = { focus = EGY_desert_warfare }
+		x = 1
+		y = 1
+		relative_position_id = EGY_army_development
+		cost = 70
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 2
+				has_tech = motorized
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_mech_push_bonus
+				bonus = 1.0
+				uses = 2
+				category = motorized_equipment
+			}
+		}
+	}
+
+	# 砂漠の狐ドクトリン（砂漠戦から）
+	focus = {
+		id = EGY_desert_fox_doctrine
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = EGY_desert_warfare }
+		x = 0
+		y = 1
+		relative_position_id = EGY_desert_warfare
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_desert_fox_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	# 戦車生産（機械化から）
+	focus = {
+		id = EGY_tank_production
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = EGY_mechanized_push }
+		x = 0
+		y = 1
+		relative_position_id = EGY_mechanized_push
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_tank_prod_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+			907 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# 陸軍覇権（砂漠戦または機械化ルートの合流キャップストーン）
+	focus = {
+		id = EGY_army_supremacy
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = EGY_desert_fox_doctrine focus = EGY_tank_production }
+		x = 0
+		y = 1
+		relative_position_id = EGY_desert_fox_doctrine
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			add_ideas = EGY_desert_army
+			army_experience = 50
+		}
+	}
+
+	# ============================================================
+	# 空軍ブランチ（x=0, y=1 from military_reform）
+	# ============================================================
+
+	focus = {
+		id = EGY_air_development
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = EGY_military_reform }
+		x = 0
+		y = 1
+		relative_position_id = EGY_military_reform
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			air_experience = 20
+			add_tech_bonus = {
+				name = EGY_air_dev_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_equipment
+			}
+		}
+	}
+
+	# 戦闘機重視 [ME: bomber_focus]
+	focus = {
+		id = EGY_fighter_focus
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = EGY_air_development }
+		mutually_exclusive = { focus = EGY_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = EGY_air_development
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+			}
+		}
+	}
+
+	# 爆撃機重視 [ME: fighter_focus]
+	focus = {
+		id = EGY_bomber_focus
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = EGY_air_development }
+		mutually_exclusive = { focus = EGY_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = EGY_air_development
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_bomber_bonus
+				bonus = 1.0
+				uses = 2
+				category = cas_bomber
+			}
+		}
+	}
+
+	# 制空権ドクトリン（戦闘機から）
+	focus = {
+		id = EGY_air_superiority_doctrine
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = EGY_fighter_focus }
+		x = 0
+		y = 1
+		relative_position_id = EGY_fighter_focus
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_air_sup_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	# 戦略爆撃能力（爆撃機から）
+	focus = {
+		id = EGY_strategic_bombing_capability
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = EGY_bomber_focus }
+		x = 0
+		y = 1
+		relative_position_id = EGY_bomber_focus
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_strat_bomb_bonus
+				bonus = 1.0
+				uses = 2
+				category = strategic_bomber
+			}
+			446 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# 制空支配（制空または爆撃ルートの合流キャップストーン）
+	focus = {
+		id = EGY_air_dominance
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = EGY_air_superiority_doctrine focus = EGY_strategic_bombing_capability }
+		x = 0
+		y = 1
+		relative_position_id = EGY_air_superiority_doctrine
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			add_ideas = EGY_desert_eagle
+			air_experience = 50
+		}
+	}
+
+	# ============================================================
+	# 海軍ブランチ（x=6, y=1 from military_reform）
+	# ============================================================
+
+	focus = {
+		id = EGY_navy_development
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = EGY_military_reform }
+		x = 6
+		y = 1
+		relative_position_id = EGY_military_reform
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			navy_experience = 20
+			add_tech_bonus = {
+				name = EGY_navy_dev_bonus
+				bonus = 1.0
+				uses = 1
+				category = naval_equipment
+			}
+		}
+	}
+
+	# 潜水艦艦隊 [ME: convoy_escort]
+	focus = {
+		id = EGY_submarine_fleet
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = EGY_navy_development }
+		mutually_exclusive = { focus = EGY_convoy_escort }
+		x = -1
+		y = 1
+		relative_position_id = EGY_navy_development
+		cost = 70
+		ai_will_do = { base = 5 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_sub_bonus
+				bonus = 1.0
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+
+	# 船団護衛 [ME: submarine_fleet]
+	focus = {
+		id = EGY_convoy_escort
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = EGY_navy_development }
+		mutually_exclusive = { focus = EGY_submarine_fleet }
+		x = 1
+		y = 1
+		relative_position_id = EGY_navy_development
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_escort_bonus
+				bonus = 1.0
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+
+	# スエズ海軍基地（潜水艦または護衛ルートの合流点）
+	focus = {
+		id = EGY_suez_naval_base
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = EGY_submarine_fleet focus = EGY_convoy_escort }
+		x = 0
+		y = 1
+		relative_position_id = EGY_submarine_fleet
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			446 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 6354
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# 地中海の覇者（海軍キャップストーン）
+	focus = {
+		id = EGY_mediterranean_power
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = EGY_suez_naval_base }
+		x = 0
+		y = 1
+		relative_position_id = EGY_suez_naval_base
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = EGY_mediterranean_fleet
+			navy_experience = 50
+			907 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# ============================================================================
+	# 経済拡張ブランチ
+	# ============================================================================
+
+	# 農地改革（経済ルートから左へ分岐）
+	focus = {
+		id = EGY_agricultural_reform
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = EGY_economic_plan }
+		x = -2
+		y = 1
+		relative_position_id = EGY_economic_plan
+		cost = 70
+		ai_will_do = { base = 8 }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_manpower = 50000
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	# 灌漑事業
+	focus = {
+		id = EGY_irrigation_projects
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = EGY_agricultural_reform }
+		x = 0
+		y = 1
+		relative_position_id = EGY_agricultural_reform
+		cost = 70
+		ai_will_do = { base = 8 }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			457 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# ナイルの穀倉（農業ブランチキャップストーン）
+	focus = {
+		id = EGY_nile_breadbasket
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = EGY_irrigation_projects }
+		x = 0
+		y = 1
+		relative_position_id = EGY_irrigation_projects
+		cost = 70
+		ai_will_do = { base = 8 }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_ideas = EGY_agricultural_surplus
+			add_manpower = 100000
+		}
+	}
+
+	# 綿花輸出拡大（物価安定から）
+	focus = {
+		id = EGY_cotton_exports
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = EGY_price_stabilization }
+		x = 0
+		y = 1
+		relative_position_id = EGY_price_stabilization
+		cost = 70
+		ai_will_do = {
+			base = 8
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 50
+			hidden_effect = {
+				EGY_shift_british_small = yes
+			}
+		}
+	}
+
+	# 産業の心臓部（経済奇跡後のキャップストーン）
+	focus = {
+		id = EGY_industrial_heartland
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = EGY_economic_miracle }
+		x = 0
+		y = 1
+		relative_position_id = EGY_economic_miracle
+		cost = 70
+		ai_will_do = { base = 10 }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_political_power = 100
+		}
+	}
+
+	# ============================================================================
+	# 政治ツリー拡張
+	# ============================================================================
+
+	# --- 民主ルート追加 ---
+
+	# 報道の自由（憲法改革から）
+	focus = {
+		id = EGY_press_freedom
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = EGY_constitutional_reform }
+		x = -2
+		y = 0
+		relative_position_id = EGY_free_elections
+		cost = 70
+		ai_will_do = { base = 8 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 50
+		}
+	}
+
+	# 労働者の権利（自由選挙から）
+	focus = {
+		id = EGY_labor_rights
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = EGY_free_elections }
+		x = -2
+		y = 1
+		relative_position_id = EGY_free_elections
+		cost = 70
+		ai_will_do = { base = 8 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = EGY_economic_modernization
+			country_event = { id = EGY_events.9 days = 3 }
+		}
+	}
+
+	# --- 親英ルート追加 ---
+
+	# 合同軍事演習（英国協調から）
+	focus = {
+		id = EGY_joint_exercises
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = EGY_british_cooperation }
+		x = -2
+		y = 1
+		relative_position_id = EGY_british_cooperation
+		cost = 70
+		ai_will_do = { base = 8 }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			army_experience = 20
+			air_experience = 20
+			country_event = { id = EGY_events.7 days = 5 }
+		}
+	}
+
+	# 情報共有（スエズ要塞化から）
+	focus = {
+		id = EGY_intelligence_sharing
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = EGY_suez_fortress }
+		x = 2
+		y = 1
+		relative_position_id = EGY_suez_fortress
+		cost = 70
+		ai_will_do = { base = 8 }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_intel_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = EGY
+					modifier = EGY_trade_cooperation_opinion
+				}
+			}
+		}
+	}
+
+	# --- 王政ルート追加 ---
+
+	# 近衛師団（王政復古から）
+	focus = {
+		id = EGY_royal_guard
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = EGY_royal_restoration }
+		x = 0
+		y = 1
+		relative_position_id = EGY_royal_restoration
+		cost = 70
+		ai_will_do = { base = 8 }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
+
+		completion_reward = {
+			army_experience = 30
+			add_tech_bonus = {
+				name = EGY_royal_guard_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+
+	# --- 共産ルート追加 ---
+
+	# 土地改革（人民委員会から）
+	focus = {
+		id = EGY_land_reform
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = EGY_peoples_committees }
+		x = 2
+		y = 1
+		relative_position_id = EGY_peoples_committees
+		cost = 70
+		ai_will_do = { base = 8 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_manpower = 150000
+			add_stability = -0.05
+			country_event = { id = EGY_events.8 days = 3 }
+		}
+	}
+
+	# 革命防衛隊（人民軍から）
+	focus = {
+		id = EGY_revolutionary_guard
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = EGY_peoples_army }
+		x = 0
+		y = 1
+		relative_position_id = EGY_peoples_army
+		cost = 70
+		ai_will_do = { base = 8 }
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = EGY_rev_guard_bonus
+				bonus = 1.0
+				uses = 3
+				category = infantry_weapons
+			}
+		}
+	}
+}

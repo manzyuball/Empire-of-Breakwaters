@@ -29,7 +29,7 @@ focus_tree = {
 	reset_on_civilwar = no
 
 	initial_show_position = {
-		focus = industrial_effort
+		focus = army_effort
 	}
 
 	focus = {

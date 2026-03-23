@@ -32,64 +32,64 @@ country_event = {
 				engineer = { x = 0 y = 1 }
 			}
  		}
-random_owned_controlled_state = {
-	limit = {
-		is_capital = yes
-	}
+		random_owned_controlled_state = {
+			limit = {
+				is_capital = yes
+			}
 			create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
-		}
-		create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
-		}
-		create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
-		}
-		create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
-		}
-		create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
-		}
-		create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
-		}
-		create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
-		}
-		create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
-		}
-		create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
-		}
-		create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
-		}
-		create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
-		}
-		create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
-		}
-		create_unit = {
-			division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-			owner = ROOT
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"防衛用師団\" division_template = \"防衛用師団\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
+				owner = ROOT
+			}
 		}
 	}
-}
 	option = {
 		name = AI_help.1.a
 	}

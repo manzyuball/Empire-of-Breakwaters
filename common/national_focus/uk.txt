@@ -1928,9 +1928,6 @@ focus = {
 		x = 32
 		y = 0
 		cost = 60
-		mutually_exclusive = {
-			focus = communism1
-		}
 		ai_will_do = {
 			factor = 10
 		}

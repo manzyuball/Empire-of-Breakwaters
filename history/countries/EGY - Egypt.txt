@@ -27,13 +27,38 @@ set_popularities = {
 }
 add_manpower = 100000
 
+# ============================================================================
+# エジプト経済システムの初期化
+# ============================================================================
+set_country_flag = EGY_economy_initialized
+set_variable = { var = EGY_eco_consumer_goods  value = 0 }
+set_variable = { var = EGY_eco_stability        value = 0 }
+set_variable = { var = EGY_eco_factory_output   value = 0 }
+set_variable = { var = EGY_eco_dockyard_output  value = 0 }
+set_variable = { var = EGY_eco_infra_speed      value = 0 }
+set_variable = { var = EGY_eco_civ_speed        value = 0 }
+set_variable = { var = EGY_eco_mil_speed        value = 0 }
+set_variable = { var = EGY_eco_dock_speed       value = 0 }
+add_dynamic_modifier = { modifier = EGY_economy_modifier }
+
+# ============================================================================
+# 対英従属度BOPシステムの初期化
+# ============================================================================
+set_country_flag = EGY_bop_initialized
+set_power_balance = {
+	id = EGY_british_dependency_bop
+	left_side = EGY_independence_side
+	right_side = EGY_british_side
+	set_value = 0.4
+}
+
 create_country_leader = {
 	name = "Muhammad Naguib"
 	desc = ""
 	picture = GFX_portrait_Muhammad_Naguib
 	ideology = liberalism
 	traits = {
-		#
+		EGY_trait_reformist
 	}
 }
 
@@ -43,7 +68,7 @@ create_country_leader = {
 	picture = GFX_portrait_Ahmed_Husayn
 	ideology = fascism_ideology
 	traits = {
-		#
+		EGY_trait_iron_nationalist
 	}
 }
 
@@ -53,7 +78,7 @@ create_country_leader = {
 	picture = "GFX_portrait_egy_faud_i"
 	ideology = despotism
 	traits = {
-		#
+		EGY_trait_royal_authority
 	}
 }
 
@@ -63,7 +88,7 @@ create_country_leader = {
 	picture = GFX_portrait_Hosni_al_Arabi
 	ideology = leninism
 	traits = {
-		#
+		EGY_trait_peoples_champion
 	}
 }
 

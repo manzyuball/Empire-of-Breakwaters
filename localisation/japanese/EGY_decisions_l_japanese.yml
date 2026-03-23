@@ -1,0 +1,112 @@
+l_japanese:
+
+ # ============================================================================
+ # 政治工作ディシジョン
+ # ============================================================================
+ EGY_promote_democracy_press:0 "自由な報道"
+ EGY_promote_democracy_press_desc:0 "言論の自由と報道の独立を推進し、民主的価値観を国民に浸透させる。"
+
+ EGY_promote_democracy_campaign:0 "選挙運動キャンペーン"
+ EGY_promote_democracy_campaign_desc:0 "政党の全国的な選挙活動を支援し、民主主義の支持層を拡大させる。"
+
+ EGY_promote_democracy_constitution:0 "憲法制定約束"
+ EGY_promote_democracy_constitution_desc:0 "新しい民主的憲法の制定を約束することで、民主主義勢力の結集を図る。"
+
+ EGY_promote_fascism_rally:0 "アラブ民族主義集会"
+ EGY_promote_fascism_rally_desc:0 "大規模な民族主義的集会を開催し、ファシズム的なイデオロギーを宣伝する。"
+
+ EGY_promote_fascism_youth:0 "青年運動組織化"
+ EGY_promote_fascism_youth_desc:0 "青年層向けの民族主義運動を組織し、次世代のファシズム支持者を育成する。"
+
+ EGY_promote_fascism_decree:0 "一党支配宣言"
+ EGY_promote_fascism_decree_desc:0 "政治体制を一党独裁制に転換することを宣言する。"
+
+ EGY_promote_communism_agitate:0 "労働者扇動"
+ EGY_promote_communism_agitate_desc:0 "労働者組織を通じて共産主義的なプロパガンダを展開し、都市部の支持を獲得する。"
+
+ EGY_promote_communism_land:0 "土地改革約束"
+ EGY_promote_communism_land_desc:0 "大地主からの土地没収と農民への配分を約束し、農村部の支持を拡大させる。"
+
+ EGY_promote_communism_vanguard:0 "革命前衛党結成"
+ EGY_promote_communism_vanguard_desc:0 "共産主義革命の指導者となる前衛党を公式に結成する。"
+
+ EGY_promote_neutrality_royal:0 "王室の権威を強調"
+ EGY_promote_neutrality_royal_desc:0 "王家の伝統的な権威と正統性を強調し、王政支持層を固める。"
+
+ EGY_promote_neutrality_tribes:0 "部族・地方有力者の取り込み"
+ EGY_promote_neutrality_tribes_desc:0 "部族長や地方有力者との連携を強化し、王政支持基盤を拡大する。"
+
+ EGY_promote_neutrality_decree:0 "王令布告"
+ EGY_promote_neutrality_decree_desc:0 "国王の絶対的な権力を示す王令を布告し、王政体制への転換を宣言する。"
+
+ EGY_suppress_opposition:0 "反対派弾圧"
+ EGY_suppress_opposition_desc:0 "現体制に対する反対勢力を弾圧し、政治的な安定をもたらす。"
+
+ EGY_media_control:0 "報道統制"
+ EGY_media_control_desc:0 "メディアを統制下に置き、不利な報道を制限する。"
+
+ # ============================================================================
+ # 経済ディシジョン - 産業特化
+ # ============================================================================
+ EGY_develop_service_sector:0 "観光・サービス業発展"
+ EGY_develop_service_sector_desc:0 "観光産業とサービス業を重点的に発展させ、外貨収入を増やす。"
+
+ EGY_develop_processing_trade:0 "加工貿易・輸出産業開発"
+ EGY_develop_processing_trade_desc:0 "輸入原料を加工して再輸出する産業を育成し、工業化を進める。"
+
+ EGY_develop_shipbuilding:0 "造船・海事産業拡大"
+ EGY_develop_shipbuilding_desc:0 "スエズ運河での重要性を背景に、造船業と海運業を拡大する。"
+
+ EGY_develop_military_industry:0 "軍事産業複合体"
+ EGY_develop_military_industry_desc:0 "兵器・弾薬・装甲車などの軍事生産能力を大幅に拡大する。"
+
+ EGY_develop_heavy_industry:0 "重工業化"
+ EGY_develop_heavy_industry_desc:0 "鉄鋼・化学工業などの基礎産業を発展させ、産業基盤を強化する。"
+
+ EGY_develop_light_industry:0 "軽工業・繊維産業"
+ EGY_develop_light_industry_desc:0 "綿花を原料とした繊維産業と軽工業製品の生産を支援する。"
+
+ EGY_develop_agriculture:0 "農業開発"
+ EGY_develop_agriculture_desc:0 "ナイル川流域の灌漑設備を拡張し、農業生産性を向上させる。"
+
+ EGY_implement_austerity:0 "緊縮財政"
+ EGY_implement_austerity_desc:0 "過度な経済拡張による危機を緊縮策で脱却し、経済を正常化させる。"
+
+ # ============================================================================
+ # 経済ディシジョン - 地域投資
+ # ============================================================================
+ EGY_invest_cairo_industry:0 "カイロ工業地帯開発"
+ EGY_invest_cairo_industry_desc:0 "エジプトの首都カイロに大規模な工業地帯を建設し、製造業を集中させる。"
+
+ EGY_invest_nile_delta:0 "ナイル三角州農業開発"
+ EGY_invest_nile_delta_desc:0 "ナイル川三角州の肥沃な土地に灌漑施設とインフラを整備し、穀物生産を拡大する。"
+
+ EGY_invest_suez_zone:0 "スエズ運河経済圏開発"
+ EGY_invest_suez_zone_desc:0 "スエズ運河周辺に造船所とインフラを建設し、海運・造船業を集約させる。"
+
+ EGY_invest_alexandria_port:0 "アレキサンドリア港湾拡張"
+ EGY_invest_alexandria_port_desc:0 "地中海唯一の天然良港アレキサンドリアの造船所を拡張する。"
+
+ EGY_invest_upper_egypt:0 "上エジプト農村開発"
+ EGY_invest_upper_egypt_desc:0 "ナイル南部の上エジプト地域に農業インフラを整備し、地域経済を発展させる。"
+
+ EGY_british_economic_extraction:0 "英国による経済支配"
+ EGY_british_economic_extraction_desc:0 "英国の経済的支配により、エジプトの産業から利益が流出する。"
+
+ EGY_independence_economic_dividend:0 "独立による経済解放"
+ EGY_independence_economic_dividend_desc:0 "英国からの独立に伴い、エジプト経済は国内資本の蓄積と成長の機会を得る。"
+
+ EGY_democratic_economy_stabilization:0 "民主的経済管理"
+ EGY_democratic_economy_stabilization_desc:0 "民主体制による透明性と安定性の下で、経済の悪化を防ぐ。"
+
+ # ============================================================================
+ # ディシジョンカテゴリ
+ # ============================================================================
+ EGY_economy_decisions:0 "経済管理"
+ EGY_investment_decisions:0 "地域投資"
+ EGY_politics_decisions:0 "政治工作"
+
+ # ============================================================================
+ # エジプト経済 Dynamic Modifier
+ # ============================================================================
+ EGY_economy_modifier:0 "エジプト経済"

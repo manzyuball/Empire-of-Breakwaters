@@ -1,0 +1,396 @@
+add_namespace = EGY_events
+
+# ============================================================================
+# エジプト（EGY）イベント
+# ============================================================================
+
+# EGY_events.1 - 中央同盟からの返答（EGY_join_central発火）
+country_event = {
+	id = EGY_events.1
+	title = EGY_events.1.t
+	desc = EGY_events.1.d
+	picture = GFX_report_event_generic_diplomatic_congress
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.1.a
+		# 加盟承認
+		trigger = { tag = AUS }
+		AUS = {
+			add_opinion_modifier = {
+				target = EGY
+				modifier = EGY_trade_cooperation_opinion
+			}
+		}
+		EGY = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+		ai_chance = { base =70 }
+	}
+
+	option = {
+		name = EGY_events.1.b
+		# 条件付き承認
+		trigger = { tag = AUS }
+		EGY = {
+			add_political_power = 25
+		}
+		ai_chance = { base =30 }
+	}
+}
+
+# EGY_events.2 - 第四インターからの返答（EGY_join_fourth_international発火）
+country_event = {
+	id = EGY_events.2
+	title = EGY_events.2.t
+	desc = EGY_events.2.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.2.a
+		# 加盟承認
+		EGY = {
+			add_political_power = 100
+			add_war_support = 0.05
+		}
+		ai_chance = { base =80 }
+	}
+
+	option = {
+		name = EGY_events.2.b
+		# 独自路線
+		EGY = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+		ai_chance = { base =20 }
+	}
+}
+
+# EGY_events.3 - スエズ危機（EGY_seize_canal発火）
+country_event = {
+	id = EGY_events.3
+	title = EGY_events.3.t
+	desc = EGY_events.3.d
+	picture = GFX_report_event_generic_military_agreement
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.3.a
+		# 英国が開戦宣言
+		trigger = { tag = ENG }
+		ENG = {
+			create_wargoal = {
+				type = annex_everything
+				target = EGY
+			}
+		}
+		EGY = {
+			add_war_support = 0.15
+			EGY_shift_independence_large = yes
+		}
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -30
+				tag = ENG
+				is_at_war = yes
+			}
+		}
+	}
+
+	option = {
+		name = EGY_events.3.b
+		# 国際調停（運河管理権部分譲渡）
+		EGY = {
+			add_political_power = 75
+			EGY_shift_independence_medium = yes
+		}
+		ENG = {
+			add_opinion_modifier = {
+				target = EGY
+				modifier = EGY_seized_assets_opinion
+			}
+		}
+		ai_chance = { base =50 }
+	}
+
+	option = {
+		name = EGY_events.3.c
+		# 英国が黙認（意外な勝利）
+		EGY = {
+			add_political_power = 150
+			add_stability = 0.10
+			EGY_shift_independence_large = yes
+		}
+		ai_chance = { base =20 }
+	}
+}
+
+# EGY_events.4 - 憲法制定会議（EGY_constitutional_reform発火）
+country_event = {
+	id = EGY_events.4
+	title = EGY_events.4.t
+	desc = EGY_events.4.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.4.a
+		# 急進的憲法（議会主権）
+		add_stability = 0.08
+		add_political_power = 75
+		ai_chance = { base =50 }
+	}
+
+	option = {
+		name = EGY_events.4.b
+		# 穏健的憲法（王権留保）
+		add_stability = 0.05
+		add_political_power = 50
+		ai_chance = { base =50 }
+	}
+}
+
+# EGY_events.5 - 王政復古宣言（EGY_royal_restoration発火）
+country_event = {
+	id = EGY_events.5
+	title = EGY_events.5.t
+	desc = EGY_events.5.d
+	picture = GFX_report_event_generic_independence
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.5.a
+		# 国民の歓呼
+		add_stability = 0.05
+		add_political_power = 100
+		add_war_support = 0.05
+		ai_chance = { base =70 }
+	}
+
+	option = {
+		name = EGY_events.5.b
+		# 不満の声（民主勢力が抵抗）
+		add_stability = -0.05
+		add_political_power = 50
+		ai_chance = { base =30 }
+	}
+}
+
+# EGY_events.6 - アラブ革命の波及（EGY_pan_arab_expansion発火）
+country_event = {
+	id = EGY_events.6
+	title = EGY_events.6.t
+	desc = EGY_events.6.d
+	picture = GFX_report_event_generic_civil_war
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.6.a
+		# 隣国が呼応（シリア・イラク）
+		add_political_power = 100
+		add_war_support = 0.10
+		ai_chance = { base =40 }
+	}
+
+	option = {
+		name = EGY_events.6.b
+		# 隣国が無視
+		add_political_power = 50
+		ai_chance = { base =40 }
+	}
+
+	option = {
+		name = EGY_events.6.c
+		# 隣国が敵対的反応
+		add_war_support = 0.05
+		add_political_power = 25
+		ai_chance = { base =20 }
+	}
+}
+
+# EGY_events.7 - 英国との合同軍事演習（EGY_joint_exercises発火）
+country_event = {
+	id = EGY_events.7
+	title = EGY_events.7.t
+	desc = EGY_events.7.d
+	picture = GFX_report_event_generic_military_agreement
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.7.a
+		# 演習成功
+		army_experience = 25
+		air_experience = 10
+		ENG = {
+			add_opinion_modifier = {
+				target = EGY
+				modifier = EGY_trade_cooperation_opinion
+			}
+		}
+		ai_chance = { base =70 }
+	}
+
+	option = {
+		name = EGY_events.7.b
+		# 連携不全（opinion低下）
+		ENG = {
+			add_opinion_modifier = {
+				target = EGY
+				modifier = EGY_seized_assets_opinion
+			}
+		}
+		add_political_power = 25
+		ai_chance = { base =30 }
+	}
+}
+
+# EGY_events.8 - 土地改革の成果（EGY_land_reform発火）
+country_event = {
+	id = EGY_events.8
+	title = EGY_events.8.t
+	desc = EGY_events.8.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.8.a
+		# 土地改革成功
+		add_stability = 0.05
+		add_manpower = 100000
+		ai_chance = { base =60 }
+	}
+
+	option = {
+		name = EGY_events.8.b
+		# 地主による反乱鎮圧
+		add_stability = -0.05
+		add_war_support = 0.05
+		add_manpower = 200000
+		ai_chance = { base =40 }
+	}
+}
+
+# EGY_events.9 - 労働者の権利宣言（EGY_labor_rights発火）
+country_event = {
+	id = EGY_events.9
+	title = EGY_events.9.t
+	desc = EGY_events.9.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.9.a
+		# 労働者の支持拡大
+		add_stability = 0.05
+		add_political_power = 50
+		ai_chance = { base =60 }
+	}
+
+	option = {
+		name = EGY_events.9.b
+		# ストライキリスク顕在化
+		add_stability = -0.03
+		add_war_support = 0.03
+		ai_chance = { base =40 }
+	}
+}
+
+# EGY_events.10 - 完全独立の達成（BOPが独立レンジに到達）
+country_event = {
+	id = EGY_events.10
+	title = EGY_events.10.t
+	desc = EGY_events.10.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.10.a
+		# 独立宣言
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = 0.05
+		ENG = {
+			add_opinion_modifier = {
+				target = EGY
+				modifier = EGY_seized_assets_opinion
+			}
+		}
+	}
+}
+
+# EGY_events.11 - 植民地化の危機（BOPが植民地レンジに到達）
+country_event = {
+	id = EGY_events.11
+	title = EGY_events.11.t
+	desc = EGY_events.11.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.11.a
+		# 英国の条件を受諾し安定を維持
+		add_stability = 0.05
+		add_political_power = -50
+		ai_chance = { base =60 }
+	}
+
+	option = {
+		name = EGY_events.11.b
+		# 抵抗してBOPを逆転
+		EGY_shift_independence_medium = yes
+		add_war_support = 0.10
+		add_stability = -0.05
+		ai_chance = { base =40 }
+	}
+}
+
+# EGY_events.20 - ファシズム一党独裁化（EGY_promote_fascism_decree発火）
+country_event = {
+	id = EGY_events.20
+	title = EGY_events.20.t
+	desc = EGY_events.20.d
+	picture = GFX_report_event_generic_rally
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.20.a
+		# 一党支配体制への転換を受け入れ
+		add_stability = -0.05
+		add_war_support = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+# EGY_events.21 - 共産革命前衛党（EGY_promote_communism_vanguard発火）
+country_event = {
+	id = EGY_events.21
+	title = EGY_events.21.t
+	desc = EGY_events.21.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = EGY_events.21.a
+		# 人民評議会による支配
+		add_stability = -0.05
+		add_manpower = 10000
+		ai_chance = { base = 100 }
+	}
+}

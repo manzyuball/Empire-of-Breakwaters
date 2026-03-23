@@ -1,0 +1,16 @@
+spriteTypes = {
+
+	# エジプト対英従属度 BOPアイコン
+	# 独立側（左）: 鷹のシンボル（バニラDEN福祉アイコンを流用）
+	spriteType = {
+		name = "GFX_bop_EGY_independence_side"
+		texturefile = "gfx/interface/bop/bop_DEN_autonomy_side.dds"
+	}
+
+	# 英国従属側（右）: 英国シンボル（バニラDEN併合アイコンを流用）
+	spriteType = {
+		name = "GFX_bop_EGY_british_side"
+		texturefile = "gfx/interface/bop/bop_DEN_annexation_side.dds"
+	}
+
+}

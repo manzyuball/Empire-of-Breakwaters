@@ -1,0 +1,28 @@
+# ============================================================================
+# エジプト（EGY）動的修正子
+# ============================================================================
+# 「エジプト経済」：ディシジョン・イベント・NFで変動する複合経済システム
+# 変数範囲：
+#   EGY_eco_consumer_goods     (-0.40 ～ +0.75) ← 負が良い方向（消費財削減）
+#   EGY_eco_stability          (-0.50 ～ +0.40)
+#   EGY_eco_factory_output     (-0.30 ～ +0.25)
+#   EGY_eco_dockyard_output    (-0.40 ～ +0.40)
+#   EGY_eco_infra_speed        (-0.20 ～ +0.20)
+#   EGY_eco_civ_speed          (-0.20 ～ +0.20)
+#   EGY_eco_mil_speed          (-0.20 ～ +0.20)
+#   EGY_eco_dock_speed         (-0.20 ～ +0.20)
+# ============================================================================
+
+EGY_economy_modifier = {
+	icon = GFX_idea_generic_production_bonus
+	enable = { always = yes }
+
+	consumer_goods_factor                     = var:EGY_eco_consumer_goods
+	stability_factor                          = var:EGY_eco_stability
+	industrial_capacity_factory               = var:EGY_eco_factory_output
+	industrial_capacity_dockyard              = var:EGY_eco_dockyard_output
+	production_speed_infrastructure_factor    = var:EGY_eco_infra_speed
+	production_speed_industrial_complex_factor = var:EGY_eco_civ_speed
+	production_speed_arms_factory_factor      = var:EGY_eco_mil_speed
+	production_speed_dockyard_factor          = var:EGY_eco_dock_speed
+}

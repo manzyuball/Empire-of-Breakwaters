@@ -1,0 +1,61 @@
+# ============================================================================
+# エジプト（EGY）国家指導者特性
+# ============================================================================
+
+leader_traits = {
+
+	# --------------------------------------------------------
+	# ムハンマド・ナギーブ（民主・自由主義）
+	# 「改革派の闘士」: 安定・政治力・経済管理
+	# --------------------------------------------------------
+	EGY_trait_reformist = {
+		sprite = 14
+		random = no
+		stability_factor = 0.05
+		political_power_gain = 0.10
+		consumer_goods_factor = -0.03
+		production_factory_max_efficiency_factor = 0.05
+	}
+
+	# --------------------------------------------------------
+	# アフマド・フサイン（ファシズム）
+	# 「鉄の民族主義者」: 戦意・陸軍・志願兵
+	# --------------------------------------------------------
+	EGY_trait_iron_nationalist = {
+		sprite = 3
+		random = no
+		war_support_factor = 0.10
+		army_attack_factor = 0.05
+		send_volunteer_factor = 0.15
+		mobilization_speed = 0.10
+		stability_factor = -0.05
+	}
+
+	# --------------------------------------------------------
+	# ファルーク・ムハンマド・アリー（中立・専制）
+	# 「王家の権威」: 建設・政治力・王政安定
+	# --------------------------------------------------------
+	EGY_trait_royal_authority = {
+		sprite = 7
+		random = no
+		political_power_gain = 0.15
+		production_speed_buildings_factor = 0.10
+		stability_factor = 0.05
+		justify_war_goal_time = 0.20
+		ai_focus_defense_factor = 0.20
+	}
+
+	# --------------------------------------------------------
+	# ホスニー・アル=アラビー（共産・レーニン主義）
+	# 「人民の英雄」: 動員・工業・革命的戦意
+	# --------------------------------------------------------
+	EGY_trait_peoples_champion = {
+		sprite = 5
+		random = no
+		conscription_factor = 0.10
+		weekly_manpower = 300
+		industrial_capacity_factory = 0.05
+		war_support_factor = 0.10
+		stability_factor = -0.08
+	}
+}

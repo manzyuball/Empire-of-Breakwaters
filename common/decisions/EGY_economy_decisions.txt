@@ -1,0 +1,439 @@
+# ============================================================================
+# エジプト（EGY）経済ディシジョン
+# ============================================================================
+# 大規模経済管理システム：産業特化と地域投資
+# 民主ルート以外は継続的な経済管理が必須
+# ============================================================================
+
+EGY_economy_decisions = {
+
+	# ============================================================
+	# I. 産業特化ディシジョン（抽象的経済選択）
+	# ============================================================
+
+	# 観光・サービス業発展（消費財↓、安定度↑）
+	EGY_develop_service_sector = {
+		icon = GFX_decision_category_generic_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+		}
+		visible = { original_tag = EGY }
+
+		cost = 75
+		days_re_enable = 90
+
+		complete_effect = {
+			add_political_power = -50
+			EGY_economy_shift_service = yes
+			add_stability = 0.02
+		}
+	}
+
+	# 加工貿易・輸出産業開発（工場出力↑、消費財↓）
+	EGY_develop_processing_trade = {
+		icon = GFX_decision_category_generic_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+		}
+		visible = { original_tag = EGY }
+
+		cost = 100
+		days_re_enable = 120
+
+		complete_effect = {
+			add_political_power = -75
+			EGY_economy_shift_trade = yes
+			add_opinion_modifier = {
+				target = ENG
+				modifier = EGY_economic_partnership_opinion
+			}
+		}
+	}
+
+	# 造船・海事産業拡大（造船所出力↑↑）
+	EGY_develop_shipbuilding = {
+		icon = GFX_decision_category_generic_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+			owns_state = 447  # スエズ運河地域
+		}
+		visible = { original_tag = EGY }
+
+		cost = 100
+		days_re_enable = 150
+
+		complete_effect = {
+			add_political_power = -75
+			EGY_economy_shift_shipbuilding = yes
+			447 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = no
+				}
+			}
+		}
+	}
+
+	# 軍事産業複合体（軍需速度↑、消費財↑）
+	EGY_develop_military_industry = {
+		icon = GFX_decision_category_generic_military_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+		}
+		visible = { original_tag = EGY }
+
+		cost = 100
+		days_re_enable = 120
+
+		complete_effect = {
+			add_political_power = -75
+			EGY_economy_shift_military_industry = yes
+			# 軍需産業は雇用を増加させる
+			add_manpower = 10000
+		}
+	}
+
+	# 重工業化（民需速度↑、インフラ↑、安定度↓）
+	EGY_develop_heavy_industry = {
+		icon = GFX_decision_category_generic_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+		}
+		visible = { original_tag = EGY }
+
+		cost = 100
+		days_re_enable = 120
+
+		complete_effect = {
+			add_political_power = -75
+			EGY_economy_shift_heavy_industry = yes
+		}
+	}
+
+	# 軽工業・繊維産業（消費財↓、安定度↑）
+	EGY_develop_light_industry = {
+		icon = GFX_decision_category_generic_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+		}
+		visible = { original_tag = EGY }
+
+		cost = 75
+		days_re_enable = 90
+
+		complete_effect = {
+			add_political_power = -50
+			EGY_economy_shift_light_industry = yes
+			add_stability = 0.01
+		}
+	}
+
+	# 農業開発（消費財↓、安定度↑↑）
+	EGY_develop_agriculture = {
+		icon = GFX_decision_category_generic_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+		}
+		visible = { original_tag = EGY }
+
+		cost = 50
+		days_re_enable = 90
+
+		complete_effect = {
+			add_political_power = -40
+			EGY_economy_shift_agriculture = yes
+			add_stability = 0.03
+		}
+	}
+
+	# 緊縮財政（危機脱却、PP消費）
+	EGY_implement_austerity = {
+		icon = GFX_decision_category_generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+			OR = {
+				check_variable = { var = EGY_eco_consumer_goods value > 0.20 }
+				check_variable = { var = EGY_eco_stability value < -0.15 }
+			}
+		}
+		visible = { original_tag = EGY }
+
+		cost = 150
+		fire_only_once = no
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = -100
+			add_stability = -0.05
+			EGY_economy_austerity = yes
+		}
+	}
+
+	# ============================================================
+	# II. 地域投資ディシジョン（地図上の建設）
+	# ============================================================
+
+	# カイロ工業地帯開発（民需工場 Level 1）
+	EGY_invest_cairo_industry = {
+		icon = GFX_decision_category_generic_build_up
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+			owns_state = 907
+		}
+		visible = { original_tag = EGY }
+
+		cost = 150
+		days_remove = 180
+		fire_only_once = no
+
+		complete_effect = {
+			add_political_power = -100
+			907 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = no
+				}
+			}
+		}
+
+		remove_effect = {
+			add_political_power = 50
+		}
+	}
+
+	# ナイル三角州農業開発（インフラ + 民需工場）
+	EGY_invest_nile_delta = {
+		icon = GFX_decision_category_generic_build_up
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+			owns_state = 907
+		}
+		visible = { original_tag = EGY }
+
+		cost = 100
+		days_remove = 150
+		fire_only_once = no
+
+		complete_effect = {
+			add_political_power = -75
+			907 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = no
+				}
+			}
+		}
+
+		remove_effect = {
+			add_political_power = 40
+		}
+	}
+
+	# スエズ運河経済圏開発（造船所 + インフラ）
+	EGY_invest_suez_zone = {
+		icon = GFX_decision_category_generic_build_up
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+			owns_state = 447
+		}
+		visible = { original_tag = EGY }
+
+		cost = 150
+		days_remove = 200
+		fire_only_once = no
+
+		complete_effect = {
+			add_political_power = -100
+			447 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = no
+				}
+			}
+		}
+
+		remove_effect = {
+			add_political_power = 75
+		}
+	}
+
+	# アレキサンドリア港湾拡張（造船所 Level 1）
+	EGY_invest_alexandria_port = {
+		icon = GFX_decision_category_generic_build_up
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+			owns_state = 457
+		}
+		visible = { original_tag = EGY }
+
+		cost = 125
+		days_remove = 160
+		fire_only_once = no
+
+		complete_effect = {
+			add_political_power = -90
+			457 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = no
+				}
+			}
+		}
+
+		remove_effect = {
+			add_political_power = 60
+		}
+	}
+
+	# 上エジプト農村開発（農業ブースト、インフラ）
+	EGY_invest_upper_egypt = {
+		icon = GFX_decision_category_generic_build_up
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+			owns_state = 446
+		}
+		visible = { original_tag = EGY }
+
+		cost = 100
+		days_remove = 140
+		fire_only_once = no
+
+		complete_effect = {
+			add_political_power = -75
+			446 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = no
+				}
+			}
+			add_stability = 0.02
+		}
+
+		remove_effect = {
+			add_political_power = 45
+		}
+	}
+
+	# ============================================================
+	# III. 英国依存による経済圧力
+	# ============================================================
+
+	# 英国による経済支配（BOP英国側が高い時に発火）
+	EGY_british_economic_extraction = {
+		icon = GFX_decision_category_generic_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+			power_balance_value = {
+				id = EGY_british_dependency_bop
+				value > 0.40
+			}
+		}
+		visible = { original_tag = EGY }
+
+		cost = 0
+		days_remove = 30
+		fire_only_once = no
+
+		complete_effect = {
+			# 英国が経済的搾取
+		}
+
+		remove_effect = {
+			EGY_british_economic_pressure = yes
+			add_opinion_modifier = {
+				target = ENG
+				modifier = EGY_economic_crisis_opinion
+			}
+		}
+	}
+
+	# 独立による経済解放（BOP独立側に傾いた時）
+	EGY_independence_economic_dividend = {
+		icon = GFX_decision_category_generic_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+			power_balance_value = {
+				id = EGY_british_dependency_bop
+				value < -0.40
+			}
+		}
+		visible = { original_tag = EGY }
+
+		cost = 0
+		days_remove = 30
+		fire_only_once = no
+
+		complete_effect = {
+			# 独立による経済解放
+		}
+
+		remove_effect = {
+			EGY_independence_economic_boost = yes
+			add_political_power = 50
+		}
+	}
+
+	# ============================================================
+	# IV. 民主ルート：経済安定化
+	# ============================================================
+
+	# 民主的経済管理（経済下限固定、月1回、PP消費）
+	EGY_democratic_economy_stabilization = {
+		icon = GFX_decision_category_generic_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_government = democratic
+			has_country_flag = EGY_economy_initialized
+		}
+		visible = {
+			has_government = democratic
+		}
+
+		cost = 100
+		days_re_enable = 30
+		fire_only_once = no
+
+		complete_effect = {
+			add_political_power = -80
+			EGY_democracy_economy_floor = yes
+			add_stability = 0.02
+		}
+	}
+}

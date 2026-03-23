@@ -1,0 +1,94 @@
+# ============================================================================
+# エジプト（EGY）対英従属度 - バランス・オブ・パワー定義
+# 左側（-1.0）: 完全独立　　右側（+1.0）: 植民地的従属
+# 初期値 0.4 = 自治領レベル（ゲーム開始時の英国支配下）
+# ============================================================================
+
+EGY_british_dependency_bop = {
+	initial_value = 0.4
+
+	left_side = EGY_independence_side
+	right_side = EGY_british_side
+
+	decision_category = EGY_dependency_decisions
+
+#### 独立側 ####
+	side = {
+		id = EGY_independence_side
+		icon = GFX_bop_EGY_independence_side
+
+		# 自主路線 (-0.5 ~ 0)
+		range = {
+			id = EGY_bop_autonomous
+			min = -0.5
+			max = 0
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				conscription_factor = 0.05
+				political_power_gain = 0.10
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		# 完全独立 (-1.0 ~ -0.5)
+		range = {
+			id = EGY_bop_independent
+			min = -1.0
+			max = -0.5
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				conscription_factor = 0.10
+				political_power_gain = 0.20
+			}
+			on_activate = {
+				country_event = { id = EGY_events.10 days = 1 }
+			}
+			on_deactivate = {
+			}
+		}
+	}
+
+#### 英国従属側 ####
+	side = {
+		id = EGY_british_side
+		icon = GFX_bop_EGY_british_side
+
+		# 自治領 (0 ~ 0.5)
+		range = {
+			id = EGY_bop_dominion
+			min = 0
+			max = 0.5
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				consumer_goods_factor = -0.05
+				political_power_factor = -0.10
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		# 植民地 (0.5 ~ 1.0)
+		range = {
+			id = EGY_bop_colonial
+			min = 0.5
+			max = 1.0
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				consumer_goods_factor = -0.10
+				political_power_factor = -0.20
+				research_speed_factor = 0.05
+			}
+			on_activate = {
+				country_event = { id = EGY_events.11 days = 1 }
+			}
+			on_deactivate = {
+			}
+		}
+	}
+}

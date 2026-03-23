@@ -1,0 +1,365 @@
+# ============================================================================
+# エジプト（EGY）政治工作ディシジョン
+# ============================================================================
+# 政体変更NFを取るにはそのイデオロギーが50%を超える必要がある。
+# Tier 1→2→3 の順に実行可能。各ティアに60〜120日のクールダウン。
+# 経済システム（EGY_economy_modifier）にも影響を与える。
+# ============================================================================
+
+EGY_politics_decisions = {
+
+	# ============================================================
+	# 民主主義推進
+	# ============================================================
+
+	# Tier 1: 自由な報道（支持率+5%、安定度-2%）
+	EGY_promote_democracy_press = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = democratic }
+			has_stability > 0.40
+		}
+		visible = { original_tag = EGY }
+
+		cost = 50
+		days_re_enable = 60
+
+		complete_effect = {
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_stability = -0.02
+			EGY_ideology_instability_penalty = yes
+			set_country_flag = { flag = EGY_democracy_tier1 value = 1 }
+		}
+	}
+
+	# Tier 2: 選挙運動（支持率+8%、消費財悪化）
+	EGY_promote_democracy_campaign = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = democratic }
+			has_stability > 0.45
+			has_country_flag = EGY_democracy_tier1
+		}
+		visible = { original_tag = EGY }
+
+		cost = 75
+		days_re_enable = 90
+
+		complete_effect = {
+			add_popularity = { ideology = democratic popularity = 0.08 }
+			add_stability = -0.03
+			add_to_variable = { var = EGY_eco_consumer_goods value = 0.03 }
+			EGY_clamp_economy_vars = yes
+			set_country_flag = { flag = EGY_democracy_tier2 value = 1 }
+		}
+	}
+
+	# Tier 3: 憲法制定約束（支持率+12%、大きな不安定）→ 民主多数派準備完了
+	EGY_promote_democracy_constitution = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = democratic }
+			has_stability > 0.50
+			has_country_flag = EGY_democracy_tier2
+		}
+		visible = { original_tag = EGY }
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			add_popularity = { ideology = democratic popularity = 0.12 }
+			add_stability = -0.05
+			add_political_power = -25
+			EGY_ideology_instability_penalty = yes
+			add_popularity = { ideology = fascism   popularity = -0.03 }
+			add_popularity = { ideology = communism popularity = -0.03 }
+			set_country_flag = EGY_democracy_majority_ready
+		}
+	}
+
+	# ============================================================
+	# ファシズム推進
+	# ============================================================
+
+	# Tier 1: アラブ民族主義集会（支持率+5%、戦意+）
+	EGY_promote_fascism_rally = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = fascism }
+		}
+		visible = { original_tag = EGY }
+
+		cost = 50
+		days_re_enable = 60
+
+		complete_effect = {
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			add_war_support = 0.03
+			add_stability = -0.03
+			EGY_ideology_instability_penalty = yes
+			set_country_flag = { flag = EGY_fascism_tier1 value = 1 }
+		}
+	}
+
+	# Tier 2: 青年運動組織化（支持率+8%、徴兵+）
+	EGY_promote_fascism_youth = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = fascism }
+			has_country_flag = EGY_fascism_tier1
+		}
+		visible = { original_tag = EGY }
+
+		cost = 75
+		days_re_enable = 90
+
+		complete_effect = {
+			add_popularity = { ideology = fascism popularity = 0.08 }
+			add_stability = -0.04
+			add_war_support = 0.05
+			add_popularity = { ideology = democratic popularity = -0.04 }
+			set_country_flag = { flag = EGY_fascism_tier2 value = 1 }
+		}
+	}
+
+	# Tier 3: 一党支配宣言（支持率+12%、大幅不安定）→ ファシズム多数派準備完了
+	EGY_promote_fascism_decree = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = fascism }
+			has_country_flag = EGY_fascism_tier2
+		}
+		visible = { original_tag = EGY }
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			add_popularity = { ideology = fascism popularity = 0.12 }
+			add_stability = -0.08
+			add_war_support = 0.08
+			EGY_ideology_instability_penalty = yes
+			set_country_flag = EGY_fascism_majority_ready
+		}
+	}
+
+	# ============================================================
+	# 共産主義推進
+	# ============================================================
+
+	# Tier 1: 労働者扇動（支持率+5%、動員力+）
+	EGY_promote_communism_agitate = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = communism }
+		}
+		visible = { original_tag = EGY }
+
+		cost = 50
+		days_re_enable = 60
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.05 }
+			add_manpower = 5000
+			add_stability = -0.03
+			EGY_ideology_instability_penalty = yes
+			set_country_flag = { flag = EGY_communism_tier1 value = 1 }
+		}
+	}
+
+	# Tier 2: 土地改革約束（支持率+8%、農村掌握）
+	EGY_promote_communism_land = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = communism }
+			has_country_flag = EGY_communism_tier1
+		}
+		visible = { original_tag = EGY }
+
+		cost = 75
+		days_re_enable = 90
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.08 }
+			add_stability = -0.04
+			add_to_variable = { var = EGY_eco_stability value = -0.04 }
+			EGY_clamp_economy_vars = yes
+			add_popularity = { ideology = neutrality popularity = -0.04 }
+			set_country_flag = { flag = EGY_communism_tier2 value = 1 }
+		}
+	}
+
+	# Tier 3: 革命前衛党結成（支持率+12%）→ 共産多数派準備完了
+	EGY_promote_communism_vanguard = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = communism }
+			has_country_flag = EGY_communism_tier2
+		}
+		visible = { original_tag = EGY }
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			add_popularity = { ideology = communism popularity = 0.12 }
+			add_stability = -0.06
+			add_manpower = 15000
+			EGY_ideology_instability_penalty = yes
+			set_country_flag = EGY_communism_majority_ready
+		}
+	}
+
+	# ============================================================
+	# 王政・中立主義推進
+	# ============================================================
+
+	# Tier 1: 王室の権威を強調（支持率+5%、政治力+）
+	EGY_promote_neutrality_royal = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = neutrality }
+		}
+		visible = { original_tag = EGY }
+
+		cost = 50
+		days_re_enable = 60
+
+		complete_effect = {
+			add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_political_power = 25
+			add_stability = -0.02
+			set_country_flag = { flag = EGY_neutrality_tier1 value = 1 }
+		}
+	}
+
+	# Tier 2: 部族・地方有力者の取り込み（支持率+8%）
+	EGY_promote_neutrality_tribes = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = neutrality }
+			has_country_flag = EGY_neutrality_tier1
+		}
+		visible = { original_tag = EGY }
+
+		cost = 75
+		days_re_enable = 90
+
+		complete_effect = {
+			add_popularity = { ideology = neutrality popularity = 0.08 }
+			add_political_power = 30
+			add_to_variable = { var = EGY_eco_consumer_goods value = 0.02 }
+			EGY_clamp_economy_vars = yes
+			set_country_flag = { flag = EGY_neutrality_tier2 value = 1 }
+		}
+	}
+
+	# Tier 3: 王令布告（支持率+12%）→ 王政多数派準備完了
+	EGY_promote_neutrality_decree = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = neutrality }
+			has_country_flag = EGY_neutrality_tier2
+		}
+		visible = { original_tag = EGY }
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			add_popularity = { ideology = neutrality popularity = 0.12 }
+			add_political_power = 50
+			add_stability = -0.04
+			EGY_ideology_instability_penalty = yes
+			set_country_flag = EGY_neutrality_majority_ready
+		}
+	}
+
+	# ============================================================
+	# 共通：弾圧・統制
+	# ============================================================
+
+	# 反対派弾圧（安定度-5%、非支配イデオロギーを全て-3%）
+	EGY_suppress_opposition = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_stability > 0.30
+		}
+		visible = { original_tag = EGY }
+
+		cost = 75
+		days_re_enable = 120
+
+		complete_effect = {
+			add_stability = -0.05
+			if = {
+				limit = { NOT = { has_government = democratic } }
+				add_popularity = { ideology = democratic popularity = -0.03 }
+			}
+			if = {
+				limit = { NOT = { has_government = fascism } }
+				add_popularity = { ideology = fascism popularity = -0.03 }
+			}
+			if = {
+				limit = { NOT = { has_government = communism } }
+				add_popularity = { ideology = communism popularity = -0.03 }
+			}
+			if = {
+				limit = { NOT = { has_government = neutrality } }
+				add_popularity = { ideology = neutrality popularity = -0.03 }
+			}
+			add_opinion_modifier = {
+				target = ENG
+				modifier = EGY_isolation_policy_opinion
+			}
+		}
+	}
+
+	# 報道統制（情報を遮断、安定度+3%、PP-30）
+	EGY_media_control = {
+		icon = generic_political_actions
+
+		allowed = { original_tag = EGY }
+		available = {
+			NOT = { has_government = democratic }
+		}
+		visible = { original_tag = EGY }
+
+		cost = 60
+		days_re_enable = 90
+
+		complete_effect = {
+			add_stability = 0.03
+			add_political_power = -30
+			add_to_variable = { var = EGY_eco_consumer_goods value = 0.02 }
+			EGY_clamp_economy_vars = yes
+		}
+	}
+}

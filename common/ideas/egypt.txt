@@ -322,4 +322,198 @@ ideas = {
 		}
 
 	}
+
+	# ============================================================================
+	# 国民精神
+	# 対英従属度はBOPシステム（EGY_british_dependency_bop）のレンジmodifierで管理
+	# ============================================================================
+	country = {
+
+		# ============================================================================
+		# 経済ツリー固有精神
+		# ============================================================================
+
+		EGY_economic_modernization = {
+			# 産業化推進の成果
+			removal_cost = -1
+			picture = generic_production_bonus
+			allowed = { original_tag = EGY }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		EGY_suez_revenues = {
+			# スエズ運河収入（共通基礎精神）
+			removal_cost = -1
+			picture = generic_trade
+			allowed = { original_tag = EGY }
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		# ============================================================================
+		# 民主・親英ルート固有精神
+		# ============================================================================
+
+		EGY_regional_guardian = {
+			# 地域の守護者（民主ルート）
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			allowed = { original_tag = EGY }
+			modifier = {
+				army_core_defence_factor = 0.10
+				army_core_attack_factor = 0.05
+			}
+		}
+
+		EGY_british_military_aid = {
+			# 英国軍事援助（親英ルート）
+			removal_cost = -1
+			picture = generic_lend_lease
+			allowed = { original_tag = EGY }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				research_speed_factor = 0.05
+			}
+		}
+
+		EGY_allied_bastion = {
+			# 同盟の盾（親英キャップストーン）
+			removal_cost = -1
+			picture = generic_fortify_the_borders
+			allowed = { original_tag = EGY }
+			modifier = {
+				army_core_defence_factor = 0.10
+				fort_defence_factor = 0.10
+				war_support_factor = 0.10
+			}
+		}
+
+		# ============================================================================
+		# 王政ルート固有精神
+		# ============================================================================
+
+		EGY_royal_modernization = {
+			# 王立近代化計画
+			removal_cost = -1
+			picture = generic_central_management
+			allowed = { original_tag = EGY }
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		EGY_napoleon_spirit = {
+			# 東方のナポレオン（王政キャップストーン）
+			removal_cost = -1
+			picture = generic_army_war_college
+			allowed = { original_tag = EGY }
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.10
+				production_factory_max_efficiency_factor = 0.20
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		# ============================================================================
+		# 共産・汎アラブルート固有精神
+		# ============================================================================
+
+		EGY_revolutionary_fervor = {
+			# 革命の熱狂（共産ルート）
+			removal_cost = -1
+			picture = generic_communism_drift_bonus
+			allowed = { original_tag = EGY }
+			modifier = {
+				war_support_factor = 0.10
+				army_attack_factor = 0.10
+				stability_factor = -0.10
+			}
+		}
+
+		EGY_peoples_mobilization = {
+			# 人民動員（共産ルート）
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			allowed = { original_tag = EGY }
+			modifier = {
+				conscription_factor = 0.10
+				mobilization_speed = 0.25
+			}
+		}
+
+		EGY_arab_union_spirit = {
+			# 統一アラブ共和国（共産キャップストーン）
+			removal_cost = -1
+			picture = generic_pp_unity_bonus
+			allowed = { original_tag = EGY }
+			modifier = {
+				conscription_factor = 0.20
+				army_attack_factor = 0.15
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+
+		# ============================================================================
+		# 軍事ツリー固有精神
+		# ============================================================================
+
+		EGY_desert_army = {
+			# 砂漠の軍（陸軍キャップストーン）
+			removal_cost = -1
+			picture = generic_army_war_college
+			allowed = { original_tag = EGY }
+			modifier = {
+				army_attack_factor = 0.10
+				attrition = -0.10
+				special_forces_cap = 0.025
+			}
+		}
+
+		EGY_desert_eagle = {
+			# 砂漠の鷹（空軍キャップストーン）
+			removal_cost = -1
+			picture = generic_air_bonus
+			allowed = { original_tag = EGY }
+			modifier = {
+				air_attack_factor = 0.10
+				air_defence_factor = 0.05
+				air_agility_factor = 0.05
+			}
+		}
+
+		EGY_mediterranean_fleet = {
+			# 地中海艦隊（海軍キャップストーン）
+			removal_cost = -1
+			picture = generic_navy_bonus
+			allowed = { original_tag = EGY }
+			modifier = {
+				naval_speed_factor = 0.10
+				convoy_escort_efficiency = 0.10
+				naval_hit_chance = 0.05
+			}
+		}
+
+		# ============================================================================
+		# 経済拡張ツリー固有精神
+		# ============================================================================
+
+		EGY_agricultural_surplus = {
+			# 農業余剰（農業ブランチキャップストーン）
+			removal_cost = -1
+			picture = generic_agrarian_reform
+			allowed = { original_tag = EGY }
+			modifier = {
+				weekly_manpower = 500
+				consumer_goods_factor = -0.03
+				stability_factor = 0.03
+			}
+		}
+
+	}
 }

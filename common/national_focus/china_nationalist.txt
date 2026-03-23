@@ -1060,7 +1060,6 @@
 		icon = "GFX_focus_spr_masters_of_our_own_fate"
 		x = 25
 		y = 0
-		mutually_exclusive = { focus = PRC_na2 }
 		cost = 60
 
 		ai_will_do = {

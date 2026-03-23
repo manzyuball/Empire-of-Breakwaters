@@ -1,0 +1,257 @@
+# ============================================================================
+# エジプト（EGY）ディシジョン - 対英従属度BOPシステム
+# ============================================================================
+
+EGY_dependency_decisions = {
+
+	# 英国との通商交渉
+	EGY_negotiate_trade_deal = {
+		icon = GFX_decision_category_generic_political_actions
+
+		allowed = { original_tag = EGY }
+
+		available = {
+			NOT = { has_war_with = ENG }
+			has_country_flag = EGY_bop_initialized
+		}
+
+		visible = { has_country_flag = EGY_bop_initialized }
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = -25
+			EGY_shift_british_small = yes
+			ENG = {
+				add_opinion_modifier = {
+					target = EGY
+					modifier = EGY_trade_cooperation_opinion
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	# 産業国有化
+	EGY_nationalize_industry = {
+		icon = GFX_decision_category_generic_political_actions
+
+		allowed = { original_tag = EGY }
+
+		available = {
+			has_country_flag = EGY_bop_initialized
+			has_political_power > 50
+		}
+
+		visible = { has_country_flag = EGY_bop_initialized }
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			EGY_shift_independence_medium = yes
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 3
+		}
+	}
+
+	# 英国軍事顧問招聘
+	EGY_british_officers = {
+		icon = GFX_decision_category_generic_political_actions
+
+		allowed = { original_tag = EGY }
+
+		available = {
+			has_country_flag = EGY_bop_initialized
+			is_in_faction_with = ENG
+		}
+
+		visible = { has_country_flag = EGY_bop_initialized }
+
+		cost = 30
+		days_re_enable = 120
+
+		complete_effect = {
+			army_experience = 15
+			EGY_shift_british_small = yes
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	# 国軍独自訓練
+	EGY_train_national_army = {
+		icon = GFX_decision_category_generic_political_actions
+
+		allowed = { original_tag = EGY }
+
+		available = {
+			has_country_flag = EGY_bop_initialized
+		}
+
+		visible = { has_country_flag = EGY_bop_initialized }
+
+		cost = 25
+		days_re_enable = 90
+
+		complete_effect = {
+			army_experience = 10
+			EGY_shift_independence_small = yes
+		}
+
+		ai_will_do = {
+			base = 5
+			modifier = {
+				add = 5
+				power_balance_value = {
+					id = EGY_british_dependency_bop
+					value < 0
+				}
+			}
+		}
+	}
+
+	# スエズ通行料引上げ
+	EGY_suez_toll_increase = {
+		icon = GFX_decision_category_generic_political_actions
+
+		allowed = { original_tag = EGY }
+
+		available = {
+			has_country_flag = EGY_bop_initialized
+			controls_state = 446
+		}
+
+		visible = { has_country_flag = EGY_bop_initialized }
+
+		cost = 0
+		days_re_enable = 365
+
+		complete_effect = {
+			add_political_power = 50
+			EGY_shift_independence_small = yes
+			ENG = {
+				add_opinion_modifier = {
+					target = EGY
+					modifier = EGY_seized_assets_opinion
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	# 英国条件受諾
+	EGY_accept_british_terms = {
+		icon = GFX_decision_category_generic_political_actions
+
+		allowed = { original_tag = EGY }
+
+		available = {
+			has_country_flag = EGY_bop_initialized
+			power_balance_value = {
+				id = EGY_british_dependency_bop
+				value > 0
+			}
+		}
+
+		visible = { has_country_flag = EGY_bop_initialized }
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.05
+			add_political_power = -50
+			EGY_shift_british_medium = yes
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	# 反植民地集会
+	EGY_anti_colonial_rally = {
+		icon = GFX_decision_category_generic_political_actions
+
+		allowed = { original_tag = EGY }
+
+		available = {
+			has_country_flag = EGY_bop_initialized
+			power_balance_value = {
+				id = EGY_british_dependency_bop
+				value > -0.2
+			}
+		}
+
+		visible = { has_country_flag = EGY_bop_initialized }
+
+		cost = 15
+		days_re_enable = 120
+
+		complete_effect = {
+			add_war_support = 0.03
+			EGY_shift_independence_small = yes
+		}
+
+		ai_will_do = {
+			base = 5
+		}
+	}
+
+	# 英国守備隊追放（1回限り）
+	EGY_expel_british_garrison = {
+		icon = GFX_decision_category_generic_political_actions
+
+		allowed = { original_tag = EGY }
+
+		available = {
+			has_country_flag = EGY_bop_initialized
+			NOT = { has_country_flag = EGY_garrison_expelled }
+			power_balance_value = {
+				id = EGY_british_dependency_bop
+				value < 0
+			}
+		}
+
+		visible = { has_country_flag = EGY_bop_initialized }
+
+		cost = 75
+
+		complete_effect = {
+			set_country_flag = EGY_garrison_expelled
+			add_war_support = 0.10
+			add_stability = -0.05
+			EGY_shift_independence_medium = yes
+			ENG = {
+				add_opinion_modifier = {
+					target = EGY
+					modifier = EGY_seized_assets_opinion
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

@@ -1,0 +1,84 @@
+# ============================================================================
+# エジプト（EGY）意見修正子
+# ============================================================================
+
+opinion_modifiers = {
+
+	# ------------------------------------------------
+	# 対英関係
+	# ------------------------------------------------
+
+	# 英国資産接収 → 英国の心証悪化
+	EGY_seized_assets_opinion = {
+		value = -50
+		decay = 0.5
+	}
+
+	# 英国との貿易協力 → 英国の心証改善
+	EGY_trade_cooperation_opinion = {
+		value = 30
+		decay = 0.5
+	}
+
+	# スエズ運河協定 → 英国・西欧との関係改善
+	EGY_suez_agreement_opinion = {
+		value = 25
+		decay = 0.3
+	}
+
+	# 英国軍事基地の提供 → 英国との軍事協力
+	EGY_military_base_opinion = {
+		value = 40
+		decay = 0.2
+	}
+
+	# ------------------------------------------------
+	# 汎アラブ関係
+	# ------------------------------------------------
+
+	# アラブ連帯宣言 → アラブ諸国との関係改善
+	EGY_arab_solidarity_opinion = {
+		value = 35
+		decay = 0.3
+	}
+
+	# 革命輸出 → アラブ保守勢力との関係悪化
+	EGY_revolutionary_export_opinion = {
+		value = -40
+		decay = 0.4
+	}
+
+	# アラブ連合構想 → アラブ諸国へのボーナス
+	EGY_arab_union_proposal_opinion = {
+		value = 20
+		decay = 0.2
+	}
+
+	# ------------------------------------------------
+	# 経済・外交関係
+	# ------------------------------------------------
+
+	# 経済パートナーシップ → 貿易国との関係改善
+	EGY_economic_partnership_opinion = {
+		value = 15
+		decay = 0.3
+	}
+
+	# 資源国有化 → 投資国への心証悪化
+	EGY_nationalization_opinion = {
+		value = -35
+		decay = 0.4
+	}
+
+	# 国際信用の失墜（債務不履行・経済混乱）
+	EGY_economic_crisis_opinion = {
+		value = -20
+		decay = 0.5
+	}
+
+	# 外交的孤立政策 → 全体的な心証悪化
+	EGY_isolation_policy_opinion = {
+		value = -15
+		decay = 0.3
+	}
+}

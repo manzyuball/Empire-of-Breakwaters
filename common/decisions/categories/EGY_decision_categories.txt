@@ -1,0 +1,63 @@
+# ============================================================================
+# エジプト（EGY）ディシジョンカテゴリ
+# ============================================================================
+
+# 対英従属度操作カテゴリ
+EGY_dependency_decisions = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = EGY
+	}
+
+	visible = {
+		has_country_flag = EGY_bop_initialized
+	}
+
+	priority = 50
+}
+
+# 経済管理カテゴリ（産業特化・緊縮）
+EGY_economy_decisions = {
+	icon = GFX_decision_category_generic_industry
+
+	allowed = {
+		original_tag = EGY
+	}
+
+	visible = {
+		has_country_flag = EGY_economy_initialized
+	}
+
+	priority = 60
+}
+
+# 地域投資カテゴリ（地図上の建設）
+EGY_investment_decisions = {
+	icon = GFX_decision_category_generic_build_up
+
+	allowed = {
+		original_tag = EGY
+	}
+
+	visible = {
+		has_country_flag = EGY_economy_initialized
+	}
+
+	priority = 55
+}
+
+# 政治工作カテゴリ（イデオロギー支持率操作）
+EGY_politics_decisions = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = EGY
+	}
+
+	visible = {
+		original_tag = EGY
+	}
+
+	priority = 45
+}

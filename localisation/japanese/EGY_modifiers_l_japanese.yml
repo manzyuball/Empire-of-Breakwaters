@@ -1,0 +1,42 @@
+l_japanese:
+
+ # ============================================================================
+ # 意見修正子
+ # ============================================================================
+ EGY_seized_assets_opinion:0 "資産接収"
+ EGY_trade_cooperation_opinion:0 "貿易協力協定"
+ EGY_suez_agreement_opinion:0 "スエズ協定"
+ EGY_military_base_opinion:0 "軍事基地の提供"
+ EGY_arab_solidarity_opinion:0 "アラブ連帯"
+ EGY_revolutionary_export_opinion:0 "革命の輸出"
+ EGY_arab_union_proposal_opinion:0 "アラブ連合構想"
+ EGY_economic_partnership_opinion:0 "経済パートナーシップ"
+ EGY_nationalization_opinion:0 "国有化政策"
+ EGY_economic_crisis_opinion:0 "経済危機による失望"
+ EGY_isolation_policy_opinion:0 "孤立主義政策"
+
+ # ============================================================================
+ # リーダー特性
+ # ============================================================================
+ EGY_trait_reformist:0 "改革派の闘士"
+ EGY_trait_iron_nationalist:0 "鉄の民族主義者"
+ EGY_trait_royal_authority:0 "王家の権威"
+ EGY_trait_peoples_champion:0 "人民の英雄"
+
+ # ============================================================================
+ # 国民精神（既存、翻訳確認用）
+ # ============================================================================
+ EGY_desert_army:0 "砂漠の軍"
+ EGY_desert_eagle:0 "砂漠の鷹"
+ EGY_mediterranean_fleet:0 "地中海艦隊"
+ EGY_agricultural_surplus:0 "農業余剰"
+ EGY_economic_modernization:0 "産業化推進"
+ EGY_suez_revenues:0 "スエズ運河収入"
+ EGY_regional_guardian:0 "地域の守護者"
+ EGY_british_military_aid:0 "英国軍事援助"
+ EGY_allied_bastion:0 "同盟の盾"
+ EGY_royal_modernization:0 "王立近代化計画"
+ EGY_napoleon_spirit:0 "東方のナポレオン"
+ EGY_revolutionary_fervor:0 "革命の熱狂"
+ EGY_peoples_mobilization:0 "人民動員"
+ EGY_arab_union_spirit:0 "統一アラブ共和国"
