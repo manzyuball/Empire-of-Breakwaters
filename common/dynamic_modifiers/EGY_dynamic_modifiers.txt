@@ -26,3 +26,56 @@ EGY_economy_modifier = {
 	production_speed_arms_factory_factor      = var:EGY_eco_mil_speed
 	production_speed_dockyard_factor          = var:EGY_eco_dock_speed
 }
+
+# ============================================================================
+# 政治混乱度：イデオロギー変更・弾圧・改革で変動
+# ============================================================================
+#   EGY_pol_turmoil       (-0.30 ～ +0.10)  ← 負 = 不安定
+#   EGY_pol_legitimacy    (-0.30 ～ +0.20)  ← 負 = PP減少
+#   EGY_pol_repression    (-0.10 ～ +0.15)  ← 正 = 戦意増だが不安定化の種
+#   EGY_pol_drift_defence (-0.30 ～ +0.30)
+# ============================================================================
+
+EGY_political_turmoil_modifier = {
+	icon = GFX_idea_generic_political_power_bonus
+	enable = { always = yes }
+
+	stability_factor       = var:EGY_pol_turmoil
+	political_power_factor = var:EGY_pol_legitimacy
+	war_support_factor     = var:EGY_pol_repression
+	drift_defence_factor   = var:EGY_pol_drift_defence
+}
+
+# ============================================================================
+# スエズ運河：運河管理・海運・軍事的価値
+# ============================================================================
+#   EGY_suez_revenue  (-0.10 ～ +0.15) ← 消費財削減（収入）
+#   EGY_suez_traffic  (-0.10 ～ +0.20) ← 貿易評価
+#   EGY_suez_control  (-0.05 ～ +0.10) ← 海軍速度
+# ============================================================================
+
+EGY_suez_canal_modifier = {
+	icon = GFX_idea_generic_trade_bonus
+	enable = { always = yes }
+
+	consumer_goods_factor = var:EGY_suez_revenue
+	trade_opinion_factor  = var:EGY_suez_traffic
+	naval_speed_factor    = var:EGY_suez_control
+}
+
+# ============================================================================
+# 軍近代化：軍事NF・訓練ディシジョン・外国援助で改善
+# ============================================================================
+#   EGY_mil_training   (-0.10 ～ +0.15) ← 陸軍組織力
+#   EGY_mil_equipment  (-0.10 ～ +0.15) ← 陸軍攻撃力
+#   EGY_mil_doctrine   (-0.20 ～ +0.10) ← 訓練時間（負が良い）
+# ============================================================================
+
+EGY_military_modernization_modifier = {
+	icon = GFX_idea_generic_army_war_college
+	enable = { always = yes }
+
+	army_org_factor      = var:EGY_mil_training
+	army_attack_factor   = var:EGY_mil_equipment
+	training_time_factor = var:EGY_mil_doctrine
+}

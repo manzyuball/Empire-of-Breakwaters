@@ -30,6 +30,7 @@ EGY_politics_decisions = {
 			add_popularity = { ideology = democratic popularity = 0.05 }
 			add_stability = -0.02
 			EGY_ideology_instability_penalty = yes
+			EGY_political_shift_turmoil_up = yes
 			set_country_flag = { flag = EGY_democracy_tier1 value = 1 }
 		}
 	}
@@ -54,6 +55,8 @@ EGY_politics_decisions = {
 			add_stability = -0.03
 			add_to_variable = { var = EGY_eco_consumer_goods value = 0.03 }
 			EGY_clamp_economy_vars = yes
+			add_to_variable = { var = EGY_pol_drift_defence value = 0.05 }
+			EGY_clamp_political_vars = yes
 			set_country_flag = { flag = EGY_democracy_tier2 value = 1 }
 		}
 	}
@@ -78,6 +81,9 @@ EGY_politics_decisions = {
 			add_stability = -0.05
 			add_political_power = -25
 			EGY_ideology_instability_penalty = yes
+			add_to_variable = { var = EGY_pol_turmoil value = -0.08 }
+			add_to_variable = { var = EGY_pol_legitimacy value = -0.05 }
+			EGY_clamp_political_vars = yes
 			add_popularity = { ideology = fascism   popularity = -0.03 }
 			add_popularity = { ideology = communism popularity = -0.03 }
 			set_country_flag = EGY_democracy_majority_ready
@@ -106,6 +112,7 @@ EGY_politics_decisions = {
 			add_war_support = 0.03
 			add_stability = -0.03
 			EGY_ideology_instability_penalty = yes
+			EGY_political_shift_turmoil_up = yes
 			set_country_flag = { flag = EGY_fascism_tier1 value = 1 }
 		}
 	}
@@ -129,6 +136,8 @@ EGY_politics_decisions = {
 			add_stability = -0.04
 			add_war_support = 0.05
 			add_popularity = { ideology = democratic popularity = -0.04 }
+			add_to_variable = { var = EGY_pol_drift_defence value = 0.08 }
+			EGY_clamp_political_vars = yes
 			set_country_flag = { flag = EGY_fascism_tier2 value = 1 }
 		}
 	}
@@ -152,6 +161,9 @@ EGY_politics_decisions = {
 			add_stability = -0.08
 			add_war_support = 0.08
 			EGY_ideology_instability_penalty = yes
+			add_to_variable = { var = EGY_pol_turmoil value = -0.10 }
+			add_to_variable = { var = EGY_pol_legitimacy value = -0.06 }
+			EGY_clamp_political_vars = yes
 			set_country_flag = EGY_fascism_majority_ready
 		}
 	}
@@ -178,6 +190,7 @@ EGY_politics_decisions = {
 			add_manpower = 5000
 			add_stability = -0.03
 			EGY_ideology_instability_penalty = yes
+			EGY_political_shift_turmoil_up = yes
 			set_country_flag = { flag = EGY_communism_tier1 value = 1 }
 		}
 	}
@@ -202,6 +215,8 @@ EGY_politics_decisions = {
 			add_to_variable = { var = EGY_eco_stability value = -0.04 }
 			EGY_clamp_economy_vars = yes
 			add_popularity = { ideology = neutrality popularity = -0.04 }
+			add_to_variable = { var = EGY_pol_drift_defence value = 0.08 }
+			EGY_clamp_political_vars = yes
 			set_country_flag = { flag = EGY_communism_tier2 value = 1 }
 		}
 	}
@@ -225,6 +240,9 @@ EGY_politics_decisions = {
 			add_stability = -0.06
 			add_manpower = 15000
 			EGY_ideology_instability_penalty = yes
+			add_to_variable = { var = EGY_pol_turmoil value = -0.08 }
+			add_to_variable = { var = EGY_pol_legitimacy value = -0.05 }
+			EGY_clamp_political_vars = yes
 			set_country_flag = EGY_communism_majority_ready
 		}
 	}
@@ -250,6 +268,7 @@ EGY_politics_decisions = {
 			add_popularity = { ideology = neutrality popularity = 0.05 }
 			add_political_power = 25
 			add_stability = -0.02
+			EGY_political_shift_turmoil_up = yes
 			set_country_flag = { flag = EGY_neutrality_tier1 value = 1 }
 		}
 	}
@@ -273,6 +292,8 @@ EGY_politics_decisions = {
 			add_political_power = 30
 			add_to_variable = { var = EGY_eco_consumer_goods value = 0.02 }
 			EGY_clamp_economy_vars = yes
+			add_to_variable = { var = EGY_pol_drift_defence value = 0.06 }
+			EGY_clamp_political_vars = yes
 			set_country_flag = { flag = EGY_neutrality_tier2 value = 1 }
 		}
 	}
@@ -296,6 +317,9 @@ EGY_politics_decisions = {
 			add_political_power = 50
 			add_stability = -0.04
 			EGY_ideology_instability_penalty = yes
+			add_to_variable = { var = EGY_pol_turmoil value = -0.08 }
+			add_to_variable = { var = EGY_pol_legitimacy value = -0.05 }
+			EGY_clamp_political_vars = yes
 			set_country_flag = EGY_neutrality_majority_ready
 		}
 	}
@@ -335,6 +359,7 @@ EGY_politics_decisions = {
 				limit = { NOT = { has_government = neutrality } }
 				add_popularity = { ideology = neutrality popularity = -0.03 }
 			}
+			EGY_political_shift_repress = yes
 			add_opinion_modifier = {
 				target = ENG
 				modifier = EGY_isolation_policy_opinion
@@ -360,6 +385,9 @@ EGY_politics_decisions = {
 			add_political_power = -30
 			add_to_variable = { var = EGY_eco_consumer_goods value = 0.02 }
 			EGY_clamp_economy_vars = yes
+			add_to_variable = { var = EGY_pol_drift_defence value = 0.15 }
+			add_to_variable = { var = EGY_pol_repression value = 0.02 }
+			EGY_clamp_political_vars = yes
 		}
 	}
 }

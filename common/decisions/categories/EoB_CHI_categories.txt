@@ -1,0 +1,49 @@
+CHI_influence_category = {
+	icon = generic_diplomacy
+	
+	allowed = {
+		original_tag = CHI
+	}
+	
+	visible = {
+		NOT = { has_country_flag = CHI_civil_war_ongoing }
+		NOT = { has_country_flag = CHI_unification_war_started }
+	}
+}
+
+CHI_unification_category = {
+	icon = generic_diplomacy
+	
+	allowed = {
+		original_tag = CHI
+	}
+	
+	visible = {
+		has_country_flag = CHI_unification_war_started
+	}
+}
+
+CHI_civil_war_category = {
+	icon = generic_military_deal
+
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+		has_country_flag = CHI_civil_war_ongoing
+	}
+}
+
+CHI_governance_category = {
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = CHI
+	}
+
+	visible = {
+		has_country_flag = CHI_route_determined
+		NOT = { has_civil_war = yes }
+	}
+}

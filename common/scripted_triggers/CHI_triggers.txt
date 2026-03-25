@@ -1,0 +1,45 @@
+CHI_is_route_A = {
+	has_country_flag = CHI_route_A_flag
+}
+
+CHI_is_route_B = {
+	has_country_flag = CHI_route_B_flag
+}
+
+CHI_is_route_C = {
+	has_country_flag = CHI_route_C_flag
+}
+
+CHI_civil_war_ongoing = {
+	has_civil_war = yes
+}
+
+CHI_is_coastal_state = {
+	is_coastal = yes
+}
+
+CHI_is_urban_state = {
+	# Temporary: using custom logic or state flags if needed
+	# We rely on state category or custom flags for urban/rural
+	OR = {
+		has_state_category = metropolis
+		has_state_category = large_city
+		has_state_category = city
+		has_state_category = large_town
+	}
+}
+
+CHI_is_rural_state = {
+	NOT = { CHI_is_urban_state = yes }
+}
+
+CHI_is_central_industrial_zone = {
+	# 中央工業地帯: 長江中流域 (長沙・武漢・宜昌等)
+	OR = {
+		state = 963	# 宜昌方面
+		state = 602	# 長沙方面
+		state = 620	# 武漢 (Wuhan)
+		state = 605	# 長沙 (Changsha)
+		state = 606	# 南昌 (Nanchang)
+	}
+}

@@ -32,4 +32,16 @@ spriteTypes = {
 		name = "GFX_Portrait_otto_strasser"
 		texturefile = "gfx/leaders/_EOB/otto_strasser.dds"
 	}
+	spriteType = {
+		name = "GFX_Portrait_MacArthur"
+		texturefile = "gfx/leaders/_EOB/MacArthur.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_Hoober"
+		texturefile = "gfx/leaders/_EOB/Hoober.dds"
+	}
+	spriteType = {
+		name = "GFX_Portrait_KingFish"
+		texturefile = "gfx/leaders/_EOB/KingFish.dds"
+	}
 }

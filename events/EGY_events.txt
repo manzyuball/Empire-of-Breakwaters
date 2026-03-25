@@ -82,26 +82,16 @@ country_event = {
 
 	option = {
 		name = EGY_events.3.a
-		# 英国が開戦宣言
-		trigger = { tag = ENG }
+		# 断固として戦う — 独立方向へ大きくシフト
 		ENG = {
 			create_wargoal = {
 				type = annex_everything
 				target = EGY
 			}
 		}
-		EGY = {
-			add_war_support = 0.15
-			EGY_shift_independence_large = yes
-		}
-		ai_chance = {
-			base = 30
-			modifier = {
-				add = -30
-				tag = ENG
-				is_at_war = yes
-			}
-		}
+		add_war_support = 0.15
+		EGY_shift_independence_large = yes
+		ai_chance = { base = 30 }
 	}
 
 	option = {
@@ -196,25 +186,30 @@ country_event = {
 
 	option = {
 		name = EGY_events.6.a
-		# 隣国が呼応（シリア・イラク）
+		# 隣国が呼応 — 政治安定+スエズ交通増
 		add_political_power = 100
 		add_war_support = 0.10
-		ai_chance = { base =40 }
+		EGY_political_shift_stabilize = yes
+		add_to_variable = { var = EGY_suez_traffic value = 0.03 }
+		EGY_clamp_suez_vars = yes
+		ai_chance = { base = 40 }
 	}
 
 	option = {
 		name = EGY_events.6.b
-		# 隣国が無視
+		# 隣国が無視 — 政治混乱
 		add_political_power = 50
-		ai_chance = { base =40 }
+		EGY_political_shift_turmoil_up = yes
+		ai_chance = { base = 40 }
 	}
 
 	option = {
 		name = EGY_events.6.c
-		# 隣国が敵対的反応
+		# 隣国が敵対 — 軍事訓練向上
 		add_war_support = 0.05
 		add_political_power = 25
-		ai_chance = { base =20 }
+		EGY_military_shift_training = yes
+		ai_chance = { base = 20 }
 	}
 }
 
@@ -229,7 +224,7 @@ country_event = {
 
 	option = {
 		name = EGY_events.7.a
-		# 演習成功
+		# 演習大成功 — 軍近代化向上
 		army_experience = 25
 		air_experience = 10
 		ENG = {
@@ -238,12 +233,14 @@ country_event = {
 				modifier = EGY_trade_cooperation_opinion
 			}
 		}
-		ai_chance = { base =70 }
+		EGY_military_shift_training = yes
+		EGY_military_shift_equipment = yes
+		ai_chance = { base = 70 }
 	}
 
 	option = {
 		name = EGY_events.7.b
-		# 連携不全（opinion低下）
+		# 連携不全 — 軍訓練低下
 		ENG = {
 			add_opinion_modifier = {
 				target = EGY
@@ -251,7 +248,9 @@ country_event = {
 			}
 		}
 		add_political_power = 25
-		ai_chance = { base =30 }
+		add_to_variable = { var = EGY_mil_training value = -0.02 }
+		EGY_clamp_military_vars = yes
+		ai_chance = { base = 30 }
 	}
 }
 
@@ -293,18 +292,24 @@ country_event = {
 
 	option = {
 		name = EGY_events.9.a
-		# 労働者の支持拡大
+		# 労働者の支持拡大 — 工場出力↑、政治安定↑
 		add_stability = 0.05
 		add_political_power = 50
-		ai_chance = { base =60 }
+		add_to_variable = { var = EGY_eco_factory_output value = 0.03 }
+		EGY_clamp_economy_vars = yes
+		EGY_political_shift_stabilize = yes
+		ai_chance = { base = 60 }
 	}
 
 	option = {
 		name = EGY_events.9.b
-		# ストライキリスク顕在化
+		# ストライキ — 工場出力↓、政治混乱↑
 		add_stability = -0.03
 		add_war_support = 0.03
-		ai_chance = { base =40 }
+		add_to_variable = { var = EGY_eco_factory_output value = -0.05 }
+		EGY_clamp_economy_vars = yes
+		EGY_political_shift_turmoil_up = yes
+		ai_chance = { base = 40 }
 	}
 }
 
@@ -370,10 +375,30 @@ country_event = {
 
 	option = {
 		name = EGY_events.20.a
-		# 一党支配体制への転換を受け入れ
-		add_stability = -0.05
-		add_war_support = 0.05
-		ai_chance = { base = 100 }
+		# 軍事粛清 — 反対派を一掃し戦意向上、政治は大混乱
+		add_stability = -0.08
+		add_war_support = 0.10
+		add_to_variable = { var = EGY_pol_turmoil value = -0.08 }
+		add_to_variable = { var = EGY_pol_repression value = 0.05 }
+		ai_chance = { base = 40 }
+	}
+
+	option = {
+		name = EGY_events.20.b
+		# テクノクラート改革 — 安定重視の産業国家化
+		add_stability = -0.03
+		add_to_variable = { var = EGY_eco_factory_output value = 0.05 }
+		add_to_variable = { var = EGY_pol_legitimacy value = 0.03 }
+		EGY_clamp_economy_vars = yes
+		ai_chance = { base = 40 }
+	}
+
+	option = {
+		name = EGY_events.20.c
+		# 漸進的統合 — 安全だがコスト
+		add_stability = 0.02
+		add_political_power = -50
+		ai_chance = { base = 20 }
 	}
 }
 
@@ -388,9 +413,275 @@ country_event = {
 
 	option = {
 		name = EGY_events.21.a
-		# 人民評議会による支配
-		add_stability = -0.05
+		# スターリン式集権 — 動員力爆増、消費財悪化
+		add_stability = -0.08
+		add_manpower = 20000
+		add_to_variable = { var = EGY_eco_consumer_goods value = 0.05 }
+		add_to_variable = { var = EGY_pol_turmoil value = -0.06 }
+		EGY_clamp_economy_vars = yes
+		ai_chance = { base = 40 }
+	}
+
+	option = {
+		name = EGY_events.21.b
+		# 民主社会主義 — 安定性を維持しつつ漸進改革
+		add_stability = 0.03
+		add_political_power = 50
+		add_to_variable = { var = EGY_pol_legitimacy value = 0.03 }
+		ai_chance = { base = 35 }
+	}
+
+	option = {
+		name = EGY_events.21.c
+		# 労働者評議会 — 産業力と動員を両立
 		add_manpower = 10000
-		ai_chance = { base = 100 }
+		add_to_variable = { var = EGY_eco_factory_output value = 0.03 }
+		EGY_clamp_economy_vars = yes
+		ai_chance = { base = 25 }
+	}
+}
+
+# ============================================================================
+# MTTH型イベント（定期的に発火する環境イベント）
+# ============================================================================
+
+# EGY_events.30 - 経済ブーム（好景気時）
+country_event = {
+	id = EGY_events.30
+	title = EGY_events.30.t
+	desc = EGY_events.30.d
+	picture = GFX_report_event_generic_factory
+
+	trigger = {
+		original_tag = EGY
+		has_country_flag = EGY_economy_initialized
+		EGY_economy_booming = yes
+	}
+
+	mean_time_to_happen = { days = 180 }
+
+	option = {
+		name = EGY_events.30.a
+		# 利益を再投資 — 工場出力↑↑、消費財やや悪化
+		add_to_variable = { var = EGY_eco_factory_output value = 0.03 }
+		add_to_variable = { var = EGY_eco_consumer_goods value = 0.02 }
+		EGY_clamp_economy_vars = yes
+		random_owned_controlled_state = {
+			limit = { EGY_is_urban_state = yes }
+			add_extra_state_shared_building_slots = 1
+		}
+		ai_chance = { base = 50 }
+	}
+
+	option = {
+		name = EGY_events.30.b
+		# 繁栄を分配 — 安定度↑、正統性↑
+		add_stability = 0.05
+		add_to_variable = { var = EGY_pol_legitimacy value = 0.05 }
+		EGY_clamp_political_vars = yes
+		ai_chance = { base = 50 }
+	}
+}
+
+# EGY_events.31 - 経済危機（経済変数悪化時）
+country_event = {
+	id = EGY_events.31
+	title = EGY_events.31.t
+	desc = EGY_events.31.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = EGY
+		has_country_flag = EGY_economy_initialized
+		NOT = { has_country_flag = EGY_economy_locked }
+		EGY_economy_in_crisis = yes
+	}
+
+	mean_time_to_happen = { days = 120 }
+
+	option = {
+		name = EGY_events.31.a
+		# 緊急財政出動 — PP消費、消費財改善
+		add_political_power = -75
+		add_to_variable = { var = EGY_eco_consumer_goods value = -0.08 }
+		EGY_clamp_economy_vars = yes
+		ai_chance = { base = 40 }
+	}
+
+	option = {
+		name = EGY_events.31.b
+		# 英国に支援要請 — BOPが英国寄りにシフト
+		EGY_shift_british_small = yes
+		add_to_variable = { var = EGY_eco_consumer_goods value = -0.05 }
+		add_to_variable = { var = EGY_eco_factory_output value = 0.03 }
+		EGY_clamp_economy_vars = yes
+		ai_chance = { base = 30 }
+	}
+
+	option = {
+		name = EGY_events.31.c
+		# 耐え忍ぶ — 安定度↓、政治混乱へ連鎖
+		add_stability = -0.05
+		add_to_variable = { var = EGY_pol_turmoil value = -0.05 }
+		EGY_clamp_political_vars = yes
+		hidden_effect = {
+			if = {
+				limit = { EGY_political_turmoil_high = yes }
+				country_event = { id = EGY_events.32 days = 15 }
+			}
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+# EGY_events.32 - 政治不安（政治混乱度が高い時）
+country_event = {
+	id = EGY_events.32
+	title = EGY_events.32.t
+	desc = EGY_events.32.d
+	picture = GFX_report_event_generic_rally
+
+	trigger = {
+		original_tag = EGY
+		has_country_flag = EGY_economy_initialized
+		EGY_political_turmoil_high = yes
+	}
+
+	mean_time_to_happen = { days = 150 }
+
+	option = {
+		name = EGY_events.32.a
+		# 政治的譲歩 — 正統性↑、混乱改善
+		add_political_power = -50
+		EGY_political_shift_stabilize = yes
+		ai_chance = { base = 40 }
+	}
+
+	option = {
+		name = EGY_events.32.b
+		# 弾圧で鎮圧 — 弾圧↑、一時的安定だが長期悪化
+		EGY_political_shift_repress = yes
+		add_stability = -0.03
+		ai_chance = { base = 30 }
+	}
+
+	option = {
+		name = EGY_events.32.c
+		# 軍に治安維持を委任 — 軍訓練↑、政治は混迷
+		EGY_military_shift_training = yes
+		add_to_variable = { var = EGY_pol_turmoil value = 0.02 }
+		EGY_clamp_political_vars = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					power_balance_value = {
+						id = EGY_british_dependency_bop
+						value > 0.20
+					}
+				}
+				country_event = { id = EGY_events.33 days = 20 }
+			}
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
+# EGY_events.33 - 国際圧力（BOP英国寄り時）
+country_event = {
+	id = EGY_events.33
+	title = EGY_events.33.t
+	desc = EGY_events.33.d
+	picture = GFX_report_event_generic_diplomatic_congress
+
+	trigger = {
+		original_tag = EGY
+		has_country_flag = EGY_bop_initialized
+		power_balance_value = {
+			id = EGY_british_dependency_bop
+			value > 0.20
+		}
+	}
+
+	mean_time_to_happen = { days = 200 }
+
+	option = {
+		name = EGY_events.33.a
+		# 英国に従う — BOP英国寄り、スエズ収入悪化
+		EGY_shift_british_small = yes
+		add_to_variable = { var = EGY_suez_revenue value = 0.03 }
+		EGY_clamp_suez_vars = yes
+		add_stability = 0.03
+		ai_chance = { base = 30 }
+	}
+
+	option = {
+		name = EGY_events.33.b
+		# 抵抗する — 安定度↓、独立方向シフト
+		add_stability = -0.05
+		EGY_shift_independence_small = yes
+		add_to_variable = { var = EGY_pol_turmoil value = -0.03 }
+		EGY_clamp_political_vars = yes
+		ai_chance = { base = 40 }
+	}
+
+	option = {
+		name = EGY_events.33.c
+		# 外交交渉 — PP消費、バランス維持
+		add_political_power = -75
+		add_to_variable = { var = EGY_pol_legitimacy value = 0.03 }
+		EGY_clamp_political_vars = yes
+		ai_chance = { base = 30 }
+	}
+}
+
+# EGY_events.34 - スエズ海運ブーム（運河支配+平和時）
+country_event = {
+	id = EGY_events.34
+	title = EGY_events.34.t
+	desc = EGY_events.34.d
+	picture = GFX_report_event_generic_factory
+
+	trigger = {
+		original_tag = EGY
+		controls_state = 447
+		has_war = no
+	}
+
+	mean_time_to_happen = { days = 240 }
+
+	option = {
+		name = EGY_events.34.a
+		# 通行料引上げ — 収入↑、外交悪化
+		EGY_suez_shift_revenue_up = yes
+		add_opinion_modifier = {
+			target = ENG
+			modifier = EGY_nationalization_opinion
+		}
+		ai_chance = { base = 30 }
+	}
+
+	option = {
+		name = EGY_events.34.b
+		# インフラ投資 — 交通量↑、PP消費
+		add_political_power = -50
+		add_to_variable = { var = EGY_suez_traffic value = 0.05 }
+		EGY_clamp_suez_vars = yes
+		447 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		ai_chance = { base = 40 }
+	}
+
+	option = {
+		name = EGY_events.34.c
+		# 軍事要塞化 — 運河支配↑、消費財悪化
+		EGY_suez_shift_control_up = yes
+		add_to_variable = { var = EGY_eco_consumer_goods value = 0.02 }
+		EGY_clamp_economy_vars = yes
+		ai_chance = { base = 30 }
 	}
 }

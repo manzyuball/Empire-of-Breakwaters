@@ -1,0 +1,1769 @@
+focus_tree = {
+	id = CHI_eob_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			tag = CHI
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 60 y = 2000 }
+
+	# 第0-1層：導入
+	focus = {
+		id = CHI_crumbling_balance
+		icon = GFX_focus_chi_one_china_policy
+		x = 8
+		y = 0
+
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		bypass = { }
+		completion_reward = {
+			add_political_power = 50
+			country_event = { id = CHI_influence.1 }
+		}
+	}
+
+	focus = {
+		id = CHI_urban_rural_rift
+		icon = GFX_goal_generic_consumer_goods
+		x = -4
+		y = 1
+		relative_position_id = CHI_crumbling_balance
+
+		prerequisite = { focus = CHI_crumbling_balance }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_dynamic_modifier = { modifier = CHI_urban_rural_divide }
+			set_variable = { var = CHI.urban_rural_manpower value = -0.15 }
+			set_variable = { var = CHI.urban_rural_factory value = 0.10 }
+			country_event = { id = CHI_influence.2 }
+		}
+	}
+
+	focus = {
+		id = CHI_political_crisis
+		icon = GFX_focus_chi_legislative_yuan
+		x = 0
+		y = 1
+		relative_position_id = CHI_crumbling_balance
+
+		prerequisite = { focus = CHI_crumbling_balance }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = CHI_military_review
+		icon = GFX_focus_chi_army_reform
+		x = 4
+		y = 1
+		relative_position_id = CHI_crumbling_balance
+
+		prerequisite = { focus = CHI_crumbling_balance }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			army_experience = 15
+			country_event = { id = CHI_influence.3 }
+		}
+	}
+
+	# 第2層：三勢力の台頭
+	focus = {
+		id = CHI_voice_of_order
+		icon = GFX_focus_chi_examination_yuan
+		x = -7
+		y = 2
+		relative_position_id = CHI_crumbling_balance
+
+		prerequisite = { focus = CHI_political_crisis }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = CHI_influence_A_coastal_bonus_tt
+			if = {
+				limit = { any_owned_state = { CHI_is_coastal_state = yes } }
+				add_to_variable = { var = CHI.influence_A value = 5 }
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_voice_of_factories
+		icon = GFX_focus_prc_social_democracy
+		x = 0
+		y = 2
+		relative_position_id = CHI_crumbling_balance
+
+		prerequisite = { focus = CHI_political_crisis }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = CHI_influence_B_urban_bonus_tt
+			if = {
+				limit = { any_owned_state = { CHI_is_urban_state = yes } }
+				add_to_variable = { var = CHI.influence_B value = 5 }
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_voice_of_earth
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 7
+		y = 2
+		relative_position_id = CHI_crumbling_balance
+
+		prerequisite = { focus = CHI_political_crisis }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_political_power = 25
+			custom_effect_tooltip = CHI_influence_C_rural_bonus_tt
+			if = {
+				limit = { any_owned_state = { CHI_is_rural_state = yes } }
+				add_to_variable = { var = CHI.influence_C value = 5 }
+			}
+		}
+	}
+
+	# 第3層：影響力ディシジョン解禁
+	focus = {
+		id = CHI_order_network
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 1
+		relative_position_id = CHI_voice_of_order
+
+		prerequisite = { focus = CHI_voice_of_order }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			set_country_flag = CHI_influence_A_unlocked
+			custom_effect_tooltip = CHI_influence_A_coastal_bonus_tt
+			if = {
+				limit = { any_owned_state = { CHI_is_coastal_state = yes } }
+				add_to_variable = { var = CHI.influence_A value = 10 }
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_factory_agitation
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		relative_position_id = CHI_voice_of_factories
+
+		prerequisite = { focus = CHI_voice_of_factories }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			set_country_flag = CHI_influence_B_unlocked
+			custom_effect_tooltip = CHI_influence_B_urban_bonus_tt
+			if = {
+				limit = { any_owned_state = { CHI_is_urban_state = yes } }
+				add_to_variable = { var = CHI.influence_B value = 10 }
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_rural_mobilization
+		icon = GFX_goal_generic_cavalry
+		x = 0
+		y = 1
+		relative_position_id = CHI_voice_of_earth
+
+		prerequisite = { focus = CHI_voice_of_earth }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			set_country_flag = CHI_influence_C_unlocked
+			custom_effect_tooltip = CHI_influence_C_rural_bonus_tt
+			if = {
+				limit = { any_owned_state = { CHI_is_rural_state = yes } }
+				add_to_variable = { var = CHI.influence_C value = 10 }
+			}
+		}
+	}
+
+	# 第4層：中央工業地帯への布石
+	focus = {
+		id = CHI_order_southern_push
+		icon = GFX_goal_generic_position_armies
+		x = -2
+		y = 1
+		relative_position_id = CHI_order_network
+
+		prerequisite = { focus = CHI_order_network }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			if = {
+				limit = { owns_state = 595 } # Guangzhou
+				add_to_variable = { var = CHI.influence_A value = 15 }
+			}
+			custom_effect_tooltip = CHI_influence_central_zone_bonus_tt
+			if = {
+				limit = { any_owned_state = { CHI_is_central_industrial_zone = yes } }
+				add_to_variable = { var = CHI.influence_A value = 3 }
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_order_nanjing_grip
+		icon = GFX_focus_chi_legislative_yuan
+		x = 2
+		y = 1
+		relative_position_id = CHI_order_network
+
+		prerequisite = { focus = CHI_order_network }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			if = {
+				limit = { owns_state = 613 } # Nanjing
+				add_to_variable = { var = CHI.influence_A value = 15 }
+			}
+			custom_effect_tooltip = CHI_influence_central_zone_bonus_tt
+			if = {
+				limit = { any_owned_state = { CHI_is_central_industrial_zone = yes } }
+				add_to_variable = { var = CHI.influence_A value = 3 }
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_factory_chengdu
+		icon = GFX_goal_generic_construction
+		x = -2
+		y = 1
+		relative_position_id = CHI_factory_agitation
+
+		prerequisite = { focus = CHI_factory_agitation }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			if = {
+				limit = { owns_state = 582 } # Chengdu temporary
+				add_to_variable = { var = CHI.influence_B value = 15 }
+			}
+			custom_effect_tooltip = CHI_influence_central_zone_bonus_tt
+			if = {
+				limit = { any_owned_state = { CHI_is_central_industrial_zone = yes } }
+				add_to_variable = { var = CHI.influence_B value = 3 }
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_factory_chongqing
+		icon = GFX_goal_generic_construction2
+		x = 2
+		y = 1
+		relative_position_id = CHI_factory_agitation
+
+		prerequisite = { focus = CHI_factory_agitation }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			if = {
+				limit = { owns_state = 583 } # Chongqing temporary
+				add_to_variable = { var = CHI.influence_B value = 15 }
+			}
+			custom_effect_tooltip = CHI_influence_central_zone_bonus_tt
+			if = {
+				limit = { any_owned_state = { CHI_is_central_industrial_zone = yes } }
+				add_to_variable = { var = CHI.influence_B value = 3 }
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_rural_xian
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -2
+		y = 1
+		relative_position_id = CHI_rural_mobilization
+
+		prerequisite = { focus = CHI_rural_mobilization }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			if = {
+				limit = { owns_state = 603 } # Xian temporary
+				add_to_variable = { var = CHI.influence_C value = 15 }
+			}
+			custom_effect_tooltip = CHI_influence_central_zone_bonus_tt
+			if = {
+				limit = { any_owned_state = { CHI_is_central_industrial_zone = yes } }
+				add_to_variable = { var = CHI.influence_C value = 3 }
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_rural_shanxi
+		icon = GFX_goal_generic_special_forces
+		x = 2
+		y = 1
+		relative_position_id = CHI_rural_mobilization
+
+		prerequisite = { focus = CHI_rural_mobilization }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			if = {
+				limit = { owns_state = 600 } # Shanxi temporary
+				add_to_variable = { var = CHI.influence_C value = 15 }
+			}
+			custom_effect_tooltip = CHI_influence_central_zone_bonus_tt
+			if = {
+				limit = { any_owned_state = { CHI_is_central_industrial_zone = yes } }
+				add_to_variable = { var = CHI.influence_C value = 3 }
+			}
+		}
+	}
+
+	# 第5層：決戦準備
+	focus = {
+		id = CHI_order_prepare
+		icon = GFX_focus_chi_whampoa_military_academy
+		x = -7
+		y = 5
+		relative_position_id = CHI_crumbling_balance
+
+		prerequisite = { focus = CHI_order_southern_push focus = CHI_order_nanjing_grip }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			country_event = { id = CHI_influence.4 }
+		}
+	}
+
+	focus = {
+		id = CHI_paris_prepare
+		icon = GFX_focus_prc_social_democracy
+		x = 0
+		y = 5
+		relative_position_id = CHI_crumbling_balance
+
+		prerequisite = { focus = CHI_factory_chengdu focus = CHI_factory_chongqing }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			country_event = { id = CHI_influence.5 }
+		}
+	}
+
+	focus = {
+		id = CHI_moscow_prepare
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 7
+		y = 5
+		relative_position_id = CHI_crumbling_balance
+
+		prerequisite = { focus = CHI_rural_xian focus = CHI_rural_shanxi }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			country_event = { id = CHI_influence.6 }
+		}
+	}
+	
+	# 第2部：ルートA — 国民党右派「秩序の代償」 18NF
+	# A-0層：内戦
+	focus = {
+		id = CHI_A_civil_war
+		icon = GFX_focus_chi_proclaim_rival_government
+		x = 0
+		y = 1
+		relative_position_id = CHI_order_prepare
+
+		prerequisite = { focus = CHI_order_prepare }
+		mutually_exclusive = { focus = CHI_B_revolution focus = CHI_C_uprising }
+		cost = 10
+
+		ai_will_do = { factor = 100 }
+		available = { CHI_is_route_A = yes }
+		completion_reward = {
+			country_event = { id = CHI_civil_war.1 } # Start Route A civil war + BC union chance
+		}
+	}
+
+	focus = {
+		id = CHI_A_request_angloJP
+		icon = GFX_goal_generic_improve_relations
+		x = -2
+		y = 1
+		relative_position_id = CHI_A_civil_war
+
+		prerequisite = { focus = CHI_A_civil_war }
+		mutually_exclusive = { focus = CHI_A_fight_alone }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { 
+			has_country_flag = CHI_BC_union_happened 
+			CHI_civil_war_ongoing = yes
+		}
+		completion_reward = {
+			add_dynamic_modifier = { modifier = CHI_anglo_dependence }
+			country_event = { id = CHI_route_a.1 } # Request Japan/UK support
+		}
+	}
+
+	focus = {
+		id = CHI_A_fight_alone
+		icon = GFX_goal_generic_defence
+		x = 2
+		y = 1
+		relative_position_id = CHI_A_civil_war
+
+		prerequisite = { focus = CHI_A_civil_war }
+		mutually_exclusive = { focus = CHI_A_request_angloJP }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { 
+			has_country_flag = CHI_BC_union_happened 
+			CHI_civil_war_ongoing = yes
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			add_political_power = 100
+		}
+	}
+
+	# A-1層：戦後
+	focus = {
+		id = CHI_A_new_order
+		icon = GFX_focus_chi_one_china_policy
+		x = 0
+		y = 2
+		relative_position_id = CHI_A_civil_war
+
+		prerequisite = { focus = CHI_A_civil_war }
+		# Internally wait for civil war to end or the fight alone branch
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { CHI_civil_war_ongoing = no }
+		completion_reward = {
+			remove_dynamic_modifier = { modifier = CHI_leaderless_government }
+			add_stability = 0.15
+		}
+	}
+
+	# A-2層：外交ツリー（左列 X=0）
+	focus = {
+		id = CHI_A_approach_allies
+		icon = GFX_focus_chi_british_cooperation
+		x = -4
+		y = 1
+		relative_position_id = CHI_A_new_order
+
+		prerequisite = { focus = CHI_A_new_order }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = positive_75 }
+			add_opinion_modifier = { target = JAP modifier = positive_75 }
+			country_event = { id = CHI_route_a.2 }
+		}
+	}
+
+	focus = {
+		id = CHI_A_coastal_negotiation
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		x = -1
+		y = 1
+		relative_position_id = CHI_A_approach_allies
+
+		prerequisite = { focus = CHI_A_approach_allies }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			set_variable = { var = CHI.anglo_jap_factory value = -0.15 } # Reduce penalty
+			country_event = { id = CHI_route_a.3 }
+		}
+	}
+
+	focus = {
+		id = CHI_A_manchuria_talks
+		icon = GFX_focus_chi_mission_to_germany
+		x = 1
+		y = 1
+		relative_position_id = CHI_A_approach_allies
+
+		prerequisite = { focus = CHI_A_approach_allies }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			country_event = { id = CHI_route_a.4 } # Manchuria transfer
+		}
+	}
+
+	focus = {
+		id = CHI_A_full_sovereignty
+		icon = GFX_focus_chi_united_front
+		x = 0
+		y = 2
+		relative_position_id = CHI_A_approach_allies
+
+		prerequisite = { focus = CHI_A_manchuria_talks }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			remove_dynamic_modifier = { modifier = CHI_anglo_japanese_shadow }
+			add_political_power = 150
+		}
+	}
+
+	# A-2層：経済ツリー（中央列 X=2）
+	focus = {
+		id = CHI_A_export_economy
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 0
+		y = 1
+		relative_position_id = CHI_A_new_order
+
+		prerequisite = { focus = CHI_A_new_order }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_dynamic_modifier = { modifier = CHI_export_economy }
+			set_variable = { var = CHI.export_eco_factory value = 0.10 }
+		}
+	}
+
+	focus = {
+		id = CHI_A_labor_concentration
+		icon = GFX_goal_generic_construction
+		x = -1
+		y = 1
+		relative_position_id = CHI_A_export_economy
+
+		prerequisite = { focus = CHI_A_export_economy }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_to_variable = { var = CHI.export_eco_factory value = 0.15 }
+			add_dynamic_modifier = { modifier = CHI_paris_growth }
+			set_variable = { var = CHI.paris_growth_stab value = -0.05 }
+			set_variable = { var = CHI.paris_growth_pp value = -0.10 }
+		}
+	}
+
+	focus = {
+		id = CHI_A_industrial_expansion
+		icon = GFX_goal_generic_construction2
+		x = 1
+		y = 1
+		relative_position_id = CHI_A_export_economy
+
+		prerequisite = { focus = CHI_A_export_economy }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			every_owned_state = {
+				limit = { CHI_is_central_industrial_zone = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_A_trade_dominance
+		icon = GFX_goal_generic_consumer_goods
+		x = -1
+		y = 2
+		relative_position_id = CHI_A_export_economy
+
+		prerequisite = { focus = CHI_A_industrial_expansion  }
+		prerequisite = { focus = CHI_A_labor_concentration }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_to_variable = { var = CHI.export_eco_eff value = 0.10 }
+		}
+	}
+
+	# A-2層：治安ツリー（右列 X=4）
+	focus = {
+		id = CHI_A_suppress_left
+		icon = GFX_focus_chi_whampoa_military_academy
+		x = 2
+		y = 1
+		relative_position_id = CHI_A_new_order
+
+		prerequisite = { focus = CHI_A_new_order }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_stability = -0.05
+			set_country_flag = CHI_A_suppression_1
+		}
+	}
+
+	focus = {
+		id = CHI_A_labor_control_law
+		icon = GFX_goal_generic_neutrality_focus
+		x = -1
+		y = 2
+		relative_position_id = CHI_A_suppress_left
+
+		prerequisite = { focus = CHI_A_secret_police }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_political_power = -30
+			set_country_flag = CHI_A_suppression_2
+		}
+	}
+
+	focus = {
+		id = CHI_A_secret_police
+		icon = GFX_focus_secret_rearmament
+		x = 1
+		y = 1
+		relative_position_id = CHI_A_suppress_left
+
+		prerequisite = { focus = CHI_A_suppress_left }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_stability = 0.05
+			set_country_flag = CHI_A_suppression_3
+		}
+	}
+
+	focus = {
+		id = CHI_A_iron_stability
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 2
+		relative_position_id = CHI_A_suppress_left
+
+		prerequisite = { focus = CHI_A_secret_police }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_stability = 0.10
+			remove_dynamic_modifier = { modifier = CHI_faction_tension }
+			set_country_flag = CHI_A_suppression_4
+			set_variable = { var = CHI.paris_growth_stab value = 0 }
+			set_variable = { var = CHI.paris_growth_pp value = 0 }
+		}
+	}
+
+	# A下段：軍事
+	focus = {
+		id = CHI_A_modernize_army
+		icon = GFX_focus_chi_army_reform
+		x = -2
+		y = 5
+		relative_position_id = CHI_A_new_order
+
+		prerequisite = { focus = CHI_A_trade_dominance focus = CHI_A_iron_stability }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			army_experience = 20
+			# 軍事力DM: 計画速度・最大計画・指揮力向上
+			add_to_variable = { var = CHI.mil_planning_speed    value = 0.10 }
+			add_to_variable = { var = CHI.mil_max_planning      value = 0.25 }
+			add_to_variable = { var = CHI.mil_max_command_power value = 25 }
+		}
+	}
+
+	focus = {
+		id = CHI_A_naval_buildup
+		icon = GFX_goal_generic_construct_military
+		x = 2
+		y = 5
+		relative_position_id = CHI_A_new_order
+
+		prerequisite = { focus = CHI_A_full_sovereignty }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = { CHI_is_coastal_state = yes }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# 第3部：ルートB — パリ派「紅い工業都市」 18NF
+	# B-0層：内戦
+	focus = {
+		id = CHI_B_revolution
+		icon = GFX_focus_prc_remove_chiang_kai_shek
+		x = 0
+		y = 1
+		relative_position_id = CHI_paris_prepare
+
+		prerequisite = { focus = CHI_paris_prepare }
+		mutually_exclusive = { focus = CHI_A_civil_war focus = CHI_C_uprising }
+		cost = 10
+
+		ai_will_do = { factor = 100 }
+		available = { CHI_is_route_B = yes }
+		completion_reward = {
+			country_event = { id = CHI_civil_war.2 } # Start Route B civil war
+		}
+	}
+
+	focus = {
+		id = CHI_B_urban_blitz
+		icon = GFX_goal_generic_attack_allies
+		x = -1
+		y = 1
+		relative_position_id = CHI_B_revolution
+
+		prerequisite = { focus = CHI_B_revolution }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# 軍事力DM: 都市戦闘適性・組織力向上 (旧CHI_urban_blitz_idea)
+			add_to_variable = { var = CHI.mil_terrain value = 0.10 }
+			add_to_variable = { var = CHI.mil_org     value = 0.10 }
+		}
+	}
+
+	# B-1層：革命政権
+	focus = {
+		id = CHI_B_peoples_government
+		icon = GFX_focus_prc_proclaim_the_peoples_republic
+		x = 1
+		y = 1
+		relative_position_id = CHI_B_revolution
+
+		prerequisite = { focus = CHI_B_revolution }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { CHI_civil_war_ongoing = no } # Wait for civil war to end
+		completion_reward = {
+			set_politics = { ruling_party = communism }
+			remove_dynamic_modifier = { modifier = CHI_leaderless_government }
+			add_political_power = 100
+		}
+	}
+
+	# B-2層：工業集中ツリー（左列 X=5）
+	focus = {
+		id = CHI_B_urban_network
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 2
+		relative_position_id = CHI_B_revolution
+
+		prerequisite = { focus = CHI_B_peoples_government }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			every_owned_state = {
+				limit = { CHI_is_urban_state = yes }
+				add_building_construction = {
+					type = infrastructure level = 2
+					instant_build = yes
+				}
+			}
+			# Custom idea or modifier for +20% supply throughput
+		}
+	}
+
+	focus = {
+		id = CHI_B_maximize_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -2
+		y = 1
+		relative_position_id = CHI_B_urban_network
+
+		prerequisite = { focus = CHI_B_urban_network }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			every_owned_state = {
+				limit = { CHI_is_urban_state = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_B_central_zone_full
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+		relative_position_id = CHI_B_maximize_industry
+
+		prerequisite = { focus = CHI_B_maximize_industry }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			set_variable = { var = CHI.central_ind_factory value = 0.50 } # Base was 0.20, effectively +30%
+		}
+	}
+
+	focus = {
+		id = CHI_B_workers_paradise
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 2
+		relative_position_id = CHI_B_maximize_industry
+
+		prerequisite = { focus = CHI_B_central_zone_full }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# 経済DM: 工業生産力向上 (旧CHI_workers_paradise_idea)
+			add_to_variable = { var = CHI.eco_output value = 0.15 }
+			random_owned_controlled_state = {
+				limit = { CHI_is_urban_state = yes }
+				add_resource = { type = steel amount = 10 }
+				add_resource = { type = aluminium amount = 5 }
+			}
+		}
+	}
+
+	# B-2層：農村対策・残敵掃討ツリー（中央列 X=7）
+	focus = {
+		id = CHI_B_rural_neglect
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 1
+		y = 1
+		relative_position_id = CHI_B_urban_network
+
+		prerequisite = { focus = CHI_B_peoples_government }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			set_variable = { var = CHI.urban_rural_manpower value = -0.35 } # Was -0.15, now -0.35 (effectively -20%)
+		}
+	}
+
+	focus = {
+		id = CHI_B_crush_rural_economy
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = -1
+		y = 1
+		relative_position_id = CHI_B_rural_neglect
+
+		prerequisite = { focus = CHI_B_rural_neglect }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			set_variable = { var = CHI.urban_rural_manpower value = -0.65 } # Was -0.35, now -0.65 (effectively -30%)
+			# Reduce food output depending on resources available
+		}
+	}
+
+	focus = {
+		id = CHI_B_anti_guerrilla
+		icon = GFX_goal_generic_war_with_comintern
+		x = 1
+		y = 1
+		relative_position_id = CHI_B_rural_neglect
+
+		prerequisite = { focus = CHI_B_rural_neglect }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_stability = 0.05
+			set_country_flag = CHI_B_suppressed_guerrilla # Reduces C uprising chance
+		}
+	}
+
+	focus = {
+		id = CHI_B_total_urban_control
+		icon = GFX_focus_chi_legislative_yuan
+		x = 0
+		y = 2
+		relative_position_id = CHI_B_rural_neglect
+
+		prerequisite = { focus = CHI_B_anti_guerrilla }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_stability = 0.10
+			set_country_flag = CHI_B_total_urban_control_flag # Makes rural divide permanent
+		}
+	}
+
+	# B-2層：軍事・対外ツリー（右列 X=9）
+	focus = {
+		id = CHI_B_elite_divisions
+		icon = GFX_goal_generic_special_forces
+		x = 4
+		y = 1
+		relative_position_id = CHI_B_urban_network
+
+		prerequisite = { focus = CHI_B_peoples_government }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# 軍事力DM: 精鋭師団の攻撃力・組織力向上 (旧CHI_elite_divisions_idea)
+			add_to_variable = { var = CHI.mil_core_attack value = 0.15 }
+			add_to_variable = { var = CHI.mil_org         value = 0.10 }
+		}
+	}
+
+	focus = {
+		id = CHI_B_fourth_inter_solidarity
+		icon = GFX_focus_prc_social_democracy
+		x = 0
+		y = 1
+		relative_position_id = CHI_B_elite_divisions
+
+		prerequisite = { focus = CHI_B_elite_divisions }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_political_power = 25
+			add_opinion_modifier = { target = FRA modifier = positive_50 }
+			add_opinion_modifier = { target = GER modifier = positive_50 } # if GER is fourth inter
+			add_opinion_modifier = { target = ITA modifier = positive_50 }
+		}
+	}
+
+	focus = {
+		id = CHI_B_coastal_liberation_plan
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 1
+		y = 2
+		relative_position_id = CHI_B_elite_divisions
+
+		prerequisite = { focus = CHI_B_fourth_inter_solidarity }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_war_support = 0.10
+			set_country_flag = CHI_B_can_declare_coastal_war
+		}
+	}
+
+	focus = {
+		id = CHI_B_break_the_coast
+		icon = GFX_focus_AST_war_japan
+		x = 0
+		y = 1
+		relative_position_id = CHI_B_coastal_liberation_plan
+
+		prerequisite = { focus = CHI_B_coastal_liberation_plan }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			set_variable = { var = CHI.anglo_jap_factory value = -0.15 } # Reduce penalty
+			# 軍事力DM: 沿岸攻撃ボーナス (旧CHI_coastal_attack_bonus_idea)
+			add_to_variable = { var = CHI.mil_core_attack value = 0.20 }
+			add_to_variable = { var = CHI.mil_reinforce   value = 0.05 }
+		}
+	}
+
+	# B下段
+	focus = {
+		id = CHI_B_world_revolution_east
+		icon = GFX_focus_prc_maoism
+		x = -6
+		y = 2
+		relative_position_id = CHI_B_fourth_inter_solidarity
+
+		prerequisite = { focus = CHI_B_workers_paradise }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_political_power = 100
+			country_event = { id = CHI_route_b.1 } # Faction creation or joining
+		}
+	}
+
+	focus = {
+		id = CHI_B_industrial_army
+		icon = GFX_goal_generic_construct_military
+		x = 2
+		y = 5
+		relative_position_id = CHI_B_urban_network
+
+		prerequisite = { focus = CHI_B_total_urban_control focus = CHI_B_break_the_coast }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# 経済・軍事DM: 工業軍 (旧CHI_industrial_army_idea)
+			add_to_variable = { var = CHI.eco_output      value = 0.10 }
+			add_to_variable = { var = CHI.mil_core_attack value = 0.10 }
+		}
+	}
+
+	focus = {
+		id = CHI_B_red_navy
+		icon = GFX_goal_generic_military_sphere
+		x = 5
+		y = 5
+		relative_position_id = CHI_B_urban_network
+
+		prerequisite = { focus = CHI_B_break_the_coast }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			navy_experience = 20
+			random_owned_controlled_state = {
+				limit = { CHI_is_coastal_state = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# 第4部：ルートC — モスクワ派「大地の革命」 20NF
+	# C-0層：内戦
+	focus = {
+		id = CHI_C_uprising
+		icon = GFX_focus_prc_maoism
+		x = 5
+		y = 1
+		relative_position_id = CHI_moscow_prepare
+
+		prerequisite = { focus = CHI_moscow_prepare }
+		mutually_exclusive = { focus = CHI_A_civil_war focus = CHI_B_revolution }
+		cost = 10
+
+		ai_will_do = { factor = 100 }
+		available = { CHI_is_route_C = yes }
+		completion_reward = {
+			country_event = { id = CHI_civil_war.3 } # Start Route C civil war
+		}
+	}
+
+	focus = {
+		id = CHI_C_surround_cities
+		icon = GFX_goal_generic_position_armies
+		x = -1
+		y = 1
+		relative_position_id = CHI_C_uprising
+
+		prerequisite = { focus = CHI_C_uprising }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# 軍事力DM: 包囲戦術・地形適応 (旧CHI_surround_cities_idea)
+			add_to_variable = { var = CHI.mil_terrain value = 0.15 }
+			add_to_variable = { var = CHI.mil_org     value = 0.05 }
+		}
+	}
+
+	# C-1層：革命政権
+	focus = {
+		id = CHI_C_peoples_victory
+		icon = GFX_focus_prc_proclaim_the_peoples_republic
+		x = 1
+		y = 1
+		relative_position_id = CHI_C_uprising
+
+		prerequisite = { focus = CHI_C_uprising }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { CHI_civil_war_ongoing = no }
+		completion_reward = {
+			set_politics = { ruling_party = communism }
+			remove_dynamic_modifier = { modifier = CHI_leaderless_government }
+		}
+	}
+
+	# C-1.5層：Bの処理（排他選択）
+	focus = {
+		id = CHI_C_trap_paris
+		icon = GFX_focus_prc_infiltration
+		x = -1
+		y = 2
+		relative_position_id = CHI_C_uprising
+
+		prerequisite = { focus = CHI_C_peoples_victory }
+		mutually_exclusive = { focus = CHI_C_tolerate_paris }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_political_power = 50
+			country_event = { id = CHI_route_c.1 } # Eradicate B event
+		}
+	}
+
+	focus = {
+		id = CHI_C_tolerate_paris
+		icon = GFX_focus_generic_support_the_left_right
+		x = 2
+		y = 2
+		relative_position_id = CHI_C_uprising
+
+		prerequisite = { focus = CHI_C_peoples_victory }
+		mutually_exclusive = { focus = CHI_C_trap_paris }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_stability = -0.05 # Permanent penalty
+			country_event = { id = CHI_route_c.2 } # Tolerate B event
+		}
+	}
+
+	# C-2層：農村復興ツリー（左列 X=10）
+	focus = {
+		id = CHI_C_land_reform
+		icon = GFX_focus_prc_agrarian_socialism
+		x = -4
+		y = 3
+		relative_position_id = CHI_C_uprising
+
+		prerequisite = { focus = CHI_C_trap_paris focus = CHI_C_tolerate_paris }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_stability = 0.05
+			set_variable = { var = CHI.urban_rural_manpower value = 0.20 }
+		}
+	}
+
+	focus = {
+		id = CHI_C_rural_revival
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -1
+		y = 1
+		relative_position_id = CHI_C_land_reform
+
+		prerequisite = { focus = CHI_C_land_reform }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# Better food production
+			remove_dynamic_modifier = { modifier = CHI_urban_rural_divide }
+		}
+	}
+
+	focus = {
+		id = CHI_C_collective_farming
+		icon = GFX_goal_generic_consumer_goods
+		x = 1
+		y = 1
+		relative_position_id = CHI_C_land_reform
+
+		prerequisite = { focus = CHI_C_land_reform }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# Add food resources if any
+			# 軍事力DM: 集団農場による人的資源増強 (旧CHI_collective_farming_idea)
+			add_to_variable = { var = CHI.mil_conscription value = 0.15 }
+		}
+	}
+
+	focus = {
+		id = CHI_C_rural_industry
+		icon = GFX_goal_generic_construction
+		x = 1
+		y = 2
+		relative_position_id = CHI_C_land_reform
+
+		prerequisite = { focus = CHI_C_collective_farming }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			every_owned_state = {
+				limit = { CHI_is_rural_state = yes }
+				add_building_construction = {
+					type = arms_factory level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# C-2層：軍事ツリー（中央列 X=12）
+	focus = {
+		id = CHI_C_peoples_army
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 4
+		y = 3
+		relative_position_id = CHI_C_uprising
+
+		prerequisite = { focus = CHI_C_trap_paris focus = CHI_C_tolerate_paris }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# 軍事力DM: 人民解放軍の徴兵力向上 (旧CHI_peoples_army_idea)
+			add_to_variable = { var = CHI.mil_conscription value = 0.10 }
+			add_to_variable = { var = CHI.mil_org          value = 0.10 }
+		}
+	}
+
+	focus = {
+		id = CHI_C_soviet_equipment
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -1
+		y = 1
+		relative_position_id = CHI_C_peoples_army
+
+		prerequisite = { focus = CHI_C_peoples_army }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# 軍事力DM: ソ連製装備による防衛力向上 (旧CHI_soviet_equipment_idea)
+			add_to_variable = { var = CHI.mil_core_defence value = 0.10 }
+		}
+	}
+
+	focus = {
+		id = CHI_C_mass_assault_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		x = 1
+		y = 1
+		relative_position_id = CHI_C_peoples_army
+
+		prerequisite = { focus = CHI_C_peoples_army }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# 軍事力DM: 大量突撃ドクトリン (旧CHI_mass_assault_idea)
+			add_to_variable = { var = CHI.mil_core_attack value = 0.10 }
+			add_to_variable = { var = CHI.mil_reinforce   value = 0.05 }
+		}
+	}
+
+	focus = {
+		id = CHI_C_urban_siege_tactics
+		icon = GFX_goal_generic_fortify_city
+		x = -1
+		y = 2
+		relative_position_id = CHI_C_peoples_army
+
+		prerequisite = { focus = CHI_C_mass_assault_doctrine }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# 軍事力DM: 都市攻城戦術 (旧CHI_urban_siege_tactics_idea)
+			add_to_variable = { var = CHI.mil_terrain      value = 0.15 }
+			add_to_variable = { var = CHI.mil_core_attack  value = 0.15 }
+		}
+	}
+
+	# C-2層：対外・ソ連ツリー（右列 X=14）
+	focus = {
+		id = CHI_C_soviet_alliance
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 0
+		y = 3
+		relative_position_id = CHI_C_uprising
+
+		prerequisite = { focus = CHI_C_trap_paris focus = CHI_C_tolerate_paris }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			SOV = { country_event = { id = CHI_route_c.100 } }
+			add_opinion_modifier = { target = SOV modifier = positive_50 }
+		}
+	}
+
+	focus = {
+		id = CHI_C_soviet_advisors
+		icon = GFX_focus_generic_socialist_science
+		x = 0
+		y = 1
+		relative_position_id = CHI_C_soviet_alliance
+
+		prerequisite = { focus = CHI_C_soviet_alliance }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_C_coastal_peoples_war
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 0
+		y = 5
+		relative_position_id = CHI_C_uprising
+
+		prerequisite = { focus = CHI_C_soviet_advisors }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_war_support = 0.15
+			set_country_flag = CHI_C_can_declare_coastal_war
+		}
+	}
+
+	focus = {
+		id = CHI_C_manchuria_joint_op
+		icon = GFX_goal_generic_forceful_treaty
+		x = 1
+		y = 6
+		relative_position_id = CHI_C_uprising
+
+		prerequisite = { focus = CHI_C_coastal_peoples_war }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			SOV = { country_event = { id = CHI_route_c.101 } }
+		}
+	}
+
+	# C下段
+	focus = {
+		id = CHI_C_peoples_republic
+		icon = GFX_focus_prc_proclaim_the_peoples_republic
+		x = -1
+		y = 6
+		relative_position_id = CHI_C_uprising
+
+		prerequisite = { focus = CHI_C_rural_industry focus = CHI_C_urban_siege_tactics }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = CHI_C_self_reliance
+		icon = GFX_goal_generic_national_unity
+		x = -3
+		y = 6
+		relative_position_id = CHI_C_uprising
+
+		prerequisite = { focus = CHI_C_rural_industry }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# 経済DM: 自力更生による消費財削減・研究効率向上 (旧CHI_self_reliance_idea)
+			add_to_variable = { var = CHI.eco_consumer_goods value = -0.05 }
+			add_to_variable = { var = CHI.eco_upgrade_cost   value = -0.10 }
+		}
+	}
+
+	focus = {
+		id = CHI_C_red_navy
+		icon = GFX_goal_generic_construct_military
+		x = 1
+		y = 7
+		relative_position_id = CHI_C_uprising
+
+		prerequisite = { focus = CHI_C_manchuria_joint_op }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			navy_experience = 20
+			random_owned_controlled_state = {
+				limit = { CHI_is_coastal_state = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# 第5部：統一戦争サブツリー（全ルート共通の終着点） 10NF
+	focus = {
+		id = CHI_unite_china
+		icon = GFX_focus_chi_united_front
+		x = 8
+		y = 14
+		relative_position_id = CHI_crumbling_balance
+
+		prerequisite = { focus = CHI_A_naval_buildup focus = CHI_A_modernize_army focus = CHI_B_industrial_army focus = CHI_B_red_navy focus = CHI_C_peoples_republic focus = CHI_C_self_reliance focus = CHI_C_red_navy }
+		# Requires either end-node of A, B, or C. In Prerequisite you can do OR:
+		# prerequisite = { focus = CHI_A_naval_buildup }
+		# prerequisite = { focus = CHI_A_modernize_army }
+		# prerequisite = { focus = CHI_B_industrial_army }
+		# prerequisite = { focus = CHI_B_red_navy }
+		# prerequisite = { focus = CHI_C_peoples_republic }
+		# Actually let's just make it available if the civil war is over and we have won.
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { CHI_civil_war_ongoing = no }
+		completion_reward = {
+			add_political_power = 150
+			set_country_flag = CHI_unification_war_started
+		}
+	}
+
+	focus = {
+		id = CHI_deal_with_warlords
+		icon = GFX_focus_chi_united_front
+		x = 0
+		y = 1
+		relative_position_id = CHI_unite_china
+
+		prerequisite = { focus = CHI_unite_china }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = CHI_crush_warlords
+		icon = GFX_goal_generic_major_war
+		x = -1
+		y = 1
+		relative_position_id = CHI_deal_with_warlords
+
+		prerequisite = { focus = CHI_deal_with_warlords }
+		mutually_exclusive = { focus = CHI_integrate_warlords }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# Add wargoals
+			every_country = {
+				limit = {
+					is_subject = no
+					OR = {
+						tag = SHX tag = XSM tag = YUN tag = GXC tag = SIK tag = TIB
+					}
+				}
+				CHI = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+						generator = { 10110 } # Generic claim
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_integrate_warlords
+		icon = GFX_goal_generic_improve_relations
+		x = 1
+		y = 1
+		relative_position_id = CHI_deal_with_warlords
+
+		prerequisite = { focus = CHI_deal_with_warlords }
+		mutually_exclusive = { focus = CHI_crush_warlords }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			# Send integration requests
+			every_country = {
+				limit = {
+					is_subject = no
+					OR = {
+						tag = SHX tag = XSM tag = YUN tag = GXC
+					}
+				}
+				country_event = { id = CHI_unification.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_claim_tibet
+		icon = GFX_goal_generic_demand_territory
+		x = -2
+		y = 2
+		relative_position_id = CHI_deal_with_warlords
+
+		prerequisite = { focus = CHI_crush_warlords focus = CHI_integrate_warlords }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			TIB = {
+				CHI = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_claim_sinkiang
+		icon = GFX_goal_generic_territory_or_war
+		x = 2
+		y = 2
+		relative_position_id = CHI_deal_with_warlords
+
+		prerequisite = { focus = CHI_crush_warlords focus = CHI_integrate_warlords }
+		cost = 5
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			SIK = {
+				CHI = {
+					create_wargoal = {
+						type = take_state_focus
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_expel_foreign_powers
+		icon = GFX_goal_generic_war_with_comintern
+		x = 0
+		y = 3
+		relative_position_id = CHI_deal_with_warlords
+
+		prerequisite = { focus = CHI_claim_tibet focus = CHI_claim_sinkiang }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = CHI_demand_macau
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		relative_position_id = CHI_expel_foreign_powers
+
+		prerequisite = { focus = CHI_expel_foreign_powers }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			POR = { country_event = { id = CHI_unification.2 } }
+		}
+	}
+
+	focus = {
+		id = CHI_demand_kwangchow
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 1
+		y = 1
+		relative_position_id = CHI_expel_foreign_powers
+
+		prerequisite = { focus = CHI_expel_foreign_powers }
+		cost = 8
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			FRA = { country_event = { id = CHI_unification.3 } }
+		}
+	}
+
+	focus = {
+		id = CHI_final_victory
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 2
+		relative_position_id = CHI_expel_foreign_powers
+
+		prerequisite = { focus = CHI_demand_macau focus = CHI_demand_kwangchow }
+		cost = 10
+
+		ai_will_do = { factor = 10 }
+		available = { }
+		completion_reward = {
+			add_stability = 0.20
+			add_war_support = 0.10
+			add_political_power = 300
+			country_event = { id = CHI_unification.100 }
+		}
+	}
+}

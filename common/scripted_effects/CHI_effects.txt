@@ -1,0 +1,69 @@
+CHI_add_influence_A_effect = {
+	add_to_variable = { 
+		var = CHI_influence_A 
+		value = 5 
+	}
+}
+
+CHI_add_influence_B_effect = {
+	add_to_variable = { 
+		var = CHI_influence_B 
+		value = 5 
+	}
+}
+
+CHI_add_influence_C_effect = {
+	add_to_variable = { 
+		var = CHI_influence_C 
+		value = 5 
+	}
+}
+
+CHI_apply_initial_modifiers_effect = {
+	# 既存のsystematic modifiers
+	add_dynamic_modifier = { modifier = CHI_leaderless_government }
+	add_dynamic_modifier = { modifier = CHI_faction_tension }
+	add_dynamic_modifier = { modifier = CHI_anglo_japanese_shadow }
+	add_dynamic_modifier = { modifier = CHI_central_industrial_zone }
+
+	set_variable = { var = CHI.anglo_jap_factory value = -0.30 }
+	set_variable = { var = CHI.central_ind_factory value = 0.20 }
+
+	# 三大国家動態修正子の初期化
+	CHI_initialize_national_modifiers = yes
+}
+
+# 三大DMの追加と初期変数設定
+CHI_initialize_national_modifiers = {
+	add_dynamic_modifier = { modifier = CHI_economy_development }
+	add_dynamic_modifier = { modifier = CHI_military_power }
+	add_dynamic_modifier = { modifier = CHI_political_governance }
+
+	# 経済初期値 (旧CHI_sangyouに相当)
+	set_variable = { var = CHI.eco_consumer_goods    value = 0.10 }
+	set_variable = { var = CHI.eco_factory_efficiency value = -0.05 }
+	set_variable = { var = CHI.eco_mil_speed          value = -0.20 }
+	set_variable = { var = CHI.eco_min_export         value = 0.10 }
+	set_variable = { var = CHI.eco_upgrade_cost       value = 0.0 }
+	set_variable = { var = CHI.eco_research           value = 0.0 }
+	set_variable = { var = CHI.eco_output             value = 0.0 }
+
+	# 軍事初期値 (旧CHI_kokubouに相当)
+	set_variable = { var = CHI.mil_core_attack      value = 0.45 }
+	set_variable = { var = CHI.mil_core_defence     value = 0.45 }
+	set_variable = { var = CHI.mil_planning_speed   value = 0.0 }
+	set_variable = { var = CHI.mil_max_planning     value = 0.0 }
+	set_variable = { var = CHI.mil_max_command_power value = 0.0 }
+	set_variable = { var = CHI.mil_reinforce        value = 0.0 }
+	set_variable = { var = CHI.mil_terrain          value = 0.0 }
+	set_variable = { var = CHI.mil_conscription     value = 0.0 }
+	set_variable = { var = CHI.mil_org              value = 0.0 }
+
+	# 政治初期値 (旧CHI_BUNRETU + CHI_syougunn0に相当)
+	set_variable = { var = CHI.pol_stability        value = -0.10 }
+	set_variable = { var = CHI.pol_war_support      value = -0.10 }
+	set_variable = { var = CHI.pol_pp_factor        value = 0.0 }
+	set_variable = { var = CHI.pol_drift_defence    value = 0.0 }
+	set_variable = { var = CHI.pol_leader_cost      value = -1.0 }
+	set_variable = { var = CHI.pol_surrender_limit  value = 0.0 }
+}

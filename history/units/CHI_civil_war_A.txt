@@ -1,0 +1,67 @@
+### 秩序派追加兵力 (Route A 勝利時) ###
+
+units = {
+	# 沿岸・中央の精鋭追加部隊
+	division = {
+		name = "秩序派近衛師団"
+		location = 7025   # 南京
+		division_template = "中華国防軍"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "秩序派精鋭第一師団"
+		location = 11913  # 北京
+		division_template = "中華国防軍"
+		start_experience_factor = 0.35
+	}
+	division = {
+		name = "秩序派精鋭第二師団"
+		location = 10364  # 上海
+		division_template = "中華国防軍"
+		start_experience_factor = 0.35
+	}
+	division = {
+		name = "秩序派精鋭第三師団"
+		location = 7199   # 武漢
+		division_template = "中華国防軍"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "秩序派精鋭第四師団"
+		location = 4619   # 広州
+		division_template = "中華国防軍"
+		start_experience_factor = 0.3
+	}
+
+	# 秩序派民兵 — 掌握都市・沿岸州に分散
+	division = {
+		name = "秩序派義勇第一大隊"
+		location = 7014   # 天津
+		division_template = "民兵"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "秩序派義勇第二大隊"
+		location = 7097   # 南昌
+		division_template = "民兵"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "秩序派義勇第三大隊"
+		location = 9970   # 長沙
+		division_template = "民兵"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "秩序派義勇第四大隊"
+		location = 1628   # 浙江
+		division_template = "民兵"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "秩序派義勇第五大隊"
+		location = 7191   # 河北
+		division_template = "民兵"
+		start_experience_factor = 0.1
+	}
+}

@@ -1,0 +1,44 @@
+### 反乱軍追加兵力 (内戦時の敗北側派閥) ###
+# この OOB は内戦開始時に反乱軍タグに対してロードされる
+
+units = {
+	# 反乱軍の追加正規部隊
+	division = {
+		name = "反乱軍第一師団"
+		location = 7097   # 南昌（農村・山岳地帯）
+		division_template = "中華国防軍"
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "反乱軍第二師団"
+		location = 4144   # 蘭州（西北）
+		division_template = "中華国防軍"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "反乱軍第三師団"
+		location = 1603   # 広西
+		division_template = "中華国防軍"
+		start_experience_factor = 0.2
+	}
+
+	# 反乱軍民兵
+	division = {
+		name = "反乱民兵第一大隊"
+		location = 9970   # 湖南
+		division_template = "民兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "反乱民兵第二大隊"
+		location = 7074   # 陝西
+		division_template = "民兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "反乱民兵第三大隊"
+		location = 4169   # 貴州
+		division_template = "民兵"
+		start_experience_factor = 0.1
+	}
+}

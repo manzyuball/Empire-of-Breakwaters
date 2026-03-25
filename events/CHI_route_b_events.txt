@@ -1,0 +1,149 @@
+add_namespace = CHI_route_b
+
+# CHI_route_b.1 - 東方の世界革命（派閥選択）
+country_event = {
+	id = CHI_route_b.1
+	title = CHI_route_b.1.t
+	desc = CHI_route_b.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	# 独自陣営の形成
+	option = {
+		name = CHI_route_b.1.a
+		create_faction = "東方インターナショナル"
+		add_to_variable = { var = CHI.pol_war_support value = 0.05 }
+	}
+
+	# 第四インターナショナル参加申請
+	option = {
+		name = CHI_route_b.1.b
+		FRA = {
+			country_event = { id = CHI_route_b.100 }
+		}
+	}
+}
+
+# FRAへの参加申請への返答
+# ROOT = FRA, FROM = CHI
+country_event = {
+	id = CHI_route_b.100
+	title = CHI_route_b.100.t
+	desc = CHI_route_b.100.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	# 受諾: 第四インターナショナルに迎える
+	option = {
+		name = CHI_route_b.100.a
+		FROM = {
+			if = {
+				limit = { ROOT = { is_faction_leader = yes } }
+				ROOT = { add_to_faction = FROM }
+			}
+			add_opinion_modifier = { target = ROOT modifier = CHI_diplomatic_major_success }
+			add_to_variable = { var = CHI.pol_war_support value = 0.05 }
+			add_to_variable = { var = CHI.pol_stability value = 0.03 }
+		}
+		add_opinion_modifier = { target = FROM modifier = CHI_diplomatic_success }
+	}
+
+	# 拒否: 中国の革命路線は独自のものとして歓迎できない
+	option = {
+		name = CHI_route_b.100.b
+		FROM = {
+			# 独自陣営を形成せざるを得ない
+			if = {
+				limit = { NOT = { is_in_faction = yes } }
+				create_faction = "東方インターナショナル"
+			}
+			add_political_power = 25
+			add_opinion_modifier = { target = ROOT modifier = CHI_diplomatic_rebuff }
+		}
+	}
+}
+
+# ============================================================
+# CHI_route_b.10 - 山間部でのゲリラ蜂起
+# ルートBで農村を破壊した場合に発生するMTTHイベント
+# ============================================================
+country_event = {
+	id = CHI_route_b.10
+	title = CHI_route_b.10.t
+	desc = CHI_route_b.10.d
+	picture = GFX_report_event_chinese_soldiers
+
+	trigger = {
+		CHI_is_route_B = yes
+		NOT = { has_country_flag = CHI_guerrilla_cooldown }
+		NOT = { has_civil_war = yes }
+		# 農村を破壊するNFを完了しているか、都市偏重が極端な場合
+		OR = {
+			has_completed_focus = CHI_B_rural_neglect
+			AND = {
+				check_variable = { var = CHI.eco_output value = 0.15 compare = greater_than }
+				check_variable = { var = CHI.pol_stability value = -0.05 compare = less_than }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 180
+
+		# 対ゲリラNF未取得なら2倍の頻度
+		modifier = {
+			factor = 0.5
+			NOT = { has_completed_focus = CHI_B_anti_guerrilla }
+		}
+
+		# 掃討ディシジョン実行中は緩和
+		modifier = {
+			factor = 1.5
+			has_country_flag = CHI_anti_guerrilla_active
+		}
+
+		# 安定度が低いほど頻発
+		modifier = {
+			factor = 0.7
+			check_variable = { var = CHI.pol_stability value = -0.10 compare = less_than }
+		}
+	}
+
+	# 武力鎮圧: 代価を払って終息させる
+	option = {
+		name = CHI_route_b.10.a
+		add_stability = -0.05
+		add_manpower = -5000
+		random_owned_controlled_state = {
+			limit = { CHI_is_rural_state = yes }
+			add_resistance = 10
+			damage_building = { type = infrastructure damage = 1 }
+		}
+		set_country_flag = { flag = CHI_guerrilla_cooldown days = 90 value = 1 }
+		add_war_support = 0.02
+	}
+
+	# 政治的交渉: コストは低いが根本解決にならない
+	option = {
+		name = CHI_route_b.10.b
+		add_political_power = -50
+		add_stability = 0.02
+		# 一時的な宥和で農村への投資を約束
+		add_to_variable = { var = CHI.eco_consumer_goods value = 0.01 }
+		set_country_flag = { flag = CHI_guerrilla_cooldown days = 120 value = 1 }
+	}
+
+	# 農村に軍を展開: 中期的に抑圧するが戦線から兵力を割く
+	option = {
+		name = CHI_route_b.10.c
+		add_manpower = -8000
+		every_owned_state = {
+			limit = { CHI_is_rural_state = yes }
+			add_resistance = -5
+		}
+		add_stability = -0.02
+		set_country_flag = { flag = CHI_guerrilla_cooldown days = 150 value = 1 }
+	}
+}

@@ -1,0 +1,263 @@
+add_namespace = CHI_influence
+
+# CHI_influence.1 - 崩れゆく均衡
+country_event = {
+	id = CHI_influence.1
+	title = CHI_influence.1.t
+	desc = CHI_influence.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_influence.1.a
+		CHI_apply_initial_modifiers_effect = yes
+	}
+}
+
+# CHI_influence.2 - 農村の困窮
+country_event = {
+	id = CHI_influence.2
+	title = CHI_influence.2.t
+	desc = CHI_influence.2.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_influence.2.a
+		# Just narrative
+	}
+}
+
+# CHI_influence.3 - 軍の忠誠
+country_event = {
+	id = CHI_influence.3
+	title = CHI_influence.3.t
+	desc = CHI_influence.3.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_influence.3.a
+		# Just narrative
+	}
+}
+
+# CHI_influence.4 - 秩序派の準備
+country_event = {
+	id = CHI_influence.4
+	title = CHI_influence.4.t
+	desc = CHI_influence.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_influence.4.a
+		# Narrative and confirmation
+	}
+}
+
+# CHI_influence.5 - パリ派の準備
+country_event = {
+	id = CHI_influence.5
+	title = CHI_influence.5.t
+	desc = CHI_influence.5.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_influence.5.a
+		# Narrative and confirmation
+	}
+}
+
+# CHI_influence.6 - モスクワ派の動員
+country_event = {
+	id = CHI_influence.6
+	title = CHI_influence.6.t
+	desc = CHI_influence.6.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_influence.6.a
+		# Narrative and confirmation
+	}
+}
+
+# CHI_influence.10 - ランダム影響力イベント: 中央工業地帯への波及
+country_event = {
+	id = CHI_influence.10
+	title = CHI_influence.10.t
+	desc = CHI_influence.10.d
+	picture = GFX_report_event_chinese_officers
+
+	trigger = {
+		has_country_flag = CHI_influence_A_unlocked
+		has_country_flag = CHI_influence_B_unlocked
+		has_country_flag = CHI_influence_C_unlocked
+		NOT = { has_country_flag = CHI_route_determined }
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = CHI_influence.10.a
+		add_political_power = -20
+		add_stability = -0.05
+		# 中央工業地帯の争奪: 全派閥が影響力を得るが、現在最大勢力が最も多く得る
+		add_to_variable = { var = CHI.influence_A value = 5 }
+		add_to_variable = { var = CHI.influence_B value = 5 }
+		add_to_variable = { var = CHI.influence_C value = 5 }
+		# 現在首位の派閥にボーナス
+		if = {
+			limit = {
+				check_variable = { var = CHI.influence_A value = CHI.influence_B compare = greater_than_or_equals }
+				check_variable = { var = CHI.influence_A value = CHI.influence_C compare = greater_than_or_equals }
+			}
+			add_to_variable = { var = CHI.influence_A value = 5 }
+		}
+		else_if = {
+			limit = {
+				check_variable = { var = CHI.influence_B value = CHI.influence_C compare = greater_than_or_equals }
+			}
+			add_to_variable = { var = CHI.influence_B value = 5 }
+		}
+		else = {
+			add_to_variable = { var = CHI.influence_C value = 5 }
+		}
+	}
+	option = {
+		name = CHI_influence.10.b
+		# 静観: 影響力の増加を認めず、安定を維持
+	}
+}
+
+# CHI_influence.100 - ルート決定判定（自動）
+country_event = {
+	id = CHI_influence.100
+	title = CHI_influence.100.t
+	desc = CHI_influence.100.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = CHI_route_determined
+
+		# 影響力未初期化の場合は0をセット
+		if = {
+			limit = { NOT = { check_variable = { var = CHI.influence_A value = 0 compare = greater_than_or_equals } } }
+			set_variable = { var = CHI.influence_A value = 0 }
+		}
+		if = {
+			limit = { NOT = { check_variable = { var = CHI.influence_B value = 0 compare = greater_than_or_equals } } }
+			set_variable = { var = CHI.influence_B value = 0 }
+		}
+		if = {
+			limit = { NOT = { check_variable = { var = CHI.influence_C value = 0 compare = greater_than_or_equals } } }
+			set_variable = { var = CHI.influence_C value = 0 }
+		}
+
+		# 最大影響力でルートを自動決定
+		if = {
+			limit = {
+				check_variable = { var = CHI.influence_A value = CHI.influence_B compare = greater_than }
+				check_variable = { var = CHI.influence_A value = CHI.influence_C compare = greater_than }
+			}
+			set_country_flag = CHI_route_A_flag
+		}
+		else_if = {
+			limit = {
+				check_variable = { var = CHI.influence_B value = CHI.influence_C compare = greater_than }
+			}
+			set_country_flag = CHI_route_B_flag
+		}
+		else = {
+			set_country_flag = CHI_route_C_flag
+		}
+	}
+
+	# ルートA勝利: 秩序派が主導権を握った
+	option = {
+		name = CHI_influence.100.a
+		trigger = { has_country_flag = CHI_route_A_flag }
+		add_political_power = 50
+		add_stability = 0.05
+		custom_effect_tooltip = CHI_influence.100.a_tt
+	}
+	# ルートB勝利: パリ派（都市社会主義）が覇権を確立
+	option = {
+		name = CHI_influence.100.b
+		trigger = { has_country_flag = CHI_route_B_flag }
+		add_political_power = 50
+		add_stability = 0.05
+		custom_effect_tooltip = CHI_influence.100.b_tt
+	}
+	# ルートC勝利: モスクワ派（農村共産主義）が勝利
+	option = {
+		name = CHI_influence.100.c
+		trigger = { has_country_flag = CHI_route_C_flag }
+		add_political_power = 50
+		add_stability = 0.05
+		custom_effect_tooltip = CHI_influence.100.c_tt
+	}
+}
+
+# CHI_influence.20 - 妨害工作成功通知（フレーバー）
+country_event = {
+	id = CHI_influence.20
+	title = CHI_influence.20.t
+	desc = CHI_influence.20.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_influence.20.a
+		# フレーバーのみ
+	}
+}
+
+# CHI_influence.21 - 中央工業地帯浸透結果
+country_event = {
+	id = CHI_influence.21
+	title = CHI_influence.21.t
+	desc = CHI_influence.21.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_influence.21.a
+		# フレーバーのみ
+	}
+}
+
+# CHI_influence.22 - プロパガンダ攻勢の反響
+country_event = {
+	id = CHI_influence.22
+	title = CHI_influence.22.t
+	desc = CHI_influence.22.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_influence.22.a
+		# 好反響: 追加ボーナス
+		add_political_power = 15
+	}
+	option = {
+		name = CHI_influence.22.b
+		# 反動: 安定度にダメージ
+		add_stability = -0.02
+	}
+}

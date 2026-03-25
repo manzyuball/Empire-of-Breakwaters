@@ -46,11 +46,9 @@ set_research_slots = 4
 set_stability = 0.4
 set_war_support = 0.6
 add_ideas = {
-	CHI_BUNRETU
-	CHI_kokubou
-	CHI_sangyou
 	CHI_gtunzi
 }
+# Dynamic modifiers are initialized in the first NF (CHI_crumbling_balance) via CHI_apply_initial_modifiers_effect
 set_variable = {
 	var = CHI.CHI_koukuu_h
 	value = 10
@@ -63,10 +61,7 @@ set_variable = {
 	var = CHI.CHI_tetu_h
 	value = 10
 }
-create_faction = "アジア社会主義革命戦線"
-add_to_faction = BRM
-add_to_faction = IVO
-add_to_faction = CHI
+# Faction is created at route determination (CHI_influence.100 event)
 
 save_global_event_target_as = WTT_current_china_leader
 
@@ -74,15 +69,17 @@ save_global_event_target_as = WTT_current_china_leader
 set_convoys = 250
 
 set_politics = {
-	ruling_party = communism
+	ruling_party = neutrality
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 set_popularities = {
-	fascism = 20
-	communism = 80
+	fascism = 15
+	communism = 30
+	democratic = 15
+	neutrality = 40
 }
 # Starting tech
 set_technology = {

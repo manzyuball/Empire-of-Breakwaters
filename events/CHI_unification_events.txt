@@ -1,0 +1,95 @@
+add_namespace = CHI_unification
+
+# 軍閥への統合要求
+country_event = {
+	id = CHI_unification.1
+	title = CHI_unification.1.t
+	desc = CHI_unification.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_unification.1.a
+		ai_chance = { factor = 50 }
+		CHI = { add_to_faction = ROOT }
+		CHI = { annex_country = { target = ROOT transfer_troops = yes } }
+	}
+	option = {
+		name = CHI_unification.1.b
+		ai_chance = { factor = 50 }
+		CHI = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ROOT
+			}
+		}
+	}
+}
+
+# マカオ返還要求（対ポルトガル）
+country_event = {
+	id = CHI_unification.2
+	title = CHI_unification.2.t
+	desc = CHI_unification.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_unification.2.a
+		ai_chance = { factor = 50 }
+		CHI = { transfer_state = 328 } # Macau state ID placeholder
+	}
+	option = {
+		name = CHI_unification.2.b
+		ai_chance = { factor = 50 }
+		CHI = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ROOT
+			}
+		}
+	}
+}
+
+# 広州湾返還要求（対フランス）
+country_event = {
+	id = CHI_unification.3
+	title = CHI_unification.3.t
+	desc = CHI_unification.3.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_unification.3.a
+		ai_chance = { factor = 50 }
+		CHI = { transfer_state = 740 } # Kwangchow Wan state ID placeholder
+	}
+	option = {
+		name = CHI_unification.3.b
+		ai_chance = { factor = 50 }
+		CHI = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ROOT
+			}
+		}
+	}
+}
+
+# 最終勝利宣言
+country_event = {
+	id = CHI_unification.100
+	title = CHI_unification.100.t
+	desc = CHI_unification.100.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_unification.100.a
+		add_political_power = 50
+	}
+}

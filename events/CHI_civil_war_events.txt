@@ -1,0 +1,168 @@
+add_namespace = CHI_civil_war
+
+# 内戦イベント1：ルートA（秩序）の場合
+country_event = {
+	id = CHI_civil_war.1
+	title = CHI_civil_war.1.t
+	desc = CHI_civil_war.1.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_civil_war.1.a
+		set_country_flag = CHI_civil_war_ongoing
+
+		custom_effect_tooltip = CHI_civil_war_spawn_units_tt
+
+		hidden_effect = {
+			set_politics = { ruling_party = neutrality }
+
+			# 秩序派追加兵力をロード
+			load_oob = "CHI_civil_war_A"
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 10000 }
+
+			start_civil_war = {
+				ideology = communism
+				size = 0.4
+			}
+
+			# 反乱軍にも追加兵力を付与
+			every_country = {
+				limit = {
+					has_war_with = ROOT
+					original_tag = CHI
+				}
+				load_oob = "CHI_rebel_forces"
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 }
+			}
+
+			# BとCの統合イベントの判定 (BC_union)
+			random_list = {
+				30 = {
+					set_country_flag = CHI_BC_union_happened
+					country_event = { id = CHI_civil_war.10 days = 3 }
+				}
+				70 = { }
+			}
+		}
+	}
+}
+
+# 内戦イベント2：ルートB（パリ）の場合
+country_event = {
+	id = CHI_civil_war.2
+	title = CHI_civil_war.2.t
+	desc = CHI_civil_war.2.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_civil_war.2.a
+		set_country_flag = CHI_civil_war_ongoing
+
+		custom_effect_tooltip = CHI_civil_war_spawn_units_tt
+
+		hidden_effect = {
+			set_politics = { ruling_party = democratic }
+
+			# パリ派追加兵力をロード
+			load_oob = "CHI_civil_war_B"
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 10000 }
+
+			# Route A (秩序派) and C (農村派) revolt
+			start_civil_war = {
+				ideology = neutrality
+				size = 0.5
+			}
+
+			# 反乱軍にも追加兵力を付与
+			every_country = {
+				limit = {
+					has_war_with = ROOT
+					original_tag = CHI
+				}
+				load_oob = "CHI_rebel_forces"
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 }
+			}
+		}
+	}
+}
+
+# 内戦イベント3：ルートC（モスクワ）の場合
+country_event = {
+	id = CHI_civil_war.3
+	title = CHI_civil_war.3.t
+	desc = CHI_civil_war.3.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_civil_war.3.a
+		set_country_flag = CHI_civil_war_ongoing
+
+		custom_effect_tooltip = CHI_civil_war_spawn_units_tt
+
+		hidden_effect = {
+			set_politics = { ruling_party = communism }
+
+			# モスクワ派追加兵力をロード
+			load_oob = "CHI_civil_war_C"
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 10000 }
+
+			# Order and Paris revolt
+			start_civil_war = {
+				ideology = neutrality
+				size = 0.5
+			}
+
+			# 反乱軍にも追加兵力を付与
+			every_country = {
+				limit = {
+					has_war_with = ROOT
+					original_tag = CHI
+				}
+				load_oob = "CHI_rebel_forces"
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 }
+			}
+		}
+	}
+}
+
+# BとCが合流した通知（ルートA用）
+country_event = {
+	id = CHI_civil_war.10
+	title = CHI_civil_war.10.t
+	desc = CHI_civil_war.10.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_civil_war.10.a
+		add_war_support = 0.15
+	}
+}
+
+# 内戦終結イベント
+country_event = {
+	id = CHI_civil_war.100
+	title = CHI_civil_war.100.t
+	desc = CHI_civil_war.100.d
+	picture = GFX_report_event_chinese_soldiers
+
+	trigger = {
+		has_country_flag = CHI_civil_war_ongoing
+		has_civil_war = no
+	}
+
+	mean_time_to_happen = { days = 3 }
+
+	option = {
+		name = CHI_civil_war.100.a
+		clr_country_flag = CHI_civil_war_ongoing
+		add_stability = 0.10
+	}
+}

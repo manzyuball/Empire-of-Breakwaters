@@ -1,0 +1,70 @@
+CHI_civil_war_category = {
+
+	
+	# 民兵の動員
+	CHI_raise_militia = {
+		icon = generic_manpower
+		available = {
+			has_political_power > 50
+			has_war = yes
+		}
+		cost = 50
+		days_remove = 30
+		
+		modifier = {
+			conscription = 0.02
+			training_time_factor = -0.10
+		}
+		
+		complete_effect = {
+			add_political_power = -50
+		}
+	}
+	
+	# 決死のプロパガンダ
+	CHI_desperate_propaganda = {
+		icon = generic_propaganda
+		available = {
+			has_political_power > 30
+			has_war = yes
+		}
+		cost = 30
+		days_remove = 90
+		
+		modifier = {
+			war_support_weekly = 0.005
+			stability_weekly = 0.001
+			defense = 0.05
+		}
+		
+		complete_effect = {
+			add_political_power = -30
+		}
+	}
+	
+	# 列強への支援要請
+	CHI_request_foreign_aid = {
+		icon = generic_diplomacy
+		available = {
+			has_political_power > 75
+			has_war = yes
+		}
+		cost = 75
+		fire_only_once = no
+		days_re_enable = 120
+		
+		complete_effect = {
+			add_political_power = -75
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = ENG # 仮
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 50
+				producer = ENG # 仮
+			}
+		}
+	}
+}

@@ -1,0 +1,67 @@
+### パリ派追加兵力 (Route B 勝利時) ###
+
+units = {
+	# 都市・工業地帯の革命軍
+	division = {
+		name = "紅衛隊精鋭第一師団"
+		location = 10364  # 上海
+		division_template = "中華国防軍"
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "紅衛隊精鋭第二師団"
+		location = 7199   # 武漢
+		division_template = "中華国防軍"
+		start_experience_factor = 0.35
+	}
+	division = {
+		name = "紅衛隊精鋭第三師団"
+		location = 7025   # 南京
+		division_template = "中華国防軍"
+		start_experience_factor = 0.35
+	}
+	division = {
+		name = "紅衛隊精鋭第四師団"
+		location = 4619   # 広州
+		division_template = "中華国防軍"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "紅衛隊精鋭第五師団"
+		location = 9970   # 長沙
+		division_template = "中華国防軍"
+		start_experience_factor = 0.3
+	}
+
+	# 労働者民兵 — 工業都市・港湾都市に分散
+	division = {
+		name = "労働者義勇第一大隊"
+		location = 7014   # 天津
+		division_template = "民兵"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "労働者義勇第二大隊"
+		location = 1628   # 浙江
+		division_template = "民兵"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "労働者義勇第三大隊"
+		location = 7097   # 南昌
+		division_template = "民兵"
+		start_experience_factor = 0.15
+	}
+	division = {
+		name = "労働者義勇第四大隊"
+		location = 4606   # 重慶
+		division_template = "民兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "労働者義勇第五大隊"
+		location = 6932   # 成都
+		division_template = "民兵"
+		start_experience_factor = 0.1
+	}
+}

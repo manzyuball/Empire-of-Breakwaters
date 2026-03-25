@@ -1,0 +1,111 @@
+# ============================================================
+# CHI 三大国家動態修正子
+# 中国コンテンツ用: 経済・軍事・政治の三軸を変数で管理
+# ============================================================
+
+# 経済発展 (旧: CHI_sangyou, CHI_kougyouka, CHI_Kourituk等を統合)
+CHI_economy_development = {
+	icon = GFX_idea_generic_production_bonus
+	enable = { original_tag = CHI }
+
+	consumer_goods_factor              = var:CHI.eco_consumer_goods
+	production_factory_max_efficiency_factor = var:CHI.eco_factory_efficiency
+	production_speed_arms_factory_factor = var:CHI.eco_mil_speed
+	min_export                         = var:CHI.eco_min_export
+	equipment_upgrade_xp_cost          = var:CHI.eco_upgrade_cost
+	research_speed_factor              = var:CHI.eco_research
+	industrial_capacity_factory        = var:CHI.eco_output
+}
+
+# 軍事力 (旧: CHI_kokubou系, CHI_houhei系, ルートB/C軍事ideaを統合)
+CHI_military_power = {
+	icon = GFX_idea_generic_army_bonus
+	enable = { original_tag = CHI }
+
+	army_core_attack_factor  = var:CHI.mil_core_attack
+	army_core_defence_factor = var:CHI.mil_core_defence
+	planning_speed           = var:CHI.mil_planning_speed
+	max_planning             = var:CHI.mil_max_planning
+	max_command_power        = var:CHI.mil_max_command_power
+	land_reinforce_rate      = var:CHI.mil_reinforce
+	terrain_penalty_reduction = var:CHI.mil_terrain
+	conscription_factor      = var:CHI.mil_conscription
+	army_org_Factor          = var:CHI.mil_org
+}
+
+# 政治統治 (旧: CHI_BUNRETU, CHI_min系, CHI_syougunn系, CHI_kouteiを統合)
+CHI_political_governance = {
+	icon = GFX_idea_generic_political_power_bonus
+	enable = { original_tag = CHI }
+
+	stability_factor          = var:CHI.pol_stability
+	war_support_factor        = var:CHI.pol_war_support
+	political_power_factor    = var:CHI.pol_pp_factor
+	drift_defence_factor      = var:CHI.pol_drift_defence
+	military_leader_cost_factor = var:CHI.pol_leader_cost
+	surrender_limit           = var:CHI.pol_surrender_limit
+}
+
+# ============================================================
+
+CHI_leaderless_government = {
+	icon = GFX_idea_generic_political_power_bonus
+	enable = { original_tag = CHI }
+
+	political_power_gain = -0.50
+	stability_factor = -0.10
+}
+
+CHI_urban_rural_divide = {
+	icon = GFX_idea_generic_production_bonus
+	enable = { original_tag = CHI }
+
+	conscription_factor = var:CHI.urban_rural_manpower
+	industrial_capacity_factory = var:CHI.urban_rural_factory
+}
+
+CHI_anglo_japanese_shadow = {
+	icon = GFX_idea_generic_trade_bonus
+	enable = { original_tag = CHI }
+
+	industrial_capacity_factory = var:CHI.anglo_jap_factory
+}
+
+CHI_central_industrial_zone = {
+	icon = GFX_idea_generic_production_bonus
+	enable = { original_tag = CHI }
+	
+	industrial_capacity_factory = var:CHI.central_ind_factory
+}
+
+CHI_faction_tension = {
+	icon = GFX_idea_generic_political_power_bonus
+	enable = { original_tag = CHI }
+
+	stability_factor = -0.15
+}
+
+CHI_paris_growth = {
+	icon = GFX_idea_generic_communism_drift_bonus
+	enable = { original_tag = CHI }
+	# The actual growth is handled via events/on_actions since it's an influence increase
+	# This modifier serves as an indicator and holds penatlies like stability or PP
+	stability_factor = var:CHI.paris_growth_stab
+	political_power_gain = var:CHI.paris_growth_pp
+}
+
+CHI_export_economy = {
+	icon = GFX_idea_generic_trade_bonus
+	enable = { original_tag = CHI }
+
+	industrial_capacity_factory = var:CHI.export_eco_factory
+	production_factory_max_efficiency_factor = var:CHI.export_eco_eff
+}
+
+CHI_anglo_dependence = {
+	icon = GFX_idea_generic_trade_bonus
+	enable = { original_tag = CHI }
+
+	political_power_gain = -0.25
+	stability_factor = -0.05
+}

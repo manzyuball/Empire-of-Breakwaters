@@ -1,0 +1,92 @@
+# ============================================================================
+# エジプト（EGY）スクリプトトリガー
+# ============================================================================
+
+# ============================================================
+# I. 地理分類
+# ============================================================
+
+EGY_is_nile_state = {
+	OR = {
+		state = 907   # カイロ / 下エジプト
+		state = 446   # 上エジプト
+	}
+}
+
+EGY_is_suez_zone = {
+	state = 447   # スエズ
+}
+
+EGY_is_urban_state = {
+	OR = {
+		state = 907   # カイロ
+		state = 457   # アレキサンドリア
+	}
+}
+
+EGY_is_rural_state = {
+	NOT = { state = 907 }
+	NOT = { state = 457 }
+}
+
+EGY_is_coastal_state = {
+	OR = {
+		state = 457   # アレキサンドリア
+		state = 447   # スエズ
+	}
+}
+
+# ============================================================
+# II. ルート判定
+# ============================================================
+
+EGY_is_route_democratic = {
+	has_country_flag = EGY_democracy_majority_ready
+}
+
+EGY_is_route_royal = {
+	has_country_flag = EGY_neutrality_majority_ready
+}
+
+EGY_is_route_fascist = {
+	has_country_flag = EGY_fascism_majority_ready
+}
+
+EGY_is_route_communist = {
+	has_country_flag = EGY_communism_majority_ready
+}
+
+# ============================================================
+# III. 経済状態判定
+# ============================================================
+
+EGY_economy_in_crisis = {
+	OR = {
+		check_variable = { var = EGY_eco_consumer_goods value > 0.30 }
+		check_variable = { var = EGY_eco_stability value < -0.20 }
+		check_variable = { var = EGY_eco_factory_output value < -0.15 }
+	}
+}
+
+EGY_economy_booming = {
+	check_variable = { var = EGY_eco_consumer_goods value < -0.10 }
+	check_variable = { var = EGY_eco_stability value > 0.10 }
+	check_variable = { var = EGY_eco_factory_output value > 0.10 }
+}
+
+EGY_economy_neglected = {
+	check_variable = { var = EGY_eco_neglect_counter value > 3 }
+}
+
+# ============================================================
+# IV. 政治状態判定
+# ============================================================
+
+EGY_political_turmoil_high = {
+	check_variable = { var = EGY_pol_turmoil value < -0.15 }
+}
+
+EGY_political_stable = {
+	check_variable = { var = EGY_pol_turmoil value > -0.03 }
+	check_variable = { var = EGY_pol_legitimacy value > 0.05 }
+}

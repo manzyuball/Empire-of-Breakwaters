@@ -1,0 +1,155 @@
+﻿l_japanese:
+ CHI_influence_category:0 "「龍の行方」"
+ CHI_influence_category_desc:0 "中国は再び岐路に立たされている。旧弊な国民党、革命に燃える共産党、そして地方でうごめく軍閥たち……誰がこの国を率いるのか。来る内戦に向けて、各地の支持を取り付けよ。"
+ 
+ CHI_unification_category:0 "中国統一"
+ CHI_unification_category_desc:0 "中原を制した我々には、次なる歴史的使命がある。それは、未だ独立を保つ軍閥を平定し、列強に不当に奪われた領土を取り戻すことだ。"
+ 
+ CHI_civil_war_category:0 "血塗られた内戦"
+ CHI_civil_war_category_desc:0 "兄弟が血を流し合う悲劇的な内戦が始まった。この戦いには勝者か死者しか存在しない。"
+ 
+ CHI_boost_A_coastal:0 "沿岸部への工作（秩序派）"
+ CHI_boost_A_urban:0 "都市部への工作（秩序派）"
+ CHI_boost_A_rural:0 "農村部への工作（秩序派）"
+ CHI_boost_B_coastal:0 "沿岸部への工作（パリ派）"
+ CHI_boost_B_urban:0 "都市部への工作（パリ派）"
+ CHI_boost_B_rural:0 "農村部への工作（パリ派）"
+ CHI_boost_C_coastal:0 "沿岸部への工作（モスクワ派）"
+ CHI_boost_C_urban:0 "都市部への工作（モスクワ派）"
+ CHI_boost_C_rural:0 "農村部への工作（モスクワ派）"
+ 
+ CHI_check_route:0 "運命の時：内戦の準備完了"
+ CHI_check_route_desc:0 "もはや引き返すことはできない。国内の分断は修復不可能な段階に達し、各派閥は武力による決着を望んでいる。我々の工作の成果が、この血みどろの闘争における我々の立ち位置を決定するだろう。"
+ 
+ CHI_appease_warlord:0 "軍閥の懐柔"
+ CHI_appease_warlord_desc:0 "武力だけが解決策ではない。金と権威を使って彼らの反抗心を和らげるのだ。"
+ CHI_suppress_remnants:0 "残党の徹底弾圧"
+ CHI_suppress_remnants_desc:0 "隠れ潜む反乱分子を一掃し、我々の支配を盤石なものとする。"
+ CHI_raise_militia:0 "民兵の緊急動員"
+ CHI_raise_militia_desc:0 "正規軍だけでは足りない。武器を持てる者は全て戦線に投入せよ。"
+ CHI_desperate_propaganda:0 "決死のプロパガンダ"
+ CHI_desperate_propaganda_desc:0 "「最後の一兵まで戦え！」という激烈なスローガンを国中に響かせ、絶望的な状況を士気で補うのだ。"
+ CHI_request_foreign_aid:0 "列強への軍事支援要請"
+ CHI_request_foreign_aid_desc:0 "我々の大義を理解する（あるいは利用しようとする）外国勢力から武器の供与を受ける。"
+
+ # 影響力拡大ディシジョン
+ CHI_increase_influence_A_coastal:0 "沿岸部への秩序派浸透"
+ CHI_increase_influence_A_coastal_desc:0 "条約港と沿岸都市の商人・貿易業者を懐柔し、秩序派の影響力網を拡張する。安定した政府と自由貿易を旗印に、海外との繋がりを持つ勢力を取り込め。"
+
+ CHI_increase_influence_B_urban:0 "都市部へのパリ派浸透"
+ CHI_increase_influence_B_urban_desc:0 "工場地帯の労働者と学生運動に第四インターナショナルの思想を広める。パンフレットと扇動演説が、都市の不満を革命の燃料へと変えていく。"
+
+ CHI_increase_influence_C_rural:0 "農村部へのモスクワ派浸透"
+ CHI_increase_influence_C_rural_desc:0 "何百万という農民の怒りに訴え、土地改革と封建制打倒を約束する。農村に深く根を張ることで、都市を包囲する巨大な人民の波を作り出せ。"
+
+ CHI_check_influence_and_lock_route:0 "内戦の号砲を鳴らせ"
+ CHI_check_influence_and_lock_route_desc:0 "長期にわたる影響力工作の成果を問う。最も民心を掴んだ派閥が、内戦の主導権を握ることになる。この一手を打てば、もう後戻りはできない。"
+
+ # カウンターディシジョン
+ CHI_sabotage_A:0 "秩序派への妨害工作"
+ CHI_sabotage_A_desc:0 "秩序派の資金源と組織網を水面下で破壊する。彼らが首位に立っている今こそ、その足元を崩す絶好の機会だ。"
+
+ CHI_sabotage_B:0 "パリ派への妨害工作"
+ CHI_sabotage_B_desc:0 "都市で大きな顔をするパリ派の工場委員会と印刷所を密かに潰す。資金と人脈を断ち切れば、彼らの影響力は急速に萎む。"
+
+ CHI_sabotage_C:0 "モスクワ派への妨害工作"
+ CHI_sabotage_C_desc:0 "農村部で地下活動するモスクワ派の連絡網と武器庫を摘発する。農民の支持を削ぎ落とし、彼らの革命の芽を摘め。"
+
+ CHI_seize_central_zone:0 "中央工業地帯の浸透"
+ CHI_seize_central_zone_desc:0 "長江中流域の工業地帯は中国の命運を握る要衝だ。ここに最大の政治・経済資源を投入し、他派閥を押しのけて主導権を確立せよ。"
+
+ CHI_propaganda_wave:0 "全国プロパガンダ攻勢"
+ CHI_propaganda_wave_desc:0 "新聞、ラジオ、壁新聞……あらゆる手段を動員して我々の思想を全土に叩き込む。民心を掴む者が内戦を制する。"
+
+ CHI_defend_influence:0 "影響圏の防衛強化"
+ CHI_defend_influence_desc:0 "敵の妨害工作に備え、我々の影響力基盤を固める。政治部門の組織を引き締め、工作員の潜入と扇動活動を排除せよ。"
+
+ # 統治カテゴリ
+ CHI_governance_category:0 "国家建設"
+ CHI_governance_category_desc:0 "内戦の勝利者として、我々は今、廃墟の上に新たな国家を建設せねばならない。各ルートの思想と目標に従い、政策を実行していけ。"
+
+ # ルートA統治ディシジョン
+ CHI_A_trade_concession:0 "通商特権交渉"
+ CHI_A_trade_concession_desc:0 "列強との貿易協定を見直し、関税と通商条件を再交渉する。短期的な歳入増と引き換えに、輸出依存体質が深まるリスクがある。"
+
+ CHI_A_bureaucracy_reform:0 "官僚機構の近代化"
+ CHI_A_bureaucracy_reform_desc:0 "科挙制度の残滓と腐敗に蝕まれた旧来の官僚組織を一新する。効率的な行政機構こそが、強い国家の基盤となる。"
+
+ CHI_A_military_academy:0 "陸軍士官学校の拡充"
+ CHI_A_military_academy_desc:0 "近代的な戦術と指揮を学んだ将校を量産する。黄埔軍校の精神を引き継ぐ、新時代の国軍を育成せよ。"
+
+ CHI_A_suppress_strikes:0 "ストライキの鎮圧"
+ CHI_A_suppress_strikes_desc:0 "都市部で頻発するパリ派扇動のストライキを治安部隊で封じ込める。秩序の維持は安定した経済の前提条件だ。"
+
+ CHI_A_coastal_development:0 "沿岸開発投資"
+ CHI_A_coastal_development_desc:0 "返還された沿岸地域にインフラを整備し、海洋貿易の拠点として開発する。港湾と鉄道の整備が輸出経済を支える。"
+
+ # ルートB統治ディシジョン
+ CHI_B_five_year_plan:0 "五ヵ年計画の推進"
+ CHI_B_five_year_plan_desc:0 "ソ連の経験に倣い、国家主導の大規模工業化計画を推進する。鋼鉄と機械の生産こそが、新生中国の力の源泉だ。"
+
+ CHI_B_worker_mobilization:0 "労働者大動員"
+ CHI_B_worker_mobilization_desc:0 "全ての労働者を国家の建設事業に動員する。工場委員会を通じて生産目標を設定し、革命的熱意で達成させよ。"
+
+ CHI_B_urban_expansion:0 "都市拡張計画"
+ CHI_B_urban_expansion_desc:0 "都市部に新たな工場地区と労働者居住区を建設する。農村から人口を引き込み、プロレタリアートの基盤を拡大せよ。"
+
+ CHI_B_anti_guerrilla_sweep:0 "対ゲリラ掃討作戦"
+ CHI_B_anti_guerrilla_sweep_desc:0 "農村部で蠢くモスクワ派残党ゲリラを軍事作戦で壊滅させる。都市革命政権の安全保障のため、農村の脅威を根絶せよ。"
+
+ CHI_B_industrial_quota:0 "生産ノルマの強化"
+ CHI_B_industrial_quota_desc:0 "各工場に厳しい生産ノルマを課し、短期間での増産を達成する。革命的な熱意と規律で目標を超えよ。"
+
+ # ルートC統治ディシジョン
+ CHI_C_land_distribution:0 "土地分配運動"
+ CHI_C_land_distribution_desc:0 "地主から土地を没収し、農民に再分配する。数千年の搾取に終止符を打ち、農民の支持を磐石なものとする歴史的政策だ。"
+
+ CHI_C_soviet_equipment_request:0 "ソ連への装備要請"
+ CHI_C_soviet_equipment_request_desc:0 "北の同志国から武器と装備を取り寄せる。ソ連の支援は強力だが、その代償として政治的な影響力を受け入れる必要がある。"
+
+ CHI_C_rural_militia_training:0 "農村民兵の訓練"
+ CHI_C_rural_militia_training_desc:0 "農村出身の民兵に山岳戦・ゲリラ戦の戦術を叩き込む。正規軍に劣る装備を、地の利と熟知した地形で補え。"
+
+ CHI_C_collectivize_region:0 "地方の集団農場化"
+ CHI_C_collectivize_region_desc:0 "農村地域に集団農場を設立し、生産を国家管理下に置く。個人の土地所有を廃止し、共同生産体制を確立せよ。"
+
+ CHI_C_self_reliance_drive:0 "自力更生運動"
+ CHI_C_self_reliance_drive_desc:0 "外国技術への依存を断ち切り、国内の創意工夫で全てを解決する。貧しくとも誇り高く、自らの力で国を建てるのだ。"
+
+ CHI_C_rural_militia_training_tt:0 "農村民兵に山岳・ゲリラ戦術を訓練することで、コア州での防衛力が向上する。"
+
+ # ============================================================
+ # Phase 8: 州別影響力浸透ディシジョン
+ # ============================================================
+ CHI_expand_A_to_state:0 "秩序派：特定州への浸透工作"
+ CHI_expand_A_to_state_desc:0 "対象州に秘密工作員を送り込み、秩序派の影響力を直接植え付ける。中央工業地帯であれば追加の戦略的価値がある。"
+
+ CHI_expand_B_to_state:0 "パリ派：特定州への組織浸透"
+ CHI_expand_B_to_state_desc:0 "対象州の労働者・知識人に第四インターナショナルの思想を広める。工業の心臓部ではとりわけ効果的だ。"
+
+ CHI_expand_C_to_state:0 "モスクワ派：特定州への農民工作"
+ CHI_expand_C_to_state_desc:0 "対象州の農民に土地分配を約束し、モスクワ派への支持を取り付ける。中央工業地帯への浸透は戦略的に重要だ。"
+
+ # ============================================================
+ # Phase 9: DM デバフ解除ディシジョン
+ # ============================================================
+ CHI_reform_consumer_goods:0 "消費財改革"
+ CHI_reform_consumer_goods_desc:0 "戦時体制下での過剰な消費財割当を段階的に是正し、工業生産への資源配分を改善する。"
+
+ CHI_modernize_factories:0 "工場近代化"
+ CHI_modernize_factories_desc:0 "老朽化した機械と非効率な生産工程を更新し、工場の生産効率を段階的に引き上げる。"
+
+ CHI_arms_production_boost:0 "軍需増産計画"
+ CHI_arms_production_boost_desc:0 "兵器工場の増強と生産ラインの最適化により、軍需品の生産速度を改善する。"
+
+ CHI_officer_training:0 "将校訓練プログラム"
+ CHI_officer_training_desc:0 "軍士官の教育水準を向上させ、作戦計画速度と最大計画値を段階的に改善する。"
+
+ CHI_logistics_reform:0 "兵站組織の改革"
+ CHI_logistics_reform_desc:0 "補給線の効率化と前線補充率の向上により、軍の持続戦闘能力を高める。"
+
+ CHI_stabilize_government:0 "政権安定化政策"
+ CHI_stabilize_government_desc:0 "内戦後の混乱した政治状況を段階的に安定させ、国民の団結と戦意を高める。"
+
+ CHI_reduce_leader_cost:0 "指揮官育成・登用制度"
+ CHI_reduce_leader_cost_desc:0 "優秀な指揮官を積極的に登用・育成し、将官のコストを引き下げる。内戦終結後のみ実施可能。"

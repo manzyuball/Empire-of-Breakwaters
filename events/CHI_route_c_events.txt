@@ -1,0 +1,215 @@
+add_namespace = CHI_route_c
+
+# ============================================================
+# CHI_route_c.1 - パリ派を罠にはめる（粛清ルート）
+# ============================================================
+country_event = {
+	id = CHI_route_c.1
+	title = CHI_route_c.1.t
+	desc = CHI_route_c.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	# 粛清する: パリ派を完全排除
+	option = {
+		name = CHI_route_c.1.a
+		# 都市社会主義勢力の一掃
+		add_popularity = { ideology = democratic popularity = -0.15 }
+		add_stability = 0.10
+		add_political_power = 50
+		# パリ派成長修正子が存在すれば除去
+		if = {
+			limit = { has_dynamic_modifier = { modifier = CHI_paris_growth } }
+			remove_dynamic_modifier = { modifier = CHI_paris_growth }
+		}
+		# 安定した農村支配基盤を確立
+		add_to_variable = { var = CHI.pol_stability value = 0.05 }
+		add_to_variable = { var = CHI.pol_war_support value = 0.05 }
+		# フラグ: パリ派は粛清済み
+		set_country_flag = CHI_paris_purged
+		# 都市からの抵抗イベント
+		country_event = { id = CHI_route_c.10 days = 15 }
+	}
+
+	# 追放する: 国外へ退去させ、影響力を無力化
+	option = {
+		name = CHI_route_c.1.b
+		add_popularity = { ideology = democratic popularity = -0.08 }
+		add_stability = 0.05
+		add_political_power = 25
+		if = {
+			limit = { has_dynamic_modifier = { modifier = CHI_paris_growth } }
+			remove_dynamic_modifier = { modifier = CHI_paris_growth }
+		}
+		# 小さな都市工業ボーナスは残る（中産階級の協力）
+		add_to_variable = { var = CHI.eco_output value = 0.01 }
+		set_country_flag = CHI_paris_purged
+	}
+}
+
+# ============================================================
+# CHI_route_c.2 - パリ派との共存（取り込みルート）
+# ============================================================
+country_event = {
+	id = CHI_route_c.2
+	title = CHI_route_c.2.t
+	desc = CHI_route_c.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	# 共存する: 都市の協力を得るが農村主体との摩擦が続く
+	option = {
+		name = CHI_route_c.2.a
+		# 永続的な安定度ペナルティ（農村派 vs 都市派の摩擦）
+		add_to_variable = { var = CHI.pol_stability value = -0.05 }
+		# 都市工業ボーナス（都市社会主義者の協力）
+		add_to_variable = { var = CHI.eco_output value = 0.03 }
+		add_to_variable = { var = CHI.eco_factory_efficiency value = 0.02 }
+		# パリ派成長修正子を追加（対立の象徴）
+		if = {
+			limit = { NOT = { has_dynamic_modifier = { modifier = CHI_paris_growth } } }
+			add_dynamic_modifier = { modifier = CHI_paris_growth }
+		}
+		set_variable = { var = CHI.paris_growth_stab value = -0.05 }
+		set_variable = { var = CHI.paris_growth_pp value = -0.10 }
+		set_country_flag = CHI_paris_tolerated
+	}
+
+	# 吸収する: 農村革命思想に統合、摩擦は最小化
+	option = {
+		name = CHI_route_c.2.b
+		# 小さなペナルティで済む代わりに工業ボーナスも縮小
+		add_to_variable = { var = CHI.pol_stability value = -0.02 }
+		add_to_variable = { var = CHI.eco_output value = 0.01 }
+		add_to_variable = { var = CHI.mil_conscription value = 0.01 }
+		set_country_flag = CHI_paris_tolerated
+	}
+}
+
+# ============================================================
+# CHI_route_c.10 - 都市でのパリ派抵抗（粛清の代価）
+# ============================================================
+country_event = {
+	id = CHI_route_c.10
+	title = CHI_route_c.10.t
+	desc = CHI_route_c.10.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	# 軍事力で鎮圧
+	option = {
+		name = CHI_route_c.10.a
+		add_stability = -0.05
+		add_war_support = 0.02
+		add_manpower = -5000
+		# 都市コントロール維持
+		every_owned_state = {
+			limit = { CHI_is_urban_state = yes }
+			add_resistance = -5
+		}
+	}
+
+	# 政治的妥協で収束
+	option = {
+		name = CHI_route_c.10.b
+		add_stability = -0.02
+		add_political_power = -30
+		# 部分的民主化（農村革命政権内の都市議席）
+		add_to_variable = { var = CHI.pol_pp_factor value = -0.02 }
+	}
+}
+
+# ============================================================
+# CHI_route_c.100 - ソ連からの初期支援
+# ROOT = CHI, FROM = SOV (triggered by CHI_C_soviet_alliance NF)
+# ============================================================
+country_event = {
+	id = CHI_route_c.100
+	title = CHI_route_c.100.t
+	desc = CHI_route_c.100.d
+	picture = GFX_report_event_soviet_soldiers
+
+	is_triggered_only = yes
+
+	# 装備支援を受け入れる
+	option = {
+		name = CHI_route_c.100.a
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = SOV }
+		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 300 producer = SOV }
+		# ソ連への政治的依存（戦後に問題となる）
+		add_to_variable = { var = CHI.pol_stability value = -0.02 }
+		add_to_variable = { var = CHI.pol_drift_defence value = -0.05 }
+		SOV = { add_opinion_modifier = { target = ROOT modifier = CHI_diplomatic_success } }
+	}
+
+	# 独立を守るため最小限の支援のみ受け入れる
+	option = {
+		name = CHI_route_c.100.b
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 producer = SOV }
+		# 自力更生ボーナス
+		add_to_variable = { var = CHI.eco_research value = 0.01 }
+	}
+}
+
+# ============================================================
+# CHI_route_c.101 - ソ連参戦
+# ROOT = CHI, triggered after CHI_C_coastal_peoples_war NF
+# ============================================================
+country_event = {
+	id = CHI_route_c.101
+	title = CHI_route_c.101.t
+	desc = CHI_route_c.101.d
+	picture = GFX_report_event_soviet_soldiers
+
+	is_triggered_only = yes
+
+	# ソ連の直接参戦を要請
+	option = {
+		name = CHI_route_c.101.a
+		# ソ連が満州国に宣戦布告
+		SOV = {
+			if = {
+				limit = {
+					country_exists = MAN
+					NOT = { is_in_faction_with = MAN }
+					NOT = { has_war_with = MAN }
+				}
+				declare_war_on = {
+					target = MAN
+					type = annex_everything
+				}
+			}
+			# 対日参戦も視野に
+			if = {
+				limit = {
+					country_exists = JAP
+					JAP = { has_subject = MAN }
+					NOT = { has_war_with = JAP }
+				}
+				# 軍事通行権でCHIを支援
+				give_military_access = { target = ROOT days = 730 }
+			}
+		}
+		# CHIはソ連に軍事通行権を付与
+		if = {
+			limit = { NOT = { SOV = { has_military_access_to = ROOT } } }
+			SOV = { give_military_access = { target = ROOT days = 730 } }
+		}
+		add_political_power = 50
+		add_war_support = 0.10
+	}
+
+	# 単独での沿岸人民戦争を選択
+	option = {
+		name = CHI_route_c.101.b
+		# ソ連不介入の代わりに独立路線を維持
+		add_to_variable = { var = CHI.mil_core_attack value = 0.05 }
+		add_to_variable = { var = CHI.mil_core_defence value = 0.05 }
+		add_to_variable = { var = CHI.pol_drift_defence value = 0.05 }
+		add_war_support = 0.08
+		add_political_power = 25
+	}
+}

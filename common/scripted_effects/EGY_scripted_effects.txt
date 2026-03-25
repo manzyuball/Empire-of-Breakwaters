@@ -109,6 +109,25 @@ EGY_clamp_economy_vars = {
 	clamp_variable = { var = EGY_eco_dock_speed       min = -0.20 max = 0.20 }
 }
 
+EGY_clamp_political_vars = {
+	clamp_variable = { var = EGY_pol_turmoil       min = -0.30 max = 0.10 }
+	clamp_variable = { var = EGY_pol_legitimacy     min = -0.30 max = 0.20 }
+	clamp_variable = { var = EGY_pol_repression     min = -0.10 max = 0.15 }
+	clamp_variable = { var = EGY_pol_drift_defence  min = -0.30 max = 0.30 }
+}
+
+EGY_clamp_suez_vars = {
+	clamp_variable = { var = EGY_suez_revenue  min = -0.10 max = 0.15 }
+	clamp_variable = { var = EGY_suez_traffic  min = -0.10 max = 0.20 }
+	clamp_variable = { var = EGY_suez_control  min = -0.05 max = 0.10 }
+}
+
+EGY_clamp_military_vars = {
+	clamp_variable = { var = EGY_mil_training   min = -0.10 max = 0.15 }
+	clamp_variable = { var = EGY_mil_equipment  min = -0.10 max = 0.15 }
+	clamp_variable = { var = EGY_mil_doctrine   min = -0.20 max = 0.10 }
+}
+
 # 民主ルート：経済の下限を固定（マイナス変数を0に切り上げ）
 EGY_democracy_economy_floor = {
 	if = {
@@ -229,15 +248,97 @@ EGY_independence_economic_boost = {
 # IV. イデオロギー関連エフェクト（ディシジョンから呼ぶ）
 # ============================================================
 
-# 政治的不安定 → 経済にペナルティ
+# 政治的不安定 → 経済+政治にペナルティ
 EGY_ideology_instability_penalty = {
 	add_to_variable = { var = EGY_eco_stability value = -0.05 }
 	add_to_variable = { var = EGY_eco_consumer_goods value = 0.03 }
+	add_to_variable = { var = EGY_pol_turmoil value = -0.04 }
+	add_to_variable = { var = EGY_pol_legitimacy value = -0.03 }
 	EGY_clamp_economy_vars = yes
+	EGY_clamp_political_vars = yes
 }
 
-# 政治的安定化 → 経済にボーナス
+# 政治的安定化 → 経済+政治にボーナス
 EGY_ideology_stability_bonus = {
 	add_to_variable = { var = EGY_eco_stability value = 0.05 }
+	add_to_variable = { var = EGY_pol_turmoil value = 0.03 }
+	add_to_variable = { var = EGY_pol_legitimacy value = 0.03 }
 	EGY_clamp_economy_vars = yes
+	EGY_clamp_political_vars = yes
+}
+
+# ============================================================
+# V. 政治混乱度（political_turmoil）エフェクト
+# ============================================================
+
+# 混乱悪化（イデオロギー変更・革命時）
+EGY_political_shift_turmoil_up = {
+	add_to_variable = { var = EGY_pol_turmoil value = -0.05 }
+	add_to_variable = { var = EGY_pol_legitimacy value = -0.03 }
+	EGY_clamp_political_vars = yes
+}
+
+# 安定化（民主改革・選挙時）
+EGY_political_shift_stabilize = {
+	add_to_variable = { var = EGY_pol_turmoil value = 0.03 }
+	add_to_variable = { var = EGY_pol_legitimacy value = 0.05 }
+	EGY_clamp_political_vars = yes
+}
+
+# 弾圧強化（秘密警察・メディア統制）
+EGY_political_shift_repress = {
+	add_to_variable = { var = EGY_pol_repression value = 0.03 }
+	add_to_variable = { var = EGY_pol_turmoil value = 0.02 }
+	add_to_variable = { var = EGY_pol_drift_defence value = 0.10 }
+	EGY_clamp_political_vars = yes
+}
+
+# ============================================================
+# VI. スエズ運河（suez_canal）エフェクト
+# ============================================================
+
+# 収入増（通行料調整時）
+EGY_suez_shift_revenue_up = {
+	add_to_variable = { var = EGY_suez_revenue value = -0.03 }
+	add_to_variable = { var = EGY_suez_traffic value = 0.03 }
+	EGY_clamp_suez_vars = yes
+}
+
+# 軍事支配強化
+EGY_suez_shift_control_up = {
+	add_to_variable = { var = EGY_suez_control value = 0.03 }
+	EGY_clamp_suez_vars = yes
+}
+
+# 国有化による急変
+EGY_suez_nationalize = {
+	add_to_variable = { var = EGY_suez_revenue value = -0.08 }
+	add_to_variable = { var = EGY_suez_control value = 0.05 }
+	add_to_variable = { var = EGY_suez_traffic value = -0.05 }
+	EGY_clamp_suez_vars = yes
+}
+
+# ============================================================
+# VII. 軍近代化（military_modernization）エフェクト
+# ============================================================
+
+# 訓練向上
+EGY_military_shift_training = {
+	add_to_variable = { var = EGY_mil_training value = 0.03 }
+	add_to_variable = { var = EGY_mil_doctrine value = -0.03 }
+	EGY_clamp_military_vars = yes
+}
+
+# 装備調達
+EGY_military_shift_equipment = {
+	add_to_variable = { var = EGY_mil_equipment value = 0.03 }
+	EGY_clamp_military_vars = yes
+}
+
+# 軍事ドクトリン大改革（NF用）
+EGY_military_major_reform = {
+	add_to_variable = { var = EGY_mil_training value = 0.05 }
+	add_to_variable = { var = EGY_mil_equipment value = 0.03 }
+	add_to_variable = { var = EGY_mil_doctrine value = -0.05 }
+	EGY_clamp_military_vars = yes
 }

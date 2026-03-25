@@ -1,0 +1,38 @@
+opinion_modifiers = {
+
+	# 外交的成功 - 積極的な合意
+	CHI_diplomatic_success = {
+		value = 50
+		decay = 0.5
+	}
+
+	# 外交的大成功 - 重大な合意（沿岸・満州返還等）
+	CHI_diplomatic_major_success = {
+		value = 100
+		decay = 0.3
+	}
+
+	# 外交的失敗 - 交渉決裂
+	CHI_diplomatic_rebuff = {
+		value = -50
+		decay = 0.5
+	}
+
+	# 外交的大失敗 - 重大な決裂
+	CHI_diplomatic_major_rebuff = {
+		value = -100
+		decay = 0.3
+	}
+
+	# 影響力圏の妨害工作
+	CHI_sabotage_detected = {
+		value = -30
+		decay = 1.0
+	}
+
+	# 統一戦争への支持
+	CHI_unification_support = {
+		value = 25
+		decay = 0.5
+	}
+}

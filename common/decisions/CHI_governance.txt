@@ -1,0 +1,625 @@
+CHI_governance_category = {
+
+	# ============================================================
+	# ルートA統治ディシジョン
+	# 設計思想: 輸出経済の成長 vs パリ派影響力の自動増大
+	# ============================================================
+
+	# 通商特権交渉
+	CHI_A_trade_concession = {
+		icon = generic_industry
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_A = yes
+			has_completed_focus = CHI_A_export_economy
+		}
+		visible = {
+			CHI_is_route_A = yes
+		}
+		cost = 50
+		days_remove = 90
+		fire_only_once = no
+
+		ai_will_do = { factor = 7 }
+
+		complete_effect = {
+			# 輸出規制の緩和: 収入源になるが戦争準備を圧迫
+			add_to_variable = { var = CHI.eco_min_export value = -0.03 }
+			add_to_variable = { var = CHI.anglo_jap_factory value = 0.05 }
+			add_political_power = -10
+		}
+	}
+
+	# 官僚機構の近代化
+	CHI_A_bureaucracy_reform = {
+		icon = generic_political_actions
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_A = yes
+			has_completed_focus = CHI_A_new_order
+		}
+		visible = {
+			CHI_is_route_A = yes
+		}
+		cost = 75
+		days_remove = 120
+		fire_only_once = yes
+
+		ai_will_do = { factor = 8 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.pol_pp_factor value = 0.05 }
+			add_to_variable = { var = CHI.eco_consumer_goods value = -0.02 }
+		}
+	}
+
+	# 陸軍士官学校の拡充
+	CHI_A_military_academy = {
+		icon = generic_prepare_for_war
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_A = yes
+			has_completed_focus = CHI_A_modernize_army
+		}
+		visible = {
+			CHI_is_route_A = yes
+		}
+		cost = 60
+		days_remove = 90
+		days_re_enable = 120
+		fire_only_once = no
+
+		ai_will_do = { factor = 8 }
+
+		complete_effect = {
+			army_experience = 25
+			add_to_variable = { var = CHI.mil_planning_speed value = 0.03 }
+		}
+	}
+
+	# ストライキ鎮圧
+	CHI_A_suppress_strikes = {
+		icon = generic_political_pressure
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_A = yes
+			has_dynamic_modifier = { modifier = CHI_paris_growth }
+		}
+		visible = {
+			CHI_is_route_A = yes
+			has_dynamic_modifier = { modifier = CHI_paris_growth }
+		}
+		cost = 30
+		days_remove = 30
+		days_re_enable = 60
+
+		ai_will_do = { factor = 6 }
+
+		complete_effect = {
+			# パリ派成長の安定度ペナルティを改善
+			add_to_variable = { var = CHI.paris_growth_stab value = 0.02 }
+			# ただし鎮圧自体が安定度を消費する
+			add_stability = -0.02
+		}
+	}
+
+	# 沿岸開発投資
+	CHI_A_coastal_development = {
+		icon = generic_build_infrastructure
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_A = yes
+			has_completed_focus = CHI_A_coastal_negotiation
+			any_owned_state = { CHI_is_coastal_state = yes }
+		}
+		visible = {
+			CHI_is_route_A = yes
+		}
+		cost = 40
+		days_remove = 60
+		days_re_enable = 120
+
+		ai_will_do = { factor = 7 }
+
+		complete_effect = {
+			# 沿岸州にインフラ整備
+			random_owned_controlled_state = {
+				limit = { CHI_is_coastal_state = yes }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = no
+				}
+			}
+			add_to_variable = { var = CHI.eco_output value = 0.02 }
+		}
+	}
+
+	# ============================================================
+	# ルートB統治ディシジョン
+	# 設計思想: 都市工業の極大化 vs 農村崩壊によるゲリラリスク
+	# ============================================================
+
+	# 五ヵ年計画の推進
+	CHI_B_five_year_plan = {
+		icon = generic_industry
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_B = yes
+			has_completed_focus = CHI_B_maximize_industry
+		}
+		visible = {
+			CHI_is_route_B = yes
+		}
+		cost = 75
+		days_remove = 120
+		days_re_enable = 180
+
+		ai_will_do = { factor = 9 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.eco_output value = 0.05 }
+			# 急進的な工業化は社会的安定を損なう
+			add_to_variable = { var = CHI.pol_stability value = -0.03 }
+		}
+	}
+
+	# 労働者大動員
+	CHI_B_worker_mobilization = {
+		icon = generic_manpower
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_B = yes
+			has_completed_focus = CHI_B_peoples_government
+		}
+		visible = {
+			CHI_is_route_B = yes
+		}
+		cost = 40
+		days_remove = 60
+		days_re_enable = 90
+
+		ai_will_do = { factor = 7 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.mil_conscription value = 0.01 }
+			add_to_variable = { var = CHI.eco_factory_efficiency value = 0.03 }
+		}
+	}
+
+	# 都市拡張計画
+	CHI_B_urban_expansion = {
+		icon = generic_build_infrastructure
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_B = yes
+			has_completed_focus = CHI_B_urban_network
+			any_owned_state = { CHI_is_urban_state = yes }
+		}
+		visible = {
+			CHI_is_route_B = yes
+		}
+		cost = 50
+		days_remove = 90
+		days_re_enable = 120
+
+		ai_will_do = { factor = 7 }
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = { CHI_is_urban_state = yes }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = no
+				}
+			}
+			# 農村への投資不足でconsgoodsが上がる
+			add_to_variable = { var = CHI.eco_consumer_goods value = -0.02 }
+		}
+	}
+
+	# 対ゲリラ掃討作戦
+	CHI_B_anti_guerrilla_sweep = {
+		icon = generic_prepare_for_war
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_B = yes
+			any_owned_state = { CHI_is_rural_state = yes }
+		}
+		visible = {
+			CHI_is_route_B = yes
+		}
+		cost = 35
+		days_remove = 45
+		days_re_enable = 60
+
+		ai_will_do = { factor = 6 }
+
+		complete_effect = {
+			# 農村抵抗の抑圧
+			every_owned_state = {
+				limit = { CHI_is_rural_state = yes }
+				add_resistance = -3
+			}
+			add_stability = 0.02
+			set_country_flag = { flag = CHI_anti_guerrilla_active days = 90 value = 1 }
+		}
+	}
+
+	# 生産ノルマ強化
+	CHI_B_industrial_quota = {
+		icon = generic_industry
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_B = yes
+			has_completed_focus = CHI_B_peoples_government
+		}
+		visible = {
+			CHI_is_route_B = yes
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 90
+
+		ai_will_do = { factor = 5 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.eco_output value = 0.03 }
+			# 強制ノルマは民心を離れさせる
+			add_to_variable = { var = CHI.pol_war_support value = -0.02 }
+		}
+	}
+
+	# ============================================================
+	# ルートC統治ディシジョン
+	# 設計思想: 農村動員力 vs 都市工業力不足、ソ連援助への依存
+	# ============================================================
+
+	# 土地分配運動
+	CHI_C_land_distribution = {
+		icon = generic_political_actions
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_C = yes
+			has_completed_focus = CHI_C_land_reform
+		}
+		visible = {
+			CHI_is_route_C = yes
+		}
+		cost = 40
+		days_remove = 60
+		days_re_enable = 120
+
+		ai_will_do = { factor = 8 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.mil_conscription value = 0.01 }
+			add_to_variable = { var = CHI.pol_stability value = 0.02 }
+			# 農業への再分配は工業生産を圧迫
+			add_to_variable = { var = CHI.eco_output value = -0.02 }
+		}
+	}
+
+	# ソ連装備要請
+	CHI_C_soviet_equipment_request = {
+		icon = generic_military_deal
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_C = yes
+			has_completed_focus = CHI_C_soviet_alliance
+			country_exists = SOV
+			SOV = { NOT = { has_war_with = ROOT } }
+		}
+		visible = {
+			CHI_is_route_C = yes
+		}
+		cost = 50
+		days_remove = 30
+		days_re_enable = 120
+
+		ai_will_do = { factor = 9 }
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 3000 producer = SOV }
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 producer = SOV }
+			# ソ連依存の政治的代価
+			add_to_variable = { var = CHI.pol_drift_defence value = -0.03 }
+		}
+	}
+
+	# 農村民兵訓練
+	CHI_C_rural_militia_training = {
+		icon = generic_prepare_for_war
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_C = yes
+			has_completed_focus = CHI_C_peoples_army
+		}
+		visible = {
+			CHI_is_route_C = yes
+		}
+		cost = 30
+		days_remove = 45
+		days_re_enable = 90
+
+		ai_will_do = { factor = 7 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.mil_core_defence value = 0.03 }
+			custom_effect_tooltip = CHI_C_rural_militia_training_tt
+			# 訓練速度向上: 軍事経験値
+			army_experience = 10
+		}
+	}
+
+	# 地方集団農場化
+	CHI_C_collectivize_region = {
+		icon = generic_build_infrastructure
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_C = yes
+			any_owned_state = { CHI_is_rural_state = yes }
+		}
+		visible = {
+			CHI_is_route_C = yes
+		}
+		cost = 60
+		days_remove = 90
+		days_re_enable = 120
+
+		ai_will_do = { factor = 6 }
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = { CHI_is_rural_state = yes }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = no
+				}
+			}
+			# 農村の急速な集団化は消費財不足を招く
+			add_to_variable = { var = CHI.eco_consumer_goods value = -0.03 }
+		}
+	}
+
+	# ============================================================
+	# Phase 9: DM デバフ解除ディシジョン（3ルート共通・段階的改善）
+	# ============================================================
+
+	# 経済デバフ解除①: 消費財改革（consumer_goods デバフ軽減）
+	CHI_reform_consumer_goods = {
+		icon = generic_industry
+		allowed = { original_tag = CHI }
+		available = {
+			OR = {
+				has_completed_focus = CHI_A_export_economy
+				has_completed_focus = CHI_B_maximize_industry
+				has_completed_focus = CHI_C_land_reform
+			}
+		}
+		visible = {
+			has_country_flag = CHI_route_determined
+			OR = {
+				has_completed_focus = CHI_A_export_economy
+				has_completed_focus = CHI_B_maximize_industry
+				has_completed_focus = CHI_C_land_reform
+			}
+		}
+		cost = 50
+		days_remove = 120
+		days_re_enable = 120
+		fire_only_once = no
+
+		ai_will_do = { factor = 8 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.eco_consumer_goods value = -0.02 }
+		}
+	}
+
+	# 経済デバフ解除②: 工場近代化（factory_efficiency デバフ軽減）
+	CHI_modernize_factories = {
+		icon = generic_build_infrastructure
+		allowed = { original_tag = CHI }
+		available = {
+			OR = {
+				has_completed_focus = CHI_A_industrial_expansion
+				has_completed_focus = CHI_B_urban_network
+				has_completed_focus = CHI_C_rural_industry
+			}
+		}
+		visible = {
+			has_country_flag = CHI_route_determined
+			OR = {
+				has_completed_focus = CHI_A_industrial_expansion
+				has_completed_focus = CHI_B_urban_network
+				has_completed_focus = CHI_C_rural_industry
+			}
+		}
+		cost = 60
+		days_remove = 120
+		days_re_enable = 150
+		fire_only_once = no
+
+		ai_will_do = { factor = 7 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.eco_factory_efficiency value = 0.02 }
+		}
+	}
+
+	# 経済デバフ解除③: 軍需増産（mil_speed デバフ軽減）
+	CHI_arms_production_boost = {
+		icon = generic_prepare_for_war
+		allowed = { original_tag = CHI }
+		available = {
+			OR = {
+				has_completed_focus = CHI_A_modernize_army
+				has_completed_focus = CHI_B_urban_blitz
+				has_completed_focus = CHI_C_peoples_army
+			}
+		}
+		visible = {
+			has_country_flag = CHI_route_determined
+			OR = {
+				has_completed_focus = CHI_A_modernize_army
+				has_completed_focus = CHI_B_urban_blitz
+				has_completed_focus = CHI_C_peoples_army
+			}
+		}
+		cost = 50
+		days_remove = 90
+		days_re_enable = 120
+		fire_only_once = no
+
+		ai_will_do = { factor = 7 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.eco_mil_speed value = 0.05 }
+		}
+	}
+
+	# 軍事デバフ解除①: 将校訓練（planning_speed / max_planning 改善）
+	CHI_officer_training = {
+		icon = generic_prepare_for_war
+		allowed = { original_tag = CHI }
+		available = {
+			OR = {
+				has_completed_focus = CHI_A_modernize_army
+				has_completed_focus = CHI_B_urban_blitz
+				has_completed_focus = CHI_C_peoples_army
+			}
+		}
+		visible = {
+			has_country_flag = CHI_route_determined
+			OR = {
+				has_completed_focus = CHI_A_modernize_army
+				has_completed_focus = CHI_B_urban_blitz
+				has_completed_focus = CHI_C_peoples_army
+			}
+		}
+		cost = 40
+		days_remove = 90
+		days_re_enable = 120
+		fire_only_once = no
+
+		ai_will_do = { factor = 8 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.mil_planning_speed value = 0.03 }
+			add_to_variable = { var = CHI.mil_max_planning    value = 0.05 }
+		}
+	}
+
+	# 軍事デバフ解除②: 兵站改革（reinforce_rate / terrain 改善）
+	CHI_logistics_reform = {
+		icon = generic_prepare_for_war
+		allowed = { original_tag = CHI }
+		available = {
+			OR = {
+				has_completed_focus = CHI_A_modernize_army
+				has_completed_focus = CHI_B_urban_blitz
+				has_completed_focus = CHI_C_peoples_army
+			}
+		}
+		visible = {
+			has_country_flag = CHI_route_determined
+			OR = {
+				has_completed_focus = CHI_A_modernize_army
+				has_completed_focus = CHI_B_urban_blitz
+				has_completed_focus = CHI_C_peoples_army
+			}
+		}
+		cost = 40
+		days_remove = 90
+		days_re_enable = 120
+		fire_only_once = no
+
+		ai_will_do = { factor = 7 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.mil_reinforce value = 0.02 }
+			add_to_variable = { var = CHI.mil_terrain   value = 0.01 }
+		}
+	}
+
+	# 政治デバフ解除①: 政権安定化（stability / war_support 改善）
+	CHI_stabilize_government = {
+		icon = generic_political_actions
+		allowed = { original_tag = CHI }
+		available = {
+			OR = {
+				has_completed_focus = CHI_A_iron_stability
+				has_completed_focus = CHI_B_total_urban_control
+				has_completed_focus = CHI_C_peoples_republic
+			}
+		}
+		visible = {
+			has_country_flag = CHI_route_determined
+			OR = {
+				has_completed_focus = CHI_A_iron_stability
+				has_completed_focus = CHI_B_total_urban_control
+				has_completed_focus = CHI_C_peoples_republic
+			}
+		}
+		cost = 50
+		days_remove = 90
+		days_re_enable = 120
+		fire_only_once = no
+
+		ai_will_do = { factor = 8 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.pol_stability   value = 0.03 }
+			add_to_variable = { var = CHI.pol_war_support value = 0.03 }
+		}
+	}
+
+	# 政治デバフ解除②: 指揮官育成（leader_cost 改善）
+	CHI_reduce_leader_cost = {
+		icon = generic_political_actions
+		allowed = { original_tag = CHI }
+		available = {
+			has_country_flag = CHI_route_determined
+			NOT = { has_civil_war = yes }
+		}
+		visible = {
+			has_country_flag = CHI_route_determined
+		}
+		cost = 35
+		days_remove = 90
+		days_re_enable = 150
+		fire_only_once = no
+
+		ai_will_do = { factor = 7 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.pol_leader_cost value = 0.20 }
+		}
+	}
+
+	# 自力更生運動
+	CHI_C_self_reliance_drive = {
+		icon = generic_industry
+		allowed = { original_tag = CHI }
+		available = {
+			CHI_is_route_C = yes
+		}
+		visible = {
+			CHI_is_route_C = yes
+		}
+		cost = 35
+		days_remove = 60
+		days_re_enable = 90
+
+		ai_will_do = { factor = 7 }
+
+		complete_effect = {
+			# 国内技術の自立: 装備改修コスト低下と研究加速
+			add_to_variable = { var = CHI.eco_upgrade_cost value = -0.10 }
+			add_to_variable = { var = CHI.eco_research value = 0.02 }
+		}
+	}
+}

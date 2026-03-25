@@ -1,40 +1,8 @@
-﻿division_template = {
-	name = "駐屯兵"				# Represents: German-trained divisions (better equipment than rest),
-	division_names_group = CHI_INF_01
-									# 	as well as two-division infantry corps (generally poorly-equipped militias),
-	regiments = {					#	and local militia groups.
-		infantry = { x = 0 y = 0 }	# Note: Chinese divisions were brigade-sized compared other nations' armies
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-	}
-	support = {
-		recon = { x = 0 y = 0 }
-	}
+### CHI Division Templates ###
 
-	priority = 0 # garrison
-}
-division_template = {
-	name = "駐屯兵"			# Represents three-division infantry corps (generally poorly-equipped militias)
-	division_names_group = CHI_INF_01
-
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-	}
-}
 division_template = {
 	name = "中華国防軍"
-	division_names_group = CHI_CAV_01
-
+	division_names_group = CHI_INF_01
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -46,469 +14,357 @@ division_template = {
 		infantry = { x = 1 y = 2 }
 		infantry = { x = 1 y = 3 }
 		infantry = { x = 1 y = 4 }
-		
 	}
 	support = {
 		engineer = { x = 0 y = 0 }
-		recon = { x = 0 y = 1 }
+		recon    = { x = 0 y = 1 }
 	}
 }
 
 division_template = {
-	name = "中華国防軍軽機械化部隊"
+	name = "駐屯兵"
+	division_names_group = CHI_INF_01
 	regiments = {
-		light_armor = { x = 0 y = 0 }
-		light_armor = { x = 0 y = 1 }
-        light_armor = { x = 0 y = 2 }
-		motorized = { x = 1 y = 0 }
-        motorized = { x = 1 y = 1 }
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
 	}
 	support = {
-		mot_recon = { x = 0 y = 0 }
-        artillery = { x = 0 y = 1 }
+		recon = { x = 0 y = 0 }
 	}
+	priority = 0
 }
 
 division_template = {
-	name = "中華国防軍重機械化部隊"
+	name = "民兵"
+	division_names_group = CHI_INF_01
 	regiments = {
-		medium_armor = { x = 0 y = 0 }
-		medium_armor = { x = 0 y = 1 }
-        medium_armor = { x = 0 y = 2 }
-		motorized = { x = 1 y = 0 }
-        motorized = { x = 1 y = 1 }
-		medium_armor = { x = 2 y = 0 }
-		medium_armor = { x = 2 y = 1 }
-        medium_armor = { x = 2 y = 2 }
-		motorized = { x = 3 y = 0 }
-        motorized = { x = 3 y = 1 }
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
 	}
-	support = {
-		mot_recon = { x = 0 y = 0 }
-        artillery = { x = 0 y = 1 }
-	}
+	priority = 0
 }
 
 ### OOB ###
 units = {
-	###### Kuomintang Army (CO: Chang Kai-shek) ######
-	##### Beiping-Tianjin Area (CO: ) #####
-	### 29 Juntuan (highly-reinforced corps) ###
+
+	##########################################################
+	# 北方軍団 — 北京/河北/山西方面
+	##########################################################
 	division = {
-		name = "第一国防軍"
-		location = 11913
+		name = "第一師団"
+		location = 11913  # 北京近郊
 		division_template = "中華国防軍"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "第一国防軍"
-		location = 7014
+		name = "第二師団"
+		location = 7014   # 天津近郊
 		division_template = "中華国防軍"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "第一国防軍"
-		location = 7014
+		name = "第三師団"
+		location = 7191   # 河北内陸
 		division_template = "中華国防軍"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "第一国防軍"
-		location = 7191
+		name = "第四師団"
+		location = 9974   # 山西方面
 		division_template = "中華国防軍"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "第一国防軍"
-		location = 9974
-		division_template = "中華国防軍"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.25
 	}
 
+	##########################################################
+	# 長江軍団 — 長江中流域/武漢/南京方面
+	##########################################################
 	division = {
-		name = "第一国防軍"
-		location = 7025
+		name = "第五師団"
+		location = 7025   # 南京近郊
 		division_template = "中華国防軍"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "第二国防軍"
-		location = 7199
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 9970
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第一国防軍"
-		location = 7025
+		name = "第六師団"
+		location = 7199   # 武漢近郊
 		division_template = "中華国防軍"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "第一国防軍"
-		location = 11913
+		name = "第七師団"
+		location = 9970   # 長沙方面
+		division_template = "中華国防軍"
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "第八師団"
+		location = 7097   # 南昌方面
+		division_template = "中華国防軍"
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "第九師団"
+		location = 10364  # 上海近郊
 		division_template = "中華国防軍"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "第一国防軍"
-		location = 7014
+		name = "第十師団"
+		location = 1628   # 浙江方面
 		division_template = "中華国防軍"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "第一国防軍"
-		location = 7191
-		division_template = "中華国防軍"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "第一国防軍"
-		location = 9974
-		division_template = "中華国防軍"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.25
 	}
 
+	##########################################################
+	# 南方軍団 — 広東/福建/広西方面
+	##########################################################
 	division = {
-		name = "第一国防軍"
-		location = 7025
+		name = "第十一師団"
+		location = 4619   # 広州近郊
 		division_template = "中華国防軍"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.25
 	}
 	division = {
-		name = "第二国防軍"
-		location = 7199
+		name = "第十二師団"
+		location = 4547   # 福建方面
 		division_template = "中華国防軍"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "第二国防軍"
-		location = 9970
+		name = "第十三師団"
+		location = 1603   # 広西方面
 		division_template = "中華国防軍"
 		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 7097
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 10364
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 1628
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 4619
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 7199
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 9970
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 7097
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 10364
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 1628
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 4619
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 7199
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 9970
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第一国防軍"
-		location = 7191
-		division_template = "中華国防軍"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "第一国防軍"
-		location = 9974
-		division_template = "中華国防軍"
-		start_experience_factor = 0.3
 	}
 
+	##########################################################
+	# 西方軍団 — 四川/雲南/貴州方面
+	##########################################################
 	division = {
-		name = "第一国防軍"
-		location = 7025
-		division_template = "中華国防軍"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "第一国防軍"
-		location = 11913
-		division_template = "中華国防軍"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "第一国防軍"
-		location = 7014
-		division_template = "中華国防軍"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "第一国防軍"
-		location = 7191
-		division_template = "中華国防軍"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "第二国防軍"
-		location = 7199
+		name = "第十四師団"
+		location = 6932   # 成都近郊
 		division_template = "中華国防軍"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "第二国防軍"
-		location = 9970
+		name = "第十五師団"
+		location = 4606   # 重慶近郊
 		division_template = "中華国防軍"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "第二国防軍"
-		location = 7097
+		name = "第十六師団"
+		location = 1139   # 雲南方面
+		division_template = "中華国防軍"
+		start_experience_factor = 0.2
+	}
+
+	##########################################################
+	# 北西軍団 — 陝西/甘粛/新疆方面
+	##########################################################
+	division = {
+		name = "第十七師団"
+		location = 7074   # 西安近郊
 		division_template = "中華国防軍"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "第二国防軍"
-		location = 10364
+		name = "第十八師団"
+		location = 4144   # 蘭州方面
 		division_template = "中華国防軍"
-		start_experience_factor = 0.2
+		start_experience_factor = 0.15
 	}
+
+	##########################################################
+	# 北方守備隊
+	##########################################################
 	division = {
-		name = "第二国防軍"
-		location = 1628
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 4619
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 7199
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 9970
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 7097
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 10364
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "第二国防軍"
-		location = 1628
-		division_template = "中華国防軍"
-		start_experience_factor = 0.2
-	}
-	division = {
-		name = "国境警備隊"
-		location = 8072
+		name = "第一守備隊"
+		location = 8072   # 内蒙古方面
 		division_template = "駐屯兵"
 		start_experience_factor = 0.1
 	}
 	division = {
-		name = "国境警備隊"
-		location = 12408
+		name = "第二守備隊"
+		location = 12408  # 北部国境
+		division_template = "駐屯兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "第三守備隊"
+		location = 11931  # 北東国境
+		division_template = "駐屯兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "第四守備隊"
+		location = 9956   # 河北北部
+		division_template = "駐屯兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "第五守備隊"
+		location = 7129   # 山西北部
 		division_template = "駐屯兵"
 		start_experience_factor = 0.1
 	}
 
+	##########################################################
+	# 中部守備隊
+	##########################################################
 	division = {
-		name = "国境警備隊"
-		location = 4547
+		name = "第六守備隊"
+		location = 4019   # 安徽方面
+		division_template = "駐屯兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "第七守備隊"
+		location = 7200   # 江蘇内陸
+		division_template = "駐屯兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "第八守備隊"
+		location = 1029   # 湖南内陸
+		division_template = "駐屯兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "第九守備隊"
+		location = 10822  # 江西内陸
+		division_template = "駐屯兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "第十守備隊"
+		location = 10006  # 湖北内陸
 		division_template = "駐屯兵"
 		start_experience_factor = 0.1
 	}
 
+	##########################################################
+	# 南部守備隊
+	##########################################################
 	division = {
-		name = "国境警備隊"
-		location = 1603
+		name = "第十一守備隊"
+		location = 10335  # 広東内陸
+		division_template = "駐屯兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "第十二守備隊"
+		location = 4480   # 広西内陸
+		division_template = "駐屯兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "第十三守備隊"
+		location = 4169   # 貴州方面
+		division_template = "駐屯兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "第十四守備隊"
+		location = 7108   # 四川内陸
+		division_template = "駐屯兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "第十五守備隊"
+		location = 6932   # 成都西部
 		division_template = "駐屯兵"
 		start_experience_factor = 0.1
 	}
 
+	##########################################################
+	# 各地民兵 — 農村・内陸分散配置
+	##########################################################
 	division = {
-		name = "国境警備隊"
-		location = 6932
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
-	}
-
-	division = {
-		name = "国境警備隊"
-		location = 11931
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
-	}
-
-	division = {
-		name = "国境警備隊"
-		location = 4606
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
+		name = "第一民兵隊"
+		location = 7191   # 河北農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
 	}
 	division = {
-		name = "国境警備隊"
-		location = 1139
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
-	}
-
-	division = {
-		name = "国境警備隊"
-		location = 7074
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
+		name = "第二民兵隊"
+		location = 9970   # 湖南農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
 	}
 	division = {
-		name = "国境警備隊"
-		location = 4144
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
+		name = "第三民兵隊"
+		location = 7097   # 江西農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
 	}
 	division = {
-		name = "国境警備隊"
-		location = 7129
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
+		name = "第四民兵隊"
+		location = 4619   # 広東農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
 	}
 	division = {
-		name = "国境警備隊"
-		location = 4019
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
-	}
-
-	division = {
-		name = "国境警備隊"
-		location = 9956
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
+		name = "第五民兵隊"
+		location = 1603   # 広西農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
 	}
 	division = {
-		name = "国境警備隊"
-		location = 7200
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
+		name = "第六民兵隊"
+		location = 7074   # 陝西農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
 	}
 	division = {
-		name = "国境警備隊"
-		location = 1029
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
+		name = "第七民兵隊"
+		location = 4144   # 甘粛農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
 	}
 	division = {
-		name = "国境警備隊"
-		location = 10822
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
+		name = "第八民兵隊"
+		location = 4606   # 四川農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
 	}
 	division = {
-		name = "国境警備隊"
-		location = 10006
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
-	}
-
-	division = {
-		name = "国境警備隊"
-		location = 10335
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
+		name = "第九民兵隊"
+		location = 1139   # 雲南農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
 	}
 	division = {
-		name = "国境警備隊"
-		location = 4480
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
-	}
-		division = {
-		name = "国境警備隊"
-		location = 4169
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
+		name = "第十民兵隊"
+		location = 1628   # 浙江農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
 	}
 	division = {
-		name = "国境警備隊"
-		location = 7108
-		division_template = "駐屯兵"
-		start_experience_factor = 0.1
+		name = "第十一民兵隊"
+		location = 7025   # 蘇南農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
 	}
-
-
-
+	division = {
+		name = "第十二民兵隊"
+		location = 7199   # 湖北農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
+	}
+	division = {
+		name = "第十三民兵隊"
+		location = 11913  # 河北農村
+		division_template = "民兵"
+		start_experience_factor = 0.05
+	}
 }
-
-
-
-
 
 instant_effect = {
 	add_equipment_production = {
@@ -528,5 +384,14 @@ instant_effect = {
 		requested_factories = 1
 		progress = 0.55
 		efficiency = 100
-	}	
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "CHI"
+		}
+		requested_factories = 1
+		progress = 0.30
+		efficiency = 60
+	}
 }

@@ -1,0 +1,473 @@
+CHI_influence_decisions = {
+
+	# Route A 影響力拡大（沿岸部）
+	CHI_increase_influence_A_coastal = {
+		icon = generic_propaganda
+		available = {
+			has_country_flag = CHI_influence_A_unlocked
+			any_owned_state = { CHI_is_coastal_state = yes }
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			has_country_flag = CHI_influence_A_unlocked
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 25
+		days_remove = 30
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = { factor = 10 }
+
+		complete_effect = {
+			# カントリースコープで影響力を加算
+			add_to_variable = { var = CHI.influence_A value = 15 }
+			if = {
+				limit = { any_owned_state = { CHI_is_central_industrial_zone = yes } }
+				add_to_variable = { var = CHI.influence_A value = 2 }
+			}
+		}
+	}
+
+	# Route B 影響力拡大（都市部）
+	CHI_increase_influence_B_urban = {
+		icon = generic_propaganda
+		available = {
+			has_country_flag = CHI_influence_B_unlocked
+			any_owned_state = { CHI_is_urban_state = yes }
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			has_country_flag = CHI_influence_B_unlocked
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 25
+		days_remove = 30
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = { factor = 10 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.influence_B value = 15 }
+			if = {
+				limit = { any_owned_state = { CHI_is_central_industrial_zone = yes } }
+				add_to_variable = { var = CHI.influence_B value = 2 }
+			}
+		}
+	}
+
+	# Route C 影響力拡大（農村部）
+	CHI_increase_influence_C_rural = {
+		icon = generic_propaganda
+		available = {
+			has_country_flag = CHI_influence_C_unlocked
+			any_owned_state = { CHI_is_rural_state = yes }
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			has_country_flag = CHI_influence_C_unlocked
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 25
+		days_remove = 30
+		fire_only_once = no
+		days_re_enable = 30
+
+		ai_will_do = { factor = 10 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.influence_C value = 15 }
+			if = {
+				limit = { any_owned_state = { CHI_is_central_industrial_zone = yes } }
+				add_to_variable = { var = CHI.influence_C value = 2 }
+			}
+		}
+	}
+
+	# ============================================================
+	# Phase 5.1: 影響力カウンターディシジョン
+	# ============================================================
+
+	# 秩序派への妨害工作
+	CHI_sabotage_A = {
+		icon = generic_political_pressure
+		available = {
+			OR = {
+				has_country_flag = CHI_influence_B_unlocked
+				has_country_flag = CHI_influence_C_unlocked
+			}
+			# Aが最大勢力の時のみ妨害可能（自動バランス）
+			check_variable = { var = CHI.influence_A value = CHI.influence_B compare = greater_than }
+			check_variable = { var = CHI.influence_A value = CHI.influence_C compare = greater_than }
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			OR = {
+				has_country_flag = CHI_influence_B_unlocked
+				has_country_flag = CHI_influence_C_unlocked
+			}
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 30
+		days_remove = 45
+		days_re_enable = 60
+
+		ai_will_do = { factor = 5 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.influence_A value = -10 }
+			country_event = { id = CHI_influence.20 }
+		}
+	}
+
+	# パリ派への妨害工作
+	CHI_sabotage_B = {
+		icon = generic_political_pressure
+		available = {
+			OR = {
+				has_country_flag = CHI_influence_A_unlocked
+				has_country_flag = CHI_influence_C_unlocked
+			}
+			check_variable = { var = CHI.influence_B value = CHI.influence_A compare = greater_than }
+			check_variable = { var = CHI.influence_B value = CHI.influence_C compare = greater_than }
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			OR = {
+				has_country_flag = CHI_influence_A_unlocked
+				has_country_flag = CHI_influence_C_unlocked
+			}
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 30
+		days_remove = 45
+		days_re_enable = 60
+
+		ai_will_do = { factor = 5 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.influence_B value = -10 }
+			country_event = { id = CHI_influence.20 }
+		}
+	}
+
+	# モスクワ派への妨害工作
+	CHI_sabotage_C = {
+		icon = generic_political_pressure
+		available = {
+			OR = {
+				has_country_flag = CHI_influence_A_unlocked
+				has_country_flag = CHI_influence_B_unlocked
+			}
+			check_variable = { var = CHI.influence_C value = CHI.influence_A compare = greater_than }
+			check_variable = { var = CHI.influence_C value = CHI.influence_B compare = greater_than }
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			OR = {
+				has_country_flag = CHI_influence_A_unlocked
+				has_country_flag = CHI_influence_B_unlocked
+			}
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 30
+		days_remove = 45
+		days_re_enable = 60
+
+		ai_will_do = { factor = 5 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.influence_C value = -10 }
+			country_event = { id = CHI_influence.20 }
+		}
+	}
+
+	# 中央工業地帯の浸透
+	CHI_seize_central_zone = {
+		icon = generic_industry
+		available = {
+			any_owned_state = { CHI_is_central_industrial_zone = yes }
+			OR = {
+				has_country_flag = CHI_influence_A_unlocked
+				has_country_flag = CHI_influence_B_unlocked
+				has_country_flag = CHI_influence_C_unlocked
+			}
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			OR = {
+				has_country_flag = CHI_influence_A_unlocked
+				has_country_flag = CHI_influence_B_unlocked
+				has_country_flag = CHI_influence_C_unlocked
+			}
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 50
+		days_remove = 60
+		fire_only_once = no
+
+		ai_will_do = { factor = 8 }
+
+		complete_effect = {
+			# 最大影響力の派閥がゾーンを浸透（+8）、他派閥は-3
+			if = {
+				limit = {
+					check_variable = { var = CHI.influence_A value = CHI.influence_B compare = greater_than_or_equals }
+					check_variable = { var = CHI.influence_A value = CHI.influence_C compare = greater_than_or_equals }
+				}
+				add_to_variable = { var = CHI.influence_A value = 8 }
+				add_to_variable = { var = CHI.influence_B value = -3 }
+				add_to_variable = { var = CHI.influence_C value = -3 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { var = CHI.influence_B value = CHI.influence_C compare = greater_than_or_equals }
+				}
+				add_to_variable = { var = CHI.influence_B value = 8 }
+				add_to_variable = { var = CHI.influence_A value = -3 }
+				add_to_variable = { var = CHI.influence_C value = -3 }
+			}
+			else = {
+				add_to_variable = { var = CHI.influence_C value = 8 }
+				add_to_variable = { var = CHI.influence_A value = -3 }
+				add_to_variable = { var = CHI.influence_B value = -3 }
+			}
+			country_event = { id = CHI_influence.21 }
+		}
+	}
+
+	# 全国プロパガンダ攻勢
+	CHI_propaganda_wave = {
+		icon = generic_propaganda
+		available = {
+			OR = {
+				has_country_flag = CHI_influence_A_unlocked
+				has_country_flag = CHI_influence_B_unlocked
+				has_country_flag = CHI_influence_C_unlocked
+			}
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			OR = {
+				has_country_flag = CHI_influence_A_unlocked
+				has_country_flag = CHI_influence_B_unlocked
+				has_country_flag = CHI_influence_C_unlocked
+			}
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 40
+		days_remove = 30
+		days_re_enable = 90
+
+		ai_will_do = { factor = 6 }
+
+		complete_effect = {
+			# 最大影響力の派閥に+5、安定度-3%（プロパガンダの社会的コスト）
+			if = {
+				limit = {
+					check_variable = { var = CHI.influence_A value = CHI.influence_B compare = greater_than_or_equals }
+					check_variable = { var = CHI.influence_A value = CHI.influence_C compare = greater_than_or_equals }
+				}
+				add_to_variable = { var = CHI.influence_A value = 5 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { var = CHI.influence_B value = CHI.influence_C compare = greater_than_or_equals }
+				}
+				add_to_variable = { var = CHI.influence_B value = 5 }
+			}
+			else = {
+				add_to_variable = { var = CHI.influence_C value = 5 }
+			}
+			add_stability = -0.03
+			country_event = { id = CHI_influence.22 }
+		}
+	}
+
+	# 影響圏の防衛
+	CHI_defend_influence = {
+		icon = generic_prepare_for_war
+		available = {
+			OR = {
+				has_country_flag = CHI_influence_A_unlocked
+				has_country_flag = CHI_influence_B_unlocked
+				has_country_flag = CHI_influence_C_unlocked
+			}
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			OR = {
+				has_country_flag = CHI_influence_A_unlocked
+				has_country_flag = CHI_influence_B_unlocked
+				has_country_flag = CHI_influence_C_unlocked
+			}
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 20
+		days_remove = 60
+		days_re_enable = 60
+
+		# 防衛中: 妨害工作を受けても影響力損失が政治的に緩和される
+		modifier = {
+			political_power_factor = -0.05
+		}
+
+		ai_will_do = { factor = 4 }
+
+		remove_effect = {
+			# 防衛期間終了: 最大勢力に小さなボーナス
+			if = {
+				limit = {
+					check_variable = { var = CHI.influence_A value = CHI.influence_B compare = greater_than_or_equals }
+					check_variable = { var = CHI.influence_A value = CHI.influence_C compare = greater_than_or_equals }
+				}
+				add_to_variable = { var = CHI.influence_A value = 3 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { var = CHI.influence_B value = CHI.influence_C compare = greater_than_or_equals }
+				}
+				add_to_variable = { var = CHI.influence_B value = 3 }
+			}
+			else = {
+				add_to_variable = { var = CHI.influence_C value = 3 }
+			}
+		}
+	}
+
+	# ============================================================
+	# Phase 8: 州別影響力浸透ディシジョン（state_target方式）
+	# ============================================================
+
+	# 秩序派 — 特定州への浸透
+	CHI_expand_A_to_state = {
+		icon = generic_propaganda
+		state_target = yes
+		target_trigger = {
+			FROM = { is_owned_by = ROOT }
+		}
+		available = {
+			has_country_flag = CHI_influence_A_unlocked
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			has_country_flag = CHI_influence_A_unlocked
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 15
+		days_remove = 20
+		days_re_enable = 30
+		fire_only_once = no
+
+		ai_will_do = { factor = 3 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.influence_A value = 8 }
+			if = {
+				limit = { FROM = { CHI_is_central_industrial_zone = yes } }
+				add_to_variable = { var = CHI.influence_A value = 4 }
+			}
+		}
+	}
+
+	# パリ派 — 特定州への浸透
+	CHI_expand_B_to_state = {
+		icon = generic_propaganda
+		state_target = yes
+		target_trigger = {
+			FROM = { is_owned_by = ROOT }
+		}
+		available = {
+			has_country_flag = CHI_influence_B_unlocked
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			has_country_flag = CHI_influence_B_unlocked
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 15
+		days_remove = 20
+		days_re_enable = 30
+		fire_only_once = no
+
+		ai_will_do = { factor = 3 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.influence_B value = 8 }
+			if = {
+				limit = { FROM = { CHI_is_central_industrial_zone = yes } }
+				add_to_variable = { var = CHI.influence_B value = 4 }
+			}
+		}
+	}
+
+	# モスクワ派 — 特定州への浸透
+	CHI_expand_C_to_state = {
+		icon = generic_propaganda
+		state_target = yes
+		target_trigger = {
+			FROM = { is_owned_by = ROOT }
+		}
+		available = {
+			has_country_flag = CHI_influence_C_unlocked
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			has_country_flag = CHI_influence_C_unlocked
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 15
+		days_remove = 20
+		days_re_enable = 30
+		fire_only_once = no
+
+		ai_will_do = { factor = 3 }
+
+		complete_effect = {
+			add_to_variable = { var = CHI.influence_C value = 8 }
+			if = {
+				limit = { FROM = { CHI_is_central_industrial_zone = yes } }
+				add_to_variable = { var = CHI.influence_C value = 4 }
+			}
+		}
+	}
+
+	# 影響力判定→ルート確定
+	CHI_check_influence_and_lock_route = {
+		icon = generic_prepare_for_war
+		available = {
+			has_completed_focus = CHI_order_prepare
+			has_completed_focus = CHI_paris_prepare
+			has_completed_focus = CHI_moscow_prepare
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		visible = {
+			has_completed_focus = CHI_order_prepare
+			has_completed_focus = CHI_paris_prepare
+			has_completed_focus = CHI_moscow_prepare
+			NOT = { has_country_flag = CHI_route_determined }
+		}
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = { factor = 100 }
+
+		complete_effect = {
+			# 影響力変数が未初期化の場合は0をセット
+			if = {
+				limit = { NOT = { check_variable = { var = CHI.influence_A value = 0 compare = greater_than_or_equals } } }
+				set_variable = { var = CHI.influence_A value = 0 }
+			}
+			if = {
+				limit = { NOT = { check_variable = { var = CHI.influence_B value = 0 compare = greater_than_or_equals } } }
+				set_variable = { var = CHI.influence_B value = 0 }
+			}
+			if = {
+				limit = { NOT = { check_variable = { var = CHI.influence_C value = 0 compare = greater_than_or_equals } } }
+				set_variable = { var = CHI.influence_C value = 0 }
+			}
+			country_event = { id = CHI_influence.100 }
+		}
+	}
+}

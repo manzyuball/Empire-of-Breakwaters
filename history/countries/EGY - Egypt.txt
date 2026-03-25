@@ -31,15 +31,41 @@ add_manpower = 100000
 # エジプト経済システムの初期化
 # ============================================================================
 set_country_flag = EGY_economy_initialized
-set_variable = { var = EGY_eco_consumer_goods  value = 0 }
-set_variable = { var = EGY_eco_stability        value = 0 }
-set_variable = { var = EGY_eco_factory_output   value = 0 }
-set_variable = { var = EGY_eco_dockyard_output  value = 0 }
-set_variable = { var = EGY_eco_infra_speed      value = 0 }
-set_variable = { var = EGY_eco_civ_speed        value = 0 }
-set_variable = { var = EGY_eco_mil_speed        value = 0 }
-set_variable = { var = EGY_eco_dock_speed       value = 0 }
+set_variable = { var = EGY_eco_consumer_goods  value = 0.10 }
+set_variable = { var = EGY_eco_stability        value = -0.03 }
+set_variable = { var = EGY_eco_factory_output   value = -0.05 }
+set_variable = { var = EGY_eco_dockyard_output  value = -0.08 }
+set_variable = { var = EGY_eco_infra_speed      value = -0.03 }
+set_variable = { var = EGY_eco_civ_speed        value = -0.03 }
+set_variable = { var = EGY_eco_mil_speed        value = -0.05 }
+set_variable = { var = EGY_eco_dock_speed       value = -0.05 }
+set_variable = { var = EGY_eco_neglect_counter  value = 0 }
 add_dynamic_modifier = { modifier = EGY_economy_modifier }
+
+# ============================================================================
+# 政治混乱度システムの初期化
+# ============================================================================
+set_variable = { var = EGY_pol_turmoil        value = -0.05 }
+set_variable = { var = EGY_pol_legitimacy      value = -0.05 }
+set_variable = { var = EGY_pol_repression      value = 0 }
+set_variable = { var = EGY_pol_drift_defence   value = 0 }
+add_dynamic_modifier = { modifier = EGY_political_turmoil_modifier }
+
+# ============================================================================
+# スエズ運河システムの初期化
+# ============================================================================
+set_variable = { var = EGY_suez_revenue  value = -0.05 }
+set_variable = { var = EGY_suez_traffic  value = 0 }
+set_variable = { var = EGY_suez_control  value = -0.03 }
+add_dynamic_modifier = { modifier = EGY_suez_canal_modifier }
+
+# ============================================================================
+# 軍近代化システムの初期化
+# ============================================================================
+set_variable = { var = EGY_mil_training   value = -0.05 }
+set_variable = { var = EGY_mil_equipment  value = -0.05 }
+set_variable = { var = EGY_mil_doctrine   value = 0.05 }
+add_dynamic_modifier = { modifier = EGY_military_modernization_modifier }
 
 # ============================================================================
 # 対英従属度BOPシステムの初期化

@@ -1,0 +1,51 @@
+CHI_unification_category = {
+
+	
+	# 軍閥の懐柔
+	CHI_appease_warlord = {
+		icon = generic_propaganda
+		available = {
+			has_political_power > 50
+			any_country = {
+				is_subject = no
+				OR = {
+					tag = SHX tag = XSM tag = YUN tag = GXC
+				}
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_subject = no
+					OR = {
+						tag = SHX tag = XSM tag = YUN tag = GXC
+					}
+				}
+				add_opinion_modifier = { target = ROOT modifier = positive_50 }
+			}
+			add_political_power = -50
+		}
+	}
+	
+	# 各地でのゲリラ鎮圧
+	CHI_suppress_remnants = {
+		icon = generic_military_deal
+		available = {
+			has_political_power > 30
+		}
+		cost = 30
+		days_remove = 90
+		
+		modifier = {
+			stability_weekly = 0.001
+			resistance_target = -0.05
+		}
+		
+		complete_effect = {
+			add_political_power = -30
+		}
+	}
+}

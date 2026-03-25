@@ -1,0 +1,241 @@
+add_namespace = CHI_route_a
+
+# CHI_route_a.1 - 日英への支援要請
+country_event = {
+	id = CHI_route_a.1
+	title = CHI_route_a.1.t
+	desc = CHI_route_a.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_route_a.1.a
+		JAP = { country_event = { id = CHI_route_a.100 } }
+		ENG = { country_event = { id = CHI_route_a.100 } }
+		add_political_power = -25
+	}
+}
+
+# CHI_route_a.2 - 連合国への接近
+country_event = {
+	id = CHI_route_a.2
+	title = CHI_route_a.2.t
+	desc = CHI_route_a.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_route_a.2.a
+		add_political_power = 25
+		ENG = { add_opinion_modifier = { target = ROOT modifier = CHI_diplomatic_success } }
+		USA = { add_opinion_modifier = { target = ROOT modifier = CHI_diplomatic_success } }
+	}
+}
+
+# CHI_route_a.3 - 沿岸返還交渉
+country_event = {
+	id = CHI_route_a.3
+	title = CHI_route_a.3.t
+	desc = CHI_route_a.3.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_route_a.3.a
+		add_political_power = 25
+		add_war_support = 0.05
+		JAP = { country_event = { id = CHI_route_a.101 } }
+		ENG = { country_event = { id = CHI_route_a.101 } }
+	}
+}
+
+# CHI_route_a.4 - 満州返還交渉
+country_event = {
+	id = CHI_route_a.4
+	title = CHI_route_a.4.t
+	desc = CHI_route_a.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = CHI_route_a.4.a
+		add_political_power = 25
+		add_war_support = 0.05
+		JAP = { country_event = { id = CHI_route_a.102 } }
+	}
+}
+
+# ============================================================
+# 日英への外交接触 - 支援要請への返答
+# ROOT = JAP or ENG, FROM = CHI
+# ============================================================
+country_event = {
+	id = CHI_route_a.100
+	title = CHI_route_a.100.t
+	desc = CHI_route_a.100.d
+	picture = GFX_report_event_japanese_officers
+	is_triggered_only = yes
+
+	# 受諾: 装備支援と関係改善
+	option = {
+		name = CHI_route_a.100.a
+		FROM = {
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 3000 producer = ROOT }
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 200 producer = ROOT }
+			add_political_power = 30
+			add_opinion_modifier = { target = ROOT modifier = CHI_diplomatic_success }
+		}
+		add_opinion_modifier = { target = FROM modifier = CHI_diplomatic_success }
+	}
+
+	# 拒否: 中国は支援なしで戦うことを決意
+	option = {
+		name = CHI_route_a.100.b
+		FROM = {
+			add_war_support = 0.05
+			add_political_power = 15
+			add_to_variable = { var = CHI.mil_core_attack value = 0.02 }
+			add_to_variable = { var = CHI.mil_core_defence value = 0.02 }
+		}
+		add_opinion_modifier = { target = FROM modifier = CHI_diplomatic_rebuff }
+	}
+}
+
+# ============================================================
+# 沿岸州返還交渉への返答
+# ROOT = JAP or ENG, FROM = CHI
+# ============================================================
+country_event = {
+	id = CHI_route_a.101
+	title = CHI_route_a.101.t
+	desc = CHI_route_a.101.d
+	picture = GFX_report_event_japanese_officers
+	is_triggered_only = yes
+
+	# 受諾: 中国本土の沿岸州を返還
+	option = {
+		name = CHI_route_a.101.a
+		# ROOT（JAP or ENG）が所有するCHI中核沿岸州を返還
+		FROM = {
+			every_core_state = {
+				limit = {
+					is_coastal = yes
+					is_owned_by = ROOT
+					NOT = { is_core_of = ROOT }
+				}
+				set_state_owner = FROM
+				set_state_controller = FROM
+			}
+			add_political_power = 75
+			add_stability = 0.05
+			add_to_variable = { var = CHI.pol_war_support value = 0.05 }
+			add_opinion_modifier = { target = ROOT modifier = CHI_diplomatic_major_success }
+		}
+		add_opinion_modifier = { target = FROM modifier = CHI_diplomatic_major_success }
+	}
+
+	# 拒否: 中国は沿岸州への主権主張を強化する
+	option = {
+		name = CHI_route_a.101.b
+		FROM = {
+			every_core_state = {
+				limit = {
+					is_coastal = yes
+					is_owned_by = ROOT
+				}
+				add_claim_by = FROM
+			}
+			add_war_support = 0.08
+			add_political_power = 20
+			add_opinion_modifier = { target = ROOT modifier = CHI_diplomatic_major_rebuff }
+		}
+		add_opinion_modifier = { target = FROM modifier = CHI_diplomatic_major_rebuff }
+	}
+}
+
+# ============================================================
+# 満州返還交渉への返答 (対日のみ)
+# ROOT = JAP, FROM = CHI
+# ============================================================
+country_event = {
+	id = CHI_route_a.102
+	title = CHI_route_a.102.t
+	desc = CHI_route_a.102.d
+	picture = GFX_report_event_japanese_officers
+	is_triggered_only = yes
+
+	# 受諾: 満州国を解体し、中国に返還
+	option = {
+		name = CHI_route_a.102.a
+		trigger = {
+			has_subject = MAN
+		}
+		# 満州国の独立承認(自治解消)
+		set_autonomy = {
+			target = MAN
+			autonomy_state = autonomy_free
+		}
+		# MAN所有のCHI中核州をCHIへ移管
+		MAN = {
+			every_core_state = {
+				limit = { is_owned_by = MAN }
+				set_state_owner = FROM
+				set_state_controller = FROM
+			}
+		}
+		FROM = {
+			annex_country = { target = MAN transfer_troops = no }
+			add_political_power = 100
+			add_stability = 0.08
+			add_war_support = 0.10
+			add_to_variable = { var = CHI.pol_surrender_limit value = 0.05 }
+			add_opinion_modifier = { target = ROOT modifier = CHI_diplomatic_major_success }
+		}
+		add_opinion_modifier = { target = FROM modifier = CHI_diplomatic_major_success }
+	}
+
+	# 受諾 (MAN未存在の場合: 直接返還)
+	option = {
+		name = CHI_route_a.102.a2
+		trigger = {
+			NOT = { has_subject = MAN }
+		}
+		FROM = {
+			every_core_state = {
+				limit = {
+					is_owned_by = ROOT
+					NOT = { is_coastal = yes }
+				}
+				set_state_owner = FROM
+				set_state_controller = FROM
+			}
+			add_political_power = 75
+			add_stability = 0.05
+			add_opinion_modifier = { target = ROOT modifier = CHI_diplomatic_major_success }
+		}
+		add_opinion_modifier = { target = FROM modifier = CHI_diplomatic_major_success }
+	}
+
+	# 拒否: 満州は日本の生命線
+	option = {
+		name = CHI_route_a.102.b
+		FROM = {
+			every_core_state = {
+				limit = {
+					NOT = { is_owned_by = FROM }
+					NOT = { is_coastal = yes }
+				}
+				add_claim_by = FROM
+			}
+			add_war_support = 0.10
+			add_political_power = 25
+			add_to_variable = { var = CHI.mil_core_attack value = 0.03 }
+			add_opinion_modifier = { target = ROOT modifier = CHI_diplomatic_major_rebuff }
+		}
+		add_opinion_modifier = { target = FROM modifier = CHI_diplomatic_major_rebuff }
+	}
+}

@@ -7,7 +7,7 @@ characters = {
         name = USA_huey_long
         portraits = {
             civilian = {
-                large = "gfx/leaders/_EOB/Huey_Long.dds"
+                large = GFX_Portrait_KingFish
             }
         }
         country_leader = {
@@ -22,10 +22,10 @@ characters = {
         name = USA_douglas_macarthur
         portraits = {
             civilian = {
-                large = "gfx/leaders/_EOB/Douglas_MacArthur.dds"
+                large = GFX_Portrait_MacArthur
             }
             army = {
-                large = "gfx/leaders/_EOB/Douglas_MacArthur.dds"
+                large = GFX_Portrait_MacArthur
                 small = "GFX_idea_USA_douglas_macarthur"
             }
         }
@@ -51,7 +51,7 @@ characters = {
         name = USA_herbert_hoover
         portraits = {
             civilian = {
-                large = "gfx/leaders/_EOB/Huey_Long.dds"
+                large = GFX_Portrait_Hoober
             }
         }
         country_leader = {

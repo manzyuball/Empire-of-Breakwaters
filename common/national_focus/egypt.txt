@@ -258,6 +258,8 @@ focus_tree = {
 			hidden_effect = {
 			EGY_shift_independence_small = yes
 		}
+			add_to_variable = { var = EGY_suez_traffic value = 0.05 }
+			EGY_clamp_suez_vars = yes
 			446 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -494,6 +496,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 50
+			EGY_political_shift_stabilize = yes
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.05
@@ -542,6 +545,9 @@ focus_tree = {
 			add_research_slot = 1
 			add_political_power = 250
 			add_ideas = EGY_regional_guardian
+			set_country_flag = EGY_economy_locked
+			EGY_democracy_economy_floor = yes
+			EGY_political_shift_stabilize = yes
 		}
 	}
 
@@ -698,6 +704,9 @@ focus_tree = {
 			add_stability = -0.10
 			add_war_support = 0.05
 			add_political_power = 100
+			EGY_political_shift_turmoil_up = yes
+			add_to_variable = { var = EGY_pol_repression value = 0.03 }
+			EGY_clamp_political_vars = yes
 			# 王政復古 → 従属度-20
 			hidden_effect = {
 			EGY_shift_independence_large = yes
@@ -823,7 +832,10 @@ focus_tree = {
 				limit = { is_in_faction = yes }
 				leave_faction = yes
 			}
-			# TODO: AUS = { country_event = { id = EGY_events.1 days = 1 } }
+			if = {
+				limit = { AUS = { exists = yes } }
+				AUS = { country_event = { id = EGY_events.1 days = 1 } }
+			}
 			add_political_power = 50
 		}
 	}
@@ -890,6 +902,9 @@ focus_tree = {
 			}
 			add_stability = -0.15
 			add_war_support = 0.10
+			add_to_variable = { var = EGY_pol_turmoil value = -0.15 }
+			add_to_variable = { var = EGY_pol_legitimacy value = -0.10 }
+			EGY_clamp_political_vars = yes
 			if = {
 				limit = { is_in_faction = yes }
 				leave_faction = yes
@@ -955,6 +970,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			EGY_suez_shift_control_up = yes
+			add_to_variable = { var = EGY_suez_revenue value = -0.05 }
+			EGY_clamp_suez_vars = yes
 			446 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -994,7 +1012,10 @@ focus_tree = {
 				category = infantry_weapons
 			}
 			# 第四インター加盟イベント
-			# TODO: EUN = { country_event = { id = EGY_events.2 days = 1 } }
+			if = {
+				limit = { EUN = { exists = yes } }
+				EUN = { country_event = { id = EGY_events.2 days = 1 } }
+			}
 			add_political_power = 50
 		}
 	}
@@ -1108,6 +1129,7 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 20
+			EGY_military_shift_training = yes
 			add_tech_bonus = {
 				name = EGY_army_dev_bonus
 				bonus = 1.0
@@ -1137,6 +1159,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
+			EGY_military_shift_equipment = yes
 			add_tech_bonus = {
 				name = EGY_desert_war_bonus
 				bonus = 0.5
@@ -1167,6 +1190,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			EGY_military_shift_equipment = yes
 			add_tech_bonus = {
 				name = EGY_mech_push_bonus
 				bonus = 1.0
@@ -1263,6 +1287,8 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 20
+			add_to_variable = { var = EGY_mil_doctrine value = -0.03 }
+			EGY_clamp_military_vars = yes
 			add_tech_bonus = {
 				name = EGY_air_dev_bonus
 				bonus = 1.0
@@ -1405,6 +1431,7 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 20
+			EGY_suez_shift_control_up = yes
 			add_tech_bonus = {
 				name = EGY_navy_dev_bonus
 				bonus = 1.0

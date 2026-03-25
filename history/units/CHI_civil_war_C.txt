@@ -1,0 +1,67 @@
+### モスクワ派追加兵力 (Route C 勝利時) ###
+
+units = {
+	# 農村・内陸の人民解放軍
+	division = {
+		name = "人民解放軍第一師団"
+		location = 7074   # 西安
+		division_template = "中華国防軍"
+		start_experience_factor = 0.35
+	}
+	division = {
+		name = "人民解放軍第二師団"
+		location = 9974   # 山西
+		division_template = "中華国防軍"
+		start_experience_factor = 0.35
+	}
+	division = {
+		name = "人民解放軍第三師団"
+		location = 7199   # 武漢（農村包囲拠点）
+		division_template = "中華国防軍"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "人民解放軍第四師団"
+		location = 4144   # 蘭州
+		division_template = "中華国防軍"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "人民解放軍第五師団"
+		location = 1603   # 広西農村
+		division_template = "中華国防軍"
+		start_experience_factor = 0.25
+	}
+
+	# 農民ゲリラ — 農村・山岳地帯に分散
+	division = {
+		name = "農民義勇第一大隊"
+		location = 9970   # 湖南農村
+		division_template = "民兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "農民義勇第二大隊"
+		location = 7191   # 河北農村
+		division_template = "民兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "農民義勇第三大隊"
+		location = 1139   # 雲南農村
+		division_template = "民兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "農民義勇第四大隊"
+		location = 4169   # 貴州農村
+		division_template = "民兵"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "農民義勇第五大隊"
+		location = 4480   # 広西農村
+		division_template = "民兵"
+		start_experience_factor = 0.1
+	}
+}

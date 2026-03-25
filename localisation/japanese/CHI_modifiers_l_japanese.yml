@@ -1,0 +1,67 @@
+﻿l_japanese:
+ CHI_leaderless_government:0 "指導者不在の政府"
+ CHI_leaderless_government_desc:0 "南京政府の中心は空虚である。派閥対立と権力闘争が日々の政治を麻痺させており、国家としての統一的な意志決定はもはや不可能となっている。"
+ CHI_urban_rural_divide:0 "都市と農村の分断"
+ CHI_urban_rural_divide_desc:0 "沿岸の近代都市が発展する一方で、広大な内陸の農村部は前近代的な貧困に取り残されている。この経済的、さらには思想的な分断は、国家を二つに引き裂く時限爆弾である。"
+ CHI_anglo_japanese_shadow:0 "日英の影"
+ CHI_anglo_japanese_shadow_desc:0 "かつての宗主国や帝国主義列強は去っていない。彼らは我々の経済を握り、条約港から睨みを効かせ、この国を再び『半植民地』としての檻に閉じ込めようとしている。"
+ CHI_central_industrial_zone:0 "中央工業地帯"
+ CHI_central_industrial_zone_desc:0 "国家の命運を握る中核的な工業地帯。ここを制する者が次の中国の覇者となるだろう。"
+ CHI_faction_tension:0 "派閥間の緊張"
+ CHI_faction_tension_desc:0 "右派、革命派、農村派…各派閥は今にも互いの喉笛に食らいつかんとしている。表面上の平和は、火薬庫の中でタバコを吸うようなものだ。"
+ CHI_paris_growth:0 "パリ派の増長"
+ CHI_paris_growth_desc:0 "第四インターナショナルの過激な思想が労働者に蔓延している。「鎖以外に失うものはない」と叫ぶ彼らの声は、既存秩序への重大な脅威だ。"
+ CHI_export_economy:0 "輸出依存経済"
+ CHI_export_economy_desc:0 "我が国の工業は外需と外国資本に極度に依存している。繁栄は一時的なものに過ぎず、真の自立には遠い。"
+ CHI_anglo_dependence:0 "連合国への従属"
+ CHI_anglo_dependence_desc:0 "独立を守るためとはいえ、彼らに頭を下げることは魂を売るに等しい。だが、生き残るためにはこの鎖を受け入れるしかないのだ。"
+ CHI_urban_blitz_idea:0 "都市電撃戦"
+ CHI_urban_blitz_idea_desc:0 "我々の革命は都市から始まる！ブルジョアの拠点を一気に制圧する電撃的な行動こそが勝利への鍵である。"
+ CHI_workers_paradise_idea:0 "労働者の楽園"
+ CHI_workers_paradise_idea_desc:0 "第四インターナショナルの同志たちよ、見よ！この鋼鉄と煙突の森こそが、我々が築き上げた搾取なき理想郷である！"
+ CHI_elite_divisions_idea:0 "前衛エリート師団"
+ CHI_elite_divisions_idea_desc:0 "革命の最前線に立つのは、思想的に武装された精鋭中の精鋭である。"
+ CHI_coastal_attack_bonus_idea:0 "沿岸解離作戦"
+ CHI_coastal_attack_bonus_idea_desc:0 "帝国主義者の手先から我々の海と港を取り戻すのだ！"
+ CHI_industrial_army_idea:0 "工業化された赤軍"
+ CHI_industrial_army_idea_desc:0 "兵士は労働者であり、労働者は兵士である。工場で武装し、戦場で生産する究極の軍隊。"
+ CHI_surround_cities_idea:0 "農村から都市を包囲する"
+ CHI_surround_cities_idea_desc:0 "我々の力は広大な大地と無数の人民にある。点に過ぎない都市を、農民の巨大な波で飲み込むのだ。"
+ CHI_collective_farming_idea:0 "集団農場体制"
+ CHI_collective_farming_idea_desc:0 "土地は全人民の共有財産となる。一人ひとりの力は弱くとも、団結すれば大地を揺るがす力となる。"
+ CHI_peoples_army_idea:0 "人民解放軍"
+ CHI_peoples_army_idea_desc:0 "魚が水から離れて生きられないように、我々の軍も人民と共にある。"
+ CHI_soviet_equipment_idea:0 "ソビエト製兵器"
+ CHI_soviet_equipment_idea_desc:0 "北方の同志からの援助は、我々の貧弱な武装を劇的に改善した。"
+ CHI_mass_assault_idea:0 "人海戦術"
+ CHI_mass_assault_idea_desc:0 "弾薬が尽きようとも、我々には無尽蔵の人民がいる。勝利のためならいかなる犠牲も厭わない。"
+ CHI_urban_siege_tactics_idea:0 "都市包囲戦術"
+ CHI_urban_siege_tactics_idea_desc:0 "飢餓と絶望を都市に持ち込め。コンクリートの要塞は最終的に崩れ去るだろう。"
+ CHI_self_reliance_idea:0 "自力更生"
+ CHI_self_reliance_idea_desc:0 "誰にも頼らず、自らの手で国を再建する。それは苦難の道だが、真の独立を得る唯一の道である。"
+
+ # ============================================================
+ # カスタムツールチップキー（custom_effect_tooltip / custom_trigger_tooltip 用）
+ # ============================================================
+
+ # 影響力ボーナス — NF・ディシジョンのcustom_effect_tooltip
+ CHI_influence_A_coastal_bonus_tt:0 "沿岸州を保有している場合、追加ボーナス（秩序派影響力+5）"
+ CHI_influence_B_urban_bonus_tt:0 "都市州を保有している場合、追加ボーナス（パリ派影響力+5）"
+ CHI_influence_C_rural_bonus_tt:0 "農村州を保有している場合、追加ボーナス（モスクワ派影響力+5）"
+ CHI_influence_central_zone_bonus_tt:0 "中央工業地帯を保有している場合、追加ボーナス（影響力+3）"
+
+ # 内戦スポーン
+ CHI_civil_war_spawn_units_tt:0 "内戦開始と同時に、支配地域各地に追加部隊が召集される。"
+
+ # ============================================================
+ # DM（dynamic_modifier）本体の説明
+ # ============================================================
+
+ CHI_economy_development:0 "中国経済の発展"
+ CHI_economy_development_desc:0 "農業国から工業国への転換が始まりつつある。各勢力の施策が産業基盤、工場効率、輸出構造を形作っていく。"
+
+ CHI_military_power:0 "中国軍事力"
+ CHI_military_power_desc:0 "百年にわたる列強の侵略と内戦で鍛えられた中国の軍事力。近代化の程度と指揮系統の整備が、戦場での命運を左右する。"
+
+ CHI_political_governance:0 "中国政治統治"
+ CHI_political_governance_desc:0 "派閥抗争が続く中、誰がこの国を統治するかが問われている。安定した統治体制の確立こそが、近代国家への第一歩である。"

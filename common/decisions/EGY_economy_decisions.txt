@@ -347,7 +347,176 @@ EGY_economy_decisions = {
 	}
 
 	# ============================================================
-	# III. 英国依存による経済圧力
+	# III. スエズ運河管理
+	# ============================================================
+
+	# スエズ通行料調整（収入↑、交通量↓）
+	EGY_suez_toll_adjustment = {
+		icon = GFX_decision_category_generic_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			controls_state = 447
+			has_country_flag = EGY_economy_initialized
+		}
+		visible = {
+			original_tag = EGY
+			controls_state = 447
+		}
+
+		cost = 50
+		days_remove = 60
+		days_re_enable = 120
+
+		complete_effect = {
+			add_political_power = -30
+			custom_effect_tooltip = EGY_suez_toll_adjustment_tt
+		}
+
+		remove_effect = {
+			EGY_suez_shift_revenue_up = yes
+			add_to_variable = { var = EGY_eco_consumer_goods value = -0.02 }
+			EGY_clamp_economy_vars = yes
+		}
+	}
+
+	# スエズ運河拡張（交通量大幅増）
+	EGY_suez_canal_expansion = {
+		icon = GFX_decision_category_generic_build_up
+
+		allowed = { original_tag = EGY }
+		available = {
+			controls_state = 447
+			has_country_flag = EGY_economy_initialized
+			NOT = { has_war = yes }
+		}
+		visible = {
+			original_tag = EGY
+			controls_state = 447
+		}
+
+		cost = 150
+		days_remove = 180
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = -100
+			custom_effect_tooltip = EGY_suez_expansion_tt
+		}
+
+		remove_effect = {
+			add_to_variable = { var = EGY_suez_traffic value = 0.10 }
+			add_to_variable = { var = EGY_suez_revenue value = -0.05 }
+			EGY_clamp_suez_vars = yes
+			447 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# スエズ要塞化（軍事支配強化、要塞建設）
+	EGY_suez_military_fortification = {
+		icon = GFX_decision_category_generic_military_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			controls_state = 447
+			has_country_flag = EGY_economy_initialized
+		}
+		visible = {
+			original_tag = EGY
+			controls_state = 447
+		}
+
+		cost = 100
+		days_remove = 120
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = -75
+			custom_effect_tooltip = EGY_suez_fortification_tt
+		}
+
+		remove_effect = {
+			EGY_suez_shift_control_up = yes
+			447 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1155
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 1155
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# ============================================================
+	# IV. 軍事改革
+	# ============================================================
+
+	# 将校訓練計画（訓練↑、ドクトリン改善）
+	EGY_officer_training_program = {
+		icon = GFX_decision_category_generic_military_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+		}
+		visible = { original_tag = EGY }
+
+		cost = 75
+		days_remove = 90
+		days_re_enable = 150
+
+		complete_effect = {
+			add_political_power = -50
+			custom_effect_tooltip = EGY_officer_training_tt
+		}
+
+		remove_effect = {
+			EGY_military_shift_training = yes
+			army_experience = 10
+		}
+	}
+
+	# 兵器調達（装備↑）
+	EGY_weapons_procurement = {
+		icon = GFX_decision_category_generic_military_industry
+
+		allowed = { original_tag = EGY }
+		available = {
+			has_country_flag = EGY_economy_initialized
+		}
+		visible = { original_tag = EGY }
+
+		cost = 100
+		days_remove = 60
+		days_re_enable = 120
+
+		complete_effect = {
+			add_political_power = -75
+			custom_effect_tooltip = EGY_weapons_procurement_tt
+		}
+
+		remove_effect = {
+			EGY_military_shift_equipment = yes
+			add_to_variable = { var = EGY_eco_consumer_goods value = 0.02 }
+			EGY_clamp_economy_vars = yes
+		}
+	}
+
+	# ============================================================
+	# V. 英国依存による経済圧力
 	# ============================================================
 
 	# 英国による経済支配（BOP英国側が高い時に発火）
@@ -369,7 +538,10 @@ EGY_economy_decisions = {
 		fire_only_once = no
 
 		complete_effect = {
-			# 英国が経済的搾取
+			add_stability = -0.02
+			add_to_variable = { var = EGY_eco_consumer_goods value = 0.03 }
+			EGY_clamp_economy_vars = yes
+			custom_effect_tooltip = EGY_british_extraction_tooltip_tt
 		}
 
 		remove_effect = {
@@ -400,7 +572,10 @@ EGY_economy_decisions = {
 		fire_only_once = no
 
 		complete_effect = {
-			# 独立による経済解放
+			add_stability = 0.02
+			add_to_variable = { var = EGY_eco_stability value = 0.02 }
+			EGY_clamp_economy_vars = yes
+			custom_effect_tooltip = EGY_independence_dividend_tooltip_tt
 		}
 
 		remove_effect = {
@@ -410,7 +585,7 @@ EGY_economy_decisions = {
 	}
 
 	# ============================================================
-	# IV. 民主ルート：経済安定化
+	# VI. 民主ルート：経済安定化
 	# ============================================================
 
 	# 民主的経済管理（経済下限固定、月1回、PP消費）
