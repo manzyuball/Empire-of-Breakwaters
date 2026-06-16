@@ -4642,7 +4642,6 @@
 		}
 		relative_position_id = FRA_france_leads
 		cost = 10
-		dynamic = yes 
 
 		ai_will_do = {
 			factor = 1
